@@ -40,48 +40,56 @@
             this.textBoxEmailAddress = new System.Windows.Forms.TextBox();
             this.radioButtonNational = new System.Windows.Forms.RadioButton();
             this.radioButtonForeign = new System.Windows.Forms.RadioButton();
-            this.radioButtonCorporate = new System.Windows.Forms.RadioButton();
-            this.radioButtonPrivate = new System.Windows.Forms.RadioButton();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelNationality = new System.Windows.Forms.Label();
+            this.labelVatNumber = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.labelZipCode = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelPhoneNumber = new System.Windows.Forms.Label();
+            this.labelEmailAddress = new System.Windows.Forms.Label();
+            this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(232, 55);
+            this.textBoxName.Location = new System.Drawing.Point(165, 39);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(185, 20);
             this.textBoxName.TabIndex = 0;
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(232, 180);
+            this.textBoxZipCode.Location = new System.Drawing.Point(165, 164);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(185, 20);
             this.textBoxZipCode.TabIndex = 3;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(232, 206);
+            this.textBoxCity.Location = new System.Drawing.Point(165, 190);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(185, 20);
             this.textBoxCity.TabIndex = 4;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(232, 232);
+            this.textBoxAddress.Location = new System.Drawing.Point(165, 216);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxAddress.TabIndex = 5;
             // 
             // textBoxVatNumber
             // 
-            this.textBoxVatNumber.Location = new System.Drawing.Point(232, 127);
+            this.textBoxVatNumber.Location = new System.Drawing.Point(165, 111);
             this.textBoxVatNumber.Name = "textBoxVatNumber";
             this.textBoxVatNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxVatNumber.TabIndex = 6;
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(232, 258);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(165, 242);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxPhoneNumber.TabIndex = 7;
@@ -89,7 +97,7 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(232, 153);
+            this.comboBoxCountry.Location = new System.Drawing.Point(165, 137);
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(185, 21);
             this.comboBoxCountry.TabIndex = 8;
@@ -97,7 +105,7 @@
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(232, 310);
+            this.buttonOK.Location = new System.Drawing.Point(165, 294);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 9;
@@ -107,7 +115,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(342, 310);
+            this.buttonCancel.Location = new System.Drawing.Point(275, 294);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 10;
@@ -116,7 +124,7 @@
             // 
             // textBoxEmailAddress
             // 
-            this.textBoxEmailAddress.Location = new System.Drawing.Point(232, 284);
+            this.textBoxEmailAddress.Location = new System.Drawing.Point(165, 268);
             this.textBoxEmailAddress.Name = "textBoxEmailAddress";
             this.textBoxEmailAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxEmailAddress.TabIndex = 11;
@@ -124,7 +132,7 @@
             // radioButtonNational
             // 
             this.radioButtonNational.AutoSize = true;
-            this.radioButtonNational.Location = new System.Drawing.Point(232, 81);
+            this.radioButtonNational.Location = new System.Drawing.Point(165, 65);
             this.radioButtonNational.Name = "radioButtonNational";
             this.radioButtonNational.Size = new System.Drawing.Size(58, 17);
             this.radioButtonNational.TabIndex = 12;
@@ -135,7 +143,7 @@
             // radioButtonForeign
             // 
             this.radioButtonForeign.AutoSize = true;
-            this.radioButtonForeign.Location = new System.Drawing.Point(296, 81);
+            this.radioButtonForeign.Location = new System.Drawing.Point(229, 65);
             this.radioButtonForeign.Name = "radioButtonForeign";
             this.radioButtonForeign.Size = new System.Drawing.Size(58, 17);
             this.radioButtonForeign.TabIndex = 13;
@@ -143,35 +151,112 @@
             this.radioButtonForeign.Text = "külföldi";
             this.radioButtonForeign.UseVisualStyleBackColor = true;
             // 
-            // radioButtonCorporate
+            // labelName
             // 
-            this.radioButtonCorporate.AutoSize = true;
-            this.radioButtonCorporate.Location = new System.Drawing.Point(326, 104);
-            this.radioButtonCorporate.Name = "radioButtonCorporate";
-            this.radioButtonCorporate.Size = new System.Drawing.Size(91, 17);
-            this.radioButtonCorporate.TabIndex = 16;
-            this.radioButtonCorporate.TabStop = true;
-            this.radioButtonCorporate.Text = "vállalati ügyfél";
-            this.radioButtonCorporate.UseVisualStyleBackColor = true;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(85, 42);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(74, 13);
+            this.labelName.TabIndex = 18;
+            this.labelName.Text = "Vendég neve:";
             // 
-            // radioButtonPrivate
+            // labelNationality
             // 
-            this.radioButtonPrivate.AutoSize = true;
-            this.radioButtonPrivate.Location = new System.Drawing.Point(232, 104);
-            this.radioButtonPrivate.Name = "radioButtonPrivate";
-            this.radioButtonPrivate.Size = new System.Drawing.Size(88, 17);
-            this.radioButtonPrivate.TabIndex = 17;
-            this.radioButtonPrivate.TabStop = true;
-            this.radioButtonPrivate.Text = "magán ügyfél";
-            this.radioButtonPrivate.UseVisualStyleBackColor = true;
+            this.labelNationality.AutoSize = true;
+            this.labelNationality.Location = new System.Drawing.Point(103, 67);
+            this.labelNationality.Name = "labelNationality";
+            this.labelNationality.Size = new System.Drawing.Size(56, 13);
+            this.labelNationality.TabIndex = 19;
+            this.labelNationality.Text = "A vendég:";
+            // 
+            // labelVatNumber
+            // 
+            this.labelVatNumber.AutoSize = true;
+            this.labelVatNumber.Location = new System.Drawing.Point(106, 114);
+            this.labelVatNumber.Name = "labelVatNumber";
+            this.labelVatNumber.Size = new System.Drawing.Size(53, 13);
+            this.labelVatNumber.TabIndex = 21;
+            this.labelVatNumber.Text = "Adószám:";
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Location = new System.Drawing.Point(103, 193);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(56, 13);
+            this.labelCity.TabIndex = 22;
+            this.labelCity.Text = "Település:";
+            // 
+            // labelCountry
+            // 
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Location = new System.Drawing.Point(116, 140);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelCountry.TabIndex = 23;
+            this.labelCountry.Text = "Ország:";
+            // 
+            // labelZipCode
+            // 
+            this.labelZipCode.AutoSize = true;
+            this.labelZipCode.Location = new System.Drawing.Point(89, 167);
+            this.labelZipCode.Name = "labelZipCode";
+            this.labelZipCode.Size = new System.Drawing.Size(70, 13);
+            this.labelZipCode.TabIndex = 24;
+            this.labelZipCode.Text = "Irányítószám:";
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new System.Drawing.Point(130, 219);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(29, 13);
+            this.labelAddress.TabIndex = 25;
+            this.labelAddress.Text = "Cím:";
+            // 
+            // labelPhoneNumber
+            // 
+            this.labelPhoneNumber.AutoSize = true;
+            this.labelPhoneNumber.Location = new System.Drawing.Point(89, 245);
+            this.labelPhoneNumber.Name = "labelPhoneNumber";
+            this.labelPhoneNumber.Size = new System.Drawing.Size(70, 13);
+            this.labelPhoneNumber.TabIndex = 26;
+            this.labelPhoneNumber.Text = "Telefonszám:";
+            // 
+            // labelEmailAddress
+            // 
+            this.labelEmailAddress.AutoSize = true;
+            this.labelEmailAddress.Location = new System.Drawing.Point(100, 271);
+            this.labelEmailAddress.Name = "labelEmailAddress";
+            this.labelEmailAddress.Size = new System.Drawing.Size(59, 13);
+            this.labelEmailAddress.TabIndex = 27;
+            this.labelEmailAddress.Text = "E-mail cím:";
+            // 
+            // checkBoxCorporateGuest
+            // 
+            this.checkBoxCorporateGuest.AutoSize = true;
+            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(165, 88);
+            this.checkBoxCorporateGuest.Name = "checkBoxCorporateGuest";
+            this.checkBoxCorporateGuest.Size = new System.Drawing.Size(141, 17);
+            this.checkBoxCorporateGuest.TabIndex = 28;
+            this.checkBoxCorporateGuest.Text = "A vendég vállalati ügyfél";
+            this.checkBoxCorporateGuest.UseVisualStyleBackColor = true;
             // 
             // FormModalGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 461);
-            this.Controls.Add(this.radioButtonPrivate);
-            this.Controls.Add(this.radioButtonCorporate);
+            this.ClientSize = new System.Drawing.Size(464, 369);
+            this.Controls.Add(this.checkBoxCorporateGuest);
+            this.Controls.Add(this.labelEmailAddress);
+            this.Controls.Add(this.labelPhoneNumber);
+            this.Controls.Add(this.labelAddress);
+            this.Controls.Add(this.labelZipCode);
+            this.Controls.Add(this.labelCountry);
+            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelVatNumber);
+            this.Controls.Add(this.labelNationality);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.radioButtonForeign);
             this.Controls.Add(this.radioButtonNational);
             this.Controls.Add(this.textBoxEmailAddress);
@@ -207,7 +292,15 @@
         private System.Windows.Forms.TextBox textBoxEmailAddress;
         private System.Windows.Forms.RadioButton radioButtonNational;
         private System.Windows.Forms.RadioButton radioButtonForeign;
-        private System.Windows.Forms.RadioButton radioButtonCorporate;
-        private System.Windows.Forms.RadioButton radioButtonPrivate;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelNationality;
+        private System.Windows.Forms.Label labelVatNumber;
+        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.Label labelCountry;
+        private System.Windows.Forms.Label labelZipCode;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelPhoneNumber;
+        private System.Windows.Forms.Label labelEmailAddress;
+        private System.Windows.Forms.CheckBox checkBoxCorporateGuest;
     }
 }
