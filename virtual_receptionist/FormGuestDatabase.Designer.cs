@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.listViewGuests = new System.Windows.Forms.ListView();
             this.buttonAddGuest = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonDeleteGuest = new System.Windows.Forms.Button();
+            this.buttonUpdateGuest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewGuests
@@ -49,32 +50,48 @@
             // 
             this.buttonAddGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGuest.Image")));
-            this.buttonAddGuest.Location = new System.Drawing.Point(535, 13);
+            this.buttonAddGuest.Location = new System.Drawing.Point(535, 12);
             this.buttonAddGuest.Name = "buttonAddGuest";
             this.buttonAddGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddGuest.TabIndex = 1;
             this.buttonAddGuest.Text = "Új vendég hozzáadása";
+            this.buttonAddGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddGuest.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonDeleteGuest
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(535, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 64);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Vendég törlése";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDeleteGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeleteGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteGuest.Image")));
+            this.buttonDeleteGuest.Location = new System.Drawing.Point(535, 152);
+            this.buttonDeleteGuest.Name = "buttonDeleteGuest";
+            this.buttonDeleteGuest.Size = new System.Drawing.Size(157, 64);
+            this.buttonDeleteGuest.TabIndex = 2;
+            this.buttonDeleteGuest.Text = "Vendég törlése";
+            this.buttonDeleteGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeleteGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeleteGuest.UseVisualStyleBackColor = true;
+            // 
+            // buttonUpdateGuest
+            // 
+            this.buttonUpdateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUpdateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateGuest.Image")));
+            this.buttonUpdateGuest.Location = new System.Drawing.Point(535, 82);
+            this.buttonUpdateGuest.Name = "buttonUpdateGuest";
+            this.buttonUpdateGuest.Size = new System.Drawing.Size(157, 64);
+            this.buttonUpdateGuest.TabIndex = 3;
+            this.buttonUpdateGuest.Text = "Vendég módosítása";
+            this.buttonUpdateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUpdateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonUpdateGuest.UseVisualStyleBackColor = true;
             // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 529);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonUpdateGuest);
+            this.Controls.Add(this.buttonDeleteGuest);
             this.Controls.Add(this.buttonAddGuest);
             this.Controls.Add(this.listViewGuests);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -89,6 +106,7 @@
 
         private System.Windows.Forms.ListView listViewGuests;
         private System.Windows.Forms.Button buttonAddGuest;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDeleteGuest;
+        private System.Windows.Forms.Button buttonUpdateGuest;
     }
 }
