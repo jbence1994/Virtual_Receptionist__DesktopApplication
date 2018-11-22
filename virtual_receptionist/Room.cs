@@ -96,6 +96,7 @@ namespace virtual_receptionist
         #endregion
 
         #region Metódusok
+
         /// <summary>
         /// Room osztályból készült objektum string típusúvá alakítása
         /// </summary>
