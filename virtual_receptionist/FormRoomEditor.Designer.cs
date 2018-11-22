@@ -52,7 +52,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormRoomEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Szobakezelés | Virtual Receptionist";
+            this.Text = "Szobakezelő | Virtual Receptionist";
             this.ResumeLayout(false);
 
         }
