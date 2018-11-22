@@ -11,6 +11,10 @@ namespace virtual_receptionist
         #region Adattagok
 
         /// <summary>
+        /// Szoba elnevezése/fantázianeve
+        /// </summary>
+        private string name;
+        /// <summary>
         /// Szobaszám
         /// </summary>
         private int number;
@@ -26,9 +30,10 @@ namespace virtual_receptionist
         /// <summary>
         /// Room osztály konstruktora
         /// </summary>
+        /// <param name="name">Szoba elnevezése/fantázianeve</param>
         /// <param name="number">Szobaszám</param>
         /// <param name="category">Szobakategória</param>
-        public Room(int number, string category)
+        public Room(string name, int number, string category)
         {
             this.number = number;
             this.category = category;
@@ -45,6 +50,20 @@ namespace virtual_receptionist
 
         #region Getter és setter tulajdonságok
 
+        /// <summary>
+        /// Szoba elnevezése/fantázianeve
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
         /// <summary>
         /// Szobaszám
         /// </summary>
@@ -83,7 +102,7 @@ namespace virtual_receptionist
         /// <returns>Visszaadja a Room típusú objektumot string típusra alakítva</returns>
         public override string ToString()
         {
-            return number + " " + category;
+            return name + " " + number + " " + category;
         }
 
         #endregion
