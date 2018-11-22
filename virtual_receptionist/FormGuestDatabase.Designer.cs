@@ -37,7 +37,7 @@
             this.listViewGuests.GridLines = true;
             this.listViewGuests.Location = new System.Drawing.Point(13, 13);
             this.listViewGuests.Name = "listViewGuests";
-            this.listViewGuests.Size = new System.Drawing.Size(261, 457);
+            this.listViewGuests.Size = new System.Drawing.Size(516, 457);
             this.listViewGuests.TabIndex = 0;
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
@@ -51,7 +51,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGuestDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendégadatbázis | Virtual Receptionist";
+            this.Text = "Vendég adatbázis | Virtual Receptionist";
             this.ResumeLayout(false);
 
         }
