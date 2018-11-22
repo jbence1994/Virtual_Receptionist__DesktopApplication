@@ -84,6 +84,7 @@
             // 
             this.textBoxVatNumber.Location = new System.Drawing.Point(132, 237);
             this.textBoxVatNumber.Name = "textBoxVatNumber";
+            this.textBoxVatNumber.ReadOnly = true;
             this.textBoxVatNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxVatNumber.TabIndex = 6;
             // 
