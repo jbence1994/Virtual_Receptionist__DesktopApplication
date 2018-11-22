@@ -87,18 +87,146 @@ namespace virtual_receptionist
 
         #region Getter és setter tulajdonságok
 
-
+        /// <summary>
+        /// Vendég neve
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        /// <summary>
+        /// Vendég nemzetisége
+        /// </summary>
+        public string Nationality
+        {
+            get
+            {
+                return nationality;
+            }
+            set
+            {
+                nationality = value;
+            }
+        }
+        /// <summary>
+        /// Vendég száramázási országának neve
+        /// </summary>
+        public string Country
+        {
+            get
+            {
+                return country;
+            }
+            set
+            {
+                country = value;
+            }
+        }
+        /// <summary>
+        /// Vendég lakhelyének irányítószáma
+        /// </summary>
+        public string ZipCode
+        {
+            get
+            {
+                return zipCode;
+            }
+            set
+            {
+                zipCode = value;
+            }
+        }
+        /// <summary>
+        /// Vendég lakhelyének települése
+        /// </summary>
+        public string City
+        {
+            get
+            {
+                return city;
+            }
+            set
+            {
+                city = value;
+            }
+        }
+        /// <summary>
+        /// Vendég lakhelyének címe (utca, házszám)
+        /// </summary>
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+            set
+            {
+                address = value;
+            }
+        }
+        /// <summary>
+        /// Céges vendég adószáma
+        /// </summary>
+        public string VatNumber
+        {
+            get
+            {
+                return vatNumber;
+            }
+            set
+            {
+                vatNumber = value;
+            }
+        }
+        /// <summary>
+        /// Vendég telefonszáma
+        /// </summary>
+        public string PhoneNumber
+        {
+            get
+            {
+                return phoneNumber;
+            }
+            set
+            {
+                phoneNumber = value;
+            }
+        }
+        /// <summary>
+        /// Vendég e-mail címe
+        /// </summary>
+        public string EmailAddress
+        {
+            get
+            {
+                return emailAddress;
+            }
+            set
+            {
+                emailAddress = value;
+            }
+        }
 
         #endregion
 
         #region Metódusok
 
+        /// <summary>
+        /// Vendég osztályból készült objektum string típussá alakítása
+        /// </summary>
+        /// <returns>Visszaadja az objektumot string típusra alakítva</returns>
         public override string ToString()
         {
             return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
         }
-
-
+        
         #endregion
     }
 }
