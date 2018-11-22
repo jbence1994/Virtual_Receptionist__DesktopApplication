@@ -219,7 +219,7 @@ namespace virtual_receptionist
         #region Metódusok
 
         /// <summary>
-        /// Vendég osztályból készült objektum string típussá alakítása
+        /// Vendég osztályból készült objektum string típusúvá alakítása
         /// </summary>
         /// <returns>Visszaadja az objektumot string típusra alakítva</returns>
         public override string ToString()
