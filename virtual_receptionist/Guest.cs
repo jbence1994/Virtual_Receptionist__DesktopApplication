@@ -75,7 +75,6 @@ namespace virtual_receptionist
             this.phoneNumber = phoneNumber;
             this.emailAddress = emailAddress;
         }
-
         /// <summary>
         /// Guest osztály üres konstruktora
         /// </summary>
@@ -86,8 +85,20 @@ namespace virtual_receptionist
 
         #endregion
 
+        #region Getter és setter tulajdonságok
+
+
+
+        #endregion
+
         #region Metódusok
-        
+
+        public override string ToString()
+        {
+            return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
+        }
+
+
         #endregion
     }
 }
