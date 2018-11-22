@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
-    public partial class FormModalGuestCU : Form
+    public partial class FormModalGuestDatabase : Form
     {
-        public FormModalGuestCU()
+        public FormModalGuestDatabase()
         {
             InitializeComponent();
         }

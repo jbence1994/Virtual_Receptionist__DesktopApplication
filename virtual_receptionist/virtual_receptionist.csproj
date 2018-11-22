@@ -70,11 +70,11 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModalGuestCU.cs">
+    <Compile Include="FormModalGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModalGuestCU.Designer.cs">
-      <DependentUpon>FormModalGuestCU.cs</DependentUpon>
+    <Compile Include="FormModalGuestDatabase.Designer.cs">
+      <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRoomEditor.cs">
       <SubType>Form</SubType>
@@ -99,8 +99,8 @@
     <EmbeddedResource Include="FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModalGuestCU.resx">
-      <DependentUpon>FormModalGuestCU.cs</DependentUpon>
+    <EmbeddedResource Include="FormModalGuestDatabase.resx">
+      <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRoomEditor.resx">
       <DependentUpon>FormRoomEditor.cs</DependentUpon>

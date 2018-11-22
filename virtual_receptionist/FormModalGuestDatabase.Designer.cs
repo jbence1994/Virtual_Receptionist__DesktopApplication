@@ -1,6 +1,6 @@
 ﻿namespace virtual_receptionist
 {
-    partial class FormModalGuestCU
+    partial class FormModalGuestDatabase
     {
         /// <summary>
         /// Required designer variable.
