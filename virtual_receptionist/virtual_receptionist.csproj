@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBilling.Designer.cs">
+      <DependentUpon>FormBilling.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,8 +69,17 @@
     <Compile Include="FormModalGuestCU.Designer.cs">
       <DependentUpon>FormModalGuestCU.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRoomEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoomEditor.Designer.cs">
+      <DependentUpon>FormRoomEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBilling.resx">
+      <DependentUpon>FormBilling.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalGuestCU.resx">
       <DependentUpon>FormModalGuestCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoomEditor.resx">
+      <DependentUpon>FormRoomEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
