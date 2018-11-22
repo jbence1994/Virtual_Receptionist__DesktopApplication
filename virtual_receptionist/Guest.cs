@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
-    class Guest
+    public class Guest
     {
+        #region Adattagok
+
+        #endregion
+
+        #region Konstruktor
+
+        #endregion
+
+        #region Metódusok
+
+        #endregion
     }
 }
