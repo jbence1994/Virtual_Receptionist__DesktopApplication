@@ -20,7 +20,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendég nemzetisége
         /// </summary>
-        private string nationality;
+        private bool nationality;
         /// <summary>
         /// Vendég száramázási országának neve
         /// </summary>
@@ -66,7 +66,7 @@ namespace virtual_receptionist
         /// <param name="vatNumber">Céges vendég adószáma</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, string nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
+        public Guest(string name, bool nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
         {
             this.name = name;
             this.nationality = nationality;
@@ -82,7 +82,7 @@ namespace virtual_receptionist
         /// Guest osztály konstruktora (magán vendég esetén)
         /// </summary>
         /// <param name="name">Vendég neve</param>
-        /// <param name="nationality">Vendég nemzetisége</param>
+        ///<param name="nationality">Vendég nemzetisége</param>
         /// <param name="country">Vendég száramázási országának neve</param>
         /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
         /// <param name="city">Vendég lakhelyének települése</param>
@@ -90,7 +90,7 @@ namespace virtual_receptionist
         /// <param name="vatNumber">Céges vendég adószáma</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, string nationality, string country, string zipCode, string city, string address, string phoneNumber, string emailAddress)
+        public Guest(string name, bool nationality, string country, string zipCode, string city, string address, string phoneNumber, string emailAddress)
         {
             this.name = name;
             this.nationality = nationality;
@@ -130,7 +130,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendég nemzetisége
         /// </summary>
-        public string Nationality
+        public bool Nationality
         {
             get
             {
@@ -251,7 +251,7 @@ namespace virtual_receptionist
         public override string ToString()
         {
             return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
-        }
+        } // JAVÍTANI KELL BOOLEAN-T
 
         #endregion
     }
