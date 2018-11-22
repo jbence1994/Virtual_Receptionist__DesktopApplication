@@ -35,8 +35,6 @@
             this.textBoxVatNumber = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.comboBoxCountry = new System.Windows.Forms.ComboBox();
-            this.buttonOK = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxEmailAddress = new System.Windows.Forms.TextBox();
             this.radioButtonNational = new System.Windows.Forms.RadioButton();
             this.radioButtonForeign = new System.Windows.Forms.RadioButton();
@@ -50,46 +48,48 @@
             this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.labelEmailAddress = new System.Windows.Forms.Label();
             this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
+            this.buttonOK = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(165, 39);
+            this.textBoxName.Location = new System.Drawing.Point(132, 22);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(185, 20);
             this.textBoxName.TabIndex = 0;
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(165, 164);
+            this.textBoxZipCode.Location = new System.Drawing.Point(132, 75);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(185, 20);
             this.textBoxZipCode.TabIndex = 3;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(165, 190);
+            this.textBoxCity.Location = new System.Drawing.Point(132, 101);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(185, 20);
             this.textBoxCity.TabIndex = 4;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(165, 216);
+            this.textBoxAddress.Location = new System.Drawing.Point(132, 127);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxAddress.TabIndex = 5;
             // 
             // textBoxVatNumber
             // 
-            this.textBoxVatNumber.Location = new System.Drawing.Point(165, 111);
+            this.textBoxVatNumber.Location = new System.Drawing.Point(132, 228);
             this.textBoxVatNumber.Name = "textBoxVatNumber";
             this.textBoxVatNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxVatNumber.TabIndex = 6;
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(165, 242);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(132, 153);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxPhoneNumber.TabIndex = 7;
@@ -97,34 +97,14 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(165, 137);
+            this.comboBoxCountry.Location = new System.Drawing.Point(132, 48);
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(185, 21);
             this.comboBoxCountry.TabIndex = 8;
             // 
-            // buttonOK
-            // 
-            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(165, 294);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
-            this.buttonOK.TabIndex = 9;
-            this.buttonOK.Text = "OK";
-            this.buttonOK.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(275, 294);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 10;
-            this.buttonCancel.Text = "Mégse";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
             // textBoxEmailAddress
             // 
-            this.textBoxEmailAddress.Location = new System.Drawing.Point(165, 268);
+            this.textBoxEmailAddress.Location = new System.Drawing.Point(132, 179);
             this.textBoxEmailAddress.Name = "textBoxEmailAddress";
             this.textBoxEmailAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxEmailAddress.TabIndex = 11;
@@ -132,29 +112,29 @@
             // radioButtonNational
             // 
             this.radioButtonNational.AutoSize = true;
-            this.radioButtonNational.Location = new System.Drawing.Point(165, 65);
+            this.radioButtonNational.Location = new System.Drawing.Point(132, 205);
             this.radioButtonNational.Name = "radioButtonNational";
-            this.radioButtonNational.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonNational.Size = new System.Drawing.Size(89, 17);
             this.radioButtonNational.TabIndex = 12;
             this.radioButtonNational.TabStop = true;
-            this.radioButtonNational.Text = "belföldi";
+            this.radioButtonNational.Text = "belföldi ügyfél";
             this.radioButtonNational.UseVisualStyleBackColor = true;
             // 
             // radioButtonForeign
             // 
             this.radioButtonForeign.AutoSize = true;
-            this.radioButtonForeign.Location = new System.Drawing.Point(229, 65);
+            this.radioButtonForeign.Location = new System.Drawing.Point(228, 205);
             this.radioButtonForeign.Name = "radioButtonForeign";
-            this.radioButtonForeign.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonForeign.Size = new System.Drawing.Size(89, 17);
             this.radioButtonForeign.TabIndex = 13;
             this.radioButtonForeign.TabStop = true;
-            this.radioButtonForeign.Text = "külföldi";
+            this.radioButtonForeign.Text = "külföldi ügyfél";
             this.radioButtonForeign.UseVisualStyleBackColor = true;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(85, 42);
+            this.labelName.Location = new System.Drawing.Point(52, 25);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(74, 13);
             this.labelName.TabIndex = 18;
@@ -163,7 +143,7 @@
             // labelNationality
             // 
             this.labelNationality.AutoSize = true;
-            this.labelNationality.Location = new System.Drawing.Point(103, 67);
+            this.labelNationality.Location = new System.Drawing.Point(70, 207);
             this.labelNationality.Name = "labelNationality";
             this.labelNationality.Size = new System.Drawing.Size(56, 13);
             this.labelNationality.TabIndex = 19;
@@ -172,7 +152,7 @@
             // labelVatNumber
             // 
             this.labelVatNumber.AutoSize = true;
-            this.labelVatNumber.Location = new System.Drawing.Point(106, 114);
+            this.labelVatNumber.Location = new System.Drawing.Point(73, 231);
             this.labelVatNumber.Name = "labelVatNumber";
             this.labelVatNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVatNumber.TabIndex = 21;
@@ -181,7 +161,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(103, 193);
+            this.labelCity.Location = new System.Drawing.Point(70, 104);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
             this.labelCity.TabIndex = 22;
@@ -190,7 +170,7 @@
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(116, 140);
+            this.labelCountry.Location = new System.Drawing.Point(83, 51);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
             this.labelCountry.TabIndex = 23;
@@ -199,7 +179,7 @@
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(89, 167);
+            this.labelZipCode.Location = new System.Drawing.Point(56, 78);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelZipCode.TabIndex = 24;
@@ -208,7 +188,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(130, 219);
+            this.labelAddress.Location = new System.Drawing.Point(97, 130);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
             this.labelAddress.TabIndex = 25;
@@ -217,7 +197,7 @@
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(89, 245);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(56, 156);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelPhoneNumber.TabIndex = 26;
@@ -226,7 +206,7 @@
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(100, 271);
+            this.labelEmailAddress.Location = new System.Drawing.Point(67, 182);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(59, 13);
             this.labelEmailAddress.TabIndex = 27;
@@ -235,18 +215,40 @@
             // checkBoxCorporateGuest
             // 
             this.checkBoxCorporateGuest.AutoSize = true;
-            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(165, 88);
+            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(132, 254);
             this.checkBoxCorporateGuest.Name = "checkBoxCorporateGuest";
             this.checkBoxCorporateGuest.Size = new System.Drawing.Size(141, 17);
             this.checkBoxCorporateGuest.TabIndex = 28;
             this.checkBoxCorporateGuest.Text = "A vendég vállalati ügyfél";
             this.checkBoxCorporateGuest.UseVisualStyleBackColor = true;
             // 
+            // buttonOK
+            // 
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOK.Location = new System.Drawing.Point(132, 290);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.TabIndex = 29;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(242, 290);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 30;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            // 
             // FormModalGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 369);
+            this.ClientSize = new System.Drawing.Size(397, 337);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.checkBoxCorporateGuest);
             this.Controls.Add(this.labelEmailAddress);
             this.Controls.Add(this.labelPhoneNumber);
@@ -260,8 +262,6 @@
             this.Controls.Add(this.radioButtonForeign);
             this.Controls.Add(this.radioButtonNational);
             this.Controls.Add(this.textBoxEmailAddress);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.comboBoxCountry);
             this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.textBoxVatNumber);
@@ -287,8 +287,6 @@
         private System.Windows.Forms.TextBox textBoxVatNumber;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.ComboBox comboBoxCountry;
-        private System.Windows.Forms.Button buttonOK;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox textBoxEmailAddress;
         private System.Windows.Forms.RadioButton radioButtonNational;
         private System.Windows.Forms.RadioButton radioButtonForeign;
@@ -302,5 +300,7 @@
         private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.Label labelEmailAddress;
         private System.Windows.Forms.CheckBox checkBoxCorporateGuest;
+        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
