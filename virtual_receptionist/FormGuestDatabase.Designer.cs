@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.listViewGuests = new System.Windows.Forms.ListView();
+            this.buttonAddGuest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewGuests
@@ -37,16 +39,30 @@
             this.listViewGuests.GridLines = true;
             this.listViewGuests.Location = new System.Drawing.Point(13, 13);
             this.listViewGuests.Name = "listViewGuests";
-            this.listViewGuests.Size = new System.Drawing.Size(516, 457);
+            this.listViewGuests.Size = new System.Drawing.Size(516, 504);
             this.listViewGuests.TabIndex = 0;
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
+            // 
+            // buttonAddGuest
+            // 
+            this.buttonAddGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAddGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGuest.Image")));
+            this.buttonAddGuest.Location = new System.Drawing.Point(535, 13);
+            this.buttonAddGuest.Name = "buttonAddGuest";
+            this.buttonAddGuest.Size = new System.Drawing.Size(157, 64);
+            this.buttonAddGuest.TabIndex = 1;
+            this.buttonAddGuest.Text = "Új vendég hozzáadása";
+            this.buttonAddGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAddGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonAddGuest.UseVisualStyleBackColor = true;
             // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 482);
+            this.ClientSize = new System.Drawing.Size(704, 529);
+            this.Controls.Add(this.buttonAddGuest);
             this.Controls.Add(this.listViewGuests);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGuestDatabase";
@@ -59,5 +75,6 @@
         #endregion
 
         private System.Windows.Forms.ListView listViewGuests;
+        private System.Windows.Forms.Button buttonAddGuest;
     }
 }
