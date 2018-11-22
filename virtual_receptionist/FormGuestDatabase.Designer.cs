@@ -34,6 +34,7 @@
             this.buttonDeleteGuest = new System.Windows.Forms.Button();
             this.buttonUpdateGuest = new System.Windows.Forms.Button();
             this.menuStripGuestDatabase = new System.Windows.Forms.MenuStrip();
+            this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewGuests
@@ -93,11 +94,24 @@
             this.menuStripGuestDatabase.Size = new System.Drawing.Size(704, 24);
             this.menuStripGuestDatabase.TabIndex = 4;
             // 
+            // buttonBackToMainMenu
+            // 
+            this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBackToMainMenu.Location = new System.Drawing.Point(535, 453);
+            this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
+            this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
+            this.buttonBackToMainMenu.TabIndex = 5;
+            this.buttonBackToMainMenu.Text = "Vissza a főmenübe";
+            this.buttonBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonBackToMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonBackToMainMenu.UseVisualStyleBackColor = true;
+            // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 529);
+            this.Controls.Add(this.buttonBackToMainMenu);
             this.Controls.Add(this.buttonUpdateGuest);
             this.Controls.Add(this.buttonDeleteGuest);
             this.Controls.Add(this.buttonAddGuest);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Button buttonDeleteGuest;
         private System.Windows.Forms.Button buttonUpdateGuest;
         private System.Windows.Forms.MenuStrip menuStripGuestDatabase;
+        private System.Windows.Forms.Button buttonBackToMainMenu;
     }
 }
