@@ -247,11 +247,22 @@ namespace virtual_receptionist
         /// <summary>
         /// Guest osztályból készült objektum string típusúvá alakítása
         /// </summary>
-        /// <returns>Visszaadja a Guest típusú objektumot string típusra alakítva</returns>
+        /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
-        } // JAVÍTANI KELL BOOLEAN-T
+            string guestNationality = string.Empty;
+
+            if (nationality == true)
+            {
+                guestNationality = "belföldi";
+            }
+            else
+            {
+                guestNationality = "külföldi";
+            }
+
+            return name + " " + guestNationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
+        }
 
         #endregion
     }

@@ -103,7 +103,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Room osztályból készült objektum string típusúvá alakítása
         /// </summary>
-        /// <returns>Visszaadja a Room típusú objektumot string típusra alakítva</returns>
+        /// <returns>Visszaadja a Room típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
             return name + " " + number + " " + category;
