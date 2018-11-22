@@ -68,6 +68,9 @@
     <EmbeddedResource Include="FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormModalGuestCU.resx">
       <DependentUpon>FormModalGuestCU.cs</DependentUpon>
     </EmbeddedResource>
