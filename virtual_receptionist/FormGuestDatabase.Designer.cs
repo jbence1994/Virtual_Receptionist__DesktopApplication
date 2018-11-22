@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.listViewGuests = new System.Windows.Forms.ListView();
             this.buttonAddGuest = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewGuests
@@ -53,15 +54,27 @@
             this.buttonAddGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddGuest.TabIndex = 1;
             this.buttonAddGuest.Text = "Új vendég hozzáadása";
-            this.buttonAddGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddGuest.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(535, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 64);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Vendég törlése";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 529);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonAddGuest);
             this.Controls.Add(this.listViewGuests);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -76,5 +89,6 @@
 
         private System.Windows.Forms.ListView listViewGuests;
         private System.Windows.Forms.Button buttonAddGuest;
+        private System.Windows.Forms.Button button1;
     }
 }
