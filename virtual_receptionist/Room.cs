@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Szoba egyed modell osztálya
+    /// </summary>
     public class Room
     {
         #region Adattagok

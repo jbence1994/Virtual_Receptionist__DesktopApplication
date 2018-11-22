@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Vendég egyed modell osztálya
+    /// </summary>
     public class Guest
     {
         #region Adattagok
@@ -226,7 +229,7 @@ namespace virtual_receptionist
         {
             return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
         }
-        
+
         #endregion
     }
 }
