@@ -219,9 +219,9 @@ namespace virtual_receptionist
         #region Metódusok
 
         /// <summary>
-        /// Vendég osztályból készült objektum string típusúvá alakítása
+        /// Guest osztályból készült objektum string típusúvá alakítása
         /// </summary>
-        /// <returns>Visszaadja az objektumot string típusra alakítva</returns>
+        /// <returns>Visszaadja a Guest típusú objektumot string típusra alakítva</returns>
         public override string ToString()
         {
             return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
