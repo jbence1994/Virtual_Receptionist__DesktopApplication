@@ -38,7 +38,7 @@ namespace virtual_receptionist
         /// </summary>
         private string address;
         /// <summary>
-        /// Céges vendég adószáma
+        /// Vállalati vendég adószáma
         /// </summary>
         private string vatNumber;
         /// <summary>
