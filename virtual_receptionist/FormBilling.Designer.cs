@@ -41,6 +41,7 @@
             // buttonBackToMainMenu
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
             this.buttonBackToMainMenu.Location = new System.Drawing.Point(664, 420);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
             this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);

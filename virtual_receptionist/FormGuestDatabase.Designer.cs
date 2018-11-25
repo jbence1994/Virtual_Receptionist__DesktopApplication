@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.listViewGuests = new System.Windows.Forms.ListView();
-            this.buttonAddGuest = new System.Windows.Forms.Button();
-            this.buttonDeleteGuest = new System.Windows.Forms.Button();
-            this.buttonUpdateGuest = new System.Windows.Forms.Button();
-            this.menuStripGuestDatabase = new System.Windows.Forms.MenuStrip();
-            this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderNationality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,6 +39,11 @@
             this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonAddGuest = new System.Windows.Forms.Button();
+            this.buttonDeleteGuest = new System.Windows.Forms.Button();
+            this.buttonUpdateGuest = new System.Windows.Forms.Button();
+            this.menuStripGuestDatabase = new System.Windows.Forms.MenuStrip();
+            this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewGuests
@@ -66,6 +66,51 @@
             this.listViewGuests.TabIndex = 0;
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderName
+            // 
+            this.columnHeaderName.Text = "Név";
+            this.columnHeaderName.Width = 105;
+            // 
+            // columnHeaderNationality
+            // 
+            this.columnHeaderNationality.Text = "Nemzetiség";
+            this.columnHeaderNationality.Width = 76;
+            // 
+            // columnHeaderCountry
+            // 
+            this.columnHeaderCountry.Text = "Ország";
+            this.columnHeaderCountry.Width = 80;
+            // 
+            // columnHeaderZipCode
+            // 
+            this.columnHeaderZipCode.Text = "Irányítószám";
+            this.columnHeaderZipCode.Width = 81;
+            // 
+            // columnHeaderCity
+            // 
+            this.columnHeaderCity.Text = "Település";
+            this.columnHeaderCity.Width = 89;
+            // 
+            // columnHeaderAddress
+            // 
+            this.columnHeaderAddress.Text = "Cím";
+            this.columnHeaderAddress.Width = 106;
+            // 
+            // columnHeaderVATNumber
+            // 
+            this.columnHeaderVATNumber.Text = "Adószám";
+            this.columnHeaderVATNumber.Width = 104;
+            // 
+            // columnHeaderPhoneNumber
+            // 
+            this.columnHeaderPhoneNumber.Text = "Telefonszám";
+            this.columnHeaderPhoneNumber.Width = 102;
+            // 
+            // columnHeaderEmailAddress
+            // 
+            this.columnHeaderEmailAddress.Text = "E-mail";
+            this.columnHeaderEmailAddress.Width = 97;
             // 
             // buttonAddGuest
             // 
@@ -116,6 +161,7 @@
             // buttonBackToMainMenu
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
             this.buttonBackToMainMenu.Location = new System.Drawing.Point(863, 512);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
             this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
@@ -124,51 +170,6 @@
             this.buttonBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonBackToMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonBackToMainMenu.UseVisualStyleBackColor = true;
-            // 
-            // columnHeaderName
-            // 
-            this.columnHeaderName.Text = "Név";
-            this.columnHeaderName.Width = 105;
-            // 
-            // columnHeaderNationality
-            // 
-            this.columnHeaderNationality.Text = "Nemzetiség";
-            this.columnHeaderNationality.Width = 76;
-            // 
-            // columnHeaderCountry
-            // 
-            this.columnHeaderCountry.Text = "Ország";
-            this.columnHeaderCountry.Width = 80;
-            // 
-            // columnHeaderZipCode
-            // 
-            this.columnHeaderZipCode.Text = "Irányítószám";
-            this.columnHeaderZipCode.Width = 81;
-            // 
-            // columnHeaderCity
-            // 
-            this.columnHeaderCity.Text = "Település";
-            this.columnHeaderCity.Width = 89;
-            // 
-            // columnHeaderAddress
-            // 
-            this.columnHeaderAddress.Text = "Cím";
-            this.columnHeaderAddress.Width = 106;
-            // 
-            // columnHeaderVATNumber
-            // 
-            this.columnHeaderVATNumber.Text = "Adószám";
-            this.columnHeaderVATNumber.Width = 104;
-            // 
-            // columnHeaderPhoneNumber
-            // 
-            this.columnHeaderPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderPhoneNumber.Width = 102;
-            // 
-            // columnHeaderEmailAddress
-            // 
-            this.columnHeaderEmailAddress.Text = "E-mail";
-            this.columnHeaderEmailAddress.Width = 97;
             // 
             // FormGuestDatabase
             // 

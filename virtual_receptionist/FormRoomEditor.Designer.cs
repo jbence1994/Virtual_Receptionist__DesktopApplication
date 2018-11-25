@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRoomEditor));
             this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBackToMainMenu
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
             this.buttonBackToMainMenu.Location = new System.Drawing.Point(335, 410);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
             this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
