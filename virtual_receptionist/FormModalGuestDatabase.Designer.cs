@@ -207,11 +207,11 @@
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(67, 191);
+            this.labelEmailAddress.Location = new System.Drawing.Point(88, 191);
             this.labelEmailAddress.Name = "labelEmailAddress";
-            this.labelEmailAddress.Size = new System.Drawing.Size(59, 13);
+            this.labelEmailAddress.Size = new System.Drawing.Size(38, 13);
             this.labelEmailAddress.TabIndex = 27;
-            this.labelEmailAddress.Text = "E-mail cím:";
+            this.labelEmailAddress.Text = "E-mail:";
             // 
             // checkBoxCorporateGuest
             // 
