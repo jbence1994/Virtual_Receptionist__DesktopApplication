@@ -35,6 +35,8 @@
             this.buttonAddItem = new System.Windows.Forms.Button();
             this.buttonUpdateItem = new System.Windows.Forms.Button();
             this.buttonDeleteItem = new System.Windows.Forms.Button();
+            this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
+            this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +113,10 @@
             this.buttonDeleteItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteItem.UseVisualStyleBackColor = true;
             // 
+            // printDialogPrinter
+            // 
+            this.printDialogPrinter.UseEXDialog = true;
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,5 +145,7 @@
         private System.Windows.Forms.Button buttonAddItem;
         private System.Windows.Forms.Button buttonUpdateItem;
         private System.Windows.Forms.Button buttonDeleteItem;
+        private System.Windows.Forms.PrintDialog printDialogPrinter;
+        private System.Drawing.Printing.PrintDocument printDocumentInvoice;
     }
 }
