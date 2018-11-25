@@ -110,6 +110,5 @@ namespace virtual_receptionist
         }
 
         #endregion
-
     }
 }

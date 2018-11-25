@@ -29,47 +29,60 @@
         private void InitializeComponent()
         {
             this.buttonRegister = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.labelText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonRegister
             // 
-            this.buttonRegister.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonRegister.Location = new System.Drawing.Point(12, 204);
+            this.buttonRegister.Location = new System.Drawing.Point(12, 117);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(124, 23);
+            this.buttonRegister.Size = new System.Drawing.Size(131, 23);
             this.buttonRegister.TabIndex = 0;
-            this.buttonRegister.Text = "Szoftver regisztrálása";
+            this.buttonRegister.Text = "Szoftver regisztrációja";
             this.buttonRegister.UseVisualStyleBackColor = true;
             // 
-            // buttonCancel
+            // buttonExit
             // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(257, 204);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(124, 23);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Mégse";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonExit.Location = new System.Drawing.Point(250, 117);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(131, 23);
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.Text = "Kilépés";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            // 
+            // labelText
+            // 
+            this.labelText.AutoSize = true;
+            this.labelText.Location = new System.Drawing.Point(53, 34);
+            this.labelText.Name = "labelText";
+            this.labelText.Size = new System.Drawing.Size(299, 52);
+            this.labelText.TabIndex = 3;
+            this.labelText.Text = "Ezen Virtual Receptionist példánya nem regisztrált!\r\n\r\nKérjük kattintson a \'Szoft" +
+    "ver regisztrációja\' gombra az előzetes\r\nszálláshely regisztrációhoz és termékkul" +
+    "cs aktiválásához!";
             // 
             // FormUnregisteredSoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 239);
-            this.Controls.Add(this.buttonCancel);
+            this.ClientSize = new System.Drawing.Size(393, 152);
+            this.Controls.Add(this.labelText);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonRegister);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormUnregisteredSoftware";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nem regisztrált licensz | Virtual Receptionist";
+            this.Text = "Virtual Receptionist [Nem regisztrált példány]";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonRegister;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label labelText;
     }
 }
