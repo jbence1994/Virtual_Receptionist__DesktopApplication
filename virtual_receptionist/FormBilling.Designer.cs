@@ -142,7 +142,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Számlázó | Virtual Receptionist";
+            this.Text = "Számlázás | Virtual Receptionist";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
