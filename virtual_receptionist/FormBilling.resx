@@ -121,7 +121,7 @@
   <data name="buttonBackToMainMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAACtAAAArQFUTtYwAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAACsAAAArAGGCTTUAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
         aW5rc2NhcGUub3Jnm+48GgAAAldJREFUSEutVctu00AU9U+w4aV+B0Lqmg3iD1o7dlqJEhbdsEDqBnWJ
         YANCILZtbI8d22lCG4lWVRcsEag1bZeIRUFCIoGqEYmHc91pO44nqZtypKNE8zjn+s6dO9oolCP7plVn
         D6yIvStH3hf8/iaK/xhz5/Ra7YZYXhyzkX2tHLJXEOmB/Bz2QXvW9yfE9tFAVPewoSMJFGUbX3tXyKhh
@@ -154,7 +154,7 @@
   <data name="buttonAddItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c
-        6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAABqQAAAakAcXedTkAAAAZdEVYdFNvZnR3YXJlAHd3dy5p
+        6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAABqMAAAajAZea00YAAAAZdEVYdFNvZnR3YXJlAHd3dy5p
         bmtzY2FwZS5vcmeb7jwaAAABOUlEQVRIS72Wsa3CMBCG07DCmwOJDQjQMAFgWgoaRoCGFZAQE9AASccK
         iAIKVkBihTTm/lOMHHOBOMiv+CLiu/vPOZ9tIq11Kb3d+K+TqH47UfP4oFLinpNiDDb4SLEGcbC1njQ6
         e7UgoYzQX8iQDDGS1ttAdz9sxom6CEKfoRjEunqFl/gwmpJzlVmXQbGjqa35+sEz/03ckNlfwg/Ur1ZZ
@@ -166,7 +166,7 @@
   <data name="buttonUpdateItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAACtAAAArQFUTtYwAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAACsAAAArAGGCTTUAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
         aW5rc2NhcGUub3Jnm+48GgAAAwtJREFUSEullVtPE0EUgPsnfPEWo/EvFMpuSWPiAwnSAm2t8GLALW13
         W/BBEQJERR8wSiSaiKER4+UB0Cgh3AyKl0CCSiSolIoQUAiEaLAtYMSW45ll2uy2s1jjSb5md87Md3am
         s7O67YK3le81WiUvbxP7kElklUKu+zibR8p2ePbQ7umHwebahYKbSBSBvxDj7WK7yeHaR4dvH0a7ZMFB
@@ -200,5 +200,8 @@
   </metadata>
   <metadata name="printDocumentInvoice.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
+  </metadata>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>309, 17</value>
   </metadata>
 </root>

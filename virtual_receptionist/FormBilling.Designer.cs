@@ -37,6 +37,7 @@
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,9 +57,9 @@
             // dataGridViewItems
             // 
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewItems.Location = new System.Drawing.Point(12, 27);
             this.dataGridViewItems.Name = "dataGridViewItems";
-            this.dataGridViewItems.Size = new System.Drawing.Size(809, 402);
+            this.dataGridViewItems.Size = new System.Drawing.Size(809, 387);
             this.dataGridViewItems.TabIndex = 7;
             // 
             // buttonPrint
@@ -117,6 +118,14 @@
             // 
             this.printDialogPrinter.UseEXDialog = true;
             // 
+            // menuStrip
+            // 
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(833, 24);
+            this.menuStrip.TabIndex = 12;
+            this.menuStrip.Text = "menuStrip1";
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,12 +137,15 @@
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.dataGridViewItems);
             this.Controls.Add(this.buttonBackToMainMenu);
+            this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számlázó | Virtual Receptionist";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button buttonDeleteItem;
         private System.Windows.Forms.PrintDialog printDialogPrinter;
         private System.Drawing.Printing.PrintDocument printDocumentInvoice;
+        private System.Windows.Forms.MenuStrip menuStrip;
     }
 }
