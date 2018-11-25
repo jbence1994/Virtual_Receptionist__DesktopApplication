@@ -16,7 +16,7 @@ namespace virtual_receptionist
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGuestDatabase());
+            Application.Run(new FormBilling());
         }
     }
 }
