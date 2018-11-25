@@ -76,6 +76,12 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModalBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalBilling.Designer.cs">
+      <DependentUpon>FormModalBilling.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModalGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModalBilling.resx">
+      <DependentUpon>FormModalBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalGuestDatabase.resx">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
