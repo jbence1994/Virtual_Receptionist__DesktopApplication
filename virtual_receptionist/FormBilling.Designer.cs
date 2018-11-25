@@ -37,7 +37,7 @@
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.menuStripBilling = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,13 +118,13 @@
             // 
             this.printDialogPrinter.UseEXDialog = true;
             // 
-            // menuStrip
+            // menuStripBilling
             // 
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(833, 24);
-            this.menuStrip.TabIndex = 12;
-            this.menuStrip.Text = "menuStrip1";
+            this.menuStripBilling.Location = new System.Drawing.Point(0, 0);
+            this.menuStripBilling.Name = "menuStripBilling";
+            this.menuStripBilling.Size = new System.Drawing.Size(833, 24);
+            this.menuStripBilling.TabIndex = 12;
+            this.menuStripBilling.Text = "menuStrip1";
             // 
             // FormBilling
             // 
@@ -137,9 +137,9 @@
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.dataGridViewItems);
             this.Controls.Add(this.buttonBackToMainMenu);
-            this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.menuStripBilling);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.menuStrip;
+            this.MainMenuStrip = this.menuStripBilling;
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számlázás | Virtual Receptionist";
@@ -159,6 +159,6 @@
         private System.Windows.Forms.Button buttonDeleteItem;
         private System.Windows.Forms.PrintDialog printDialogPrinter;
         private System.Drawing.Printing.PrintDocument printDocumentInvoice;
-        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.MenuStrip menuStripBilling;
     }
 }
