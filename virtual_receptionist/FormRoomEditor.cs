@@ -15,9 +15,16 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormRoomEditor : Form
     {
+        #region Konstruktor
+
+        /// <summary>
+        /// Foglalás-kezelő ablak üres konstruktora
+        /// </summary>
         public FormRoomEditor()
         {
             InitializeComponent();
         }
+
+        #endregion
     }
 }
