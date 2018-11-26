@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Alkalmazás bejelentkező ablaka
+    /// </summary>
     public partial class FormLogin : Form
     {
         public FormLogin()

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő dosításához szükséges modális ablak
+    /// </summary>
     public partial class FormModalGuestDatabase : Form
     {
         public FormModalGuestDatabase()

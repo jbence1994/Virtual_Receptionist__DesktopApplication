@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak
+    /// </summary>
     public partial class FormModalBilling : Form
     {
         public FormModalBilling()

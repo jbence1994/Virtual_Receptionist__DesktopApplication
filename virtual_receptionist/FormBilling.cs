@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Számlázó modul ablak
+    /// </summary>
     public partial class FormBilling : Form
     {
         public FormBilling()

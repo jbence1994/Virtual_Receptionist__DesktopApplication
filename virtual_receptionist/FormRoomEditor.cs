@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Foglalás-kezelő ablak
+    /// </summary>
     public partial class FormRoomEditor : Form
     {
         public FormRoomEditor()

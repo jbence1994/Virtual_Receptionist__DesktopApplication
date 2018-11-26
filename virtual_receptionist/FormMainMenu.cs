@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Főmenü ablak
+    /// </summary>
     public partial class FormMainMenu : Form
     {
         public FormMainMenu()

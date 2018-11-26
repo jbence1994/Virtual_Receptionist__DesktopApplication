@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Vendégadatbázis-kezelő ablak
+    /// </summary>
     public partial class FormGuestDatabase : Form
     {
         public FormGuestDatabase()
