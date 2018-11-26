@@ -28,131 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.buttonOK = new System.Windows.Forms.Button();
+            this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelZipCode = new System.Windows.Forms.Label();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.labelVatNumber = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.comboBoxCountry = new System.Windows.Forms.ComboBox();
+            this.textBoxVatNumber = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
+            this.textBoxZipCode = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // buttonOK
-            // 
-            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(12, 357);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
-            this.buttonOK.TabIndex = 0;
-            this.buttonOK.Text = "OK";
-            this.buttonOK.UseVisualStyleBackColor = true;
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(286, 357);
+            this.buttonCancel.Location = new System.Drawing.Point(286, 247);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.TabIndex = 52;
             this.buttonCancel.Text = "Mégse";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // buttonOK
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOK.Location = new System.Drawing.Point(12, 247);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.TabIndex = 51;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // checkBoxCorporateGuest
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 186);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.checkBoxCorporateGuest.AutoSize = true;
+            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(126, 194);
+            this.checkBoxCorporateGuest.Name = "checkBoxCorporateGuest";
+            this.checkBoxCorporateGuest.Size = new System.Drawing.Size(141, 17);
+            this.checkBoxCorporateGuest.TabIndex = 50;
+            this.checkBoxCorporateGuest.Text = "A vendég vállalati ügyfél";
+            this.checkBoxCorporateGuest.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // labelAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new System.Drawing.Point(91, 145);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(29, 13);
+            this.labelAddress.TabIndex = 47;
+            this.labelAddress.Text = "Cím:";
             // 
-            // textBox4
+            // labelZipCode
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 202);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.labelZipCode.AutoSize = true;
+            this.labelZipCode.Location = new System.Drawing.Point(50, 93);
+            this.labelZipCode.Name = "labelZipCode";
+            this.labelZipCode.Size = new System.Drawing.Size(70, 13);
+            this.labelZipCode.TabIndex = 46;
+            this.labelZipCode.Text = "Irányítószám:";
             // 
-            // textBox5
+            // labelCountry
             // 
-            this.textBox5.Location = new System.Drawing.Point(160, 210);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Location = new System.Drawing.Point(77, 66);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelCountry.TabIndex = 45;
+            this.labelCountry.Text = "Ország:";
             // 
-            // textBox6
+            // labelCity
             // 
-            this.textBox6.Location = new System.Drawing.Point(168, 218);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 7;
+            this.labelCity.AutoSize = true;
+            this.labelCity.Location = new System.Drawing.Point(64, 119);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(56, 13);
+            this.labelCity.TabIndex = 44;
+            this.labelCity.Text = "Település:";
             // 
-            // textBox7
+            // labelVatNumber
             // 
-            this.textBox7.Location = new System.Drawing.Point(176, 226);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 8;
+            this.labelVatNumber.AutoSize = true;
+            this.labelVatNumber.Location = new System.Drawing.Point(67, 171);
+            this.labelVatNumber.Name = "labelVatNumber";
+            this.labelVatNumber.Size = new System.Drawing.Size(53, 13);
+            this.labelVatNumber.TabIndex = 43;
+            this.labelVatNumber.Text = "Adószám:";
             // 
-            // textBox8
+            // labelName
             // 
-            this.textBox8.Location = new System.Drawing.Point(184, 234);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 9;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(46, 40);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(74, 13);
+            this.labelName.TabIndex = 41;
+            this.labelName.Text = "Vendég neve:";
             // 
-            // textBox9
+            // comboBoxCountry
             // 
-            this.textBox9.Location = new System.Drawing.Point(192, 242);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 10;
+            this.comboBoxCountry.FormattingEnabled = true;
+            this.comboBoxCountry.Location = new System.Drawing.Point(126, 63);
+            this.comboBoxCountry.Name = "comboBoxCountry";
+            this.comboBoxCountry.Size = new System.Drawing.Size(185, 21);
+            this.comboBoxCountry.TabIndex = 37;
             // 
-            // textBox10
+            // textBoxVatNumber
             // 
-            this.textBox10.Location = new System.Drawing.Point(200, 250);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 11;
+            this.textBoxVatNumber.Location = new System.Drawing.Point(126, 168);
+            this.textBoxVatNumber.Name = "textBoxVatNumber";
+            this.textBoxVatNumber.ReadOnly = true;
+            this.textBoxVatNumber.Size = new System.Drawing.Size(185, 20);
+            this.textBoxVatNumber.TabIndex = 35;
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(126, 142);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(185, 20);
+            this.textBoxAddress.TabIndex = 34;
+            // 
+            // textBoxCity
+            // 
+            this.textBoxCity.Location = new System.Drawing.Point(126, 116);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCity.TabIndex = 33;
+            // 
+            // textBoxZipCode
+            // 
+            this.textBoxZipCode.Location = new System.Drawing.Point(126, 90);
+            this.textBoxZipCode.Name = "textBoxZipCode";
+            this.textBoxZipCode.Size = new System.Drawing.Size(185, 20);
+            this.textBoxZipCode.TabIndex = 32;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(126, 37);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(185, 20);
+            this.textBoxName.TabIndex = 31;
             // 
             // FormModalBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 392);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(373, 282);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
+            this.Controls.Add(this.checkBoxCorporateGuest);
+            this.Controls.Add(this.labelAddress);
+            this.Controls.Add(this.labelZipCode);
+            this.Controls.Add(this.labelCountry);
+            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelVatNumber);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.comboBoxCountry);
+            this.Controls.Add(this.textBoxVatNumber);
+            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.textBoxCity);
+            this.Controls.Add(this.textBoxZipCode);
+            this.Controls.Add(this.textBoxName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormModalBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "| Virtual Receptionist";
+            this.Text = "Ügyfél adatai | Virtual Receptionist";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,17 +204,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.CheckBox checkBoxCorporateGuest;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelZipCode;
+        private System.Windows.Forms.Label labelCountry;
+        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.Label labelVatNumber;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.ComboBox comboBoxCountry;
+        private System.Windows.Forms.TextBox textBoxVatNumber;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.TextBox textBoxCity;
+        private System.Windows.Forms.TextBox textBoxZipCode;
+        private System.Windows.Forms.TextBox textBoxName;
     }
 }
