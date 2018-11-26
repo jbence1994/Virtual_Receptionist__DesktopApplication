@@ -30,6 +30,9 @@
         {
             this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
+            this.buttonRoomRegister = new System.Windows.Forms.Button();
+            this.buttonGuestDatabase = new System.Windows.Forms.Button();
+            this.buttonBilling = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -46,11 +49,41 @@
             this.statusStripMainMenu.Size = new System.Drawing.Size(637, 22);
             this.statusStripMainMenu.TabIndex = 1;
             // 
+            // buttonRoomRegister
+            // 
+            this.buttonRoomRegister.Location = new System.Drawing.Point(12, 27);
+            this.buttonRoomRegister.Name = "buttonRoomRegister";
+            this.buttonRoomRegister.Size = new System.Drawing.Size(152, 44);
+            this.buttonRoomRegister.TabIndex = 2;
+            this.buttonRoomRegister.Text = "Foglalások kezelése";
+            this.buttonRoomRegister.UseVisualStyleBackColor = true;
+            // 
+            // buttonGuestDatabase
+            // 
+            this.buttonGuestDatabase.Location = new System.Drawing.Point(12, 77);
+            this.buttonGuestDatabase.Name = "buttonGuestDatabase";
+            this.buttonGuestDatabase.Size = new System.Drawing.Size(152, 44);
+            this.buttonGuestDatabase.TabIndex = 3;
+            this.buttonGuestDatabase.Text = "Vendégnyilvántartás";
+            this.buttonGuestDatabase.UseVisualStyleBackColor = true;
+            // 
+            // buttonBilling
+            // 
+            this.buttonBilling.Location = new System.Drawing.Point(12, 127);
+            this.buttonBilling.Name = "buttonBilling";
+            this.buttonBilling.Size = new System.Drawing.Size(152, 44);
+            this.buttonBilling.TabIndex = 4;
+            this.buttonBilling.Text = "Számla kiállítása";
+            this.buttonBilling.UseVisualStyleBackColor = true;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 485);
+            this.Controls.Add(this.buttonBilling);
+            this.Controls.Add(this.buttonGuestDatabase);
+            this.Controls.Add(this.buttonRoomRegister);
             this.Controls.Add(this.statusStripMainMenu);
             this.Controls.Add(this.menuStripMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -67,5 +100,8 @@
 
         private System.Windows.Forms.MenuStrip menuStripMainMenu;
         private System.Windows.Forms.StatusStrip statusStripMainMenu;
+        private System.Windows.Forms.Button buttonRoomRegister;
+        private System.Windows.Forms.Button buttonGuestDatabase;
+        private System.Windows.Forms.Button buttonBilling;
     }
 }
