@@ -38,7 +38,10 @@
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
             this.menuStripBilling = new System.Windows.Forms.MenuStrip();
+            this.számlaNyomtatásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.számlaMentéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
+            this.menuStripBilling.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonBackToMainMenu
@@ -120,11 +123,28 @@
             // 
             // menuStripBilling
             // 
+            this.menuStripBilling.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.számlaNyomtatásaToolStripMenuItem,
+            this.számlaMentéseToolStripMenuItem});
             this.menuStripBilling.Location = new System.Drawing.Point(0, 0);
             this.menuStripBilling.Name = "menuStripBilling";
             this.menuStripBilling.Size = new System.Drawing.Size(833, 24);
             this.menuStripBilling.TabIndex = 12;
             this.menuStripBilling.Text = "menuStrip1";
+            // 
+            // számlaNyomtatásaToolStripMenuItem
+            // 
+            this.számlaNyomtatásaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("számlaNyomtatásaToolStripMenuItem.Image")));
+            this.számlaNyomtatásaToolStripMenuItem.Name = "számlaNyomtatásaToolStripMenuItem";
+            this.számlaNyomtatásaToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.számlaNyomtatásaToolStripMenuItem.Text = "Számla nyomtatása";
+            // 
+            // számlaMentéseToolStripMenuItem
+            // 
+            this.számlaMentéseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("számlaMentéseToolStripMenuItem.Image")));
+            this.számlaMentéseToolStripMenuItem.Name = "számlaMentéseToolStripMenuItem";
+            this.számlaMentéseToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.számlaMentéseToolStripMenuItem.Text = "Számla mentése";
             // 
             // FormBilling
             // 
@@ -144,6 +164,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számlázás | Virtual Receptionist";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
+            this.menuStripBilling.ResumeLayout(false);
+            this.menuStripBilling.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +182,7 @@
         private System.Windows.Forms.PrintDialog printDialogPrinter;
         private System.Drawing.Printing.PrintDocument printDocumentInvoice;
         private System.Windows.Forms.MenuStrip menuStripBilling;
+        private System.Windows.Forms.ToolStripMenuItem számlaNyomtatásaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem számlaMentéseToolStripMenuItem;
     }
 }
