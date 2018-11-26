@@ -30,7 +30,7 @@
         {
             this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
-            this.buttonRoomRegister = new System.Windows.Forms.Button();
+            this.buttonRoomEditor = new System.Windows.Forms.Button();
             this.buttonGuestDatabase = new System.Windows.Forms.Button();
             this.buttonBilling = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -49,14 +49,14 @@
             this.statusStripMainMenu.Size = new System.Drawing.Size(637, 22);
             this.statusStripMainMenu.TabIndex = 1;
             // 
-            // buttonRoomRegister
+            // buttonRoomEditor
             // 
-            this.buttonRoomRegister.Location = new System.Drawing.Point(12, 27);
-            this.buttonRoomRegister.Name = "buttonRoomRegister";
-            this.buttonRoomRegister.Size = new System.Drawing.Size(152, 44);
-            this.buttonRoomRegister.TabIndex = 2;
-            this.buttonRoomRegister.Text = "Foglalások kezelése";
-            this.buttonRoomRegister.UseVisualStyleBackColor = true;
+            this.buttonRoomEditor.Location = new System.Drawing.Point(12, 27);
+            this.buttonRoomEditor.Name = "buttonRoomEditor";
+            this.buttonRoomEditor.Size = new System.Drawing.Size(152, 44);
+            this.buttonRoomEditor.TabIndex = 2;
+            this.buttonRoomEditor.Text = "Foglalások kezelése";
+            this.buttonRoomEditor.UseVisualStyleBackColor = true;
             // 
             // buttonGuestDatabase
             // 
@@ -83,7 +83,7 @@
             this.ClientSize = new System.Drawing.Size(637, 485);
             this.Controls.Add(this.buttonBilling);
             this.Controls.Add(this.buttonGuestDatabase);
-            this.Controls.Add(this.buttonRoomRegister);
+            this.Controls.Add(this.buttonRoomEditor);
             this.Controls.Add(this.statusStripMainMenu);
             this.Controls.Add(this.menuStripMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -100,7 +100,7 @@
 
         private System.Windows.Forms.MenuStrip menuStripMainMenu;
         private System.Windows.Forms.StatusStrip statusStripMainMenu;
-        private System.Windows.Forms.Button buttonRoomRegister;
+        private System.Windows.Forms.Button buttonRoomEditor;
         private System.Windows.Forms.Button buttonGuestDatabase;
         private System.Windows.Forms.Button buttonBilling;
     }

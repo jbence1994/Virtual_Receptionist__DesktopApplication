@@ -15,9 +15,16 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormMainMenu : Form
     {
+        #region Konstruktor
+
+        /// <summary>
+        /// Főmenü ablak üres konstruktora
+        /// </summary>
         public FormMainMenu()
         {
             InitializeComponent();
         }
+
+        #endregion
     }
 }
