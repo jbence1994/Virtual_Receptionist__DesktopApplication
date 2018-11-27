@@ -62,14 +62,12 @@ namespace virtual_receptionist
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            formModalBillingItems = new FormModalBillingItems();
-            formModalBillingItems.ShowDialog();
+
         }
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
         {
-            formModalBillingItems = new FormModalBillingItems();
-            formModalBillingItems.ShowDialog();
+
         }
 
         #endregion
