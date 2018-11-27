@@ -42,6 +42,7 @@
             this.buttonLogin.TabIndex = 0;
             this.buttonLogin.Text = "Belépés";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // textBoxUsername
             // 

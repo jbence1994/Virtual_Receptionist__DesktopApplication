@@ -15,9 +15,17 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormLogin : Form
     {
+        /// <summary>
+        /// Alkalmazás bejelentkező ablak konstruktora
+        /// </summary>
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

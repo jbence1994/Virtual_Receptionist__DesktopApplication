@@ -18,7 +18,7 @@ namespace virtual_receptionist
         #region Konstruktor
 
         /// <summary>
-        /// Főmenü ablak üres konstruktora
+        /// Főmenü ablak konstruktora
         /// </summary>
         public FormMainMenu()
         {
