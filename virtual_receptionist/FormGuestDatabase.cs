@@ -21,6 +21,10 @@ namespace virtual_receptionist
         /// Főmenü ablak egy példánya
         /// </summary>
         private FormMainMenu formMainMenu;
+        /// <summary>
+        /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak egy példánya
+        /// </summary>
+        private FormModalGuestDatabase formModalGuestDatabase;
 
         #endregion
 
@@ -44,6 +48,23 @@ namespace virtual_receptionist
         {
             Close();
             formMainMenu.Show();
+        }
+
+        private void buttonAddGuest_Click(object sender, EventArgs e)
+        {
+            formModalGuestDatabase = new FormModalGuestDatabase();
+            formModalGuestDatabase.ShowDialog();
+        }
+
+        private void buttonUpdateGuest_Click(object sender, EventArgs e)
+        {
+            formModalGuestDatabase = new FormModalGuestDatabase();
+            formModalGuestDatabase.ShowDialog();
+        }
+
+        private void buttonDeleteGuest_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion

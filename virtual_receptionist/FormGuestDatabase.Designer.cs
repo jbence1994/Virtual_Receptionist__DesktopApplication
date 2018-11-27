@@ -124,6 +124,7 @@
             this.buttonAddGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddGuest.UseVisualStyleBackColor = true;
+            this.buttonAddGuest.Click += new System.EventHandler(this.buttonAddGuest_Click);
             // 
             // buttonDeleteGuest
             // 
@@ -137,6 +138,7 @@
             this.buttonDeleteGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDeleteGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteGuest.UseVisualStyleBackColor = true;
+            this.buttonDeleteGuest.Click += new System.EventHandler(this.buttonDeleteGuest_Click);
             // 
             // buttonUpdateGuest
             // 
@@ -150,6 +152,7 @@
             this.buttonUpdateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonUpdateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonUpdateGuest.UseVisualStyleBackColor = true;
+            this.buttonUpdateGuest.Click += new System.EventHandler(this.buttonUpdateGuest_Click);
             // 
             // menuStripGuestDatabase
             // 
