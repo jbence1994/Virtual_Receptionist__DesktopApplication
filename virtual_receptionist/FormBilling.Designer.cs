@@ -141,7 +141,7 @@
             this.buttonImportData.Name = "buttonImportData";
             this.buttonImportData.Size = new System.Drawing.Size(157, 64);
             this.buttonImportData.TabIndex = 14;
-            this.buttonImportData.Text = "Ügyfél adatainak importálása adatbázisból";
+            this.buttonImportData.Text = "Ügyfél adatainak importálása";
             this.buttonImportData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImportData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonImportData.UseVisualStyleBackColor = true;
