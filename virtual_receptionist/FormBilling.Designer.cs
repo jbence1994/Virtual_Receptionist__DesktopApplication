@@ -90,6 +90,7 @@
             this.buttonAddItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddItem.UseVisualStyleBackColor = true;
+            this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
             // 
             // buttonUpdateItem
             // 
@@ -103,6 +104,7 @@
             this.buttonUpdateItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonUpdateItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonUpdateItem.UseVisualStyleBackColor = true;
+            this.buttonUpdateItem.Click += new System.EventHandler(this.buttonUpdateItem_Click);
             // 
             // buttonDeleteItem
             // 
@@ -159,6 +161,7 @@
             this.buttonNewData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonNewData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonNewData.UseVisualStyleBackColor = true;
+            this.buttonNewData.Click += new System.EventHandler(this.buttonNewData_Click);
             // 
             // FormBilling
             // 

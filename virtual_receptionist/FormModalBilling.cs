@@ -15,9 +15,16 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormModalBilling : Form
     {
+        #region Konstruktor
+
+        /// <summary>
+        /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak konstruktora
+        /// </summary>
         public FormModalBilling()
         {
             InitializeComponent();
         }
+
+        #endregion
     }
 }

@@ -21,6 +21,14 @@ namespace virtual_receptionist
         /// Főmenü ablak egy példánya
         /// </summary>
         private FormMainMenu formMainMenu;
+        /// <summary>
+        /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
+        /// </summary>
+        private FormModalBillingItems formModalBillingItems;
+        /// <summary>
+        /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
+        /// </summary>
+        private FormModalBilling formModalBilling;
 
         #endregion
 
@@ -44,6 +52,24 @@ namespace virtual_receptionist
         {
             Close();
             formMainMenu.Show();
+        }
+
+        private void buttonNewData_Click(object sender, EventArgs e)
+        {
+            formModalBilling = new FormModalBilling();
+            formModalBilling.ShowDialog();
+        }
+
+        private void buttonAddItem_Click(object sender, EventArgs e)
+        {
+            formModalBillingItems = new FormModalBillingItems();
+            formModalBillingItems.ShowDialog();
+        }
+
+        private void buttonUpdateItem_Click(object sender, EventArgs e)
+        {
+            formModalBillingItems = new FormModalBillingItems();
+            formModalBillingItems.ShowDialog();
         }
 
         #endregion

@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak
+    /// </summary>
     public partial class FormModalBillingItems : Form
     {
+        #region Konstruktor
+
+        /// <summary>
+        /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
+        /// </summary>
         public FormModalBillingItems()
         {
             InitializeComponent();
         }
+
+        #endregion
     }
 }
