@@ -83,6 +83,12 @@
     <Compile Include="FormModalBilling.Designer.cs">
       <DependentUpon>FormModalBilling.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModalBillingItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalBillingItems.Designer.cs">
+      <DependentUpon>FormModalBillingItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModalGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalBilling.resx">
       <DependentUpon>FormModalBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModalBillingItems.resx">
+      <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalGuestDatabase.resx">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
