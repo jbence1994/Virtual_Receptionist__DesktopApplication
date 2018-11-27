@@ -28,13 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.listViewItems = new System.Windows.Forms.ListView();
             this.SuspendLayout();
+            // 
+            // listViewItems
+            // 
+            this.listViewItems.FullRowSelect = true;
+            this.listViewItems.GridLines = true;
+            this.listViewItems.Location = new System.Drawing.Point(13, 13);
+            this.listViewItems.MultiSelect = false;
+            this.listViewItems.Name = "listViewItems";
+            this.listViewItems.Size = new System.Drawing.Size(468, 354);
+            this.listViewItems.TabIndex = 0;
+            this.listViewItems.UseCompatibleStateImageBehavior = false;
+            this.listViewItems.View = System.Windows.Forms.View.Details;
             // 
             // FormModalBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 379);
+            this.Controls.Add(this.listViewItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormModalBillingItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -44,5 +58,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView listViewItems;
     }
 }
