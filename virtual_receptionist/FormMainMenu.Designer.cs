@@ -57,6 +57,7 @@
             this.buttonRoomEditor.TabIndex = 2;
             this.buttonRoomEditor.Text = "Foglalások kezelése";
             this.buttonRoomEditor.UseVisualStyleBackColor = true;
+            this.buttonRoomEditor.Click += new System.EventHandler(this.buttonRoomEditor_Click);
             // 
             // buttonGuestDatabase
             // 
@@ -66,6 +67,7 @@
             this.buttonGuestDatabase.TabIndex = 3;
             this.buttonGuestDatabase.Text = "Vendégnyilvántartás";
             this.buttonGuestDatabase.UseVisualStyleBackColor = true;
+            this.buttonGuestDatabase.Click += new System.EventHandler(this.buttonGuestDatabase_Click);
             // 
             // buttonBilling
             // 
@@ -75,6 +77,7 @@
             this.buttonBilling.TabIndex = 4;
             this.buttonBilling.Text = "Számla kiállítása";
             this.buttonBilling.UseVisualStyleBackColor = true;
+            this.buttonBilling.Click += new System.EventHandler(this.buttonBilling_Click);
             // 
             // FormMainMenu
             // 

@@ -15,9 +15,37 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormBilling : Form
     {
-        public FormBilling()
+        #region Adattagok
+
+        /// <summary>
+        /// Főmenü ablak egy példánya
+        /// </summary>
+        private FormMainMenu formMainMenu;
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Számlázó modul ablak konstruktora, amely összeköti a főmenü ablakot a számlázó modul ablakkal
+        /// </summary>
+        /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
+        public FormBilling(FormMainMenu formMainMenu)
         {
             InitializeComponent();
+            this.formMainMenu = formMainMenu;
         }
+
+        #endregion
+
+        #region UI események
+
+        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+            formMainMenu.Show();
+        }
+
+        #endregion
     }
 }

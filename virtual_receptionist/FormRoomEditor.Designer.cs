@@ -44,6 +44,7 @@
             this.buttonBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonBackToMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonBackToMainMenu.UseVisualStyleBackColor = true;
+            this.buttonBackToMainMenu.Click += new System.EventHandler(this.buttonBackToMainMenu_Click);
             // 
             // FormRoomEditor
             // 

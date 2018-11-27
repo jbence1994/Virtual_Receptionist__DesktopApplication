@@ -15,14 +15,35 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormRoomEditor : Form
     {
+        #region Adattagok
+
+        /// <summary>
+        /// Főmenü ablak egy példánya
+        /// </summary>
+        private FormMainMenu formMainMenu;
+
+        #endregion
+
         #region Konstruktor
 
         /// <summary>
-        /// Foglalás-kezelő ablak üres konstruktora
+        /// Foglalás-kezelő ablak konstruktora, amely összeköti a főmenü ablakot a foglalás-kezelő ablakkal
         /// </summary>
-        public FormRoomEditor()
+        /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
+        public FormRoomEditor(FormMainMenu formMainMenu)
         {
             InitializeComponent();
+            this.formMainMenu = formMainMenu;
+        }
+
+        #endregion
+
+        #region UI események
+        
+        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+            formMainMenu.Show();
         }
 
         #endregion

@@ -26,5 +26,30 @@ namespace virtual_receptionist
         }
 
         #endregion
+
+        #region UI események
+
+        private void buttonRoomEditor_Click(object sender, EventArgs e)
+        {
+            FormRoomEditor formRoomEditor = new FormRoomEditor(this);
+            formRoomEditor.Show();
+            Hide();
+        }
+
+        private void buttonGuestDatabase_Click(object sender, EventArgs e)
+        {
+            FormGuestDatabase formGuestDatabase = new FormGuestDatabase(this);
+            formGuestDatabase.Show();
+            Hide();
+        }
+
+        private void buttonBilling_Click(object sender, EventArgs e)
+        {
+            FormBilling formBilling = new FormBilling(this);
+            formBilling.Show();
+            Hide();
+        }
+
+        #endregion
     }
 }
