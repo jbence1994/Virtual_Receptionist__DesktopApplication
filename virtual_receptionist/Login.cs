@@ -1,4 +1,4 @@
-/* Legutóbbi fejlesztés: 2018-10-29 */
+/* Legutóbbi fejlesztés: 2018-12-03 */
 
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
@@ -88,10 +88,6 @@ namespace JuhaszBence.CSharp.LoginValidator
                 {
                     validEntry = true;
                     break;
-                }
-                else
-                {
-                    validEntry = false;
                 }
             }
 
