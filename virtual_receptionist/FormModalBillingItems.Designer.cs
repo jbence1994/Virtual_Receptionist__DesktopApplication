@@ -75,6 +75,7 @@
             this.Name = "FormModalBillingItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tételek | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormModalBillingItems_Load);
             this.ResumeLayout(false);
 
         }

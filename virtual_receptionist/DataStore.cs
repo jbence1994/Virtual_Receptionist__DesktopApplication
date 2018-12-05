@@ -120,7 +120,7 @@ namespace virtual_receptionist
                 item = mySqlDataReader["item"].ToString();
                 price = mySqlDataReader["price"].ToString();
                 unit = mySqlDataReader["unit"].ToString();
-                billingItems.Add(item, price, unit);
+
             }
 
             mySqlDataReader.Close();

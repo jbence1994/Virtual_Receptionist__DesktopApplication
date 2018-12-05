@@ -15,6 +15,10 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormModalBillingItems : Form
     {
+        #region Adattagok
+
+        #endregion
+
         #region Konstruktor
 
         /// <summary>
@@ -23,6 +27,15 @@ namespace virtual_receptionist
         public FormModalBillingItems()
         {
             InitializeComponent();
+        }
+
+        #endregion
+
+        #region UI események
+
+        private void FormModalBillingItems_Load(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
