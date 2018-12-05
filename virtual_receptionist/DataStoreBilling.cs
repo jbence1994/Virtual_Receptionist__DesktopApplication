@@ -16,10 +16,6 @@ namespace virtual_receptionist
         {
             DataTable billingItems = new DataTable();
 
-            string item = string.Empty;
-            string price = string.Empty;
-            string unit = string.Empty;
-
             mySqlConnection.Open();
             Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
@@ -29,19 +25,17 @@ namespace virtual_receptionist
                 Connection = mySqlConnection
             };
 
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-            Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
-
-            while (mySqlDataReader.Read())
+            mySqlDataAdapter = new MySqlDataAdapter()
             {
-                item = mySqlDataReader["item"].ToString();
-                price = mySqlDataReader["price"].ToString();
-                unit = mySqlDataReader["unit"].ToString();
+                SelectCommand = mySqlCommand
+            };
 
-            }
+            mySqlCommandBuilder = new MySqlCommandBuilder()
+            {
+                DataAdapter = mySqlDataAdapter
+            };
 
-            mySqlDataReader.Close();
-            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+            mySqlDataAdapter.Fill(billingItems);
 
             mySqlConnection.Close();
             Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
