@@ -42,10 +42,10 @@
             this.columnHeaderUnit});
             this.listViewBillingItems.FullRowSelect = true;
             this.listViewBillingItems.GridLines = true;
-            this.listViewBillingItems.Location = new System.Drawing.Point(13, 13);
+            this.listViewBillingItems.Location = new System.Drawing.Point(12, 12);
             this.listViewBillingItems.MultiSelect = false;
             this.listViewBillingItems.Name = "listViewBillingItems";
-            this.listViewBillingItems.Size = new System.Drawing.Size(468, 354);
+            this.listViewBillingItems.Size = new System.Drawing.Size(477, 355);
             this.listViewBillingItems.TabIndex = 0;
             this.listViewBillingItems.UseCompatibleStateImageBehavior = false;
             this.listViewBillingItems.View = System.Windows.Forms.View.Details;
@@ -69,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 379);
+            this.ClientSize = new System.Drawing.Size(501, 379);
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormModalBillingItems";

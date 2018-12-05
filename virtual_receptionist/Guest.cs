@@ -250,18 +250,18 @@ namespace virtual_receptionist
         /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            string guestNationality = string.Empty;
+            string nationality = string.Empty;
 
-            if (nationality == true)
+            if (this.nationality == true)
             {
-                guestNationality = "belföldi";
+                nationality = "belföldi";
             }
             else
             {
-                guestNationality = "külföldi";
+                nationality = "külföldi";
             }
 
-            return name + " " + guestNationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
+            return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
         }
 
         #endregion
