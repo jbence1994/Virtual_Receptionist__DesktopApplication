@@ -20,16 +20,22 @@ namespace virtual_receptionist
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
         private readonly MySqlConnection mySqlConnection;
-
         /// <summary>
         /// SQL utasítást vágrehajtó mező
         /// </summary>
         private MySqlCommand mySqlCommand;
-
         /// <summary>
         /// Adatbázis adatot olvasó mező
         /// </summary>
         private MySqlDataReader mySqlDataReader;
+        /// <summary>
+        /// 
+        /// </summary>
+        private MySqlDataAdapter mySqlDataAdapter;
+        /// <summary>
+        /// 
+        /// </summary>
+        private MySqlCommandBuilder mySqlCommandBuilder;
 
         #endregion
 

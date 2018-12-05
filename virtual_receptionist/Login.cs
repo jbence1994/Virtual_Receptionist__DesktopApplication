@@ -1,4 +1,4 @@
-/* Legutóbbi fejlesztés: 2018-12-03 */
+/* Legutóbbi fejlesztés: 2018-12-05 */
 
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
@@ -16,12 +16,10 @@ namespace JuhaszBence.CSharp.LoginValidator
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
         private readonly MySqlConnection mySqlConnection;
-
         /// <summary>
         /// SQL utasítást vágrehajtó mező
         /// </summary>
         private MySqlCommand mySqlCommand;
-
         /// <summary>
         /// Adatbázis adatot olvasó mező
         /// </summary>
