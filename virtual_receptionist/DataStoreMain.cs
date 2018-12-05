@@ -60,7 +60,7 @@ namespace virtual_receptionist
         /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy List<T> adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött List<T>-t adja vissza</returns>
-        public List<string> GetCountries() // <= UNIT TEST !!!
+        public List<string> GetCountries()
         {
             List<string> countries = new List<string>();
 
