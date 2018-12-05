@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
+using System.Data;
 
 namespace virtual_receptionist
 {
@@ -55,9 +56,9 @@ namespace virtual_receptionist
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy lista adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy List<T> adatszerkezetbe menti őket
         /// </summary>
-        /// <returns>Adatokkal feltöltött listát adja vissza</returns>
+        /// <returns>Adatokkal feltöltött List<T>-t adja vissza</returns>
         public List<string> GetCountries() // <= UNIT TEST !!!
         {
             List<string> countries = new List<string>();
@@ -91,12 +92,42 @@ namespace virtual_receptionist
             return countries;
         }
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és egy lista adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és egy DataTable adatszerkezetbe menti őket
         /// </summary>
-        /// <returns>Adatokkal feltöltött listát adja vissza</returns>
-        public List<string> GetBillingItems() //<= UNIT TEST !!!
+        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
+        public DataTable DataTablellingItems() //<= UNIT TEST !!!
         {
-            List<string> billingItems = new List<string>();
+            DataTable billingItems = new DataTable();
+
+            string item = string.Empty;
+            string price = string.Empty;
+            string unit = string.Empty;
+
+            mySqlConnection.Open();
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+
+            mySqlCommand = new MySqlCommand()
+            {
+                CommandText = "SELECT * FROM billing_items",
+                Connection = mySqlConnection
+            };
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
+
+            while (mySqlDataReader.Read())
+            {
+                item = mySqlDataReader["item"].ToString();
+                price = mySqlDataReader["price"].ToString();
+                unit = mySqlDataReader["unit"].ToString();
+                billingItems.Add(item, price, unit);
+            }
+
+            mySqlDataReader.Close();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+
+            mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return billingItems;
         }
