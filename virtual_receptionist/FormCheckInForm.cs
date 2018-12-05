@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
-    public partial class FormRegistrationCard : Form
+    public partial class FormCheckInForm : Form
     {
-        public FormRegistrationCard()
+        public FormCheckInForm()
         {
             InitializeComponent();
         }

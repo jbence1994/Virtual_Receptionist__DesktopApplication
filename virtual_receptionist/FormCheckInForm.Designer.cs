@@ -1,6 +1,6 @@
 ﻿namespace virtual_receptionist
 {
-    partial class FormRegistrationCard
+    partial class FormCheckInForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormRegistrationCard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(640, 446);
+            this.Name = "FormRegistrationCard";
             this.Text = "FormRegistrationCard";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

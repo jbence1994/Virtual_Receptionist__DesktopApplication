@@ -97,11 +97,11 @@
     <Compile Include="FormModalGuestDatabase.Designer.cs">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistrationCard.cs">
+    <Compile Include="FormCheckInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistrationCard.Designer.cs">
-      <DependentUpon>FormRegistrationCard.cs</DependentUpon>
+    <Compile Include="FormCheckInForm.Designer.cs">
+      <DependentUpon>FormCheckInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRoomEditor.cs">
       <SubType>Form</SubType>
@@ -144,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalGuestDatabase.resx">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckInForm.resx">
+      <DependentUpon>FormCheckInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRoomEditor.resx">
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
