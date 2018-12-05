@@ -79,6 +79,8 @@ namespace virtual_receptionist
                 value = mySqlDataReader["Name"].ToString();
             }
 
+            countries.Add(key, value);
+
             mySqlDataReader.Close();
             Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
 
