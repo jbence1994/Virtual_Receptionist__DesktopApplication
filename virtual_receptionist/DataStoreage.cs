@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
-    class DataStoreage
+    /// <summary>
+    /// Adattár osztály, amely az adatbázis adatait tárolja egyes adatszerkezetekben
+    /// </summary>
+    public class DataStoreage
     {
+        #region Adattagok
+
+        #endregion
+
+        #region Konstruktor
+
+        #endregion
+
+        #region Metódusok
+
+        #endregion
     }
 }
