@@ -38,7 +38,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormCheckInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendég bejelentkező | Virtual Receptionist";
+            this.Text = "Vendég bejelentkezés | Virtual Receptionist";
             this.ResumeLayout(false);
 
         }
