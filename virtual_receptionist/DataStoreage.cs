@@ -48,12 +48,6 @@ namespace virtual_receptionist
             {
                 ConnectionString = "SERVER =" + server + "; DATABASE=" + database + "; UID=" + username + "; PASSWORD=" + password + "; PORT=" + port + "; SslMode=None;"
             };
-
-            mySqlCommand = new MySqlCommand()
-            {
-                CommandText = "SELECT * FROM " + table,
-                Connection = mySqlConnection
-            };
         }
 
         #endregion
