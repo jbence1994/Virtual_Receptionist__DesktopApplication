@@ -91,6 +91,13 @@ namespace virtual_receptionist
             return countries;
         }
 
+        public List<string> GetBillingItems() //<= UNIT TEST !!!
+        {
+            List<string> billingItems = new List<string>();
+
+            return billingItems;
+        }
+
         #endregion
     }
 }
