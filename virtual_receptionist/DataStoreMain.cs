@@ -19,7 +19,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
-        private readonly MySqlConnection mySqlConnection;
+        private MySqlConnection mySqlConnection;
         /// <summary>
         /// SQL utasítást vágrehajtó mező
         /// </summary>

@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillingController.cs" />
     <Compile Include="DataStoreBilling.cs" />
     <Compile Include="DataStoreMain.cs" />
     <Compile Include="FormAboutUs.cs">
