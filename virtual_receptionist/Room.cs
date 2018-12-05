@@ -14,7 +14,7 @@ namespace virtual_receptionist
         #region Adattagok
 
         /// <summary>
-        /// Szoba elnevezése/fantázianeve
+        /// Szoba elnevezése / fantázianeve
         /// </summary>
         private string name;
         /// <summary>
@@ -25,6 +25,10 @@ namespace virtual_receptionist
         /// Szobakategória
         /// </summary>
         private string category;
+        /// <summary>
+        /// Szoba kapacitása / maximális férőhelye
+        /// </summary>
+        private int capacity;
 
         #endregion
 
@@ -33,13 +37,15 @@ namespace virtual_receptionist
         /// <summary>
         /// Room osztály konstruktora
         /// </summary>
-        /// <param name="name">Szoba elnevezése/fantázianeve</param>
+        /// <param name="name">Szoba elnevezése / fantázianeve</param>
         /// <param name="number">Szobaszám</param>
         /// <param name="category">Szobakategória</param>
-        public Room(string name, int number, string category)
+        /// <param name="capacity">Szoba kapacitása / maximális férőhelye</param>
+        public Room(string name, int number, string category, int capacity)
         {
             this.number = number;
             this.category = category;
+            this.capacity = capacity;
         }
         /// <summary>
         /// Room osztály üres konstruktora
@@ -95,6 +101,20 @@ namespace virtual_receptionist
                 category = value;
             }
         }
+        /// <summary>
+        /// Szoba kapacitása / maximális férőhelye
+        /// </summary>
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
+            }
+            set
+            {
+                capacity = value;
+            }
+        }
 
         #endregion
 
@@ -106,7 +126,7 @@ namespace virtual_receptionist
         /// <returns>Visszaadja a Room típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return name + " " + number + " " + category;
+            return name + " " + number + " " + category + " " + capacity;
         }
 
         #endregion
