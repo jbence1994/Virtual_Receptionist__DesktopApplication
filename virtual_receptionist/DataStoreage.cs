@@ -55,7 +55,7 @@ namespace virtual_receptionist
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy Dictionary adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy lista adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött Dictionary-t adja vissza</returns>
         public List<string> GetCountries() // <= UNIT TEST !!!
