@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
-    class Reservation
+    /// <summary>
+    /// Foglalások modell osztálya
+    /// </summary>
+    public class Reservation
     {
+        #region Adattagok
+        #endregion
+        #region Konstruktorok
+        #endregion
+        #region Getter és setter tulajdonságok
+        #endregion
+        #region Metódusok
+        #endregion
     }
 }
