@@ -58,10 +58,10 @@ namespace virtual_receptionist
         /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy Dictionary adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött Dictionary-t adja vissza</returns>
-        public Dictionary<string, string> GetCountries() // <= UNIT TEST !!!
+        public List<string> GetCountries() // <= UNIT TEST !!!
         {
-            Dictionary<string, string> countries = new Dictionary<string, string>();
-            string countryCode = string.Empty;
+            List<string> countries = new List<string>();
+
             string countryName = string.Empty;
 
             mySqlConnection.Open();
@@ -78,11 +78,9 @@ namespace virtual_receptionist
 
             while (mySqlDataReader.Read())
             {
-                countryCode = mySqlDataReader["Code"].ToString();
                 countryName = mySqlDataReader["Name"].ToString();
+                countries.Add(countryName);
             }
-
-            countries.Add(countryCode, countryName);
 
             mySqlDataReader.Close();
             Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
