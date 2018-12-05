@@ -12,7 +12,7 @@ namespace virtual_receptionist
     /// <summary>
     /// Adattár osztály, amely az adatbázis adatait tárolja egyes adatszerkezetekben
     /// </summary>
-    public class DataStore
+    public partial class DataStore
     {
         #region Adattagok
 
@@ -42,7 +42,7 @@ namespace virtual_receptionist
         #region Konstruktor
 
         /// <summary>
-        /// Konstruktor
+        /// Adattár osztály konstruktor, amelyben inicializálva van az adatbázis elérésének útvonala
         /// </summary>
         /// <param name="server">Adatbázist tároló szerver neve</param>
         /// <param name="database">Adatbázis neve</param>
