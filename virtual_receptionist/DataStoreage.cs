@@ -59,7 +59,7 @@ namespace virtual_receptionist
         /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy Dictionary adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött Dictionary-t adja vissza</returns>
-        public Dictionary<string, string> GetCountries()
+        public Dictionary<string, string> GetCountries() // <= UNIT TEST
         {
             Dictionary<string, string> countries = new Dictionary<string, string>();
             string countryCode = string.Empty;
