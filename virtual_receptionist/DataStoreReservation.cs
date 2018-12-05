@@ -1,22 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        #region Adattagok
-
-
-
-        #endregion
-
-        #region Konstruktor
-
-
-
-        #endregion
-
-        #region Metódusok
+        #region Foglalás-kezelő modul metódusai
 
 
 
