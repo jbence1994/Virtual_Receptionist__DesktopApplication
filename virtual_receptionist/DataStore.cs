@@ -57,7 +57,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy lista adatszerkezetbe menti őket
         /// </summary>
-        /// <returns>Adatokkal feltöltött Dictionary-t adja vissza</returns>
+        /// <returns>Adatokkal feltöltött listát adja vissza</returns>
         public List<string> GetCountries() // <= UNIT TEST !!!
         {
             List<string> countries = new List<string>();
@@ -93,7 +93,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és egy lista adatszerkezetbe menti őket
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Adatokkal feltöltött listát adja vissza</returns>
         public List<string> GetBillingItems() //<= UNIT TEST !!!
         {
             List<string> billingItems = new List<string>();
