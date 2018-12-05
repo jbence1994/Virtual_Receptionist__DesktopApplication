@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             this.listViewItems = new System.Windows.Forms.ListView();
+            this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewItems
             // 
+            this.listViewItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderItem,
+            this.columnHeaderPrice,
+            this.columnHeaderUnit});
             this.listViewItems.FullRowSelect = true;
             this.listViewItems.GridLines = true;
             this.listViewItems.Location = new System.Drawing.Point(13, 13);
@@ -42,6 +49,21 @@
             this.listViewItems.TabIndex = 0;
             this.listViewItems.UseCompatibleStateImageBehavior = false;
             this.listViewItems.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderItem
+            // 
+            this.columnHeaderItem.Text = "Tétel";
+            this.columnHeaderItem.Width = 158;
+            // 
+            // columnHeaderPrice
+            // 
+            this.columnHeaderPrice.Text = "Egységár";
+            this.columnHeaderPrice.Width = 163;
+            // 
+            // columnHeaderUnit
+            // 
+            this.columnHeaderUnit.Text = "Egység";
+            this.columnHeaderUnit.Width = 141;
             // 
             // FormModalBillingItems
             // 
@@ -60,5 +82,8 @@
         #endregion
 
         private System.Windows.Forms.ListView listViewItems;
+        private System.Windows.Forms.ColumnHeader columnHeaderItem;
+        private System.Windows.Forms.ColumnHeader columnHeaderPrice;
+        private System.Windows.Forms.ColumnHeader columnHeaderUnit;
     }
 }
