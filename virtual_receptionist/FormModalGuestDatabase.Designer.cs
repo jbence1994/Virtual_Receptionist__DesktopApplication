@@ -54,35 +54,35 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(132, 31);
+            this.textBoxName.Location = new System.Drawing.Point(147, 33);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(185, 20);
             this.textBoxName.TabIndex = 0;
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(132, 84);
+            this.textBoxZipCode.Location = new System.Drawing.Point(147, 86);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(185, 20);
             this.textBoxZipCode.TabIndex = 3;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(132, 110);
+            this.textBoxCity.Location = new System.Drawing.Point(147, 112);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(185, 20);
             this.textBoxCity.TabIndex = 4;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(132, 136);
+            this.textBoxAddress.Location = new System.Drawing.Point(147, 138);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxAddress.TabIndex = 5;
             // 
             // textBoxVatNumber
             // 
-            this.textBoxVatNumber.Location = new System.Drawing.Point(132, 237);
+            this.textBoxVatNumber.Location = new System.Drawing.Point(147, 239);
             this.textBoxVatNumber.Name = "textBoxVatNumber";
             this.textBoxVatNumber.ReadOnly = true;
             this.textBoxVatNumber.Size = new System.Drawing.Size(185, 20);
@@ -90,7 +90,7 @@
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(132, 162);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(147, 164);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxPhoneNumber.TabIndex = 7;
@@ -98,14 +98,14 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(132, 57);
+            this.comboBoxCountry.Location = new System.Drawing.Point(147, 59);
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(185, 21);
             this.comboBoxCountry.TabIndex = 8;
             // 
             // textBoxEmailAddress
             // 
-            this.textBoxEmailAddress.Location = new System.Drawing.Point(132, 188);
+            this.textBoxEmailAddress.Location = new System.Drawing.Point(147, 190);
             this.textBoxEmailAddress.Name = "textBoxEmailAddress";
             this.textBoxEmailAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxEmailAddress.TabIndex = 11;
@@ -113,7 +113,7 @@
             // radioButtonNational
             // 
             this.radioButtonNational.AutoSize = true;
-            this.radioButtonNational.Location = new System.Drawing.Point(132, 214);
+            this.radioButtonNational.Location = new System.Drawing.Point(147, 216);
             this.radioButtonNational.Name = "radioButtonNational";
             this.radioButtonNational.Size = new System.Drawing.Size(89, 17);
             this.radioButtonNational.TabIndex = 12;
@@ -124,7 +124,7 @@
             // radioButtonForeign
             // 
             this.radioButtonForeign.AutoSize = true;
-            this.radioButtonForeign.Location = new System.Drawing.Point(228, 214);
+            this.radioButtonForeign.Location = new System.Drawing.Point(243, 216);
             this.radioButtonForeign.Name = "radioButtonForeign";
             this.radioButtonForeign.Size = new System.Drawing.Size(89, 17);
             this.radioButtonForeign.TabIndex = 13;
@@ -135,7 +135,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(52, 34);
+            this.labelName.Location = new System.Drawing.Point(67, 36);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(74, 13);
             this.labelName.TabIndex = 18;
@@ -144,7 +144,7 @@
             // labelNationality
             // 
             this.labelNationality.AutoSize = true;
-            this.labelNationality.Location = new System.Drawing.Point(70, 216);
+            this.labelNationality.Location = new System.Drawing.Point(85, 218);
             this.labelNationality.Name = "labelNationality";
             this.labelNationality.Size = new System.Drawing.Size(56, 13);
             this.labelNationality.TabIndex = 19;
@@ -153,7 +153,7 @@
             // labelVatNumber
             // 
             this.labelVatNumber.AutoSize = true;
-            this.labelVatNumber.Location = new System.Drawing.Point(73, 240);
+            this.labelVatNumber.Location = new System.Drawing.Point(88, 242);
             this.labelVatNumber.Name = "labelVatNumber";
             this.labelVatNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVatNumber.TabIndex = 21;
@@ -162,7 +162,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(70, 113);
+            this.labelCity.Location = new System.Drawing.Point(85, 115);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
             this.labelCity.TabIndex = 22;
@@ -171,7 +171,7 @@
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(83, 60);
+            this.labelCountry.Location = new System.Drawing.Point(98, 62);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
             this.labelCountry.TabIndex = 23;
@@ -180,7 +180,7 @@
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(56, 87);
+            this.labelZipCode.Location = new System.Drawing.Point(71, 89);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelZipCode.TabIndex = 24;
@@ -189,7 +189,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(97, 139);
+            this.labelAddress.Location = new System.Drawing.Point(112, 141);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
             this.labelAddress.TabIndex = 25;
@@ -198,7 +198,7 @@
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(56, 165);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(71, 167);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelPhoneNumber.TabIndex = 26;
@@ -207,7 +207,7 @@
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(88, 191);
+            this.labelEmailAddress.Location = new System.Drawing.Point(103, 193);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(38, 13);
             this.labelEmailAddress.TabIndex = 27;
@@ -216,7 +216,7 @@
             // checkBoxCorporateGuest
             // 
             this.checkBoxCorporateGuest.AutoSize = true;
-            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(132, 263);
+            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(147, 265);
             this.checkBoxCorporateGuest.Name = "checkBoxCorporateGuest";
             this.checkBoxCorporateGuest.Size = new System.Drawing.Size(141, 17);
             this.checkBoxCorporateGuest.TabIndex = 28;
@@ -236,7 +236,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(310, 309);
+            this.buttonCancel.Location = new System.Drawing.Point(343, 309);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 30;
@@ -247,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 344);
+            this.ClientSize = new System.Drawing.Size(430, 344);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.checkBoxCorporateGuest);
