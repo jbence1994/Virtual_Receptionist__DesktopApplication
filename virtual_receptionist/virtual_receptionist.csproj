@@ -97,6 +97,12 @@
     <Compile Include="FormModalGuestDatabase.Designer.cs">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistrationCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrationCard.Designer.cs">
+      <DependentUpon>FormRegistrationCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRoomEditor.cs">
       <SubType>Form</SubType>
     </Compile>
