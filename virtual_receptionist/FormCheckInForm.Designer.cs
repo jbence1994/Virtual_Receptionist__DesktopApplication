@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // FormRegistrationCard
+            // FormCheckInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 446);
-            this.Name = "FormRegistrationCard";
-            this.Text = "FormRegistrationCard";
+            this.ClientSize = new System.Drawing.Size(663, 519);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "FormCheckInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Vendég bejelentkező | Virtual Receptionist";
             this.ResumeLayout(false);
 
         }
