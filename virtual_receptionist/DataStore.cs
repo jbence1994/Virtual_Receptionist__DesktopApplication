@@ -95,7 +95,7 @@ namespace virtual_receptionist
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és egy DataTable adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable DataTablellingItems() //<= UNIT TEST !!!
+        public DataTable GetBillingItems() //<= UNIT TEST !!!
         {
             DataTable billingItems = new DataTable();
 
