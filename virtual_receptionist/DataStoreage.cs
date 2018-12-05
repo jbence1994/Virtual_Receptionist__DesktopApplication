@@ -58,11 +58,32 @@ namespace virtual_receptionist
         public Dictionary<string, string> GetCountries()
         {
             Dictionary<string, string> countries = new Dictionary<string, string>();
+            string key = string.Empty;
+            string value = string.Empty;
 
             mySqlConnection.Open();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen megnyílt...");
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
+            mySqlCommand = new MySqlCommand()
+            {
+                CommandText = "SELECT * FROM countries",
+                Connection = mySqlConnection
+            };
 
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
+
+            while (mySqlDataReader.Read())
+            {
+                key = mySqlDataReader["Code"].ToString();
+                value = mySqlDataReader["Name"].ToString();
+            }
+
+            mySqlDataReader.Close();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+
+            mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return countries;
         }
