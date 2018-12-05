@@ -39,11 +39,10 @@ namespace virtual_receptionist
         /// </summary>
         /// <param name="server">Adatbázist tároló szerver neve</param>
         /// <param name="database">Adatbázis neve</param>
-        /// <param name="table">Felhasználói fiókokat tartalmazó adatbázistábla</param>
         /// <param name="username">Adatbázis felhasználónév</param>
         /// <param name="password">Adatbázis jelszó</param>
         /// <param name="port">Adatbázis szerver elérésére szolgáló hálózati port</param>
-        public DataStoreage(string server, string database, string table, string username, string password, string port)
+        public DataStoreage(string server, string database, string username, string password, string port)
         {
             mySqlConnection = new MySqlConnection
             {
@@ -59,7 +58,7 @@ namespace virtual_receptionist
         /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy Dictionary adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött Dictionary-t adja vissza</returns>
-        public Dictionary<string, string> GetCountries() // <= UNIT TEST
+        public Dictionary<string, string> GetCountries() // <= UNIT TEST !!!
         {
             Dictionary<string, string> countries = new Dictionary<string, string>();
             string countryCode = string.Empty;

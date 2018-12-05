@@ -15,6 +15,11 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormModalBilling : Form
     {
+        DataStoreage dataStoreage = new DataStoreage("localhost", "virtual_receptionist", "",  "root", "", "3306");
+
+
+
+
         #region Konstruktor
 
         /// <summary>
