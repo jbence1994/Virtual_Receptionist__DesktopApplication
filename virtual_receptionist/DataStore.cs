@@ -90,7 +90,10 @@ namespace virtual_receptionist
 
             return countries;
         }
-
+        /// <summary>
+        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és egy lista adatszerkezetbe menti őket
+        /// </summary>
+        /// <returns></returns>
         public List<string> GetBillingItems() //<= UNIT TEST !!!
         {
             List<string> billingItems = new List<string>();
