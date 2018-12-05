@@ -69,7 +69,7 @@ namespace virtual_receptionist
 
             mySqlCommand = new MySqlCommand()
             {
-                CommandText = "SELECT * FROM countries",
+                CommandText = "SELECT * FROM country",
                 Connection = mySqlConnection
             };
 
