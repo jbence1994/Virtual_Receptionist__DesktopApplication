@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
-using System.Data;
 
 namespace virtual_receptionist
 {
     /// <summary>
-    /// Adattár osztály, amely az adatbázis adatait tárolja egyes adatszerkezetekben
+    /// Adattár osztály, amely az adatbázis adatait tárolja adatszerkezetekben
     /// </summary>
     public partial class DataStore
     {
