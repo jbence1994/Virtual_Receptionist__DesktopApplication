@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillingController.cs" />
-    <Compile Include="DataStoreage.cs" />
+    <Compile Include="DataStorage.cs" />
     <Compile Include="FormAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
