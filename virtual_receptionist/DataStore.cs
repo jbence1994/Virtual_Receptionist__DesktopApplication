@@ -11,7 +11,7 @@ namespace virtual_receptionist
     /// <summary>
     /// Adattár osztály, amely az adatbázis adatait tárolja egyes adatszerkezetekben
     /// </summary>
-    public class DataStorage
+    public class DataStore
     {
         #region Adattagok
 
@@ -42,7 +42,7 @@ namespace virtual_receptionist
         /// <param name="username">Adatbázis felhasználónév</param>
         /// <param name="password">Adatbázis jelszó</param>
         /// <param name="port">Adatbázis szerver elérésére szolgáló hálózati port</param>
-        public DataStorage(string server, string database, string username, string password, string port)
+        public DataStore(string server, string database, string username, string password, string port)
         {
             mySqlConnection = new MySqlConnection
             {
