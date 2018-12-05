@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace virtual_receptionist
 {
@@ -54,10 +55,16 @@ namespace virtual_receptionist
 
         #region Metódusok
 
-        public Dictionary<string, string> GetCountriesToComboBox()
+        public Dictionary<string, string> GetCountries()
         {
+            Dictionary<string, string> countries = new Dictionary<string, string>();
 
-            return 
+            mySqlConnection.Open();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen megnyílt...");
+
+
+
+            return countries;
         }
 
         #endregion
