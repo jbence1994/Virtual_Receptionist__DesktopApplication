@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DataStoreBilling.cs" />
     <Compile Include="DataStoreMain.cs" />
+    <Compile Include="DataStoreReservation.cs" />
     <Compile Include="FormAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
