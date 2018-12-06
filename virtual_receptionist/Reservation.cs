@@ -20,7 +20,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendégek száma
         /// </summary>
-        private int numberOfGuest;
+        private int numberOfGuests;
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
@@ -37,11 +37,11 @@ namespace virtual_receptionist
         /// <summary>
         /// Reservation osztály konstruktora
         /// </summary>
-        public Reservation(Guest guest, Room room, int numberOfGuest, DateTime arrival, DateTime departure)
+        public Reservation(Guest guest, Room room, int numberOfGuests, DateTime arrival, DateTime departure)
         {
             this.guest = guest;
             this.room = room;
-            this.numberOfGuest = numberOfGuest;
+            this.numberOfGuests = numberOfGuests;
             this.arrival = arrival;
             this.departure = departure;
         }
@@ -88,15 +88,15 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendégek száma
         /// </summary>
-        public int NumberOfGuest
+        public int NumberOfGuests
         {
             get
             {
-                return numberOfGuest;
+                return numberOfGuests;
             }
             set
             {
-                numberOfGuest = value;
+                numberOfGuests = value;
             }
         }
         /// <summary>
@@ -138,7 +138,7 @@ namespace virtual_receptionist
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return guest + "" + room + "" + numberOfGuest + "" + arrival + "" + departure;
+            return guest + "" + room + "" + numberOfGuests + "" + arrival + "" + departure;
         }
 
         #endregion
