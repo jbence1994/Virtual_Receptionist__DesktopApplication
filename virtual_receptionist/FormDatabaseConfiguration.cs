@@ -11,6 +11,11 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
+        /// <summary>
+        /// XmlTextReader osztály egy példánya
+        /// </summary>
+        private XmlTextReader xmlReader;
+
         #endregion
 
         #region Konstruktor
@@ -21,6 +26,7 @@ namespace virtual_receptionist
         public FormDatabaseConfiguration()
         {
             InitializeComponent();
+            xmlReader = new XmlTextReader("dbconfig.xml");
         }
 
         #endregion
