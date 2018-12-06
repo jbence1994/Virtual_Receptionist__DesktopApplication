@@ -15,9 +15,24 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormModalGuestDatabase : Form
     {
+        #region Adattagok
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak konstruktora
+        /// </summary>
         public FormModalGuestDatabase()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Metódusok
+
+        #endregion
     }
 }

@@ -15,6 +15,10 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormMainMenu : Form
     {
+        #region Adattagok
+
+        #endregion
+
         #region Konstruktor
 
         /// <summary>
