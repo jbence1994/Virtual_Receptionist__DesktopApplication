@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxAccomodationID = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -44,12 +44,12 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // textBoxUsername
+            // textBoxAccomodationID
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(48, 88);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(278, 20);
-            this.textBoxUsername.TabIndex = 1;
+            this.textBoxAccomodationID.Location = new System.Drawing.Point(48, 88);
+            this.textBoxAccomodationID.Name = "textBoxAccomodationID";
+            this.textBoxAccomodationID.Size = new System.Drawing.Size(278, 20);
+            this.textBoxAccomodationID.TabIndex = 1;
             // 
             // textBoxPassword
             // 
@@ -76,7 +76,7 @@
             this.ClientSize = new System.Drawing.Size(372, 218);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.textBoxAccomodationID);
             this.Controls.Add(this.buttonLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
@@ -90,7 +90,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textBoxAccomodationID;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelTitle;
     }
