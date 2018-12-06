@@ -59,8 +59,8 @@
             this.labelText.Size = new System.Drawing.Size(299, 52);
             this.labelText.TabIndex = 3;
             this.labelText.Text = "Ezen Virtual Receptionist példánya nem regisztrált!\r\n\r\nKérjük kattintson a \'Szoft" +
-    "ver regisztrációja\' gombra az előzetes\r\nszálláshely regisztrációhoz és termékkul" +
-    "cs aktiválásához!";
+    "ver regisztrációja\' gombra az előzetes\r\nszálláshely regisztrációhoz/termékkulcs " +
+    "aktiválásához!";
             // 
             // FormUnregisteredSoftware
             // 
