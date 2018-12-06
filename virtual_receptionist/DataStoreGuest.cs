@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace virtual_receptionist
 {
@@ -8,12 +8,12 @@ namespace virtual_receptionist
         #region Vendégadatbázis-szerkesztő modul metódusai
 
         /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy ... adatszerkezetben
+        /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
         /// </summary>
         /// <returns></returns>
-        public List<Guest> GetGuests()
+        public DataTable GetGuests()
         {
-            List<Guest> guests = new List<Guest>();
+            DataTable guests = new DataTable();
 
             mySqlConnection.Open();
 
