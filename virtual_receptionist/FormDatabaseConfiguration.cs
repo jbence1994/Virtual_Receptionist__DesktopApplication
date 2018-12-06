@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml;
 using System.Windows.Forms;
+using System.IO;
 
 namespace virtual_receptionist
 {
@@ -15,6 +16,10 @@ namespace virtual_receptionist
         /// XmlTextReader osztály egy példánya
         /// </summary>
         private XmlTextReader xmlTextReader;
+        /// <summary>
+        /// StreamReader osztály egy példánya
+        /// </summary>
+        private StreamReader streamReader;
 
         #endregion
 
@@ -27,6 +32,7 @@ namespace virtual_receptionist
         {
             InitializeComponent();
             xmlTextReader = new XmlTextReader("dbconfig.xml");
+            streamReader = new StreamReader("dbconfig.txt");
         }
 
         #endregion
