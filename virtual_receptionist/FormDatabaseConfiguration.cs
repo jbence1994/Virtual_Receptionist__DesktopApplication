@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace virtual_receptionist
 {
+    /// <summary>
+    /// Adatbázis konfigurációra szolgáló ablak
+    /// </summary>
     public partial class FormDatabaseConfiguration : Form
     {
         #region Adattagok
@@ -18,6 +21,9 @@ namespace virtual_receptionist
 
         #region Konstruktor
 
+        /// <summary>
+        /// Adatbázis konfigurációra szolgáló ablak konstruktora
+        /// </summary>
         public FormDatabaseConfiguration()
         {
             InitializeComponent();
