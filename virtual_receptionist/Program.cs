@@ -13,7 +13,7 @@ namespace virtual_receptionist
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCheckInForm());
+            Application.Run(new FormGuestDatabase(new FormMainMenu()));
         }
     }
 }

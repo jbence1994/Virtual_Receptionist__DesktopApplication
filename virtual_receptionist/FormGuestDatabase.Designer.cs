@@ -62,7 +62,7 @@
             this.listViewGuests.GridLines = true;
             this.listViewGuests.Location = new System.Drawing.Point(12, 27);
             this.listViewGuests.Name = "listViewGuests";
-            this.listViewGuests.Size = new System.Drawing.Size(845, 549);
+            this.listViewGuests.Size = new System.Drawing.Size(985, 549);
             this.listViewGuests.TabIndex = 0;
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
@@ -70,53 +70,53 @@
             // columnHeaderName
             // 
             this.columnHeaderName.Text = "Név";
-            this.columnHeaderName.Width = 105;
+            this.columnHeaderName.Width = 110;
             // 
             // columnHeaderNationality
             // 
             this.columnHeaderNationality.Text = "Nemzetiség";
-            this.columnHeaderNationality.Width = 76;
+            this.columnHeaderNationality.Width = 110;
             // 
             // columnHeaderCountry
             // 
             this.columnHeaderCountry.Text = "Ország";
-            this.columnHeaderCountry.Width = 80;
+            this.columnHeaderCountry.Width = 110;
             // 
             // columnHeaderZipCode
             // 
             this.columnHeaderZipCode.Text = "Irányítószám";
-            this.columnHeaderZipCode.Width = 81;
+            this.columnHeaderZipCode.Width = 100;
             // 
             // columnHeaderCity
             // 
             this.columnHeaderCity.Text = "Település";
-            this.columnHeaderCity.Width = 89;
+            this.columnHeaderCity.Width = 110;
             // 
             // columnHeaderAddress
             // 
             this.columnHeaderAddress.Text = "Cím";
-            this.columnHeaderAddress.Width = 106;
+            this.columnHeaderAddress.Width = 110;
             // 
             // columnHeaderVATNumber
             // 
             this.columnHeaderVATNumber.Text = "Adószám";
-            this.columnHeaderVATNumber.Width = 104;
+            this.columnHeaderVATNumber.Width = 110;
             // 
             // columnHeaderPhoneNumber
             // 
             this.columnHeaderPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderPhoneNumber.Width = 102;
+            this.columnHeaderPhoneNumber.Width = 110;
             // 
             // columnHeaderEmailAddress
             // 
             this.columnHeaderEmailAddress.Text = "E-mail";
-            this.columnHeaderEmailAddress.Width = 97;
+            this.columnHeaderEmailAddress.Width = 110;
             // 
             // buttonAddGuest
             // 
             this.buttonAddGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddGuest.Image")));
-            this.buttonAddGuest.Location = new System.Drawing.Point(863, 27);
+            this.buttonAddGuest.Location = new System.Drawing.Point(1003, 27);
             this.buttonAddGuest.Name = "buttonAddGuest";
             this.buttonAddGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddGuest.TabIndex = 1;
@@ -130,7 +130,7 @@
             // 
             this.buttonDeleteGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteGuest.Image")));
-            this.buttonDeleteGuest.Location = new System.Drawing.Point(863, 167);
+            this.buttonDeleteGuest.Location = new System.Drawing.Point(1003, 167);
             this.buttonDeleteGuest.Name = "buttonDeleteGuest";
             this.buttonDeleteGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonDeleteGuest.TabIndex = 2;
@@ -144,7 +144,7 @@
             // 
             this.buttonUpdateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateGuest.Image")));
-            this.buttonUpdateGuest.Location = new System.Drawing.Point(863, 97);
+            this.buttonUpdateGuest.Location = new System.Drawing.Point(1003, 97);
             this.buttonUpdateGuest.Name = "buttonUpdateGuest";
             this.buttonUpdateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateGuest.TabIndex = 3;
@@ -158,14 +158,14 @@
             // 
             this.menuStripGuestDatabase.Location = new System.Drawing.Point(0, 0);
             this.menuStripGuestDatabase.Name = "menuStripGuestDatabase";
-            this.menuStripGuestDatabase.Size = new System.Drawing.Size(1031, 24);
+            this.menuStripGuestDatabase.Size = new System.Drawing.Size(1167, 24);
             this.menuStripGuestDatabase.TabIndex = 4;
             // 
             // buttonBackToMainMenu
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
-            this.buttonBackToMainMenu.Location = new System.Drawing.Point(863, 512);
+            this.buttonBackToMainMenu.Location = new System.Drawing.Point(1003, 508);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
             this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
             this.buttonBackToMainMenu.TabIndex = 5;
@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 584);
+            this.ClientSize = new System.Drawing.Size(1167, 584);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.Controls.Add(this.buttonUpdateGuest);
             this.Controls.Add(this.buttonDeleteGuest);
