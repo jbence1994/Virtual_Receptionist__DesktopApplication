@@ -42,6 +42,7 @@
             // 
             this.textBoxServer.Location = new System.Drawing.Point(12, 39);
             this.textBoxServer.Name = "textBoxServer";
+            this.textBoxServer.ReadOnly = true;
             this.textBoxServer.Size = new System.Drawing.Size(217, 20);
             this.textBoxServer.TabIndex = 0;
             // 
@@ -49,6 +50,7 @@
             // 
             this.textBoxPort.Location = new System.Drawing.Point(12, 143);
             this.textBoxPort.Name = "textBoxPort";
+            this.textBoxPort.ReadOnly = true;
             this.textBoxPort.Size = new System.Drawing.Size(217, 20);
             this.textBoxPort.TabIndex = 1;
             // 
@@ -56,6 +58,7 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(12, 117);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.ReadOnly = true;
             this.textBoxPassword.Size = new System.Drawing.Size(217, 20);
             this.textBoxPassword.TabIndex = 5;
             // 
@@ -63,6 +66,7 @@
             // 
             this.textBoxUsername.Location = new System.Drawing.Point(12, 91);
             this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.ReadOnly = true;
             this.textBoxUsername.Size = new System.Drawing.Size(217, 20);
             this.textBoxUsername.TabIndex = 6;
             // 
@@ -70,6 +74,7 @@
             // 
             this.textBoxDatabase.Location = new System.Drawing.Point(12, 65);
             this.textBoxDatabase.Name = "textBoxDatabase";
+            this.textBoxDatabase.ReadOnly = true;
             this.textBoxDatabase.Size = new System.Drawing.Size(217, 20);
             this.textBoxDatabase.TabIndex = 7;
             // 
