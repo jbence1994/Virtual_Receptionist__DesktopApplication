@@ -96,6 +96,7 @@
             this.buttonConnect.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConnect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
             // FormDatabaseConfiguration
             // 
@@ -113,6 +114,7 @@
             this.Name = "FormDatabaseConfiguration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adatbázis konfiguráció | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormDatabaseConfiguration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

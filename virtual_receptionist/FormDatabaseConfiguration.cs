@@ -12,9 +12,32 @@ namespace virtual_receptionist
 {
     public partial class FormDatabaseConfiguration : Form
     {
+        #region Adattagok
+
+        #endregion
+
+        #region Konstruktor
+
         public FormDatabaseConfiguration()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region UI események
+
+        private void FormDatabaseConfiguration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
     }
 }
