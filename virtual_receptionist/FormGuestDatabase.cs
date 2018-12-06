@@ -67,6 +67,11 @@ namespace virtual_receptionist
 
         }
 
+        private void FormGuestDatabase_Load(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
     }
 }
