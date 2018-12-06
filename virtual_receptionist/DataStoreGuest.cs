@@ -7,6 +7,10 @@ namespace virtual_receptionist
     {
         #region Vendégadatbázis-szerkesztő modul metódusai
 
+        /// <summary>
+        /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy ... adatszerkezetben
+        /// </summary>
+        /// <returns></returns>
         public List<Guest> GetGuests()
         {
             List<Guest> guests = new List<Guest>();
