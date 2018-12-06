@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
-    public partial class DataStoreGuest
+    public partial class DataStore
     {
         #region Vendégadatbázis-szerkesztő modul metódusai
 
