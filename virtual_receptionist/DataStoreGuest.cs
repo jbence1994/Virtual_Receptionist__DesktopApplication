@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace virtual_receptionist
 {
@@ -10,12 +11,13 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetGuests()
         {
             DataTable guests = new DataTable();
 
             mySqlConnection.Open();
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
             mySqlCommand = new MySqlCommand()
             {
@@ -23,35 +25,20 @@ namespace virtual_receptionist
                 Connection = mySqlConnection
             };
 
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            while (mySqlDataReader.Read())
+            mySqlDataAdapter = new MySqlDataAdapter()
             {
-                Guest guest = new Guest();
+                SelectCommand = mySqlCommand
+            };
 
-                guest.Name = mySqlDataReader["Name"].ToString();
+            mySqlCommandBuilder = new MySqlCommandBuilder()
+            {
+                DataAdapter = mySqlDataAdapter
+            };
 
-                if (mySqlDataReader["Nationality"].ToString() == "0")
-                {
-                    guest.Nationality = true;
-                }
-                else
-                {
-                    guest.Nationality = false;
-                }
-
-                guest.Address = mySqlDataReader["Address"].ToString();
-                guest.City = mySqlDataReader["City"].ToString();
-                guest.ZipCode = mySqlDataReader["ZipCode"].ToString();
-                guest.Country = mySqlDataReader["Country"].ToString();
-                guest.VatNumber = mySqlDataReader["VATNumber"].ToString();
-                guest.PhoneNumber = mySqlDataReader["PhoneNumber"].ToString();
-                guest.EmailAddress = mySqlDataReader["EmailAddress"].ToString();
-
-                guests.Add(guest);
-            }
+            mySqlDataAdapter.Fill(guests);
 
             mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return guests;
         }
