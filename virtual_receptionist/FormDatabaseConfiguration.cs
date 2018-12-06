@@ -14,7 +14,7 @@ namespace virtual_receptionist
         /// <summary>
         /// XmlTextReader osztály egy példánya
         /// </summary>
-        private XmlTextReader xmlReader;
+        private XmlTextReader xmlTextReader;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace virtual_receptionist
         public FormDatabaseConfiguration()
         {
             InitializeComponent();
-            xmlReader = new XmlTextReader("dbconfig.xml");
+            xmlTextReader = new XmlTextReader("dbconfig.xml");
         }
 
         #endregion
