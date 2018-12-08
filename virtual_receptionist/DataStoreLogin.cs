@@ -12,6 +12,10 @@ namespace virtual_receptionist
     {
         #region Belépési folyamatot vezérlő és ellenőrző metódusok
 
+        /// <summary>
+        /// Metódus, amely ellenőrzi van-e felhasználói fiók létrehozva
+        /// </summary>
+        /// <returns>Ha van felhasználói fiók logikai true-val tér vissza, ellenkező esetben logikai false-szal tér vissza</returns>
         public bool IsAnyAccountExist()
         {
             bool existAnyAccount = false;
