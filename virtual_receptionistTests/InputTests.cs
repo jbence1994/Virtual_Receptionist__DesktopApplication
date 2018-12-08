@@ -14,7 +14,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void InputControllerTest_InCaseInputIsEmpty()
         {
-
+            Assert.Fail("Nincs implementálva a teszt!");
         }
     }
 }
