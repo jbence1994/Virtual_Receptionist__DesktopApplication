@@ -14,6 +14,8 @@ namespace virtual_receptionist
 
         public bool IsAnyAccountExist()
         {
+            bool existAnyAccount = false;
+
             Dictionary<string, string> accounts = new Dictionary<string, string>();
 
             string username = string.Empty;
@@ -36,12 +38,10 @@ namespace virtual_receptionist
 
             if (accounts.Count != 0)
             {
-                return true;
+                existAnyAccount = true;
             }
-            else
-            {
-                return false;
-            }
+
+            return existAnyAccount;
         }
 
         #endregion
