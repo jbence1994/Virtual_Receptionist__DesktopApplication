@@ -63,7 +63,7 @@
             // columnHeaderUnit
             // 
             this.columnHeaderUnit.Text = "Egység";
-            this.columnHeaderUnit.Width = 141;
+            this.columnHeaderUnit.Width = 150;
             // 
             // FormModalBillingItems
             // 
