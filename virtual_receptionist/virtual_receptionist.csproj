@@ -118,6 +118,7 @@
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Guest.cs" />
+    <Compile Include="Input.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
