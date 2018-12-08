@@ -36,6 +36,14 @@ namespace virtual_receptionist
 
         }
 
+        public void EmailInputController()
+        {
+            if (IsValidEmailAddress())
+            {
+
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -151,6 +159,18 @@ namespace virtual_receptionist
         {
             bool valid = false;
 
+            string validEmail = "^[0-9a-z\\.-]+@([0-9a-z-]+\\.)+[a-z]{2,4}$";
+
+            Match match = Regex.Match(input, validEmail);
+
+            if (match.Success)
+            {
+                valid = true;
+            }
+
+            return valid;
+
+            /*
             Regex validEmail = new Regex("^[0-9a-z\\.-]+@([0-9a-z-]+\\.)+[a-z]{2,4}$");
 
             if (validEmail.IsMatch(input))
@@ -159,6 +179,7 @@ namespace virtual_receptionist
             }
 
             return valid;
+            */
         }
 
         #endregion
