@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace virtual_receptionist
@@ -38,9 +39,9 @@ namespace virtual_receptionist
 
         public void EmailInputController()
         {
-            if (IsValidEmailAddress())
+            if (!IsValidEmailAddress())
             {
-
+                throw new FormatException("Nem megfelelő a megadott e-mail cím formátuma!");
             }
         }
 
