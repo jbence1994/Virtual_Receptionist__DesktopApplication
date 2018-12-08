@@ -27,7 +27,7 @@ namespace virtual_receptionist.Tests
             }
             catch (Exception)
             {
-                Debug.Write("Kivétel elkapva!");
+                Debug.WriteLine("Kivétel elkapva!");
             }
         }
     }
