@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionist", "virtual_receptionist.csproj", "{C36EBE0F-791C-4574-9170-E1088411CD33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionistTests", "..\virtual_receptionistTests\virtual_receptionistTests.csproj", "{AD40744A-7958-4F6C-A2F4-241DB566C7EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C36EBE0F-791C-4574-9170-E1088411CD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C36EBE0F-791C-4574-9170-E1088411CD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C36EBE0F-791C-4574-9170-E1088411CD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD40744A-7958-4F6C-A2F4-241DB566C7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD40744A-7958-4F6C-A2F4-241DB566C7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD40744A-7958-4F6C-A2F4-241DB566C7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD40744A-7958-4F6C-A2F4-241DB566C7EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

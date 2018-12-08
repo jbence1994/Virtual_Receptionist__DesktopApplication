@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using virtual_receptionist;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace virtual_receptionistTests
+namespace virtual_receptionist.Tests
 {
-    class InputTests
+    [TestClass()]
+    public class InputTests
     {
+        [TestMethod()]
+        public void InputControllerTest_InCaseInputIsEmpty()
+        {
+
+        }
     }
 }
