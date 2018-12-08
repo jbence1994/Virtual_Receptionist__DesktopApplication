@@ -152,25 +152,13 @@ namespace virtual_receptionist
             return false;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény; ellenkező esetben logikai false-szal tér vissza</returns>
         private bool IsValidEmailAddress()
         {
             bool valid = false;
 
-            string validEmail = "^[0-9a-z\\.-]+@([0-9a-z-]+\\.)+[a-z]{2,4}$";
-
-            Match match = Regex.Match(input, validEmail);
-
-            if (match.Success)
-            {
-                valid = true;
-            }
-
-            return valid;
-
-            /*
             Regex validEmail = new Regex("^[0-9a-z\\.-]+@([0-9a-z-]+\\.)+[a-z]{2,4}$");
 
             if (validEmail.IsMatch(input))
@@ -179,7 +167,6 @@ namespace virtual_receptionist
             }
 
             return valid;
-            */
         }
 
         #endregion
