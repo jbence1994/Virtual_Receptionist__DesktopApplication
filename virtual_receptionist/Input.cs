@@ -46,7 +46,7 @@ namespace virtual_receptionist
         {
             if (!IsValidEmailAddress())
             {
-                throw new FormatException("Nem megfelelő a megadott e-mail cím formátuma!");
+                throw new FormatException("Nem megfelelő a bemeneti e-mail cím formátuma!");
             }
         }
 
