@@ -14,10 +14,34 @@ namespace virtual_receptionist
 
         public bool IsAnyAccountExist()
         {
+            Dictionary<string, string> accounts = new Dictionary<string, string>();
 
+            string username = string.Empty;
+            string password = string.Empty;
 
+            mySqlCommand = new MySqlCommand()
+            {
+                CommandText = "SELECT * FROM account",
+                Connection = mySqlConnection
+            };
 
-            return false;
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            while (mySqlDataReader.Read())
+            {
+                username = mySqlDataReader["username"].ToString();
+                password = mySqlDataReader["password"].ToString();
+                accounts.Add(username, password);
+            }
+
+            if (accounts.Count != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         #endregion
