@@ -31,6 +31,11 @@ namespace virtual_receptionist
 
         #region Metódusok
 
+        public void InputController()
+        {
+
+        }
+
         /// <summary>
         /// 
         /// </summary>
