@@ -21,6 +21,9 @@ namespace virtual_receptionist
             string username = string.Empty;
             string password = string.Empty;
 
+            mySqlConnection.Open();
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+
             mySqlCommand = new MySqlCommand()
             {
                 CommandText = "SELECT * FROM account",
@@ -36,10 +39,16 @@ namespace virtual_receptionist
                 accounts.Add(username, password);
             }
 
+            mySqlDataReader.Close();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+
             if (accounts.Count != 0)
             {
                 existAnyAccount = true;
             }
+
+            mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return existAnyAccount;
         }
