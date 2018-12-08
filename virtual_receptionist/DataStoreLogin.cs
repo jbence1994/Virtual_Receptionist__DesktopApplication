@@ -20,7 +20,7 @@ namespace virtual_receptionist
         {
             bool existAnyAccount = false;
 
-            Dictionary<string, string> accounts = new Dictionary<string, string>();
+            Dictionary<string, string> account = new Dictionary<string, string>();
 
             string username = string.Empty;
             string password = string.Empty;
@@ -40,13 +40,13 @@ namespace virtual_receptionist
             {
                 username = mySqlDataReader["username"].ToString();
                 password = mySqlDataReader["password"].ToString();
-                accounts.Add(username, password);
+                account.Add(username, password);
             }
 
             mySqlDataReader.Close();
             Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
 
-            if (accounts.Count != 0)
+            if (account.Count != 0)
             {
                 existAnyAccount = true;
             }
