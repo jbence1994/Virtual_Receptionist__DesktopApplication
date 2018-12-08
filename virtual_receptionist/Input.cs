@@ -1,48 +1,45 @@
 using System.Text.RegularExpressions;
 
-namespace JuhaszBence.CSharp.InputEllenőrző
+namespace virtual_receptionist
 {
-    public class InputEllenőrző
+    /// <summary>
+    /// Felhasználó által bevitt adatok ellenőrzésére szolgáló osztály
+    /// </summary>
+    public class Input
     {
-        private string input;
-        
-        public InputEllenőrző(string input)
-        {
-            this.input=input;
-        }
-        
-        public bool EllenőrzésVezérlő()
-        {
-            bool helyesInput = true;
-            
-            if(IsEmpty())
-            {
-                throw new MyException("");
-            }
-            
-            if(ContainsControlCharacters())
-            {
-                throw new MyException("");
-            }
-            
-            if(ContainsDigitCharacters())
-            {
-                throw new MyException("");
-            }
-            
-            return helyesInput;
-        }
-        
+        #region Adattagok
+
         /// <summary>
-        /// In case a user left empty input fields
+        /// Felhasználó által bevitt adat
+        /// </summary>
+        private readonly string input;
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Konstruktor, amely megkapja osztályszinten a felhasználó által bevitt adatot
+        /// </summary>
+        /// <param name="input">Felhasználó által bevitt adat</param>
+        public Input(string input)
+        {
+            this.input = input;
+        }
+
+        #endregion
+
+        #region Metódusok
+
+        /// <summary>
+        /// 
         /// </summary>
         private bool IsEmpty()
         {
             return string.IsNullOrEmpty(input) && string.IsNullOrWhiteSpace(input) && input == string.Empty ? true : false;
         }
-
         /// <summary>
-        /// In case a user left control characters in an input field when it is not allowed on any string index
+        /// 
         /// </summary>
         private bool ContainsControlCharacters()
         {
@@ -58,15 +55,14 @@ namespace JuhaszBence.CSharp.InputEllenőrző
 
             return criticalIndex;
         }
-
         /// <summary>
-        /// In case a user left digit characters in an input field when it is not allowed on any string index
+        /// 
         /// </summary>
         /// <returns></returns>
         private bool ContainsDigitCharacters()
         {
             bool criticalIndex = false;
-             
+
             for (int index = 0; index < input.Length; index++)
             {
                 if (char.IsDigit(input[index]))
@@ -77,9 +73,8 @@ namespace JuhaszBence.CSharp.InputEllenőrző
 
             return criticalIndex;
         }
-
         /// <summary>
-        /// In case a user left a letter character in an input field when it is not allowed on any string index
+        /// 
         /// </summary>
         /// <returns></returns>
         private bool ContainsLetterCharacters()
@@ -96,9 +91,8 @@ namespace JuhaszBence.CSharp.InputEllenőrző
 
             return criticalIndex;
         }
-
         /// <summary>
-        /// In case a user uses an uppercase character when it is not allowedd on any string index
+        /// 
         /// </summary>
         /// <returns></returns>
         private bool ContainsUppercaseCharacters()
@@ -115,9 +109,8 @@ namespace JuhaszBence.CSharp.InputEllenőrző
 
             return criticalIndex;
         }
-
         /// <summary>
-        /// In case a user uses a lowercase character when it is not allowed on any string index
+        /// 
         /// </summary>
         private bool ContainsLowercaseCharacter()
         {
@@ -133,9 +126,8 @@ namespace JuhaszBence.CSharp.InputEllenőrző
 
             return criticalIndex;
         }
-
         /// <summary>
-        /// In case a user does not use uppercase character in the beginning of a string
+        /// 
         /// </summary>
         private bool FirstLetterIsUppercaseCharacter()
         {
@@ -143,26 +135,27 @@ namespace JuhaszBence.CSharp.InputEllenőrző
             {
                 return true;
             }
-            
+
             return false;
         }
-
         /// <summary>
-        /// Checking input contains valid email address characters or format
+        /// 
         /// </summary>
         /// <returns></returns>
         private bool IsValidEmailAddress()
         {
             bool valid = false;
 
-            Regex validEmail = new Regex("^[0-9a-z\.-]+@([0-9a-z-]+\.)+[a-z]{2,4}$");
+            Regex validEmail = new Regex("^[0-9a-z\\.-]+@([0-9a-z-]+\\.)+[a-z]{2,4}$");
 
-            if (validEmail.IsMatch(emailAddress))
+            if (validEmail.IsMatch(input))
             {
                 valid = true;
             }
 
             return valid;
         }
+
+        #endregion
     }
 }
