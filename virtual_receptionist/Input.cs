@@ -34,7 +34,12 @@ namespace virtual_receptionist
 
         public void InputController()
         {
+            if (IsEmpty())
+            {
+                throw new Exception("");
+            }
 
+            // stb...
         }
 
         public void EmailInputController()
