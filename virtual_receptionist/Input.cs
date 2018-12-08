@@ -32,14 +32,22 @@ namespace virtual_receptionist
 
         #region Metódusok
 
-        public void InputController()
+        public bool InputController()
         {
+            bool correctInput = false;
+
             if (IsEmpty())
             {
                 throw new Exception("Üres bemenet!");
             }
+            else
+            {
+                correctInput = true;
+            }
 
             // stb...
+
+            return correctInput;
         }
 
         public void EmailInputController()

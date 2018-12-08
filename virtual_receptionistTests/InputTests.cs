@@ -14,7 +14,12 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void InputControllerTest_InCaseInputIsEmpty()
         {
-            Assert.Fail("Nincs implementálva a teszt!");
+            Input input = new Input("");
+            bool expected = true;
+            bool actual = input.InputController();
+            Assert.AreEqual(expected, actual, "Nem jelez hibá üres hiba esetén!");
+
+
         }
     }
 }
