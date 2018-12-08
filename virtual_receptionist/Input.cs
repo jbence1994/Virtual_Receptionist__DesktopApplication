@@ -36,7 +36,7 @@ namespace virtual_receptionist
         {
             if (IsEmpty())
             {
-                throw new Exception("");
+                throw new Exception("Üres bemenet!");
             }
 
             // stb...
