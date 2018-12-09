@@ -12,23 +12,10 @@ namespace virtual_receptionist.Tests
     [TestClass()]
     public class InputTests
     {
-        /// <summary>
-        /// Tesztmetódus: Üres inputra kiváltódik-e kivétel a függvény futásakor?
-        /// </summary>
         [TestMethod()]
-        public void InputControllerTest_InCaseInputIsEmpty()
+        public void IsEmptyTest()
         {
-            try
-            {
-                Input input = new Input("");
-                bool expected = true;
-                bool actual = input.InputController();
-                Assert.AreEqual(actual, expected, "Nem jelez hibá üres hiba esetén!");
-            }
-            catch (Exception)
-            {
-                Debug.WriteLine("Kivétel elkapva!");
-            }
+            Assert.Fail();
         }
     }
 }

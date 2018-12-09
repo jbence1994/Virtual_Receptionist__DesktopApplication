@@ -1,4 +1,3 @@
-using System;
 using System.Text.RegularExpressions;
 
 namespace virtual_receptionist
@@ -32,43 +31,17 @@ namespace virtual_receptionist
 
         #region Metódusok
 
-        public bool InputController()
-        {
-            bool correctInput = false;
-
-            if (IsEmpty())
-            {
-                throw new Exception("Üres bemenet!");
-            }
-            else
-            {
-                correctInput = true;
-            }
-
-            // stb...
-
-            return correctInput;
-        }
-
-        public void EmailInputController()
-        {
-            if (!IsValidEmailAddress())
-            {
-                throw new FormatException("Nem megfelelő a bemeneti e-mail cím formátuma!");
-            }
-        }
-
         /// <summary>
         /// 
         /// </summary>
-        private bool IsEmpty()
+        public bool IsEmpty()
         {
             return string.IsNullOrEmpty(input) && string.IsNullOrWhiteSpace(input) && input == string.Empty ? true : false;
         }
         /// <summary>
         /// 
         /// </summary>
-        private bool ContainsControlCharacters()
+        public bool ContainsControlCharacters()
         {
             bool criticalIndex = false;
 
@@ -86,7 +59,7 @@ namespace virtual_receptionist
         /// 
         /// </summary>
         /// <returns></returns>
-        private bool ContainsDigitCharacters()
+        public bool ContainsDigitCharacters()
         {
             bool criticalIndex = false;
 
@@ -104,7 +77,7 @@ namespace virtual_receptionist
         /// 
         /// </summary>
         /// <returns></returns>
-        private bool ContainsLetterCharacters()
+        public bool ContainsLetterCharacters()
         {
             bool criticalIndex = false;
 
@@ -122,7 +95,7 @@ namespace virtual_receptionist
         /// 
         /// </summary>
         /// <returns></returns>
-        private bool ContainsUppercaseCharacters()
+        public bool ContainsUppercaseCharacters()
         {
             bool criticalIndex = false;
 
@@ -139,7 +112,7 @@ namespace virtual_receptionist
         /// <summary>
         /// 
         /// </summary>
-        private bool ContainsLowercaseCharacter()
+        public bool ContainsLowercaseCharacter()
         {
             bool criticalIndex = false;
 
@@ -156,7 +129,7 @@ namespace virtual_receptionist
         /// <summary>
         /// 
         /// </summary>
-        private bool FirstLetterIsUppercaseCharacter()
+        public bool FirstLetterIsUppercaseCharacter()
         {
             if (char.IsUpper(input[0]))
             {
@@ -169,7 +142,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény; ellenkező esetben logikai false-szal tér vissza</returns>
-        private bool IsValidEmailAddress()
+        public bool IsValidEmailAddress()
         {
             bool valid = false;
 
