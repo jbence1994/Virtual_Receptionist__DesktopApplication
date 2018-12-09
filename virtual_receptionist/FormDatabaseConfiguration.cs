@@ -50,10 +50,10 @@ namespace virtual_receptionist
             switch (comboBoxConnectionType.SelectedItem)
             {
                 case "Helyi":
-                    ProcessTxtFile();
+                    SetLocalDatabasePathFromTxt();
                     break;
                 case "Távoli":
-                    ProcessXMLFile();
+
                     break;
             }
         }
@@ -67,7 +67,10 @@ namespace virtual_receptionist
 
         #region Metódusok
 
-        private void ProcessTxtFile()
+        /// <summary>
+        /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát szöveges állományból
+        /// </summary>
+        private void SetLocalDatabasePathFromTxt()
         {
             while (!streamReader.EndOfStream)
             {
@@ -87,18 +90,24 @@ namespace virtual_receptionist
                 }
             }
         }
-
-        private void ProcessXMLFile()
+        /// <summary>
+        /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát szöveges állományból
+        /// </summary>
+        private void SetRemoteDatabasePathFromTxt()
         {
             throw new NotImplementedException();
         }
-
-        private void SetLocalDatabasePath()
+        /// <summary>
+        /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát XML állományból
+        /// </summary>
+        private void SetLocalDatabasePathFromXML()
         {
             throw new NotImplementedException();
         }
-
-        private void SetRemoteDatabasePath()
+        /// <summary>
+        /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát XML állományból
+        /// </summary>
+        private void SetRemoteDatabasePathFromXML()
         {
             throw new NotImplementedException();
         }
