@@ -46,16 +46,12 @@ namespace virtual_receptionist
             {
                 case "Helyi":
                     SetLocalDatabasePathFromTxt();
+                    buttonConnect.Enabled = true;
                     break;
                 case "Távoli":
-
+                    buttonConnect.Enabled = true;
                     break;
             }
-        }
-
-        private void buttonConnect_Click(object sender, EventArgs e)
-        {
-
         }
 
         #endregion

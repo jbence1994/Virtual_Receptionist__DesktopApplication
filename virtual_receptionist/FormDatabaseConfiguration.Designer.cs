@@ -92,6 +92,7 @@
             // 
             // buttonConnect
             // 
+            this.buttonConnect.Enabled = false;
             this.buttonConnect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonConnect.Image = ((System.Drawing.Image)(resources.GetObject("buttonConnect.Image")));
             this.buttonConnect.Location = new System.Drawing.Point(235, 12);
@@ -102,7 +103,6 @@
             this.buttonConnect.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonConnect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
             // FormDatabaseConfiguration
             // 
