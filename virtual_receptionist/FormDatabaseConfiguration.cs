@@ -42,6 +42,33 @@ namespace virtual_receptionist
 
         private void FormDatabaseConfiguration_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxConnectionType.SelectedIndex)
+            {
+                case 1:
+                    ProcessTxtFile();
+                    break;
+                case 2:
+                    ProcessXMLFile();
+                    break;
+            }
+        }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region Metódusok
+
+        private void ProcessTxtFile()
+        {
             while (!streamReader.EndOfStream)
             {
                 string line = streamReader.ReadLine();
@@ -59,25 +86,6 @@ namespace virtual_receptionist
                     Debug.WriteLine(ex.Message);
                 }
             }
-        }
-
-        private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonConnect_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion
-
-        #region Metódusok
-
-        private void ProcessTextFile()
-        {
-
         }
 
         private void ProcessXMLFile()
