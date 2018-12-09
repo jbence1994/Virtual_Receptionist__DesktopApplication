@@ -42,7 +42,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void IsValidEmailAddressTest_InCaseInputIsNotValidEmail()
         {
-            Input input = new Input("juhasz");
+            Input input = new Input("test.com");
 
             bool expected = false;
             bool actual = input.IsValidEmailAddress();
@@ -52,7 +52,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void IsValidEmailAddressTest_InCaseInputIsValidEmail()
         {
-            Input input = new Input("juhasz.bence.zsolt@gmail.com");
+            Input input = new Input("test@test.co.uk");
 
             bool expected = true;
             bool actual = input.IsValidEmailAddress();
