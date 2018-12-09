@@ -2,6 +2,7 @@
 using System.Xml;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace virtual_receptionist
 {
@@ -41,7 +42,23 @@ namespace virtual_receptionist
 
         private void FormDatabaseConfiguration_Load(object sender, EventArgs e)
         {
-
+            while (!streamReader.EndOfStream)
+            {
+                string line = streamReader.ReadLine();
+                try
+                {
+                    string[] config = line.Split(';');
+                    textBoxServer.Text = config[0];
+                    textBoxDatabase.Text = config[1];
+                    textBoxUsername.Text = config[2];
+                    textBoxPassword.Text = config[3];
+                    textBoxPort.Text = config[4];
+                }
+                catch (IOException ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                }
+            }
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
