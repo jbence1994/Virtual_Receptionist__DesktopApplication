@@ -47,12 +47,12 @@ namespace virtual_receptionist
 
         private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBoxConnectionType.SelectedIndex)
+            switch (comboBoxConnectionType.SelectedItem)
             {
-                case 1:
+                case "Helyi":
                     ProcessTxtFile();
                     break;
-                case 2:
+                case "Távoli":
                     ProcessXMLFile();
                     break;
             }
