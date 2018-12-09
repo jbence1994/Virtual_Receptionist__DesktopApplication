@@ -120,7 +120,6 @@
             this.Name = "FormDatabaseConfiguration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adatbázis konfiguráció | Virtual Receptionist";
-            this.Load += new System.EventHandler(this.FormDatabaseConfiguration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

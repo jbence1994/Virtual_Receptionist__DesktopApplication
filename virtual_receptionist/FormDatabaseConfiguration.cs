@@ -40,11 +40,6 @@ namespace virtual_receptionist
 
         #region UI események
 
-        private void FormDatabaseConfiguration_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (comboBoxConnectionType.SelectedItem)
