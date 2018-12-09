@@ -12,6 +12,8 @@ namespace virtual_receptionist.Tests
     [TestClass()]
     public class InputTests
     {
+        #region IsEmpty() tesztek
+
         [TestMethod()]
         public void IsEmptyTest_InCaseInputIsNotEmpty()
         {
@@ -33,6 +35,10 @@ namespace virtual_receptionist.Tests
 
         }
 
+        #endregion
+
+        #region IsValidEmailAddress() tesztek
+
         [TestMethod()]
         public void IsValidEmailAddressTest_InCaseInputIsNotValidEmail()
         {
@@ -52,5 +58,31 @@ namespace virtual_receptionist.Tests
             bool actual = input.IsValidEmailAddress();
             Assert.AreEqual(expected, actual, "Bukik a teszt jó e-mail inputra");
         }
+
+        #endregion
+
+        #region FirstLetterIsUppercaseCharacter() tesztek
+
+        [TestMethod()]
+        public void FirstLetterIsUppercaseCharacterTest_InCaseFirstLetterIsLowercase()
+        {
+            Input input = new Input("test");
+
+            bool expected = false;
+            bool actual = input.FirstLetterIsUppercaseCharacter();
+            Assert.AreEqual(expected, actual, "Nem bukik a teszt rossz inputra");
+        }
+
+        [TestMethod()]
+        public void FirstLetterIsUppercaseCharacterTest_InCaseFirstLetterIsUppercase()
+        {
+            Input input = new Input("Test");
+
+            bool expected = true;
+            bool actual = input.FirstLetterIsUppercaseCharacter();
+            Assert.AreEqual(expected, actual, "Bukik a teszt jó inputra");
+        }
+
+        #endregion
     }
 }
