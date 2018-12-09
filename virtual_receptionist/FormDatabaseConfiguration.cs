@@ -68,5 +68,23 @@ namespace virtual_receptionist
 
         #endregion
 
+        #region Metódusok
+
+        private void SetLocalDatabasePath()
+        {
+
+        }
+
+        private void SetRemoteDatabasePath()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

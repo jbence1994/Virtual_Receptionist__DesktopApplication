@@ -34,7 +34,7 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxDatabase = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxConnectionType = new System.Windows.Forms.ComboBox();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -78,16 +78,17 @@
             this.textBoxDatabase.Size = new System.Drawing.Size(217, 20);
             this.textBoxDatabase.TabIndex = 7;
             // 
-            // comboBox1
+            // comboBoxConnectionType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxConnectionType.FormattingEnabled = true;
+            this.comboBoxConnectionType.Items.AddRange(new object[] {
             "Helyi",
             "Távoli"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 21);
-            this.comboBox1.TabIndex = 8;
+            this.comboBoxConnectionType.Location = new System.Drawing.Point(12, 12);
+            this.comboBoxConnectionType.Name = "comboBoxConnectionType";
+            this.comboBoxConnectionType.Size = new System.Drawing.Size(217, 21);
+            this.comboBoxConnectionType.TabIndex = 8;
+            this.comboBoxConnectionType.SelectedIndexChanged += new System.EventHandler(this.comboBoxConnectionType_SelectedIndexChanged);
             // 
             // buttonConnect
             // 
@@ -109,7 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 169);
             this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxConnectionType);
             this.Controls.Add(this.textBoxDatabase);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxPassword);
@@ -132,7 +133,7 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxDatabase;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxConnectionType;
         private System.Windows.Forms.Button buttonConnect;
     }
 }
