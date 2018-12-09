@@ -36,7 +36,7 @@ namespace virtual_receptionist
         /// </summary>
         public bool IsEmpty()
         {
-            return string.IsNullOrEmpty(input) && string.IsNullOrWhiteSpace(input) && input == string.Empty ? true : false;
+            return string.IsNullOrWhiteSpace(input) ? true : false;
         }
         /// <summary>
         /// 
