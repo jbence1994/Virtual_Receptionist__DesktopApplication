@@ -61,6 +61,11 @@ namespace virtual_receptionist
             }
         }
 
+        private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonConnect_Click(object sender, EventArgs e)
         {
 
@@ -70,9 +75,19 @@ namespace virtual_receptionist
 
         #region Metódusok
 
-        private void SetLocalDatabasePath()
+        private void ProcessTextFile()
         {
 
+        }
+
+        private void ProcessXMLFile()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SetLocalDatabasePath()
+        {
+            throw new NotImplementedException();
         }
 
         private void SetRemoteDatabasePath()
@@ -81,10 +96,5 @@ namespace virtual_receptionist
         }
 
         #endregion
-
-        private void comboBoxConnectionType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
