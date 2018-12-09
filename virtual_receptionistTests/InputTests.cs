@@ -13,9 +13,13 @@ namespace virtual_receptionist.Tests
     public class InputTests
     {
         [TestMethod()]
-        public void IsEmptyTest()
+        public void IsEmptyTest_InCaseInputIsNotEmpty()
         {
-            Assert.Fail();
+            Input input = new Input("test");
+
+            bool expected = false;
+            bool actual = input.IsEmpty();
+            Assert.AreEqual(expected, actual, "Nem bukik a teszt nem üres inputra");
         }
     }
 }
