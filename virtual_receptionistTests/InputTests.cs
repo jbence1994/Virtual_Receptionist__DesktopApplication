@@ -29,8 +29,28 @@ namespace virtual_receptionist.Tests
 
             bool expected = true;
             bool actual = input.IsEmpty();
-            Assert.AreEqual(expected, actual, "Nem bukik a tezt üres inputra");
+            Assert.AreEqual(expected, actual, "Bukik a tezt üres inputra");
 
+        }
+
+        [TestMethod()]
+        public void IsValidEmailAddressTest_InCaseInputIsNotValidEmail()
+        {
+            Input input = new Input("juhasz");
+
+            bool expected = false;
+            bool actual = input.IsValidEmailAddress();
+            Assert.AreEqual(expected, actual, "Nem bukik a teszt rossz e-mail inputra");
+        }
+
+        [TestMethod()]
+        public void IsValidEmailAddressTest_InCaseInputIsValidEmail()
+        {
+            Input input = new Input("juhasz.bence.zsolt@gmail.com");
+
+            bool expected = true;
+            bool actual = input.IsValidEmailAddress();
+            Assert.AreEqual(expected, actual, "Bukik a teszt jó e-mail inputra");
         }
     }
 }
