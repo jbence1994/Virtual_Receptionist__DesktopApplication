@@ -21,5 +21,16 @@ namespace virtual_receptionist.Tests
             bool actual = input.IsEmpty();
             Assert.AreEqual(expected, actual, "Nem bukik a teszt nem üres inputra");
         }
+
+        [TestMethod()]
+        public void IsEmptyTest_InCaseInputIsEmpty()
+        {
+            Input input = new Input("");
+
+            bool expected = true;
+            bool actual = input.IsEmpty();
+            Assert.AreEqual(expected, actual, "Nem bukik a tezt üres inputra");
+
+        }
     }
 }
