@@ -32,7 +32,7 @@ namespace virtual_receptionist
         #region Metódusok
 
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi az input üres karakterlánc-e
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         public bool IsEmpty()
@@ -40,7 +40,7 @@ namespace virtual_receptionist
             return string.IsNullOrWhiteSpace(input) ? true : false;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi az input tartalmaz-e vezérlőbillentyű karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         public bool ContainsControlCharacters()
@@ -58,7 +58,7 @@ namespace virtual_receptionist
             return criticalIndex;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi az input tartalmaz-e számot
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         public bool ContainsDigitCharacters()
@@ -76,7 +76,7 @@ namespace virtual_receptionist
             return criticalIndex;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi az input tartalmaz-e betűt
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         public bool ContainsLetterCharacters()
@@ -94,7 +94,7 @@ namespace virtual_receptionist
             return criticalIndex;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi az input tartalmaz-e nagybetűs karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         public bool ContainsUppercaseCharacters()
@@ -112,7 +112,7 @@ namespace virtual_receptionist
             return criticalIndex;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely ellenőrzi az input tartalmaz-e kisebtűs karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         public bool ContainsLowercaseCharacter()
