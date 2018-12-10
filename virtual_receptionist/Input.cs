@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 namespace virtual_receptionist
 {
     /// <summary>
-    /// Felhasználó által bevitt adatok ellenőrzésére szolgáló osztály
+    /// Felhasználó által bevitt adatokat ellenőrző osztály
     /// </summary>
     public class Input
     {
