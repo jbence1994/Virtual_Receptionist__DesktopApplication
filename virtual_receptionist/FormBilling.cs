@@ -63,6 +63,8 @@ namespace virtual_receptionist
                 buttonAddItem.Enabled = true;
                 buttonUpdateItem.Enabled = true;
                 buttonDeleteItem.Enabled = true;
+                buttonPrintInvoice.Enabled = true;
+                buttonSaveInvoice.Enabled = true;
             }
         }
 
