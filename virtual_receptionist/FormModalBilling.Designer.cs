@@ -197,6 +197,7 @@
             this.Name = "FormModalBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ügyfél adatai | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormModalBilling_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

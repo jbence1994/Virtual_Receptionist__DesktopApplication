@@ -17,8 +17,13 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
+        /// <summary>
+        /// Adattár osztály egy példánya
+        /// </summary>
+        private DataStore dataStore;
+
         #endregion
-        
+
         #region Konstruktor
 
         /// <summary>
@@ -27,6 +32,12 @@ namespace virtual_receptionist
         public FormModalBilling()
         {
             InitializeComponent();
+            dataStore = new DataStore("127.0.0.1", "virtual_receptionist", "root", "", "3306");
+        }
+
+        private void FormModalBilling_Load(object sender, EventArgs e)
+        {
+            comboBoxCountry.DataSource = dataStore.GetCountries();
         }
 
         #endregion
