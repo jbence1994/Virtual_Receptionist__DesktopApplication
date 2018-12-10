@@ -17,7 +17,7 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
-        //private DataStore dataStore;
+        private DataStore dataStore;
 
         #endregion
 
@@ -29,7 +29,7 @@ namespace virtual_receptionist
         public FormModalBillingItems()
         {
             InitializeComponent();
-            //dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
+            dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
         }
 
         #endregion
@@ -38,17 +38,16 @@ namespace virtual_receptionist
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            //foreach (DataRow row in dataStore.GetBillingItems().Rows)
-            //{
-            //    ListViewItem billingItems = new ListViewItem(row[1].ToString());
+            foreach (DataRow row in dataStore.GetBillingItems().Rows)
+            {
+                ListViewItem billingItems = new ListViewItem(row[1].ToString());
 
-            //    for (int i = 2; i < dataStore.GetBillingItems().Columns.Count; i++)
-            //    {
-            //        billingItems.SubItems.Add(row[i].ToString());
-            //    }
-
-            //    listViewBillingItems.Items.Add(billingItems);
-            //}
+                for (int i = 2; i < dataStore.GetBillingItems().Columns.Count; i++)
+                {
+                    billingItems.SubItems.Add(row[i].ToString());
+                }
+                listViewBillingItems.Items.Add(billingItems);
+            }
         }
 
         #endregion

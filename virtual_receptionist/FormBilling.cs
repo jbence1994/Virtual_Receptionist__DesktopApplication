@@ -57,7 +57,13 @@ namespace virtual_receptionist
         private void buttonNewData_Click(object sender, EventArgs e)
         {
             formModalBilling = new FormModalBilling();
-            formModalBilling.ShowDialog();
+
+            if (formModalBilling.ShowDialog() == DialogResult.OK)
+            {
+                buttonAddItem.Enabled = true;
+                buttonUpdateItem.Enabled = true;
+                buttonDeleteItem.Enabled = true;
+            }
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
