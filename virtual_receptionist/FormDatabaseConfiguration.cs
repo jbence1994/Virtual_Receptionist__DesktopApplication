@@ -50,11 +50,11 @@ namespace virtual_receptionist
             {
                 case "Helyi":
                     buttonConnect.Enabled = true;
-                    dataStore = SetLocalDatabasePathFromTxt();
+                    dataStore = SetLocalServerPathFromTxt();
                     break;
                 case "Távoli":
                     buttonConnect.Enabled = true;
-                    dataStore = SetRemoteDatabasePathFromTxt();
+                    dataStore = SetRemoteServerPathFromTxt();
                     break;
             }
         }
@@ -66,7 +66,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát szöveges állományból
         /// </summary>
-        private DataStore SetLocalDatabasePathFromTxt()
+        private DataStore SetLocalServerPathFromTxt()
         {
             DataStore initPath = null;
 
@@ -101,21 +101,21 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát szöveges állományból
         /// </summary>
-        private DataStore SetRemoteDatabasePathFromTxt()
+        private DataStore SetRemoteServerPathFromTxt()
         {
             throw new NotImplementedException();
         }
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát XML állományból
         /// </summary>
-        private DataStore SetLocalDatabasePathFromXML()
+        private DataStore SetLocalServerPathFromXML()
         {
             throw new NotImplementedException();
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát XML állományból
         /// </summary>
-        private DataStore SetRemoteDatabasePathFromXML()
+        private DataStore SetRemoteServerPathFromXML()
         {
             throw new NotImplementedException();
         }
