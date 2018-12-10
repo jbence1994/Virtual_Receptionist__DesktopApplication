@@ -65,6 +65,12 @@ namespace virtual_receptionist
             }
         }
 
+        private void listViewBillingItems_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = 160;
+        }
+
         #endregion
     }
 }

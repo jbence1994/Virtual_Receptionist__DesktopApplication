@@ -56,10 +56,11 @@
             this.listViewBillingItems.Location = new System.Drawing.Point(12, 12);
             this.listViewBillingItems.MultiSelect = false;
             this.listViewBillingItems.Name = "listViewBillingItems";
-            this.listViewBillingItems.Size = new System.Drawing.Size(396, 355);
+            this.listViewBillingItems.Size = new System.Drawing.Size(486, 355);
             this.listViewBillingItems.TabIndex = 0;
             this.listViewBillingItems.UseCompatibleStateImageBehavior = false;
             this.listViewBillingItems.View = System.Windows.Forms.View.Details;
+            this.listViewBillingItems.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewBillingItems_ColumnWidthChanging);
             this.listViewBillingItems.SelectedIndexChanged += new System.EventHandler(this.listViewBillingItems_SelectedIndexChanged);
             // 
             // columnHeaderItem
@@ -70,19 +71,19 @@
             // columnHeaderPrice
             // 
             this.columnHeaderPrice.Text = "Egységár";
-            this.columnHeaderPrice.Width = 115;
+            this.columnHeaderPrice.Width = 160;
             // 
             // columnHeaderUnit
             // 
             this.columnHeaderUnit.Text = "Egység";
-            this.columnHeaderUnit.Width = 115;
+            this.columnHeaderUnit.Width = 160;
             // 
             // buttonAdd
             // 
             this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonAdd.Location = new System.Drawing.Point(12, 513);
+            this.buttonAdd.Location = new System.Drawing.Point(12, 511);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(396, 37);
+            this.buttonAdd.Size = new System.Drawing.Size(486, 37);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Tétel hozzáadása";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -90,7 +91,7 @@
             // labelItem
             // 
             this.labelItem.AutoSize = true;
-            this.labelItem.Location = new System.Drawing.Point(6, 26);
+            this.labelItem.Location = new System.Drawing.Point(45, 26);
             this.labelItem.Name = "labelItem";
             this.labelItem.Size = new System.Drawing.Size(34, 13);
             this.labelItem.TabIndex = 2;
@@ -99,7 +100,7 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(6, 48);
+            this.labelPrice.Location = new System.Drawing.Point(45, 48);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(54, 13);
             this.labelPrice.TabIndex = 3;
@@ -107,7 +108,7 @@
             // 
             // textBoxItem
             // 
-            this.textBoxItem.Location = new System.Drawing.Point(115, 19);
+            this.textBoxItem.Location = new System.Drawing.Point(154, 19);
             this.textBoxItem.Name = "textBoxItem";
             this.textBoxItem.ReadOnly = true;
             this.textBoxItem.Size = new System.Drawing.Size(274, 20);
@@ -115,7 +116,7 @@
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(115, 45);
+            this.textBoxPrice.Location = new System.Drawing.Point(154, 45);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(274, 20);
@@ -123,7 +124,7 @@
             // 
             // textBoxUnit
             // 
-            this.textBoxUnit.Location = new System.Drawing.Point(115, 71);
+            this.textBoxUnit.Location = new System.Drawing.Point(154, 71);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.ReadOnly = true;
             this.textBoxUnit.Size = new System.Drawing.Size(274, 20);
@@ -132,7 +133,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(6, 100);
+            this.labelQuantity.Location = new System.Drawing.Point(45, 100);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(61, 13);
             this.labelQuantity.TabIndex = 7;
@@ -141,7 +142,7 @@
             // labelUnit
             // 
             this.labelUnit.AutoSize = true;
-            this.labelUnit.Location = new System.Drawing.Point(6, 74);
+            this.labelUnit.Location = new System.Drawing.Point(45, 74);
             this.labelUnit.Name = "labelUnit";
             this.labelUnit.Size = new System.Drawing.Size(45, 13);
             this.labelUnit.TabIndex = 8;
@@ -149,7 +150,7 @@
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(115, 97);
+            this.textBoxQuantity.Location = new System.Drawing.Point(154, 97);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
             this.textBoxQuantity.TabIndex = 9;
@@ -166,7 +167,7 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxUnit);
             this.groupBoxItemParameters.Location = new System.Drawing.Point(12, 373);
             this.groupBoxItemParameters.Name = "groupBoxItemParameters";
-            this.groupBoxItemParameters.Size = new System.Drawing.Size(396, 135);
+            this.groupBoxItemParameters.Size = new System.Drawing.Size(486, 132);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
@@ -174,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 562);
+            this.ClientSize = new System.Drawing.Size(510, 558);
             this.Controls.Add(this.groupBoxItemParameters);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewBillingItems);
