@@ -50,11 +50,10 @@ namespace virtual_receptionist
             {
                 case "Helyi":
                     buttonConnect.Enabled = true;
-                    dataStore = SetLocalServerPathFromTxt();
                     break;
+
                 case "Távoli":
                     buttonConnect.Enabled = true;
-                    dataStore = SetRemoteServerPathFromTxt();
                     break;
             }
         }
@@ -66,92 +65,28 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát szöveges állományból
         /// </summary>
-        private DataStore SetLocalServerPathFromTxt()
+        private void LocalServerPathFromTxt()
         {
-            DataStore initPath = null;
-
-            while (!streamReader.EndOfStream)
-            {
-                string line = streamReader.ReadLine();
-                try
-                {
-                    string[] configuration = line.Split(';');
-                    string server = configuration[0];
-                    string database = configuration[1];
-                    string username = configuration[2];
-                    string password = configuration[3];
-                    string port = configuration[4];
-
-                    textBoxServer.Text = server;
-                    textBoxDatabase.Text = database;
-                    textBoxUsername.Text = username;
-                    textBoxPassword.Text = password;
-                    textBoxPort.Text = port;
-
-                    initPath = new DataStore(server, database, username, password, port);
-                }
-                catch (IOException e)
-                {
-                    Debug.WriteLine(e.Message);
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine(e.Message);
-                }
-            }
-
-            return initPath;
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát szöveges állományból
         /// </summary>
-        private DataStore SetRemoteServerPathFromTxt()
+        private void RemoteServerPathFromTxt()
         {
-            DataStore initPath = null;
-
-            while (!streamReader.EndOfStream)
-            {
-                string line = streamReader.ReadLine();
-                try
-                {
-                    string[] configuration = line.Split(';');
-                    string server = configuration[0];
-                    string database = configuration[1];
-                    string username = configuration[2];
-                    string password = configuration[3];
-                    string port = configuration[4];
-
-                    textBoxServer.Text = server;
-                    textBoxDatabase.Text = database;
-                    textBoxUsername.Text = username;
-                    textBoxPassword.Text = password;
-                    textBoxPort.Text = port;
-
-                    initPath = new DataStore(server, database, username, password, port);
-                }
-                catch (IOException e)
-                {
-                    Debug.WriteLine(e.Message);
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine(e.Message);
-                }
-            }
-
-            return initPath;
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát XML állományból
         /// </summary>
-        private DataStore SetLocalServerPathFromXML()
+        private void LocalServerPathFromXML()
         {
             throw new NotImplementedException();
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát XML állományból
         /// </summary>
-        private DataStore SetRemoteServerPathFromXML()
+        private void RemoteServerPathFromXML()
         {
             throw new NotImplementedException();
         }
