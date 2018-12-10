@@ -90,9 +90,9 @@ namespace virtual_receptionist
 
                     initPath = new DataStore(server, database, username, password, port);
                 }
-                catch (IOException ex)
+                catch (IOException e)
                 {
-                    Debug.WriteLine(ex.Message);
+                    Debug.WriteLine(e.Message);
                 }
             }
 
@@ -103,7 +103,35 @@ namespace virtual_receptionist
         /// </summary>
         private DataStore SetRemoteServerPathFromTxt()
         {
-            throw new NotImplementedException();
+            DataStore initPath = null;
+
+            while (!streamReader.EndOfStream)
+            {
+                string line = streamReader.ReadLine();
+                try
+                {
+                    string[] configuration = line.Split(';');
+                    string server = configuration[0];
+                    string database = configuration[1];
+                    string username = configuration[2];
+                    string password = configuration[3];
+                    string port = configuration[4];
+
+                    textBoxServer.Text = server;
+                    textBoxDatabase.Text = database;
+                    textBoxUsername.Text = username;
+                    textBoxPassword.Text = password;
+                    textBoxPort.Text = port;
+
+                    initPath = new DataStore(server, database, username, password, port);
+                }
+                catch (IOException e)
+                {
+                    Debug.WriteLine(e.Message);
+                }
+            }
+
+            return initPath;
         }
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát XML állományból
