@@ -78,6 +78,7 @@
             this.buttonPrintInvoice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonPrintInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonPrintInvoice.UseVisualStyleBackColor = true;
+            this.buttonPrintInvoice.Click += new System.EventHandler(this.buttonPrintInvoice_Click);
             // 
             // buttonAddItem
             // 
@@ -122,6 +123,7 @@
             this.buttonDeleteItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDeleteItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteItem.UseVisualStyleBackColor = true;
+            this.buttonDeleteItem.Click += new System.EventHandler(this.buttonDeleteItem_Click);
             // 
             // printDialogPrinter
             // 
@@ -140,6 +142,7 @@
             this.buttonSaveInvoice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSaveInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSaveInvoice.UseVisualStyleBackColor = true;
+            this.buttonSaveInvoice.Click += new System.EventHandler(this.buttonSaveInvoice_Click);
             // 
             // buttonImportData
             // 
@@ -153,6 +156,7 @@
             this.buttonImportData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImportData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonImportData.UseVisualStyleBackColor = true;
+            this.buttonImportData.Click += new System.EventHandler(this.buttonImportData_Click);
             // 
             // buttonNewData
             // 

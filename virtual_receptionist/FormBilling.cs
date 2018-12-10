@@ -79,6 +79,26 @@ namespace virtual_receptionist
 
         }
 
+        private void buttonDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPrintInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSaveInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonImportData_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
     }
 }
