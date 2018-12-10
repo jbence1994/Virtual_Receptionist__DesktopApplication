@@ -21,6 +21,10 @@ namespace virtual_receptionist
         /// StreamReader osztály egy példánya
         /// </summary>
         private StreamReader streamReader;
+        /// <summary>
+        /// Adattár osztály egy példánya
+        /// </summary>
+        private DataStore dataStore;
 
         #endregion
 
@@ -47,8 +51,10 @@ namespace virtual_receptionist
                 case "Helyi":
                     SetLocalDatabasePathFromTxt();
                     buttonConnect.Enabled = true;
+                    dataStore = SetLocalDatabasePathFromTxt();
                     break;
                 case "Távoli":
+                    SetRemoteDatabasePathFromTxt();
                     buttonConnect.Enabled = true;
                     break;
             }
@@ -61,25 +67,31 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát szöveges állományból
         /// </summary>
-        private void SetLocalDatabasePathFromTxt()
+        private DataStore SetLocalDatabasePathFromTxt()
         {
+            DataStore dataStore = null;
+
             while (!streamReader.EndOfStream)
             {
                 string line = streamReader.ReadLine();
                 try
                 {
-                    string[] config = line.Split(';');
-                    textBoxServer.Text = config[0];
-                    textBoxDatabase.Text = config[1];
-                    textBoxUsername.Text = config[2];
-                    textBoxPassword.Text = config[3];
-                    textBoxPort.Text = config[4];
+                    string[] configuration = line.Split(';');
+                    textBoxServer.Text = configuration[0];
+                    textBoxDatabase.Text = configuration[1];
+                    textBoxUsername.Text = configuration[2];
+                    textBoxPassword.Text = configuration[3];
+                    textBoxPort.Text = configuration[4];
+
+                    dataStore = new DataStore(configuration[0], configuration[1], configuration[2], configuration[3], configuration[4]);
                 }
                 catch (IOException ex)
                 {
                     Debug.WriteLine(ex.Message);
                 }
             }
+
+            return dataStore;
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát szöveges állományból
