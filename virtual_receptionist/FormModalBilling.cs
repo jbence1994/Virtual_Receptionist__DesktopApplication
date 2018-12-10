@@ -40,6 +40,19 @@ namespace virtual_receptionist
             comboBoxCountry.DataSource = dataStore.GetCountries();
         }
 
+        private void checkBoxCorporateGuest_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCorporateGuest.Checked)
+            {
+                textBoxVatNumber.ReadOnly = false;
+            }
+            else
+            {
+                textBoxVatNumber.Clear();
+                textBoxVatNumber.ReadOnly = true;
+            }
+        }
+
         #endregion
     }
 }

@@ -84,7 +84,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(396, 37);
             this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Hozzáadás";
+            this.buttonAdd.Text = "Tétel hozzáadása";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // labelItem

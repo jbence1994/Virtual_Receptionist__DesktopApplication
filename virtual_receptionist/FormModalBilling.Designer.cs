@@ -74,6 +74,7 @@
             this.checkBoxCorporateGuest.TabIndex = 50;
             this.checkBoxCorporateGuest.Text = "A vendég vállalati ügyfél";
             this.checkBoxCorporateGuest.UseVisualStyleBackColor = true;
+            this.checkBoxCorporateGuest.CheckedChanged += new System.EventHandler(this.checkBoxCorporateGuest_CheckedChanged);
             // 
             // labelAddress
             // 
