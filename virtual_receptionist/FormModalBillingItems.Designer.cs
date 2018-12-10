@@ -32,6 +32,7 @@
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewBillingItems
@@ -65,11 +66,21 @@
             this.columnHeaderUnit.Text = "Egység";
             this.columnHeaderUnit.Width = 150;
             // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(12, 373);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Hozzáadás";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
             // FormModalBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 379);
+            this.ClientSize = new System.Drawing.Size(501, 405);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormModalBillingItems";
@@ -86,5 +97,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderItem;
         private System.Windows.Forms.ColumnHeader columnHeaderPrice;
         private System.Windows.Forms.ColumnHeader columnHeaderUnit;
+        private System.Windows.Forms.Button buttonAdd;
     }
 }

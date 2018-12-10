@@ -33,6 +33,8 @@
             this.buttonRoomEditor = new System.Windows.Forms.Button();
             this.buttonGuestDatabase = new System.Windows.Forms.Button();
             this.buttonBilling = new System.Windows.Forms.Button();
+            this.pictureBoxApplicationLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxApplicationLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -51,7 +53,7 @@
             // 
             // buttonRoomEditor
             // 
-            this.buttonRoomEditor.Location = new System.Drawing.Point(12, 27);
+            this.buttonRoomEditor.Location = new System.Drawing.Point(12, 316);
             this.buttonRoomEditor.Name = "buttonRoomEditor";
             this.buttonRoomEditor.Size = new System.Drawing.Size(152, 44);
             this.buttonRoomEditor.TabIndex = 2;
@@ -61,7 +63,7 @@
             // 
             // buttonGuestDatabase
             // 
-            this.buttonGuestDatabase.Location = new System.Drawing.Point(12, 77);
+            this.buttonGuestDatabase.Location = new System.Drawing.Point(12, 366);
             this.buttonGuestDatabase.Name = "buttonGuestDatabase";
             this.buttonGuestDatabase.Size = new System.Drawing.Size(152, 44);
             this.buttonGuestDatabase.TabIndex = 3;
@@ -71,7 +73,7 @@
             // 
             // buttonBilling
             // 
-            this.buttonBilling.Location = new System.Drawing.Point(12, 127);
+            this.buttonBilling.Location = new System.Drawing.Point(12, 416);
             this.buttonBilling.Name = "buttonBilling";
             this.buttonBilling.Size = new System.Drawing.Size(152, 44);
             this.buttonBilling.TabIndex = 4;
@@ -79,11 +81,20 @@
             this.buttonBilling.UseVisualStyleBackColor = true;
             this.buttonBilling.Click += new System.EventHandler(this.buttonBilling_Click);
             // 
+            // pictureBoxApplicationLogo
+            // 
+            this.pictureBoxApplicationLogo.Location = new System.Drawing.Point(350, 27);
+            this.pictureBoxApplicationLogo.Name = "pictureBoxApplicationLogo";
+            this.pictureBoxApplicationLogo.Size = new System.Drawing.Size(275, 433);
+            this.pictureBoxApplicationLogo.TabIndex = 5;
+            this.pictureBoxApplicationLogo.TabStop = false;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 485);
+            this.Controls.Add(this.pictureBoxApplicationLogo);
             this.Controls.Add(this.buttonBilling);
             this.Controls.Add(this.buttonGuestDatabase);
             this.Controls.Add(this.buttonRoomEditor);
@@ -94,6 +105,7 @@
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Főmenü | Virtual Receptionist";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxApplicationLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Button buttonRoomEditor;
         private System.Windows.Forms.Button buttonGuestDatabase;
         private System.Windows.Forms.Button buttonBilling;
+        private System.Windows.Forms.PictureBox pictureBoxApplicationLogo;
     }
 }
