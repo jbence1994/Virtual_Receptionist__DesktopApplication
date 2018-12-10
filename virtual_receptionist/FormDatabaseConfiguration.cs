@@ -94,6 +94,10 @@ namespace virtual_receptionist
                 {
                     Debug.WriteLine(e.Message);
                 }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e.Message);
+                }
             }
 
             return initPath;
@@ -126,6 +130,10 @@ namespace virtual_receptionist
                     initPath = new DataStore(server, database, username, password, port);
                 }
                 catch (IOException e)
+                {
+                    Debug.WriteLine(e.Message);
+                }
+                catch (Exception e)
                 {
                     Debug.WriteLine(e.Message);
                 }
