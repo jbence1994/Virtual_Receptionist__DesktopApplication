@@ -40,7 +40,7 @@
             this.textBoxUnit = new System.Windows.Forms.TextBox();
             this.labelQuantity = new System.Windows.Forms.Label();
             this.labelUnit = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,7 @@
             this.listViewBillingItems.TabIndex = 0;
             this.listViewBillingItems.UseCompatibleStateImageBehavior = false;
             this.listViewBillingItems.View = System.Windows.Forms.View.Details;
+            this.listViewBillingItems.SelectedIndexChanged += new System.EventHandler(this.listViewBillingItems_SelectedIndexChanged);
             // 
             // columnHeaderItem
             // 
@@ -78,6 +79,7 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAdd.Location = new System.Drawing.Point(12, 513);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(396, 37);
@@ -145,17 +147,17 @@
             this.labelUnit.TabIndex = 8;
             this.labelUnit.Text = "Egység:";
             // 
-            // textBox1
+            // textBoxQuantity
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxQuantity.Location = new System.Drawing.Point(115, 97);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
+            this.textBoxQuantity.TabIndex = 9;
             // 
             // groupBoxItemParameters
             // 
             this.groupBoxItemParameters.Controls.Add(this.labelItem);
-            this.groupBoxItemParameters.Controls.Add(this.textBox1);
+            this.groupBoxItemParameters.Controls.Add(this.textBoxQuantity);
             this.groupBoxItemParameters.Controls.Add(this.textBoxItem);
             this.groupBoxItemParameters.Controls.Add(this.labelQuantity);
             this.groupBoxItemParameters.Controls.Add(this.labelUnit);
@@ -201,7 +203,7 @@
         private System.Windows.Forms.TextBox textBoxUnit;
         private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Label labelUnit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.GroupBox groupBoxItemParameters;
     }
 }

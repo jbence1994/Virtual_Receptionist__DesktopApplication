@@ -51,5 +51,15 @@ namespace virtual_receptionist
         }
 
         #endregion
+
+        private void listViewBillingItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewBillingItems.SelectedItems.Count > 0)
+            {
+                textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
+                textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
+                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+            }
+        }
     }
 }
