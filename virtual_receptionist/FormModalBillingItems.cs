@@ -17,6 +17,9 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
+        /// <summary>
+        /// Adattár osztály egy példánya
+        /// </summary>
         private DataStore dataStore;
 
         #endregion
@@ -46,11 +49,10 @@ namespace virtual_receptionist
                 {
                     billingItems.SubItems.Add(row[i].ToString());
                 }
+
                 listViewBillingItems.Items.Add(billingItems);
             }
         }
-
-        #endregion
 
         private void listViewBillingItems_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -61,5 +63,7 @@ namespace virtual_receptionist
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
             }
         }
+
+        #endregion
     }
 }
