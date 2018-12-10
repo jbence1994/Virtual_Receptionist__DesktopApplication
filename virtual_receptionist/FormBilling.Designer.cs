@@ -67,6 +67,7 @@
             // 
             // buttonPrintInvoice
             // 
+            this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
             this.buttonPrintInvoice.Location = new System.Drawing.Point(338, 292);
@@ -80,6 +81,7 @@
             // 
             // buttonAddItem
             // 
+            this.buttonAddItem.Enabled = false;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
             this.buttonAddItem.Location = new System.Drawing.Point(175, 222);
@@ -94,6 +96,7 @@
             // 
             // buttonUpdateItem
             // 
+            this.buttonUpdateItem.Enabled = false;
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
             this.buttonUpdateItem.Location = new System.Drawing.Point(338, 222);
@@ -108,6 +111,7 @@
             // 
             // buttonDeleteItem
             // 
+            this.buttonDeleteItem.Enabled = false;
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
             this.buttonDeleteItem.Location = new System.Drawing.Point(175, 292);
@@ -125,6 +129,7 @@
             // 
             // buttonSaveInvoice
             // 
+            this.buttonSaveInvoice.Enabled = false;
             this.buttonSaveInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSaveInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveInvoice.Image")));
             this.buttonSaveInvoice.Location = new System.Drawing.Point(501, 222);
