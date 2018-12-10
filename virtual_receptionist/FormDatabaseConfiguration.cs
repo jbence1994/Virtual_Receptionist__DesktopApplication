@@ -68,7 +68,7 @@ namespace virtual_receptionist
         /// </summary>
         private DataStore SetLocalDatabasePathFromTxt()
         {
-            DataStore path = null;
+            DataStore initPath = null;
 
             while (!streamReader.EndOfStream)
             {
@@ -76,13 +76,19 @@ namespace virtual_receptionist
                 try
                 {
                     string[] configuration = line.Split(';');
-                    textBoxServer.Text = configuration[0];
-                    textBoxDatabase.Text = configuration[1];
-                    textBoxUsername.Text = configuration[2];
-                    textBoxPassword.Text = configuration[3];
-                    textBoxPort.Text = configuration[4];
+                    string server = configuration[0];
+                    string database = configuration[1];
+                    string username = configuration[2];
+                    string password = configuration[3];
+                    string port = configuration[4];
 
-                    path = new DataStore(configuration[0], configuration[1], configuration[2], configuration[3], configuration[4]);
+                    textBoxServer.Text = server;
+                    textBoxDatabase.Text = database;
+                    textBoxUsername.Text = username;
+                    textBoxPassword.Text = password;
+                    textBoxPort.Text = port;
+
+                    initPath = new DataStore(server, database, username, password, port);
                 }
                 catch (IOException ex)
                 {
@@ -90,7 +96,7 @@ namespace virtual_receptionist
                 }
             }
 
-            return path;
+            return initPath;
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát szöveges állományból
@@ -102,14 +108,14 @@ namespace virtual_receptionist
         /// <summary>
         /// Metódus, amely beállítja a helyi adatbázis elérési útvonalát XML állományból
         /// </summary>
-        private void SetLocalDatabasePathFromXML()
+        private DataStore SetLocalDatabasePathFromXML()
         {
             throw new NotImplementedException();
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát XML állományból
         /// </summary>
-        private void SetRemoteDatabasePathFromXML()
+        private DataStore SetRemoteDatabasePathFromXML()
         {
             throw new NotImplementedException();
         }
