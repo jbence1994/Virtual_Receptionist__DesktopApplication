@@ -49,13 +49,12 @@ namespace virtual_receptionist
             switch (comboBoxConnectionType.SelectedItem)
             {
                 case "Helyi":
-                    SetLocalDatabasePathFromTxt();
                     buttonConnect.Enabled = true;
                     dataStore = SetLocalDatabasePathFromTxt();
                     break;
                 case "Távoli":
-                    SetRemoteDatabasePathFromTxt();
                     buttonConnect.Enabled = true;
+                    dataStore = SetRemoteDatabasePathFromTxt();
                     break;
             }
         }
@@ -69,7 +68,7 @@ namespace virtual_receptionist
         /// </summary>
         private DataStore SetLocalDatabasePathFromTxt()
         {
-            DataStore dataStore = null;
+            DataStore path = null;
 
             while (!streamReader.EndOfStream)
             {
@@ -83,7 +82,7 @@ namespace virtual_receptionist
                     textBoxPassword.Text = configuration[3];
                     textBoxPort.Text = configuration[4];
 
-                    dataStore = new DataStore(configuration[0], configuration[1], configuration[2], configuration[3], configuration[4]);
+                    path = new DataStore(configuration[0], configuration[1], configuration[2], configuration[3], configuration[4]);
                 }
                 catch (IOException ex)
                 {
@@ -91,12 +90,12 @@ namespace virtual_receptionist
                 }
             }
 
-            return dataStore;
+            return path;
         }
         /// <summary>
         /// Metódus, amely beállítja a távoli adatbázis elérési útvonalát szöveges állományból
         /// </summary>
-        private void SetRemoteDatabasePathFromTxt()
+        private DataStore SetRemoteDatabasePathFromTxt()
         {
             throw new NotImplementedException();
         }

@@ -6,7 +6,6 @@
     <username>root</username>
     <password></password>
     <port>3306</port>
-    <sslMode>SslMode=None</sslMode>
   </connection>
   <connection type="remote">
     <server></server>
@@ -14,6 +13,5 @@
     <username></username>
     <password></password>
     <port>3306</port>
-    <sslMode>SslMode=None</sslMode>
   </connection>
 </DatabaseConfiguration>
