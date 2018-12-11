@@ -55,8 +55,12 @@ namespace virtual_receptionist
         /// <summary>
         /// 
         /// </summary>
+        /// <param name=""></param>
+        /// <param name=""></param>
+        /// <param name=""></param>
+        /// <param name=""></param>
         /// <returns></returns>
-        public DataTable GetItemsToDataTable()
+        public DataTable GetItemsToDataTable(string item, double price, string unit, double quantity)
         {
             DataTable items = new DataTable();
 
@@ -65,10 +69,10 @@ namespace virtual_receptionist
             items.Columns.Add("Egység", typeof(string));
             items.Columns.Add("Mennyiség", typeof(double));
 
-            items.Rows.Add();
-            items.Rows.Add();
-            items.Rows.Add();
-            items.Rows.Add();
+            items.Rows.Add(item);
+            items.Rows.Add(price);
+            items.Rows.Add(unit);
+            items.Rows.Add(quantity);
 
             return items;
         }
