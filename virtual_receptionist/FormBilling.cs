@@ -83,7 +83,17 @@ namespace virtual_receptionist
 
             if (formModalBillingItems.ShowDialog() == DialogResult.OK)
             {
+                double total = double.Parse(textBoxTotal.Text);
+                double nextPrice = 0;
 
+                int row = dataGridViewItems.Rows.Count;
+
+                for (int i = 0; i < row; i++)
+                {
+                    nextPrice = double.Parse(dataGridViewItems.Rows[i].Cells[1].Value.ToString());
+                }
+
+                textBoxTotal.Text = dataStore.CalculateTotalPrice(total, nextPrice).ToString();
             }
         }
 

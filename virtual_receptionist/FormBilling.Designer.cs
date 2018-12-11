@@ -194,12 +194,14 @@
             // 
             // textBoxTotal
             // 
+            this.textBoxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxTotal.Location = new System.Drawing.Point(262, 225);
             this.textBoxTotal.Multiline = true;
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.ReadOnly = true;
             this.textBoxTotal.Size = new System.Drawing.Size(396, 25);
             this.textBoxTotal.TabIndex = 17;
+            this.textBoxTotal.Text = "0";
             // 
             // FormBilling
             // 
