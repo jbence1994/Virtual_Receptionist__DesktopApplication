@@ -99,7 +99,14 @@ namespace virtual_receptionist
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
         {
+            if (dataGridViewItems.SelectedRows.Count != 0)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
