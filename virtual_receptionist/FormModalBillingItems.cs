@@ -68,16 +68,6 @@ namespace virtual_receptionist
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double price = double.Parse(textBoxPrice.Text);
-                double quantity = double.Parse(textBoxQuantity.Text);
-                dataStore.CalculatePriceByQuantityFromPrice(price, quantity);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Test");
-            }
 
         }
 
