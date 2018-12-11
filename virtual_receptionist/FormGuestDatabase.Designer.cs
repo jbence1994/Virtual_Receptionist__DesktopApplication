@@ -66,6 +66,7 @@
             this.listViewGuests.TabIndex = 0;
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
+            this.listViewGuests.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewGuests_ColumnWidthChanging);
             // 
             // columnHeaderName
             // 
@@ -85,7 +86,7 @@
             // columnHeaderZipCode
             // 
             this.columnHeaderZipCode.Text = "Irányítószám";
-            this.columnHeaderZipCode.Width = 100;
+            this.columnHeaderZipCode.Width = 110;
             // 
             // columnHeaderCity
             // 
