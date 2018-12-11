@@ -81,12 +81,14 @@
             // buttonAdd
             // 
             this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonAdd.Enabled = false;
             this.buttonAdd.Location = new System.Drawing.Point(12, 511);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(486, 37);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Tétel hozzáadása";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // labelItem
             // 

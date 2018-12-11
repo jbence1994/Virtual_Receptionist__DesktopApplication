@@ -42,6 +42,16 @@ namespace virtual_receptionist
 
             return billingItems;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="price"></param>
+        /// <param name="quantity"></param>
+        /// <returns></returns>
+        public int CalculateItemPrice(int price, int quantity)
+        {
+            return price * quantity;
+        }
 
         #endregion
     }

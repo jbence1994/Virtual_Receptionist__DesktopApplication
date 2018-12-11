@@ -52,6 +52,7 @@ namespace virtual_receptionist
         {
             if (listViewBillingItems.SelectedItems.Count > 0)
             {
+                buttonAdd.Enabled = true;
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
@@ -63,6 +64,22 @@ namespace virtual_receptionist
         {
             e.Cancel = true;
             e.NewWidth = 160;
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int price = int.Parse(textBoxPrice.Text);
+                int quantity = int.Parse(textBoxQuantity.Text);
+                MessageBox.Show(dataStore.CalculateItemPrice(price, quantity).ToString());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Test");
+            }
+
         }
 
         #endregion
