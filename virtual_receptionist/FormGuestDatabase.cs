@@ -25,6 +25,10 @@ namespace virtual_receptionist
         /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
+        /// <summary>
+        /// Adattár osztály egy példánya
+        /// </summary>
+        private DataStore dataStore;
 
         #endregion
 
@@ -38,6 +42,7 @@ namespace virtual_receptionist
         {
             InitializeComponent();
             this.formMainMenu = formMainMenu;
+            dataStore = new DataStore("127.0.0.1", "virtual_receptionist", "root", "", "3306");
         }
 
         #endregion
@@ -75,7 +80,26 @@ namespace virtual_receptionist
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
+            DataTable dataTableGuests = dataStore.GetGuests();
+            Guest g = new Guest();
 
+            var gLINQ = from guest in dataTableGuests.AsEnumerable()
+                         select guest;
+
+            MessageBox.Show(gLINQ.ToString());
+
+            
+            //foreach (DataRow row in dataStore.GetGuests().Rows)
+            //{
+            //    ListViewItem guests = new ListViewItem(row[1].ToString());
+
+            //    for (int i = 2; i < dataStore.GetBillingItems().Columns.Count; i++)
+            //    {
+            //        guests.SubItems.Add(row[i].ToString());
+            //    }
+
+            //    listViewGuests.Items.Add(guests);
+            //}
         }
 
         #endregion
