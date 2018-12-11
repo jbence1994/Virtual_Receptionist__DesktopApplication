@@ -6,14 +6,7 @@ namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        #region Adattagok
-
-        /// <summary>
-        /// 
-        /// </summary>
         private DataTable items;
-
-        #endregion
 
         #region Számlázó modul metódusai
 
@@ -62,7 +55,7 @@ namespace virtual_receptionist
             return price * quantity;
         }
         /// <summary>
-        /// Metódus, amely 'DataTable' típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
+        /// Metódus, amely DataTable típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
         /// </summary>
         /// <param name="item">Tétel neve</param>
         /// <param name="price">Tétel ára</param>
@@ -81,6 +74,14 @@ namespace virtual_receptionist
             items.Rows.Add(price);
             items.Rows.Add(unit);
             items.Rows.Add(quantity);
+        }
+        /// <summary>
+        /// Metódus, amely visszaadja a felvitt tételekkel feltöltött DataTable-t
+        /// </summary>
+        /// <returns>Visszaadja a felvitt tételekkel feltöltött DataTable-t</returns>
+        public DataTable GetBillingItemsDataTable()
+        {
+            return items;
         }
 
         #endregion
