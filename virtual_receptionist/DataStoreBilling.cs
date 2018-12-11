@@ -72,7 +72,7 @@ namespace virtual_receptionist
             DataTable items = new DataTable();
 
             items.Columns.Add("Tétel", typeof(string));
-            items.Columns.Add("Egységár", typeof(double));
+            items.Columns.Add("Ár", typeof(double));
             items.Columns.Add("Egység", typeof(string));
             items.Columns.Add("Mennyiség", typeof(double));
 
