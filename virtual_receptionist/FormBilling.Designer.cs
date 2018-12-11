@@ -40,6 +40,8 @@
             this.buttonSaveInvoice = new System.Windows.Forms.Button();
             this.buttonImportData = new System.Windows.Forms.Button();
             this.buttonNewData = new System.Windows.Forms.Button();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.textBoxTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
-            this.buttonBackToMainMenu.Location = new System.Drawing.Point(501, 292);
+            this.buttonBackToMainMenu.Location = new System.Drawing.Point(501, 333);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
             this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
             this.buttonBackToMainMenu.TabIndex = 6;
@@ -63,6 +65,7 @@
             this.dataGridViewItems.AllowUserToDeleteRows = false;
             this.dataGridViewItems.AllowUserToResizeColumns = false;
             this.dataGridViewItems.AllowUserToResizeRows = false;
+            this.dataGridViewItems.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewItems.MultiSelect = false;
@@ -77,7 +80,7 @@
             this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
-            this.buttonPrintInvoice.Location = new System.Drawing.Point(338, 292);
+            this.buttonPrintInvoice.Location = new System.Drawing.Point(338, 333);
             this.buttonPrintInvoice.Name = "buttonPrintInvoice";
             this.buttonPrintInvoice.Size = new System.Drawing.Size(157, 64);
             this.buttonPrintInvoice.TabIndex = 8;
@@ -92,7 +95,7 @@
             this.buttonAddItem.Enabled = false;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
-            this.buttonAddItem.Location = new System.Drawing.Point(175, 222);
+            this.buttonAddItem.Location = new System.Drawing.Point(175, 263);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 64);
             this.buttonAddItem.TabIndex = 9;
@@ -107,7 +110,7 @@
             this.buttonUpdateItem.Enabled = false;
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
-            this.buttonUpdateItem.Location = new System.Drawing.Point(338, 222);
+            this.buttonUpdateItem.Location = new System.Drawing.Point(338, 263);
             this.buttonUpdateItem.Name = "buttonUpdateItem";
             this.buttonUpdateItem.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateItem.TabIndex = 10;
@@ -122,7 +125,7 @@
             this.buttonDeleteItem.Enabled = false;
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
-            this.buttonDeleteItem.Location = new System.Drawing.Point(175, 292);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(175, 333);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(157, 64);
             this.buttonDeleteItem.TabIndex = 11;
@@ -141,7 +144,7 @@
             this.buttonSaveInvoice.Enabled = false;
             this.buttonSaveInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSaveInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveInvoice.Image")));
-            this.buttonSaveInvoice.Location = new System.Drawing.Point(501, 222);
+            this.buttonSaveInvoice.Location = new System.Drawing.Point(501, 263);
             this.buttonSaveInvoice.Name = "buttonSaveInvoice";
             this.buttonSaveInvoice.Size = new System.Drawing.Size(157, 64);
             this.buttonSaveInvoice.TabIndex = 13;
@@ -155,7 +158,7 @@
             // 
             this.buttonImportData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonImportData.Image = ((System.Drawing.Image)(resources.GetObject("buttonImportData.Image")));
-            this.buttonImportData.Location = new System.Drawing.Point(12, 292);
+            this.buttonImportData.Location = new System.Drawing.Point(12, 333);
             this.buttonImportData.Name = "buttonImportData";
             this.buttonImportData.Size = new System.Drawing.Size(157, 64);
             this.buttonImportData.TabIndex = 14;
@@ -169,7 +172,7 @@
             // 
             this.buttonNewData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNewData.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewData.Image")));
-            this.buttonNewData.Location = new System.Drawing.Point(12, 222);
+            this.buttonNewData.Location = new System.Drawing.Point(12, 263);
             this.buttonNewData.Name = "buttonNewData";
             this.buttonNewData.Size = new System.Drawing.Size(157, 64);
             this.buttonNewData.TabIndex = 15;
@@ -179,11 +182,32 @@
             this.buttonNewData.UseVisualStyleBackColor = true;
             this.buttonNewData.Click += new System.EventHandler(this.buttonNewData_Click);
             // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTotal.Location = new System.Drawing.Point(12, 225);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(243, 25);
+            this.labelTotal.TabIndex = 16;
+            this.labelTotal.Text = "Fizetendő végösszeg:";
+            // 
+            // textBoxTotal
+            // 
+            this.textBoxTotal.Location = new System.Drawing.Point(262, 225);
+            this.textBoxTotal.Multiline = true;
+            this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
+            this.textBoxTotal.Size = new System.Drawing.Size(396, 25);
+            this.textBoxTotal.TabIndex = 17;
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 369);
+            this.ClientSize = new System.Drawing.Size(670, 410);
+            this.Controls.Add(this.textBoxTotal);
+            this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.buttonNewData);
             this.Controls.Add(this.buttonImportData);
             this.Controls.Add(this.buttonSaveInvoice);
@@ -200,6 +224,7 @@
             this.Load += new System.EventHandler(this.FormBilling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -216,5 +241,7 @@
         private System.Windows.Forms.Button buttonSaveInvoice;
         private System.Windows.Forms.Button buttonImportData;
         private System.Windows.Forms.Button buttonNewData;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.TextBox textBoxTotal;
     }
 }
