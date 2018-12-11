@@ -43,12 +43,12 @@ namespace virtual_receptionist
             return billingItems;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely kiszámolja egy adott tétel árát a mennyiségből
         /// </summary>
-        /// <param name="price"></param>
-        /// <param name="quantity"></param>
-        /// <returns></returns>
-        public int CalculateItemPrice(int price, int quantity)
+        /// <param name="price">Tétel ára</param>
+        /// <param name="quantity">Tétel mennyisége</param>
+        /// <returns>A metódus a kiszámolt értékkel tér vissza</returns>
+        public double CalculateItemPrice(double price, double quantity)
         {
             return price * quantity;
         }

@@ -70,8 +70,8 @@ namespace virtual_receptionist
         {
             try
             {
-                int price = int.Parse(textBoxPrice.Text);
-                int quantity = int.Parse(textBoxQuantity.Text);
+                double price = double.Parse(textBoxPrice.Text);
+                double quantity = double.Parse(textBoxQuantity.Text);
                 MessageBox.Show(dataStore.CalculateItemPrice(price, quantity).ToString());
 
             }
