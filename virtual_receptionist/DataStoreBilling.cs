@@ -56,9 +56,21 @@ namespace virtual_receptionist
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetItemsToDataGridView()
+        public DataTable GetItemsToDataTable()
         {
-            return new DataTable();
+            DataTable items = new DataTable();
+
+            items.Columns.Add("Tétel", typeof(string));
+            items.Columns.Add("Egységár", typeof(double));
+            items.Columns.Add("Egység", typeof(string));
+            items.Columns.Add("Mennyiség", typeof(double));
+
+            items.Rows.Add();
+            items.Rows.Add();
+            items.Rows.Add();
+            items.Rows.Add();
+
+            return items;
         }
 
         #endregion
