@@ -78,16 +78,6 @@ namespace virtual_receptionist
 
             return items;
         }
-        /// <summary>
-        /// Metódus, amely összeadja a fizetendő végösszeget
-        /// </summary>
-        /// <param name="total">Jelenlegi fizetendő végösszeg</param>
-        /// <param name="nextPrice">Új tétel, amely a fizetendő végösszeghez adódik</param>
-        /// <returns>A fizetendő végösszeggel tér vissza a függvény</returns>
-        public double CalculateTotalPrice(double total, double nextPrice)
-        {
-            return total + nextPrice;
-        }
 
         #endregion
     }
