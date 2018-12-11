@@ -80,11 +80,7 @@ namespace virtual_receptionist
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
             formModalBillingItems = new FormModalBillingItems(billingItems);
-
-            if (formModalBillingItems.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            formModalBillingItems.ShowDialog();
         }
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
