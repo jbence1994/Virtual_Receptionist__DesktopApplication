@@ -78,7 +78,7 @@ namespace virtual_receptionist
             string unit = textBoxUnit.Text;
             double quantity = double.Parse(textBoxQuantity.Text);
 
-            dataStore.CreateBillingItemsRowIntoDataTable(billingItemsDataTable, item, price, unit, quantity);
+            dataStore.AddNewBillingItemsRow(billingItemsDataTable, item, price, unit, quantity);
         }
 
         #endregion

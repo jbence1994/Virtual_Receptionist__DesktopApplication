@@ -59,7 +59,7 @@ namespace virtual_receptionist
         /// <param name="price">Tétel ára</param>
         /// <param name="unit">Tétel egység</param>
         /// <param name="quantity">Tétel mennyisége</param>
-        public void CreateBillingItemsRowIntoDataTable(DataTable billingItemsDataTable, string item, double price, string unit, double quantity)
+        public void AddNewBillingItemsRow(DataTable billingItemsDataTable, string item, double price, string unit, double quantity)
         {
             billingItemsDataTable.Rows.Add(item, price, unit, quantity);
         }
@@ -67,7 +67,7 @@ namespace virtual_receptionist
         /// Metódus, amely létrehozza a számlázó modul DataGridView vezérlőnek az alap DataTable forrást
         /// </summary>
         /// <returns></returns>
-        public DataTable InitializeDataTableBillingItems()
+        public DataTable InitializeDataTableBillingItemsColumns()
         {
             DataTable items = new DataTable();
 

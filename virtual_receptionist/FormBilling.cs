@@ -45,7 +45,7 @@ namespace virtual_receptionist
             InitializeComponent();
             this.formMainMenu = formMainMenu;
             dataStore = new DataStore();
-            billingItems = dataStore.InitializeDataTableBillingItems();
+            billingItems = dataStore.InitializeDataTableBillingItemsColumns();
         }
 
         #endregion
