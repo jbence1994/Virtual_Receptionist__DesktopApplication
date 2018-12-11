@@ -59,6 +59,10 @@
             // 
             // dataGridViewItems
             // 
+            this.dataGridViewItems.AllowUserToAddRows = false;
+            this.dataGridViewItems.AllowUserToDeleteRows = false;
+            this.dataGridViewItems.AllowUserToResizeColumns = false;
+            this.dataGridViewItems.AllowUserToResizeRows = false;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewItems.Name = "dataGridViewItems";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data;
 
 namespace virtual_receptionist
 {
@@ -26,6 +27,10 @@ namespace virtual_receptionist
         /// Adattár osztály egy példánya
         /// </summary>
         private DataStore dataStore;
+        /// <summary>
+        /// Számlázási tételeket tartalmazó DataTable adatszerkezet
+        /// </summary>
+        private DataTable billingItems;
 
         #endregion
 
@@ -40,6 +45,7 @@ namespace virtual_receptionist
             InitializeComponent();
             this.formMainMenu = formMainMenu;
             dataStore = new DataStore();
+            billingItems = dataStore.InitializeDataTableBillingItems();
         }
 
         #endregion
@@ -48,7 +54,7 @@ namespace virtual_receptionist
 
         private void FormBilling_Load(object sender, EventArgs e)
         {
-            dataGridViewItems.DataSource = dataStore.CreateDataTableBillingItems();
+            dataGridViewItems.DataSource = billingItems;
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
@@ -73,11 +79,11 @@ namespace virtual_receptionist
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            formModalBillingItems = new FormModalBillingItems();
+            formModalBillingItems = new FormModalBillingItems(billingItems);
 
             if (formModalBillingItems.ShowDialog() == DialogResult.OK)
             {
-                
+
             }
         }
 
