@@ -120,7 +120,6 @@
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(154, 45);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(274, 20);
             this.textBoxPrice.TabIndex = 5;
             // 
