@@ -42,6 +42,10 @@
             this.buttonNewData = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +71,11 @@
             this.dataGridViewItems.AllowUserToResizeRows = false;
             this.dataGridViewItems.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnItem,
+            this.ColumnPrice,
+            this.ColumnUnit,
+            this.ColumnQuantity});
             this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewItems.MultiSelect = false;
             this.dataGridViewItems.Name = "dataGridViewItems";
@@ -203,6 +212,37 @@
             this.textBoxTotal.TabIndex = 17;
             this.textBoxTotal.Text = "0";
             // 
+            // ColumnItem
+            // 
+            this.ColumnItem.DataPropertyName = "Tétel";
+            this.ColumnItem.HeaderText = "Tétel";
+            this.ColumnItem.Name = "ColumnItem";
+            this.ColumnItem.ReadOnly = true;
+            this.ColumnItem.Width = 150;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.DataPropertyName = "Ár";
+            this.ColumnPrice.HeaderText = "Ár";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
+            this.ColumnPrice.Width = 150;
+            // 
+            // ColumnUnit
+            // 
+            this.ColumnUnit.DataPropertyName = "Egység";
+            this.ColumnUnit.HeaderText = "Egység";
+            this.ColumnUnit.Name = "ColumnUnit";
+            this.ColumnUnit.ReadOnly = true;
+            this.ColumnUnit.Width = 150;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.HeaderText = "Mennyiség";
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
+            this.ColumnQuantity.Width = 150;
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +285,9 @@
         private System.Windows.Forms.Button buttonNewData;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.TextBox textBoxTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
     }
 }
