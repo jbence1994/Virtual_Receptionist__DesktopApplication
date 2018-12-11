@@ -48,7 +48,7 @@ namespace virtual_receptionist
         /// <param name="price">Tétel ára</param>
         /// <param name="quantity">Tétel mennyisége</param>
         /// <returns>A metódus a kiszámolt értékkel tér vissza</returns>
-        public double CalculateItemPrice(double price, double quantity)
+        public double CalculatePriceByQuantityFromPrice(double price, double quantity)
         {
             return price * quantity;
         }
