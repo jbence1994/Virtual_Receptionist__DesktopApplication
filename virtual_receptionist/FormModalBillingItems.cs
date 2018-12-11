@@ -15,6 +15,10 @@ namespace virtual_receptionist
         /// Adattár osztály egy példánya
         /// </summary>
         private DataStore dataStore;
+        /// <summary>
+        /// Felvitt számlázási tételeket tartalmazó DataTable adatszerkezet
+        /// </summary>
+        private DataTable items;
 
         #endregion
 

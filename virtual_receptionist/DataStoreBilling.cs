@@ -6,8 +6,6 @@ namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        private DataTable items;
-
         #region Számlázó modul metódusai
 
         /// <summary>
@@ -63,24 +61,18 @@ namespace virtual_receptionist
         /// <param name="quantity">Tétel mennyisége</param>
         public void SetDataTableByBillingItems(string item, double price, string unit, double quantity)
         {
-            items = new DataTable();
+
+        }
+
+        public DataTable CreateDataTableBillingItems()
+        {
+            DataTable items = new DataTable();
 
             items.Columns.Add("Tétel", typeof(string));
             items.Columns.Add("Egységár", typeof(double));
             items.Columns.Add("Egység", typeof(string));
             items.Columns.Add("Mennyiség", typeof(double));
 
-            items.Rows.Add(item);
-            items.Rows.Add(price);
-            items.Rows.Add(unit);
-            items.Rows.Add(quantity);
-        }
-        /// <summary>
-        /// Metódus, amely visszaadja a felvitt tételekkel feltöltött DataTable-t
-        /// </summary>
-        /// <returns>Visszaadja a felvitt tételekkel feltöltött DataTable-t</returns>
-        public DataTable GetBillingItemsDataTable()
-        {
             return items;
         }
 

@@ -190,6 +190,7 @@
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számla kiállítása | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormBilling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
 

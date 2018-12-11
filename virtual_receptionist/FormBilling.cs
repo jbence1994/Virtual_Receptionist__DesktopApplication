@@ -46,6 +46,11 @@ namespace virtual_receptionist
 
         #region UI események
 
+        private void FormBilling_Load(object sender, EventArgs e)
+        {
+            dataGridViewItems.DataSource = dataStore.CreateDataTableBillingItems();
+        }
+
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             Close();
@@ -72,7 +77,7 @@ namespace virtual_receptionist
 
             if (formModalBillingItems.ShowDialog() == DialogResult.OK)
             {
-                dataGridViewItems.DataSource = dataStore.GetBillingItemsDataTable();
+                
             }
         }
 
