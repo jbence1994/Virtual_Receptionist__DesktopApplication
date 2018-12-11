@@ -68,7 +68,6 @@ namespace virtual_receptionist
         /// <param name="price">Tétel ára</param>
         /// <param name="unit">Tétel egység</param>
         /// <param name="quantity">Tétel mennyisége</param>
-        /// <returns></returns>
         public void SetDataTableByBillingItems(string item, double price, string unit, double quantity)
         {
             items = new DataTable();
