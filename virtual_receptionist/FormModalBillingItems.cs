@@ -74,7 +74,7 @@ namespace virtual_receptionist
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             string item = textBoxItem.Text;
-            double price = dataStore.CalculatePriceByQuantityFromPrice(double.Parse(textBoxPrice.Text), double.Parse(textBoxQuantity.Text));
+            double price = double.Parse(textBoxPrice.Text) * double.Parse(textBoxQuantity.Text);
             string unit = textBoxUnit.Text;
             double quantity = double.Parse(textBoxQuantity.Text);
 

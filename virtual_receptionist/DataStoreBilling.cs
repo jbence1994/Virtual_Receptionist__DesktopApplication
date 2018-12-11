@@ -43,16 +43,6 @@ namespace virtual_receptionist
             return billingItems;
         }
         /// <summary>
-        /// Metódus, amely kiszámolja egy adott tétel árát a mennyiségből
-        /// </summary>
-        /// <param name="price">Tétel ára</param>
-        /// <param name="quantity">Tétel mennyisége</param>
-        /// <returns>A metódus a kiszámolt értékkel tér vissza</returns>
-        public double CalculatePriceByQuantityFromPrice(double price, double quantity)
-        {
-            return price * quantity;
-        }
-        /// <summary>
         /// Metódus, amely DataTable típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
         /// </summary>
         /// <param name="item">Tétel neve</param>
