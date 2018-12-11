@@ -79,7 +79,7 @@ namespace virtual_receptionist
 
             if (formModalBillingItems.ShowDialog() == DialogResult.OK)
             {
-                dataGridViewItems.DataSource = dataStore.GetItemsToDataTable();
+
             }
         }
 
