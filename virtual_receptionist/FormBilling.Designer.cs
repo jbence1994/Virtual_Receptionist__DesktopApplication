@@ -238,6 +238,7 @@
             // 
             // ColumnQuantity
             // 
+            this.ColumnQuantity.DataPropertyName = "Mennyiség";
             this.ColumnQuantity.HeaderText = "Mennyiség";
             this.ColumnQuantity.Name = "ColumnQuantity";
             this.ColumnQuantity.ReadOnly = true;
