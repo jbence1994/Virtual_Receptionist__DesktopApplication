@@ -51,6 +51,13 @@ namespace virtual_receptionist
                 ConnectionString = "SERVER =" + server + "; DATABASE=" + database + "; UID=" + username + "; PASSWORD=" + password + "; PORT=" + port + "; SslMode=None;"
             };
         }
+        /// <summary>
+        /// Adattár osztály üres konstruktora
+        /// </summary>
+        public DataStore()
+        {
+
+        }
 
         #endregion
 

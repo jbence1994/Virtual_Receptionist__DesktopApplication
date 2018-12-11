@@ -52,6 +52,14 @@ namespace virtual_receptionist
         {
             return price * quantity;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetItemsToDataGridView()
+        {
+            return new DataTable();
+        }
 
         #endregion
     }

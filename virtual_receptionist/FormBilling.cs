@@ -29,6 +29,10 @@ namespace virtual_receptionist
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBilling formModalBilling;
+        /// <summary>
+        /// Adattár osztály egy példánya
+        /// </summary>
+        private DataStore dataStore;
 
         #endregion
 
@@ -42,6 +46,7 @@ namespace virtual_receptionist
         {
             InitializeComponent();
             this.formMainMenu = formMainMenu;
+            dataStore = new DataStore();
         }
 
         #endregion
@@ -71,7 +76,11 @@ namespace virtual_receptionist
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
             formModalBillingItems = new FormModalBillingItems();
-            formModalBillingItems.ShowDialog();
+
+            if (formModalBillingItems.ShowDialog() == DialogResult.OK)
+            {
+                dataGridViewItems.DataSource = dataStore.GetItemsToDataGridView();
+            }
         }
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
