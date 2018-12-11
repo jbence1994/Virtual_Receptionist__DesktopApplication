@@ -49,14 +49,14 @@ namespace virtual_receptionist
         /// <param name="price">Tétel ára</param>
         /// <param name="unit">Tétel egység</param>
         /// <param name="quantity">Tétel mennyisége</param>
-        public void AddNewBillingItemsRow(DataTable billingItemsDataTable, string item, double price, string unit, double quantity)
+        public void AddNewBillingItemsRow(DataTable billingItems, string item, double price, string unit, double quantity)
         {
-            billingItemsDataTable.Rows.Add(item, price, unit, quantity);
+            billingItems.Rows.Add(item, price, unit, quantity);
         }
         /// <summary>
-        /// Metódus, amely létrehozza a számlázó modul DataGridView vezérlőnek az alap DataTable forrást
+        /// Metódus, amely megadja a számlázó főablak DataGridView vezérlőnek az adatkonténer és azok oszlopainak forrását
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable InitializeDataTableBillingItemsColumns()
         {
             DataTable items = new DataTable();

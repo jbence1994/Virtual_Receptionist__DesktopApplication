@@ -16,9 +16,9 @@ namespace virtual_receptionist
         /// </summary>
         private DataStore dataStore;
         /// <summary>
-        /// 
+        /// DataTable adatszerkezet, amely a mindig újabb rekordokkal bővül, ha a modális ablakkal új tételeket adunk hozzá
         /// </summary>
-        private DataTable billingItemsDataTable;
+        private DataTable billingItems;
 
         #endregion
 
@@ -27,11 +27,11 @@ namespace virtual_receptionist
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
         /// </summary>
-        public FormModalBillingItems(DataTable billingItemsDataTable)
+        public FormModalBillingItems(DataTable billingItems)
         {
             InitializeComponent();
             dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
-            this.billingItemsDataTable = billingItemsDataTable;
+            this.billingItems = billingItems;
         }
 
         #endregion
@@ -78,7 +78,7 @@ namespace virtual_receptionist
             string unit = textBoxUnit.Text;
             double quantity = double.Parse(textBoxQuantity.Text);
 
-            dataStore.AddNewBillingItemsRow(billingItemsDataTable, item, price, unit, quantity);
+            dataStore.AddNewBillingItemsRow(billingItems, item, price, unit, quantity);
         }
 
         #endregion
