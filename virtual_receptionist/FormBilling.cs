@@ -104,7 +104,15 @@ namespace virtual_receptionist
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
-
+            if (dataGridViewItems.SelectedRows.Count != 0)
+            {
+                int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
+                dataGridViewItems.Rows.RemoveAt(rowToDelete);
+            }
+            else
+            {
+                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
