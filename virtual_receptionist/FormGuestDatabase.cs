@@ -29,6 +29,10 @@ namespace virtual_receptionist
         /// Adattár osztály egy példánya
         /// </summary>
         private DataStore dataStore;
+        /// <summary>
+        /// Formon felhasználói módosítást tároló logikai változó 
+        /// </summary>
+        private bool userIntervention;
 
         #endregion
 
