@@ -123,6 +123,16 @@ namespace virtual_receptionist
 
         }
 
+        private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dataStore.CountTotalPrice(dataGridViewItems, 1, textBoxTotal);
+        }
+
+        private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            dataStore.CountTotalPrice(dataGridViewItems, 1, textBoxTotal);
+        }
+
         #endregion
     }
 }

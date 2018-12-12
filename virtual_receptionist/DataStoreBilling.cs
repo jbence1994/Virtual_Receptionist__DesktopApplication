@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Windows.Forms;
+using System.Diagnostics;
 using System.Data;
 using MySql.Data.MySqlClient;
 
@@ -67,6 +69,22 @@ namespace virtual_receptionist
             items.Columns.Add("Mennyiség", typeof(double));
 
             return items;
+        }
+        /// <summary>
+        /// Metódus, amely megszámolja egy adott DataGridView árakat tartalmazó oszlopaiban a végösszeget
+        /// </summary>
+        ///<param name="dataGridView">DataGridView GUI vezérlő, amelyben tartalmaz tétel ár oszlopot</param>
+        /// <param name="cellPrice">DataGridView cella, amely a megszámolandó árakat tartalmazza</param>
+        /// <param name="totalPrice">TextBox GUI vezérlő, amely a végösszeget írja ki</param>
+        public void CountTotalPrice(DataGridView dataGridView, int cellPrice, TextBox totalPrice)
+        {
+            double total = 0;
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+            {
+                total += Convert.ToDouble(dataGridView.Rows[i].Cells[cellPrice].Value);
+            }
+            totalPrice.Clear();
+            totalPrice.Text = total.ToString();
         }
 
         #endregion
