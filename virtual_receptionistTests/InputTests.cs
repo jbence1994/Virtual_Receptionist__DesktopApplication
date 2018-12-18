@@ -5,11 +5,6 @@ namespace virtual_receptionist.Tests
     [TestClass()]
     public class InputTests
     {
-        /// <summary>
-        /// Input ellenőrző osztály egy példánya
-        /// </summary>
-        private Input input;
-
         #region IsEmpty() tesztek
 
         /// <summary>
@@ -18,7 +13,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void IsEmptyTest_InCaseInputIsNotEmpty()
         {
-            input = new Input("test");
+            Input input = new Input("test");
 
             bool expected = false;
             bool actual = input.IsEmpty();
@@ -30,7 +25,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void IsEmptyTest_InCaseInputIsEmpty()
         {
-            input = new Input("");
+            Input input = new Input("");
 
             bool expected = true;
             bool actual = input.IsEmpty();
@@ -48,7 +43,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void IsValidEmailAddressTest_InCaseInputIsNotValidEmail()
         {
-            input = new Input("test.com");
+            Input input = new Input("test.com");
 
             bool expected = false;
             bool actual = input.IsValidEmailAddress();
@@ -60,7 +55,7 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void IsValidEmailAddressTest_InCaseInputIsValidEmail()
         {
-            input = new Input("test@test.co.uk");
+            Input input = new Input("test@test.co.uk");
 
             bool expected = true;
             bool actual = input.IsValidEmailAddress();
@@ -77,11 +72,11 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void FirstLetterIsUppercaseCharacterTest_InCaseFirstLetterIsLowercase()
         {
-            input = new Input("test");
+            Input input = new Input("test");
 
             bool expected = false;
             bool actual = input.FirstLetterIsUppercaseCharacter();
-            Assert.AreEqual(expected, actual, "Nem bukik a teszt rossz inputra");
+            Assert.AreEqual(expected, actual, "Nem bukik a teszt kisbetűvel kezdődő inputra");
         }
         /// <summary>
         /// Tesztmetódus: ha az input első kezdőbetűje nagybetű
@@ -89,11 +84,11 @@ namespace virtual_receptionist.Tests
         [TestMethod()]
         public void FirstLetterIsUppercaseCharacterTest_InCaseFirstLetterIsUppercase()
         {
-            input = new Input("Test");
+            Input input = new Input("Test");
 
             bool expected = true;
             bool actual = input.FirstLetterIsUppercaseCharacter();
-            Assert.AreEqual(expected, actual, "Bukik a teszt jó inputra");
+            Assert.AreEqual(expected, actual, "Bukik a teszt nagybetűvel kezdődő inputra");
         }
 
         #endregion
