@@ -39,8 +39,7 @@ namespace virtual_receptionist
 
             mySqlConnection.Close();
             Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
-
-
+            
             return reservations;
         }
 
