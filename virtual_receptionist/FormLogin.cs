@@ -37,6 +37,10 @@ namespace virtual_receptionist
         public FormLogin()
         {
             InitializeComponent();
+            inputAccomodationID = new Input(textBoxAccomodationID.Text);
+            inputPassword = new Input(textBoxPassword.Text);
+            inputConnectionType = new Input(comboBoxConnectionType.Text);
+            dataStore = new DataStore();
         }
 
         #endregion
@@ -50,9 +54,26 @@ namespace virtual_receptionist
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            switch (comboBoxConnectionType.Text)
+            {
+                case "local.xml":
+                    dataStore.GetLocalDatabaseServerPathFromXML();
+                    break;
 
+                case "local.txt":
+                    dataStore.GetLocalDatabaseServerPathFromTxt();
+                    break;
+
+                case "remote.xml":
+                    dataStore.GetRemoteDatabaseServerPathFromXML();
+                    break;
+
+                case "remote.txt":
+                    dataStore.GetRemoteDatabaseServerPathFromTxt();
+                    break;
+            }
+
+            #endregion
         }
-
-        #endregion
     }
 }

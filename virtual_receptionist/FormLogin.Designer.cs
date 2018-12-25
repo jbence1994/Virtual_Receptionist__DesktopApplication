@@ -99,10 +99,10 @@
             // 
             this.comboBoxConnectionType.FormattingEnabled = true;
             this.comboBoxConnectionType.Items.AddRange(new object[] {
-            "Helyi kiszolgálóhoz .xml állományból",
-            "Helyi kiszolgálóhoz .txt állományból",
-            "Távoli kiszolgálóhoz .xml állományból",
-            "Távoli kiszolgálóhoz .txt állományból"});
+            "local.xml",
+            "local.txt",
+            "remote.xml",
+            "remote.txt"});
             this.comboBoxConnectionType.Location = new System.Drawing.Point(242, 103);
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
