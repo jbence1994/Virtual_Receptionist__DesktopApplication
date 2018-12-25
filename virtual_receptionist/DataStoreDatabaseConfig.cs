@@ -1,15 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using MySql.Data.MySqlClient;
+using System.Xml;
 
 namespace virtual_receptionist
 {
     public partial class DataStore
     {
+        #region Adattagok
+
+        /// <summary>
+        /// Fájl adatfolyam olvasó osztály egy példánya
+        /// </summary>
+        private StreamReader streamReader;
+        /// <summary>
+        /// Fájl adatfolyam író osztály egy példánya
+        /// </summary>
+        private StreamWriter streamWriter;
+        /// <summary>
+        /// XML állomány olvasó osztály egy példánya
+        /// </summary>
+        private XmlTextReader xmlTextReader;
+
+        #endregion
+
         #region Adatbázis konfigurációhoz szükséges metódusok
 
         /// <summary>
