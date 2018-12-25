@@ -24,11 +24,11 @@ namespace virtual_receptionist
         /// </summary>
         private MySqlDataReader mySqlDataReader;
         /// <summary>
-        /// 
+        /// Adatszerkezeteket adattal feltöltő osztály egy példánya
         /// </summary>
         private MySqlDataAdapter mySqlDataAdapter;
         /// <summary>
-        /// 
+        /// SQL DML és DDL parancsokat egyszerűen végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
 
