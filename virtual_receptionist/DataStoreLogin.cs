@@ -56,6 +56,47 @@ namespace virtual_receptionist
 
             return existAnyAccount;
         }
+        /// <summary>
+        /// Metódus, amely összehasonlítja a felhasználó által megadott felhasználónevet és jelszót, egyezik-e az érvényes, előre regisztrált felhasználói fiókkal
+        /// </summary>
+        /// <param name="username">Felhasználó által megadott felhasználónév</param>
+        /// <param name="password">Felhasználó által megadott jelszó</param>
+        /// <param name="usernameTableField">Felhasználónevet tartalmazó mező neve</param>
+        /// <param name="passwordTableField">Jelszót tartalmazó mező neve</param>
+        /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
+        public bool Authentication(string username, string password, string usernameTableField, string passwordTableField)
+        {
+            bool validEntry = false;
+
+            mySqlConnection.Open();
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
+
+            while (mySqlDataReader.Read())
+            {
+                string validUsername = string.Empty;
+                string validPassword = string.Empty;
+
+                validUsername = mySqlDataReader[usernameTableField].ToString();
+                validPassword = mySqlDataReader[passwordTableField].ToString();
+
+                if (username == validUsername && password == validPassword)
+                {
+                    validEntry = true;
+                    break;
+                }
+            }
+
+            mySqlDataReader.Close();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+
+            mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+
+            return validEntry;
+        }
 
         #endregion
     }
