@@ -15,6 +15,12 @@ namespace virtual_receptionist
     /// </summary>
     public partial class FormLogin : Form
     {
+        #region Adattagok
+
+        #endregion
+
+        #region Konstruktor
+
         /// <summary>
         /// Alkalmazás bejelentkező ablak konstruktora
         /// </summary>
@@ -23,9 +29,15 @@ namespace virtual_receptionist
             InitializeComponent();
         }
 
+        #endregion
+
+        #region UI események
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
 
         }
+
+        #endregion
     }
 }

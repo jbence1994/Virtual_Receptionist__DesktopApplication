@@ -32,20 +32,21 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxAccomodationID = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.labelAccomodationID = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelConnectionType = new System.Windows.Forms.Label();
             this.comboBoxConnectionType = new System.Windows.Forms.ComboBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelCopyright = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.groupBoxLogin = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
             this.buttonLogin.Enabled = false;
-            this.buttonLogin.Location = new System.Drawing.Point(265, 162);
+            this.buttonLogin.Location = new System.Drawing.Point(242, 130);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(214, 23);
             this.buttonLogin.TabIndex = 0;
@@ -55,33 +56,23 @@
             // 
             // textBoxAccomodationID
             // 
-            this.textBoxAccomodationID.Location = new System.Drawing.Point(265, 83);
+            this.textBoxAccomodationID.Location = new System.Drawing.Point(242, 51);
             this.textBoxAccomodationID.Name = "textBoxAccomodationID";
             this.textBoxAccomodationID.Size = new System.Drawing.Size(214, 20);
             this.textBoxAccomodationID.TabIndex = 1;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(265, 109);
+            this.textBoxPassword.Location = new System.Drawing.Point(242, 77);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(214, 20);
             this.textBoxPassword.TabIndex = 2;
             // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(145, 37);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(207, 29);
-            this.labelTitle.TabIndex = 3;
-            this.labelTitle.Text = "Virtual Receptionist";
-            // 
             // labelAccomodationID
             // 
             this.labelAccomodationID.AutoSize = true;
-            this.labelAccomodationID.Location = new System.Drawing.Point(147, 86);
+            this.labelAccomodationID.Location = new System.Drawing.Point(124, 54);
             this.labelAccomodationID.Name = "labelAccomodationID";
             this.labelAccomodationID.Size = new System.Drawing.Size(112, 13);
             this.labelAccomodationID.TabIndex = 4;
@@ -90,7 +81,7 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(220, 112);
+            this.labelPassword.Location = new System.Drawing.Point(197, 80);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(39, 13);
             this.labelPassword.TabIndex = 5;
@@ -99,7 +90,7 @@
             // labelConnectionType
             // 
             this.labelConnectionType.AutoSize = true;
-            this.labelConnectionType.Location = new System.Drawing.Point(161, 138);
+            this.labelConnectionType.Location = new System.Drawing.Point(138, 106);
             this.labelConnectionType.Name = "labelConnectionType";
             this.labelConnectionType.Size = new System.Drawing.Size(98, 13);
             this.labelConnectionType.TabIndex = 6;
@@ -113,7 +104,7 @@
             "Helyi kiszolgálóhoz .txt állományból",
             "Távoli kiszolgálóhoz .xml állományból",
             "Távoli kiszolgálóhoz .txt állományból"});
-            this.comboBoxConnectionType.Location = new System.Drawing.Point(265, 135);
+            this.comboBoxConnectionType.Location = new System.Drawing.Point(242, 103);
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
             this.comboBoxConnectionType.TabIndex = 7;
@@ -121,7 +112,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 228);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 193);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(597, 37);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,27 +123,46 @@
             // 
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.Enabled = false;
-            this.labelCopyright.Location = new System.Drawing.Point(450, 268);
+            this.labelCopyright.Location = new System.Drawing.Point(444, 233);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(159, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(165, 13);
             this.labelCopyright.TabIndex = 9;
-            this.labelCopyright.Text = "Copyright @ Juász Bence 2019.";
+            this.labelCopyright.Text = "Copyright @ Juhász Bence 2019.";
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Enabled = false;
+            this.labelTitle.Location = new System.Drawing.Point(9, 233);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(153, 13);
+            this.labelTitle.TabIndex = 10;
+            this.labelTitle.Text = "Virtual Receptionist version 1.0";
+            // 
+            // groupBoxLogin
+            // 
+            this.groupBoxLogin.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxLogin.Name = "groupBoxLogin";
+            this.groupBoxLogin.Size = new System.Drawing.Size(597, 175);
+            this.groupBoxLogin.TabIndex = 11;
+            this.groupBoxLogin.TabStop = false;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 290);
+            this.ClientSize = new System.Drawing.Size(621, 255);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.comboBoxConnectionType);
             this.Controls.Add(this.labelConnectionType);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelAccomodationID);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxAccomodationID);
             this.Controls.Add(this.buttonLogin);
+            this.Controls.Add(this.groupBoxLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -168,13 +178,14 @@
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBoxAccomodationID;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelAccomodationID;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelConnectionType;
         private System.Windows.Forms.ComboBox comboBoxConnectionType;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelCopyright;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.GroupBox groupBoxLogin;
     }
 }
 
