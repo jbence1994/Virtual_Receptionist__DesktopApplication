@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
@@ -31,6 +32,22 @@ namespace virtual_receptionist
         /// SQL DML és DDL parancsokat egyszerűen végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
+        /// <summary>
+        /// Felhasználó számítógépének a neve, amelyen az alkalmazás fut
+        /// </summary>
+        private static string client;
+
+        #endregion
+
+        #region Getter és setter tulajdonságok
+
+        public static string Client
+        {
+            get
+            {
+                return client = Environment.MachineName;
+            }
+        }
 
         #endregion
 
