@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DatabaseConfiguration>
+<configuration>
   <connection type="local">
     <server>127.0.0.1</server>
     <database>virtual_receptionist</database>
@@ -14,4 +14,4 @@
     <password></password>
     <port>3306</port>
   </connection>
-</DatabaseConfiguration>
+</configuration>
