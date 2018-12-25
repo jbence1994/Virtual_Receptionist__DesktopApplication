@@ -45,7 +45,6 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Enabled = false;
             this.buttonLogin.Location = new System.Drawing.Point(242, 130);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(214, 23);
@@ -167,6 +166,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bejelentkezés | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
