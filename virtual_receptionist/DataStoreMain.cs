@@ -41,6 +41,9 @@ namespace virtual_receptionist
 
         #region Getter és setter tulajdonságok
 
+        /// <summary>
+        /// Felhasználó számítógépének a neve, amelyen az alkalmazás fut
+        /// </summary>
         public static string Client
         {
             get
