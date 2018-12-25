@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStoreBilling.cs" />
+    <Compile Include="DataStoreDatabaseConfig.cs" />
     <Compile Include="DataStoreGuest.cs" />
     <Compile Include="DataStoreLogin.cs" />
     <Compile Include="DataStoreMain.cs" />
