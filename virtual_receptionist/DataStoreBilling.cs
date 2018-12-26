@@ -79,10 +79,12 @@ namespace virtual_receptionist
         public void CountTotalPrice(DataGridView dataGridView, int cellPrice, TextBox totalPrice)
         {
             double total = 0;
+
             for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
                 total += Convert.ToDouble(dataGridView.Rows[i].Cells[cellPrice].Value);
             }
+
             totalPrice.Clear();
             totalPrice.Text = total.ToString();
         }

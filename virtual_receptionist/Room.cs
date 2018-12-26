@@ -20,7 +20,7 @@
         /// </summary>
         private string category;
         /// <summary>
-        /// Szoba kapacitása / maximális férőhelye
+        /// Szoba férőhelye
         /// </summary>
         private int capacity;
 
@@ -34,7 +34,7 @@
         /// <param name="name">Szoba elnevezése / fantázianeve</param>
         /// <param name="number">Szobaszám</param>
         /// <param name="category">Szobakategória</param>
-        /// <param name="capacity">Szoba kapacitása / maximális férőhelye</param>
+        /// <param name="capacity">Szoba férőhelye</param>
         public Room(string name, int number, string category, int capacity)
         {
             this.number = number;
@@ -96,7 +96,7 @@
             }
         }
         /// <summary>
-        /// Szoba kapacitása / maximális férőhelye
+        /// Szoba férőhelye
         /// </summary>
         public int Capacity
         {

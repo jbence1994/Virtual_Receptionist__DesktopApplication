@@ -12,7 +12,7 @@ namespace virtual_receptionist
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable GetRents()
+        public DataTable GetReservations()
         {
             DataTable reservations = new DataTable();
 
