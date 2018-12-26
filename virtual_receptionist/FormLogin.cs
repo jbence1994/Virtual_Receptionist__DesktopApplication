@@ -11,18 +11,6 @@ namespace virtual_receptionist
         #region Adattagok
 
         /// <summary>
-        /// Felhasználó által bevitt szálláshely azonosító
-        /// </summary>
-        private Input inputAccomodationID;
-        /// <summary>
-        /// Felhasználó által bevitt jelszó
-        /// </summary>
-        private Input inputPassword;
-        /// <summary>
-        /// Felhasználó által kiválaszott csatlakozási típus
-        /// </summary>
-        private Input inputConnectionType;
-        /// <summary>
         /// Adattár osztály egy példánya
         /// </summary>
         private DataStore dataStore;
@@ -37,9 +25,6 @@ namespace virtual_receptionist
         public FormLogin()
         {
             InitializeComponent();
-            inputAccomodationID = new Input(textBoxAccomodationID.Text);
-            inputPassword = new Input(textBoxPassword.Text);
-            inputConnectionType = new Input(comboBoxConnectionType.Text);
             dataStore = new DataStore();
         }
 
@@ -49,12 +34,14 @@ namespace virtual_receptionist
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            Input inputAccomodationID = new Input(textBoxAccomodationID.Text);
+            Input inputPassword = new Input(textBoxPassword.Text);
+            Input inputConnectionType = new Input(comboBoxConnectionType.Text);
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            switch (comboBoxConnectionType.Text)
+            switch (comboBoxConnectionType.Text) //Ez metódus legyen!!! GUI-kódon ne legyen logika
             {
                 case "local.xml":
                     dataStore.GetLocalDatabaseServerPathFromXML();
@@ -72,8 +59,8 @@ namespace virtual_receptionist
                     dataStore.GetRemoteDatabaseServerPathFromTxt();
                     break;
             }
-
-            #endregion
         }
+
+        #endregion
     }
 }
