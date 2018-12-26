@@ -63,6 +63,8 @@ namespace virtual_receptionist
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
                 textBoxQuantity.Clear();
+                maskedTextBoxVAT.Clear();
+                maskedTextBoxItemDiscount.Clear();
             }
         }
 

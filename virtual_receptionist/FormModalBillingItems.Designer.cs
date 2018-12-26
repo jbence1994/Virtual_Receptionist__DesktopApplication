@@ -42,10 +42,10 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
-            this.labelVAT = new System.Windows.Forms.Label();
             this.labelDiscount = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.labelVAT = new System.Windows.Forms.Label();
+            this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,8 +162,8 @@
             // 
             // groupBoxItemParameters
             // 
-            this.groupBoxItemParameters.Controls.Add(this.textBox2);
-            this.groupBoxItemParameters.Controls.Add(this.textBox1);
+            this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
+            this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelItem);
@@ -180,15 +180,6 @@
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
-            // labelVAT
-            // 
-            this.labelVAT.AutoSize = true;
-            this.labelVAT.Location = new System.Drawing.Point(45, 126);
-            this.labelVAT.Name = "labelVAT";
-            this.labelVAT.Size = new System.Drawing.Size(30, 13);
-            this.labelVAT.TabIndex = 10;
-            this.labelVAT.Text = "ÁFA:";
-            // 
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
@@ -198,19 +189,30 @@
             this.labelDiscount.TabIndex = 11;
             this.labelDiscount.Text = "Tétel kedvezmény:";
             // 
-            // textBox1
+            // labelVAT
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
-            this.textBox1.TabIndex = 12;
+            this.labelVAT.AutoSize = true;
+            this.labelVAT.Location = new System.Drawing.Point(45, 126);
+            this.labelVAT.Name = "labelVAT";
+            this.labelVAT.Size = new System.Drawing.Size(30, 13);
+            this.labelVAT.TabIndex = 10;
+            this.labelVAT.Text = "ÁFA:";
             // 
-            // textBox2
+            // maskedTextBoxVAT
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(274, 20);
-            this.textBox2.TabIndex = 13;
+            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 123);
+            this.maskedTextBoxVAT.Mask = "00.0 %";
+            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
+            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxVAT.TabIndex = 14;
+            // 
+            // maskedTextBoxItemDiscount
+            // 
+            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(154, 149);
+            this.maskedTextBoxItemDiscount.Mask = "00.0%";
+            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
+            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxItemDiscount.TabIndex = 15;
             // 
             // FormModalBillingItems
             // 
@@ -247,9 +249,9 @@
         private System.Windows.Forms.Label labelUnit;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.GroupBox groupBoxItemParameters;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.Label labelVAT;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxVAT;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
     }
 }

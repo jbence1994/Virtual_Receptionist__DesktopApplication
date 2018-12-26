@@ -88,6 +88,19 @@ namespace virtual_receptionist
             totalPrice.Clear();
             totalPrice.Text = total.ToString();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void CountItemDiscount()
+        {
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void CountVAT()
+        {
+        }
 
         #endregion
     }
