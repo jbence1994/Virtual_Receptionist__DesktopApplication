@@ -12,11 +12,11 @@ namespace virtual_receptionist
         #region Adattagok
 
         /// <summary>
-        /// Fájl adatfolyam olvasó osztály egy példánya
+        /// Adatfolyam olvasó osztály egy példánya
         /// </summary>
         private StreamReader streamReader;
         /// <summary>
-        /// Fájl adatfolyam író osztály egy példánya
+        /// Adatfolyam író osztály egy példánya
         /// </summary>
         private StreamWriter streamWriter;
         /// <summary>
