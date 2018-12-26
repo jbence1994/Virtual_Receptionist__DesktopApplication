@@ -122,11 +122,11 @@
             // 
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.Enabled = false;
-            this.labelCopyright.Location = new System.Drawing.Point(444, 233);
+            this.labelCopyright.Location = new System.Drawing.Point(347, 233);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(165, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(262, 13);
             this.labelCopyright.TabIndex = 9;
-            this.labelCopyright.Text = "Copyright @ Juhász Bence 2019.";
+            this.labelCopyright.Text = "Copyright ©️ 2019 Juhász Bence - All Rigths Reserved";
             // 
             // labelTitle
             // 
