@@ -27,12 +27,36 @@ namespace virtual_receptionist
         #endregion
 
         #region Bejelentkezés-hitelesítési és adatbázis-konfigurációs folyamatokat vezérlő metódusok
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="typeOfConnection">A kapcsolat típusa</param>
+        public void LoginProcess(string typeOfConnection)
+        {
+            switch (typeOfConnection)
+            {
+                case "local.xml":
+                    GetLocalDatabaseServerPathFromXML();
+                    break;
 
+                case "local.txt":
+                    GetLocalDatabaseServerPathFromTxt();
+                    break;
+
+                case "remote.xml":
+                    GetRemoteDatabaseServerPathFromXML();
+                    break;
+
+                case "remote.txt":
+                    GetRemoteDatabaseServerPathFromTxt();
+                    break;
+            }
+        }
         /// <summary>
         /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        public string GetLocalDatabaseServerPathFromXML()
+        private string GetLocalDatabaseServerPathFromXML()
         {
             throw new NotImplementedException();
         }
@@ -40,7 +64,7 @@ namespace virtual_receptionist
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        public string GetRemoteDatabaseServerPathFromXML()
+        private string GetRemoteDatabaseServerPathFromXML()
         {
             throw new NotImplementedException();
         }
@@ -48,7 +72,7 @@ namespace virtual_receptionist
         /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza szöveges állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        public string GetLocalDatabaseServerPathFromTxt()
+        private string GetLocalDatabaseServerPathFromTxt()
         {
             throw new NotImplementedException();
         }
@@ -56,7 +80,7 @@ namespace virtual_receptionist
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza szöveges állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        public string GetRemoteDatabaseServerPathFromTxt()
+        private string GetRemoteDatabaseServerPathFromTxt()
         {
             throw new NotImplementedException();
         }

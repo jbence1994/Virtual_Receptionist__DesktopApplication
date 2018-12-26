@@ -134,9 +134,9 @@
             this.labelTitle.Enabled = false;
             this.labelTitle.Location = new System.Drawing.Point(9, 233);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(153, 13);
+            this.labelTitle.Size = new System.Drawing.Size(122, 13);
             this.labelTitle.TabIndex = 10;
-            this.labelTitle.Text = "Virtual Receptionist version 1.0";
+            this.labelTitle.Text = "Virtual Receptionist v1.0";
             // 
             // groupBoxLogin
             // 

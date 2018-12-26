@@ -41,24 +41,8 @@ namespace virtual_receptionist
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            switch (comboBoxConnectionType.Text) //Ez metódus legyen!!! GUI-kódon ne legyen logika
-            {
-                case "local.xml":
-                    dataStore.GetLocalDatabaseServerPathFromXML();
-                    break;
-
-                case "local.txt":
-                    dataStore.GetLocalDatabaseServerPathFromTxt();
-                    break;
-
-                case "remote.xml":
-                    dataStore.GetRemoteDatabaseServerPathFromXML();
-                    break;
-
-                case "remote.txt":
-                    dataStore.GetRemoteDatabaseServerPathFromTxt();
-                    break;
-            }
+            dataStore.LoginProcess(comboBoxConnectionType.Text);
+            dataStore.
         }
 
         #endregion
