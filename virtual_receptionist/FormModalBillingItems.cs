@@ -41,11 +41,13 @@ namespace virtual_receptionist
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            foreach (DataRow row in dataStore.GetBillingItems().Rows)
+            DataTable billingItemsDataContainer = dataStore.GetBillingItems();
+
+            foreach (DataRow row in billingItemsDataContainer.Rows)
             {
                 ListViewItem billingItems = new ListViewItem(row[1].ToString());
 
-                for (int i = 2; i < dataStore.GetBillingItems().Columns.Count; i++)
+                for (int i = 2; i < billingItemsDataContainer.Columns.Count; i++)
                 {
                     billingItems.SubItems.Add(row[i].ToString());
                 }

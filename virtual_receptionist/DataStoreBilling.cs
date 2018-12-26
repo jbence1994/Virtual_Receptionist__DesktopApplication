@@ -18,29 +18,42 @@ namespace virtual_receptionist
         {
             DataTable billingItems = new DataTable();
 
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            mySqlCommand = new MySqlCommand()
+            try
             {
-                CommandText = "SELECT * FROM billing_items",
-                Connection = mySqlConnection
-            };
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
-            mySqlDataAdapter = new MySqlDataAdapter()
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "SELECT billing_item.Item, billing_item.Price, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID",
+                    Connection = mySqlConnection
+                };
+
+                mySqlDataAdapter = new MySqlDataAdapter()
+                {
+                    SelectCommand = mySqlCommand
+                };
+
+                mySqlCommandBuilder = new MySqlCommandBuilder()
+                {
+                    DataAdapter = mySqlDataAdapter
+                };
+
+                mySqlDataAdapter.Fill(billingItems);
+            }
+            catch (MySqlException e)
             {
-                SelectCommand = mySqlCommand
-            };
-
-            mySqlCommandBuilder = new MySqlCommandBuilder()
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
             {
-                DataAdapter = mySqlDataAdapter
-            };
-
-            mySqlDataAdapter.Fill(billingItems);
-
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
 
             return billingItems;
         }
