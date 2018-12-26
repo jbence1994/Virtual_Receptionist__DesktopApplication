@@ -27,6 +27,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
         /// </summary>
+        /// <param name="billingItems">DataTable adatszerkezet, amely a hozzáadott számlázási tételeket tartalmazza</param>
         public FormModalBillingItems(DataTable billingItems)
         {
             InitializeComponent();

@@ -42,6 +42,10 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.labelVAT = new System.Windows.Forms.Label();
+            this.labelDiscount = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +86,7 @@
             // 
             this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAdd.Enabled = false;
-            this.buttonAdd.Location = new System.Drawing.Point(12, 511);
+            this.buttonAdd.Location = new System.Drawing.Point(12, 567);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(486, 37);
             this.buttonAdd.TabIndex = 1;
@@ -158,6 +162,10 @@
             // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.textBox2);
+            this.groupBoxItemParameters.Controls.Add(this.textBox1);
+            this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
+            this.groupBoxItemParameters.Controls.Add(this.labelVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelItem);
             this.groupBoxItemParameters.Controls.Add(this.textBoxQuantity);
             this.groupBoxItemParameters.Controls.Add(this.textBoxItem);
@@ -168,15 +176,47 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxUnit);
             this.groupBoxItemParameters.Location = new System.Drawing.Point(12, 373);
             this.groupBoxItemParameters.Name = "groupBoxItemParameters";
-            this.groupBoxItemParameters.Size = new System.Drawing.Size(486, 132);
+            this.groupBoxItemParameters.Size = new System.Drawing.Size(486, 188);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
+            // 
+            // labelVAT
+            // 
+            this.labelVAT.AutoSize = true;
+            this.labelVAT.Location = new System.Drawing.Point(45, 126);
+            this.labelVAT.Name = "labelVAT";
+            this.labelVAT.Size = new System.Drawing.Size(30, 13);
+            this.labelVAT.TabIndex = 10;
+            this.labelVAT.Text = "ÁFA:";
+            // 
+            // labelDiscount
+            // 
+            this.labelDiscount.AutoSize = true;
+            this.labelDiscount.Location = new System.Drawing.Point(45, 152);
+            this.labelDiscount.Name = "labelDiscount";
+            this.labelDiscount.Size = new System.Drawing.Size(97, 13);
+            this.labelDiscount.TabIndex = 11;
+            this.labelDiscount.Text = "Tétel kedvezmény:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(154, 123);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(274, 20);
+            this.textBox1.TabIndex = 12;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(154, 149);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(274, 20);
+            this.textBox2.TabIndex = 13;
             // 
             // FormModalBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 558);
+            this.ClientSize = new System.Drawing.Size(510, 616);
             this.Controls.Add(this.groupBoxItemParameters);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewBillingItems);
@@ -207,5 +247,9 @@
         private System.Windows.Forms.Label labelUnit;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.GroupBox groupBoxItemParameters;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelDiscount;
+        private System.Windows.Forms.Label labelVAT;
     }
 }
