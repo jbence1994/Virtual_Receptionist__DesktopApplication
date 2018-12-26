@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.IO;
+using System.Xml;
+using System.Collections.Generic;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 
@@ -6,8 +9,57 @@ namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        #region Belépési folyamatot vezérlő és ellenőrző metódusok
+        #region Adattagok
 
+        /// <summary>
+        /// Fájl adatfolyam olvasó osztály egy példánya
+        /// </summary>
+        private StreamReader streamReader;
+        /// <summary>
+        /// Fájl adatfolyam író osztály egy példánya
+        /// </summary>
+        private StreamWriter streamWriter;
+        /// <summary>
+        /// XML állomány olvasó osztály egy példánya
+        /// </summary>
+        private XmlTextReader xmlTextReader;
+
+        #endregion
+
+        #region Bejelentkezés-hitelesítési és adatbázis-konfigurációs folyamatokat vezérlő metódusok
+
+        /// <summary>
+        /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza XML állományból
+        /// </summary>
+        /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
+        public string GetLocalDatabaseServerPathFromXML()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
+        /// </summary>
+        /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
+        public string GetRemoteDatabaseServerPathFromXML()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza szöveges állományból
+        /// </summary>
+        /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
+        public string GetLocalDatabaseServerPathFromTxt()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza szöveges állományból
+        /// </summary>
+        /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
+        public string GetRemoteDatabaseServerPathFromTxt()
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Metódus, amely ellenőrzi van-e felhasználói fiók létrehozva
         /// </summary>
