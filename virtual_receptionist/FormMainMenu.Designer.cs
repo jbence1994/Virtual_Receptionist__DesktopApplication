@@ -41,19 +41,19 @@
             // 
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Size = new System.Drawing.Size(637, 24);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(846, 24);
             this.menuStripMainMenu.TabIndex = 0;
             // 
             // statusStripMainMenu
             // 
             this.statusStripMainMenu.Location = new System.Drawing.Point(0, 463);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
-            this.statusStripMainMenu.Size = new System.Drawing.Size(637, 22);
+            this.statusStripMainMenu.Size = new System.Drawing.Size(846, 22);
             this.statusStripMainMenu.TabIndex = 1;
             // 
             // buttonRoomEditor
             // 
-            this.buttonRoomEditor.Location = new System.Drawing.Point(12, 316);
+            this.buttonRoomEditor.Location = new System.Drawing.Point(12, 27);
             this.buttonRoomEditor.Name = "buttonRoomEditor";
             this.buttonRoomEditor.Size = new System.Drawing.Size(152, 44);
             this.buttonRoomEditor.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // buttonGuestDatabase
             // 
-            this.buttonGuestDatabase.Location = new System.Drawing.Point(12, 366);
+            this.buttonGuestDatabase.Location = new System.Drawing.Point(170, 27);
             this.buttonGuestDatabase.Name = "buttonGuestDatabase";
             this.buttonGuestDatabase.Size = new System.Drawing.Size(152, 44);
             this.buttonGuestDatabase.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // buttonBilling
             // 
-            this.buttonBilling.Location = new System.Drawing.Point(12, 416);
+            this.buttonBilling.Location = new System.Drawing.Point(328, 27);
             this.buttonBilling.Name = "buttonBilling";
             this.buttonBilling.Size = new System.Drawing.Size(152, 44);
             this.buttonBilling.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // pictureBoxApplicationLogo
             // 
-            this.pictureBoxApplicationLogo.Location = new System.Drawing.Point(350, 27);
+            this.pictureBoxApplicationLogo.Location = new System.Drawing.Point(559, 27);
             this.pictureBoxApplicationLogo.Name = "pictureBoxApplicationLogo";
             this.pictureBoxApplicationLogo.Size = new System.Drawing.Size(275, 433);
             this.pictureBoxApplicationLogo.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 485);
+            this.ClientSize = new System.Drawing.Size(846, 485);
             this.Controls.Add(this.pictureBoxApplicationLogo);
             this.Controls.Add(this.buttonBilling);
             this.Controls.Add(this.buttonGuestDatabase);

@@ -42,7 +42,6 @@ namespace virtual_receptionist
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             dataStore.LoginProcess(comboBoxConnectionType.Text);
-            dataStore.
         }
 
         #endregion
