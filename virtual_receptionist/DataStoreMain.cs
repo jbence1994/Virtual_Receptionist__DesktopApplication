@@ -57,21 +57,6 @@ namespace virtual_receptionist
         #region Konstruktor
 
         /// <summary>
-        /// Adattár osztály konstruktor, amelyben inicializálva van az adatbázis elérésének útvonala
-        /// </summary>
-        /// <param name="server">Adatbázist tároló szerver neve</param>
-        /// <param name="database">Adatbázis neve</param>
-        /// <param name="username">Adatbázis felhasználónév</param>
-        /// <param name="password">Adatbázis jelszó</param>
-        /// <param name="port">Adatbázis szerver elérésére szolgáló hálózati port</param>
-        public DataStore(string server, string database, string username, string password, string port)
-        {
-            mySqlConnection = new MySqlConnection
-            {
-                ConnectionString = "SERVER =" + server + "; DATABASE=" + database + "; UID=" + username + "; PASSWORD=" + password + "; PORT=" + port + "; SslMode=None;"
-            };
-        }
-        /// <summary>
         /// Adattár osztály üres konstruktora
         /// </summary>
         public DataStore()

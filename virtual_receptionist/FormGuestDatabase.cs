@@ -46,7 +46,7 @@ namespace virtual_receptionist
         {
             InitializeComponent();
             this.formMainMenu = formMainMenu;
-            dataStore = new DataStore("127.0.0.1", "virtual_receptionist", "root", "", "3306");
+            //dataStore = new DataStore("127.0.0.1", "virtual_receptionist", "root", "", "3306");
         }
 
         #endregion

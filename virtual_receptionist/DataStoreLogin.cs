@@ -14,6 +14,26 @@ namespace virtual_receptionist
         /// XML állomány olvasó osztály egy példánya
         /// </summary>
         private XmlTextReader xmlTextReader;
+        /// <summary>
+        /// Adatbázist tároló szerver neve
+        /// </summary>
+        private string server;
+        /// <summary>
+        /// Adatbázis neve
+        /// </summary>
+        private string database;
+        /// <summary>
+        /// Adatbázis felhasználóneve
+        /// </summary>
+        private string username;
+        /// <summary>
+        /// Adatbázis jelszava
+        /// </summary>
+        private string password;
+        /// <summary>
+        /// Adatbázis szerver elérésére szolgáló hálózati port
+        /// </summary>
+        private string port;
 
         #endregion
 
@@ -34,7 +54,15 @@ namespace virtual_receptionist
                 case "iskolai":
                     ConnectToRemoteServer();
                     break;
+
+                default:
+                    throw new Exception();
             }
+
+            mySqlConnection = new MySqlConnection()
+            {
+                ConnectionString = ""
+            };
         }
 
         #endregion
@@ -47,7 +75,7 @@ namespace virtual_receptionist
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
         private void ConnectToLocalServer()
         {
-
+            xmlTextReader = new XmlTextReader("dbconfig.xml");
         }
         /// <summary>
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
@@ -55,7 +83,7 @@ namespace virtual_receptionist
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
         private void ConnectToRemoteServer()
         {
-
+            xmlTextReader = new XmlTextReader("dbconfig.xml");
         }
         /// <summary>
         /// Metódus, amely ellenőrzi van-e felhasználói fiók létrehozva
