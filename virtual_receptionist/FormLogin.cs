@@ -25,7 +25,8 @@ namespace virtual_receptionist
         public FormLogin()
         {
             InitializeComponent();
-            dataStore = new DataStore();
+            dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
+            dataStore.Logging();
         }
 
         #endregion

@@ -141,22 +141,36 @@ namespace virtual_receptionist
         /// </summary>
         public void Logging()
         {
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            mySqlCommand = new MySqlCommand()
+            try
             {
-                CommandText = "INSERT INTO log (MachineName, LoginDate, LogoutDate) VALUES (@MachineName, @LoginDate, @LogoutDate)",
-                Connection = mySqlConnection
-            };
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
-            mySqlCommand.Prepare();
-            mySqlCommand.Parameters.AddWithValue("@MachineName", Client);
-            mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
-            mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now);
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "INSERT INTO log (MachineName, LoginDate, LogoutDate) VALUES (@MachineName, @LoginDate, @LogoutDate)",
+                    Connection = mySqlConnection
+                };
 
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                mySqlCommand.Prepare();
+                mySqlCommand.Parameters.AddWithValue("@MachineName", Client);
+                mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
+                mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now);
+                mySqlCommand.ExecuteNonQuery();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
         }
 
         #endregion
