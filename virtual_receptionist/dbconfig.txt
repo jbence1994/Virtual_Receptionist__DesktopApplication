@@ -1,2 +1,0 @@
-127.0.0.1;virtual_receptionist;root;;3306
-;virtual_receptionist;;;3306

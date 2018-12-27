@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Xml;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,14 +10,6 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
-        /// <summary>
-        /// Adatfolyam olvasó osztály egy példánya
-        /// </summary>
-        private StreamReader streamReader;
-        /// <summary>
-        /// Adatfolyam író osztály egy példánya
-        /// </summary>
-        private StreamWriter streamWriter;
         /// <summary>
         /// XML állomány olvasó osztály egy példánya
         /// </summary>
@@ -35,20 +26,12 @@ namespace virtual_receptionist
         {
             switch (typeOfConnection)
             {
-                case "local.xml":
-                    GetLocalDatabaseServerPathFromXML();
+                case "otthoni":
+                    GetLocalServerPath();
                     break;
 
-                case "local.txt":
-                    GetLocalDatabaseServerPathFromTxt();
-                    break;
-
-                case "remote.xml":
-                    GetRemoteDatabaseServerPathFromXML();
-                    break;
-
-                case "remote.txt":
-                    GetRemoteDatabaseServerPathFromTxt();
+                case "iskolai":
+                    GetRemoteServerPath();
                     break;
             }
         }
@@ -56,7 +39,7 @@ namespace virtual_receptionist
         /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private string GetLocalDatabaseServerPathFromXML()
+        private string GetLocalServerPath()
         {
             throw new NotImplementedException();
         }
@@ -64,23 +47,7 @@ namespace virtual_receptionist
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private string GetRemoteDatabaseServerPathFromXML()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza szöveges állományból
-        /// </summary>
-        /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private string GetLocalDatabaseServerPathFromTxt()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza szöveges állományból
-        /// </summary>
-        /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private string GetRemoteDatabaseServerPathFromTxt()
+        private string GetRemoteServerPath()
         {
             throw new NotImplementedException();
         }

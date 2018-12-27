@@ -34,7 +34,7 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelAccomodationID = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.labelConnectionType = new System.Windows.Forms.Label();
+            this.labelConnectTo = new System.Windows.Forms.Label();
             this.comboBoxConnectionType = new System.Windows.Forms.ComboBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelCopyright = new System.Windows.Forms.Label();
@@ -87,23 +87,21 @@
             this.labelPassword.TabIndex = 5;
             this.labelPassword.Text = "Jelszó:";
             // 
-            // labelConnectionType
+            // labelConnectTo
             // 
-            this.labelConnectionType.AutoSize = true;
-            this.labelConnectionType.Location = new System.Drawing.Point(119, 74);
-            this.labelConnectionType.Name = "labelConnectionType";
-            this.labelConnectionType.Size = new System.Drawing.Size(98, 13);
-            this.labelConnectionType.TabIndex = 6;
-            this.labelConnectionType.Text = "Csatlakozás módja:";
+            this.labelConnectTo.AutoSize = true;
+            this.labelConnectTo.Location = new System.Drawing.Point(84, 74);
+            this.labelConnectTo.Name = "labelConnectTo";
+            this.labelConnectTo.Size = new System.Drawing.Size(133, 13);
+            this.labelConnectTo.TabIndex = 6;
+            this.labelConnectTo.Text = "Csatlakozás kiszolgálóhoz:";
             // 
             // comboBoxConnectionType
             // 
             this.comboBoxConnectionType.FormattingEnabled = true;
             this.comboBoxConnectionType.Items.AddRange(new object[] {
-            "local.xml",
-            "local.txt",
-            "remote.xml",
-            "remote.txt"});
+            "otthoni",
+            "iskolai"});
             this.comboBoxConnectionType.Location = new System.Drawing.Point(223, 71);
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
@@ -144,7 +142,7 @@
             this.groupBoxLogin.Controls.Add(this.buttonLogin);
             this.groupBoxLogin.Controls.Add(this.comboBoxConnectionType);
             this.groupBoxLogin.Controls.Add(this.labelPassword);
-            this.groupBoxLogin.Controls.Add(this.labelConnectionType);
+            this.groupBoxLogin.Controls.Add(this.labelConnectTo);
             this.groupBoxLogin.Controls.Add(this.textBoxAccomodationID);
             this.groupBoxLogin.Controls.Add(this.textBoxPassword);
             this.groupBoxLogin.Controls.Add(this.labelAccomodationID);
@@ -183,7 +181,7 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelAccomodationID;
         private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.Label labelConnectionType;
+        private System.Windows.Forms.Label labelConnectTo;
         private System.Windows.Forms.ComboBox comboBoxConnectionType;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelCopyright;
