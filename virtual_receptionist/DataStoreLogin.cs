@@ -64,34 +64,47 @@ namespace virtual_receptionist
             string username = string.Empty;
             string password = string.Empty;
 
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            mySqlCommand = new MySqlCommand()
+            try
             {
-                CommandText = "SELECT * FROM account",
-                Connection = mySqlConnection
-            };
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
-            mySqlDataReader = mySqlCommand.ExecuteReader();
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "SELECT * FROM account",
+                    Connection = mySqlConnection
+                };
 
-            while (mySqlDataReader.Read())
-            {
-                username = mySqlDataReader["username"].ToString();
-                password = mySqlDataReader["password"].ToString();
-                account.Add(username, password);
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                while (mySqlDataReader.Read())
+                {
+                    username = mySqlDataReader["username"].ToString();
+                    password = mySqlDataReader["password"].ToString();
+                    account.Add(username, password);
+                }
             }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlDataReader.Close();
+                Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
 
-            mySqlDataReader.Close();
-            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
 
             if (account.Count != 0)
             {
                 existAnyAccount = true;
             }
-
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return existAnyAccount;
         }
@@ -107,32 +120,45 @@ namespace virtual_receptionist
         {
             bool validEntry = false;
 
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-            Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
-
-            while (mySqlDataReader.Read())
+            try
             {
-                string validUsername = string.Empty;
-                string validPassword = string.Empty;
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
-                validUsername = mySqlDataReader[usernameTableField].ToString();
-                validPassword = mySqlDataReader[passwordTableField].ToString();
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+                Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
 
-                if (username == validUsername && password == validPassword)
+                while (mySqlDataReader.Read())
                 {
-                    validEntry = true;
-                    break;
+                    string validUsername = string.Empty;
+                    string validPassword = string.Empty;
+
+                    validUsername = mySqlDataReader[usernameTableField].ToString();
+                    validPassword = mySqlDataReader[passwordTableField].ToString();
+
+                    if (username == validUsername && password == validPassword)
+                    {
+                        validEntry = true;
+                        break;
+                    }
                 }
             }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlDataReader.Close();
+                Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
 
-            mySqlDataReader.Close();
-            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
-
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
 
             return validEntry;
         }
