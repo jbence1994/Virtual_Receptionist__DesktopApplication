@@ -25,8 +25,6 @@ namespace virtual_receptionist
         public FormLogin()
         {
             InitializeComponent();
-            dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
-            dataStore.Logging();
         }
 
         #endregion
@@ -42,7 +40,7 @@ namespace virtual_receptionist
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            dataStore.LoginProcess(comboBoxConnectionType.Text);
+            dataStore = new DataStore(comboBoxConnectionType.Text);
         }
 
         #endregion

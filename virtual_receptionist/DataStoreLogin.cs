@@ -17,6 +17,28 @@ namespace virtual_receptionist
 
         #endregion
 
+        #region Konstruktor
+
+        /// <summary>
+        /// Konstruktor, amely beállítja az adatbázis elérésének útvonalát
+        /// </summary>
+        /// <param name="connectTo">Szerver típusa (helyi otthoni vagy távoli iskolai)</param>
+        public DataStore(string connectTo)
+        {
+            switch (connectTo)
+            {
+                case "otthoni":
+                    ConnectToLocalServer();
+                    break;
+
+                case "iskolai":
+                    ConnectToRemoteServer();
+                    break;
+            }
+        }
+
+        #endregion
+
         #region Bejelentkezés-hitelesítési és adatbázis-konfigurációs folyamatokat vezérlő metódusok
 
         /// <summary>
@@ -25,7 +47,7 @@ namespace virtual_receptionist
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
         private void ConnectToLocalServer()
         {
-            throw new NotImplementedException();
+
         }
         /// <summary>
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
@@ -33,7 +55,7 @@ namespace virtual_receptionist
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
         private void ConnectToRemoteServer()
         {
-            throw new NotImplementedException();
+
         }
         /// <summary>
         /// Metódus, amely ellenőrzi van-e felhasználói fiók létrehozva

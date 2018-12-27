@@ -78,23 +78,6 @@ namespace virtual_receptionist
         {
 
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="connectTo"></param>
-        public DataStore(string connectTo)
-        {
-            switch (connectTo)
-            {
-                case "otthoni":
-                    ConnectToLocalServer();
-                    break;
-
-                case "iskolai":
-                    ConnectToRemoteServer();
-                    break;
-            }
-        }
 
         #endregion
 
