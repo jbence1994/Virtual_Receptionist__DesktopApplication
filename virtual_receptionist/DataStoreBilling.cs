@@ -102,14 +102,14 @@ namespace virtual_receptionist
             totalPrice.Text = total.ToString();
         }
         /// <summary>
-        /// 
+        /// Metódus, amely tételkedvezményt számít
         /// </summary>
         public void CountItemDiscount()
         {
 
         }
         /// <summary>
-        /// 
+        /// Metódus, amely egy tétel ÁFA értékét számítja
         /// </summary>
         public void CountVAT()
         {

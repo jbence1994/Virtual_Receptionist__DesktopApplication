@@ -84,7 +84,7 @@ namespace virtual_receptionist
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa az országok kódját és nevét és egy List<T> adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa a világ országainak nevét és egy List<T> adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött List<T>-t adja vissza</returns>
         public List<string> GetCountries()
@@ -118,6 +118,43 @@ namespace virtual_receptionist
             Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return countries;
+        }
+        /// <summary>
+        /// Metódus, amely adatbázisból kiolvassa a magyarországi irányítószámok és települések nevét és egy Dictionary<TKey, TValue> adatszerkezetbe menti őket
+        /// </summary>
+        /// <returns>Adatokkal feltöltött Dictionary<TKey, TValue>-t adja vissza</returns>
+        public Dictionary<string, string> GetHungarianZipCodesAndCities()
+        {
+            Dictionary<string, string> hungarianZipCodesAndCities = new Dictionary<string, string>();
+
+            string zipCode = string.Empty;
+            string city = string.Empty;
+
+            mySqlConnection.Open();
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+
+            mySqlCommand = new MySqlCommand()
+            {
+                CommandText = "SELECT * FROM hungarian_zip_code_and_city",
+                Connection = mySqlConnection
+            };
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            while (mySqlDataReader.Read())
+            {
+                zipCode = mySqlDataReader["ZipCode"].ToString();
+                city = mySqlDataReader["City"].ToString();
+                hungarianZipCodesAndCities.Add(zipCode, city);
+            }
+
+            mySqlDataReader.Close();
+            Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+
+            mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+
+            return hungarianZipCodesAndCities;
         }
 
         #endregion
