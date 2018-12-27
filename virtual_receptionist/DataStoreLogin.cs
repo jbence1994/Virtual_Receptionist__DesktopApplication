@@ -59,7 +59,7 @@ namespace virtual_receptionist
 
             mySqlConnection = new MySqlConnection()
             {
-                ConnectionString = "SERVER =" + server + "; DATABASE=" + database + "; UID=" + username + "; PASSWORD=" + password + "; PORT=" + port + "; SslMode=None;"
+                ConnectionString = $"SERVER={server}; DATABASE={database};UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
             };
         }
 
@@ -110,13 +110,24 @@ namespace virtual_receptionist
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
         private void InitializeRemoteServerPath()
         {
-            xmlTextReader = new XmlTextReader("dbconfig.xml");
+            try
+            {
+                xmlTextReader = new XmlTextReader("dbconfig.xml");
 
-            server = "";
-            database = "";
-            username = "";
-            password = "";
-            port = "";
+                server = "";
+                database = "";
+                username = "";
+                password = "";
+                port = "";
+            }
+            catch (FileNotFoundException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
         }
         /// <summary>
         /// Metódus, amely ellenőrzi van-e felhasználói fiók létrehozva
