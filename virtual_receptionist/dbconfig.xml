@@ -8,10 +8,10 @@
     <port>3306</port>
   </connection>
   <connection type="remote">
-    <server></server>
+    <server>10.11.200.34</server>
     <database>virtual_receptionist</database>
-    <username></username>
-    <password></password>
+    <username>juhaszbence</username>
+    <password>12345</password>
     <port>3306</port>
   </connection>
 </configuration>

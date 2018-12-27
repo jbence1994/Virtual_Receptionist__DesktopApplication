@@ -3,6 +3,7 @@ using System.Xml;
 using System.Collections.Generic;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace virtual_receptionist
 {
@@ -48,20 +49,17 @@ namespace virtual_receptionist
             switch (connectTo)
             {
                 case "otthoni":
-                    ConnectToLocalServer();
+                    InitializeLocalServerPath();
                     break;
 
                 case "iskolai":
-                    ConnectToRemoteServer();
+                    InitializeRemoteServerPath();
                     break;
-
-                default:
-                    throw new Exception();
             }
 
             mySqlConnection = new MySqlConnection()
             {
-                ConnectionString = ""
+                ConnectionString = "SERVER =" + server + "; DATABASE=" + database + "; UID=" + username + "; PASSWORD=" + password + "; PORT=" + port + "; SslMode=None;"
             };
         }
 
@@ -73,17 +71,52 @@ namespace virtual_receptionist
         /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private void ConnectToLocalServer()
+        private void InitializeLocalServerPath()
         {
-            xmlTextReader = new XmlTextReader("dbconfig.xml");
+            try
+            {
+                xmlTextReader = new XmlTextReader("dbconfig.xml");
+                
+                while (xmlTextReader.Read())
+                {
+                    switch (xmlTextReader.NodeType)
+                    {
+                        case XmlNodeType.Text:
+
+                            Debug.WriteLine(xmlTextReader);
+                            break;
+                    }
+                }
+
+                server = "";
+                database = "";
+                username = "";
+                password = "";
+                port = "";
+
+            }
+            catch (FileNotFoundException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
         }
         /// <summary>
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private void ConnectToRemoteServer()
+        private void InitializeRemoteServerPath()
         {
             xmlTextReader = new XmlTextReader("dbconfig.xml");
+
+            server = "";
+            database = "";
+            username = "";
+            password = "";
+            port = "";
         }
         /// <summary>
         /// Metódus, amely ellenőrzi van-e felhasználói fiók létrehozva
