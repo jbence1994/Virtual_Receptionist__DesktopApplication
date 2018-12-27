@@ -136,6 +136,32 @@ namespace virtual_receptionist
 
             return validEntry;
         }
+        /// <summary>
+        /// Metódus, amely az alkalmazásba belépési és kilépési dtáumot, számítógépnévvel naplózza adatbázisba
+        /// </summary>
+        public void Logging()
+        {
+            string machineName = Client;
+            DateTime login = DateTime.Now;
+            DateTime logout = DateTime.Now;
+
+            mySqlConnection.Open();
+            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+
+            mySqlCommand = new MySqlCommand()
+            {
+                CommandText = "INSERT INTO log (MachineName, LoginDate, LogoutDate)",
+                Connection = mySqlConnection
+            };
+
+
+
+
+
+
+            mySqlConnection.Close();
+            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+        }
 
         #endregion
     }
