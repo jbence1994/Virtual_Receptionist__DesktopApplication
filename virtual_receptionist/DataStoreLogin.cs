@@ -141,23 +141,19 @@ namespace virtual_receptionist
         /// </summary>
         public void Logging()
         {
-            string machineName = Client;
-            DateTime login = DateTime.Now;
-            DateTime logout = DateTime.Now;
-
             mySqlConnection.Open();
             Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
             mySqlCommand = new MySqlCommand()
             {
-                CommandText = "INSERT INTO log (MachineName, LoginDate, LogoutDate)",
+                CommandText = "INSERT INTO log (MachineName, LoginDate, LogoutDate) VALUES (@MachineName, @LoginDate, @LogoutDate)",
                 Connection = mySqlConnection
             };
 
-
-
-
-
+            mySqlCommand.Prepare();
+            mySqlCommand.Parameters.AddWithValue("@MachineName", Client);
+            mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
+            mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now);
 
             mySqlConnection.Close();
             Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
