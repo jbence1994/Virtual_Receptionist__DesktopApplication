@@ -107,9 +107,11 @@ namespace virtual_receptionist
 
             while (mySqlDataReader.Read())
             {
-                countryName = mySqlDataReader["Name"].ToString();
+                countryName = mySqlDataReader["CountryName"].ToString();
                 countries.Add(countryName);
             }
+
+            countries.Sort();
 
             mySqlDataReader.Close();
             Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");

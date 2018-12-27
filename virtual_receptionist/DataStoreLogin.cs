@@ -19,12 +19,12 @@ namespace virtual_receptionist
 
         #region Bejelentkezés-hitelesítési és adatbázis-konfigurációs folyamatokat vezérlő metódusok
         /// <summary>
-        /// 
+        /// Beléptető metódus
         /// </summary>
-        /// <param name="typeOfConnection">A kapcsolat típusa</param>
-        public void LoginProcess(string typeOfConnection)
+        /// <param name="connectTo">Távoli vagy helyi szerverhez kapcsolódás</param>
+        public void LoginProcess(string connectTo)
         {
-            switch (typeOfConnection)
+            switch (connectTo)
             {
                 case "otthoni":
                     GetLocalServerPath();
