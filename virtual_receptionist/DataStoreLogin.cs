@@ -18,28 +18,12 @@ namespace virtual_receptionist
         #endregion
 
         #region Bejelentkezés-hitelesítési és adatbázis-konfigurációs folyamatokat vezérlő metódusok
-        /// <summary>
-        /// Beléptető metódus
-        /// </summary>
-        /// <param name="connectTo">Távoli vagy helyi szerverhez kapcsolódás</param>
-        public void LoginProcess(string connectTo)
-        {
-            switch (connectTo)
-            {
-                case "otthoni":
-                    GetLocalServerPath();
-                    break;
 
-                case "iskolai":
-                    GetRemoteServerPath();
-                    break;
-            }
-        }
         /// <summary>
         /// Metódus, amely helyi adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private string GetLocalServerPath()
+        private void ConnectToLocalServer()
         {
             throw new NotImplementedException();
         }
@@ -47,7 +31,7 @@ namespace virtual_receptionist
         /// Metódus, amely távoli adatbázis kiszolgáló útvonalát adja vissza XML állományból
         /// </summary>
         /// <returns>A kiszolgáló útvonalát adja vissza karakterláncként</returns>
-        private string GetRemoteServerPath()
+        private void ConnectToRemoteServer()
         {
             throw new NotImplementedException();
         }
@@ -181,7 +165,7 @@ namespace virtual_receptionist
                 mySqlCommand.Prepare();
                 mySqlCommand.Parameters.AddWithValue("@MachineName", Client);
                 mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
-                mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now);
+                mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now); //<- Refaktor: Kilépési aktuális ponton történjen logolás a jelenlegi időről
                 mySqlCommand.ExecuteNonQuery();
             }
             catch (MySqlException e)
