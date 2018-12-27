@@ -6,7 +6,7 @@ namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        #region Vendégadatbázis-kezelő modul metódusai
+        #region Vendégadatbázis-szerkesztő modul metódusai
 
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
@@ -41,6 +41,27 @@ namespace virtual_receptionist
             Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
 
             return guests;
+        }
+        /// <summary>
+        /// Vendég törlése
+        /// </summary>
+        public void DeleteGuest()
+        {
+
+        }
+        /// <summary>
+        /// Vendég módosítása
+        /// </summary>
+        public void UpdateGuest()
+        {
+
+        }
+        /// <summary>
+        /// Vendég létrehozása
+        /// </summary>
+        public void CreateGuest()
+        {
+
         }
 
         #endregion
