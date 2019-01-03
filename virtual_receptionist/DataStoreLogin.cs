@@ -55,6 +55,8 @@ namespace virtual_receptionist
                 case "iskolai":
                     InitializeRemoteServerPath();
                     break;
+                default:
+                    return;
             }
 
             mySqlConnection = new MySqlConnection()

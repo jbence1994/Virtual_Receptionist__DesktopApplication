@@ -5,7 +5,7 @@ namespace virtual_receptionist.Tests
     [TestClass()]
     public class InputTests
     {
-        #region IsEmpty() tesztek
+        #region IsEmpty tesztek
 
         /// <summary>
         /// Tesztmetódus: ha az input nem üres
@@ -35,7 +35,7 @@ namespace virtual_receptionist.Tests
 
         #endregion
 
-        #region IsValidEmailAddress() tesztek
+        #region IsValidEmailAddress tesztek
 
         /// <summary>
         /// Tesztmetódus: ha az input nem érvényes e-mail cím formátumú
@@ -64,7 +64,7 @@ namespace virtual_receptionist.Tests
 
         #endregion
 
-        #region FirstLetterIsUppercaseCharacter() tesztek
+        #region FirstLetterIsUppercaseCharacter tesztek
 
         /// <summary>
         /// Tesztmetódus: ha az input első kezdőbetűje kisbetű

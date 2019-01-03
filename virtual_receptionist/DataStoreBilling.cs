@@ -102,7 +102,7 @@ namespace virtual_receptionist
             totalPrice.Text = total.ToString();
         }
         /// <summary>
-        /// Metódus, amely tételkedvezményt számít
+        /// Metódus, amely tétel kedvezményt számít
         /// </summary>
         public void CountItemDiscount()
         {
