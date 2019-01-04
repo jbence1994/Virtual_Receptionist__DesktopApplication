@@ -6,7 +6,7 @@ namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        #region Vendégadatbázis-szerkesztő modul metódusai
+        #region Vendégadatbázis-kezelő modul metódusai
 
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben

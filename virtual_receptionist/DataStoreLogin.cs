@@ -14,27 +14,27 @@ namespace virtual_receptionist
         /// <summary>
         /// XML állomány olvasó osztály egy példánya
         /// </summary>
-        private XmlTextReader xmlTextReader;
+        private static XmlTextReader xmlTextReader;
         /// <summary>
-        /// Adatbázist tároló szerver neve
+        /// Adatbázis szerver neve
         /// </summary>
-        private string server;
+        private static string server;
         /// <summary>
         /// Adatbázis neve
         /// </summary>
-        private string database;
+        private static string database;
         /// <summary>
-        /// Adatbázis felhasználóneve
+        /// Adatbázis szerver felhasználóneve
         /// </summary>
-        private string username;
+        private static string username;
         /// <summary>
-        /// Adatbázis jelszava
+        /// Adatbázis szerver jelszava
         /// </summary>
-        private string password;
+        private static string password;
         /// <summary>
         /// Adatbázis szerver elérésére szolgáló hálózati port
         /// </summary>
-        private string port;
+        private static string port;
 
         #endregion
 
