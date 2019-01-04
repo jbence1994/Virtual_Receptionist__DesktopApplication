@@ -76,8 +76,134 @@
 
         #endregion
 
-        #region
-        
+        #region Getter és setter tulajdonságok
+
+        /// <summary>
+        /// Szálláshely neve
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshelyet üzemeltető cég neve
+        /// </summary>
+        public string Company
+        {
+            get
+            {
+                return company;
+            }
+            set
+            {
+                company = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely kontakt személye
+        /// </summary>
+        public string Contact
+        {
+            get
+            {
+                return contact;
+            }
+            set
+            {
+                contact = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely adószáma
+        /// </summary>
+        public string VatNumber
+        {
+            get
+            {
+                return vatNumber;
+            }
+            set
+            {
+                vatNumber = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely székhelye
+        /// </summary>
+        public string Headquarters
+        {
+            get
+            {
+                return headquarters;
+            }
+            set
+            {
+                headquarters = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely telephelye
+        /// </summary>
+        public string Site
+        {
+            get
+            {
+                return site;
+            }
+            set
+            {
+                site = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely telefonszáma
+        /// </summary>
+        public string TelephoneNumber
+        {
+            get
+            {
+                return telephoneNumber;
+            }
+            set
+            {
+                telephoneNumber = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely e-mail címe
+        /// </summary>
+        public string EmailAddress
+        {
+            get
+            {
+                return emailAddress;
+            }
+            set
+            {
+                emailAddress = value;
+            }
+        }
+
+        #endregion
+
+        #region Metódusok
+
+        /// <summary>
+        /// Accomodation osztályból készült objektum string típusúvá alakítása
+        /// </summary>
+        /// <returns>Visszaadja az Accomodation típusú objektumot string típusúra alakítva</returns>
+        public override string ToString()
+        {
+            return $"{name} {company} {contact} {vatNumber} {headquarters} {site} {telephoneNumber} {emailAddress}";
+        }
+
         #endregion
     }
 }

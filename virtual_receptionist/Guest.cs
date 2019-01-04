@@ -255,7 +255,7 @@
                 nationality = "külföldi";
             }
 
-            return name + " " + nationality + " " + country + " " + zipCode + " " + city + " " + address + " " + vatNumber + " " + phoneNumber + " " + emailAddress;
+            return $"{name} {nationality} {country} {zipCode} {city} {address} {vatNumber} {phoneNumber} {emailAddress}";
         }
 
         #endregion

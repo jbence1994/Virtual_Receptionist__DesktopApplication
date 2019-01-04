@@ -138,7 +138,7 @@ namespace virtual_receptionist
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return guest + "" + room + "" + numberOfGuests + "" + arrival + "" + departure;
+            return $"{guest} {room} {numberOfGuests} {arrival} {departure}";
         }
 
         #endregion

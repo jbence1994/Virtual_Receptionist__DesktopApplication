@@ -120,7 +120,7 @@
         /// <returns>Visszaadja a Room típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return name + " " + number + " " + category + " " + capacity;
+            return $"{name} {number} {category} {capacity}";
         }
 
         #endregion
