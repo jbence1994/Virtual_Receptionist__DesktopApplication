@@ -62,6 +62,46 @@ namespace virtual_receptionist
             formAboutUs.ShowDialog();
         }
 
+        private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Szobakiadások és foglalások";
+        }
+
+        private void toolStripMenuItemRoomEditor_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemGuestDatabase_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
+        }
+
+        private void toolStripMenuItemGuestDatabase_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemBilling_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Számlázás";
+        }
+
+        private void toolStripMenuItemBilling_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemHelp_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Súgó";
+        }
+
+        private void toolStripMenuItemHelp_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
         #endregion
     }
 }

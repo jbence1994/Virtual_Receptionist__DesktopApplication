@@ -36,6 +36,7 @@
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -65,6 +66,8 @@
             this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(213, 20);
             this.toolStripMenuItemRoomEditor.Text = "Szobakiadások és foglalások kezelése";
             this.toolStripMenuItemRoomEditor.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
+            this.toolStripMenuItemRoomEditor.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
+            this.toolStripMenuItemRoomEditor.MouseHover += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseHover);
             // 
             // toolStripMenuItemGuestDatabase
             // 
@@ -72,6 +75,8 @@
             this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(108, 20);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
+            this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
+            this.toolStripMenuItemGuestDatabase.MouseHover += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseHover);
             // 
             // toolStripMenuItemBilling
             // 
@@ -79,6 +84,8 @@
             this.toolStripMenuItemBilling.Size = new System.Drawing.Size(72, 20);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
+            this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
+            this.toolStripMenuItemBilling.MouseHover += new System.EventHandler(this.toolStripMenuItemBilling_MouseHover);
             // 
             // toolStripMenuItemHelp
             // 
@@ -86,11 +93,14 @@
             this.toolStripMenuItemHelp.Size = new System.Drawing.Size(46, 20);
             this.toolStripMenuItemHelp.Text = "Súgó";
             this.toolStripMenuItemHelp.Click += new System.EventHandler(this.toolStripMenuItemHelp_Click);
+            this.toolStripMenuItemHelp.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelp_MouseLeave);
+            this.toolStripMenuItemHelp.MouseHover += new System.EventHandler(this.toolStripMenuItemHelp_MouseHover);
             // 
             // statusStripMainMenu
             // 
             this.statusStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelClient});
+            this.toolStripStatusLabelClient,
+            this.toolStripStatusLabelMenuName});
             this.statusStripMainMenu.Location = new System.Drawing.Point(0, 708);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
             this.statusStripMainMenu.Size = new System.Drawing.Size(1008, 22);
@@ -103,11 +113,16 @@
             this.toolStripStatusLabelClient.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabelClient.Text = "Munkaállomás: ";
             // 
+            // toolStripStatusLabelMenuName
+            // 
+            this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
+            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 17);
+            // 
             // pictureBoxVRLogo
             // 
-            this.pictureBoxVRLogo.Location = new System.Drawing.Point(12, 159);
+            this.pictureBoxVRLogo.Location = new System.Drawing.Point(12, 52);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
-            this.pictureBoxVRLogo.Size = new System.Drawing.Size(275, 546);
+            this.pictureBoxVRLogo.Size = new System.Drawing.Size(275, 653);
             this.pictureBoxVRLogo.TabIndex = 5;
             this.pictureBoxVRLogo.TabStop = false;
             // 
@@ -164,6 +179,7 @@
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Főmenü | Virtual Receptionist";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
@@ -191,5 +207,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
     }
 }
