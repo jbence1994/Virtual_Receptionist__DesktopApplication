@@ -123,4 +123,21 @@
   <metadata name="statusStripMainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>165, 22</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripStatusLabelClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c
+        6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAB6IAAAeiAeJoUCEAAAAZdEVYdFNvZnR3YXJlAHd3dy5p
+        bmtzY2FwZS5vcmeb7jwaAAAB9klEQVRYR+2XSy8DYRSGZ2HhD0jY+wGWoohbq0TRi7aoalyCCOISibhG
+        EITUQkVZsbATsUDjkoh/gIS4JLVQTSadWFg2ccz5MKlxKpWMGYsunnTmnO/93rdzvlkMBwCc1+/PmFry
+        OdQEPdGbG55eWC80OV6z9VWgJuiJ3ly5vTH6Wcwts4KpoZ1dF5nrwWD3sGujsxkKKmslsVKgN/d5k1tm
+        g75ZH3SMzUOJtQFGljfA3j7AeuOrW2CoeQ+jNCyATvzn/XMr0DXphZxSMwwuroG7dxSKLS72qzNaSbES
+        sACF1XXQOjQDeeU28AxMsMdf5ekES3M368lFSiKNQG9zM0Oct7mpiz32ClfbN4HSsAD5Joc4801wdg5K
+        5iZ3BylQmvcAFXawtvSobo5II9DCHGEB8NBpYY6wADqjhb378qYaSCPQimSAZIBkAO0DnF/fgJZw4YgA
+        WvIfAkTuqYY6RO65sCDYxJvQ9+afE0Jv9mEiksLzfHoiHByfHe2dnPIU2KM0FOjJPkw+AiTMzv7RlQjE
+        4YrS/ARZjMf2/qFONInKTGOJ4hpKGw+ySLEbCGSKBiGZIUUI11J7UJBFOU+CYLi8vQtcXN+eJgKuRQ21
+        lxyyGEswGEwVT+yD7AQnwgNqqT1jIYtywuGXtEf+Oes3oIba6yvAvQFOJ49u5tlPBQAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
 </root>

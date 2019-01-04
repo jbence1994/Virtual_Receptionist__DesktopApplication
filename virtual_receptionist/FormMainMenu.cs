@@ -33,25 +33,33 @@ namespace virtual_receptionist
 
         #region UI események
 
-        private void buttonRoomEditor_Click(object sender, EventArgs e)
+        private void FormMainMenu_Load(object sender, EventArgs e)
+        {
+            toolStripStatusLabelClient.Text += DataStore.Client;
+        }
+
+        private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
         {
             FormRoomEditor formRoomEditor = new FormRoomEditor(this);
-            formRoomEditor.Show();
-            Hide();
+            formRoomEditor.ShowDialog();
         }
 
-        private void buttonGuestDatabase_Click(object sender, EventArgs e)
+        private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
         {
             FormGuestDatabase formGuestDatabase = new FormGuestDatabase(this);
-            formGuestDatabase.Show();
-            Hide();
+            formGuestDatabase.ShowDialog();
         }
 
-        private void buttonBilling_Click(object sender, EventArgs e)
+        private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
         {
             FormBilling formBilling = new FormBilling(this);
-            formBilling.Show();
-            Hide();
+            formBilling.ShowDialog();
+        }
+
+        private void toolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            FormAboutUs formAboutUs = new FormAboutUs();
+            formAboutUs.ShowDialog();
         }
 
         #endregion
