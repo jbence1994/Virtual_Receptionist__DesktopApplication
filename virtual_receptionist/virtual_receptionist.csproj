@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accomodation.cs" />
     <Compile Include="DataStoreBilling.cs" />
     <Compile Include="DataStoreGuest.cs" />
     <Compile Include="DataStoreLogin.cs" />
