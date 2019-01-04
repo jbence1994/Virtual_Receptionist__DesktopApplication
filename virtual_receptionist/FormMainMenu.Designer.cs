@@ -63,8 +63,8 @@
             // toolStripMenuItemRoomEditor
             // 
             this.toolStripMenuItemRoomEditor.Name = "toolStripMenuItemRoomEditor";
-            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(213, 20);
-            this.toolStripMenuItemRoomEditor.Text = "Szobakiadások és foglalások kezelése";
+            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(167, 20);
+            this.toolStripMenuItemRoomEditor.Text = "Szobakiadások és foglalások";
             this.toolStripMenuItemRoomEditor.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemRoomEditor.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
             this.toolStripMenuItemRoomEditor.MouseHover += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseHover);
@@ -178,7 +178,7 @@
             this.MainMenuStrip = this.menuStripMainMenu;
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Főmenü | Virtual Receptionist";
+            this.Text = "Virtual Receptionist | ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.menuStripMainMenu.ResumeLayout(false);

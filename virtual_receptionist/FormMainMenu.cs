@@ -36,6 +36,7 @@ namespace virtual_receptionist
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
             toolStripStatusLabelClient.Text += DataStore.Client;
+            Text += string.Empty;
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
