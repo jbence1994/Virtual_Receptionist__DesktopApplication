@@ -42,7 +42,7 @@
 
         #endregion
 
-        #region Konstruktor
+        #region Konstruktorok
 
         /// <summary>
         /// Accomodation osztály üres konstruktora

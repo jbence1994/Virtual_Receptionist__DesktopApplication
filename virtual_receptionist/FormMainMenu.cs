@@ -68,7 +68,6 @@ namespace virtual_receptionist
             formAboutUs.ShowDialog();
         }
 
-
         private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = "Segítség";

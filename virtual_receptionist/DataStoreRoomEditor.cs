@@ -6,7 +6,7 @@ namespace virtual_receptionist
 {
     public partial class DataStore
     {
-        #region Foglalás-kezelő modul metódusai
+        #region Szobanyilvántartás- és foglaláskezelő modul metódusai
 
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben

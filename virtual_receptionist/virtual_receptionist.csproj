@@ -51,7 +51,7 @@
     <Compile Include="DataStoreGuest.cs" />
     <Compile Include="DataStoreLogin.cs" />
     <Compile Include="DataStoreMain.cs" />
-    <Compile Include="DataStoreReservation.cs" />
+    <Compile Include="DataStoreRoomEditor.cs" />
     <Compile Include="FormAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
