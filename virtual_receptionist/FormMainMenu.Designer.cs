@@ -34,6 +34,8 @@
             this.toolStripMenuItemGuestDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemBilling = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemHelpCHM = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -89,12 +91,32 @@
             // 
             // toolStripMenuItemHelp
             // 
+            this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemHelpCHM,
+            this.toolStripMenuItemAboutUs});
             this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
             this.toolStripMenuItemHelp.Size = new System.Drawing.Size(46, 20);
             this.toolStripMenuItemHelp.Text = "Súgó";
-            this.toolStripMenuItemHelp.Click += new System.EventHandler(this.toolStripMenuItemHelp_Click);
             this.toolStripMenuItemHelp.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelp_MouseLeave);
             this.toolStripMenuItemHelp.MouseHover += new System.EventHandler(this.toolStripMenuItemHelp_MouseHover);
+            // 
+            // toolStripMenuItemHelpCHM
+            // 
+            this.toolStripMenuItemHelpCHM.Name = "toolStripMenuItemHelpCHM";
+            this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemHelpCHM.Text = "Segítség";
+            this.toolStripMenuItemHelpCHM.Click += new System.EventHandler(this.toolStripMenuItemHelpCHM_Click);
+            this.toolStripMenuItemHelpCHM.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelpCHM_MouseLeave);
+            this.toolStripMenuItemHelpCHM.MouseHover += new System.EventHandler(this.toolStripMenuItemHelpCHM_MouseHover);
+            // 
+            // toolStripMenuItemAboutUs
+            // 
+            this.toolStripMenuItemAboutUs.Name = "toolStripMenuItemAboutUs";
+            this.toolStripMenuItemAboutUs.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemAboutUs.Text = "Névjegy";
+            this.toolStripMenuItemAboutUs.Click += new System.EventHandler(this.toolStripMenuItemAboutUs_Click);
+            this.toolStripMenuItemAboutUs.MouseLeave += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseLeave);
+            this.toolStripMenuItemAboutUs.MouseHover += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseHover);
             // 
             // statusStripMainMenu
             // 
@@ -208,5 +230,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAboutUs;
     }
 }

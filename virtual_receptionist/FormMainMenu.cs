@@ -57,10 +57,36 @@ namespace virtual_receptionist
             formBilling.ShowDialog();
         }
 
-        private void toolStripMenuItemHelp_Click(object sender, EventArgs e)
+        private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
+        {
+            // CHM
+        }
+
+        private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
         {
             FormAboutUs formAboutUs = new FormAboutUs();
             formAboutUs.ShowDialog();
+        }
+
+
+        private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Segítség";
+        }
+
+        private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Névjegy";
+        }
+
+        private void toolStripMenuItemAboutUs_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
         private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
