@@ -35,9 +35,8 @@ namespace virtual_receptionist
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            Accomodation accomodation = new Accomodation();
             toolStripStatusLabelClient.Text += DataStore.Client;
-            Text += $"{accomodation.Company} ({accomodation.VatNumber})";
+            Text += $"{DataStore.Accomodation.Company} ({DataStore.Accomodation.VatNumber})";
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
