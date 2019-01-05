@@ -191,7 +191,7 @@
             this.MainMenuStrip = this.menuStripGuestDatabase;
             this.Name = "FormGuestDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendégek | Virtual Receptionist";
+            this.Text = "Vendégadatbázis | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormGuestDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
