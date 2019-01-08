@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak

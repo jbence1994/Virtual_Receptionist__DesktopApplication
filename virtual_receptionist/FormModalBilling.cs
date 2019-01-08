@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak

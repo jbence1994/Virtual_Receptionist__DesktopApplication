@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Data;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Számlázó modul ablak
@@ -31,6 +31,10 @@ namespace virtual_receptionist
         /// Számlázási tételeket tartalmazó DataTable adatszerkezet
         /// </summary>
         private DataTable billingItems;
+        /// <summary>
+        /// Controller egy példánya
+        /// </summary>
+        private Controller controller;
 
         #endregion
 

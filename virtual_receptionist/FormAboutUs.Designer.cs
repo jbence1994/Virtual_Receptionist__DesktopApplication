@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist
+﻿namespace virtual_receptionist.View
 {
     partial class FormAboutUs
     {
