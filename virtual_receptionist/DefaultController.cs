@@ -8,11 +8,12 @@ using virtual_receptionist.Model;
 namespace virtual_receptionist.Controller
 {
     /// <summary>
-    /// Az alkalmazás (vezérlő) osztálya, amely a nézet és a model közti interakcióért felel
+    /// Az alkalmazás vezérlő osztálya, amely a nézet és a model közti interakcióért felel
     /// </summary>
     public class DefaultController
     {
         #region Adattagok
+
         /// <summary>
         /// Model osztály egy példánya
         /// </summary>
@@ -63,7 +64,7 @@ namespace virtual_receptionist.Controller
         #endregion
 
         #region Metódusok
-
+                
         #endregion
     }
 }

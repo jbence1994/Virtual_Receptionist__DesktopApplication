@@ -12,10 +12,6 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
-        /// <summary>
         /// DataTable adatszerkezet, amely a mindig újabb rekordokkal bővül, ha a modális ablakkal új tételeket adunk hozzá
         /// </summary>
         private DataTable billingItems;
@@ -41,7 +37,7 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            DataTable billingItemsDataContainer = dataStore.GetBillingItems();
+            DataTable billingItemsDataContainer = null;
 
             foreach (DataRow row in billingItemsDataContainer.Rows)
             {
@@ -82,8 +78,6 @@ namespace virtual_receptionist.View
             double price = double.Parse(textBoxPrice.Text) * double.Parse(textBoxQuantity.Text);
             string unit = textBoxUnit.Text;
             double quantity = double.Parse(textBoxQuantity.Text);
-
-            dataStore.AddNewBillingItemsRow(billingItems, item, price, unit, quantity);
         }
 
         #endregion

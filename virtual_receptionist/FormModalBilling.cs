@@ -10,11 +10,6 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
-
         #endregion
 
         #region Konstruktor
@@ -30,7 +25,7 @@ namespace virtual_receptionist.View
 
         private void FormModalBilling_Load(object sender, EventArgs e)
         {
-            comboBoxCountry.DataSource = dataStore.GetCountries();
+
         }
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, EventArgs e)

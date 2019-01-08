@@ -13,6 +13,10 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
+        /// Controller egy példánya
+        /// </summary>
+        private DefaultController controller;
+        /// <summary>
         /// Főmenü ablak egy példánya
         /// </summary>
         private FormMainMenu formMainMenu;
@@ -25,17 +29,9 @@ namespace virtual_receptionist.View
         /// </summary>
         private FormModalBilling formModalBilling;
         /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
-        /// <summary>
         /// Számlázási tételeket tartalmazó DataTable adatszerkezet
         /// </summary>
         private DataTable billingItems;
-        /// <summary>
-        /// Controller egy példánya
-        /// </summary>
-        private DefaultController controller;
 
         #endregion
 
@@ -49,8 +45,6 @@ namespace virtual_receptionist.View
         {
             InitializeComponent();
             this.formMainMenu = formMainMenu;
-            dataStore = new DataStore();
-            billingItems = dataStore.InitializeDataTableBillingItemsColumns();
         }
 
         #endregion
@@ -130,12 +124,12 @@ namespace virtual_receptionist.View
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            dataStore.CountTotalPrice(dataGridViewItems, 1, textBoxTotal);
+
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            dataStore.CountTotalPrice(dataGridViewItems, 1, textBoxTotal);
+
         }
 
         #endregion

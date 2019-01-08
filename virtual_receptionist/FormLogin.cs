@@ -9,12 +9,7 @@ namespace virtual_receptionist.View
     public partial class FormLogin : Form
     {
         #region Adattagok
-
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
-
+        
         #endregion
 
         #region Konstruktor
@@ -40,7 +35,7 @@ namespace virtual_receptionist.View
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            dataStore = new DataStore(comboBoxConnectionType.Text);
+
         }
 
         #endregion
