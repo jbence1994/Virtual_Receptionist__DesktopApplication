@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using virtual_receptionist.Controller;
 
 namespace virtual_receptionist.View
 {
@@ -35,8 +29,8 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelClient.Text += Controller.Client;
-            Text += $"{Controller.Accomodation.Company} ({Controller.Accomodation.VatNumber})";
+            toolStripStatusLabelClient.Text += DefaultController.Client;
+            Text += $"{DefaultController.Accomodation.Company} ({DefaultController.Accomodation.VatNumber})";
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)

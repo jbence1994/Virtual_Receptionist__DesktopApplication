@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data;
+using virtual_receptionist.Controller;
 
 namespace virtual_receptionist.View
 {
@@ -34,7 +35,7 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Controller egy példánya
         /// </summary>
-        private Controller controller;
+        private DefaultController controller;
 
         #endregion
 

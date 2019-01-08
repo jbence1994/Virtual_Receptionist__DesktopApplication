@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     /// <summary>
     /// Az alkalmazáshoz szükséges adatokat tároló (adattár) osztály, amely az üzleti logikáért felel
