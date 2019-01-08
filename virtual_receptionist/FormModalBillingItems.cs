@@ -27,7 +27,6 @@ namespace virtual_receptionist.View
         public FormModalBillingItems(DataTable billingItems)
         {
             InitializeComponent();
-            //dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
             this.billingItems = billingItems;
         }
 
