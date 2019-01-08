@@ -128,6 +128,16 @@ namespace virtual_receptionist
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
+        private void toolStripMenuItemQuit_Click(object sender, EventArgs e)
+        {
+            var exit = MessageBox.Show("Biztosan ki akar lépni?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (exit == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
         #endregion
     }
 }
