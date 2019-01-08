@@ -259,7 +259,7 @@ namespace virtual_receptionist
                 };
 
                 mySqlCommand.Prepare();
-                mySqlCommand.Parameters.AddWithValue("@MachineName", Client);
+                mySqlCommand.Parameters.AddWithValue("@MachineName", Controller.Client);
                 mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
                 mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now); //<- Refaktor: Kilépési aktuális ponton történjen logolás a jelenlegi időről
                 mySqlCommand.ExecuteNonQuery();
