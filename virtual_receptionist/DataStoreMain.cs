@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace virtual_receptionist
 {
     /// <summary>
-    /// Adattár osztály, amely az alkalmazás adatbázisának adatait tárolja
+    /// Az alkalmazáshoz szükséges adatokat tároló (adattár) osztály, amely az üzleti logikáért felel
     /// </summary>
     public partial class DataStore
     {
