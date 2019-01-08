@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 using System.Diagnostics;
+using System;
 
 namespace virtual_receptionist
 {
@@ -16,52 +17,149 @@ namespace virtual_receptionist
         {
             DataTable guests = new DataTable();
 
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            mySqlCommand = new MySqlCommand()
+            try
             {
-                CommandText = "SELECT * FROM guest",
-                Connection = mySqlConnection
-            };
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
-            mySqlDataAdapter = new MySqlDataAdapter()
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "SELECT * FROM guest",
+                    Connection = mySqlConnection
+                };
+
+                mySqlDataAdapter = new MySqlDataAdapter()
+                {
+                    SelectCommand = mySqlCommand
+                };
+
+                mySqlCommandBuilder = new MySqlCommandBuilder()
+                {
+                    DataAdapter = mySqlDataAdapter
+                };
+
+                mySqlDataAdapter.Fill(guests);
+            }
+            catch (MySqlException e)
             {
-                SelectCommand = mySqlCommand
-            };
-
-            mySqlCommandBuilder = new MySqlCommandBuilder()
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
             {
-                DataAdapter = mySqlDataAdapter
-            };
-
-            mySqlDataAdapter.Fill(guests);
-
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
 
             return guests;
         }
         /// <summary>
         /// Vendég törlése
         /// </summary>
-        public void DeleteGuest()
+        public void DeleteGuest(Guest guest)
         {
+            try
+            {
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "DELETE FROM members WHERE id=@id",
+                    Connection = mySqlConnection
+                };
+
+                mySqlCommand.Prepare();
+                mySqlCommand.Parameters.AddWithValue("id@", guest);
+                mySqlCommand.ExecuteNonQuery();
+                mySqlCommand.Parameters.Clear();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
         }
         /// <summary>
         /// Vendég módosítása
         /// </summary>
-        public void UpdateGuest()
+        public void UpdateGuest(Guest guest)
         {
+            try
+            {
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "UPDATE members SET valami=@valami WHERE id=@id",
+                    Connection = mySqlConnection
+                };
+
+                mySqlCommand.Prepare();
+                mySqlCommand.Parameters.AddWithValue("@", guest);
+                mySqlCommand.ExecuteNonQuery();
+                mySqlCommand.Parameters.Clear();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
         }
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
-        public void CreateGuest()
+        public void CreateGuest(Guest guest)
         {
+            try
+            {
+                mySqlConnection.Open();
+                Debug.WriteLine("Connecting to database successfully!");
 
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = "INSERT INTO guest () VALUES (@, )",
+                    Connection = mySqlConnection
+                };
+
+                mySqlCommand.Prepare();
+                mySqlCommand.Parameters.AddWithValue("@", guest);
+                mySqlCommand.ExecuteNonQuery();
+                mySqlCommand.Parameters.Clear();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
         }
 
         #endregion
