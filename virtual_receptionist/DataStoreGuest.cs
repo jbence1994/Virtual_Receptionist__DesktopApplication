@@ -13,6 +13,8 @@ namespace virtual_receptionist
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
+        /// <exception cref="MySqlException"></exception>
+        /// <exception cref="Exception"></exception>
         public DataTable GetGuests()
         {
             DataTable guests = new DataTable();
@@ -59,6 +61,8 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendég törlése
         /// </summary>
+        /// <exception cref="MySqlException"></exception>
+        /// <exception cref="Exception"></exception>
         public void DeleteGuest(Guest guest)
         {
             try
@@ -94,6 +98,8 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendég módosítása
         /// </summary>
+        /// <exception cref="MySqlException"></exception>
+        /// <exception cref="Exception"></exception>
         public void UpdateGuest(Guest guest)
         {
             try
@@ -129,6 +135,8 @@ namespace virtual_receptionist
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
+        /// <exception cref="MySqlException"></exception>
+        /// <exception cref="Exception"></exception>
         public void CreateGuest(Guest guest)
         {
             try
