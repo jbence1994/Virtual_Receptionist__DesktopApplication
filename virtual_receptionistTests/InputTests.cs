@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace virtual_receptionist.Tests
+namespace virtual_receptionist.Controller.Tests
 {
     [TestClass()]
     public class InputTests
