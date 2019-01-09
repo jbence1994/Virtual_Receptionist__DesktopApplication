@@ -13,7 +13,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Adattár osztály egy példánya
         /// </summary>
-        private DataRepository dataStore;
+        private DataStore dataStore;
 
         #endregion
 

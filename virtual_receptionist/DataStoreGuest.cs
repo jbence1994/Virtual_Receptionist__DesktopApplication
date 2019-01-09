@@ -5,7 +5,11 @@ using System;
 
 namespace virtual_receptionist
 {
+<<<<<<< HEAD:virtual_receptionist/DataRepositoryGuest.cs
     public partial class DataRepository : ICrudable<Guest>
+=======
+    public partial class DataStore
+>>>>>>> parent of aa0492d... Fejl.:virtual_receptionist/DataStoreGuest.cs
     {
         #region Vendégadatbázis-kezelő modul metódusai
 

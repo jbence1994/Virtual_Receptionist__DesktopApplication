@@ -6,7 +6,7 @@ using MySql.Data.MySqlClient;
 
 namespace virtual_receptionist
 {
-    public partial class DataRepository
+    public partial class DataStore
     {
         #region Számlázó modul metódusai
 

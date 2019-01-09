@@ -14,7 +14,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Adattár osztály egy példánya
         /// </summary>
-        private DataRepository dataStore;
+        private DataStore dataStore;
         /// <summary>
         /// DataTable adatszerkezet, amely a mindig újabb rekordokkal bővül, ha a modális ablakkal új tételeket adunk hozzá
         /// </summary>

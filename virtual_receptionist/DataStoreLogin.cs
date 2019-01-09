@@ -7,7 +7,7 @@ using System.IO;
 
 namespace virtual_receptionist
 {
-    public partial class DataRepository
+    public partial class DataStore
     {
         #region Adattagok
 
@@ -44,7 +44,7 @@ namespace virtual_receptionist
         /// Konstruktor, amely beállítja az adatbázis elérésének útvonalát
         /// </summary>
         /// <param name="connectTo">Szerver típusa (helyi otthoni vagy távoli iskolai)</param>
-        public DataRepository(string connectTo)
+        public DataStore(string connectTo)
         {
             switch (connectTo)
             {

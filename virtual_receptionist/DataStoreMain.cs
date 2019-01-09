@@ -8,7 +8,7 @@ namespace virtual_receptionist
     /// <summary>
     /// Adattár osztály, amely az alkalmazás adatbázisának adatait tárolja
     /// </summary>
-    public partial class DataRepository
+    public partial class DataStore
     {
         #region Adattagok
 
@@ -73,7 +73,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Adattár osztály üres konstruktora
         /// </summary>
-        public DataRepository()
+        public DataStore()
         {
 
         }
