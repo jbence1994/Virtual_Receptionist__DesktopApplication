@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accomodation.cs" />
-    <Compile Include="DataRepositoryBilling.cs" />
-    <Compile Include="DataRepositoryGuest.cs" />
-    <Compile Include="DataRepositoryLogin.cs" />
-    <Compile Include="DataRepositoryMain.cs" />
-    <Compile Include="DataRepositoryRoomEditor.cs" />
+    <Compile Include="DataStoreBilling.cs" />
+    <Compile Include="DataStoreGuest.cs" />
+    <Compile Include="DataStoreLogin.cs" />
+    <Compile Include="DataStoreMain.cs" />
+    <Compile Include="DataStoreRoomEditor.cs" />
     <Compile Include="FormAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,7 +113,6 @@
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Guest.cs" />
-    <Compile Include="ICrudable.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
