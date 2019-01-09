@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist
+﻿namespace virtual_receptionist.View
 {
     partial class FormMainMenu
     {
@@ -44,6 +44,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripMenuItemQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -56,7 +57,8 @@
             this.toolStripMenuItemRoomEditor,
             this.toolStripMenuItemGuestDatabase,
             this.toolStripMenuItemBilling,
-            this.toolStripMenuItemHelp});
+            this.toolStripMenuItemHelp,
+            this.toolStripMenuItemQuit});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Size = new System.Drawing.Size(1008, 24);
@@ -103,7 +105,7 @@
             // toolStripMenuItemHelpCHM
             // 
             this.toolStripMenuItemHelpCHM.Name = "toolStripMenuItemHelpCHM";
-            this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItemHelpCHM.Text = "Segítség";
             this.toolStripMenuItemHelpCHM.Click += new System.EventHandler(this.toolStripMenuItemHelpCHM_Click);
             this.toolStripMenuItemHelpCHM.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelpCHM_MouseLeave);
@@ -112,7 +114,7 @@
             // toolStripMenuItemAboutUs
             // 
             this.toolStripMenuItemAboutUs.Name = "toolStripMenuItemAboutUs";
-            this.toolStripMenuItemAboutUs.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemAboutUs.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItemAboutUs.Text = "Névjegy";
             this.toolStripMenuItemAboutUs.Click += new System.EventHandler(this.toolStripMenuItemAboutUs_Click);
             this.toolStripMenuItemAboutUs.MouseLeave += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseLeave);
@@ -187,6 +189,13 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // toolStripMenuItemQuit
+            // 
+            this.toolStripMenuItemQuit.Name = "toolStripMenuItemQuit";
+            this.toolStripMenuItemQuit.Size = new System.Drawing.Size(56, 20);
+            this.toolStripMenuItemQuit.Text = "Kilépés";
+            this.toolStripMenuItemQuit.Click += new System.EventHandler(this.toolStripMenuItemQuit_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +241,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAboutUs;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemQuit;
     }
 }

@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using virtual_receptionist.Controller;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Főmenü ablak
@@ -35,8 +29,8 @@ namespace virtual_receptionist
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelClient.Text += DataStore.Client;
-            Text += $"{DataStore.Accomodation.Company} ({DataStore.Accomodation.VatNumber})";
+            toolStripStatusLabelClient.Text += DefaultController.Client;
+            Text += $"{DefaultController.Accomodation.Company} ({DefaultController.Accomodation.VatNumber})";
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
@@ -126,6 +120,16 @@ namespace virtual_receptionist
         private void toolStripMenuItemHelp_MouseLeave(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemQuit_Click(object sender, EventArgs e)
+        {
+            var exit = MessageBox.Show("Biztosan ki akar lépni?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (exit == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
 
         #endregion

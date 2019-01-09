@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     public partial class DataStore
     {

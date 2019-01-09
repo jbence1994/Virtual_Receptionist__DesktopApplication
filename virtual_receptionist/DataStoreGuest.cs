@@ -3,7 +3,7 @@ using System.Data;
 using System.Diagnostics;
 using System;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
 <<<<<<< HEAD:virtual_receptionist/DataRepositoryGuest.cs
     public partial class DataRepository : ICrudable<Guest>

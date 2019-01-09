@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using virtual_receptionist.Controller;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Alkalmazás bejelentkező ablaka
@@ -9,12 +10,7 @@ namespace virtual_receptionist
     public partial class FormLogin : Form
     {
         #region Adattagok
-
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
-
+        
         #endregion
 
         #region Konstruktor
@@ -40,7 +36,7 @@ namespace virtual_receptionist
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            dataStore = new DataStore(comboBoxConnectionType.Text);
+
         }
 
         #endregion

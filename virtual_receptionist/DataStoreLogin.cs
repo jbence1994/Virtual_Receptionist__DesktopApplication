@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.IO;
+using virtual_receptionist.Controller;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     public partial class DataStore
     {
@@ -259,7 +260,7 @@ namespace virtual_receptionist
                 };
 
                 mySqlCommand.Prepare();
-                mySqlCommand.Parameters.AddWithValue("@MachineName", Client);
+                mySqlCommand.Parameters.AddWithValue("@MachineName", DefaultController.Client);
                 mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
                 mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now); //<- Refaktor: Kilépési aktuális ponton történjen logolás a jelenlegi időről
                 mySqlCommand.ExecuteNonQuery();

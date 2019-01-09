@@ -2,7 +2,7 @@
 using System.Data;
 using System.Diagnostics;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     public partial class DataStore
     {

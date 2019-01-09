@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist
+﻿namespace virtual_receptionist.Model
 {
     /// <summary>
     /// Szálláshely egyed modell osztálya

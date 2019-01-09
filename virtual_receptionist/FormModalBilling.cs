@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak
@@ -9,11 +9,6 @@ namespace virtual_receptionist
     public partial class FormModalBilling : Form
     {
         #region Adattagok
-
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
 
         #endregion
 
@@ -30,7 +25,7 @@ namespace virtual_receptionist
 
         private void FormModalBilling_Load(object sender, EventArgs e)
         {
-            comboBoxCountry.DataSource = dataStore.GetCountries();
+
         }
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, EventArgs e)

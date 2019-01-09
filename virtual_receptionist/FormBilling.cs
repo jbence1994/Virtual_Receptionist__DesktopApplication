@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data;
+using virtual_receptionist.Controller;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Számlázó modul ablak
@@ -11,6 +12,10 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
+        /// <summary>
+        /// Controller egy példánya
+        /// </summary>
+        private DefaultController controller;
         /// <summary>
         /// Főmenü ablak egy példánya
         /// </summary>
@@ -23,10 +28,6 @@ namespace virtual_receptionist
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBilling formModalBilling;
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
         /// <summary>
         /// Számlázási tételeket tartalmazó DataTable adatszerkezet
         /// </summary>
@@ -44,8 +45,6 @@ namespace virtual_receptionist
         {
             InitializeComponent();
             this.formMainMenu = formMainMenu;
-            dataStore = new DataStore();
-            billingItems = dataStore.InitializeDataTableBillingItemsColumns();
         }
 
         #endregion
@@ -125,12 +124,12 @@ namespace virtual_receptionist
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            dataStore.CountTotalPrice(dataGridViewItems, 1, textBoxTotal);
+
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            dataStore.CountTotalPrice(dataGridViewItems, 1, textBoxTotal);
+
         }
 
         #endregion

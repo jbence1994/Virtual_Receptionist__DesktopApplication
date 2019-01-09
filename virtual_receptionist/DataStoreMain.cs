@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Adattár osztály, amely az alkalmazás adatbázisának adatait tárolja
+    /// Az alkalmazáshoz szükséges adatokat tároló (adattár) osztály, amely az üzleti logikáért felel
     /// </summary>
     public partial class DataStore
     {
@@ -32,39 +32,6 @@ namespace virtual_receptionist
         /// SQL DML és DDL parancsokat egyszerűen végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
-        /// <summary>
-        /// Felhasználó számítógépének a neve, amelyen az alkalmazás fut
-        /// </summary>
-        private static string client;
-        /// <summary>
-        /// Szálláshely, amely az alkalmazás felhasználója
-        /// </summary>
-        private static Accomodation accomodation;
-
-        #endregion
-
-        #region Getter és setter tulajdonságok
-
-        /// <summary>
-        /// Felhasználó számítógépének a neve, amelyen fut az alkalmazás
-        /// </summary>
-        public static string Client
-        {
-            get
-            {
-                return client = Environment.MachineName;
-            }
-        }
-        /// <summary>
-        /// Szálláshely, amely az alkalmazás felhasználója
-        /// </summary>
-        public static Accomodation Accomodation
-        {
-            get
-            {
-                return accomodation = new Accomodation("Autós Panzió", "Autóscsárda-Panzió Kft.", "Szabó Norbert", "1-35-42199206", "6900 Makó, Deák Ferenc u. 28/B", "6900 Makó, Báló liget", "06 (62) 510 298", "info@autospanzio.h");
-            }
-        }
 
         #endregion
 

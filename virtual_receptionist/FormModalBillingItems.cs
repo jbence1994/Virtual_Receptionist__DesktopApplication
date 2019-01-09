@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak
@@ -11,10 +11,6 @@ namespace virtual_receptionist
     {
         #region Adattagok
 
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        private DataStore dataStore;
         /// <summary>
         /// DataTable adatszerkezet, amely a mindig újabb rekordokkal bővül, ha a modális ablakkal új tételeket adunk hozzá
         /// </summary>
@@ -31,7 +27,6 @@ namespace virtual_receptionist
         public FormModalBillingItems(DataTable billingItems)
         {
             InitializeComponent();
-            //dataStore = new DataStore("localhost", "virtual_receptionist", "root", "", "3306");
             this.billingItems = billingItems;
         }
 
@@ -41,7 +36,7 @@ namespace virtual_receptionist
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            DataTable billingItemsDataContainer = dataStore.GetBillingItems();
+            DataTable billingItemsDataContainer = null;
 
             foreach (DataRow row in billingItemsDataContainer.Rows)
             {
@@ -82,8 +77,6 @@ namespace virtual_receptionist
             double price = double.Parse(textBoxPrice.Text) * double.Parse(textBoxQuantity.Text);
             string unit = textBoxUnit.Text;
             double quantity = double.Parse(textBoxQuantity.Text);
-
-            dataStore.AddNewBillingItemsRow(billingItems, item, price, unit, quantity);
         }
 
         #endregion
