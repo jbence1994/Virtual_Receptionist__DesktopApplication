@@ -5,7 +5,7 @@ using System;
 
 namespace virtual_receptionist
 {
-    public partial class DataRepository
+    public partial class DataRepository : ICrudable<Guest>
     {
         #region Vendégadatbázis-kezelő modul metódusai
 
@@ -15,7 +15,7 @@ namespace virtual_receptionist
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public DataTable GetGuests()
+        public Guest GetEntities()
         {
             DataTable guests = new DataTable();
 
@@ -63,7 +63,7 @@ namespace virtual_receptionist
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public void DeleteGuest(Guest guest)
+        public void Delete(Guest guest)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace virtual_receptionist
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public void UpdateGuest(Guest guest)
+        public void Update(Guest guest)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace virtual_receptionist
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public void CreateGuest(Guest guest)
+        public void Create(Guest guest)
         {
             try
             {
