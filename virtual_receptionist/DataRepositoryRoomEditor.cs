@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace virtual_receptionist
 {
-    public partial class DataStore
+    public partial class DataRepository
     {
         #region Szobanyilvántartás- és foglaláskezelő modul metódusai
 

@@ -26,7 +26,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Adattár osztály egy példánya
         /// </summary>
-        private DataStore dataStore;
+        private DataRepository dataStore;
         /// <summary>
         /// Számlázási tételeket tartalmazó DataTable adatszerkezet
         /// </summary>
@@ -44,7 +44,7 @@ namespace virtual_receptionist
         {
             InitializeComponent();
             this.formMainMenu = formMainMenu;
-            dataStore = new DataStore();
+            dataStore = new DataRepository();
             billingItems = dataStore.InitializeDataTableBillingItemsColumns();
         }
 

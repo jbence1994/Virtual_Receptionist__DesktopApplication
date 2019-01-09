@@ -13,7 +13,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Adattár osztály egy példánya
         /// </summary>
-        private DataStore dataStore;
+        private DataRepository dataStore;
 
         #endregion
 
@@ -40,7 +40,7 @@ namespace virtual_receptionist
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            dataStore = new DataStore(comboBoxConnectionType.Text);
+            dataStore = new DataRepository(comboBoxConnectionType.Text);
         }
 
         #endregion

@@ -5,7 +5,7 @@ using System;
 
 namespace virtual_receptionist
 {
-    public partial class DataStore
+    public partial class DataRepository
     {
         #region Vendégadatbázis-kezelő modul metódusai
 
