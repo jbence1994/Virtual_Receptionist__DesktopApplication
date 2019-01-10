@@ -86,12 +86,13 @@ namespace virtual_receptionist.Model
         public DataTable GetBillingItems()
         {
             InitializeBillingItems();
+
             DataTable items = new DataTable();
 
             items.Columns.Add("Name", typeof(string));
             items.Columns.Add("Price", typeof(double));
-            items.Columns.Add("VAT", typeof(string));
-            items.Columns.Add("Category", typeof(double));
+            items.Columns.Add("VAT", typeof(double));
+            items.Columns.Add("Category", typeof(string));
             items.Columns.Add("Unit", typeof(string));
 
             foreach (BillingItems item in billingItems)
