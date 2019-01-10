@@ -9,16 +9,10 @@ using System.Threading.Tasks;
 namespace virtual_receptionist.Model.Tests
 {
     [TestClass()]
-    public partial class DataStoreTests
+    public class DataStoreBillingTests
     {
         [TestMethod()]
         public void CountItemDiscountTest_DevelopFunction()
-        {
-            Assert.Fail("Fail");
-        }
-
-        [TestMethod()]
-        public void CountVATTest_DevelopFunction()
         {
             Assert.Fail("Fail");
         }

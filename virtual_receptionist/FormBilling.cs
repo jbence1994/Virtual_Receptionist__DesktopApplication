@@ -13,10 +13,6 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Controller egy példánya
-        /// </summary>
-        private DefaultController controller;
-        /// <summary>
         /// Főmenü ablak egy példánya
         /// </summary>
         private FormMainMenu formMainMenu;
