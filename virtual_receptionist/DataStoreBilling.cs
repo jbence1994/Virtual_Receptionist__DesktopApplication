@@ -78,39 +78,12 @@ namespace virtual_receptionist.Model
             return items;
         }
 
-
-        // TDD fejlesztést igényel:
-
-
-        /// <summary>
-        /// Metódus, amely DataTable típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
-        /// </summary>
-        public void AddNewBillingItemsRow()
-        {
-        }
-        /// <summary>
-        /// Metódus, amely megszámolja egy adott DataGridView árakat tartalmazó oszlopaiban a végösszeget
-        /// </summary>
-        ///<param name="dataGridView">DataGridView GUI vezérlő, amelyben tartalmaz tétel ár oszlopot</param>
-        /// <param name="cellPrice">DataGridView cella, amely a megszámolandó árakat tartalmazza</param>
-        /// <param name="totalPrice">TextBox GUI vezérlő, amely a végösszeget írja ki</param>
-        public void CountTotalPrice()
-        {
-        }
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
         /// <param name="itemPrice">Tétel értéke, amelyből kedvezményt számol a függvény</param>
         /// <returns>A kiszámolt kedvezmény értékével tér vissza a függvény</returns>
         public double CountItemDiscount(double itemPrice)
-        {
-            return 1;
-        }
-        /// <summary>
-        /// Metódus, amely egy tétel ÁFA értékét számítja
-        /// </summary>
-        /// <param name="item">A kiszámolt kedvezmény értékével tér vissza a függvény</param>
-        public double CountVAT(double item)
         {
             return 1;
         }
