@@ -14,11 +14,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// 
         /// </summary>
-        private DataTable tableOfBillingItems;
-        /// <summary>
-        /// 
-        /// </summary>
-        private List<BillingItems> listOfBillingItems;
+        private List<BillingItems> billingItems;
 
         #endregion
 
@@ -29,19 +25,18 @@ namespace virtual_receptionist.Model
         /// </summary>
         public DataStore()
         {
-            tableOfBillingItems = new DataTable();
-            listOfBillingItems = new List<BillingItems>();
+            billingItems = new List<BillingItems>();
         }
 
         #endregion
 
         #region Getter és setter tulajdonságok
 
-        public List<BillingItems> ListOfBillingItems
+        public List<BillingItems> BillingItems
         {
             get
             {
-                return listOfBillingItems;
+                return billingItems;
             }
         }
 
@@ -65,18 +60,6 @@ namespace virtual_receptionist.Model
                     CommandText = "SELECT billing_item.Item, billing_item.Price, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID",
                     Connection = mySqlConnection
                 };
-
-                mySqlDataAdapter = new MySqlDataAdapter()
-                {
-                    SelectCommand = mySqlCommand
-                };
-
-                mySqlCommandBuilder = new MySqlCommandBuilder()
-                {
-                    DataAdapter = mySqlDataAdapter
-                };
-
-                mySqlDataAdapter.Fill(tableOfBillingItems);
 
 
             }
