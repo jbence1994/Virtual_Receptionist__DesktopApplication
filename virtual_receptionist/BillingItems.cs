@@ -36,8 +36,13 @@
 
         }
         /// <summary>
-        /// Konstruktor
+        /// 
         /// </summary>
+        /// <param name="name">Számlázási tétel neve</param>
+        /// <param name="category">Számlázási tétel kategóriája</param>
+        /// <param name="vat">Számlázási tétel ÁFA-kulcsának értéke</param>
+        /// <param name="unit">Számlázási tétel egysége</param>
+        /// <param name="price">Számlázási tétel összege (ára)</param>
         public BillingItems(string name, string category, double vat, string unit, double price)
         {
             this.name = name;

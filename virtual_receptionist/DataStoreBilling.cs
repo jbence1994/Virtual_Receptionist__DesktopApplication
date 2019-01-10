@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Diagnostics;
 using System.Data;
 using MySql.Data.MySqlClient;
@@ -39,10 +38,8 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és List<T> adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public void ReadBillingItems()
+        private void ReadBillingItems()
         {
-            BillingItems items = new BillingItems();
-
             try
             {
                 mySqlConnection.Open();
@@ -58,12 +55,13 @@ namespace virtual_receptionist.Model
 
                 while (mySqlDataReader.Read())
                 {
-                    items.Name = mySqlDataReader["BillingItemName"].ToString();
-                    items.Category = mySqlDataReader["BillingItemCategoryName"].ToString();
-                    items.Vat = double.Parse(mySqlDataReader["VAT"].ToString());
-                    items.Unit = mySqlDataReader["Unit"].ToString();
-                    items.Price = double.Parse(mySqlDataReader["Price"].ToString());
+                    string name = mySqlDataReader["BillingItemName"].ToString();
+                    string category = mySqlDataReader["BillingItemCategoryName"].ToString();
+                    double vat = double.Parse(mySqlDataReader["VAT"].ToString());
+                    string unit = mySqlDataReader["Unit"].ToString();
+                    double price = double.Parse(mySqlDataReader["Price"].ToString());
 
+                    BillingItems items = new BillingItems(name, category, vat, unit, price);
                     billingItems.Add(items);
                 }
             }
@@ -89,15 +87,14 @@ namespace virtual_receptionist.Model
         {
             DataTable items = new DataTable();
 
-            items.Columns.Add("Tétel", typeof(string));
-            items.Columns.Add("Kateógia", typeof(string));
-            items.Columns.Add("Áfa", typeof(double));
-            items.Columns.Add("Egység", typeof(string));
-            items.Columns.Add("Ár", typeof(double));
+            items.Columns.Add("Name", typeof(string));
+            items.Columns.Add("Price", typeof(double));
+            items.Columns.Add("Unit", typeof(string));
 
+            ReadBillingItems();
             foreach (BillingItems item in billingItems)
             {
-                items.Rows.Add(item.Name, item.Category, item.Vat, item.Unit, item.Price);
+                items.Rows.Add(item.Name, item.Price, item.Unit);
             }
 
             return items;
@@ -106,16 +103,12 @@ namespace virtual_receptionist.Model
 
         // TDD fejlesztést igényel:
 
+
         /// <summary>
         /// Metódus, amely DataTable típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
         /// </summary>
-        /// <param name="item">Tétel neve</param>
-        /// <param name="price">Tétel ára</param>
-        /// <param name="unit">Tétel egység</param>
-        /// <param name="quantity">Tétel mennyisége</param>
-        public void AddNewBillingItemsRow(DataTable billingItems, string item, double price, string unit, double quantity)
+        public void AddNewBillingItemsRow()
         {
-            billingItems.Rows.Add(item, price, unit, quantity);
         }
         /// <summary>
         /// Metódus, amely megszámolja egy adott DataGridView árakat tartalmazó oszlopaiban a végösszeget
@@ -123,17 +116,8 @@ namespace virtual_receptionist.Model
         ///<param name="dataGridView">DataGridView GUI vezérlő, amelyben tartalmaz tétel ár oszlopot</param>
         /// <param name="cellPrice">DataGridView cella, amely a megszámolandó árakat tartalmazza</param>
         /// <param name="totalPrice">TextBox GUI vezérlő, amely a végösszeget írja ki</param>
-        public void CountTotalPrice(DataGridView dataGridView, int cellPrice, TextBox totalPrice)
+        public void CountTotalPrice()
         {
-            double total = 0;
-
-            for (int i = 0; i < dataGridView.Rows.Count; i++)
-            {
-                total += Convert.ToDouble(dataGridView.Rows[i].Cells[cellPrice].Value);
-            }
-
-            totalPrice.Clear();
-            totalPrice.Text = total.ToString();
         }
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít

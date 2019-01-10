@@ -30,14 +30,14 @@ namespace virtual_receptionist.View
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
             Model.DataStore dataStore = new Model.DataStore();
-            dataStore.BillingItems;
-            DataTable dt =dataStore.GetBillingItems();
+      
+            DataTable dt = dataStore.GetBillingItems();
 
             foreach (DataRow row in dt.Rows)
             {
-                ListViewItem billingItems = new ListViewItem(row[1].ToString());
+                ListViewItem billingItems = new ListViewItem(row[0].ToString());
 
-                for (int i = 2; i < dt.Columns.Count; i++)
+                for (int i = 1; i < dt.Columns.Count; i++)
                 {
                     billingItems.SubItems.Add(row[i].ToString());
                 }
@@ -68,10 +68,7 @@ namespace virtual_receptionist.View
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string item = textBoxItem.Text;
-            double price = double.Parse(textBoxPrice.Text) * double.Parse(textBoxQuantity.Text);
-            string unit = textBoxUnit.Text;
-            double quantity = double.Parse(textBoxQuantity.Text);
+
         }
 
         #endregion
