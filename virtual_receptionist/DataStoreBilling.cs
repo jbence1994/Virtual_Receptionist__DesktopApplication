@@ -104,14 +104,17 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
-        public double CountItemDiscount()
+        /// <param name="itemPrice">Tétel értéke, amelyből kedvezményt számol a függvény</param>
+        /// <returns>A kiszámolt kedvezmény értékével tér vissza a függvény</returns>
+        public double CountItemDiscount(double itemPrice)
         {
             return 1;
         }
         /// <summary>
         /// Metódus, amely egy tétel ÁFA értékét számítja
         /// </summary>
-        public double CountVAT()
+        /// <param name="item">A kiszámolt kedvezmény értékével tér vissza a függvény</param>
+        public double CountVAT(double item)
         {
             return 1;
         }
