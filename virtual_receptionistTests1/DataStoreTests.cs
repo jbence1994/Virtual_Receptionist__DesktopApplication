@@ -12,9 +12,15 @@ namespace virtual_receptionist.Model.Tests
     public class DataStoreTests
     {
         [TestMethod()]
-        public void CountItemDiscountTest()
+        public void CountItemDiscountTest_DevelopFunction()
         {
-            Assert.Fail();
+            Assert.Fail("Fail");
+        }
+
+        [TestMethod()]
+        public void CountVATTest_DevelopFunction()
+        {
+            Assert.Fail("Fail");
         }
     }
 }

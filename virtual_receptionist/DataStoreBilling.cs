@@ -104,15 +104,16 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
-        public void CountItemDiscount()
+        public double CountItemDiscount()
         {
-
+            return 1;
         }
         /// <summary>
         /// Metódus, amely egy tétel ÁFA értékét számítja
         /// </summary>
-        public void CountVAT()
+        public double CountVAT()
         {
+            return 1;
         }
 
         #endregion
