@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace virtual_receptionist.Model.Tests
 {
     [TestClass()]
-    public class DataStoreTests
+    public partial class DataStoreTests
     {
         [TestMethod()]
         public void CountItemDiscountTest_DevelopFunction()
