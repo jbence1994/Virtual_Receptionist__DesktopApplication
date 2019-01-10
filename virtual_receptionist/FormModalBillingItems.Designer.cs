@@ -30,8 +30,10 @@
         {
             this.listViewBillingItems = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderVAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelItem = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -54,13 +56,15 @@
             this.listViewBillingItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderItem,
             this.columnHeaderPrice,
+            this.columnHeaderVAT,
+            this.columnHeaderCategory,
             this.columnHeaderUnit});
             this.listViewBillingItems.FullRowSelect = true;
             this.listViewBillingItems.GridLines = true;
             this.listViewBillingItems.Location = new System.Drawing.Point(12, 12);
             this.listViewBillingItems.MultiSelect = false;
             this.listViewBillingItems.Name = "listViewBillingItems";
-            this.listViewBillingItems.Size = new System.Drawing.Size(486, 355);
+            this.listViewBillingItems.Size = new System.Drawing.Size(804, 355);
             this.listViewBillingItems.TabIndex = 0;
             this.listViewBillingItems.UseCompatibleStateImageBehavior = false;
             this.listViewBillingItems.View = System.Windows.Forms.View.Details;
@@ -69,26 +73,41 @@
             // 
             // columnHeaderItem
             // 
+            this.columnHeaderItem.DisplayIndex = 0;
             this.columnHeaderItem.Text = "Tétel";
             this.columnHeaderItem.Width = 160;
             // 
-            // columnHeaderPrice
+            // columnHeaderVAT
             // 
-            this.columnHeaderPrice.Text = "Egységár";
-            this.columnHeaderPrice.Width = 160;
+            this.columnHeaderVAT.DisplayIndex = 2;
+            this.columnHeaderVAT.Text = "ÁFA";
+            this.columnHeaderVAT.Width = 160;
+            // 
+            // columnHeaderCategory
+            // 
+            this.columnHeaderCategory.DisplayIndex = 3;
+            this.columnHeaderCategory.Text = "Kateógria";
+            this.columnHeaderCategory.Width = 160;
             // 
             // columnHeaderUnit
             // 
+            this.columnHeaderUnit.DisplayIndex = 4;
             this.columnHeaderUnit.Text = "Egység";
             this.columnHeaderUnit.Width = 160;
+            // 
+            // columnHeaderPrice
+            //
+            this.columnHeaderPrice.DisplayIndex = 1;
+            this.columnHeaderPrice.Text = "Egységár";
+            this.columnHeaderPrice.Width = 160;
             // 
             // buttonAdd
             // 
             this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAdd.Enabled = false;
-            this.buttonAdd.Location = new System.Drawing.Point(12, 567);
+            this.buttonAdd.Location = new System.Drawing.Point(434, 132);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(486, 37);
+            this.buttonAdd.Size = new System.Drawing.Size(363, 37);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Tétel hozzáadása";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -163,6 +182,7 @@
             // groupBoxItemParameters
             // 
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
+            this.groupBoxItemParameters.Controls.Add(this.buttonAdd);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
@@ -176,7 +196,7 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxUnit);
             this.groupBoxItemParameters.Location = new System.Drawing.Point(12, 373);
             this.groupBoxItemParameters.Name = "groupBoxItemParameters";
-            this.groupBoxItemParameters.Size = new System.Drawing.Size(486, 188);
+            this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 188);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
@@ -219,9 +239,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 616);
+            this.ClientSize = new System.Drawing.Size(827, 574);
             this.Controls.Add(this.groupBoxItemParameters);
-            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormModalBillingItems";
@@ -254,5 +273,7 @@
         private System.Windows.Forms.Label labelVAT;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxVAT;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
+        private System.Windows.Forms.ColumnHeader columnHeaderVAT;
+        private System.Windows.Forms.ColumnHeader columnHeaderCategory;
     }
 }

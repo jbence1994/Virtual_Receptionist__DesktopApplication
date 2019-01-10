@@ -38,7 +38,7 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és List<T> adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        private void ReadBillingItems()
+        private void InitializeBillingItems()
         {
             try
             {
@@ -47,7 +47,7 @@ namespace virtual_receptionist.Model
 
                 mySqlCommand = new MySqlCommand()
                 {
-                    CommandText = "SELECT billing_item.BillingItemName, billing_item_category.BillingItemCategoryName, billing_item_category.VAT, billing_item_category.Unit, billing_item.Price FROM billing_item, billing_item_category WHERE billing_item.Category=billing_item_category.ID",
+                    CommandText = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID",
                     Connection = mySqlConnection
                 };
 
@@ -85,16 +85,18 @@ namespace virtual_receptionist.Model
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable GetBillingItems()
         {
+            InitializeBillingItems();
             DataTable items = new DataTable();
 
             items.Columns.Add("Name", typeof(string));
             items.Columns.Add("Price", typeof(double));
+            items.Columns.Add("VAT", typeof(string));
+            items.Columns.Add("Category", typeof(double));
             items.Columns.Add("Unit", typeof(string));
 
-            ReadBillingItems();
             foreach (BillingItems item in billingItems)
             {
-                items.Rows.Add(item.Name, item.Price, item.Unit);
+                items.Rows.Add(item.Name, item.Price, item.Vat, item.Category, item.Unit);
             }
 
             return items;
