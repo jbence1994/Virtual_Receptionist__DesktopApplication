@@ -20,7 +20,6 @@ namespace virtual_receptionist.View
         public FormModalBilling()
         {
             InitializeComponent();
-            //dataStore = new DataStore("127.0.0.1", "virtual_receptionist", "root", "", "3306");
         }
 
         private void FormModalBilling_Load(object sender, EventArgs e)

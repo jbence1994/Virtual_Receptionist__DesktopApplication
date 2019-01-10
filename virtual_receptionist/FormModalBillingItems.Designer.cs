@@ -42,10 +42,10 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
-            this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,6 +180,23 @@
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
+            // maskedTextBoxItemDiscount
+            // 
+            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(154, 149);
+            this.maskedTextBoxItemDiscount.Mask = "00.0%";
+            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
+            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxItemDiscount.TabIndex = 15;
+            // 
+            // maskedTextBoxVAT
+            // 
+            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 123);
+            this.maskedTextBoxVAT.Mask = "00.0 %";
+            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
+            this.maskedTextBoxVAT.ReadOnly = true;
+            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxVAT.TabIndex = 14;
+            // 
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
@@ -197,22 +214,6 @@
             this.labelVAT.Size = new System.Drawing.Size(30, 13);
             this.labelVAT.TabIndex = 10;
             this.labelVAT.Text = "ÁFA:";
-            // 
-            // maskedTextBoxVAT
-            // 
-            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 123);
-            this.maskedTextBoxVAT.Mask = "00.0 %";
-            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
-            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxVAT.TabIndex = 14;
-            // 
-            // maskedTextBoxItemDiscount
-            // 
-            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(154, 149);
-            this.maskedTextBoxItemDiscount.Mask = "00.0%";
-            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
-            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxItemDiscount.TabIndex = 15;
             // 
             // FormModalBillingItems
             // 
