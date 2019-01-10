@@ -2,28 +2,11 @@
 using System.Diagnostics;
 using System.Data;
 using MySql.Data.MySqlClient;
-using System.Collections.Generic;
 
 namespace virtual_receptionist.Model
 {
     public partial class DataStore
     {
-        #region Adattagok
-
-        #endregion
-
-        #region Getter és setter tulajdonságok
-
-        public List<BillingItems> BillingItems
-        {
-            get
-            {
-                return billingItems;
-            }
-        }
-
-        #endregion
-
         #region Számlázó modul metódusai
 
         /// <summary>
