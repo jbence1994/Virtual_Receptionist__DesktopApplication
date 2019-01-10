@@ -45,10 +45,10 @@ namespace virtual_receptionist.Model
         #region Számlázó modul metódusai
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és DataTable, valamint List<T> adatszerkezetek menti őket
+        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és List<T> adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public void GetBillingItems()
+        public void ReadBillingItems()
         {
             try
             {
@@ -57,11 +57,24 @@ namespace virtual_receptionist.Model
 
                 mySqlCommand = new MySqlCommand()
                 {
-                    CommandText = "SELECT billing_item.Item, billing_item.Price, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID",
+                    CommandText = "SELECT billing_item.BillingItemName, billing_item_category.BillingItemCategoryName, billing_item_category.VAT, billing_item_category.Unit, billing_item.Price FROM billing_item, billing_item_category WHERE billing_item.Category=billing_item_category.ID",
                     Connection = mySqlConnection
                 };
 
+                mySqlDataReader = mySqlCommand.ExecuteReader();
 
+                while (mySqlDataReader.Read())
+                {
+                    BillingItems items = new BillingItems();
+
+                    items.Name = mySqlDataReader["BillingItemName"].ToString();
+                    items.Category = mySqlDataReader["BillingItemCategoryName"].ToString();
+                    items.Vat = double.Parse(mySqlDataReader["VAT"].ToString());
+                    items.Unit = mySqlDataReader["Unit"].ToString();
+                    items.Price = double.Parse(mySqlDataReader["Price"].ToString());
+
+                    billingItems.Add(items);
+                }
             }
             catch (MySqlException e)
             {
@@ -78,6 +91,30 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
+        /// Metódus, amely adatforrásként szolál a számlázó főablak DataGridView GUI komponensnek
+        /// </summary>
+        /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
+        public DataTable GetBillingItems()
+        {
+            DataTable items = new DataTable();
+
+            items.Columns.Add("Tétel", typeof(string));
+            items.Columns.Add("Ár", typeof(double));
+            items.Columns.Add("Egység", typeof(string));
+            items.Columns.Add("Mennyiség", typeof(double));
+
+            foreach (BillingItems item in billingItems)
+            {
+                items.Rows.Add(item.Name, item.Category, item.Vat, item.Unit, item.Price);
+            }
+
+            return items;
+        }
+
+
+        // TDD fejlesztést igényel:
+
+        /// <summary>
         /// Metódus, amely DataTable típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
         /// </summary>
         /// <param name="item">Tétel neve</param>
@@ -87,21 +124,6 @@ namespace virtual_receptionist.Model
         public void AddNewBillingItemsRow(DataTable billingItems, string item, double price, string unit, double quantity)
         {
             billingItems.Rows.Add(item, price, unit, quantity);
-        }
-        /// <summary>
-        /// Metódus, amely megadja a számlázó főablak DataGridView vezérlőnek az adatkonténer és azok oszlopainak forrását
-        /// </summary>
-        /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
-        public DataTable InitializeDataTableBillingItemsColumns()
-        {
-            DataTable items = new DataTable();
-
-            items.Columns.Add("Tétel", typeof(string));
-            items.Columns.Add("Ár", typeof(double));
-            items.Columns.Add("Egység", typeof(string));
-            items.Columns.Add("Mennyiség", typeof(double));
-
-            return items;
         }
         /// <summary>
         /// Metódus, amely megszámolja egy adott DataGridView árakat tartalmazó oszlopaiban a végösszeget

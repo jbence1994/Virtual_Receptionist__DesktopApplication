@@ -68,7 +68,7 @@
         /// <summary>
         /// Számlázási tétel kategóriája
         /// </summary>
-        private string Category
+        public string Category
         {
             get
             {
@@ -82,7 +82,7 @@
         /// <summary>
         /// Számlázási tétel ÁFA-kulcsának értéke
         /// </summary>
-        private double Vat
+        public double Vat
         {
             get
             {
@@ -96,7 +96,7 @@
         /// <summary>
         /// Számlázási tétel egysége
         /// </summary>
-        private string Unit
+        public string Unit
         {
             get
             {
@@ -110,7 +110,7 @@
         /// <summary>
         /// Számlázási tétel összege (ára)
         /// </summary>
-        private double Price
+        public double Price
         {
             get
             {
