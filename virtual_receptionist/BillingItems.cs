@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     /// <summary>
     /// Számlázási tételek modell osztálya
