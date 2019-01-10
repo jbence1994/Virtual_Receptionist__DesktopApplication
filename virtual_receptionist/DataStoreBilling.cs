@@ -10,14 +10,6 @@ namespace virtual_receptionist.Model
     {
         #region Adattagok
 
-
-
-        #endregion
-
-        #region Számlázó modul konstruktora
-
-
-
         #endregion
 
         #region Getter és setter tulajdonságok

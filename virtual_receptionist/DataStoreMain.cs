@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
@@ -33,7 +32,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
         /// <summary>
-        /// 
+        /// Számlázási tételeket tartalmazó adatszerkezet
         /// </summary>
         private List<BillingItems> billingItems;
 
@@ -42,7 +41,7 @@ namespace virtual_receptionist.Model
         #region Konstruktor
 
         /// <summary>
-        /// Adattár (Model) konstruktor
+        /// Adattár (Model) konstruktora
         /// </summary>
         public DataStore()
         {
@@ -59,9 +58,9 @@ namespace virtual_receptionist.Model
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a világ országainak nevét és egy List<T> adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa a világ országainak nevét és egy lista adatszerkezetbe menti őket
         /// </summary>
-        /// <returns>Adatokkal feltöltött List<T>-t adja vissza</returns>
+        /// <returns>Adatokkal feltöltött listát adja vissza</returns>
         public List<string> GetCountries()
         {
             List<string> countries = new List<string>();
@@ -97,9 +96,9 @@ namespace virtual_receptionist.Model
             return countries;
         }
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a magyarországi irányítószámok és települések nevét és egy Dictionary<TKey, TValue> adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa a magyarországi irányítószámok és települések nevét és egy szótár adatszerkezetbe menti őket
         /// </summary>
-        /// <returns>Adatokkal feltöltött Dictionary<TKey, TValue>-t adja vissza</returns>
+        /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
         public Dictionary<string, string> GetHungarianZipCodesAndCities()
         {
             Dictionary<string, string> hungarianZipCodesAndCities = new Dictionary<string, string>();
