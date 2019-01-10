@@ -78,7 +78,7 @@ namespace virtual_receptionist.View
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            formModalBillingItems = new FormModalBillingItems(billingItems);
+            formModalBillingItems = new FormModalBillingItems();
             formModalBillingItems.ShowDialog();
         }
 

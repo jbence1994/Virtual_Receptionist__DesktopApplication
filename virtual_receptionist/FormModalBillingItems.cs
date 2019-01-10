@@ -11,11 +11,6 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-        /// <summary>
-        /// DataTable adatszerkezet, amely a mindig újabb rekordokkal bővül, ha a modális ablakkal új tételeket adunk hozzá
-        /// </summary>
-        private DataTable billingItems;
-
         #endregion
 
         #region Konstruktor
@@ -23,11 +18,9 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
         /// </summary>
-        /// <param name="billingItems">DataTable adatszerkezet, amely a hozzáadott számlázási tételeket tartalmazza</param>
-        public FormModalBillingItems(DataTable billingItems)
+        public FormModalBillingItems()
         {
             InitializeComponent();
-            this.billingItems = billingItems;
         }
 
         #endregion
@@ -36,13 +29,15 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            DataTable billingItemsDataContainer = null;
+            Model.DataStore dataStore = new Model.DataStore();
+            dataStore.BillingItems;
+            DataTable dt =dataStore.GetBillingItems();
 
-            foreach (DataRow row in billingItemsDataContainer.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 ListViewItem billingItems = new ListViewItem(row[1].ToString());
 
-                for (int i = 2; i < billingItemsDataContainer.Columns.Count; i++)
+                for (int i = 2; i < dt.Columns.Count; i++)
                 {
                     billingItems.SubItems.Add(row[i].ToString());
                 }

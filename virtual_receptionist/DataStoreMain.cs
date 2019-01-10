@@ -32,6 +32,27 @@ namespace virtual_receptionist.Model
         /// SQL DML és DDL parancsokat egyszerűen végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
+        /// <summary>
+        /// 
+        /// </summary>
+        private List<BillingItems> billingItems;
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Adattár (Model) konstruktor
+        /// </summary>
+        public DataStore()
+        {
+            mySqlConnection = new MySqlConnection()
+            {
+                ConnectionString = $"SERVER=127.0.0.1;DATABASE=virtual_receptionist;UID=root;PASSWORD=;PORT=3306"
+            };
+
+            billingItems = new List<BillingItems>();
+        }
 
         #endregion
 

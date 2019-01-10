@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Accomodation.cs" />
     <Compile Include="BillingItems.cs" />
-    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="DataStoreGuest.cs" />
     <Compile Include="DefaultController.cs" />
     <Compile Include="DataStoreBilling.cs" />

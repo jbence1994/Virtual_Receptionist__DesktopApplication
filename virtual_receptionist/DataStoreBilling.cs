@@ -11,22 +11,13 @@ namespace virtual_receptionist.Model
     {
         #region Adattagok
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private List<BillingItems> billingItems;
+
 
         #endregion
 
         #region Számlázó modul konstruktora
 
-        /// <summary>
-        /// Konstruktor
-        /// </summary>
-        public DataStore()
-        {
-            billingItems = new List<BillingItems>();
-        }
+
 
         #endregion
 
@@ -50,6 +41,8 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public void ReadBillingItems()
         {
+            BillingItems items = new BillingItems();
+
             try
             {
                 mySqlConnection.Open();
@@ -65,8 +58,6 @@ namespace virtual_receptionist.Model
 
                 while (mySqlDataReader.Read())
                 {
-                    BillingItems items = new BillingItems();
-
                     items.Name = mySqlDataReader["BillingItemName"].ToString();
                     items.Category = mySqlDataReader["BillingItemCategoryName"].ToString();
                     items.Vat = double.Parse(mySqlDataReader["VAT"].ToString());
@@ -99,9 +90,10 @@ namespace virtual_receptionist.Model
             DataTable items = new DataTable();
 
             items.Columns.Add("Tétel", typeof(string));
-            items.Columns.Add("Ár", typeof(double));
+            items.Columns.Add("Kateógia", typeof(string));
+            items.Columns.Add("Áfa", typeof(double));
             items.Columns.Add("Egység", typeof(string));
-            items.Columns.Add("Mennyiség", typeof(double));
+            items.Columns.Add("Ár", typeof(double));
 
             foreach (BillingItems item in billingItems)
             {
