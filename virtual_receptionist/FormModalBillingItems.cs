@@ -53,9 +53,9 @@ namespace virtual_receptionist.View
                 buttonAdd.Enabled = true;
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
-                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
                 textBoxQuantity.Clear();
-                maskedTextBoxVAT.Clear();
+                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 maskedTextBoxItemDiscount.Clear();
             }
         }

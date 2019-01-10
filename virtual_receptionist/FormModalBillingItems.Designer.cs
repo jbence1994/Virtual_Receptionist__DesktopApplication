@@ -30,10 +30,10 @@
         {
             this.listViewBillingItems = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelItem = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -73,33 +73,28 @@
             // 
             // columnHeaderItem
             // 
-            this.columnHeaderItem.DisplayIndex = 0;
             this.columnHeaderItem.Text = "Tétel";
             this.columnHeaderItem.Width = 160;
             // 
+            // columnHeaderPrice
+            // 
+            this.columnHeaderPrice.Text = "Egységár";
+            this.columnHeaderPrice.Width = 160;
+            // 
             // columnHeaderVAT
             // 
-            this.columnHeaderVAT.DisplayIndex = 2;
             this.columnHeaderVAT.Text = "ÁFA";
             this.columnHeaderVAT.Width = 160;
             // 
             // columnHeaderCategory
             // 
-            this.columnHeaderCategory.DisplayIndex = 3;
-            this.columnHeaderCategory.Text = "Kateógria";
+            this.columnHeaderCategory.Text = "Kategória";
             this.columnHeaderCategory.Width = 160;
             // 
             // columnHeaderUnit
             // 
-            this.columnHeaderUnit.DisplayIndex = 4;
             this.columnHeaderUnit.Text = "Egység";
             this.columnHeaderUnit.Width = 160;
-            // 
-            // columnHeaderPrice
-            //
-            this.columnHeaderPrice.DisplayIndex = 1;
-            this.columnHeaderPrice.Text = "Egységár";
-            this.columnHeaderPrice.Width = 160;
             // 
             // buttonAdd
             // 
@@ -148,7 +143,7 @@
             // 
             // textBoxUnit
             // 
-            this.textBoxUnit.Location = new System.Drawing.Point(154, 71);
+            this.textBoxUnit.Location = new System.Drawing.Point(154, 123);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.ReadOnly = true;
             this.textBoxUnit.Size = new System.Drawing.Size(274, 20);
@@ -166,7 +161,7 @@
             // labelUnit
             // 
             this.labelUnit.AutoSize = true;
-            this.labelUnit.Location = new System.Drawing.Point(45, 74);
+            this.labelUnit.Location = new System.Drawing.Point(45, 126);
             this.labelUnit.Name = "labelUnit";
             this.labelUnit.Size = new System.Drawing.Size(45, 13);
             this.labelUnit.TabIndex = 8;
@@ -210,7 +205,7 @@
             // 
             // maskedTextBoxVAT
             // 
-            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 123);
+            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 71);
             this.maskedTextBoxVAT.Mask = "00.0 %";
             this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
             this.maskedTextBoxVAT.ReadOnly = true;
@@ -229,7 +224,7 @@
             // labelVAT
             // 
             this.labelVAT.AutoSize = true;
-            this.labelVAT.Location = new System.Drawing.Point(45, 126);
+            this.labelVAT.Location = new System.Drawing.Point(45, 74);
             this.labelVAT.Name = "labelVAT";
             this.labelVAT.Size = new System.Drawing.Size(30, 13);
             this.labelVAT.TabIndex = 10;
