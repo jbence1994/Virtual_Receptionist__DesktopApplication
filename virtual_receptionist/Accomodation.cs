@@ -3,7 +3,7 @@
     /// <summary>
     /// Szálláshely egyed modell osztálya
     /// </summary>
-    public class Accomodation
+    public class Accomodation //SINGLETON PATTERN
     {
         #region Adattagok
 

@@ -35,18 +35,6 @@ namespace virtual_receptionist.Model
 
         #endregion
 
-        #region Konstruktor
-
-        /// <summary>
-        /// Adattár osztály üres konstruktora
-        /// </summary>
-        public DataStore()
-        {
-
-        }
-
-        #endregion
-
         #region Metódusok
 
         /// <summary>

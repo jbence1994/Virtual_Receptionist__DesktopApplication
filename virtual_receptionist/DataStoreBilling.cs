@@ -3,21 +3,58 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace virtual_receptionist.Model
 {
     public partial class DataStore
     {
+        #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private DataTable tableOfBillingItems;
+        /// <summary>
+        /// 
+        /// </summary>
+        private List<BillingItems> listOfBillingItems;
+
+        #endregion
+
+        #region Számlázó modul konstruktora
+
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
+        public DataStore()
+        {
+            tableOfBillingItems = new DataTable();
+            listOfBillingItems = new List<BillingItems>();
+        }
+
+        #endregion
+
+        #region Getter és setter tulajdonságok
+
+        public List<BillingItems> ListOfBillingItems
+        {
+            get
+            {
+                return listOfBillingItems;
+            }
+        }
+
+        #endregion
+
         #region Számlázó modul metódusai
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és egy DataTable adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és DataTable, valamint List<T> adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable GetBillingItems()
+        public void GetBillingItems()
         {
-            DataTable billingItems = new DataTable();
-
             try
             {
                 mySqlConnection.Open();
@@ -39,7 +76,9 @@ namespace virtual_receptionist.Model
                     DataAdapter = mySqlDataAdapter
                 };
 
-                mySqlDataAdapter.Fill(billingItems);
+                mySqlDataAdapter.Fill(tableOfBillingItems);
+
+
             }
             catch (MySqlException e)
             {
@@ -54,8 +93,6 @@ namespace virtual_receptionist.Model
                 mySqlConnection.Close();
                 Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
             }
-
-            return billingItems;
         }
         /// <summary>
         /// Metódus, amely DataTable típusú adatszerkezetbe menti a modális ablak által átadott számlázási adatok paramétereiből
