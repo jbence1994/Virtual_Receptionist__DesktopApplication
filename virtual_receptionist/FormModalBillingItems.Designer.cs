@@ -100,9 +100,9 @@
             // 
             this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAdd.Enabled = false;
-            this.buttonAdd.Location = new System.Drawing.Point(434, 132);
+            this.buttonAdd.Location = new System.Drawing.Point(483, 74);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(363, 37);
+            this.buttonAdd.Size = new System.Drawing.Size(274, 41);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Tétel hozzáadása";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // labelItem
             // 
             this.labelItem.AutoSize = true;
-            this.labelItem.Location = new System.Drawing.Point(45, 26);
+            this.labelItem.Location = new System.Drawing.Point(74, 25);
             this.labelItem.Name = "labelItem";
             this.labelItem.Size = new System.Drawing.Size(34, 13);
             this.labelItem.TabIndex = 2;
@@ -120,7 +120,7 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(45, 48);
+            this.labelPrice.Location = new System.Drawing.Point(423, 25);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(54, 13);
             this.labelPrice.TabIndex = 3;
@@ -128,7 +128,7 @@
             // 
             // textBoxItem
             // 
-            this.textBoxItem.Location = new System.Drawing.Point(154, 19);
+            this.textBoxItem.Location = new System.Drawing.Point(114, 19);
             this.textBoxItem.Name = "textBoxItem";
             this.textBoxItem.ReadOnly = true;
             this.textBoxItem.Size = new System.Drawing.Size(274, 20);
@@ -136,14 +136,14 @@
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(154, 45);
+            this.textBoxPrice.Location = new System.Drawing.Point(483, 22);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(274, 20);
             this.textBoxPrice.TabIndex = 5;
             // 
             // textBoxUnit
             // 
-            this.textBoxUnit.Location = new System.Drawing.Point(154, 123);
+            this.textBoxUnit.Location = new System.Drawing.Point(114, 71);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.ReadOnly = true;
             this.textBoxUnit.Size = new System.Drawing.Size(274, 20);
@@ -152,7 +152,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(45, 100);
+            this.labelQuantity.Location = new System.Drawing.Point(416, 51);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(61, 13);
             this.labelQuantity.TabIndex = 7;
@@ -161,7 +161,7 @@
             // labelUnit
             // 
             this.labelUnit.AutoSize = true;
-            this.labelUnit.Location = new System.Drawing.Point(45, 126);
+            this.labelUnit.Location = new System.Drawing.Point(63, 74);
             this.labelUnit.Name = "labelUnit";
             this.labelUnit.Size = new System.Drawing.Size(45, 13);
             this.labelUnit.TabIndex = 8;
@@ -169,7 +169,7 @@
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(154, 97);
+            this.textBoxQuantity.Location = new System.Drawing.Point(483, 48);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
             this.textBoxQuantity.TabIndex = 9;
@@ -191,13 +191,13 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxUnit);
             this.groupBoxItemParameters.Location = new System.Drawing.Point(12, 373);
             this.groupBoxItemParameters.Name = "groupBoxItemParameters";
-            this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 188);
+            this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 130);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
             // maskedTextBoxItemDiscount
             // 
-            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(154, 149);
+            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(114, 95);
             this.maskedTextBoxItemDiscount.Mask = "00.0%";
             this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
             this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
@@ -205,7 +205,7 @@
             // 
             // maskedTextBoxVAT
             // 
-            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 71);
+            this.maskedTextBoxVAT.Location = new System.Drawing.Point(114, 45);
             this.maskedTextBoxVAT.Mask = "00.0 %";
             this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
             this.maskedTextBoxVAT.ReadOnly = true;
@@ -215,7 +215,7 @@
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(45, 152);
+            this.labelDiscount.Location = new System.Drawing.Point(11, 98);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(97, 13);
             this.labelDiscount.TabIndex = 11;
@@ -224,7 +224,7 @@
             // labelVAT
             // 
             this.labelVAT.AutoSize = true;
-            this.labelVAT.Location = new System.Drawing.Point(45, 74);
+            this.labelVAT.Location = new System.Drawing.Point(78, 51);
             this.labelVAT.Name = "labelVAT";
             this.labelVAT.Size = new System.Drawing.Size(30, 13);
             this.labelVAT.TabIndex = 10;
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 574);
+            this.ClientSize = new System.Drawing.Size(827, 514);
             this.Controls.Add(this.groupBoxItemParameters);
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
