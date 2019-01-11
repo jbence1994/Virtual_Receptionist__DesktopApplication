@@ -82,10 +82,13 @@ namespace virtual_receptionist.Model
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
         /// <param name="itemPrice">Tétel értéke, amelyből kedvezményt számol a függvény</param>
+        ///<param name="footPercent">Százalékláb értéke</param>
         /// <returns>A kiszámolt kedvezmény értékével tér vissza a függvény</returns>
-        public double CountItemDiscount(double itemPrice)
+        public double CountDiscountPrice(double itemPrice, double footPercent)
         {
-            return 1;
+            double difference = (itemPrice * footPercent) / 100;
+            double result = itemPrice - difference;
+            return result;
         }
 
         #endregion
