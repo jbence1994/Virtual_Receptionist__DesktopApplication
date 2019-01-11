@@ -77,7 +77,6 @@ namespace virtual_receptionist.Model
 
             return items;
         }
-
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>

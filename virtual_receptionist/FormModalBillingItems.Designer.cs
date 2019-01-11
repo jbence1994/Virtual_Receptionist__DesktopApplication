@@ -198,10 +198,11 @@
             // maskedTextBoxItemDiscount
             // 
             this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(114, 95);
-            this.maskedTextBoxItemDiscount.Mask = "00.0%";
+            this.maskedTextBoxItemDiscount.Mask = "00%";
             this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
             this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
             this.maskedTextBoxItemDiscount.TabIndex = 15;
+            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTextBoxVAT
             // 

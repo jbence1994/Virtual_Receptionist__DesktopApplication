@@ -30,7 +30,7 @@ namespace virtual_receptionist.View
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
             Model.DataStore dataStore = new Model.DataStore();
-      
+
             DataTable dt = dataStore.GetBillingItems();
 
             foreach (DataRow row in dt.Rows)
@@ -68,7 +68,10 @@ namespace virtual_receptionist.View
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if (maskedTextBoxItemDiscount.MaskFull)
+            {
 
+            }
         }
 
         #endregion
