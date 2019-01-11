@@ -44,5 +44,16 @@ namespace virtual_receptionist.Model.Tests
             double actual = dataStore.CountDiscountPrice(14100, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
+        /// <summary>
+        /// Tesztmetódus, amely kiszámolja 8700 Ft 20%-át
+        /// </summary>
+        [TestMethod()]
+        public void CountItemPriceWithDiscountTest_Test3()
+        {
+            DataStore dataStore = new DataStore();
+            double expected = 6960;
+            double actual = dataStore.CountDiscountPrice(8700, 20);
+            Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
+        }
     }
 }
