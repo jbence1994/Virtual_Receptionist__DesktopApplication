@@ -87,8 +87,7 @@ namespace virtual_receptionist.Model
         public double CountDiscountPrice(double itemPrice, double footPercent)
         {
             double difference = (itemPrice * footPercent) / 100;
-            double result = itemPrice - difference;
-            return result;
+            return itemPrice - difference;
         }
 
         #endregion
