@@ -28,7 +28,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlDataAdapter mySqlDataAdapter;
         /// <summary>
-        /// SQL DML és DDL parancsokat egyszerűen végrehajtó osztály egy példánya
+        /// SQL DML és DDL parancsokat  végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
         /// <summary>
