@@ -13,7 +13,7 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és List<T> adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        private void InitializeBillingItems()
+        private void GetBillingItemsToList()
         {
             try
             {
@@ -58,12 +58,11 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatforrásként szolál a számlázó főablak DataGridView GUI komponensnek
         /// </summary>
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
-        public DataTable GetBillingItems()
+        public DataTable GetBillingItemsToDataTable()
         {
-            InitializeBillingItems();
+            GetBillingItemsToList();
 
             DataTable items = new DataTable();
-
             items.Columns.Add("Name", typeof(string));
             items.Columns.Add("Price", typeof(double));
             items.Columns.Add("VAT", typeof(double));

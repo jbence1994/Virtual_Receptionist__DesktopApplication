@@ -31,7 +31,7 @@ namespace virtual_receptionist.View
         {
             Model.DataStore dataStore = new Model.DataStore();
 
-            DataTable dt = dataStore.GetBillingItems();
+            DataTable dt = dataStore.GetBillingItemsToDataTable();
 
             foreach (DataRow row in dt.Rows)
             {
