@@ -75,9 +75,6 @@ namespace virtual_receptionist.Model
         private static string port;
         private static string sslMode;
 
-        // hiba MYSQL utasításokban
-        private static string errorMessage;
-
         static MySQLDatabaseInterface()
         {
             server = string.Empty;
@@ -86,40 +83,6 @@ namespace virtual_receptionist.Model
             password = string.Empty;
             port = string.Empty;
             sslMode = "None";
-
-            errorMessage = string.Empty;
-        }
-
-        private static bool IsEmptyOneParameter()
-        {
-            bool answer = false;
-
-            if (server == string.Empty)
-            {
-                answer = true;
-            }
-            else if (database == string.Empty)
-            {
-                answer = true;
-            }
-            else if (username == string.Empty)
-            {
-                answer = true;
-            }
-
-            return answer;
-        }
-
-        private static bool IsConnectionExsist()
-        {
-            if (connection == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
         }
 
         public static void SetConnectionServerData(string _server, string _database, string _port, string _sslMode = "None")
@@ -158,38 +121,27 @@ namespace virtual_receptionist.Model
 
         public static bool Open()
         {
-            if (!IsConnectionExsist())
+            if ((connection != null) && (connection.State == ConnectionState.Open))
             {
-                return false;
+                return true;
             }
             else
             {
-                if ((connection != null) && (connection.State == ConnectionState.Open))
+                try
                 {
+                    connection.Open();
                     return true;
                 }
-                else
-                {
-                    try
-                    {
-                        connection.Open();
-                        return true;
-                    }
-                    catch (MySqlException)
-                    { }
+                catch (MySqlException)
+                { }
 
-                    connection = null;
-                    return false;
-                }
+                connection = null;
+                return false;
             }
         }
 
         public static bool Close()
         {
-            if (!IsConnectionExsist())
-            {
-                return false;
-            }
             try
             {
                 connection.Close();
@@ -208,11 +160,6 @@ namespace virtual_receptionist.Model
                 return false;
             }
 
-            if (!IsConnectionExsist())
-            {
-                return false;
-            }
-
             return true;
         }
 
@@ -220,16 +167,10 @@ namespace virtual_receptionist.Model
         {
             DataTable dataTable = new DataTable();
 
-            if (!IsConnectionExsist())
-            {
-                return dataTable;
-            }
-
             if (connection.State != ConnectionState.Open)
             {
                 return dataTable;
             }
-
 
             if (!IsExecutableQuery(query))
             {
@@ -261,11 +202,6 @@ namespace virtual_receptionist.Model
 
         public static void ExecuteDMQuery(string query)
         {
-            if (!IsConnectionExsist())
-            {
-                return;
-            }
-
             if (connection.State != ConnectionState.Open)
             {
                 return;
