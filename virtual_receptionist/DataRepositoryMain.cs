@@ -41,7 +41,7 @@ namespace virtual_receptionist.Model
         #region Konstruktor
 
         /// <summary>
-        /// Adattár (Model) konstruktora
+        /// Adattár konstruktora
         /// </summary>
         public DataRepository()
         {
