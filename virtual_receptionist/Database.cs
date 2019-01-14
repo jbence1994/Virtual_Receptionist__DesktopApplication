@@ -143,17 +143,7 @@ namespace virtual_receptionist.Model
                 return false;
             }
         }
-
-        public static bool IsExecutableQuery(string query)
-        {
-            if (query == string.Empty)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
+        
         public static DataTable GetToDataTable(string query)
         {
             DataTable dataTable = new DataTable();
@@ -163,22 +153,20 @@ namespace virtual_receptionist.Model
                 return dataTable;
             }
 
-            if (!IsExecutableQuery(query))
-            {
-                return dataTable;
-            }
-
-            MySqlCommand cmd;
-
             try
             {
-                cmd = new MySqlCommand(query, mySqlConnection);
-                if (cmd == null)
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = query,
+                    Connection = mySqlConnection
+                };
+
+                if (mySqlCommand == null)
                 {
                     return dataTable;
                 }
 
-                mySqlDataAdapter = new MySqlDataAdapter(cmd);
+                mySqlDataAdapter = new MySqlDataAdapter(mySqlCommand);
                 mySqlCommandBuilder = new MySqlCommandBuilder(mySqlDataAdapter);
                 mySqlDataAdapter.Fill(dataTable);
 
@@ -194,11 +182,6 @@ namespace virtual_receptionist.Model
         public static void ExecuteDMQuery(string query)
         {
             if (mySqlConnection.State != ConnectionState.Open)
-            {
-                return;
-            }
-
-            if (!IsExecutableQuery(query))
             {
                 return;
             }
