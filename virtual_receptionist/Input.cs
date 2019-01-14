@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace virtual_receptionist.Controller
+namespace virtual_receptionist
 {
     /// <summary>
     /// Felhasználó által bevitt adatokat ellenőrző osztály

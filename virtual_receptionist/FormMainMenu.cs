@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using virtual_receptionist.Controller;
 
 namespace virtual_receptionist.View
 {
@@ -29,8 +28,8 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelClient.Text += DefaultController.Client;
-            Text += $"{DefaultController.Accomodation.Company} ({DefaultController.Accomodation.VatNumber})";
+            //toolStripStatusLabelClient.Text += DefaultController.Client;
+            //Text += $"{DefaultController.Accomodation.Company} ({DefaultController.Accomodation.VatNumber})";
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
