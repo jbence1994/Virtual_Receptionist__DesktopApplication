@@ -13,10 +13,6 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Controller egy példánya
-        /// </summary>
-        private DefaultController controller;
-        /// <summary>
         /// Főmenü ablak egy példánya
         /// </summary>
         private FormMainMenu formMainMenu;
@@ -78,7 +74,7 @@ namespace virtual_receptionist.View
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            formModalBillingItems = new FormModalBillingItems(billingItems);
+            formModalBillingItems = new FormModalBillingItems();
             formModalBillingItems.ShowDialog();
         }
 

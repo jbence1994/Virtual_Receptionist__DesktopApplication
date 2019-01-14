@@ -11,11 +11,6 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-        /// <summary>
-        /// DataTable adatszerkezet, amely a mindig újabb rekordokkal bővül, ha a modális ablakkal új tételeket adunk hozzá
-        /// </summary>
-        private DataTable billingItems;
-
         #endregion
 
         #region Konstruktor
@@ -23,11 +18,9 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
         /// </summary>
-        /// <param name="billingItems">DataTable adatszerkezet, amely a hozzáadott számlázási tételeket tartalmazza</param>
-        public FormModalBillingItems(DataTable billingItems)
+        public FormModalBillingItems()
         {
             InitializeComponent();
-            this.billingItems = billingItems;
         }
 
         #endregion
@@ -36,13 +29,15 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            DataTable billingItemsDataContainer = null;
+            Model.DataStore dataStore = new Model.DataStore();
 
-            foreach (DataRow row in billingItemsDataContainer.Rows)
+            DataTable dt = dataStore.GetBillingItemsToDataTable();
+
+            foreach (DataRow row in dt.Rows)
             {
-                ListViewItem billingItems = new ListViewItem(row[1].ToString());
+                ListViewItem billingItems = new ListViewItem(row[0].ToString());
 
-                for (int i = 2; i < billingItemsDataContainer.Columns.Count; i++)
+                for (int i = 1; i < dt.Columns.Count; i++)
                 {
                     billingItems.SubItems.Add(row[i].ToString());
                 }
@@ -58,9 +53,9 @@ namespace virtual_receptionist.View
                 buttonAdd.Enabled = true;
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
-                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
                 textBoxQuantity.Clear();
-                maskedTextBoxVAT.Clear();
+                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 maskedTextBoxItemDiscount.Clear();
             }
         }
@@ -73,10 +68,10 @@ namespace virtual_receptionist.View
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string item = textBoxItem.Text;
-            double price = double.Parse(textBoxPrice.Text) * double.Parse(textBoxQuantity.Text);
-            string unit = textBoxUnit.Text;
-            double quantity = double.Parse(textBoxQuantity.Text);
+            if (maskedTextBoxItemDiscount.MaskFull)
+            {
+
+            }
         }
 
         #endregion

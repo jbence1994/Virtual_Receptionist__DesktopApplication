@@ -31,6 +31,8 @@
             this.listViewBillingItems = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderVAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelItem = new System.Windows.Forms.Label();
@@ -42,10 +44,10 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
-            this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,13 +56,15 @@
             this.listViewBillingItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderItem,
             this.columnHeaderPrice,
+            this.columnHeaderVAT,
+            this.columnHeaderCategory,
             this.columnHeaderUnit});
             this.listViewBillingItems.FullRowSelect = true;
             this.listViewBillingItems.GridLines = true;
             this.listViewBillingItems.Location = new System.Drawing.Point(12, 12);
             this.listViewBillingItems.MultiSelect = false;
             this.listViewBillingItems.Name = "listViewBillingItems";
-            this.listViewBillingItems.Size = new System.Drawing.Size(486, 355);
+            this.listViewBillingItems.Size = new System.Drawing.Size(804, 355);
             this.listViewBillingItems.TabIndex = 0;
             this.listViewBillingItems.UseCompatibleStateImageBehavior = false;
             this.listViewBillingItems.View = System.Windows.Forms.View.Details;
@@ -77,6 +81,16 @@
             this.columnHeaderPrice.Text = "Egységár";
             this.columnHeaderPrice.Width = 160;
             // 
+            // columnHeaderVAT
+            // 
+            this.columnHeaderVAT.Text = "ÁFA";
+            this.columnHeaderVAT.Width = 160;
+            // 
+            // columnHeaderCategory
+            // 
+            this.columnHeaderCategory.Text = "Kategória";
+            this.columnHeaderCategory.Width = 160;
+            // 
             // columnHeaderUnit
             // 
             this.columnHeaderUnit.Text = "Egység";
@@ -86,9 +100,9 @@
             // 
             this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAdd.Enabled = false;
-            this.buttonAdd.Location = new System.Drawing.Point(12, 567);
+            this.buttonAdd.Location = new System.Drawing.Point(483, 74);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(486, 37);
+            this.buttonAdd.Size = new System.Drawing.Size(274, 41);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Tétel hozzáadása";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -97,7 +111,7 @@
             // labelItem
             // 
             this.labelItem.AutoSize = true;
-            this.labelItem.Location = new System.Drawing.Point(45, 26);
+            this.labelItem.Location = new System.Drawing.Point(74, 25);
             this.labelItem.Name = "labelItem";
             this.labelItem.Size = new System.Drawing.Size(34, 13);
             this.labelItem.TabIndex = 2;
@@ -106,7 +120,7 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(45, 48);
+            this.labelPrice.Location = new System.Drawing.Point(423, 25);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(54, 13);
             this.labelPrice.TabIndex = 3;
@@ -114,7 +128,7 @@
             // 
             // textBoxItem
             // 
-            this.textBoxItem.Location = new System.Drawing.Point(154, 19);
+            this.textBoxItem.Location = new System.Drawing.Point(114, 19);
             this.textBoxItem.Name = "textBoxItem";
             this.textBoxItem.ReadOnly = true;
             this.textBoxItem.Size = new System.Drawing.Size(274, 20);
@@ -122,14 +136,14 @@
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(154, 45);
+            this.textBoxPrice.Location = new System.Drawing.Point(483, 22);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(274, 20);
             this.textBoxPrice.TabIndex = 5;
             // 
             // textBoxUnit
             // 
-            this.textBoxUnit.Location = new System.Drawing.Point(154, 71);
+            this.textBoxUnit.Location = new System.Drawing.Point(114, 71);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.ReadOnly = true;
             this.textBoxUnit.Size = new System.Drawing.Size(274, 20);
@@ -138,7 +152,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(45, 100);
+            this.labelQuantity.Location = new System.Drawing.Point(416, 51);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(61, 13);
             this.labelQuantity.TabIndex = 7;
@@ -147,7 +161,7 @@
             // labelUnit
             // 
             this.labelUnit.AutoSize = true;
-            this.labelUnit.Location = new System.Drawing.Point(45, 74);
+            this.labelUnit.Location = new System.Drawing.Point(63, 74);
             this.labelUnit.Name = "labelUnit";
             this.labelUnit.Size = new System.Drawing.Size(45, 13);
             this.labelUnit.TabIndex = 8;
@@ -155,7 +169,7 @@
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(154, 97);
+            this.textBoxQuantity.Location = new System.Drawing.Point(483, 48);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
             this.textBoxQuantity.TabIndex = 9;
@@ -163,6 +177,7 @@
             // groupBoxItemParameters
             // 
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
+            this.groupBoxItemParameters.Controls.Add(this.buttonAdd);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
@@ -176,14 +191,32 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxUnit);
             this.groupBoxItemParameters.Location = new System.Drawing.Point(12, 373);
             this.groupBoxItemParameters.Name = "groupBoxItemParameters";
-            this.groupBoxItemParameters.Size = new System.Drawing.Size(486, 188);
+            this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 130);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
+            // 
+            // maskedTextBoxItemDiscount
+            // 
+            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(114, 95);
+            this.maskedTextBoxItemDiscount.Mask = "00%";
+            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
+            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxItemDiscount.TabIndex = 15;
+            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // maskedTextBoxVAT
+            // 
+            this.maskedTextBoxVAT.Location = new System.Drawing.Point(114, 45);
+            this.maskedTextBoxVAT.Mask = "00.0 %";
+            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
+            this.maskedTextBoxVAT.ReadOnly = true;
+            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxVAT.TabIndex = 14;
             // 
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(45, 152);
+            this.labelDiscount.Location = new System.Drawing.Point(11, 98);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(97, 13);
             this.labelDiscount.TabIndex = 11;
@@ -192,35 +225,18 @@
             // labelVAT
             // 
             this.labelVAT.AutoSize = true;
-            this.labelVAT.Location = new System.Drawing.Point(45, 126);
+            this.labelVAT.Location = new System.Drawing.Point(78, 51);
             this.labelVAT.Name = "labelVAT";
             this.labelVAT.Size = new System.Drawing.Size(30, 13);
             this.labelVAT.TabIndex = 10;
             this.labelVAT.Text = "ÁFA:";
             // 
-            // maskedTextBoxVAT
-            // 
-            this.maskedTextBoxVAT.Location = new System.Drawing.Point(154, 123);
-            this.maskedTextBoxVAT.Mask = "00.0 %";
-            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
-            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxVAT.TabIndex = 14;
-            // 
-            // maskedTextBoxItemDiscount
-            // 
-            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(154, 149);
-            this.maskedTextBoxItemDiscount.Mask = "00.0%";
-            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
-            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxItemDiscount.TabIndex = 15;
-            // 
             // FormModalBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 616);
+            this.ClientSize = new System.Drawing.Size(827, 514);
             this.Controls.Add(this.groupBoxItemParameters);
-            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormModalBillingItems";
@@ -253,5 +269,7 @@
         private System.Windows.Forms.Label labelVAT;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxVAT;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
+        private System.Windows.Forms.ColumnHeader columnHeaderVAT;
+        private System.Windows.Forms.ColumnHeader columnHeaderCategory;
     }
 }

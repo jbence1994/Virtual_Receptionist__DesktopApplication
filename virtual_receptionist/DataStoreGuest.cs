@@ -15,7 +15,7 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public DataTable GetEntities()
+        public DataTable GetGuests()
         {
             DataTable guests = new DataTable();
 
