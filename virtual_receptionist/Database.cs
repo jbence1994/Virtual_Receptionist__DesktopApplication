@@ -110,10 +110,10 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Teljes adatbázistáblákat leolvasó metódus, amely egy DataTable adatszerkezetbe menti az adatokat 
+        /// Adatbázistáblából adatokat DataTable (adattábla/adatkonténerbe) leolvasó metódus 
         /// </summary>
         /// <param name="sql">SQL lekérdezés</param>
-        /// <returns></returns>
+        /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
         public DataTable GetDataToDataTable(string sql)
         {
             DataTable dataTable = new DataTable();
