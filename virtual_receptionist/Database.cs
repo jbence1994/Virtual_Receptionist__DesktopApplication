@@ -34,44 +34,44 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázis szerver neve
         /// </summary>
-        private static string server;
+        private static string _server;
         /// <summary>
         /// Adatbázis neve
         /// </summary>
-        private static string database;
+        private static string _database;
         /// <summary>
         /// Adatbázis szerver felhasználóneve
         /// </summary>
-        private static string username;
+        private static string _username;
         /// <summary>
         /// Adatbázis szerver jelszava
         /// </summary>
-        private static string password;
+        private static string _password;
         /// <summary>
         /// Adatbázis szerver elérésére szolgáló hálózati port
         /// </summary>
-        private static string port;
+        private static string _port;
         /// <summary>
         /// 
         /// </summary>
-        private static string sslMode;
+        private static string _sslMode;
 
         static Database()
         {
-            server = string.Empty;
-            database = string.Empty;
-            username = string.Empty;
-            password = string.Empty;
-            port = string.Empty;
-            sslMode = "None";
+            _server = string.Empty;
+            _database = string.Empty;
+            _username = string.Empty;
+            _password = string.Empty;
+            _port = string.Empty;
+            _sslMode = "None";
         }
 
-        private static void SetConnectionServerData(string _server, string _database, string _port, string _sslMode = "None")
+        private static void SetConnectionServerData(string server, string database, string port, string sslMode = "None")
         {
-            server = _server;
-            database = _database;
-            port = _port;
-            sslMode = _sslMode;
+            _server = server;
+            _database = database;
+            _port = port;
+            _sslMode = sslMode;
         }
 
         private static void ConnectToDatabase()
@@ -82,18 +82,26 @@ namespace virtual_receptionist.Model
 
         private static void SetConnectionUserData(string _username, string _password)
         {
-            username = _username;
-            password = _password;
+            Database._username = _username;
+            Database._password = _password;
+        }
+
+        private static string SetConnectionString()
+        {
+            string connectionString = "SERVER=" + _server + ";"
+                                    + "DATABASE=" + _database + ";"
+                                    + "UID=" + _username + ";"
+                                    + "PASSWORD=" + _password + ";"
+                                    + "PORT=" + _port + ";"
+                                    + "SSLMode  =" + _sslMode + ";";
+
+            return connectionString;
         }
 
         public static bool MakeConnectionToDatabase()
         {
-            string connectionString = "SERVER=" + server + ";"
-                                    + "DATABASE=" + database + ";"
-                                    + "UID=" + username + ";"
-                                    + "PASSWORD=" + password + ";"
-                                    + "PORT=" + port + ";"
-                                    + "SSLMode  =" + sslMode + ";";
+            string connectionString = SetConnectionString();
+
             try
             {
                 mySqlConnection = new MySqlConnection()
@@ -143,7 +151,7 @@ namespace virtual_receptionist.Model
                 return false;
             }
         }
-        
+
         public static DataTable GetToDataTable(string query)
         {
             DataTable dataTable = new DataTable();
