@@ -29,7 +29,7 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            Model.DataStore dataStore = new Model.DataStore();
+            Model.DataRepository dataStore = new Model.DataRepository();
 
             DataTable dt = dataStore.GetBillingItemsToDataTable();
 

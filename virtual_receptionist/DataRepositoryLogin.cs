@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.IO;
-using virtual_receptionist.Controller;
 
 namespace virtual_receptionist.Model
 {
-    public partial class DataStore
+    public partial class DataRepository
     {
         #region Adattagok
 
@@ -45,7 +44,7 @@ namespace virtual_receptionist.Model
         /// Konstruktor, amely beállítja az adatbázis elérésének útvonalát
         /// </summary>
         /// <param name="connectTo">Szerver típusa (helyi otthoni vagy távoli iskolai)</param>
-        public DataStore(string connectTo)
+        public DataRepository(string connectTo)
         {
             switch (connectTo)
             {
@@ -260,7 +259,7 @@ namespace virtual_receptionist.Model
                 };
 
                 mySqlCommand.Prepare();
-                mySqlCommand.Parameters.AddWithValue("@MachineName", DefaultController.Client);
+                mySqlCommand.Parameters.AddWithValue("@MachineName", new object());
                 mySqlCommand.Parameters.AddWithValue("@LoginDate", DateTime.Now);
                 mySqlCommand.Parameters.AddWithValue("@LogoutDate", DateTime.Now); //<- Refaktor: Kilépési aktuális ponton történjen logolás a jelenlegi időről
                 mySqlCommand.ExecuteNonQuery();

@@ -48,11 +48,11 @@
   <ItemGroup>
     <Compile Include="Accomodation.cs" />
     <Compile Include="BillingItems.cs" />
-    <Compile Include="DataStoreGuest.cs" />
-    <Compile Include="DataStoreBilling.cs" />
-    <Compile Include="DataStoreLogin.cs" />
-    <Compile Include="DataStoreMain.cs" />
-    <Compile Include="DataStoreRoomEditor.cs" />
+    <Compile Include="DataRepositoryGuest.cs" />
+    <Compile Include="DataRepositoryBilling.cs" />
+    <Compile Include="DataRepositoryLogin.cs" />
+    <Compile Include="DataRepositoryMain.cs" />
+    <Compile Include="DataRepositoryRoomEditor.cs" />
     <Compile Include="FormAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>

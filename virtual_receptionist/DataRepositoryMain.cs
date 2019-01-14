@@ -7,7 +7,7 @@ namespace virtual_receptionist.Model
     /// <summary>
     /// Az alkalmazáshoz szükséges adatokat tároló (adattár) osztály, amely az üzleti logikáért felel
     /// </summary>
-    public partial class DataStore
+    public partial class DataRepository
     {
         #region Adattagok
 
@@ -43,7 +43,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adattár (Model) konstruktora
         /// </summary>
-        public DataStore()
+        public DataRepository()
         {
             mySqlConnection = new MySqlConnection()
             {
