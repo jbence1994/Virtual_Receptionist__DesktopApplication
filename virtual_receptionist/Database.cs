@@ -1,4 +1,7 @@
 ﻿using System.Xml;
+using System.Collections.Generic;
+using System.Data;
+using System;
 using MySql.Data.MySqlClient;
 
 namespace virtual_receptionist.Model
@@ -6,7 +9,7 @@ namespace virtual_receptionist.Model
     /// <summary>
     /// Adatbázis műveleteket és interakciókat végző ORM osztály
     /// </summary>
-    public static class Database
+    public class Database
     {
         /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
@@ -32,12 +35,19 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázis műveleteket és interakciókat végző ORM osztály statikus konstruktora
         /// </summary>
-        static Database()
+        public Database()
         {
-            mySqlConnection = new MySqlConnection()
+            if (true)
             {
-                ConnectionString = ""
-            };
+                mySqlConnection = new MySqlConnection()
+                {
+                    ConnectionString = ""
+                };
+            }
+            else
+            {
+
+            }
         }
 
         /// <summary>
@@ -46,6 +56,252 @@ namespace virtual_receptionist.Model
         private static void SetConnectionString()
         {
 
+        }
+
+
+
+    }
+
+    static class MySQLDatabaseInterface
+    {
+        private static MySqlConnection connection;
+        private static MySqlDataAdapter dataAdapter;
+        private static MySqlCommandBuilder commandBuilder;
+
+        private static string server;
+        private static string database;
+        private static string username;
+        private static string password;
+        private static string port;
+        private static string sslMode;
+
+        // hiba MYSQL utasításokban
+        private static string errorMessage;
+
+        static MySQLDatabaseInterface()
+        {
+            server = string.Empty;
+            database = string.Empty;
+            username = string.Empty;
+            password = string.Empty;
+            port = string.Empty;
+            sslMode = "None";
+
+            errorMessage = string.Empty;
+        }
+
+        private static bool IsEmptyOneParameter()
+        {
+            bool answer = false;
+
+            if (server == string.Empty)
+            {
+                answer = true;
+            }
+            else if (database == string.Empty)
+            {
+                answer = true;
+            }
+            else if (username == string.Empty)
+            {
+                answer = true;
+            }
+
+            return answer;
+        }
+
+        private static bool IsConnectionExsist()
+        {
+            if (connection == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static void SetConnectionServerData(string _server, string _database, string _port, string _sslMode = "None")
+        {
+            server = _server;
+            database = _database;
+            port = _port;
+            sslMode = _sslMode;
+        }
+
+        public static void SetConnectionUserData(string _username, string _password)
+        {
+            username = _username;
+            password = _password;
+        }
+
+        public static bool MakeConnectionToDatabase()
+        {
+            string connectionString = "SERVER=" + server + ";"
+                                    + "DATABASE=" + database + ";"
+                                    + "UID=" + username + ";"
+                                    + "PASSWORD=" + password + ";"
+                                    + "PORT=" + port + ";"
+                                    + "SSLMode  =" + sslMode + ";";
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                return true;
+            }
+            catch (MySqlException)
+            { }
+
+            return true;
+
+        }
+
+        public static bool Open()
+        {
+            if (!IsConnectionExsist())
+            {
+                return false;
+            }
+            else
+            {
+                if ((connection != null) && (connection.State == ConnectionState.Open))
+                {
+                    return true;
+                }
+                else
+                {
+                    try
+                    {
+                        connection.Open();
+                        return true;
+                    }
+                    catch (MySqlException)
+                    { }
+
+                    connection = null;
+                    return false;
+                }
+            }
+        }
+
+        public static bool Close()
+        {
+            if (!IsConnectionExsist())
+            {
+                return false;
+            }
+            try
+            {
+                connection.Close();
+                return true;
+            }
+            catch (MySqlException)
+            {
+                return false;
+            }
+        }
+
+        public static bool IsExecutableQuery(string query)
+        {
+            if (query == string.Empty)
+            {
+                return false;
+            }
+
+            if (!IsConnectionExsist())
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public static DataTable GetToDataTable(string query)
+        {
+            DataTable dataTable = new DataTable();
+
+            if (!IsConnectionExsist())
+            {
+                return dataTable;
+            }
+
+            if (connection.State != ConnectionState.Open)
+            {
+                return dataTable;
+            }
+
+
+            if (!IsExecutableQuery(query))
+            {
+                return dataTable;
+            }
+
+            MySqlCommand cmd;
+
+            try
+            {
+                cmd = new MySqlCommand(query, connection);
+                if (cmd == null)
+                {
+                    return dataTable;
+                }
+
+                dataAdapter = new MySqlDataAdapter(cmd);
+                commandBuilder = new MySqlCommandBuilder(dataAdapter);
+                dataAdapter.Fill(dataTable);
+
+            }
+            catch (MySqlException)
+            { }
+            finally
+            { }
+
+            return dataTable;
+        }
+
+        public static void ExecuteDMQuery(string query)
+        {
+            if (!IsConnectionExsist())
+            {
+                return;
+            }
+
+            if (connection.State != ConnectionState.Open)
+            {
+                return;
+            }
+
+            if (!IsExecutableQuery(query))
+            {
+                return;
+            }
+
+            MySqlCommand cmd;
+
+            try
+            {
+                cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException)
+            { }
+            finally
+            { }
+        }
+        
+        public static void UpdateDataTable(DataTable dataTable)
+        {
+            try
+            {
+                dataAdapter.DeleteCommand = commandBuilder.GetDeleteCommand();
+                dataAdapter.InsertCommand = commandBuilder.GetInsertCommand();
+                dataAdapter.UpdateCommand = commandBuilder.GetUpdateCommand();
+                dataAdapter.Update(dataTable);
+            }
+            catch (MySqlException)
+            { }
+            catch (Exception)
+            { }
         }
     }
 }
