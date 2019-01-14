@@ -85,7 +85,7 @@ namespace virtual_receptionist.Model
             sslMode = "None";
         }
 
-        public static void SetConnectionServerData(string _server, string _database, string _port, string _sslMode = "None")
+        private static void SetConnectionServerData(string _server, string _database, string _port, string _sslMode = "None")
         {
             server = _server;
             database = _database;
@@ -93,7 +93,13 @@ namespace virtual_receptionist.Model
             sslMode = _sslMode;
         }
 
-        public static void SetConnectionUserData(string _username, string _password)
+        private static void ConnectToDatabase()
+        {
+            SetConnectionServerData("192.168.0.100", "szoftverf", "3306");
+            SetConnectionUserData("szoftverf", "szoftverf");
+        }
+
+        private static void SetConnectionUserData(string _username, string _password)
         {
             username = _username;
             password = _password;
@@ -224,7 +230,7 @@ namespace virtual_receptionist.Model
             finally
             { }
         }
-        
+
         public static void UpdateDataTable(DataTable dataTable)
         {
             try
