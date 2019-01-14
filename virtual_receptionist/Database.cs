@@ -109,6 +109,46 @@ namespace virtual_receptionist.Model
                 Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
             }
         }
+        /// <summary>
+        /// Teljes adatbázistáblákat leolvasó metódus, amely egy DataTable adatszerkezetbe menti az adatokat 
+        /// </summary>
+        /// <param name="sql">SQL lekérdezés</param>
+        /// <returns></returns>
+        public DataTable GetDataToDataTable(string sql)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = sql,
+                    Connection = mySqlConnection
+                };
+
+                mySqlDataAdapter = new MySqlDataAdapter()
+                {
+                    SelectCommand = mySqlCommand
+                };
+
+                mySqlCommandBuilder = new MySqlCommandBuilder()
+                {
+                    DataAdapter = mySqlDataAdapter
+                };
+
+                mySqlDataAdapter.Fill(dataTable);
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
+            return dataTable;
+        }
 
         #endregion
     }
