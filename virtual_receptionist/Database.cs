@@ -9,7 +9,7 @@ namespace virtual_receptionist.Model
     /// <summary>
     /// Adatbázis műveleteket és interakciókat végző ORM osztály
     /// </summary>
-    public class Database
+    public static class Database
     {
         /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
@@ -31,51 +31,32 @@ namespace virtual_receptionist.Model
         /// SQL DML és DDL parancsokat egyszerűen végrehajtó osztály egy példánya
         /// </summary>
         private static MySqlCommandBuilder mySqlCommandBuilder;
-
         /// <summary>
-        /// Adatbázis műveleteket és interakciókat végző ORM osztály statikus konstruktora
+        /// Adatbázis szerver neve
         /// </summary>
-        public Database()
-        {
-            if (true)
-            {
-                mySqlConnection = new MySqlConnection()
-                {
-                    ConnectionString = ""
-                };
-            }
-            else
-            {
-
-            }
-        }
-
+        private static string server;
+        /// <summary>
+        /// Adatbázis neve
+        /// </summary>
+        private static string database;
+        /// <summary>
+        /// Adatbázis szerver felhasználóneve
+        /// </summary>
+        private static string username;
+        /// <summary>
+        /// Adatbázis szerver jelszava
+        /// </summary>
+        private static string password;
+        /// <summary>
+        /// Adatbázis szerver elérésére szolgáló hálózati port
+        /// </summary>
+        private static string port;
         /// <summary>
         /// 
         /// </summary>
-        private static void SetConnectionString()
-        {
-
-        }
-
-
-
-    }
-
-    static class MySQLDatabaseInterface
-    {
-        private static MySqlConnection connection;
-        private static MySqlDataAdapter dataAdapter;
-        private static MySqlCommandBuilder commandBuilder;
-
-        private static string server;
-        private static string database;
-        private static string username;
-        private static string password;
-        private static string port;
         private static string sslMode;
 
-        static MySQLDatabaseInterface()
+        static Database()
         {
             server = string.Empty;
             database = string.Empty;
@@ -115,7 +96,11 @@ namespace virtual_receptionist.Model
                                     + "SSLMode  =" + sslMode + ";";
             try
             {
-                connection = new MySqlConnection(connectionString);
+                mySqlConnection = new MySqlConnection()
+                {
+                    ConnectionString = connectionString
+                };
+
                 return true;
             }
             catch (MySqlException)
@@ -127,7 +112,7 @@ namespace virtual_receptionist.Model
 
         public static bool Open()
         {
-            if ((connection != null) && (connection.State == ConnectionState.Open))
+            if ((mySqlConnection != null) && (mySqlConnection.State == ConnectionState.Open))
             {
                 return true;
             }
@@ -135,13 +120,13 @@ namespace virtual_receptionist.Model
             {
                 try
                 {
-                    connection.Open();
+                    mySqlConnection.Open();
                     return true;
                 }
                 catch (MySqlException)
                 { }
 
-                connection = null;
+                mySqlConnection = null;
                 return false;
             }
         }
@@ -150,7 +135,7 @@ namespace virtual_receptionist.Model
         {
             try
             {
-                connection.Close();
+                mySqlConnection.Close();
                 return true;
             }
             catch (MySqlException)
@@ -173,7 +158,7 @@ namespace virtual_receptionist.Model
         {
             DataTable dataTable = new DataTable();
 
-            if (connection.State != ConnectionState.Open)
+            if (mySqlConnection.State != ConnectionState.Open)
             {
                 return dataTable;
             }
@@ -187,15 +172,15 @@ namespace virtual_receptionist.Model
 
             try
             {
-                cmd = new MySqlCommand(query, connection);
+                cmd = new MySqlCommand(query, mySqlConnection);
                 if (cmd == null)
                 {
                     return dataTable;
                 }
 
-                dataAdapter = new MySqlDataAdapter(cmd);
-                commandBuilder = new MySqlCommandBuilder(dataAdapter);
-                dataAdapter.Fill(dataTable);
+                mySqlDataAdapter = new MySqlDataAdapter(cmd);
+                mySqlCommandBuilder = new MySqlCommandBuilder(mySqlDataAdapter);
+                mySqlDataAdapter.Fill(dataTable);
 
             }
             catch (MySqlException)
@@ -208,7 +193,7 @@ namespace virtual_receptionist.Model
 
         public static void ExecuteDMQuery(string query)
         {
-            if (connection.State != ConnectionState.Open)
+            if (mySqlConnection.State != ConnectionState.Open)
             {
                 return;
             }
@@ -222,7 +207,7 @@ namespace virtual_receptionist.Model
 
             try
             {
-                cmd = new MySqlCommand(query, connection);
+                cmd = new MySqlCommand(query, mySqlConnection);
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException)
@@ -235,10 +220,10 @@ namespace virtual_receptionist.Model
         {
             try
             {
-                dataAdapter.DeleteCommand = commandBuilder.GetDeleteCommand();
-                dataAdapter.InsertCommand = commandBuilder.GetInsertCommand();
-                dataAdapter.UpdateCommand = commandBuilder.GetUpdateCommand();
-                dataAdapter.Update(dataTable);
+                mySqlDataAdapter.DeleteCommand = mySqlCommandBuilder.GetDeleteCommand();
+                mySqlDataAdapter.InsertCommand = mySqlCommandBuilder.GetInsertCommand();
+                mySqlDataAdapter.UpdateCommand = mySqlCommandBuilder.GetUpdateCommand();
+                mySqlDataAdapter.Update(dataTable);
             }
             catch (MySqlException)
             { }
