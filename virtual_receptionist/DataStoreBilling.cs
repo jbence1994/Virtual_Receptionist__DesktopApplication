@@ -10,7 +10,7 @@ namespace virtual_receptionist.Model
         #region Számlázó modul metódusai
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és List<T> adatszerkezetek menti őket
+        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és lista adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void GetBillingItemsToList()
@@ -55,7 +55,7 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Metódus, amely adatforrásként szolál a számlázó főablak DataGridView GUI komponensnek
+        /// Metódus, amely adatforrásként szolál a számlázó főablak DataGridView komponensének
         /// </summary>
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable GetBillingItemsToDataTable()
