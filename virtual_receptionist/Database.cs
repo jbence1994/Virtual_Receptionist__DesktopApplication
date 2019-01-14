@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Xml;
 using System.Diagnostics;
+using System.Data;
 
 namespace virtual_receptionist.Model
 {
@@ -33,6 +34,26 @@ namespace virtual_receptionist.Model
         /// SQL DML és DDL parancsokat végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
+        /// <summary>
+        /// Adatbázis szerver neve
+        /// </summary>
+        private string server;
+        /// <summary>
+        /// Adatbázis neve
+        /// </summary>
+        private string database;
+        /// <summary>
+        /// Adatbázis szerver felhasználóneve
+        /// </summary>
+        private string username;
+        /// <summary>
+        /// Adatbázis szerver jelszava
+        /// </summary>
+        private string password;
+        /// <summary>
+        /// Adatbázis szerver elérésére szolgáló hálózati port
+        /// </summary>
+        private string port;
 
         #endregion
 
@@ -41,11 +62,17 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Konstruktor
         /// </summary>
-        public Database()
+        public Database(string server, string database, string username, string password, string port)
         {
+            this.server = server;
+            this.database = database;
+            this.username = username;
+            this.password = password;
+            this.port = port;
+
             mySqlConnection = new MySqlConnection()
             {
-                ConnectionString = $"SERVER=127.0.0.1;DATABASE=virtual_receptionist;UID=root;PASSWORD=;PORT=3306"
+                ConnectionString = $"SERVER={server}; DATABASE={database}; UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
             };
         }
 
@@ -65,16 +92,22 @@ namespace virtual_receptionist.Model
         /// </summary>
         public void OpenConnection()
         {
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+            if (mySqlConnection.State == ConnectionState.Closed)
+            {
+                mySqlConnection.Open();
+                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+            }
         }
         /// <summary>
         /// Adatbázis kapcsolatot lezáró metódus
         /// </summary>
         public void CloseConnection()
         {
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            if (mySqlConnection.State == ConnectionState.Open)
+            {
+                mySqlConnection.Close();
+                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            }
         }
 
         #endregion
