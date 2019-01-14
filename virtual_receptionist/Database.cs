@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System.Collections.Generic;
 using System;
 using System.Xml;
 using System.Diagnostics;
@@ -62,14 +61,8 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Konstruktor
         /// </summary>
-        public Database(string server, string database, string username, string password, string port)
+        public Database()
         {
-            this.server = server;
-            this.database = database;
-            this.username = username;
-            this.password = password;
-            this.port = port;
-
             mySqlConnection = new MySqlConnection()
             {
                 ConnectionString = $"SERVER={server}; DATABASE={database}; UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
@@ -83,9 +76,13 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// 
         /// </summary>
-        private void InitializeConnection()
+        private void InitializeConnection(string server, string database, string username, string password, string port)
         {
-
+            this.server = server;
+            this.database = database;
+            this.username = username;
+            this.password = password;
+            this.port = port;
         }
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
