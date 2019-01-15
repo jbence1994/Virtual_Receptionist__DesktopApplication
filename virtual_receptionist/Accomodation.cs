@@ -34,7 +34,7 @@
         /// <summary>
         /// Szálláshely telefonszáma
         /// </summary>
-        private string telephoneNumber;
+        private string phoneNumber;
         /// <summary>
         /// Szálláshely e-mail címe
         /// </summary>
@@ -65,7 +65,7 @@
         /// <param name="emailAddress">Szálláshely e-mail címe</param>
         /// <param name="accomodationID">Szálláshely szállásazonosítója</param>
         /// <param name="password">Szálláshely szállásazonosítójához tartozó jelszava</param>
-        public Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string telephoneNumber, string emailAddress, string accomodationID, string password)
+        public Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string phoneNumber, string emailAddress, string accomodationID, string password)
         {
             this.name = name;
             this.company = company;
@@ -73,7 +73,7 @@
             this.vatNumber = vatNumber;
             this.headquarters = headquarters;
             this.site = site;
-            this.telephoneNumber = telephoneNumber;
+            this.phoneNumber = phoneNumber;
             this.emailAddress = emailAddress;
             this.accomodationID = accomodationID;
             this.password = password;
@@ -177,15 +177,15 @@
         /// <summary>
         /// Szálláshely telefonszáma
         /// </summary>
-        public string TelephoneNumber
+        public string PhoneNumber
         {
             get
             {
-                return telephoneNumber;
+                return phoneNumber;
             }
             set
             {
-                telephoneNumber = value;
+                phoneNumber = value;
             }
         }
         /// <summary>
@@ -241,7 +241,7 @@
         /// <returns>Visszaadja az Accomodation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{name} {company} {contact} {vatNumber} {headquarters} {site} {telephoneNumber} {emailAddress} {accomodationID} {password}";
+            return $"{name} {company} {contact} {vatNumber} {headquarters} {site} {phoneNumber} {emailAddress} {accomodationID} {password}";
         }
 
         #endregion

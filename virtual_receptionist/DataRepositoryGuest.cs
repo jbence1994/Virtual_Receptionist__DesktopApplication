@@ -14,7 +14,6 @@ namespace virtual_receptionist.Model
         private void UploadGuestsList()
         {
             string sql = "SELECT guest.Name, guest.Nationality, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
-
             DataTable dt = database.Query(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -60,7 +59,6 @@ namespace virtual_receptionist.Model
             }
 
             return guestsDataTable;
-
         }
         /// <summary>
         /// Vendég törlése

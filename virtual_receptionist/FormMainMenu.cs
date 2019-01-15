@@ -92,11 +92,9 @@ namespace virtual_receptionist.View
         private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
         {
             Model.DataRepository dataRepository = new Model.DataRepository();
-
             Model.Accomodation accomodation = dataRepository.SetAccomodation();
 
-
-            MessageBox.Show($"Szálláshely neve: {accomodation.Name}\nCég neve: {accomodation.Company}   ");
+            MessageBox.Show($"Szálláshely neve: {accomodation.Name}\nCég neve: {accomodation.Company}\nKépviselő: {accomodation.Contact}\nAdószám: {accomodation.VatNumber}\n Székhely: {accomodation.Headquarters}\n Telephely: {accomodation.Site}\n Telefonszám: {accomodation.PhoneNumber}\n E-mail cím: {accomodation.EmailAddress}", "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void toolStripMenuItemAccomodationData_MouseHover(object sender, EventArgs e)
