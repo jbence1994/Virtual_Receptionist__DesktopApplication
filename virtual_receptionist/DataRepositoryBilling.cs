@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Data;
-using MySql.Data.MySqlClient;
+﻿using System.Data;
 using System.Collections.Generic;
 
 namespace virtual_receptionist.Model
@@ -17,7 +14,6 @@ namespace virtual_receptionist.Model
         private void UploadBillingItemsList()
         {
             string sql = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
-
             DataTable dt = database.GetTable(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -33,7 +29,24 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Metódus, amely adatforrásként szolál a számlázó főablak DataGridView komponensének
+        /// Metódus, amely adatbázisból kiolvassa az országok kódjait, neveit és lista adatszerkezetek menti őket
+        /// </summary>
+        private void UploadCountriesList()
+        {
+            string sql = "SELECT * FROM country";
+            DataTable dt = database.GetTable(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string code = row["CountryCode"].ToString();
+                string name = row["CountryName"].ToString();
+
+                Country country = new Country(code, name);
+                countries.Add(country);
+            }
+        }
+        /// <summary>
+        /// Metódus, amely adatforrásként szolgál a számlázó főablak DataGridView komponensének
         /// </summary>
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable GetBillingItems()
@@ -55,25 +68,7 @@ namespace virtual_receptionist.Model
             return billingItemsDataTable;
         }
         /// <summary>
-        /// 
-        /// </summary>
-        private void UploadCountriesList()
-        {
-            string sql = "SELECT * FROM country";
-
-            DataTable dt = database.GetTable(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                string code = row["CountryCode"].ToString();
-                string name = row["CountryName"].ToString();
-
-                Country country = new Country(code, name);
-                countries.Add(country);
-            }
-        }
-        /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a világ országainak nevét és egy lista adatszerkezetbe menti őket
+        /// Metódus, amely adatforrásként szolgált a számlázó modálkis ablak ComboBox komponensének
         /// </summary>
         /// <returns>Adatokkal feltöltött listát adja vissza</returns>
         public List<Country> GetCountries()
@@ -87,36 +82,7 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
         public Dictionary<string, string> GetHungarianZipCodesAndCities()
         {
-            //Dictionary<string, string> hungarianZipCodesAndCities = new Dictionary<string, string>();
-
-            //string zipCode = string.Empty;
-            //string city = string.Empty;
-
-            //mySqlConnection.Open();
-            //Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            //mySqlCommand = new MySqlCommand()
-            //{
-            //    CommandText = "SELECT * FROM hungarian_zip_code_and_city",
-            //    Connection = mySqlConnection
-            //};
-
-            //mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            //while (mySqlDataReader.Read())
-            //{
-            //    zipCode = mySqlDataReader["ZipCode"].ToString();
-            //    city = mySqlDataReader["City"].ToString();
-            //    hungarianZipCodesAndCities.Add(zipCode, city);
-            //}
-
-            //mySqlDataReader.Close();
-            //Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
-
-            //mySqlConnection.Close();
-            //Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
-
-            //return hungarianZipCodesAndCities;
+            //   string sql = "SELECT * FROM hungarian_zip_code_and_city";
 
             return new Dictionary<string, string>();
         }
