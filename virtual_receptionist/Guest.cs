@@ -14,7 +14,7 @@
         /// <summary>
         /// Vendég nemzetisége
         /// </summary>
-        private bool nationality;
+        private string nationality;
         /// <summary>
         /// Vendég száramázási országának neve
         /// </summary>
@@ -60,10 +60,19 @@
         /// <param name="vatNumber">Céges vendég adószáma</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, bool nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
+        public Guest(string name, string nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
         {
             this.name = name;
-            this.nationality = nationality;
+
+            if (nationality == "False")
+            {
+                this.nationality = "külföldi";
+            }
+            else
+            {
+                this.nationality = "belföldi";
+            }
+
             this.country = country;
             this.zipCode = zipCode;
             this.city = city;
@@ -101,7 +110,7 @@
         /// <summary>
         /// Vendég nemzetisége
         /// </summary>
-        public bool Nationality
+        public string Nationality
         {
             get
             {
@@ -221,17 +230,6 @@
         /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            string nationality = string.Empty;
-
-            if (this.nationality == true)
-            {
-                nationality = "belföldi";
-            }
-            else
-            {
-                nationality = "külföldi";
-            }
-
             return $"{name} {nationality} {country} {zipCode} {city} {address} {vatNumber} {phoneNumber} {emailAddress}";
         }
 

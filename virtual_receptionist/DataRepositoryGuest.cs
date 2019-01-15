@@ -19,7 +19,7 @@ namespace virtual_receptionist.Model
             foreach (DataRow row in dt.Rows)
             {
                 string name = row["Name"].ToString();
-                bool nationality = bool.Parse(row["Nationality"].ToString());
+                string nationality = row["Nationality"].ToString();
                 string country = row["CountryName"].ToString();
                 string zipCode = row["ZipCode"].ToString();
                 string city = row["City"].ToString();
@@ -44,7 +44,7 @@ namespace virtual_receptionist.Model
 
             DataTable guestsDataTable = new DataTable();
             guestsDataTable.Columns.Add("Name", typeof(string));
-            guestsDataTable.Columns.Add("Nationality", typeof(bool));
+            guestsDataTable.Columns.Add("Nationality", typeof(string));
             guestsDataTable.Columns.Add("Country", typeof(string));
             guestsDataTable.Columns.Add("ZipCode", typeof(string));
             guestsDataTable.Columns.Add("City", typeof(string));
