@@ -94,7 +94,7 @@ namespace virtual_receptionist.View
             Model.DataRepository dataRepository = new Model.DataRepository();
             Model.Accomodation accomodation = dataRepository.SetAccomodation();
 
-            MessageBox.Show($"Szálláshely neve: {accomodation.Name}\nCég neve: {accomodation.Company}\nKépviselő: {accomodation.Contact}\nAdószám: {accomodation.VatNumber}\n Székhely: {accomodation.Headquarters}\n Telephely: {accomodation.Site}\n Telefonszám: {accomodation.PhoneNumber}\n E-mail cím: {accomodation.EmailAddress}", "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}", "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void toolStripMenuItemAccomodationData_MouseHover(object sender, EventArgs e)
