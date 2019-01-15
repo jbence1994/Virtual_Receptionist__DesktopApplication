@@ -58,9 +58,17 @@
             // 
             // dataGridViewRoomRents
             // 
+            this.dataGridViewRoomRents.AllowUserToAddRows = false;
+            this.dataGridViewRoomRents.AllowUserToDeleteRows = false;
+            this.dataGridViewRoomRents.AllowUserToResizeColumns = false;
+            this.dataGridViewRoomRents.AllowUserToResizeRows = false;
+            this.dataGridViewRoomRents.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRoomRents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRoomRents.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewRoomRents.MultiSelect = false;
             this.dataGridViewRoomRents.Name = "dataGridViewRoomRents";
+            this.dataGridViewRoomRents.ReadOnly = true;
+            this.dataGridViewRoomRents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRoomRents.Size = new System.Drawing.Size(922, 557);
             this.dataGridViewRoomRents.TabIndex = 7;
             // 
@@ -98,9 +106,17 @@
             // 
             // dataGridViewRooms
             // 
+            this.dataGridViewRooms.AllowUserToAddRows = false;
+            this.dataGridViewRooms.AllowUserToDeleteRows = false;
+            this.dataGridViewRooms.AllowUserToResizeColumns = false;
+            this.dataGridViewRooms.AllowUserToResizeRows = false;
+            this.dataGridViewRooms.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRooms.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewRooms.MultiSelect = false;
             this.dataGridViewRooms.Name = "dataGridViewRooms";
+            this.dataGridViewRooms.ReadOnly = true;
+            this.dataGridViewRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRooms.Size = new System.Drawing.Size(922, 557);
             this.dataGridViewRooms.TabIndex = 0;
             // 
