@@ -13,7 +13,20 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadReservationsList()
         {
-            throw new NotImplementedException();
+            string sql = "SELECT guest.Name, room.Number, reservation.NumberOfGuests, reservation.ArrivalDate, reservation.DepartureDate FROM reservation, guest, room WHERE reservation.GuestID = guest.ID AND reservation.RoomID = room.ID";
+            DataTable dt = database.Query(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Guest guest = (Guest)row["Name"];
+                Room room = (Room)row["Number"];
+                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
+                DateTime arrival = (DateTime)row["ArrivalDate"];
+                DateTime departure = (DateTime)row["DepartureDate"];
+
+                Reservation reservationInstance = new Reservation(guest, room, numberOfGuests, arrival, departure);
+                reservations.Add(reservationInstance);
+            }
         }
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobákat tartalmazó listát
@@ -31,8 +44,8 @@ namespace virtual_receptionist.Model
                 string category = row["CategoryName"].ToString();
                 int capacity = int.Parse(row["Capacity"].ToString());
 
-                Room room = new Room(name, number, category, capacity);
-                rooms.Add(room);
+                Room roomInstance = new Room(name, number, category, capacity);
+                rooms.Add(roomInstance);
             }
         }
         /// <summary>

@@ -39,6 +39,11 @@
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGuest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGuestCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
             this.tabControlRoomEditor.SuspendLayout();
             this.tabPageReservations.SuspendLayout();
@@ -50,7 +55,7 @@
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
-            this.buttonBackToMainMenu.Location = new System.Drawing.Point(881, 543);
+            this.buttonBackToMainMenu.Location = new System.Drawing.Point(881, 539);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
             this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
             this.buttonBackToMainMenu.TabIndex = 6;
@@ -68,6 +73,12 @@
             this.dataGridViewRoomRents.AllowUserToResizeRows = false;
             this.dataGridViewRoomRents.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRoomRents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRoomRents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnGuest,
+            this.ColumnRoomNumber,
+            this.ColumnGuestCapacity,
+            this.ColumnArrival,
+            this.ColumnDeparture});
             this.dataGridViewRoomRents.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewRoomRents.MultiSelect = false;
             this.dataGridViewRoomRents.Name = "dataGridViewRoomRents";
@@ -161,11 +172,46 @@
             this.ColumnCapacity.ReadOnly = true;
             this.ColumnCapacity.Width = 200;
             // 
+            // ColumnGuest
+            // 
+            this.ColumnGuest.HeaderText = "Vendég neve";
+            this.ColumnGuest.Name = "ColumnGuest";
+            this.ColumnGuest.ReadOnly = true;
+            this.ColumnGuest.Width = 200;
+            // 
+            // ColumnRoomNumber
+            // 
+            this.ColumnRoomNumber.HeaderText = "Szobaszám";
+            this.ColumnRoomNumber.Name = "ColumnRoomNumber";
+            this.ColumnRoomNumber.ReadOnly = true;
+            this.ColumnRoomNumber.Width = 200;
+            // 
+            // ColumnGuestCapacity
+            // 
+            this.ColumnGuestCapacity.HeaderText = "Vendégszám";
+            this.ColumnGuestCapacity.Name = "ColumnGuestCapacity";
+            this.ColumnGuestCapacity.ReadOnly = true;
+            this.ColumnGuestCapacity.Width = 200;
+            // 
+            // ColumnArrival
+            // 
+            this.ColumnArrival.HeaderText = "Érkezés";
+            this.ColumnArrival.Name = "ColumnArrival";
+            this.ColumnArrival.ReadOnly = true;
+            this.ColumnArrival.Width = 200;
+            // 
+            // ColumnDeparture
+            // 
+            this.ColumnDeparture.HeaderText = "Távozás";
+            this.ColumnDeparture.Name = "ColumnDeparture";
+            this.ColumnDeparture.ReadOnly = true;
+            this.ColumnDeparture.Width = 200;
+            // 
             // FormRoomEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 615);
+            this.ClientSize = new System.Drawing.Size(1048, 613);
             this.Controls.Add(this.tabControlRoomEditor);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -194,5 +240,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCapacity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGuest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGuestCapacity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArrival;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDeparture;
     }
 }
