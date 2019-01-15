@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadGuestsList()
         {
-            string sql = "SELECT * FROM guest";
+            string sql = "SELECT guest.Name, guest.Nationality, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
 
             DataTable dt = database.GetTable(sql);
 
@@ -22,7 +22,7 @@ namespace virtual_receptionist.Model
             {
                 string name = row["Name"].ToString();
                 bool nationality = bool.Parse(row["Nationality"].ToString());
-                string country = row["Country"].ToString();
+                string country = row["CountryName"].ToString();
                 string zipCode = row["ZipCode"].ToString();
                 string city = row["City"].ToString();
                 string address = row["Address"].ToString();
