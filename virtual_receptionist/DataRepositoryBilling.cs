@@ -55,44 +55,31 @@ namespace virtual_receptionist.Model
             return billingItemsDataTable;
         }
         /// <summary>
+        /// 
+        /// </summary>
+        private void UploadCountriesList()
+        {
+            string sql = "SELECT * FROM country";
+
+            DataTable dt = database.GetTable(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string code = row["CountryCode"].ToString();
+                string name = row["CountryName"].ToString();
+
+                Country country = new Country(code, name);
+                countries.Add(country);
+            }
+        }
+        /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a világ országainak nevét és egy lista adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött listát adja vissza</returns>
-        public List<string> GetCountries()
+        public List<Country> GetCountries()
         {
-            //List<string> countries = new List<string>();
-
-            //string countryName = string.Empty;
-
-            //mySqlConnection.Open();
-            //Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            //mySqlCommand = new MySqlCommand()
-            //{
-            //    CommandText = "SELECT * FROM country",
-            //    Connection = mySqlConnection
-            //};
-
-            //mySqlDataReader = mySqlCommand.ExecuteReader();
-            //Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
-
-            //while (mySqlDataReader.Read())
-            //{
-            //    countryName = mySqlDataReader["CountryName"].ToString();
-            //    countries.Add(countryName);
-            //}
-
-            //countries.Sort();
-
-            //mySqlDataReader.Close();
-            //Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
-
-            //mySqlConnection.Close();
-            //Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
-
-            //return countries;
-
-            return new List<string>();
+            UploadCountriesList();
+            return countries;
         }
         /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a magyarországi irányítószámok és települések nevét és egy szótár adatszerkezetbe menti őket
