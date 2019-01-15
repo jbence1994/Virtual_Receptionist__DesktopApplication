@@ -16,43 +16,22 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void GetBillingItemsToList()
         {
-            try
-            {
-                mySqlConnection.Open();
-                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+            string sql = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
 
-                mySqlCommand = new MySqlCommand()
-                {
-                    CommandText = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID",
-                    Connection = mySqlConnection
-                };
+            database.OpenConnection();
+            DataTable billingItemsDataTable = database.GetTable(sql);
+            database.CloseConnection();
 
-                mySqlDataReader = mySqlCommand.ExecuteReader();
+            foreach (DataRow row in billingItemsDataTable.Rows)
+            {
+                string name = row["BillingItemName"].ToString();
+                string category = row["BillingItemCategory"].ToString();
+                double vat = double.Parse(row["VAT"].ToString());
+                string unit = row["Unit"].ToString();
+                double price = double.Parse(row["Price"].ToString());
 
-                while (mySqlDataReader.Read())
-                {
-                    string name = mySqlDataReader["BillingItemName"].ToString();
-                    string category = mySqlDataReader["BillingItemCategoryName"].ToString();
-                    double vat = double.Parse(mySqlDataReader["VAT"].ToString());
-                    string unit = mySqlDataReader["Unit"].ToString();
-                    double price = double.Parse(mySqlDataReader["Price"].ToString());
-
-                    BillingItems items = new BillingItems(name, category, vat, unit, price);
-                    billingItems.Add(items);
-                }
-            }
-            catch (MySqlException e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-            finally
-            {
-                mySqlConnection.Close();
-                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                BillingItems items = new BillingItems(name, category, vat, unit, price);
+                billingItems.Add(items);
             }
         }
         /// <summary>

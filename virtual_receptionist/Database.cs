@@ -89,10 +89,21 @@ namespace virtual_receptionist.Model
         /// </summary>
         public void OpenConnection()
         {
-            if (mySqlConnection.State == ConnectionState.Closed)
+            try
             {
-                mySqlConnection.Open();
-                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+                if (mySqlConnection.State == ConnectionState.Closed)
+                {
+                    mySqlConnection.Open();
+                    Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+                }
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
             }
         }
         /// <summary>
@@ -111,7 +122,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <param name="sql">SQL lekérdezés</param>
         /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
-        public DataTable GetDataToDataTable(string sql)
+        public DataTable GetTable(string sql)
         {
             DataTable dataTable = new DataTable();
 
