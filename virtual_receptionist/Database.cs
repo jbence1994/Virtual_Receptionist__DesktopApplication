@@ -75,7 +75,7 @@ namespace virtual_receptionist.Model
         #region Metódusok
 
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az adatbázis kapcsolódás útvonalát
         /// </summary>
         private void InitializeConnection(string server, string database, string username, string password, string port)
         {
@@ -119,7 +119,7 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Adatbázistáblát teljes egészében leolvasó és DataTable típusba adatszerkezetbe mentő metódus 
+        /// Adatbázistáblát teljes egészében leolvasó és DataTable típusba adatszerkezetbe mentő metódus
         /// </summary>
         /// <param name="sql">SQL lekérdezés</param>
         /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
@@ -163,14 +163,40 @@ namespace virtual_receptionist.Model
             return dataTable;
         }
         /// <summary>
-        /// 
+        /// Adatbázistáblát manipuláló SQL szkriptet végrehajtó eljárás
         /// </summary>
         /// <param name="sql"></param>
         /// <returns></returns>
-        public void ManipulationQuery(string sql)
+        public void ManipulationQuery(string sql, DataTable dataTable)
         {
+            OpenConnection();
 
-        }
+            try
+            {
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = sql,
+                    Connection = mySqlConnection
+                };
+
+                mySqlCommand.ExecuteNonQuery();
+
+                mySqlDataAdapter.DeleteCommand = mySqlCommandBuilder.GetDeleteCommand();
+                mySqlDataAdapter.InsertCommand = mySqlCommandBuilder.GetInsertCommand();
+                mySqlDataAdapter.UpdateCommand = mySqlCommandBuilder.GetUpdateCommand();
+                mySqlDataAdapter.Update(dataTable);
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
+            CloseConnection();
+        } // <= Tesztelni !!!
 
         #endregion
     }
