@@ -1,6 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System;
 using System.Data;
-using System.Diagnostics;
 
 namespace virtual_receptionist.Model
 {
@@ -13,7 +12,9 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetReservations()
-        { return new DataTable(); }
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }

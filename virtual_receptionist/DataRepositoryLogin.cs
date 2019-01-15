@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using MySql.Data.MySqlClient;
 
 namespace virtual_receptionist.Model
 {

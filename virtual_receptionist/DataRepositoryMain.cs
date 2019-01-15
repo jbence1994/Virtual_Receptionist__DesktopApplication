@@ -3,7 +3,7 @@
 namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Az alkalmazáshoz szükséges adatokat tároló (adattár) osztály, amely az üzleti logikáért felel
+    /// Az alkalmazáshoz szükséges adatokat tároló adattár osztály, amely az alkalmazás üzleti logikájáért is felel
     /// </summary>
     public partial class DataRepository
     {
@@ -43,7 +43,7 @@ namespace virtual_receptionist.Model
         #region Konstruktor
 
         /// <summary>
-        /// Konstruktor
+        /// Adattár konstruktora
         /// </summary>
         public DataRepository()
         {

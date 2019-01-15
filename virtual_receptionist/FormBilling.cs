@@ -23,10 +23,6 @@ namespace virtual_receptionist.View
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBilling formModalBilling;
-        /// <summary>
-        /// Számlázási tételeket tartalmazó DataTable adatszerkezet
-        /// </summary>
-        private DataTable billingItems;
 
         #endregion
 
@@ -48,7 +44,7 @@ namespace virtual_receptionist.View
 
         private void FormBilling_Load(object sender, EventArgs e)
         {
-            dataGridViewItems.DataSource = billingItems;
+
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)

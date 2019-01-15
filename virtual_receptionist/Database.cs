@@ -119,7 +119,7 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Adatbázistáblát teljes egészében leolvasó és DataTable (adattábla/adatkonténerbe) leolvasó metódus 
+        /// Adatbázistáblát teljes egészében leolvasó és DataTable típusba adatszerkezetbe mentő metódus 
         /// </summary>
         /// <param name="sql">SQL lekérdezés</param>
         /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
