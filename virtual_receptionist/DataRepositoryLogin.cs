@@ -26,49 +26,51 @@ namespace virtual_receptionist.Model
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public bool Authentication(string username, string password, string usernameTableField, string passwordTableField)
         {
-            bool validEntry = false;
+            //bool validEntry = false;
 
-            try
-            {
-                mySqlConnection.Open();
-                Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+            //try
+            //{
+            //    mySqlConnection.Open();
+            //    Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
 
-                mySqlDataReader = mySqlCommand.ExecuteReader();
-                Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
+            //    mySqlDataReader = mySqlCommand.ExecuteReader();
+            //    Debug.WriteLine("MySqlDataReader olvasás sikeresen elindult...");
 
-                while (mySqlDataReader.Read())
-                {
-                    string validUsername = string.Empty;
-                    string validPassword = string.Empty;
+            //    while (mySqlDataReader.Read())
+            //    {
+            //        string validUsername = string.Empty;
+            //        string validPassword = string.Empty;
 
-                    validUsername = mySqlDataReader[usernameTableField].ToString();
-                    validPassword = mySqlDataReader[passwordTableField].ToString();
+            //        validUsername = mySqlDataReader[usernameTableField].ToString();
+            //        validPassword = mySqlDataReader[passwordTableField].ToString();
 
-                    if (username == validUsername && password == validPassword)
-                    {
-                        validEntry = true;
-                        break;
-                    }
-                }
-            }
-            catch (MySqlException e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-            finally
-            {
-                mySqlDataReader.Close();
-                Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
+            //        if (username == validUsername && password == validPassword)
+            //        {
+            //            validEntry = true;
+            //            break;
+            //        }
+            //    }
+            //}
+            //catch (MySqlException e)
+            //{
+            //    Debug.WriteLine(e.Message);
+            //}
+            //catch (Exception e)
+            //{
+            //    Debug.WriteLine(e.Message);
+            //}
+            //finally
+            //{
+            //    mySqlDataReader.Close();
+            //    Debug.WriteLine("MySqlDataReader olvasás sikeresen befejeződött...");
 
-                mySqlConnection.Close();
-                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
-            }
+            //    mySqlConnection.Close();
+            //    Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+            //}
 
-            return validEntry;
+            //return validEntry;
+
+            return true;
         }
 
         #endregion
