@@ -87,11 +87,11 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely beállítja az adott szálláshely tulajdonságait
         /// </summary>
-        private void SetAccomodation()
+        public Accomodation SetAccomodation()
         {
             string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_registration.AccomodationID, accomodation_registration.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
             DataTable dt = database.GetTable(sql);
-
+            Accomodation accomodation = null;
             foreach (DataRow row in dt.Rows)
             {
                 string name = row["AccomodationName"].ToString();
@@ -105,9 +105,9 @@ namespace virtual_receptionist.Model
                 string accomodationID = row["AccomodationID"].ToString();
                 string password = row["Password"].ToString();
 
-                Accomodation accomodation = new Accomodation(name, company, contact, vat, headquarters, site, phoneNumber, emailAddress, accomodationID, password);
+                accomodation = new Accomodation(name, company, contact, vat, headquarters, site, phoneNumber, emailAddress, accomodationID, password);
             }
-
+            return accomodation;
         }
 
         #endregion

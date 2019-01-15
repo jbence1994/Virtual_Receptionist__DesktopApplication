@@ -91,7 +91,12 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
+            Model.DataRepository dataRepository = new Model.DataRepository();
+
+            Model.Accomodation accomodation = dataRepository.SetAccomodation();
+
+
+            MessageBox.Show($"Szálláshely neve: {accomodation.Name}\nCég neve: {accomodation.Company}   ");
         }
 
         private void toolStripMenuItemAccomodationData_MouseHover(object sender, EventArgs e)
