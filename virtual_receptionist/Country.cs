@@ -24,10 +24,10 @@ namespace virtual_receptionist.Model
 
         #endregion
 
-        #region Konstruktor
+        #region Konstruktorok
 
         /// <summary>
-        /// 
+        /// Country osztály konstruktora
         /// </summary>
         /// <param name="code">Ország kódja</param>
         /// <param name="name">Ország neve</param>
@@ -35,6 +35,13 @@ namespace virtual_receptionist.Model
         {
             this.code = code;
             this.name = name;
+        }
+        /// <summary>
+        /// Country osztály üres konstruktora
+        /// </summary>
+        public Country()
+        {
+
         }
 
         #endregion
@@ -74,6 +81,10 @@ namespace virtual_receptionist.Model
 
         #region Metódusok
 
+        /// <summary>
+        /// Country osztályból készült objektum string típusúvá alakítása
+        /// </summary>
+        /// <returns>Visszaadja a Country típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
             return $"{code} {name}";

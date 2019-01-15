@@ -45,13 +45,6 @@
         #region Konstruktorok
 
         /// <summary>
-        /// Accomodation osztály üres konstruktora
-        /// </summary>
-        public Accomodation()
-        {
-
-        }
-        /// <summary>
         /// Accomodation osztály konstruktora
         /// </summary>
         /// <param name="name">Szálláshely neve</param>
@@ -72,6 +65,13 @@
             this.site = site;
             this.telephoneNumber = telephoneNumber;
             this.emailAddress = emailAddress;
+        }
+        /// <summary>
+        /// Accomodation osztály üres konstruktora
+        /// </summary>
+        public Accomodation()
+        {
+
         }
 
         #endregion

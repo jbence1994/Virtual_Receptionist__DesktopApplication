@@ -116,6 +116,7 @@
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Guest.cs" />
+    <Compile Include="HungarianZipCodesAndCities.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
