@@ -82,6 +82,14 @@
             this.emailAddress = emailAddress;
         }
         /// <summary>
+        /// Guest osztály konstruktora
+        /// </summary>
+        /// <param name="name">Vendég neve</param>
+        public Guest(string name)
+        {
+            this.name = name;
+        }
+        /// <summary>
         /// Guest osztály üres konstruktora
         /// </summary>
         public Guest()
