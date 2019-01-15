@@ -90,7 +90,7 @@ namespace virtual_receptionist.Model
         public Accomodation SetAccomodation()
         {
             string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_registration.AccomodationID, accomodation_registration.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
-            DataTable dt = database.GetTable(sql);
+            DataTable dt = database.Query(sql);
             Accomodation accomodation = null;
             foreach (DataRow row in dt.Rows)
             {

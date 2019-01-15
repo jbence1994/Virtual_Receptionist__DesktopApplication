@@ -15,7 +15,7 @@ namespace virtual_receptionist.Model
         {
             string sql = "SELECT guest.Name, guest.Nationality, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
 
-            DataTable dt = database.GetTable(sql);
+            DataTable dt = database.Query(sql);
 
             foreach (DataRow row in dt.Rows)
             {

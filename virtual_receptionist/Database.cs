@@ -26,7 +26,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlDataAdapter mySqlDataAdapter;
         /// <summary>
-        /// SQL DML és DDL parancsokat végrehajtó osztály egy példánya
+        /// SQL DML parancsokat végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
         /// <summary>
@@ -123,7 +123,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <param name="sql">SQL lekérdezés</param>
         /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
-        public DataTable GetTable(string sql)
+        public DataTable Query(string sql)
         {
             OpenConnection();
 
@@ -161,6 +161,15 @@ namespace virtual_receptionist.Model
             CloseConnection();
 
             return dataTable;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public void ManipulationQuery(string sql)
+        {
+
         }
 
         #endregion
