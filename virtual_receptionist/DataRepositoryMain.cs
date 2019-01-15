@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using MySql.Data.MySqlClient;
 
 namespace virtual_receptionist.Model
 {
@@ -28,7 +27,7 @@ namespace virtual_receptionist.Model
         #region Konstruktor
 
         /// <summary>
-        /// Adattár konstruktora
+        /// Konstruktor
         /// </summary>
         public DataRepository()
         {

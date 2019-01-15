@@ -49,7 +49,7 @@
         #region Konstruktorok
 
         /// <summary>
-        /// Guest osztály konstruktora (vállalati vendég esetén)
+        /// Guest osztály konstruktora
         /// </summary>
         /// <param name="name">Vendég neve</param>
         /// <param name="nationality">Vendég nemzetisége</param>
@@ -69,29 +69,6 @@
             this.city = city;
             this.address = address;
             this.vatNumber = vatNumber;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
-        }
-        /// <summary>
-        /// Guest osztály konstruktora (magán vendég esetén)
-        /// </summary>
-        /// <param name="name">Vendég neve</param>
-        ///<param name="nationality">Vendég nemzetisége</param>
-        /// <param name="country">Vendég száramázási országának neve</param>
-        /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
-        /// <param name="city">Vendég lakhelyének települése</param>
-        /// <param name="address">Vendég lakhelyének címe (utca, házszám)</param>
-        /// <param name="vatNumber">Céges vendég adószáma</param>
-        /// <param name="phoneNumber">Vendég telefonszáma</param>
-        /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, bool nationality, string country, string zipCode, string city, string address, string phoneNumber, string emailAddress)
-        {
-            this.name = name;
-            this.nationality = nationality;
-            this.country = country;
-            this.zipCode = zipCode;
-            this.city = city;
-            this.address = address;
             this.phoneNumber = phoneNumber;
             this.emailAddress = emailAddress;
         }

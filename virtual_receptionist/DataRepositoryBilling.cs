@@ -14,13 +14,13 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és lista adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        private void InjectBillingItemsIntoList()
+        private void UploadBillingItemsList()
         {
             string sql = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
 
-            DataTable billingItemsDataTable = database.GetTable(sql);
+            DataTable dt = database.GetTable(sql);
 
-            foreach (DataRow row in billingItemsDataTable.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 string name = row["BillingItemName"].ToString();
                 string category = row["BillingItemCategoryName"].ToString();
@@ -28,8 +28,8 @@ namespace virtual_receptionist.Model
                 string unit = row["Unit"].ToString();
                 double price = double.Parse(row["Price"].ToString());
 
-                BillingItems items = new BillingItems(name, category, vat, unit, price);
-                billingItems.Add(items);
+                BillingItems billingItemInstance = new BillingItems(name, category, vat, unit, price);
+                billingItems.Add(billingItemInstance);
             }
         }
         /// <summary>
@@ -38,21 +38,21 @@ namespace virtual_receptionist.Model
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable GetBillingItems()
         {
-            InjectBillingItemsIntoList();
+            UploadBillingItemsList();
 
-            DataTable items = new DataTable();
-            items.Columns.Add("Name", typeof(string));
-            items.Columns.Add("Price", typeof(double));
-            items.Columns.Add("VAT", typeof(double));
-            items.Columns.Add("Category", typeof(string));
-            items.Columns.Add("Unit", typeof(string));
+            DataTable billingItemsDataTable = new DataTable();
+            billingItemsDataTable.Columns.Add("Name", typeof(string));
+            billingItemsDataTable.Columns.Add("Price", typeof(double));
+            billingItemsDataTable.Columns.Add("VAT", typeof(double));
+            billingItemsDataTable.Columns.Add("Category", typeof(string));
+            billingItemsDataTable.Columns.Add("Unit", typeof(string));
 
             foreach (BillingItems item in billingItems)
             {
-                items.Rows.Add(item.Name, item.Price, item.Vat, item.Category, item.Unit);
+                billingItemsDataTable.Rows.Add(item.Name, item.Price, item.Vat, item.Category, item.Unit);
             }
 
-            return items;
+            return billingItemsDataTable;
         }
         /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a világ országainak nevét és egy lista adatszerkezetbe menti őket
