@@ -13,35 +13,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetReservations()
-        {
-            DataTable reservations = new DataTable();
-
-            mySqlConnection.Open();
-            Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-            mySqlCommand = new MySqlCommand()
-            {
-                CommandText = "SELECT * FROM reservation",
-                Connection = mySqlConnection
-            };
-
-            mySqlDataAdapter = new MySqlDataAdapter()
-            {
-                SelectCommand = mySqlCommand
-            };
-
-            mySqlCommandBuilder = new MySqlCommandBuilder()
-            {
-                DataAdapter = mySqlDataAdapter
-            };
-
-            mySqlDataAdapter.Fill(reservations);
-
-            mySqlConnection.Close();
-            Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
-            
-            return reservations;
-        }
+        { return new DataTable(); }
 
         #endregion
     }

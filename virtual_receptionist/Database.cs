@@ -7,7 +7,7 @@ using System.Data;
 namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító osztály
+    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító ORM osztály
     /// </summary>
     public class Database
     {

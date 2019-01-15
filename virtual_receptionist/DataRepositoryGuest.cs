@@ -17,7 +17,7 @@ namespace virtual_receptionist.Model
         /// <exception cref="Exception"></exception>
         public DataTable GetGuests()
         {
-            DataTable guests = new DataTable();
+            DataTable guests;
 
             try
             {

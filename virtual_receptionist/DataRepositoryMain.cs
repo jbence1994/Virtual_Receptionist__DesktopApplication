@@ -31,9 +31,17 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
         /// <summary>
+        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító ORM osztály egy példánya
+        /// </summary>
+        private Database database;
+        /// <summary>
         /// Számlázási tételeket tartalmazó adatszerkezet
         /// </summary>
         private List<BillingItems> billingItems;
+        /// <summary>
+        /// Vendégeket tartalmazó adatszerkezet
+        /// </summary>
+        private List<Guest> guests;        
 
         #endregion
 
@@ -49,7 +57,9 @@ namespace virtual_receptionist.Model
                 ConnectionString = $"SERVER=127.0.0.1;DATABASE=virtual_receptionist;UID=root;PASSWORD=;PORT=3306"
             };
 
+            database = new Database();
             billingItems = new List<BillingItems>();
+            guests = new List<Guest>();
         }
 
         #endregion
