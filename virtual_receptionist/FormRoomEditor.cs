@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace virtual_receptionist.View
 {
     /// <summary>
-    /// Foglalás-kezelő ablak
+    /// Szoba kezelő ablak
     /// </summary>
     public partial class FormRoomEditor : Form
     {
@@ -32,7 +32,12 @@ namespace virtual_receptionist.View
         #endregion
 
         #region UI események
-        
+
+        private void FormRoomEditor_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             Close();

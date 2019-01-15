@@ -115,6 +115,7 @@
             this.Name = "FormRoomEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szoba kezelő | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormRoomEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).EndInit();
             this.tabControlRoomEditor.ResumeLayout(false);
             this.tabPageReservations.ResumeLayout(false);

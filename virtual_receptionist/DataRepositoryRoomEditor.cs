@@ -62,7 +62,6 @@ namespace virtual_receptionist.Model
                 roomsDataTable.Rows.Add(room.Name, room.Number, room.Category, room.Capacity);
             }
 
-
             return roomsDataTable;
         }
 

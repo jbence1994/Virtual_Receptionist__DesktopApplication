@@ -37,6 +37,7 @@
         /// <param name="capacity">Szoba férőhelye</param>
         public Room(string name, int number, string category, int capacity)
         {
+            this.name = name;
             this.number = number;
             this.category = category;
             this.capacity = capacity;
