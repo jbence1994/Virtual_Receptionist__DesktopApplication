@@ -8,7 +8,7 @@ namespace virtual_receptionist.Model
         #region Számlázó modul metódusai
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és lista adatszerkezetek menti őket
+        /// Metódus, amely adatbázisból feltölti a számlázási tételeket tartalmazó listát
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadBillingItemsList()
@@ -29,7 +29,7 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa az országok kódjait, neveit és lista adatszerkezetek menti őket
+        /// Metódus, amely adatbázisból feltölti az országok kódjait és neveit tartalmazó listát
         /// </summary>
         private void UploadCountriesList()
         {
@@ -41,8 +41,25 @@ namespace virtual_receptionist.Model
                 string code = row["CountryCode"].ToString();
                 string name = row["CountryName"].ToString();
 
-                Country country = new Country(code, name);
-                countries.Add(country);
+                Country countryInstance = new Country(code, name);
+                countries.Add(countryInstance);
+            }
+        }
+        /// <summary>
+        /// Metódus, amely adatbázisból feltölti a magyarországi irányítószámokat és településeket tartalmazó listát
+        /// </summary>
+        private void UploadHungarianZipCodesAndCitiesList()
+        {
+            string sql = "SELECT * FROM hungarian_zip_code_and_city";
+            DataTable dt = database.GetTable(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string zipCode = row["ZipCode"].ToString();
+                string city = row["City"].ToString();
+
+                HungarianZipCodesAndCities hungarianZipCodesAndCitiesInstance = new HungarianZipCodesAndCities(zipCode, city);
+                hungarianZipCodesAndCities.Add(hungarianZipCodesAndCitiesInstance);
             }
         }
         /// <summary>
@@ -68,7 +85,7 @@ namespace virtual_receptionist.Model
             return billingItemsDataTable;
         }
         /// <summary>
-        /// Metódus, amely adatforrásként szolgált a számlázó modálkis ablak ComboBox komponensének
+        /// Metódus, amely adatforrásként szolgált a számlázó modális ablak ComboBox komponensének
         /// </summary>
         /// <returns>Adatokkal feltöltött listát adja vissza</returns>
         public List<Country> GetCountries()
@@ -77,14 +94,13 @@ namespace virtual_receptionist.Model
             return countries;
         }
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a magyarországi irányítószámok és települések nevét és egy szótár adatszerkezetbe menti őket
+        /// Metódus, amely adatforrásként szolgált a számlázó modális ablak ComboBox komponensének
         /// </summary>
         /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
-        public Dictionary<string, string> GetHungarianZipCodesAndCities()
+        public List<HungarianZipCodesAndCities> GetHungarianZipCodesAndCities()
         {
-            //   string sql = "SELECT * FROM hungarian_zip_code_and_city";
-
-            return new Dictionary<string, string>();
+            UploadHungarianZipCodesAndCitiesList();
+            return hungarianZipCodesAndCities;
         }
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít
