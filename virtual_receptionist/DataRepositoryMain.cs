@@ -29,6 +29,14 @@ namespace virtual_receptionist.Model
         /// Magyarországi irányítószámokat és településeket tartalmazó lista
         /// </summary>
         private List<HungarianZipCodesAndCities> hungarianZipCodesAndCities;
+        /// <summary>
+        /// Szobákat tartalmazó lista
+        /// </summary>
+        private List<Room> rooms;
+        /// <summary>
+        /// Foglalásokat tartalmazó lista
+        /// </summary>
+        private List<Reservation> reservations;
 
         #endregion
 
@@ -40,10 +48,13 @@ namespace virtual_receptionist.Model
         public DataRepository()
         {
             database = new Database();
+
             billingItems = new List<BillingItems>();
             guests = new List<Guest>();
             countries = new List<Country>();
             hungarianZipCodesAndCities = new List<HungarianZipCodesAndCities>();
+            rooms = new List<Room>();
+            reservations = new List<Reservation>();
         }
 
         #endregion
