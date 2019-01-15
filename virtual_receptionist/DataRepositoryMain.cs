@@ -11,26 +11,6 @@ namespace virtual_receptionist.Model
         #region Adattagok
 
         /// <summary>
-        /// Adatbázis kapcsolatot létrehozó mező
-        /// </summary>
-        private MySqlConnection mySqlConnection;
-        /// <summary>
-        /// SQL utasítást vágrehajtó mező
-        /// </summary>
-        private MySqlCommand mySqlCommand;
-        /// <summary>
-        /// Adatbázis adatot olvasó mező
-        /// </summary>
-        private MySqlDataReader mySqlDataReader;
-        /// <summary>
-        /// Adatszerkezeteket adattal feltöltő osztály egy példánya
-        /// </summary>
-        private MySqlDataAdapter mySqlDataAdapter;
-        /// <summary>
-        /// SQL DML és DDL parancsokat  végrehajtó osztály egy példánya
-        /// </summary>
-        private MySqlCommandBuilder mySqlCommandBuilder;
-        /// <summary>
         /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító ORM osztály egy példánya
         /// </summary>
         private Database database;
@@ -41,7 +21,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendégeket tartalmazó adatszerkezet
         /// </summary>
-        private List<Guest> guests;        
+        private List<Guest> guests;
 
         #endregion
 
@@ -52,11 +32,6 @@ namespace virtual_receptionist.Model
         /// </summary>
         public DataRepository()
         {
-            mySqlConnection = new MySqlConnection()
-            {
-                ConnectionString = $"SERVER=127.0.0.1;DATABASE=virtual_receptionist;UID=root;PASSWORD=;PORT=3306"
-            };
-
             database = new Database();
             billingItems = new List<BillingItems>();
             guests = new List<Guest>();
