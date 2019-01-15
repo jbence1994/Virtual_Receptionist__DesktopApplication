@@ -53,6 +53,8 @@ namespace virtual_receptionist.Model
         /// </summary>
         public DataRepository()
         {
+            SetAccomodation();
+
             database = new Database();
 
             billingItems = new List<BillingItems>();
@@ -83,9 +85,9 @@ namespace virtual_receptionist.Model
         #region Metódusok
 
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az adott szálláshely tulajdonságait
         /// </summary>
-        public void SetAccomodation()
+        private void SetAccomodation()
         {
             string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_registration.AccomodationID, accomodation_registration.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
             DataTable dt = database.GetTable(sql);
@@ -104,7 +106,6 @@ namespace virtual_receptionist.Model
                 string password = row["Password"].ToString();
 
                 Accomodation accomodation = new Accomodation(name, company, contact, vat, headquarters, site, phoneNumber, emailAddress, accomodationID, password);
-
             }
 
         }
