@@ -174,6 +174,7 @@
             // 
             // ColumnGuest
             // 
+            this.ColumnGuest.DataPropertyName = "GuestName";
             this.ColumnGuest.HeaderText = "Vendég neve";
             this.ColumnGuest.Name = "ColumnGuest";
             this.ColumnGuest.ReadOnly = true;
@@ -181,6 +182,7 @@
             // 
             // ColumnRoomNumber
             // 
+            this.ColumnRoomNumber.DataPropertyName = "RoomNumber";
             this.ColumnRoomNumber.HeaderText = "Szobaszám";
             this.ColumnRoomNumber.Name = "ColumnRoomNumber";
             this.ColumnRoomNumber.ReadOnly = true;
@@ -188,6 +190,7 @@
             // 
             // ColumnGuestCapacity
             // 
+            this.ColumnGuestCapacity.DataPropertyName = "NumberOfGuests";
             this.ColumnGuestCapacity.HeaderText = "Vendégszám";
             this.ColumnGuestCapacity.Name = "ColumnGuestCapacity";
             this.ColumnGuestCapacity.ReadOnly = true;
@@ -195,6 +198,7 @@
             // 
             // ColumnArrival
             // 
+            this.ColumnArrival.DataPropertyName = "ArrivalDate";
             this.ColumnArrival.HeaderText = "Érkezés";
             this.ColumnArrival.Name = "ColumnArrival";
             this.ColumnArrival.ReadOnly = true;
@@ -202,6 +206,7 @@
             // 
             // ColumnDeparture
             // 
+            this.ColumnDeparture.DataPropertyName = "DepartureDate";
             this.ColumnDeparture.HeaderText = "Távozás";
             this.ColumnDeparture.Name = "ColumnDeparture";
             this.ColumnDeparture.ReadOnly = true;

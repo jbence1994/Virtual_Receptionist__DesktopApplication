@@ -36,6 +36,7 @@ namespace virtual_receptionist.View
         private void FormRoomEditor_Load(object sender, EventArgs e)
         {
             Model.DataRepository dataRepository = new Model.DataRepository();
+            dataGridViewRoomRents.DataSource = dataRepository.GetReservations();
             dataGridViewRooms.DataSource = dataRepository.GetRooms();
         }
 

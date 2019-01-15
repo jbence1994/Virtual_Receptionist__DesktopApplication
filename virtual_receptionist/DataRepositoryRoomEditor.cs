@@ -18,7 +18,7 @@ namespace virtual_receptionist.Model
 
             foreach (DataRow row in dt.Rows)
             {
-                Guest guest = (Guest)row["Name"];
+                Guest guest = (Guest)row["Name"]; // <= InvalidCastException
                 Room room = (Room)row["Number"];
                 int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
                 DateTime arrival = (DateTime)row["ArrivalDate"];
@@ -52,7 +52,7 @@ namespace virtual_receptionist.Model
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable GetGetReservations()
+        public DataTable GetReservations()
         {
             UploadReservationsList();
 
