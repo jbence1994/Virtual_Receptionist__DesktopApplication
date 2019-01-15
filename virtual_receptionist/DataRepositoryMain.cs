@@ -14,13 +14,17 @@ namespace virtual_receptionist.Model
         /// </summary>
         private Database database;
         /// <summary>
-        /// Számlázási tételeket tartalmazó adatszerkezet
+        /// Számlázási tételeket tartalmazó lista
         /// </summary>
         private List<BillingItems> billingItems;
         /// <summary>
-        /// Vendégeket tartalmazó adatszerkezet
+        /// Vendégeket tartalmazó lista
         /// </summary>
         private List<Guest> guests;
+        /// <summary>
+        /// Orszgáokat tartalmazó lista
+        /// </summary>
+        private List<Country> countries;
 
         #endregion
 
@@ -34,6 +38,7 @@ namespace virtual_receptionist.Model
             database = new Database();
             billingItems = new List<BillingItems>();
             guests = new List<Guest>();
+            countries = new List<Country>();
         }
 
         #endregion

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Accomodation.cs" />
     <Compile Include="BillingItems.cs" />
+    <Compile Include="Country.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DataRepositoryGuest.cs" />
     <Compile Include="DataRepositoryBilling.cs" />
