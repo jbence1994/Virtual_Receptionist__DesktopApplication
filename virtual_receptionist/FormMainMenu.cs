@@ -28,7 +28,10 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
+            Model.DataRepository dataRepository = new Model.DataRepository();
+            Model.Accomodation accomodation = dataRepository.SetAccomodation();
             toolStripStatusLabelClient.Text += Model.DataRepository.Client;
+            Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
