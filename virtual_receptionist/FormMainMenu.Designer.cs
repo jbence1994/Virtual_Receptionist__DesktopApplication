@@ -112,6 +112,8 @@
             this.toolStripMenuItemAccomodationData.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemAccomodationData.Text = "Szálláshely adatai";
             this.toolStripMenuItemAccomodationData.Click += new System.EventHandler(this.toolStripMenuItemAccomodationData_Click);
+            this.toolStripMenuItemAccomodationData.MouseLeave += new System.EventHandler(this.toolStripMenuItemAccomodationData_MouseLeave);
+            this.toolStripMenuItemAccomodationData.MouseHover += new System.EventHandler(this.toolStripMenuItemAccomodationData_MouseHover);
             // 
             // toolStripSeparator1
             // 
@@ -142,6 +144,8 @@
             this.toolStripMenuItemQuit.Size = new System.Drawing.Size(56, 20);
             this.toolStripMenuItemQuit.Text = "Kilépés";
             this.toolStripMenuItemQuit.Click += new System.EventHandler(this.toolStripMenuItemQuit_Click);
+            this.toolStripMenuItemQuit.MouseLeave += new System.EventHandler(this.toolStripMenuItemQuit_MouseLeave);
+            this.toolStripMenuItemQuit.MouseHover += new System.EventHandler(this.toolStripMenuItemQuit_MouseHover);
             // 
             // statusStripMainMenu
             // 

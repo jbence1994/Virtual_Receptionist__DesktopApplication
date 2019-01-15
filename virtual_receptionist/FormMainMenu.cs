@@ -37,54 +37,6 @@ namespace virtual_receptionist.View
             formRoomEditor.ShowDialog();
         }
 
-        private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
-        {
-            FormGuestDatabase formGuestDatabase = new FormGuestDatabase(this);
-            formGuestDatabase.ShowDialog();
-        }
-
-        private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
-        {
-            FormBilling formBilling = new FormBilling(this);
-            formBilling.ShowDialog();
-        }
-
-        private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test");
-        }
-
-        private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
-        {
-            // CHM
-        }
-
-        private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
-        {
-            FormAboutUs formAboutUs = new FormAboutUs();
-            formAboutUs.ShowDialog();
-        }
-
-        private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Segítség";
-        }
-
-        private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = string.Empty;
-        }
-
-        private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Névjegy";
-        }
-
-        private void toolStripMenuItemAboutUs_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = string.Empty;
-        }
-
         private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = "Szobakiadások és foglalások";
@@ -95,6 +47,12 @@ namespace virtual_receptionist.View
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
+        private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
+        {
+            FormGuestDatabase formGuestDatabase = new FormGuestDatabase(this);
+            formGuestDatabase.ShowDialog();
+        }
+
         private void toolStripMenuItemGuestDatabase_MouseHover(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
@@ -103,6 +61,12 @@ namespace virtual_receptionist.View
         private void toolStripMenuItemGuestDatabase_MouseLeave(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
+        {
+            FormBilling formBilling = new FormBilling(this);
+            formBilling.ShowDialog();
         }
 
         private void toolStripMenuItemBilling_MouseHover(object sender, EventArgs e)
@@ -125,14 +89,70 @@ namespace virtual_receptionist.View
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
+        private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void toolStripMenuItemAccomodationData_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Szálláshely adatai";
+        }
+
+        private void toolStripMenuItemAccomodationData_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
+        {
+            // CHM
+        }
+
+        private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Segítség";
+        }
+
+        private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
+        private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
+        {
+            FormAboutUs formAboutUs = new FormAboutUs();
+            formAboutUs.ShowDialog();
+        }
+
+        private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Névjegy";
+        }
+
+        private void toolStripMenuItemAboutUs_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+
         private void toolStripMenuItemQuit_Click(object sender, EventArgs e)
         {
-            var exit = MessageBox.Show("Biztosan ki akar lépni?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult exit = MessageBox.Show("Biztosan ki akar lépni?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (exit == DialogResult.Yes)
             {
                 Environment.Exit(0);
             }
+        }
+
+        private void toolStripMenuItemQuit_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = "Kilépés";
+        }
+
+        private void toolStripMenuItemQuit_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
         #endregion
