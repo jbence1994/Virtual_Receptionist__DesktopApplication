@@ -137,7 +137,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemQuit_Click(object sender, EventArgs e)
         {
-            DialogResult exit = MessageBox.Show("Biztosan ki akar lépni?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult exit = MessageBox.Show("Kilép az alkalmazásból?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (exit == DialogResult.Yes)
             {
