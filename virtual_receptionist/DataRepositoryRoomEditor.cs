@@ -54,7 +54,21 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetGetReservations()
         {
-            throw new NotImplementedException();
+            UploadReservationsList();
+
+            DataTable reservationsDataTable = new DataTable();
+            reservationsDataTable.Columns.Add("GuestName", typeof(Guest));
+            reservationsDataTable.Columns.Add("RoomNumber", typeof(Room));
+            reservationsDataTable.Columns.Add("NumberOfGuests", typeof(int));
+            reservationsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
+            reservationsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
+
+            foreach (Reservation reservation in reservations)
+            {
+                reservationsDataTable.Rows.Add(reservation.Guest, reservation.Room, reservation.NumberOfGuests, reservation.Arrival, reservation.Departure);
+            }
+
+            return reservationsDataTable;
         }
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szoba adatát egy DataTable adatszerkezetben
