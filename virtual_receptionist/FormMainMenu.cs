@@ -28,8 +28,7 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            //toolStripStatusLabelClient.Text += DefaultController.Client;
-            //Text += $"{DefaultController.Accomodation.Company} ({DefaultController.Accomodation.VatNumber})";
+            toolStripStatusLabelClient.Text += Model.DataRepository.Client;
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
@@ -48,6 +47,11 @@ namespace virtual_receptionist.View
         {
             FormBilling formBilling = new FormBilling(this);
             formBilling.ShowDialog();
+        }
+
+        private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
         }
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)

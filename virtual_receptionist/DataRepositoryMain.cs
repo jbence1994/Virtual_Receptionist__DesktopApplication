@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace virtual_receptionist.Model
 {
@@ -37,6 +38,10 @@ namespace virtual_receptionist.Model
         /// Foglalásokat tartalmazó lista
         /// </summary>
         private List<Reservation> reservations;
+        /// <summary>
+        /// Alkalmazást futtató számítógép NetBIOS neve
+        /// </summary>
+        private static string client;
 
         #endregion
 
@@ -55,6 +60,21 @@ namespace virtual_receptionist.Model
             hungarianZipCodesAndCities = new List<HungarianZipCodesAndCities>();
             rooms = new List<Room>();
             reservations = new List<Reservation>();
+        }
+
+        #endregion
+
+        #region Getter és setter metódusok
+
+        /// <summary>
+        /// Alkalmazást futtató számítógép NetBIOS neve
+        /// </summary>
+        public static string Client
+        {
+            get
+            {
+                return client = Environment.MachineName;
+            }
         }
 
         #endregion

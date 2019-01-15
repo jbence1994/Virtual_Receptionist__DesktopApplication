@@ -34,8 +34,11 @@
             this.toolStripMenuItemGuestDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemBilling = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAccomodationData = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemHelpCHM = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAboutUs = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -44,7 +47,6 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItemQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -94,6 +96,8 @@
             // toolStripMenuItemHelp
             // 
             this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemAccomodationData,
+            this.toolStripSeparator1,
             this.toolStripMenuItemHelpCHM,
             this.toolStripMenuItemAboutUs});
             this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
@@ -102,10 +106,22 @@
             this.toolStripMenuItemHelp.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelp_MouseLeave);
             this.toolStripMenuItemHelp.MouseHover += new System.EventHandler(this.toolStripMenuItemHelp_MouseHover);
             // 
+            // toolStripMenuItemAccomodationData
+            // 
+            this.toolStripMenuItemAccomodationData.Name = "toolStripMenuItemAccomodationData";
+            this.toolStripMenuItemAccomodationData.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemAccomodationData.Text = "Szálláshely adatai";
+            this.toolStripMenuItemAccomodationData.Click += new System.EventHandler(this.toolStripMenuItemAccomodationData_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
             // toolStripMenuItemHelpCHM
             // 
             this.toolStripMenuItemHelpCHM.Name = "toolStripMenuItemHelpCHM";
-            this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemHelpCHM.Text = "Segítség";
             this.toolStripMenuItemHelpCHM.Click += new System.EventHandler(this.toolStripMenuItemHelpCHM_Click);
             this.toolStripMenuItemHelpCHM.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelpCHM_MouseLeave);
@@ -114,11 +130,18 @@
             // toolStripMenuItemAboutUs
             // 
             this.toolStripMenuItemAboutUs.Name = "toolStripMenuItemAboutUs";
-            this.toolStripMenuItemAboutUs.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItemAboutUs.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemAboutUs.Text = "Névjegy";
             this.toolStripMenuItemAboutUs.Click += new System.EventHandler(this.toolStripMenuItemAboutUs_Click);
             this.toolStripMenuItemAboutUs.MouseLeave += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseLeave);
             this.toolStripMenuItemAboutUs.MouseHover += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseHover);
+            // 
+            // toolStripMenuItemQuit
+            // 
+            this.toolStripMenuItemQuit.Name = "toolStripMenuItemQuit";
+            this.toolStripMenuItemQuit.Size = new System.Drawing.Size(56, 20);
+            this.toolStripMenuItemQuit.Text = "Kilépés";
+            this.toolStripMenuItemQuit.Click += new System.EventHandler(this.toolStripMenuItemQuit_Click);
             // 
             // statusStripMainMenu
             // 
@@ -189,13 +212,6 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
-            // toolStripMenuItemQuit
-            // 
-            this.toolStripMenuItemQuit.Name = "toolStripMenuItemQuit";
-            this.toolStripMenuItemQuit.Size = new System.Drawing.Size(56, 20);
-            this.toolStripMenuItemQuit.Text = "Kilépés";
-            this.toolStripMenuItemQuit.Click += new System.EventHandler(this.toolStripMenuItemQuit_Click);
-            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,5 +258,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAboutUs;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemQuit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAccomodationData;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

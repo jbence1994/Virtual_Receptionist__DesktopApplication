@@ -12,7 +12,7 @@ namespace virtual_receptionist.Model
 
         #endregion
 
-        #region Bejelentkezési folyamatot ellenőrőz és vezérlő metódus
+        #region Bejelentkezési folyamatot ellenőrző és vezérlő metódus
 
         /// <summary>
         /// Metódus, amely összehasonlítja a felhasználó által megadott felhasználónevet és jelszót, egyezik-e az érvényes, előre regisztrált felhasználói fiókkal
