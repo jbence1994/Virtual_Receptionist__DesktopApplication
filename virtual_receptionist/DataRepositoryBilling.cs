@@ -14,18 +14,16 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatbázisból kiolvassa a számlázási tételeket és lista adatszerkezetek menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        private void GetBillingItemsToList()
+        private void InjectBillingItemsIntoList()
         {
             string sql = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
 
-            database.OpenConnection();
             DataTable billingItemsDataTable = database.GetTable(sql);
-            database.CloseConnection();
 
             foreach (DataRow row in billingItemsDataTable.Rows)
             {
                 string name = row["BillingItemName"].ToString();
-                string category = row["BillingItemCategory"].ToString();
+                string category = row["BillingItemCategoryName"].ToString();
                 double vat = double.Parse(row["VAT"].ToString());
                 string unit = row["Unit"].ToString();
                 double price = double.Parse(row["Price"].ToString());
@@ -38,9 +36,9 @@ namespace virtual_receptionist.Model
         /// Metódus, amely adatforrásként szolál a számlázó főablak DataGridView komponensének
         /// </summary>
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
-        public DataTable GetBillingItemsToDataTable()
+        public DataTable GetBillingItems()
         {
-            GetBillingItemsToList();
+            InjectBillingItemsIntoList();
 
             DataTable items = new DataTable();
             items.Columns.Add("Name", typeof(string));

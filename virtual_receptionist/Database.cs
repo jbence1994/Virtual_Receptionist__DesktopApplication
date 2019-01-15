@@ -22,10 +22,6 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlCommand mySqlCommand;
         /// <summary>
-        /// Adatbázis adatot olvasó mező
-        /// </summary>
-        private MySqlDataReader mySqlDataReader;
-        /// <summary>
         /// Adatszerkezeteket adattal feltöltő osztály egy példánya
         /// </summary>
         private MySqlDataAdapter mySqlDataAdapter;
@@ -63,9 +59,14 @@ namespace virtual_receptionist.Model
         /// </summary>
         public Database()
         {
+            //mySqlConnection = new MySqlConnection()
+            //{
+            //    ConnectionString = $"SERVER={server}; DATABASE={database}; UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
+            //};
+
             mySqlConnection = new MySqlConnection()
             {
-                ConnectionString = $"SERVER={server}; DATABASE={database}; UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
+                ConnectionString = "SERVER=127.0.0.1; DATABASE=virtual_receptionist; UID=root; PASSWORD=\"\"; PORT=3306; SslMode=None;"
             };
         }
 
@@ -87,7 +88,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
         /// </summary>
-        public void OpenConnection()
+        private void OpenConnection()
         {
             try
             {
@@ -109,7 +110,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázis kapcsolatot lezáró metódus
         /// </summary>
-        public void CloseConnection()
+        private void CloseConnection()
         {
             if (mySqlConnection.State == ConnectionState.Open)
             {
@@ -118,12 +119,14 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Adatbázistáblából adatokat DataTable (adattábla/adatkonténerbe) leolvasó metódus 
+        /// Adatbázistáblát teljes egészében leolvasó és DataTable (adattábla/adatkonténerbe) leolvasó metódus 
         /// </summary>
         /// <param name="sql">SQL lekérdezés</param>
         /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
         public DataTable GetTable(string sql)
         {
+            OpenConnection();
+
             DataTable dataTable = new DataTable();
 
             try
@@ -154,6 +157,8 @@ namespace virtual_receptionist.Model
             {
                 Debug.WriteLine(e.Message);
             }
+
+            CloseConnection();
 
             return dataTable;
         }
