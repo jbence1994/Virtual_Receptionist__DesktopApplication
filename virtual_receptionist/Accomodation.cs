@@ -3,7 +3,7 @@
     /// <summary>
     /// Szálláshely egyed modell osztálya
     /// </summary>
-    public class Accomodation //SINGLETON PATTERN
+    public class Accomodation
     {
         #region Adattagok
 
@@ -39,6 +39,14 @@
         /// Szálláshely e-mail címe
         /// </summary>
         private string emailAddress;
+        /// <summary>
+        /// Szálláshely szállásazonosítója
+        /// </summary>
+        private string accomodationID;
+        /// <summary>
+        /// Szálláshely szállásazonosítójához tartozó jelszava
+        /// </summary>
+        private string password;
 
         #endregion
 
@@ -55,7 +63,9 @@
         /// <param name="site">Szálláshely telephelye</param>
         /// <param name="telephoneNumber">Szálláshely telefonszáma</param>
         /// <param name="emailAddress">Szálláshely e-mail címe</param>
-        public Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string telephoneNumber, string emailAddress)
+        /// <param name="accomodationID">Szálláshely szállásazonosítója</param>
+        /// <param name="password">Szálláshely szállásazonosítójához tartozó jelszava</param>
+        public Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string telephoneNumber, string emailAddress, string accomodationID, string password)
         {
             this.name = name;
             this.company = company;
@@ -65,6 +75,8 @@
             this.site = site;
             this.telephoneNumber = telephoneNumber;
             this.emailAddress = emailAddress;
+            this.accomodationID = accomodationID;
+            this.password = password;
         }
         /// <summary>
         /// Accomodation osztály üres konstruktora
@@ -190,6 +202,34 @@
                 emailAddress = value;
             }
         }
+        /// <summary>
+        /// Szálláshely szállásazonosítója
+        /// </summary>
+        public string AccomodationID
+        {
+            get
+            {
+                return accomodationID;
+            }
+            set
+            {
+                accomodationID = value;
+            }
+        }
+        /// <summary>
+        /// Szálláshely szállásazonosítójához tartozó jelszava
+        /// </summary>
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                password = value;
+            }
+        }
 
         #endregion
 
@@ -201,7 +241,7 @@
         /// <returns>Visszaadja az Accomodation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{name} {company} {contact} {vatNumber} {headquarters} {site} {telephoneNumber} {emailAddress}";
+            return $"{name} {company} {contact} {vatNumber} {headquarters} {site} {telephoneNumber} {emailAddress} {accomodationID} {password}";
         }
 
         #endregion
