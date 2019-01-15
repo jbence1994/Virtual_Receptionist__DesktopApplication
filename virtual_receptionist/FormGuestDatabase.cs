@@ -74,7 +74,21 @@ namespace virtual_receptionist.View
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
+            Model.DataRepository dataRepository = new Model.DataRepository();
 
+            DataTable dt = dataRepository.GetGuests();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                ListViewItem guests = new ListViewItem(row[0].ToString());
+
+                for (int i = 1; i < dt.Columns.Count; i++)
+                {
+                    guests.SubItems.Add(row[i].ToString());
+                }
+
+                listViewGuests.Items.Add(guests);
+            }
         }
 
         #endregion
