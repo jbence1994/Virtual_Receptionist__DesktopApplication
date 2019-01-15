@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 
 namespace virtual_receptionist.Model
@@ -84,10 +85,27 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// 
         /// </summary>
-        public void AuthenticateAccomodation()
+        public void SetAccomodation()
         {
             string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_registration.AccomodationID, accomodation_registration.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
+            DataTable dt = database.GetTable(sql);
 
+            foreach (DataRow row in dt.Rows)
+            {
+                string name = row["AccomodationName"].ToString();
+                string company = row["CompanyName"].ToString();
+                string contact = row["Contact"].ToString();
+                string vat = row["VATNUmber"].ToString();
+                string headquarters = row["Headquarters"].ToString();
+                string site = row["Site"].ToString();
+                string phoneNumber = row["PhoneNumber"].ToString();
+                string emailAddress = row["EmailAddress"].ToString();
+                string accomodationID = row["AccomodationID"].ToString();
+                string password = row["Password"].ToString();
+
+                Accomodation accomodation = new Accomodation(name, company, contact, vat, headquarters, site, phoneNumber, emailAddress, accomodationID, password);
+
+            }
 
         }
 
