@@ -49,7 +49,21 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetRooms()
         {
+            UploadRoomsList();
 
+            DataTable roomsDataTable = new DataTable();
+            roomsDataTable.Columns.Add("Name", typeof(string));
+            roomsDataTable.Columns.Add("Number", typeof(int));
+            roomsDataTable.Columns.Add("CategoryName", typeof(string));
+            roomsDataTable.Columns.Add("Capacity", typeof(int));
+
+            foreach (Room room in rooms)
+            {
+                roomsDataTable.Rows.Add(room.Name, room.Number, room.Category, room.Capacity);
+            }
+
+
+            return roomsDataTable;
         }
 
         #endregion
