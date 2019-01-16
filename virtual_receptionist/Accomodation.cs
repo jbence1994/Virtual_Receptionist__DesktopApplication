@@ -1,12 +1,16 @@
 ﻿namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Szálláshely egyed modell osztálya
+    /// Szálláshely egyed egyke modell osztálya
     /// </summary>
     public class Accomodation
     {
         #region Adattagok
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private static Accomodation accomodationInstance;           
         /// <summary>
         /// Szálláshely neve
         /// </summary>
@@ -65,7 +69,7 @@
         /// <param name="emailAddress">Szálláshely e-mail címe</param>
         /// <param name="accomodationID">Szálláshely szállásazonosítója</param>
         /// <param name="password">Szálláshely szállásazonosítójához tartozó jelszava</param>
-        public Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string phoneNumber, string emailAddress, string accomodationID, string password)
+        private Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string phoneNumber, string emailAddress, string accomodationID, string password)
         {
             this.name = name;
             this.company = company;
@@ -81,7 +85,7 @@
         /// <summary>
         /// Accomodation osztály üres konstruktora
         /// </summary>
-        public Accomodation()
+        private Accomodation()
         {
 
         }
@@ -90,6 +94,20 @@
 
         #region Getter és setter tulajdonságok
 
+        public static Accomodation AccomodationInstance
+        {
+            get
+            {
+                if (accomodationInstance == null)
+                {
+                    return accomodationInstance = new Accomodation();
+                }
+                else
+                {
+                    return accomodationInstance;
+                }
+            }
+        }
         /// <summary>
         /// Szálláshely neve
         /// </summary>

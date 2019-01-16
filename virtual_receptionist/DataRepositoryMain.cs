@@ -89,11 +89,11 @@ namespace virtual_receptionist.Model
         {
             string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_registration.AccomodationID, accomodation_registration.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
 
-            Accomodation accomodation = null;
+            Accomodation accomodation = Accomodation.AccomodationInstance;
+
             try
             {
                 DataTable dt = database.Query(sql);
-
 
                 foreach (DataRow row in dt.Rows)
                 {
@@ -105,10 +105,15 @@ namespace virtual_receptionist.Model
                     string site = row["Site"].ToString();
                     string phoneNumber = row["PhoneNumber"].ToString();
                     string emailAddress = row["EmailAddress"].ToString();
-                    string accomodationID = row["AccomodationID"].ToString();
-                    string password = row["Password"].ToString();
 
-                    accomodation = new Accomodation(name, company, contact, vat, headquarters, site, phoneNumber, emailAddress, accomodationID, password);
+                    accomodation.Name = name;
+                    accomodation.Company = company;
+                    accomodation.Contact = contact;
+                    accomodation.VatNumber = vat;
+                    accomodation.Headquarters = headquarters;
+                    accomodation.Site = site;
+                    accomodation.PhoneNumber = phoneNumber;
+                    accomodation.EmailAddress = emailAddress;
                 }
             }
             catch (Exception e)
