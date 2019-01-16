@@ -8,7 +8,7 @@
         #region Adattagok
 
         /// <summary>
-        /// 
+        /// Szálláshely példány
         /// </summary>
         private static Accomodation accomodationInstance;           
         /// <summary>
@@ -94,6 +94,9 @@
 
         #region Getter és setter tulajdonságok
 
+        /// <summary>
+        /// Szálláshely példány, amely példányosítja az egyke osztályt
+        /// </summary>
         public static Accomodation AccomodationInstance
         {
             get
