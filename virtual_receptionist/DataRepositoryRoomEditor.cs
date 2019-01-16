@@ -18,8 +18,16 @@ namespace virtual_receptionist.Model
 
             foreach (DataRow row in dt.Rows)
             {
-                Guest guest = new Guest(row["Name"].ToString());
-                Room room = new Room(int.Parse(row["Number"].ToString()));
+                Guest guest = new Guest()
+                {
+                    Name = row["Name"].ToString()
+                };
+
+                Room room = new Room
+                {
+                    Number = int.Parse(row["Number"].ToString())
+                };
+
                 int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
                 DateTime arrival = (DateTime)row["ArrivalDate"];
                 DateTime departure = (DateTime)row["DepartureDate"];

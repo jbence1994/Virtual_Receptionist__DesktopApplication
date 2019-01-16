@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító ORM osztály egy példánya
         /// </summary>
-        private Database database;
+        private static Database database;
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
@@ -53,7 +53,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         public DataRepository()
         {
-            database = new Database();
+            database = Database.DatabaseInstance;
 
             billingItems = new List<BillingItems>();
             guests = new List<Guest>();

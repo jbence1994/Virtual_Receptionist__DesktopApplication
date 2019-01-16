@@ -43,14 +43,6 @@
             this.capacity = capacity;
         }
         /// <summary>
-        /// Room osztály konstruktora
-        /// </summary>
-        /// <param name="number">Szobaszám</param>
-        public Room(int number)
-        {
-            this.number = number;
-        }
-        /// <summary>
         /// Room osztály üres konstruktora
         /// </summary>
         public Room()

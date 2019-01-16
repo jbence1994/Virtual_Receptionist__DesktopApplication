@@ -7,12 +7,16 @@ using System.Data;
 namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító ORM osztály
+    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály
     /// </summary>
     public class Database
     {
         #region Adattagok
 
+        /// <summary>
+        /// Ezen osztály egyke példánya
+        /// </summary>
+        private static Database databaseInstace;
         /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
@@ -55,9 +59,9 @@ namespace virtual_receptionist.Model
         #region Konstruktor
 
         /// <summary>
-        /// Konstruktor
+        /// Privát konstruktor
         /// </summary>
-        public Database()
+        private Database()
         {
             //mySqlConnection = new MySqlConnection()
             //{
@@ -71,6 +75,24 @@ namespace virtual_receptionist.Model
         }
 
         #endregion
+
+        /// <summary>
+        /// Ezen osztály egyke példánya
+        /// </summary>
+        public static Database DatabaseInstance
+        {
+            get
+            {
+                if (databaseInstace == null)
+                {
+                    return databaseInstace = new Database();
+                }
+                else
+                {
+                    return databaseInstace;
+                }
+            }
+        }
 
         #region Metódusok
 
