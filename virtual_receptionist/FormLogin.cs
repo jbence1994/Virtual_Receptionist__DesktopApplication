@@ -39,16 +39,28 @@ namespace virtual_receptionist.View
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Hide();
-            formMainMenu.Show();
+            EnterApplication();
         }
 
         private void buttonLogin_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-
+                EnterApplication();
             }
+        }
+
+        #endregion
+
+        #region Metódusok
+
+        /// <summary>
+        /// Metódus, amely megnyitja az alkalmazás főmenüjét, a bejelentkezés ablakot pedig bezárja
+        /// </summary>
+        private void EnterApplication()
+        {
+            Hide();
+            formMainMenu.Show();
         }
 
         #endregion
