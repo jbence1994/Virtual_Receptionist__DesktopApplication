@@ -9,7 +9,7 @@ namespace virtual_receptionist.View
     public partial class FormLogin : Form
     {
         #region Adattagok
-        
+
         #endregion
 
         #region Konstruktor
@@ -28,7 +28,7 @@ namespace virtual_receptionist.View
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            textBoxAccomodationID.Focus();
+            textBoxAccomodationID.Select();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)

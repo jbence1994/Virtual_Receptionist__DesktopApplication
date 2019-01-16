@@ -49,7 +49,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(198, 101);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(214, 23);
-            this.buttonLogin.TabIndex = 0;
+            this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "Bejelentkezés";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
@@ -105,7 +105,7 @@
             this.comboBoxConnectionType.Location = new System.Drawing.Point(198, 74);
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxConnectionType.TabIndex = 1;
+            this.comboBoxConnectionType.TabIndex = 3;
             // 
             // pictureBoxLogo
             // 
