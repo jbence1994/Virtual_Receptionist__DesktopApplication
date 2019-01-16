@@ -44,6 +44,7 @@
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
             this.tabControlRoomEditor.SuspendLayout();
             this.tabPageReservations.SuspendLayout();
@@ -55,9 +56,9 @@
             // 
             this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
-            this.buttonBackToMainMenu.Location = new System.Drawing.Point(881, 539);
+            this.buttonBackToMainMenu.Location = new System.Drawing.Point(877, 539);
             this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
-            this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
+            this.buttonBackToMainMenu.Size = new System.Drawing.Size(159, 64);
             this.buttonBackToMainMenu.TabIndex = 6;
             this.buttonBackToMainMenu.Text = "Vissza a főmenübe";
             this.buttonBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -208,17 +209,27 @@
             this.ColumnCapacity.ReadOnly = true;
             this.ColumnCapacity.Width = 200;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(877, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(159, 521);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // FormRoomEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 613);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControlRoomEditor);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormRoomEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Szoba kezelő | Virtual Receptionist";
+            this.Text = "Szobakezelő | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormRoomEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).EndInit();
             this.tabControlRoomEditor.ResumeLayout(false);
@@ -246,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGuestCapacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArrival;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDeparture;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

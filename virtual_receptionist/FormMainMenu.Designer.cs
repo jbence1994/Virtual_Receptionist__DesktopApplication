@@ -69,8 +69,8 @@
             // toolStripMenuItemRoomEditor
             // 
             this.toolStripMenuItemRoomEditor.Name = "toolStripMenuItemRoomEditor";
-            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(86, 20);
-            this.toolStripMenuItemRoomEditor.Text = "Szoba kezelő";
+            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(83, 20);
+            this.toolStripMenuItemRoomEditor.Text = "Szobakezelő";
             this.toolStripMenuItemRoomEditor.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemRoomEditor.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
             this.toolStripMenuItemRoomEditor.MouseHover += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseHover);
