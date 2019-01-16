@@ -61,12 +61,6 @@
     <Compile Include="DataRepositoryLogin.cs" />
     <Compile Include="DataRepositoryMain.cs" />
     <Compile Include="DataRepositoryRoomEditor.cs" />
-    <Compile Include="FormAboutUs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAboutUs.Designer.cs">
-      <DependentUpon>FormAboutUs.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,9 +125,6 @@
     <Compile Include="Room.cs" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAboutUs.resx">
-      <DependentUpon>FormAboutUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBilling.resx">
       <DependentUpon>FormBilling.cs</DependentUpon>

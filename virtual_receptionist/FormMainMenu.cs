@@ -36,7 +36,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
         {
-            FormRoomEditor formRoomEditor = new FormRoomEditor(this);
+            FormRoomEditor formRoomEditor = new FormRoomEditor();
             formRoomEditor.ShowDialog();
         }
 
@@ -52,7 +52,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
         {
-            FormGuestDatabase formGuestDatabase = new FormGuestDatabase(this);
+            FormGuestDatabase formGuestDatabase = new FormGuestDatabase();
             formGuestDatabase.ShowDialog();
         }
 
@@ -68,7 +68,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
         {
-            FormBilling formBilling = new FormBilling(this);
+            FormBilling formBilling = new FormBilling();
             formBilling.ShowDialog();
         }
 
@@ -127,8 +127,8 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
         {
-            FormAboutUs formAboutUs = new FormAboutUs();
-            formAboutUs.ShowDialog();
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.ShowDialog();
         }
 
         private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)

@@ -12,10 +12,6 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Főmenü ablak egy példánya
-        /// </summary>
-        private FormMainMenu formMainMenu;
-        /// <summary>
         /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBillingItems formModalBillingItems;
@@ -32,10 +28,9 @@ namespace virtual_receptionist.View
         /// Számlázó modul ablak konstruktora, amely összeköti a főmenü ablakot a számlázó modul ablakkal
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
-        public FormBilling(FormMainMenu formMainMenu)
+        public FormBilling()
         {
             InitializeComponent();
-            this.formMainMenu = formMainMenu;
         }
 
         #endregion
@@ -50,7 +45,6 @@ namespace virtual_receptionist.View
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             Close();
-            formMainMenu.Show();
         }
 
         private void buttonNewData_Click(object sender, EventArgs e)

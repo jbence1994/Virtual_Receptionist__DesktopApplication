@@ -10,10 +10,7 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-        /// <summary>
-        /// Főmenü ablak egy példánya
-        /// </summary>
-        private FormMainMenu formMainMenu;
+
 
         #endregion
 
@@ -22,11 +19,9 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Foglalás-kezelő ablak konstruktora, amely összeköti a főmenü ablakot a foglalás-kezelő ablakkal
         /// </summary>
-        /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
-        public FormRoomEditor(FormMainMenu formMainMenu)
+        public FormRoomEditor()
         {
             InitializeComponent();
-            this.formMainMenu = formMainMenu;
         }
 
         #endregion
@@ -43,7 +38,6 @@ namespace virtual_receptionist.View
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             Close();
-            formMainMenu.Show();
         }
 
         #endregion

@@ -13,10 +13,6 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Főmenü ablak egy példánya
-        /// </summary>
-        private FormMainMenu formMainMenu;
-        /// <summary>
         /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
@@ -33,10 +29,9 @@ namespace virtual_receptionist.View
         /// Vendégadatbázis-kezelő ablak konstruktora, amely összeköti a főmenü ablakot a vendégadatbázis-kezelő ablakkal
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
-        public FormGuestDatabase(FormMainMenu formMainMenu)
+        public FormGuestDatabase()
         {
             InitializeComponent();
-            this.formMainMenu = formMainMenu;
         }
 
         #endregion
@@ -52,7 +47,6 @@ namespace virtual_receptionist.View
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             Close();
-            formMainMenu.Show();
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
