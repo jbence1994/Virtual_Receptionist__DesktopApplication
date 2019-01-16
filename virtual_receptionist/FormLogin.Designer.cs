@@ -59,7 +59,7 @@
             this.textBoxAccomodationID.Location = new System.Drawing.Point(198, 22);
             this.textBoxAccomodationID.Name = "textBoxAccomodationID";
             this.textBoxAccomodationID.Size = new System.Drawing.Size(214, 20);
-            this.textBoxAccomodationID.TabIndex = 1;
+            this.textBoxAccomodationID.TabIndex = 0;
             // 
             // textBoxPassword
             // 
@@ -67,7 +67,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(214, 20);
-            this.textBoxPassword.TabIndex = 2;
+            this.textBoxPassword.TabIndex = 1;
             // 
             // labelAccomodationID
             // 
@@ -105,7 +105,7 @@
             this.comboBoxConnectionType.Location = new System.Drawing.Point(198, 74);
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxConnectionType.TabIndex = 7;
+            this.comboBoxConnectionType.TabIndex = 1;
             // 
             // pictureBoxLogo
             // 

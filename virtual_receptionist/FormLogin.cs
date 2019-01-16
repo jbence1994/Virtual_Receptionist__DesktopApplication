@@ -28,9 +28,7 @@ namespace virtual_receptionist.View
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            Input inputAccomodationID = new Input(textBoxAccomodationID.Text);
-            Input inputPassword = new Input(textBoxPassword.Text);
-            Input inputConnectionType = new Input(comboBoxConnectionType.Text);
+            textBoxAccomodationID.Focus();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
