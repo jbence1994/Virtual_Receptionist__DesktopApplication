@@ -34,6 +34,10 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
         /// <summary>
+        /// 
+        /// </summary>
+        private XmlTextReader xmlTextReader;
+        /// <summary>
         /// Adatbázis szerver neve
         /// </summary>
         private string server;
@@ -63,6 +67,8 @@ namespace virtual_receptionist.Model
         /// </summary>
         private Database()
         {
+            xmlTextReader = new XmlTextReader("dbconfig.xml");
+
             //mySqlConnection = new MySqlConnection()
             //{
             //    ConnectionString = $"SERVER={server}; DATABASE={database}; UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
@@ -101,6 +107,22 @@ namespace virtual_receptionist.Model
         /// </summary>
         private void InitializeConnection(string server, string database, string username, string password, string port)
         {
+            while (xmlTextReader.Read())
+            {
+                switch (xmlTextReader.NodeType)
+                {
+                    case XmlNodeType.Element: // A csomópont egy összetevő.
+                        Debug.WriteLine($"<{xmlTextReader.Name}>");
+                        break;
+                    case XmlNodeType.Text: //Az egyes összetevők szövegének megjelenítése.
+                        Debug.WriteLine(xmlTextReader.Value);
+                        break;
+                    case XmlNodeType.EndElement: //Az összetevő végének megjelenítése.
+                        Debug.WriteLine($"</{xmlTextReader.Name}>");
+                        break;
+                }
+            }
+
             this.server = server;
             this.database = database;
             this.username = username;
