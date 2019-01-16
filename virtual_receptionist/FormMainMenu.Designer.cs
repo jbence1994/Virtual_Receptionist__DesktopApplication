@@ -47,10 +47,12 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.pictureBoxBSLogo = new System.Windows.Forms.PictureBox();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -173,7 +175,7 @@
             // 
             this.pictureBoxVRLogo.Location = new System.Drawing.Point(12, 52);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
-            this.pictureBoxVRLogo.Size = new System.Drawing.Size(275, 653);
+            this.pictureBoxVRLogo.Size = new System.Drawing.Size(326, 450);
             this.pictureBoxVRLogo.TabIndex = 5;
             this.pictureBoxVRLogo.TabStop = false;
             // 
@@ -216,11 +218,20 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // pictureBoxBSLogo
+            // 
+            this.pictureBoxBSLogo.Location = new System.Drawing.Point(12, 508);
+            this.pictureBoxBSLogo.Name = "pictureBoxBSLogo";
+            this.pictureBoxBSLogo.Size = new System.Drawing.Size(326, 197);
+            this.pictureBoxBSLogo.TabIndex = 7;
+            this.pictureBoxBSLogo.TabStop = false;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.Controls.Add(this.pictureBoxBSLogo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBoxVRLogo);
             this.Controls.Add(this.statusStripMainMenu);
@@ -239,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +276,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemQuit;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAccomodationData;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.PictureBox pictureBoxBSLogo;
     }
 }
