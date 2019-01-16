@@ -46,7 +46,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(223, 98);
+            this.buttonLogin.Location = new System.Drawing.Point(198, 101);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(214, 23);
             this.buttonLogin.TabIndex = 0;
@@ -56,14 +56,14 @@
             // 
             // textBoxAccomodationID
             // 
-            this.textBoxAccomodationID.Location = new System.Drawing.Point(223, 19);
+            this.textBoxAccomodationID.Location = new System.Drawing.Point(198, 22);
             this.textBoxAccomodationID.Name = "textBoxAccomodationID";
             this.textBoxAccomodationID.Size = new System.Drawing.Size(214, 20);
             this.textBoxAccomodationID.TabIndex = 1;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(223, 45);
+            this.textBoxPassword.Location = new System.Drawing.Point(198, 48);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(214, 20);
@@ -72,7 +72,7 @@
             // labelAccomodationID
             // 
             this.labelAccomodationID.AutoSize = true;
-            this.labelAccomodationID.Location = new System.Drawing.Point(105, 22);
+            this.labelAccomodationID.Location = new System.Drawing.Point(80, 25);
             this.labelAccomodationID.Name = "labelAccomodationID";
             this.labelAccomodationID.Size = new System.Drawing.Size(112, 13);
             this.labelAccomodationID.TabIndex = 4;
@@ -81,7 +81,7 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(178, 48);
+            this.labelPassword.Location = new System.Drawing.Point(153, 51);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(39, 13);
             this.labelPassword.TabIndex = 5;
@@ -90,7 +90,7 @@
             // labelConnectTo
             // 
             this.labelConnectTo.AutoSize = true;
-            this.labelConnectTo.Location = new System.Drawing.Point(84, 74);
+            this.labelConnectTo.Location = new System.Drawing.Point(59, 77);
             this.labelConnectTo.Name = "labelConnectTo";
             this.labelConnectTo.Size = new System.Drawing.Size(133, 13);
             this.labelConnectTo.TabIndex = 6;
@@ -102,7 +102,7 @@
             this.comboBoxConnectionType.Items.AddRange(new object[] {
             "otthoni",
             "iskolai"});
-            this.comboBoxConnectionType.Location = new System.Drawing.Point(223, 71);
+            this.comboBoxConnectionType.Location = new System.Drawing.Point(198, 74);
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
             this.comboBoxConnectionType.TabIndex = 7;
@@ -112,7 +112,7 @@
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(12, 159);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(597, 37);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(514, 37);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 8;
             this.pictureBoxLogo.TabStop = false;
@@ -121,7 +121,7 @@
             // 
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.Enabled = false;
-            this.labelCopyright.Location = new System.Drawing.Point(347, 199);
+            this.labelCopyright.Location = new System.Drawing.Point(264, 199);
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(262, 13);
             this.labelCopyright.TabIndex = 9;
@@ -131,7 +131,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Enabled = false;
-            this.labelTitle.Location = new System.Drawing.Point(12, 199);
+            this.labelTitle.Location = new System.Drawing.Point(9, 199);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(122, 13);
             this.labelTitle.TabIndex = 10;
@@ -148,7 +148,7 @@
             this.groupBoxLogin.Controls.Add(this.labelAccomodationID);
             this.groupBoxLogin.Location = new System.Drawing.Point(12, 12);
             this.groupBoxLogin.Name = "groupBoxLogin";
-            this.groupBoxLogin.Size = new System.Drawing.Size(597, 141);
+            this.groupBoxLogin.Size = new System.Drawing.Size(514, 141);
             this.groupBoxLogin.TabIndex = 11;
             this.groupBoxLogin.TabStop = false;
             // 
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 220);
+            this.ClientSize = new System.Drawing.Size(538, 220);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.pictureBoxLogo);
