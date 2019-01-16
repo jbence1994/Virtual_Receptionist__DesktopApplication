@@ -10,6 +10,11 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
+        /// <summary>
+        /// Alkalmazás bejelentkező ablakának egy példánya
+        /// </summary>
+        private FormLogin formLogin;
+
         #endregion
 
         #region Konstruktor
@@ -17,9 +22,11 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Főmenü ablak konstruktora
         /// </summary>
-        public FormMainMenu()
+        /// <param name="formLogin">Alkalmazás bejelentkező ablakának egy példánya</param>
+        public FormMainMenu(FormLogin formLogin)
         {
             InitializeComponent();
+            this.formLogin = formLogin;
         }
 
         #endregion
@@ -141,13 +148,14 @@ namespace virtual_receptionist.View
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
-        private void toolStripMenuItemQuit_Click(object sender, EventArgs e)
+        private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
         {
-            DialogResult exit = MessageBox.Show("Kilép az alkalmazásból?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (exit == DialogResult.Yes)
+            if (logout == DialogResult.Yes)
             {
-                Environment.Exit(0);
+                Close();
+                formLogin.Show();
             }
         }
 

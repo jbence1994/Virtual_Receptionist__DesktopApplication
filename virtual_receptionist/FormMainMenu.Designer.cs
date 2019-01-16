@@ -38,7 +38,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemHelpCHM = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAboutUs = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemQuit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -62,7 +62,7 @@
             this.toolStripMenuItemGuestDatabase,
             this.toolStripMenuItemBilling,
             this.toolStripMenuItemHelp,
-            this.toolStripMenuItemQuit});
+            this.toolStripMenuItemLogout});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Size = new System.Drawing.Size(1008, 24);
@@ -140,14 +140,14 @@
             this.toolStripMenuItemAboutUs.MouseLeave += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseLeave);
             this.toolStripMenuItemAboutUs.MouseHover += new System.EventHandler(this.toolStripMenuItemAboutUs_MouseHover);
             // 
-            // toolStripMenuItemQuit
+            // toolStripMenuItemLogout
             // 
-            this.toolStripMenuItemQuit.Name = "toolStripMenuItemQuit";
-            this.toolStripMenuItemQuit.Size = new System.Drawing.Size(56, 20);
-            this.toolStripMenuItemQuit.Text = "Kilépés";
-            this.toolStripMenuItemQuit.Click += new System.EventHandler(this.toolStripMenuItemQuit_Click);
-            this.toolStripMenuItemQuit.MouseLeave += new System.EventHandler(this.toolStripMenuItemQuit_MouseLeave);
-            this.toolStripMenuItemQuit.MouseHover += new System.EventHandler(this.toolStripMenuItemQuit_MouseHover);
+            this.toolStripMenuItemLogout.Name = "toolStripMenuItemLogout";
+            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(86, 20);
+            this.toolStripMenuItemLogout.Text = "Kijelentkezés";
+            this.toolStripMenuItemLogout.Click += new System.EventHandler(this.toolStripMenuItemLogout_Click);
+            this.toolStripMenuItemLogout.MouseLeave += new System.EventHandler(this.toolStripMenuItemQuit_MouseLeave);
+            this.toolStripMenuItemLogout.MouseHover += new System.EventHandler(this.toolStripMenuItemQuit_MouseHover);
             // 
             // statusStripMainMenu
             // 
@@ -273,7 +273,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAboutUs;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemQuit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemLogout;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAccomodationData;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.PictureBox pictureBoxBSLogo;
