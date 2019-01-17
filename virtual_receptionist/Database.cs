@@ -124,10 +124,10 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Adatbázistáblát teljes egészében leolvasó és DataTable típusba adatszerkezetbe mentő metódus
+        /// Adattábla leolvasást végző metódus
         /// </summary>
         /// <param name="sql">SQL szkript</param>
-        /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
+        /// <returns>Adatokkal feltöltött DataTable-el tér vissza a függvény</returns>
         public DataTable SelectQuery(string sql)
         {
             OpenConnection();
@@ -168,11 +168,11 @@ namespace virtual_receptionist.Model
             return dataTable;
         }
         /// <summary>
-        /// Adatbázistáblát manipuláló SQL szkriptet végrehajtó eljárás
+        /// Adatbázistáblából adattörlést végző metódus
         /// </summary>
         /// <param name="sql">SQL szkript</param>
         /// <returns></returns>
-        public void DeleteQuery(string sql, Guest guest)
+        public void DeleteQuery(string sql)
         {
             OpenConnection();
 
@@ -198,10 +198,10 @@ namespace virtual_receptionist.Model
             CloseConnection();
         }
         /// <summary>
-        /// 
+        /// Adattáblába adatfelvitelt végző metódus
         /// </summary>
         /// <param name="sql">SQL szkript</param>
-        public void InsertQuery(string sql, Guest guest)
+        public void InsertQuery(string sql)
         {
             OpenConnection();
 
@@ -211,18 +211,6 @@ namespace virtual_receptionist.Model
                 {
                     CommandText = sql,
                     Connection = mySqlConnection
-                };
-
-                OpenConnection();
-
-                mySqlDataAdapter = new MySqlDataAdapter()
-                {
-                    DeleteCommand = mySqlCommandBuilder.GetInsertCommand()
-                };
-
-                mySqlCommandBuilder = new MySqlCommandBuilder()
-                {
-                    DataAdapter = mySqlDataAdapter
                 };
 
                 mySqlCommand.ExecuteNonQuery();
@@ -239,10 +227,10 @@ namespace virtual_receptionist.Model
             CloseConnection();
         }
         /// <summary>
-        /// 
+        /// Adattáblában adatmódosítást végző metódus
         /// </summary>
         /// <param name="sql">SQL szkript</param>
-        public void UpdateQuery(string sql, Guest guest)
+        public void UpdateQuery(string sql)
         {
             OpenConnection();
 
