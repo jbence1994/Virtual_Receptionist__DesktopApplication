@@ -1,8 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Xml;
-using System.Diagnostics;
 using System.Data;
+using System.Diagnostics;
 
 namespace virtual_receptionist.Model
 {
@@ -34,10 +33,6 @@ namespace virtual_receptionist.Model
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
         /// <summary>
-        /// 
-        /// </summary>
-        private XmlTextReader xmlTextReader;
-        /// <summary>
         /// Adatbázis szerver neve
         /// </summary>
         private string server;
@@ -67,13 +62,6 @@ namespace virtual_receptionist.Model
         /// </summary>
         private Database()
         {
-            xmlTextReader = new XmlTextReader("dbconfig.xml");
-
-            //mySqlConnection = new MySqlConnection()
-            //{
-            //    ConnectionString = $"SERVER={server}; DATABASE={database}; UID={username}; PASSWORD={password}; PORT={port}; SslMode=None;"
-            //};
-
             mySqlConnection = new MySqlConnection()
             {
                 ConnectionString = "SERVER=127.0.0.1; DATABASE=virtual_receptionist; UID=root; PASSWORD=\"\"; PORT=3306; SslMode=None;"
@@ -102,33 +90,6 @@ namespace virtual_receptionist.Model
 
         #region Metódusok
 
-        /// <summary>
-        /// Metódus, amely beállítja az adatbázis kapcsolódás útvonalát
-        /// </summary>
-        private void InitializeConnection(string server, string database, string username, string password, string port)
-        {
-            while (xmlTextReader.Read())
-            {
-                switch (xmlTextReader.NodeType)
-                {
-                    case XmlNodeType.Element: // A csomópont egy összetevő.
-                        Debug.WriteLine($"<{xmlTextReader.Name}>");
-                        break;
-                    case XmlNodeType.Text: //Az egyes összetevők szövegének megjelenítése.
-                        Debug.WriteLine(xmlTextReader.Value);
-                        break;
-                    case XmlNodeType.EndElement: //Az összetevő végének megjelenítése.
-                        Debug.WriteLine($"</{xmlTextReader.Name}>");
-                        break;
-                }
-            }
-
-            this.server = server;
-            this.database = database;
-            this.username = username;
-            this.password = password;
-            this.port = port;
-        }
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
         /// </summary>
