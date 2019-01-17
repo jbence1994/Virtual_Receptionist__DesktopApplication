@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace virtual_receptionist
 {
@@ -11,8 +7,6 @@ namespace virtual_receptionist
         /// <summary>
         /// Név ellenőrző függvény
         /// </summary>
-        /// <param name="name">Név tulajdonság</param>
-        /// <returns></returns>
         public void ProvideName()
         {
             if (IsEmpty())
@@ -20,14 +14,19 @@ namespace virtual_receptionist
                 throw new Exception("Üres bemenet");
             }
 
-            if (ContainsDigitCharacters())
+            if (FirstLetterIsLowercaseCharacter())
             {
-                throw new Exception("");
+                throw new Exception("Név nem kezdődhet kisbetűvel!");
             }
 
-            if (!FirstLetterIsUppercaseCharacter())
+            if (ContainsControlCharacters())
             {
-                throw new Exception("");
+                throw new Exception("Név nem tartalmazhat vezérlőbillentyű karaktert!");
+            }
+
+            if (ContainsDigitCharacters())
+            {
+                throw new Exception("Név nem tartalmazhat számot!");
             }
         }
         /// <summary>
@@ -39,6 +38,11 @@ namespace virtual_receptionist
             {
                 throw new Exception("Üres bemenet!");
             }
+
+            if (ContainsDigitCharacters())
+            {
+                throw new Exception("Szállásazonosító nem tartalmazhat számot!");
+            }
         }
         /// <summary>
         /// Jelszó ellenőrző metódus
@@ -48,6 +52,61 @@ namespace virtual_receptionist
             if (IsEmpty())
             {
                 throw new Exception("Üres bemenet!");
+            }
+
+            if (ContainsControlCharacters())
+            {
+                throw new Exception("");
+            }
+        }
+        /// <summary>
+        /// E-mail cím ellenőrző metódus
+        /// </summary>
+        public void ProvideEmail()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("");
+            }
+
+            if (!IsValidEmailAddress())
+            {
+                throw new Exception("");
+            }
+        }
+        /// <summary>
+        /// Irányítószám ellenőrőz metódus
+        /// </summary>
+        public void ProvideZipCode()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Üres bemenet!");
+            }
+
+            if (ContainsControlCharacters())
+            {
+                throw new Exception("Irányítószám nem tartalmaz vezérlőbillentyű karaktert!");
+            }
+
+            if (ContainsLowercaseCharacter())
+            {
+                throw new Exception("Irányítószám nem tartalmazhat kisebetűs karaktert!");
+            }
+        }
+        /// <summary>
+        /// Aszám ellenőrző metódus
+        /// </summary>
+        public void ProvideVATNumber()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Üres bemenet!");
+            }
+
+            if (ContainsControlCharacters())
+            {
+                throw new Exception("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
             }
         }
     }

@@ -143,6 +143,19 @@ namespace virtual_receptionist
             return false;
         }
         /// <summary>
+        /// Metódus, amely ellenőrzi, hogy az input első karaktere kisbetű-e
+        /// </summary>
+        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        private bool FirstLetterIsLowercaseCharacter()
+        {
+            if (char.IsLower(input[0]))
+            {
+                return true;
+            }
+
+            return false;
+        }
+        /// <summary>
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
