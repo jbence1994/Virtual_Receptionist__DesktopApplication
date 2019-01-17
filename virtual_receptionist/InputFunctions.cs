@@ -2,34 +2,9 @@ using System.Text.RegularExpressions;
 
 namespace virtual_receptionist
 {
-    /// <summary>
-    /// Felhasználó által bevitt adatokat ellenőrző osztály
-    /// </summary>
     public partial class Input
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Felhasználó által bevitt adat
-        /// </summary>
-        private readonly string input;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Konstruktor, amely megkapja osztályszinten a felhasználó által bevitt adatot
-        /// </summary>
-        /// <param name="input">Felhasználó által bevitt adat</param>
-        public Input(string input)
-        {
-            this.input = input;
-        }
-
-        #endregion
-
-        #region Metódusok
+        #region Helper függvények
 
         /// <summary>
         /// Metódus, amely ellenőrzi az input üres karakterlánc-e

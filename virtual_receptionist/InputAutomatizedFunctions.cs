@@ -2,8 +2,35 @@
 
 namespace virtual_receptionist
 {
+    /// <summary>
+     /// Felhasználó által bevitt adatokat ellenőrző osztály
+     /// </summary>
     public partial class Input
     {
+        #region Adattagok
+
+        /// <summary>
+        /// Felhasználó által bevitt adat
+        /// </summary>
+        private readonly string input;
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Konstruktor, amely megkapja osztályszinten a felhasználó által bevitt adatot
+        /// </summary>
+        /// <param name="input">Felhasználó által bevitt adat</param>
+        public Input(string input)
+        {
+            this.input = input;
+        }
+
+        #endregion
+
+        #region Automatizált ellenőrző metódusok
+
         /// <summary>
         /// Név ellenőrző függvény
         /// </summary>
@@ -129,5 +156,7 @@ namespace virtual_receptionist
                 throw new Exception("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
             }
         }
+
+        #endregion
     }
 }
