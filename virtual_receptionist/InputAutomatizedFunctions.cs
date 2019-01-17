@@ -56,7 +56,7 @@ namespace virtual_receptionist
 
             if (ContainsControlCharacters())
             {
-                throw new Exception("");
+                throw new Exception("Jelszó nem tartalmazhat vezérlőbillentyű karaktert!");
             }
         }
         /// <summary>
@@ -66,16 +66,16 @@ namespace virtual_receptionist
         {
             if (IsEmpty())
             {
-                throw new Exception("");
+                throw new Exception("Üres bemenet!");
             }
 
             if (!IsValidEmailAddress())
             {
-                throw new Exception("");
+                throw new Exception("Nem érvényes e-mail cím formátum!");
             }
         }
         /// <summary>
-        /// Irányítószám ellenőrőz metódus
+        /// Irányítószám ellenőrző metódus
         /// </summary>
         public void ProvideZipCode()
         {
@@ -86,12 +86,32 @@ namespace virtual_receptionist
 
             if (ContainsControlCharacters())
             {
-                throw new Exception("Irányítószám nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new Exception("Irányítószám nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLowercaseCharacter())
             {
                 throw new Exception("Irányítószám nem tartalmazhat kisebetűs karaktert!");
+            }
+        }
+        /// <summary>
+        /// Település nevét és címet ellenőrző metódus
+        /// </summary>
+        public void ProvideCityAndAddress()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Üres bemenet!");
+            }
+
+            if (ContainsControlCharacters())
+            {
+                throw new Exception("Település vagy cím nem tartalmaz vezérlőbillentyű karaktert!");
+            }
+
+            if (FirstLetterIsLowercaseCharacter())
+            {
+                throw new Exception("Település vagy cím nem kezdődhet kisbetűvel!");
             }
         }
         /// <summary>
