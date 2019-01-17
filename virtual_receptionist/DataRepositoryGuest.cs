@@ -36,8 +36,6 @@ namespace virtual_receptionist.Model
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        /// <exception cref="MySqlException"></exception>
-        /// <exception cref="Exception"></exception>
         public DataTable GetGuests()
         {
             UploadGuestsList();
@@ -63,18 +61,14 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég törlése
         /// </summary>
-        /// <exception cref="MySqlException"></exception>
-        /// <exception cref="Exception"></exception>
         public void DeleteGuest(Guest guest)
         {
-            string sql = "DELETE FROM guest WHERE id";
+           string sql = "DELETE FROM guest WHERE ";
             database.DeleteQuery(sql, guest);
         }
         /// <summary>
         /// Vendég módosítása
         /// </summary>
-        /// <exception cref="MySqlException"></exception>
-        /// <exception cref="Exception"></exception>
         public void UpdateGuest(Guest guest)
         {
             string sql = "UPDATE guest SET ";
@@ -83,11 +77,9 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
-        /// <exception cref="MySqlException"></exception>
-        /// <exception cref="Exception"></exception>
         public void CreateGuest(Guest guest)
         {
-            string sql = "INSERT INTO guest ";
+            string sql = "INSERT INTO guest() VALUES()";
             database.InsertQuery(sql, guest);
         }
 
