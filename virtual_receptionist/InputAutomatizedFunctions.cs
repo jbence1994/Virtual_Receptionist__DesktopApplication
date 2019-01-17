@@ -31,7 +31,7 @@ namespace virtual_receptionist
             }
         }
         /// <summary>
-        /// Szálláshely azonosító helyességét ellenőrző metódus
+        /// Szálláshely azonosító ellenőrző metódus
         /// </summary>
         public void ProvideAccomodationID()
         {
@@ -41,7 +41,7 @@ namespace virtual_receptionist
             }
         }
         /// <summary>
-        /// 
+        /// Jelszó ellenőrző metódus
         /// </summary>
         public void ProvidePassword()
         {
