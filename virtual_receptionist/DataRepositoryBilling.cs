@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model
         private void UploadBillingItemsList()
         {
             string sql = "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
-            DataTable dt = database.Query(sql);
+            DataTable dt = database.SelectQuery(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -34,7 +34,7 @@ namespace virtual_receptionist.Model
         private void UploadCountriesList()
         {
             string sql = "SELECT * FROM country";
-            DataTable dt = database.Query(sql);
+            DataTable dt = database.SelectQuery(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -51,7 +51,7 @@ namespace virtual_receptionist.Model
         private void UploadHungarianZipCodesAndCitiesList()
         {
             string sql = "SELECT * FROM hungarian_zip_code_and_city";
-            DataTable dt = database.Query(sql);
+            DataTable dt = database.SelectQuery(sql);
 
             foreach (DataRow row in dt.Rows)
             {

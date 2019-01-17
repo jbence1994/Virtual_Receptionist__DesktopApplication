@@ -126,9 +126,9 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázistáblát teljes egészében leolvasó és DataTable típusba adatszerkezetbe mentő metódus
         /// </summary>
-        /// <param name="sql">SQL lekérdezés</param>
+        /// <param name="sql">SQL szkript</param>
         /// <returns>A feltöltött DataTable-el tér vissza a függvény</returns>
-        public DataTable Query(string sql)
+        public DataTable SelectQuery(string sql)
         {
             OpenConnection();
 
@@ -170,9 +170,9 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázistáblát manipuláló SQL szkriptet végrehajtó eljárás
         /// </summary>
-        /// <param name="sql"></param>
+        /// <param name="sql">SQL szkript</param>
         /// <returns></returns>
-        public void ManipulationQuery(string sql, DataTable dataTable)
+        public void DeleteQuery(string sql)
         {
             OpenConnection();
 
@@ -184,12 +184,19 @@ namespace virtual_receptionist.Model
                     Connection = mySqlConnection
                 };
 
-                mySqlCommand.ExecuteNonQuery();
+                OpenConnection();
 
-                mySqlDataAdapter.DeleteCommand = mySqlCommandBuilder.GetDeleteCommand();
-                mySqlDataAdapter.InsertCommand = mySqlCommandBuilder.GetInsertCommand();
-                mySqlDataAdapter.UpdateCommand = mySqlCommandBuilder.GetUpdateCommand();
-                mySqlDataAdapter.Update(dataTable);
+                mySqlDataAdapter = new MySqlDataAdapter()
+                {
+                    DeleteCommand = mySqlCommandBuilder.GetDeleteCommand()
+                };
+
+                mySqlCommandBuilder = new MySqlCommandBuilder()
+                {
+                    DataAdapter = mySqlDataAdapter
+                };
+
+                mySqlCommand.ExecuteNonQuery();
             }
             catch (MySqlException e)
             {
@@ -201,7 +208,89 @@ namespace virtual_receptionist.Model
             }
 
             CloseConnection();
-        } // <= Tesztelni !!!
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sql">SQL szkript</param>
+        public void InsertQuery(string sql)
+        {
+            OpenConnection();
+
+            try
+            {
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = sql,
+                    Connection = mySqlConnection
+                };
+
+                OpenConnection();
+
+                mySqlDataAdapter = new MySqlDataAdapter()
+                {
+                    DeleteCommand = mySqlCommandBuilder.GetInsertCommand()
+                };
+
+                mySqlCommandBuilder = new MySqlCommandBuilder()
+                {
+                    DataAdapter = mySqlDataAdapter
+                };
+
+                mySqlCommand.ExecuteNonQuery();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
+            CloseConnection();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sql">SQL szkript</param>
+        public void UpdateQuery(string sql)
+        {
+            OpenConnection();
+
+            try
+            {
+                mySqlCommand = new MySqlCommand()
+                {
+                    CommandText = sql,
+                    Connection = mySqlConnection
+                };
+
+                OpenConnection();
+
+                mySqlDataAdapter = new MySqlDataAdapter()
+                {
+                    DeleteCommand = mySqlCommandBuilder.GetUpdateCommand()
+                };
+
+                mySqlCommandBuilder = new MySqlCommandBuilder()
+                {
+                    DataAdapter = mySqlDataAdapter
+                };
+
+                mySqlCommand.ExecuteNonQuery();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
+            CloseConnection();
+        }
 
         #endregion
     }
