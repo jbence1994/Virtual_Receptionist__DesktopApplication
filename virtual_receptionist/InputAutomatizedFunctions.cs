@@ -17,7 +17,7 @@ namespace virtual_receptionist
         {
             if (IsEmpty())
             {
-                throw new Exception("");
+                throw new Exception("Üres bemenet");
             }
 
             if (ContainsDigitCharacters())
@@ -30,10 +30,25 @@ namespace virtual_receptionist
                 throw new Exception("");
             }
         }
-
-        public void Provide()
+        /// <summary>
+        /// Szálláshely azonosító helyességét ellenőrző metódus
+        /// </summary>
+        public void ProvideAccomodationID()
         {
-
+            if (IsEmpty())
+            {
+                throw new Exception("Üres bemenet!");
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void ProvidePassword()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Üres bemenet!");
+            }
         }
     }
 }
