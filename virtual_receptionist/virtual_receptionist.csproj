@@ -118,7 +118,7 @@
     <Compile Include="Guest.cs" />
     <Compile Include="HungarianZipCodesAndCities.cs" />
     <Compile Include="InputHelperFunctions.cs" />
-    <Compile Include="InputPropertyFunctions.cs" />
+    <Compile Include="InputAutomatizedFunctions.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
