@@ -35,7 +35,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi az input üres karakterlánc-e
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool IsEmpty()
+        private bool IsEmpty()
         {
             return string.IsNullOrWhiteSpace(input) ? true : false;
         }
@@ -43,7 +43,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi az input tartalmaz-e vezérlőbillentyű karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool ContainsControlCharacters()
+        private bool ContainsControlCharacters()
         {
             bool criticalIndex = false;
 
@@ -61,7 +61,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi az input tartalmaz-e számot
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool ContainsDigitCharacters()
+        private bool ContainsDigitCharacters()
         {
             bool criticalIndex = false;
 
@@ -79,7 +79,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi az input tartalmaz-e betűt
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool ContainsLetterCharacters()
+        private bool ContainsLetterCharacters()
         {
             bool criticalIndex = false;
 
@@ -97,7 +97,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi az input tartalmaz-e nagybetűs karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool ContainsUppercaseCharacters()
+        private bool ContainsUppercaseCharacters()
         {
             bool criticalIndex = false;
 
@@ -115,7 +115,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi az input tartalmaz-e kisebtűs karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool ContainsLowercaseCharacter()
+        private bool ContainsLowercaseCharacter()
         {
             bool criticalIndex = false;
 
@@ -133,7 +133,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi, hogy az input első karaktere nagybetű-e
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool FirstLetterIsUppercaseCharacter()
+        private bool FirstLetterIsUppercaseCharacter()
         {
             if (char.IsUpper(input[0]))
             {
@@ -146,7 +146,7 @@ namespace virtual_receptionist
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public bool IsValidEmailAddress()
+        private bool IsValidEmailAddress()
         {
             bool valid = false;
 
