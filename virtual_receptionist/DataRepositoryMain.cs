@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace virtual_receptionist.Model
 {
@@ -12,7 +13,7 @@ namespace virtual_receptionist.Model
         #region Adattagok
 
         /// <summary>
-        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító ORM osztály egy példánya
+        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
         /// </summary>
         private static Database database;
         /// <summary>
@@ -118,7 +119,7 @@ namespace virtual_receptionist.Model
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.Message);
             }
 
             return accomodation;

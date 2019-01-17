@@ -57,13 +57,27 @@ namespace virtual_receptionist.View
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
         {
-            formModalGuestDatabase = new FormModalGuestDatabase();
-            formModalGuestDatabase.ShowDialog();
+            if (listViewGuests.SelectedItems.Count > 0)
+            {
+                formModalGuestDatabase = new FormModalGuestDatabase();
+                formModalGuestDatabase.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonDeleteGuest_Click(object sender, EventArgs e)
         {
+            if (listViewGuests.SelectedItems.Count > 0)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)

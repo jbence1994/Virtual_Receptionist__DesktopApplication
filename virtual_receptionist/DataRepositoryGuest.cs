@@ -66,21 +66,27 @@ namespace virtual_receptionist.Model
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
         public void Delete(Guest guest)
-        { }
+        {
+
+        }
         /// <summary>
         /// Vendég módosítása
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
         public void Update(Guest guest)
-        { }
+        {
+
+        }
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
         public void Create(Guest guest)
-        { }
+        {
+
+        }
 
         #endregion
     }
