@@ -65,30 +65,30 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public void Delete(Guest guest)
+        public void DeleteGuest(Guest guest)
         {
             string sql = "DELETE FROM guest WHERE id";
-            database.DeleteQuery(sql);
+            database.DeleteQuery(sql, guest);
         }
         /// <summary>
         /// Vendég módosítása
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public void Update(Guest guest)
+        public void UpdateGuest(Guest guest)
         {
             string sql = "UPDATE guest SET ";
-            database.UpdateQuery(sql);
+            database.UpdateQuery(sql, guest);
         }
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
         /// <exception cref="MySqlException"></exception>
         /// <exception cref="Exception"></exception>
-        public void Create(Guest guest)
+        public void CreateGuest(Guest guest)
         {
             string sql = "INSERT INTO guest ";
-            database.InsertQuery(sql);
+            database.InsertQuery(sql, guest);
         }
 
         #endregion

@@ -172,7 +172,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <param name="sql">SQL szkript</param>
         /// <returns></returns>
-        public void DeleteQuery(string sql)
+        public void DeleteQuery(string sql, Guest guest)
         {
             OpenConnection();
 
@@ -182,18 +182,6 @@ namespace virtual_receptionist.Model
                 {
                     CommandText = sql,
                     Connection = mySqlConnection
-                };
-
-                OpenConnection();
-
-                mySqlDataAdapter = new MySqlDataAdapter()
-                {
-                    DeleteCommand = mySqlCommandBuilder.GetDeleteCommand()
-                };
-
-                mySqlCommandBuilder = new MySqlCommandBuilder()
-                {
-                    DataAdapter = mySqlDataAdapter
                 };
 
                 mySqlCommand.ExecuteNonQuery();
@@ -213,7 +201,7 @@ namespace virtual_receptionist.Model
         /// 
         /// </summary>
         /// <param name="sql">SQL szkript</param>
-        public void InsertQuery(string sql)
+        public void InsertQuery(string sql, Guest guest)
         {
             OpenConnection();
 
@@ -254,7 +242,7 @@ namespace virtual_receptionist.Model
         /// 
         /// </summary>
         /// <param name="sql">SQL szkript</param>
-        public void UpdateQuery(string sql)
+        public void UpdateQuery(string sql, Guest guest)
         {
             OpenConnection();
 
@@ -264,18 +252,6 @@ namespace virtual_receptionist.Model
                 {
                     CommandText = sql,
                     Connection = mySqlConnection
-                };
-
-                OpenConnection();
-
-                mySqlDataAdapter = new MySqlDataAdapter()
-                {
-                    DeleteCommand = mySqlCommandBuilder.GetUpdateCommand()
-                };
-
-                mySqlCommandBuilder = new MySqlCommandBuilder()
-                {
-                    DataAdapter = mySqlDataAdapter
                 };
 
                 mySqlCommand.ExecuteNonQuery();

@@ -72,7 +72,12 @@ namespace virtual_receptionist.View
         {
             if (listViewGuests.SelectedItems.Count > 0)
             {
+                string name = listViewGuests.Items[0].Text;
+                string nationality = listViewGuests.Items[0].SubItems[1].Text;
 
+                Model.Guest guest = new Model.Guest();
+                Model.DataRepository dataRepository = new Model.DataRepository();
+                dataRepository.DeleteGuest(guest);
             }
             else
             {
