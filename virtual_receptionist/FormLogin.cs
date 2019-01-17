@@ -10,11 +10,6 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-        /// <summary>
-        /// Főmenü ablak egy példánya
-        /// </summary>
-        private FormMainMenu formMainMenu;
-
         #endregion
 
         #region Konstruktor
@@ -25,7 +20,6 @@ namespace virtual_receptionist.View
         public FormLogin()
         {
             InitializeComponent();
-            formMainMenu = new FormMainMenu(this);
         }
 
         #endregion
@@ -60,6 +54,7 @@ namespace virtual_receptionist.View
         private void EnterApplication()
         {
             Hide();
+            FormMainMenu formMainMenu = new FormMainMenu(this);
             formMainMenu.Show();
         }
 
