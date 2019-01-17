@@ -5,7 +5,7 @@ namespace virtual_receptionist
     /// <summary>
     /// Felhasználó által bevitt adatokat ellenőrző osztály
     /// </summary>
-    public class Input
+    public partial class Input
     {
         #region Adattagok
 
