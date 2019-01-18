@@ -126,7 +126,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// SELECT utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL parancs</param>
+        /// <param name="sql">SQL utasítás</param>
         /// <returns>Adatokkal feltöltött DataTable adatszerkezettel tér vissza a metódus</returns>
         public DataTable DQL(string sql)
         {
@@ -170,7 +170,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// INSERT, UPDATE, DELETE utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL parancs</param>
+        /// <param name="sql">SQL utasítás</param>
         /// <returns></returns>
         public void DML(string sql)
         {

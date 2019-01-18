@@ -34,6 +34,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Név ellenőrző függvény
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvideName()
         {
             if (IsEmpty())
@@ -59,6 +60,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Szálláshely azonosító ellenőrző metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvideAccomodationID()
         {
             if (IsEmpty())
@@ -74,6 +76,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Jelszó ellenőrző metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvidePassword()
         {
             if (IsEmpty())
@@ -89,6 +92,7 @@ namespace virtual_receptionist
         /// <summary>
         /// E-mail cím ellenőrző metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvideEmail()
         {
             if (IsEmpty())
@@ -104,6 +108,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Irányítószám ellenőrző metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvideZipCode()
         {
             if (IsEmpty())
@@ -124,6 +129,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Település nevét és címet ellenőrző metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvideCityAndAddress()
         {
             if (IsEmpty())
@@ -144,6 +150,7 @@ namespace virtual_receptionist
         /// <summary>
         /// Aszám ellenőrző metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void ProvideVATNumber()
         {
             if (IsEmpty())
