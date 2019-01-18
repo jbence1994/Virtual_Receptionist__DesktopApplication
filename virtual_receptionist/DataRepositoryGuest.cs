@@ -73,7 +73,7 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void UpdateGuest(Guest guest)
         {
-            string sql = $"UPDATE guest SET ZipCode=\"{guest.ZipCode}\" WHERE Name LIKE \"{guest.Name}\"";
+            string sql = $"UPDATE guest SET Name=\"{guest.Name}\", Nationality=\"{guest.Nationality}\", Country=\"{guest.Country}\", ZipCode=\"{guest.ZipCode}\", City=\"{guest.City}\", Address=\"{guest.Address}\", VATNumber=\"{guest.VatNumber}\", PhoneNumber=\"{guest.PhoneNumber}\", EmailAddress=\"{guest.EmailAddress}\" WHERE Name LIKE \"{guest.Name}\"";
             database.DML(sql);
         }
         /// <summary>
