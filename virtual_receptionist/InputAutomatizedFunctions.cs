@@ -3,8 +3,8 @@
 namespace virtual_receptionist
 {
     /// <summary>
-     /// Felhasználó által bevitt adatokat ellenőrző osztály
-     /// </summary>
+    /// Felhasználó által bevitt adatokat ellenőrző osztály
+    /// </summary>
     public partial class Input
     {
         #region Adattagok
