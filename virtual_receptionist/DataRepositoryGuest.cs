@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace virtual_receptionist.Model
 {
@@ -18,7 +19,7 @@ namespace virtual_receptionist.Model
             foreach (DataRow row in dt.Rows)
             {
                 string name = row["Name"].ToString();
-                string nationality = row["Nationality"].ToString();
+                bool nationality = Convert.ToBoolean(row["Nationality"]);
                 string country = row["CountryName"].ToString();
                 string zipCode = row["ZipCode"].ToString();
                 string city = row["City"].ToString();

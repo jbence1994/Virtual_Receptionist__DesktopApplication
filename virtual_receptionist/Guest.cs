@@ -60,17 +60,17 @@
         /// <param name="vatNumber">Céges vendég adószáma</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, string nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
+        public Guest(string name, bool nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
         {
             this.name = name;
 
-            if (nationality == "False")
-            {
-                this.nationality = "külföldi";
-            }
-            else if (nationality == "True")
+            if (nationality)
             {
                 this.nationality = "belföldi";
+            }
+            else
+            {
+                this.nationality = "külföldi";
             }
 
             this.country = country;

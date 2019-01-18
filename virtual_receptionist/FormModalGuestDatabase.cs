@@ -40,7 +40,7 @@ namespace virtual_receptionist.View
                 radioButtonNational.Checked = true;
                 radioButtonForeign.Checked = false;
             }
-            else if (guest.Name == "külföldi")
+            else if (guest.Nationality == "külföldi")
             {
                 radioButtonForeign.Checked = true;
                 radioButtonNational.Checked = false;

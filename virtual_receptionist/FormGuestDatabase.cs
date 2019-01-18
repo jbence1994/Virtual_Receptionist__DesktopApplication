@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace virtual_receptionist.View
@@ -61,7 +60,17 @@ namespace virtual_receptionist.View
             if (listViewGuests.SelectedItems.Count > 0)
             {
                 string name = listViewGuests.SelectedItems[0].Text;
-                string nationality = listViewGuests.SelectedItems[0].SubItems[1].Text;
+                bool nationality = false;
+
+                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
+                {
+                    nationality = true;
+                }
+                else
+                {
+                    nationality = false;
+                }
+
                 string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
                 string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
                 string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
@@ -89,15 +98,15 @@ namespace virtual_receptionist.View
             if (listViewGuests.SelectedItems.Count > 0)
             {
                 string name = listViewGuests.SelectedItems[0].Text;
-                string nationality = listViewGuests.SelectedItems[0].SubItems[1].Text;
+                bool nationality = Convert.ToBoolean(listViewGuests.SelectedItems[0].SubItems[1].Text);
                 string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
                 string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city= listViewGuests.SelectedItems[0].SubItems[4].Text;
+                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
                 string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
                 string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber= listViewGuests.SelectedItems[0].SubItems[7].Text;
+                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
-                
+
                 Model.Guest guest = new Model.Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
                 Model.DataRepository dataRepository = new Model.DataRepository();
                 dataRepository.DeleteGuest(guest);
