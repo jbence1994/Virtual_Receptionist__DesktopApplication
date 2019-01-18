@@ -61,6 +61,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég törlése
         /// </summary>
+        /// <param name="guest">Guest objektum</param>
         public void DeleteGuest(Guest guest)
         {
             string sql = $"DELETE FROM guest WHERE Name LIKE \"{guest.Name}\"";
@@ -69,6 +70,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég módosítása
         /// </summary>
+        /// <param name="guest">Guest objektum</param>
         public void UpdateGuest(Guest guest)
         {
             string sql = $"UPDATE guest SET ZipCode=\"{guest.ZipCode}\" WHERE Name LIKE \"{guest.Name}\"";
@@ -77,6 +79,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
+        /// <param name="guest">Guest objektum</param>
         public void CreateGuest(Guest guest)
         {
             string sql = $"INSERT INTO guest(Name, Nationality, ) VALUES(\"{guest.Name}\", \"{guest.Nationality}\")";
