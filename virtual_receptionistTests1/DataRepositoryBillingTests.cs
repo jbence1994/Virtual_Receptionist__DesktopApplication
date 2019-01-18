@@ -11,9 +11,9 @@ namespace virtual_receptionist.Model.Tests
         [TestMethod()]
         public void CountItemPriceWithDiscountTest_DevelopFunction()
         {
-            DataRepository dataStore = new DataRepository();
+            DataRepository dataRepository = new DataRepository();
             double expected = 7830;
-            double actual = dataStore.CountDiscountPrice(8700, 10);
+            double actual = dataRepository.CountDiscountPrice(8700, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
         /// <summary>
@@ -22,9 +22,9 @@ namespace virtual_receptionist.Model.Tests
         [TestMethod()]
         public void CountItemPriceWithDiscountTest_Test1()
         {
-            DataRepository dataStore = new DataRepository();
+            DataRepository dataRepository = new DataRepository();
             double expected = 10260;
-            double actual = dataStore.CountDiscountPrice(11400, 10);
+            double actual = dataRepository.CountDiscountPrice(11400, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
         /// <summary>
@@ -33,9 +33,9 @@ namespace virtual_receptionist.Model.Tests
         [TestMethod()]
         public void CountItemPriceWithDiscountTest_Test2()
         {
-            DataRepository dataStore = new DataRepository();
+            DataRepository dataRepository = new DataRepository();
             double expected = 12690;
-            double actual = dataStore.CountDiscountPrice(14100, 10);
+            double actual = dataRepository.CountDiscountPrice(14100, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
         /// <summary>
@@ -44,9 +44,9 @@ namespace virtual_receptionist.Model.Tests
         [TestMethod()]
         public void CountItemPriceWithDiscountTest_Test3()
         {
-            DataRepository dataStore = new DataRepository();
+            DataRepository dataRepository = new DataRepository();
             double expected = 6960;
-            double actual = dataStore.CountDiscountPrice(8700, 20);
+            double actual = dataRepository.CountDiscountPrice(8700, 20);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
     }
