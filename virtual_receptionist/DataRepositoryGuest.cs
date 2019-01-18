@@ -82,7 +82,7 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void CreateGuest(Guest guest)
         {
-            string sql = $"INSERT INTO guest(Name, Nationality, ) VALUES(\"{guest.Name}\", \"{guest.Nationality}\")";
+            string sql = $"INSERT INTO guest(Name, Nationality, Country, ZipCode, City, Address, VATNumber, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{guest.Nationality}\", \"{guest.Country}\", \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.VatNumber}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\"";
             database.DML(sql);
         }
 
