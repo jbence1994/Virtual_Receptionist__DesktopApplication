@@ -14,26 +14,18 @@ namespace virtual_receptionist.SupervisingController
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
         /// <summary>
-        /// 
-        /// </summary>
-        private FormGuestDatabase formGuestDatabase;
-        /// <summary>
         /// Vendég osztály egy példánya
         /// </summary>
         private Guest guest;
-        /// <summary>
-        /// Formon felhasználói módosítást tároló logikai változó 
-        /// </summary>
-        private bool userIntervention;
 
         #endregion
 
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// 
+        /// Vendgadatbázis-kezelő ablakon táblázatot vendégekkel feltöltő metódus
         /// </summary>
-        /// <param name="listView"></param>
+        /// <param name="listViewGuests">Vendégtáblázat</param>
         public void InitalizeGuestTable(ListView listViewGuests)
         {
             DataTable guestDataTable = dataRepository.GetGuests();
@@ -51,8 +43,9 @@ namespace virtual_receptionist.SupervisingController
             }
         }
         /// <summary>
-        /// 
+        /// Adatbázis vendégtábláját feltöltő metódus
         /// </summary>
+        /// <param name="listViewGuests">Vendégtáblázat</param>
         public void AddNewRecordInGuestTable(ListView listViewGuest)
         {
             guest = new Guest();
@@ -62,8 +55,9 @@ namespace virtual_receptionist.SupervisingController
             userIntervention = true;
         }
         /// <summary>
-        /// 
+        /// Új rekord félvetélére szolgáló metódus (+ adatbázis)
         /// </summary>
+        /// <param name="listViewGuests">Vendégtáblázat</param>
         public void DeleteRecordInGuestTable(ListView listViewGuests)
         {
             if (listViewGuests.SelectedItems.Count > 0)
@@ -99,8 +93,9 @@ namespace virtual_receptionist.SupervisingController
             }
         }
         /// <summary>
-        /// 
+        /// Meglévő rekord módosítására szolgáló metódus (+ adatbázis)
         /// </summary>
+        /// <param name="listViewGuests">Vendégtáblázat</param>
         public void UpdateRecordInGuestTable(ListView listViewGuests)
         {
             if (listViewGuests.SelectedItems.Count > 0)
@@ -142,28 +137,13 @@ namespace virtual_receptionist.SupervisingController
             }
         }
         /// <summary>
-        /// 
+        /// Oszlopszélesség megváltoztatását letiltó metódus
         /// </summary>
-        /// <param name="e"></param>
-        public void BanSettingColumnWidtChanging(ColumnWidthChangingEventArgs e)
+        /// <param name="e">Esemény példánya</param>
+        public void BlockSettingColumnWidth(ColumnWidthChangingEventArgs e)
         {
             e.Cancel = true;
             e.NewWidth = 110;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public void BackToMainMenu()
-        {
-            if (userIntervention)
-            {
-                DialogResult backToMainMenu = MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                if (backToMainMenu == DialogResult.OK)
-                {
-                    formGuestDatabase.Close();
-                }
-            }
         }
 
         #endregion

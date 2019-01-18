@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using virtual_receptionist.View;
+﻿using System.Windows.Forms;
 using virtual_receptionist.Model;
 
 namespace virtual_receptionist.SupervisingController
@@ -19,6 +14,10 @@ namespace virtual_receptionist.SupervisingController
         /// Adattár osztály egy példánya
         /// </summary>
         private DataRepository dataRepository;
+        /// <summary>
+        /// Formon felhasználói módosítást tároló logikai változó 
+        /// </summary>
+        private bool userIntervention;
 
         #endregion
 
@@ -30,6 +29,26 @@ namespace virtual_receptionist.SupervisingController
         public Presenter()
         {
             dataRepository = new DataRepository();
+        }
+
+        #endregion
+
+        #region Metódusok
+
+        /// <summary>
+        /// Főmenübe visszalépés
+        /// </summary>
+        public void BackToMainMenu(Form form)
+        {
+            if (userIntervention)
+            {
+                DialogResult backToMainMenu = MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (backToMainMenu == DialogResult.OK)
+                {
+                    form.Close();
+                }
+            }
         }
 
         #endregion

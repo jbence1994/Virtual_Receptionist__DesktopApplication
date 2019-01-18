@@ -23,7 +23,6 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Vendégadatbázis-kezelő ablak konstruktora, amely összeköti a főmenü ablakot a vendégadatbázis-kezelő ablakkal
         /// </summary>
-        /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
         public FormGuestDatabase()
         {
             InitializeComponent();
@@ -41,12 +40,12 @@ namespace virtual_receptionist.View
 
         private void listViewGuests_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
-            presenter.BanSettingColumnWidtChanging(e);
+            presenter.BlockSettingColumnWidth(e);
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
-            presenter.BackToMainMenu();
+            presenter.BackToMainMenu(this);
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
