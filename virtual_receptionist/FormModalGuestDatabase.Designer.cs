@@ -115,21 +115,21 @@
             this.radioButtonNational.AutoSize = true;
             this.radioButtonNational.Location = new System.Drawing.Point(170, 218);
             this.radioButtonNational.Name = "radioButtonNational";
-            this.radioButtonNational.Size = new System.Drawing.Size(89, 17);
+            this.radioButtonNational.Size = new System.Drawing.Size(58, 17);
             this.radioButtonNational.TabIndex = 12;
             this.radioButtonNational.TabStop = true;
-            this.radioButtonNational.Text = "belföldi ügyfél";
+            this.radioButtonNational.Text = "belföldi";
             this.radioButtonNational.UseVisualStyleBackColor = true;
             // 
             // radioButtonForeign
             // 
             this.radioButtonForeign.AutoSize = true;
-            this.radioButtonForeign.Location = new System.Drawing.Point(266, 218);
+            this.radioButtonForeign.Location = new System.Drawing.Point(297, 218);
             this.radioButtonForeign.Name = "radioButtonForeign";
-            this.radioButtonForeign.Size = new System.Drawing.Size(89, 17);
+            this.radioButtonForeign.Size = new System.Drawing.Size(58, 17);
             this.radioButtonForeign.TabIndex = 13;
             this.radioButtonForeign.TabStop = true;
-            this.radioButtonForeign.Text = "külföldi ügyfél";
+            this.radioButtonForeign.Text = "külföldi";
             this.radioButtonForeign.UseVisualStyleBackColor = true;
             // 
             // labelName
@@ -232,6 +232,7 @@
             this.buttonOK.TabIndex = 29;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // buttonCancel
             // 

@@ -51,7 +51,8 @@ namespace virtual_receptionist.View
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
-            formModalGuestDatabase = new FormModalGuestDatabase();
+            Model.Guest guest = new Model.Guest();
+            formModalGuestDatabase = new FormModalGuestDatabase(guest);
             formModalGuestDatabase.ShowDialog();
         }
 
@@ -59,8 +60,23 @@ namespace virtual_receptionist.View
         {
             if (listViewGuests.SelectedItems.Count > 0)
             {
-                formModalGuestDatabase = new FormModalGuestDatabase();
-                formModalGuestDatabase.ShowDialog();
+                string name = listViewGuests.SelectedItems[0].Text;
+                string nationality = listViewGuests.SelectedItems[0].SubItems[1].Text;
+                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
+                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
+                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
+                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+
+                Model.Guest guest = new Model.Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
+                formModalGuestDatabase = new FormModalGuestDatabase(guest);
+
+                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
+                {
+                    guest = formModalGuestDatabase.GetGuest();
+                }
             }
             else
             {
