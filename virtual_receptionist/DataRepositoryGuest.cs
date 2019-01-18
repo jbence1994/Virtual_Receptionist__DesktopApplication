@@ -63,24 +63,24 @@ namespace virtual_receptionist.Model
         /// </summary>
         public void DeleteGuest(Guest guest)
         {
-           string sql = "DELETE FROM guest WHERE ";
-            database.DeleteQuery(sql, guest);
+            string sql = $"DELETE FROM guest WHERE Name=@Name";
+            database.DeleteQuery(sql, "@Name", guest.Name);
         }
         /// <summary>
         /// Vendég módosítása
         /// </summary>
-        public void UpdateGuest(Guest guest)
+        public void UpdateGuest(Guest guest, int id)
         {
             string sql = "UPDATE guest SET ";
-            database.UpdateQuery(sql, guest);
+            database.UpdateQuery(sql);
         }
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
-        public void CreateGuest(Guest guest)
+        public void CreateGuest(Guest guest, int id)
         {
             string sql = "INSERT INTO guest() VALUES()";
-            database.InsertQuery(sql, guest);
+            database.InsertQuery(sql);
         }
 
         #endregion
