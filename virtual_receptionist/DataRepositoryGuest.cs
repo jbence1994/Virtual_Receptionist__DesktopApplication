@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using System;
 
 namespace virtual_receptionist.Model
 {
@@ -64,7 +63,7 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void DeleteGuest(Guest guest)
         {
-            string sql = $"DELETE FROM guest WHERE Name LIKE \"{guest.Name}\"";
+            string sql = $"DELETE FROM guest WHERE guest.Name LIKE \"{guest.Name}\"";
             database.DML(sql);
         }
         /// <summary>
@@ -73,7 +72,7 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void UpdateGuest(Guest guest)
         {
-            string sql = $"UPDATE guest SET Name=\"{guest.Name}\", Nationality=\"{guest.Nationality}\", Country=\"{guest.Country}\", ZipCode=\"{guest.ZipCode}\", City=\"{guest.City}\", Address=\"{guest.Address}\", VATNumber=\"{guest.VatNumber}\", PhoneNumber=\"{guest.PhoneNumber}\", EmailAddress=\"{guest.EmailAddress}\" WHERE Name LIKE \"{guest.Name}\"";
+            string sql = $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.Nationality=\"{guest.Nationality}\", guest.Country=\"{guest.Country}\", guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.VATNumber=\"{guest.VatNumber}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.Name LIKE \"{guest.Name}\"";
             database.DML(sql);
         }
         /// <summary>
