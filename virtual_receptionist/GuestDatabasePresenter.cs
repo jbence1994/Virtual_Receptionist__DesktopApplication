@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.SupervisingController
 {
-    class GuestDatabasePresenter
+    public partial class Presenter
     {
 
     }

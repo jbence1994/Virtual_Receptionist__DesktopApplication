@@ -120,7 +120,7 @@
     <Compile Include="HungarianZipCodesAndCities.cs" />
     <Compile Include="InputFunctions.cs" />
     <Compile Include="InputAutomatizedFunctions.cs" />
-    <Compile Include="Presenter.cs" />
+    <Compile Include="DefaultPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace virtual_receptionist.SupervisingController
 {
-    public class Presenter
+    public partial class Presenter
     {
 
     }
