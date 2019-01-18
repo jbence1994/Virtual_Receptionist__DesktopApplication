@@ -15,10 +15,6 @@ namespace virtual_receptionist.View
         /// Prezenter osztály egy példánya
         /// </summary>
         private Presenter presenter;
-        /// <summary>
-        /// Formon felhasználói módosítást tároló logikai változó 
-        /// </summary>
-        private bool userIntervention;
 
         #endregion
 
@@ -45,39 +41,27 @@ namespace virtual_receptionist.View
 
         private void listViewGuests_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
-            e.Cancel = true;
-            e.NewWidth = 110;
+            presenter.BanSettingColumnWidtChanging(e);
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
-            if (userIntervention)
-            {
-                DialogResult backToMainMenu = MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                if (backToMainMenu == DialogResult.OK)
-                {
-                    Close();
-                }
-            }
+            presenter.BackToMainMenu();
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
-            presenter.AddNewRecordInGuestTable();
-            userIntervention = true;
+            presenter.AddNewRecordInGuestTable(listViewGuests);
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
         {
             presenter.UpdateRecordInGuestTable(listViewGuests);
-            userIntervention = true;
         }
 
         private void buttonDeleteGuest_Click(object sender, EventArgs e)
         {
             presenter.DeleteRecordInGuestTable(listViewGuests);
-            userIntervention = true;
         }
 
         #endregion

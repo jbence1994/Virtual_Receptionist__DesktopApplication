@@ -14,9 +14,17 @@ namespace virtual_receptionist.SupervisingController
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
         /// <summary>
+        /// 
+        /// </summary>
+        private FormGuestDatabase formGuestDatabase;
+        /// <summary>
         /// Vendég osztály egy példánya
         /// </summary>
         private Guest guest;
+        /// <summary>
+        /// Formon felhasználói módosítást tároló logikai változó 
+        /// </summary>
+        private bool userIntervention;
 
         #endregion
 
@@ -45,12 +53,13 @@ namespace virtual_receptionist.SupervisingController
         /// <summary>
         /// 
         /// </summary>
-        public void AddNewRecordInGuestTable()
+        public void AddNewRecordInGuestTable(ListView listViewGuest)
         {
             guest = new Guest();
             formModalGuestDatabase = new FormModalGuestDatabase(guest);
             formModalGuestDatabase.ShowDialog();
             dataRepository.CreateGuest(guest);
+            userIntervention = true;
         }
         /// <summary>
         /// 
@@ -81,6 +90,8 @@ namespace virtual_receptionist.SupervisingController
 
                 guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
                 dataRepository.DeleteGuest(guest);
+
+                userIntervention = true;
             }
             else
             {
@@ -121,11 +132,37 @@ namespace virtual_receptionist.SupervisingController
                 {
                     guest = formModalGuestDatabase.Guest;
                     dataRepository.UpdateGuest(guest);
+
+                    userIntervention = true;
                 }
             }
             else
             {
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        public void BanSettingColumnWidtChanging(ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = 110;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void BackToMainMenu()
+        {
+            if (userIntervention)
+            {
+                DialogResult backToMainMenu = MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (backToMainMenu == DialogResult.OK)
+                {
+                    formGuestDatabase.Close();
+                }
             }
         }
 
