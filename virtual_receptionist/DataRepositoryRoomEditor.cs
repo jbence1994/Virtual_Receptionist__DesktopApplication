@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model
         private void UploadReservationsList()
         {
             string sql = "SELECT guest.Name, room.Number, reservation.NumberOfGuests, reservation.ArrivalDate, reservation.DepartureDate FROM reservation, guest, room WHERE reservation.GuestID = guest.ID AND reservation.RoomID = room.ID ORDER BY reservation.ArrivalDate ASC";
-            DataTable dt = database.SelectQuery(sql);
+            DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -43,7 +43,7 @@ namespace virtual_receptionist.Model
         private void UploadRoomsList()
         {
             string sql = "SELECT room.Name, room.Number, room_category.CategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
-            DataTable dt = database.SelectQuery(sql);
+            DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {

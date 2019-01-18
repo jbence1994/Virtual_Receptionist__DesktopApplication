@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model
         private void UploadGuestsList()
         {
             string sql = "SELECT guest.Name, guest.Nationality, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
-            DataTable dt = database.SelectQuery(sql);
+            DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -64,7 +64,7 @@ namespace virtual_receptionist.Model
         public void DeleteGuest(Guest guest)
         {
             string sql = $"DELETE FROM guest WHERE Name LIKE \"{guest.Name}\"";
-            database.DeleteQuery(sql);
+            database.DML(sql);
         }
         /// <summary>
         /// Vendég módosítása
@@ -72,7 +72,7 @@ namespace virtual_receptionist.Model
         public void UpdateGuest(Guest guest)
         {
             string sql = $"UPDATE guest SET ZipCode=\"{guest.ZipCode}\" WHERE Name LIKE \"{guest.Name}\"";
-            database.UpdateQuery(sql);
+            database.DML(sql);
         }
         /// <summary>
         /// Vendég létrehozása
@@ -80,7 +80,7 @@ namespace virtual_receptionist.Model
         public void CreateGuest(Guest guest)
         {
             string sql = $"INSERT INTO guest(Name, Nationality, ) VALUES(\"{guest.Name}\", \"{guest.Nationality}\")";
-            database.InsertQuery(sql);
+            database.DML(sql);
         }
 
         #endregion

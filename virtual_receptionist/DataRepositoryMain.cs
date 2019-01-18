@@ -94,7 +94,7 @@ namespace virtual_receptionist.Model
 
             try
             {
-                DataTable dt = database.SelectQuery(sql);
+                DataTable dt = database.DQL(sql);
 
                 foreach (DataRow row in dt.Rows)
                 {

@@ -124,11 +124,11 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Adattábla leolvasást végző metódus
+        /// SELECT utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL szkript</param>
-        /// <returns>Adatokkal feltöltött DataTable-el tér vissza a függvény</returns>
-        public DataTable SelectQuery(string sql)
+        /// <param name="sql">SQL parancs</param>
+        /// <returns>Adatokkal feltöltött DataTable adatszerkezettel tér vissza a metódus</returns>
+        public DataTable DQL(string sql)
         {
             OpenConnection();
 
@@ -168,71 +168,11 @@ namespace virtual_receptionist.Model
             return dataTable;
         }
         /// <summary>
-        /// Adatbázistáblából adattörlést végző metódus
+        /// INSERT, UPDATE, DELETE utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL szkript</param>
+        /// <param name="sql">SQL parancs</param>
         /// <returns></returns>
-        public void DeleteQuery(string sql)
-        {
-            OpenConnection();
-
-            try
-            {
-                mySqlCommand = new MySqlCommand()
-                {
-                    CommandText = sql,
-                    Connection = mySqlConnection
-                };
-
-                mySqlCommand.Prepare();
-                mySqlCommand.ExecuteNonQuery();
-            }
-            catch (MySqlException e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-
-            CloseConnection();
-        }
-        /// <summary>
-        /// Adattáblába adatfelvitelt végző metódus
-        /// </summary>
-        /// <param name="sql">SQL szkript</param>
-        public void InsertQuery(string sql)
-        {
-            OpenConnection();
-
-            try
-            {
-                mySqlCommand = new MySqlCommand()
-                {
-                    CommandText = sql,
-                    Connection = mySqlConnection
-                };
-
-                mySqlCommand.Prepare();
-                mySqlCommand.ExecuteNonQuery();
-            }
-            catch (MySqlException e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-
-            CloseConnection();
-        }
-        /// <summary>
-        /// Adattáblában adatmódosítást végző metódus
-        /// </summary>
-        /// <param name="sql">SQL szkript</param>
-        public void UpdateQuery(string sql)
+        public void DML(string sql)
         {
             OpenConnection();
 
