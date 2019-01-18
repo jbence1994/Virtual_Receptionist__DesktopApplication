@@ -69,17 +69,17 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég módosítása
         /// </summary>
-        public void UpdateGuest(Guest guest, int id)
+        public void UpdateGuest(Guest guest)
         {
-            string sql = "UPDATE guest SET Name=@Name";
+            string sql = $"UPDATE guest SET ZipCode=\"{guest.ZipCode}\" WHERE Name LIKE \"{guest.Name}\"";
             database.UpdateQuery(sql);
         }
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
-        public void CreateGuest(Guest guest, int id)
+        public void CreateGuest(Guest guest)
         {
-            string sql = "INSERT INTO guest() VALUES()";
+            string sql = $"INSERT INTO guest(Name) VALUES(\"{guest.Name}\")";
             database.InsertQuery(sql);
         }
 
