@@ -184,6 +184,7 @@ namespace virtual_receptionist.Model
                     Connection = mySqlConnection
                 };
 
+                mySqlCommand.Prepare();
                 mySqlCommand.ExecuteNonQuery();
             }
             catch (MySqlException e)
@@ -213,6 +214,7 @@ namespace virtual_receptionist.Model
                     Connection = mySqlConnection
                 };
 
+                mySqlCommand.Prepare();
                 mySqlCommand.ExecuteNonQuery();
             }
             catch (MySqlException e)
@@ -242,6 +244,7 @@ namespace virtual_receptionist.Model
                     Connection = mySqlConnection
                 };
 
+                mySqlCommand.Prepare();
                 mySqlCommand.ExecuteNonQuery();
             }
             catch (MySqlException e)

@@ -79,7 +79,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         public void CreateGuest(Guest guest)
         {
-            string sql = $"INSERT INTO guest(Name) VALUES(\"{guest.Name}\")";
+            string sql = $"INSERT INTO guest(Name, Nationality, ) VALUES(\"{guest.Name}\", \"{guest.Nationality}\")";
             database.InsertQuery(sql);
         }
 
