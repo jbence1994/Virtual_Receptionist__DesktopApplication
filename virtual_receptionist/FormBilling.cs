@@ -37,11 +37,6 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        private void FormBilling_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             Close();
