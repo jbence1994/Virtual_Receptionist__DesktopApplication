@@ -10,7 +10,7 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// 
+        /// Guest objektum
         /// </summary>
         Model.Guest guest;
 
@@ -21,6 +21,7 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak konstruktora
         /// </summary>
+        /// <param name="guest">Guest objektum</param>
         public FormModalGuestDatabase(Model.Guest guest)
         {
             InitializeComponent();
@@ -60,6 +61,12 @@ namespace virtual_receptionist.View
 
         #region UI események
 
+        private void FormModalGuestDatabase_Load(object sender, System.EventArgs e)
+        {
+            Model.DataRepository dataRepository = new Model.DataRepository();
+            comboBoxCountry.DataSource = dataRepository.GetCountries();
+        }
+
         private void buttonOK_Click(object sender, System.EventArgs e)
         {
             guest.Name = textBoxName.Text;
@@ -90,9 +97,8 @@ namespace virtual_receptionist.View
         #region Metódusok
 
         /// <summary>
-        /// 
+        /// Guest objektum
         /// </summary>
-        /// <returns></returns>
         public Model.Guest Guest
         {
             get

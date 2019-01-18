@@ -75,7 +75,7 @@ namespace virtual_receptionist.View
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
                 {
-                    guest = formModalGuestDatabase.GetGuest();
+                    guest = formModalGuestDatabase.Guest;
                 }
             }
             else

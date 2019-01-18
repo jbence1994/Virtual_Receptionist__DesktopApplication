@@ -68,7 +68,7 @@
             {
                 this.nationality = "külföldi";
             }
-            else
+            else if (nationality == "True")
             {
                 this.nationality = "belföldi";
             }

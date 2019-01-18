@@ -275,6 +275,7 @@
             this.Name = "FormModalGuestDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendég hozzáadása / módosítása | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormModalGuestDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
