@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using virtual_receptionist.SupervisingController;
 
 namespace virtual_receptionist.View
 {
@@ -15,6 +16,10 @@ namespace virtual_receptionist.View
         /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
+        /// <summary>
+        /// Prezenter osztály egy példánya
+        /// </summary>
+        private Presenter presenter;
         /// <summary>
         /// Formon felhasználói módosítást tároló logikai változó 
         /// </summary>
@@ -31,6 +36,7 @@ namespace virtual_receptionist.View
         public FormGuestDatabase()
         {
             InitializeComponent();
+            presenter = new Presenter();
         }
 
         #endregion
@@ -143,21 +149,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            Model.DataRepository dataRepository = new Model.DataRepository();
-
-            DataTable guestDataTable = dataRepository.GetGuests();
-
-            foreach (DataRow row in guestDataTable.Rows)
-            {
-                ListViewItem guests = new ListViewItem(row[0].ToString());
-
-                for (int i = 1; i < guestDataTable.Columns.Count; i++)
-                {
-                    guests.SubItems.Add(row[i].ToString());
-                }
-
-                listViewGuests.Items.Add(guests);
-            }
+            presenter.InitalizeGuestTable(listViewGuests);
         }
 
         #endregion

@@ -8,6 +8,9 @@ using virtual_receptionist.Model;
 
 namespace virtual_receptionist.SupervisingController
 {
+    /// <summary>
+    /// Az alkalmazás prezenter osztálya, amely modell kezelésért és nézetfrissítésért felel
+    /// </summary>
     public partial class Presenter
     {
         #region Adattagok
