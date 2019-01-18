@@ -45,7 +45,15 @@ namespace virtual_receptionist.View
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
-            Close();
+            if (userIntervention)
+            {
+                DialogResult backToMainMenu = MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (backToMainMenu == DialogResult.OK)
+                {
+                    Close();
+                }
+            }
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
@@ -53,6 +61,8 @@ namespace virtual_receptionist.View
             Model.Guest guest = new Model.Guest();
             formModalGuestDatabase = new FormModalGuestDatabase(guest);
             formModalGuestDatabase.ShowDialog();
+
+            userIntervention = true;
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
@@ -86,6 +96,8 @@ namespace virtual_receptionist.View
                 {
                     guest = formModalGuestDatabase.Guest;
                 }
+
+                userIntervention = true;
             }
             else
             {
@@ -120,6 +132,8 @@ namespace virtual_receptionist.View
                 Model.Guest guest = new Model.Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
                 Model.DataRepository dataRepository = new Model.DataRepository();
                 dataRepository.DeleteGuest(guest);
+
+                userIntervention = true;
             }
             else
             {
@@ -131,13 +145,13 @@ namespace virtual_receptionist.View
         {
             Model.DataRepository dataRepository = new Model.DataRepository();
 
-            DataTable dt = dataRepository.GetGuests();
+            DataTable guestDataTable = dataRepository.GetGuests();
 
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in guestDataTable.Rows)
             {
                 ListViewItem guests = new ListViewItem(row[0].ToString());
 
-                for (int i = 1; i < dt.Columns.Count; i++)
+                for (int i = 1; i < guestDataTable.Columns.Count; i++)
                 {
                     guests.SubItems.Add(row[i].ToString());
                 }
