@@ -88,15 +88,15 @@ namespace virtual_receptionist.Model
         /// </summary>
         public Accomodation SetAccomodation()
         {
-            string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
-
             Accomodation accomodation = Accomodation.AccomodationInstance;
+
+            string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
 
             try
             {
-                DataTable dt = database.DQL(sql);
+                DataTable accomodationData = database.DQL(sql);
 
-                foreach (DataRow row in dt.Rows)
+                foreach (DataRow row in accomodationData.Rows)
                 {
                     string name = row["AccomodationName"].ToString();
                     string company = row["CompanyName"].ToString();
