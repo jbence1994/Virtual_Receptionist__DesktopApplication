@@ -98,7 +98,17 @@ namespace virtual_receptionist.View
             if (listViewGuests.SelectedItems.Count > 0)
             {
                 string name = listViewGuests.SelectedItems[0].Text;
-                bool nationality = Convert.ToBoolean(listViewGuests.SelectedItems[0].SubItems[1].Text);
+                bool nationality = false;
+
+                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
+                {
+                    nationality = true;
+                }
+                else
+                {
+                    nationality = false;
+                }
+
                 string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
                 string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
                 string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
