@@ -9,7 +9,7 @@ using virtual_receptionist.Model;
 namespace virtual_receptionist.SupervisingController
 {
     /// <summary>
-    /// Az alkalmazás prezenter osztálya, amely modell kezelésért és nézetfrissítésért felel
+    /// Az alkalmazás prezenter osztálya, amely modell kezelésért és nézet frissítésért felel
     /// </summary>
     public partial class Presenter
     {
@@ -19,11 +19,18 @@ namespace virtual_receptionist.SupervisingController
         /// Adattár osztály egy példánya
         /// </summary>
         private DataRepository dataRepository;
+        /// <summary>
+        /// Vendég osztály egy példánya
+        /// </summary>
+        private Guest guest;
 
         #endregion
 
         #region Konstruktor
 
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
         public Presenter()
         {
             dataRepository = new DataRepository();

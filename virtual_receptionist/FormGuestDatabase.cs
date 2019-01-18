@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.SupervisingController;
 
@@ -12,10 +11,6 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-        /// <summary>
-        /// Vendégadatbázis-kezelő ablak új vendég felvételéhez vagy meglévő módosításához szükséges modális ablak egy példánya
-        /// </summary>
-        private FormModalGuestDatabase formModalGuestDatabase;
         /// <summary>
         /// Prezenter osztály egy példánya
         /// </summary>
@@ -43,6 +38,11 @@ namespace virtual_receptionist.View
 
         #region UI események
 
+        private void FormGuestDatabase_Load(object sender, EventArgs e)
+        {
+            presenter.InitalizeGuestTable(listViewGuests);
+        }
+
         private void listViewGuests_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
             e.Cancel = true;
@@ -64,92 +64,20 @@ namespace virtual_receptionist.View
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
-            Model.Guest guest = new Model.Guest();
-            formModalGuestDatabase = new FormModalGuestDatabase(guest);
-            formModalGuestDatabase.ShowDialog();
-
+            presenter.AddNewRecordInGuestTable();
             userIntervention = true;
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
         {
-            if (listViewGuests.SelectedItems.Count > 0)
-            {
-                string name = listViewGuests.SelectedItems[0].Text;
-                bool nationality = false;
-
-                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
-                {
-                    nationality = true;
-                }
-                else
-                {
-                    nationality = false;
-                }
-
-                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
-                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
-
-                Model.Guest guest = new Model.Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(guest);
-
-                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
-                {
-                    guest = formModalGuestDatabase.Guest;
-                }
-
-                userIntervention = true;
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            presenter.UpdateRecordInGuestTable(listViewGuests);
+            userIntervention = true;
         }
 
         private void buttonDeleteGuest_Click(object sender, EventArgs e)
         {
-            if (listViewGuests.SelectedItems.Count > 0)
-            {
-                string name = listViewGuests.SelectedItems[0].Text;
-                bool nationality = false;
-
-                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
-                {
-                    nationality = true;
-                }
-                else
-                {
-                    nationality = false;
-                }
-
-                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
-                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
-
-                Model.Guest guest = new Model.Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
-                Model.DataRepository dataRepository = new Model.DataRepository();
-                dataRepository.DeleteGuest(guest);
-
-                userIntervention = true;
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void FormGuestDatabase_Load(object sender, EventArgs e)
-        {
-            presenter.InitalizeGuestTable(listViewGuests);
+            presenter.DeleteRecordInGuestTable(listViewGuests);
+            userIntervention = true;
         }
 
         #endregion

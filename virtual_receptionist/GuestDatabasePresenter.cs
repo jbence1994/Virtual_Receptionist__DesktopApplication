@@ -1,5 +1,7 @@
 ﻿using System.Data;
 using System.Windows.Forms;
+using virtual_receptionist.Model;
+using virtual_receptionist.View;
 
 namespace virtual_receptionist.SupervisingController
 {
@@ -11,7 +13,7 @@ namespace virtual_receptionist.SupervisingController
         /// 
         /// </summary>
         /// <param name="listView"></param>
-        public void InitalizeGuestTable(ListView listView)
+        public void InitalizeGuestTable(ListView listViewGuests)
         {
             DataTable guestDataTable = dataRepository.GetGuests();
 
@@ -24,7 +26,7 @@ namespace virtual_receptionist.SupervisingController
                     guests.SubItems.Add(row[i].ToString());
                 }
 
-                listView.Items.Add(guests);
+                listViewGuests.Items.Add(guests);
             }
         }
         /// <summary>
@@ -32,21 +34,86 @@ namespace virtual_receptionist.SupervisingController
         /// </summary>
         public void AddNewRecordInGuestTable()
         {
-
+            guest = new Guest();
+            FormModalGuestDatabase formModalGuestDatabase = new FormModalGuestDatabase(guest);
+            formModalGuestDatabase.ShowDialog();
+            dataRepository.CreateGuest(guest);
         }
         /// <summary>
         /// 
         /// </summary>
-        public void DeleteRecordInGuestTable()
+        public void DeleteRecordInGuestTable(ListView listViewGuests)
         {
+            if (listViewGuests.SelectedItems.Count > 0)
+            {
+                string name = listViewGuests.SelectedItems[0].Text;
+                bool nationality = false;
 
+                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
+                {
+                    nationality = true;
+                }
+                else
+                {
+                    nationality = false;
+                }
+
+                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
+                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
+                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
+                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+
+                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
+                dataRepository.DeleteGuest(guest);
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         /// <summary>
         /// 
         /// </summary>
-        public void UpdateRecordInGuestTable()
+        public void UpdateRecordInGuestTable(ListView listViewGuests)
         {
+            if (listViewGuests.SelectedItems.Count > 0)
+            {
+                string name = listViewGuests.SelectedItems[0].Text;
+                bool nationality = false;
 
+                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
+                {
+                    nationality = true;
+                }
+                else
+                {
+                    nationality = false;
+                }
+
+                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
+                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
+                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
+                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+
+                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
+                FormModalGuestDatabase formModalGuestDatabase = new FormModalGuestDatabase(guest);
+
+                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
+                {
+                    guest = formModalGuestDatabase.Guest;
+                    dataRepository.UpdateGuest(guest);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
