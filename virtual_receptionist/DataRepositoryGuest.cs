@@ -63,15 +63,15 @@ namespace virtual_receptionist.Model
         /// </summary>
         public void DeleteGuest(Guest guest)
         {
-            string sql = $"DELETE FROM guest WHERE Name=@Name";
-            database.DeleteQuery(sql, "@Name", guest.Name);
+            string sql = $"DELETE FROM guest WHERE Name LIKE \"{guest.Name}\"";
+            database.DeleteQuery(sql);
         }
         /// <summary>
         /// Vendég módosítása
         /// </summary>
         public void UpdateGuest(Guest guest, int id)
         {
-            string sql = "UPDATE guest SET ";
+            string sql = "UPDATE guest SET Name=@Name";
             database.UpdateQuery(sql);
         }
         /// <summary>

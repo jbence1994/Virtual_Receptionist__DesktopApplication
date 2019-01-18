@@ -172,7 +172,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <param name="sql">SQL szkript</param>
         /// <returns></returns>
-        public void DeleteQuery(string sql, string paramName, object param)
+        public void DeleteQuery(string sql)
         {
             OpenConnection();
 
@@ -184,7 +184,6 @@ namespace virtual_receptionist.Model
                     Connection = mySqlConnection
                 };
 
-                mySqlCommand.Parameters.AddWithValue(paramName, param);
                 mySqlCommand.ExecuteNonQuery();
             }
             catch (MySqlException e)
