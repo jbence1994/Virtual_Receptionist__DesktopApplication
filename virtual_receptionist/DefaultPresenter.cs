@@ -19,10 +19,6 @@ namespace virtual_receptionist.SupervisingController
         /// Adattár osztály egy példánya
         /// </summary>
         private DataRepository dataRepository;
-        /// <summary>
-        /// Vendég osztály egy példánya
-        /// </summary>
-        private Guest guest;
 
         #endregion
 

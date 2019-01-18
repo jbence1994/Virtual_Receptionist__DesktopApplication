@@ -7,6 +7,19 @@ namespace virtual_receptionist.SupervisingController
 {
     public partial class Presenter
     {
+        #region Adattagok
+
+        /// <summary>
+        /// Vendégadatbázis-kezelő modális ablaka
+        /// </summary>
+        private FormModalGuestDatabase formModalGuestDatabase;
+        /// <summary>
+        /// Vendég osztály egy példánya
+        /// </summary>
+        private Guest guest;
+
+        #endregion
+
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
@@ -35,7 +48,7 @@ namespace virtual_receptionist.SupervisingController
         public void AddNewRecordInGuestTable()
         {
             guest = new Guest();
-            FormModalGuestDatabase formModalGuestDatabase = new FormModalGuestDatabase(guest);
+            formModalGuestDatabase = new FormModalGuestDatabase(guest);
             formModalGuestDatabase.ShowDialog();
             dataRepository.CreateGuest(guest);
         }
@@ -102,7 +115,7 @@ namespace virtual_receptionist.SupervisingController
                 string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
                 guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
-                FormModalGuestDatabase formModalGuestDatabase = new FormModalGuestDatabase(guest);
+                formModalGuestDatabase = new FormModalGuestDatabase(guest);
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
                 {
