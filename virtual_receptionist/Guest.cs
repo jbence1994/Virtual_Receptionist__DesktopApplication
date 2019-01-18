@@ -116,10 +116,6 @@
             {
                 return nationality;
             }
-            set
-            {
-                nationality = value;
-            }
         }
         /// <summary>
         /// Vendég száramázási országának neve
