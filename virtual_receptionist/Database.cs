@@ -64,7 +64,8 @@ namespace virtual_receptionist.Model
         {
             mySqlConnection = new MySqlConnection()
             {
-                ConnectionString = "SERVER=127.0.0.1; DATABASE=virtual_receptionist; UID=root; PASSWORD=\"\"; PORT=3306; SslMode=None;"
+                ConnectionString =
+                    "SERVER=127.0.0.1; DATABASE=virtual_receptionist; UID=root; PASSWORD=\"\"; PORT=3306; SslMode=None;"
             };
         }
 
@@ -81,10 +82,8 @@ namespace virtual_receptionist.Model
                 {
                     return databaseInstace = new Database();
                 }
-                else
-                {
-                    return databaseInstace;
-                }
+
+                return databaseInstace;
             }
         }
 
