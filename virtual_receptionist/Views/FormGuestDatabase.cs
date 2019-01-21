@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using virtual_receptionist.SupervisingController;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {

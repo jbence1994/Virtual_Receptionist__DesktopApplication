@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace virtual_receptionist.View
+namespace virtual_receptionist.Views
 {
     public static class Program
     {

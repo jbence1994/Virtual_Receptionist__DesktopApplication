@@ -1,7 +1,7 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Data;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace virtual_receptionist.Model
 {

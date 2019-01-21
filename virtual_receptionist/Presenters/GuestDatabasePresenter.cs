@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using virtual_receptionist.Model;
 using virtual_receptionist.View;
 
-namespace virtual_receptionist.SupervisingController
+namespace virtual_receptionist.Presenter
 {
     /// <summary>
     /// Vendégadatbázis-kezelő prezenter osztálya
