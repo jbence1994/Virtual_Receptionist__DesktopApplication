@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     public partial class Input
     {

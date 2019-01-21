@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace virtual_receptionist
+namespace virtual_receptionist.Model
 {
     /// <summary>
     /// Felhasználó által bevitt adatokat ellenőrző osztály
