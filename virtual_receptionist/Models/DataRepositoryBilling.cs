@@ -85,13 +85,25 @@ namespace virtual_receptionist.Model
             return billingItemsDataTable;
         }
         /// <summary>
-        /// Metódus, amely adatforrásként szolgált a számlázó modális ablak ComboBox komponensének
+        /// Metódus, amely adatforrásként szolgál a számlázó modális ablak ComboBox komponensének
         /// </summary>
-        /// <returns>Adatokkal feltöltött listát adja vissza</returns>
-        public List<Country> GetCountries()
+        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
+        public List<string> GetCountries()
         {
             UploadCountriesList();
-            return countries;
+            List<string> filtratedCountries = new List<string>();
+
+            foreach (Country country in countries)
+            {
+                if (!filtratedCountries.Contains(country.Name))
+                {
+                    filtratedCountries.Add(country.Name);
+                }
+            }
+
+            filtratedCountries.Sort();
+
+            return filtratedCountries;
         }
         /// <summary>
         /// Metódus, amely adatforrásként szolgált a számlázó modális ablak ComboBox komponensének
