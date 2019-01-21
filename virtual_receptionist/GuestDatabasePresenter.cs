@@ -5,7 +5,7 @@ using virtual_receptionist.View;
 
 namespace virtual_receptionist.SupervisingController
 {
-    public partial class Presenter
+    public class GuestDatabasePresenter : DefaultPresenter
     {
         #region Adattagok
 
@@ -13,10 +13,20 @@ namespace virtual_receptionist.SupervisingController
         /// Vendégadatbázis-kezelő modális ablaka
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
+
         /// <summary>
         /// Vendég osztály egy példánya
         /// </summary>
         private Guest guest;
+
+        #endregion
+
+        #region Konstrukor
+
+        public GuestDatabasePresenter()
+        {
+
+        }
 
         #endregion
 
@@ -42,6 +52,7 @@ namespace virtual_receptionist.SupervisingController
                 listViewGuests.Items.Add(guests);
             }
         }
+
         /// <summary>
         /// Adatbázis vendégtábláját feltöltő metódus
         /// </summary>
@@ -54,6 +65,7 @@ namespace virtual_receptionist.SupervisingController
             dataRepository.CreateGuest(guest);
             userIntervention = true;
         }
+
         /// <summary>
         /// Új rekord félvetélére szolgáló metódus (+ adatbázis)
         /// </summary>
@@ -82,7 +94,8 @@ namespace virtual_receptionist.SupervisingController
                 string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
-                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
+                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
+                    emailAddress);
                 dataRepository.DeleteGuest(guest);
 
                 userIntervention = true;
@@ -92,6 +105,7 @@ namespace virtual_receptionist.SupervisingController
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Meglévő rekord módosítására szolgáló metódus (+ adatbázis)
         /// </summary>
@@ -120,7 +134,8 @@ namespace virtual_receptionist.SupervisingController
                 string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
-                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
+                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
+                    emailAddress);
                 formModalGuestDatabase = new FormModalGuestDatabase(guest);
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
@@ -136,6 +151,7 @@ namespace virtual_receptionist.SupervisingController
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Oszlopszélesség megváltoztatását letiltó metódus
         /// </summary>

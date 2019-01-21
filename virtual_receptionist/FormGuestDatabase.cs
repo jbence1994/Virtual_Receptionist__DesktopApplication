@@ -14,7 +14,7 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Prezenter osztály egy példánya
         /// </summary>
-        private Presenter presenter;
+        private GuestDatabasePresenter presenter;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace virtual_receptionist.View
         public FormGuestDatabase()
         {
             InitializeComponent();
-            presenter = new Presenter();
+            presenter = new GuestDatabasePresenter();
         }
 
         #endregion

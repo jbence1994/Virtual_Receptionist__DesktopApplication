@@ -6,7 +6,7 @@ namespace virtual_receptionist.SupervisingController
     /// <summary>
     /// Az alkalmazás prezenter osztálya, amely modell kezelésért és nézet frissítésért felel
     /// </summary>
-    public partial class Presenter
+    public class DefaultPresenter
     {
         #region Adattagok
 
@@ -14,6 +14,7 @@ namespace virtual_receptionist.SupervisingController
         /// Adattár osztály egy példánya
         /// </summary>
         protected DataRepository dataRepository;
+
         /// <summary>
         /// Formon felhasználói módosítást tároló logikai változó 
         /// </summary>
@@ -26,7 +27,7 @@ namespace virtual_receptionist.SupervisingController
         /// <summary>
         /// Konstruktor
         /// </summary>
-        public Presenter()
+        public DefaultPresenter()
         {
             dataRepository = new DataRepository();
         }
@@ -38,11 +39,13 @@ namespace virtual_receptionist.SupervisingController
         /// <summary>
         /// Főmenübe visszalépés
         /// </summary>
-        public void BackToMainMenu(Form form)
+        protected void BackToMainMenu(Form form)
         {
             if (userIntervention)
             {
-                DialogResult backToMainMenu = MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult backToMainMenu =
+                    MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (backToMainMenu == DialogResult.OK)
                 {
