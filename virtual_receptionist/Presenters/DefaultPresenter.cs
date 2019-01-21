@@ -45,13 +45,15 @@ namespace virtual_receptionist.Presenter
             {
                 DialogResult backToMainMenu =
                     MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (backToMainMenu == DialogResult.OK)
+                if (backToMainMenu == DialogResult.Yes)
                 {
                     form.Close();
                 }
             }
+
+            form.Close();
         }
 
         #endregion

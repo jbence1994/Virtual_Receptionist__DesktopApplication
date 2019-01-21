@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {
@@ -18,6 +19,10 @@ namespace virtual_receptionist.View
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBilling formModalBilling;
+        /// <summary>
+        /// 
+        /// </summary>
+        private BillingPresenter presenter;
 
         #endregion
 
@@ -38,7 +43,7 @@ namespace virtual_receptionist.View
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
-            Close();
+            presenter.BackToMainMenu(this);
         }
 
         private void buttonNewData_Click(object sender, EventArgs e)
