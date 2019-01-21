@@ -24,12 +24,6 @@ namespace virtual_receptionist.Presenter
 
         #endregion
 
-        #region Konstrukor
-
-
-
-        #endregion
-
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>

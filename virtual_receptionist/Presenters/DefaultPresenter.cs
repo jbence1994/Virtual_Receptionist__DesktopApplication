@@ -34,7 +34,7 @@ namespace virtual_receptionist.Presenter
 
         #endregion
 
-        #region Metódusok
+        #region Általános nézetfrissítések
 
         /// <summary>
         /// Főmenübe visszalépés
