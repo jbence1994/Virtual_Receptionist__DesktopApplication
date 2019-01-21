@@ -57,32 +57,6 @@
         #region Konstruktorok
 
         /// <summary>
-        /// Accomodation osztály konstruktora
-        /// </summary>
-        /// <param name="name">Szálláshely neve</param>
-        /// <param name="company">Szálláshelyet üzemeltető cég neve</param>
-        /// <param name="contact">Szálláshely kontakt személye</param>
-        /// <param name="vatNumber">Szálláshely adószáma</param>
-        /// <param name="headquarters">Szálláshely székhelye</param>
-        /// <param name="site">Szálláshely telephelye</param>
-        /// <param name="telephoneNumber">Szálláshely telefonszáma</param>
-        /// <param name="emailAddress">Szálláshely e-mail címe</param>
-        /// <param name="accomodationID">Szálláshely szállásazonosítója</param>
-        /// <param name="password">Szálláshely szállásazonosítójához tartozó jelszava</param>
-        private Accomodation(string name, string company, string contact, string vatNumber, string headquarters, string site, string phoneNumber, string emailAddress, string accomodationID, string password)
-        {
-            this.name = name;
-            this.company = company;
-            this.contact = contact;
-            this.vatNumber = vatNumber;
-            this.headquarters = headquarters;
-            this.site = site;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
-            this.accomodationID = accomodationID;
-            this.password = password;
-        }
-        /// <summary>
         /// Accomodation osztály üres konstruktora
         /// </summary>
         private Accomodation()
@@ -105,10 +79,8 @@
                 {
                     return accomodationInstance = new Accomodation();
                 }
-                else
-                {
-                    return accomodationInstance;
-                }
+
+                return accomodationInstance;
             }
         }
         /// <summary>
