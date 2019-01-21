@@ -39,7 +39,7 @@ namespace virtual_receptionist.SupervisingController
         /// <summary>
         /// Főmenübe visszalépés
         /// </summary>
-        protected void BackToMainMenu(Form form)
+        public void BackToMainMenu(Form form)
         {
             if (userIntervention)
             {

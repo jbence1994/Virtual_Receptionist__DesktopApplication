@@ -12,7 +12,7 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Prezenter osztály egy példánya
+        /// Vendégadatbázis-kezelő prezenter egy példánya
         /// </summary>
         private GuestDatabasePresenter presenter;
 

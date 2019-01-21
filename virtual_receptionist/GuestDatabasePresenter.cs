@@ -5,6 +5,9 @@ using virtual_receptionist.View;
 
 namespace virtual_receptionist.SupervisingController
 {
+    /// <summary>
+    /// Vendégadatbázis-kezelő prezenter osztálya
+    /// </summary>
     public class GuestDatabasePresenter : DefaultPresenter
     {
         #region Adattagok
@@ -23,10 +26,7 @@ namespace virtual_receptionist.SupervisingController
 
         #region Konstrukor
 
-        public GuestDatabasePresenter()
-        {
 
-        }
 
         #endregion
 
@@ -57,7 +57,7 @@ namespace virtual_receptionist.SupervisingController
         /// Adatbázis vendégtábláját feltöltő metódus
         /// </summary>
         /// <param name="listViewGuests">Vendégtáblázat</param>
-        public void AddNewRecordInGuestTable(ListView listViewGuest)
+        public void AddNewRecordInGuestTable(ListView listViewGuests)
         {
             guest = new Guest();
             formModalGuestDatabase = new FormModalGuestDatabase(guest);
