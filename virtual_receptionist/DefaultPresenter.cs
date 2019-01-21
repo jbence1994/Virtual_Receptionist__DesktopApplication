@@ -13,11 +13,11 @@ namespace virtual_receptionist.SupervisingController
         /// <summary>
         /// Adattár osztály egy példánya
         /// </summary>
-        private DataRepository dataRepository;
+        protected DataRepository dataRepository;
         /// <summary>
         /// Formon felhasználói módosítást tároló logikai változó 
         /// </summary>
-        private bool userIntervention;
+        protected bool userIntervention;
 
         #endregion
 

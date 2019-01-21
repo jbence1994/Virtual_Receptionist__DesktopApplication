@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("virtual_receptionist")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Virtual Receptionist")]
+[assembly: AssemblyDescription("Ez a projekt az Szegedi Szakképzési Centrum Vasvári Pál Gazdasági és Informatikai Szakgimnáziuma, OKJ 54 213 05 Szoftverfejlesztő szakképzés záródolgozatát képező asztali alkalmazás. Minden a szoftverre vonatkozó licenszkérdésről a Szakmai Vizsgakövetelmény az irányadó.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("virtual_receptionist")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("Juhász Bence")]
+[assembly: AssemblyProduct("Virtual Receptionist")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
