@@ -45,7 +45,7 @@
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(214, 23);
             this.buttonLogin.TabIndex = 4;
-            this.buttonLogin.Text = "Bejelentkezés";
+            this.buttonLogin.Text = "Belépés";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             this.buttonLogin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.buttonLogin_KeyUp);
@@ -130,6 +130,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Konfiguráció | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxLogin.PerformLayout();
