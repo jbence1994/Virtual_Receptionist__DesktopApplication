@@ -26,6 +26,7 @@ namespace virtual_receptionist.View
         public FormMainMenu()
         {
             InitializeComponent();
+            presenter = new MainMenuPresenter(this, toolStripStatusLabelMenuName, toolStripStatusLabelClient);
         }
 
         #endregion
@@ -34,7 +35,7 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            presenter.SetMainMenu(this);
+            presenter.SetMainMenu();
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
@@ -137,34 +138,9 @@ namespace virtual_receptionist.View
             presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
-        private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
-        {
-            presenter.Logout();
-        }
-
-        private void toolStripMenuItemQuit_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Kilépés");
-        }
-
-        private void toolStripMenuItemQuit_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
-        {
-            presenter.OpenRoomEditor();
-        }
-
         private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)
         {
             presenter.OpenGuestDatabase();
-        }
-
-        private void toolStripButtonBilling_Click(object sender, EventArgs e)
-        {
-            presenter.OpenBilling();
         }
 
         #endregion

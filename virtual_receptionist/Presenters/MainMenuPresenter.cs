@@ -19,6 +19,14 @@ namespace virtual_receptionist.Presenter
         /// Főmenü ablak
         /// </summary>
         private FormMainMenu formMainMenu;
+        /// <summary>
+        /// 
+        /// </summary>
+        private ToolStripLabel toolStripStatusLabelMenuName;
+        /// <summary>
+        /// 
+        /// </summary>
+        private ToolStripLabel toolStripStatusLabelClient;
 
         #endregion
 
@@ -27,21 +35,19 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Főmenü ablak prezenter konstruktora
         /// </summary>
-        public MainMenuPresenter()
+        /// <param name="formMainMenu"></param>
+        /// <param name="toolStripStatusLabelMenuName"></param>
+        /// <param name="toolStripStatusLabelClient"></param>
+        public MainMenuPresenter(FormMainMenu formMainMenu, ToolStripLabel toolStripStatusLabelMenuName, ToolStripLabel toolStripStatusLabelClient)
         {
+            this.formMainMenu = formMainMenu;
+            this.toolStripStatusLabelMenuName = toolStripStatusLabelMenuName;
+            this.toolStripStatusLabelClient = toolStripStatusLabelClient;
         }
 
         #endregion
 
         #region Főmenü nézetfrissítései
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Open()
-        {
-
-        }
 
         /// <summary>
         /// Metódus, amely kijelentkezik az alkalmazásból
@@ -62,11 +68,11 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         /// <param name="form"></param>
-        public void SetMainMenu(Form form)
+        public void SetMainMenu()
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
             toolStripStatusLabelClient.Text += DataRepository.Client;
-            form.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
+            formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
         /// <summary>
         /// 
