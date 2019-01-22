@@ -54,7 +54,7 @@ namespace virtual_receptionist.Presenter
             if (dataRepository.Authentication(accomodationID, password))
             {
                 formLogin.Hide();
-                FormMainMenu formMainMenu = new FormMainMenu();
+                FormMainMenu formMainMenu = new FormMainMenu(formLogin);
                 formMainMenu.Show();
             }
             else

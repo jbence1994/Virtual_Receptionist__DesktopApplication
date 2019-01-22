@@ -28,9 +28,10 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Főmenü ablak konstruktora
         /// </summary>
-        public FormMainMenu()
+        public FormMainMenu(FormLogin formLogin)
         {
             InitializeComponent();
+            this.formLogin = formLogin;
             presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName,
                 toolStripStatusLabelClient);
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Windows.Forms;
+using System.Threading;
+using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
 {
@@ -9,7 +11,14 @@ namespace virtual_receptionist.Presenter
     {
         #region Adattagok
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        private FormLogin formLogin;
+        /// <summary>
+        /// 
+        /// </summary>
+        private FormApplicationOpening formApplicationOpening;
 
         #endregion
 
@@ -18,16 +27,24 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Nyitóablak prezenter konstruktora
         /// </summary>
-        public ApplicationOpeningPresenter()
+        /// <param name="formApplicationOpening"></param>
+        public ApplicationOpeningPresenter(FormApplicationOpening formApplicationOpening)
         {
-
+            formLogin = new FormLogin();
+            this.formApplicationOpening = formApplicationOpening;
         }
 
         #endregion
 
-        #region UI események
+        #region Nyitóablak nézetfrissítései
 
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        public void ApplicationStarting()
+        {
+
+        }
 
         #endregion
     }

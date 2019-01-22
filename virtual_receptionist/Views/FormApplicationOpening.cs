@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {
@@ -9,7 +10,10 @@ namespace virtual_receptionist.View
     {
         #region Adattagok
 
-
+        /// <summary>
+        /// nyitóablak prezenter egy példánya
+        /// </summary>
+        private ApplicationOpeningPresenter presenter;
 
         #endregion
 
@@ -21,6 +25,7 @@ namespace virtual_receptionist.View
         public FormApplicationOpening()
         {
             InitializeComponent();
+            presenter = new ApplicationOpeningPresenter(this);
         }
 
         #endregion
@@ -29,7 +34,7 @@ namespace virtual_receptionist.View
 
         private void FormApplicationOpening_Load(object sender, System.EventArgs e)
         {
-
+            presenter.ApplicationStarting();
         }
 
         #endregion

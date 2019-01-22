@@ -54,7 +54,6 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely kijelentkezik az alkalmazásból
         /// </summary>
-        /// <param name="formMainMenu">Főmenü ablak</param>
         public void Logout()
         {
             DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
