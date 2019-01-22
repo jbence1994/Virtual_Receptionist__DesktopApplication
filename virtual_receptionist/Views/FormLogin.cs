@@ -26,11 +26,7 @@ namespace virtual_receptionist.View
         public FormLogin()
         {
             InitializeComponent();
-
-            string accomodationID = textBoxAccomodationID.Text;
-            string password = textBoxPassword.Text;
-
-            presenter = new LoginPresenter(this, accomodationID, password);
+            presenter = new LoginPresenter(this);
         }
 
         #endregion
@@ -44,7 +40,7 @@ namespace virtual_receptionist.View
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            presenter.EnterApplication();
+            presenter.EnterApplication(textBoxAccomodationID.Text, textBoxPassword.Text);
         }
 
         private void buttonLogin_KeyUp(object sender, KeyEventArgs e)

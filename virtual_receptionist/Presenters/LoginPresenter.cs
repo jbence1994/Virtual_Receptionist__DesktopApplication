@@ -32,13 +32,9 @@ namespace virtual_receptionist.Presenter
         /// <summary>Bejelentkező ablak prezenter konstruktora
         /// </summary>
         /// <param name="formLogin">Bejelentkező ablak</param>
-        /// <param name="accomodationID">Szálláshely azonosító</param>
-        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
-        public LoginPresenter(FormLogin formLogin, string accomodationID, string password)
+        public LoginPresenter(FormLogin formLogin)
         {
             this.formLogin = formLogin;
-            this.accomodationID = accomodationID;
-            this.password = password;
         }
 
         #endregion
@@ -48,8 +44,13 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beenged a főmenübe
         /// </summary>
-        public void EnterApplication()
+        /// <param name="accomodationID">Szálláshely azonosító</param>
+        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
+        public void EnterApplication(string accomodationID, string password)
         {
+            this.accomodationID = accomodationID;
+            this.password = password;
+
             if (dataRepository.Authentication(accomodationID, password))
             {
                 formLogin.Hide();
@@ -58,7 +59,7 @@ namespace virtual_receptionist.Presenter
             }
             else
             {
-                throw new Exception("Sikertelen bejelentlezés...");
+                throw new Exception("Sikertelen bejelentkezés...");
             }
         }
         /// <summary>
@@ -69,7 +70,7 @@ namespace virtual_receptionist.Presenter
         {
             if (e.KeyCode == Keys.Enter)
             {
-                EnterApplication();
+                EnterApplication(accomodationID, password);
             }
         }
         /// <summary>
