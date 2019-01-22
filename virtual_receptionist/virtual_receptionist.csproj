@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
+    <Compile Include="Presenters\RoomEditorPresenter.cs" />
     <Compile Include="Views\FormApplicationOpening.cs">
       <SubType>Form</SubType>
     </Compile>
