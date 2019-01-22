@@ -12,15 +12,7 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
-        /// </summary>
-        private FormModalBillingItems formModalBillingItems;
-        /// <summary>
-        /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
-        /// </summary>
-        private FormModalBilling formModalBilling;
-        /// <summary>
-        /// 
+        /// Számlázó modul prezenter egy példánya
         /// </summary>
         private BillingPresenter presenter;
 
@@ -35,6 +27,7 @@ namespace virtual_receptionist.View
         public FormBilling()
         {
             InitializeComponent();
+            presenter = new BillingPresenter(dataGridViewItems);
         }
 
         #endregion
@@ -48,62 +41,37 @@ namespace virtual_receptionist.View
 
         private void buttonNewData_Click(object sender, EventArgs e)
         {
-            formModalBilling = new FormModalBilling();
-
-            if (formModalBilling.ShowDialog() == DialogResult.OK)
-            {
-                buttonAddItem.Enabled = true;
-                buttonUpdateItem.Enabled = true;
-                buttonDeleteItem.Enabled = true;
-                buttonPrintInvoice.Enabled = true;
-                buttonSaveInvoice.Enabled = true;
-            }
+            presenter.NewData();
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            formModalBillingItems = new FormModalBillingItems();
-            formModalBillingItems.ShowDialog();
+            presenter.AddNewRow();
         }
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItems.SelectedRows.Count != 0)
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            presenter.UpdateRow();
         }
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItems.SelectedRows.Count != 0)
-            {
-                int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-                dataGridViewItems.Rows.RemoveAt(rowToDelete);
-            }
-            else
-            {
-                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            presenter.DeleteRow();
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
-
+            presenter.PrintInvoice();
         }
 
         private void buttonSaveInvoice_Click(object sender, EventArgs e)
         {
-
+            presenter.SaveInvoice();
         }
 
         private void buttonImportData_Click(object sender, EventArgs e)
         {
-
+            presenter.ImportData();
         }
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)

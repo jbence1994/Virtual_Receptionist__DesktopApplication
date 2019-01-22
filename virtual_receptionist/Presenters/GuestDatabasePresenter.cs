@@ -13,14 +13,30 @@ namespace virtual_receptionist.Presenter
         #region Adattagok
 
         /// <summary>
+        /// Vendég osztály egy példánya
+        /// </summary>
+        private Guest guest;
+        /// <summary>
+        /// Vendégtáblázat
+        /// </summary>
+        private ListView listViewGuests;
+        /// <summary>
         /// Vendégadatbázis-kezelő modális ablaka
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
 
+        #endregion
+
+        #region Konstruktor
+
         /// <summary>
-        /// Vendég osztály egy példánya
+        /// Vendégadatbázis-kezelő prezenter konstruktora
         /// </summary>
-        private Guest guest;
+        /// <param name="listViewGuests">Vendégtáblázat</param>
+        public GuestDatabasePresenter(ListView listViewGuests)
+        {
+            this.listViewGuests = listViewGuests;
+        }
 
         #endregion
 
@@ -29,8 +45,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendgadatbázis-kezelő ablakon táblázatot vendégekkel feltöltő metódus
         /// </summary>
-        /// <param name="listViewGuests">Vendégtáblázat</param>
-        public void InitalizeGuestTable(ListView listViewGuests)
+        public void InitalizeGuestTable()
         {
             DataTable guestDataTable = dataRepository.GetGuests();
 
@@ -46,12 +61,10 @@ namespace virtual_receptionist.Presenter
                 listViewGuests.Items.Add(guests);
             }
         }
-
         /// <summary>
         /// Adatbázis vendégtábláját feltöltő metódus
         /// </summary>
-        /// <param name="listViewGuests">Vendégtáblázat</param>
-        public void AddNewRecordInGuestTable(ListView listViewGuests)
+        public void AddNewRecordInGuestTable()
         {
             guest = new Guest();
             formModalGuestDatabase = new FormModalGuestDatabase(guest);
@@ -59,12 +72,10 @@ namespace virtual_receptionist.Presenter
             dataRepository.CreateGuest(guest);
             userIntervention = true;
         }
-
         /// <summary>
         /// Új rekord félvetélére szolgáló metódus (+ adatbázis)
         /// </summary>
-        /// <param name="listViewGuests">Vendégtáblázat</param>
-        public void DeleteRecordInGuestTable(ListView listViewGuests)
+        public void DeleteRecordInGuestTable()
         {
             if (listViewGuests.SelectedItems.Count > 0)
             {
@@ -99,12 +110,10 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         /// <summary>
         /// Meglévő rekord módosítására szolgáló metódus (+ adatbázis)
         /// </summary>
-        /// <param name="listViewGuests">Vendégtáblázat</param>
-        public void UpdateRecordInGuestTable(ListView listViewGuests)
+        public void UpdateRecordInGuestTable()
         {
             if (listViewGuests.SelectedItems.Count > 0)
             {
@@ -145,7 +154,6 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         /// <summary>
         /// Oszlopszélesség megváltoztatását letiltó metódus
         /// </summary>

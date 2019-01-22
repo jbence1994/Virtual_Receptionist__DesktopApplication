@@ -26,7 +26,7 @@ namespace virtual_receptionist.View
         public FormGuestDatabase()
         {
             InitializeComponent();
-            presenter = new GuestDatabasePresenter();
+            presenter = new GuestDatabasePresenter(listViewGuests);
         }
 
         #endregion
@@ -35,7 +35,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            presenter.InitalizeGuestTable(listViewGuests);
+            presenter.InitalizeGuestTable();
         }
 
         private void listViewGuests_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -50,17 +50,17 @@ namespace virtual_receptionist.View
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
-            presenter.AddNewRecordInGuestTable(listViewGuests);
+            presenter.AddNewRecordInGuestTable();
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
         {
-            presenter.UpdateRecordInGuestTable(listViewGuests);
+            presenter.UpdateRecordInGuestTable();
         }
 
         private void buttonDeleteGuest_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRecordInGuestTable(listViewGuests);
+            presenter.DeleteRecordInGuestTable();
         }
 
         #endregion

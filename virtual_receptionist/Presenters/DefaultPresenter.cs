@@ -39,6 +39,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Főmenübe visszalépés
         /// </summary>
+        /// <param name="form">Ablak, amely bezárásra kerül</param>
         public void BackToMainMenu(Form form)
         {
             if (userIntervention)
