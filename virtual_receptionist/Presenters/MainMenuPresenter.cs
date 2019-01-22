@@ -95,7 +95,8 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void OpenCHM()
         {
-            Help.ShowHelp(formMainMenu, "");
+            Help.ShowHelp(formMainMenu,
+                "file://C:\\Users\\Bence\\Desktop\\zarodolgozat\\Virtual-Receptionist-desktop\\virtual_receptionist\\Help\\virtual_receptionist_help.chm");
         }
         /// <summary>
         /// 
