@@ -140,6 +140,11 @@ namespace virtual_receptionist.Presenter
             formGuestDatabase.ShowDialog();
         }
 
+        public void OpenVirtualReceptionistWebsite()
+        {
+            throw new System.NotImplementedException();
+        }
+
         #endregion
     }
 }

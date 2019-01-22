@@ -81,8 +81,9 @@
             // toolStripMenuItemLogout
             // 
             this.toolStripMenuItemLogout.Name = "toolStripMenuItemLogout";
-            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(141, 22);
+            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemLogout.Text = "Kijelentkezés";
+            this.toolStripMenuItemLogout.Click += new System.EventHandler(this.toolStripMenuItemLogout_Click);
             // 
             // toolStripMenuItemRoomEditor
             // 
@@ -130,6 +131,7 @@
             this.toolStripMenuItemWebsite.Name = "toolStripMenuItemWebsite";
             this.toolStripMenuItemWebsite.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemWebsite.Text = "A Virtual Receptionist weboldala";
+            this.toolStripMenuItemWebsite.Click += new System.EventHandler(this.toolStripMenuItemWebsite_Click);
             // 
             // toolStripMenuItemHelpCHM
             // 
@@ -214,6 +216,7 @@
             this.toolStripButtonRoomEditor.Name = "toolStripButtonRoomEditor";
             this.toolStripButtonRoomEditor.Size = new System.Drawing.Size(36, 36);
             this.toolStripButtonRoomEditor.Text = "Szobakezelő";
+            this.toolStripButtonRoomEditor.Click += new System.EventHandler(this.toolStripButtonRoomEditor_Click);
             // 
             // toolStripButtonGuestDatabase
             // 
@@ -236,6 +239,7 @@
             this.toolStripButtonBilling.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripButtonBilling.Size = new System.Drawing.Size(28, 36);
             this.toolStripButtonBilling.Text = "Számlázás";
+            this.toolStripButtonBilling.Click += new System.EventHandler(this.toolStripButtonBilling_Click);
             // 
             // pictureBoxBSLogo
             // 

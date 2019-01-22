@@ -142,6 +142,26 @@ namespace virtual_receptionist.View
         {
             presenter.OpenGuestDatabase();
         }
+        
+        private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
+        {
+            presenter.OpenRoomEditor();
+        }
+
+        private void toolStripButtonBilling_Click(object sender, EventArgs e)
+        {
+            presenter.OpenBilling();
+        }
+
+        private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
+        {
+            presenter.Logout();
+        }
+
+        private void toolStripMenuItemWebsite_Click(object sender, EventArgs e)
+        {
+            presenter.OpenVirtualReceptionistWebsite();
+        }
 
         #endregion
     }
