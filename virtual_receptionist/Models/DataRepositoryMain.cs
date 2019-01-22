@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 
 namespace virtual_receptionist.Model
 {
@@ -16,6 +15,10 @@ namespace virtual_receptionist.Model
         /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
         /// </summary>
         private static Database database;
+        /// <summary>
+        /// Szálláshelyek adatait tároló lista
+        /// </summary>
+        private List<Accomodation> accomodations;
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
@@ -57,6 +60,7 @@ namespace virtual_receptionist.Model
             database = Database.DatabaseInstance;
             client = Environment.MachineName;
 
+            accomodations = new List<Accomodation>();
             billingItems = new List<BillingItems>();
             guests = new List<Guest>();
             countries = new List<Country>();
@@ -85,37 +89,40 @@ namespace virtual_receptionist.Model
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely beállítja az adott szálláshely adatait
+        /// Metódus, amely adatbázisból kiolvassa a szálláshelyek adatait és lista adatszerkezetek menti őket
         /// </summary>
-        public Accomodation SetAccomodation()
+        private void UploadAccomodationList()
         {
             Accomodation accomodation = Accomodation.AccomodationInstance;
 
             string sql =
-                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
+                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation.AccomodationID, accomodation.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
+            DataTable dt = database.DQL(sql);
 
-            try
+            foreach (DataRow row in dt.Rows)
             {
-                DataTable accomodationData = database.DQL(sql);
+                accomodation.Name = row["AccomodationName"].ToString();
+                accomodation.Company = row["CompanyName"].ToString();
+                accomodation.Contact = row["Contact"].ToString();
+                accomodation.VatNumber = row["VATNumber"].ToString();
+                accomodation.Headquarters = row["Headquarters"].ToString();
+                accomodation.Site = row["Site"].ToString();
+                accomodation.PhoneNumber = row["PhoneNumber"].ToString();
+                accomodation.EmailAddress = row["EmailAddress"].ToString();
+                accomodation.AccomodationID = row["AccomodationID"].ToString();
+                accomodation.Password = row["Password"].ToString();
 
-                foreach (DataRow row in accomodationData.Rows)
-                {
-                    accomodation.Name = row["AccomodationName"].ToString();
-                    accomodation.Company = row["CompanyName"].ToString();
-                    accomodation.Contact = row["Contact"].ToString();
-                    accomodation.VatNumber = row["VATNumber"].ToString();
-                    accomodation.Headquarters = row["Headquarters"].ToString();
-                    accomodation.Site = row["Site"].ToString();
-                    accomodation.PhoneNumber = row["PhoneNumber"].ToString();
-                    accomodation.EmailAddress = row["EmailAddress"].ToString();
-                }
+                accomodations.Add(accomodation);
             }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
+        }
+        /// <summary>
+        /// Metódus, amely beállítja az adott szálláshely adatait
+        /// </summary>
+        public Accomodation SetAccomodation()
+        {
+            UploadAccomodationList();
 
-            return accomodation;
+            return Accomodation.AccomodationInstance;
         }
 
         #endregion
