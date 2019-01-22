@@ -35,7 +35,7 @@ namespace virtual_receptionist.View
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            textBoxAccomodationID.Select();
+            presenter.SetLogin(textBoxAccomodationID);
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -45,17 +45,23 @@ namespace virtual_receptionist.View
 
         private void buttonLogin_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                presenter.EnterApplication();
-            }
+            presenter.EnterApplication(e);
         }
 
-        #endregion
+        private void textBoxAccomodationID_KeyUp(object sender, KeyEventArgs e)
+        {
+            presenter.EnterApplication(e);
+        }
 
-        #region Metódusok
+        private void textBoxPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            presenter.EnterApplication(e);
+        }
 
-
+        private void comboBoxConnectionType_KeyUp(object sender, KeyEventArgs e)
+        {
+            presenter.EnterApplication(e);
+        }
 
         #endregion
     }

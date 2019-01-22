@@ -61,6 +61,7 @@
             this.textBoxAccomodationID.Name = "textBoxAccomodationID";
             this.textBoxAccomodationID.Size = new System.Drawing.Size(214, 20);
             this.textBoxAccomodationID.TabIndex = 0;
+            this.textBoxAccomodationID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxAccomodationID_KeyUp);
             // 
             // textBoxPassword
             // 
@@ -69,6 +70,7 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(214, 20);
             this.textBoxPassword.TabIndex = 1;
+            this.textBoxPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxPassword_KeyUp);
             // 
             // labelAccomodationID
             // 
@@ -107,6 +109,7 @@
             this.comboBoxConnectionType.Name = "comboBoxConnectionType";
             this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
             this.comboBoxConnectionType.TabIndex = 3;
+            this.comboBoxConnectionType.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBoxConnectionType_KeyUp);
             // 
             // pictureBoxLogo
             // 

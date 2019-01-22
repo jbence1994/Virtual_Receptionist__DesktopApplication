@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.View;
+﻿using System.Windows.Forms;
+using virtual_receptionist.View;
 using virtual_receptionist.Model;
 
 namespace virtual_receptionist.Presenter
@@ -39,6 +40,25 @@ namespace virtual_receptionist.Presenter
             formLogin.Hide();
             FormMainMenu formMainMenu = new FormMainMenu();
             formMainMenu.Show();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e">Billentyű esemény</param>
+        public void EnterApplication(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                EnterApplication();
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="textBoxAccomodationID"></param>
+        public void SetLogin(TextBox textBoxAccomodationID)
+        {
+            textBoxAccomodationID.Select();
         }
 
         #endregion
