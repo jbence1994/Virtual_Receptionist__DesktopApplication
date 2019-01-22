@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {
@@ -11,9 +12,9 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Alkalmazás bejelentkező ablakának egy példánya
+        /// Főmenü ablak prezenter egy példánya
         /// </summary>
-        private FormLogin formLogin;
+        private MainMenuPresenter presenter;
 
         #endregion
 
@@ -22,11 +23,9 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Főmenü ablak konstruktora
         /// </summary>
-        /// <param name="formLogin">Alkalmazás bejelentkező ablakának egy példánya</param>
-        public FormMainMenu(FormLogin formLogin)
+        public FormMainMenu()
         {
             InitializeComponent();
-            this.formLogin = formLogin;
         }
 
         #endregion
@@ -35,10 +34,7 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            Model.DataRepository dataRepository = new Model.DataRepository();
-            Model.Accomodation accomodation = dataRepository.SetAccomodation();
-            toolStripStatusLabelClient.Text += Model.DataRepository.Client;
-            Text += $"{accomodation.Name} ({accomodation.VatNumber})";
+            presenter.SetMainMenu(this);
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
@@ -101,6 +97,9 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
         {
+
+
+
             Model.DataRepository dataRepository = new Model.DataRepository();
             Model.Accomodation accomodation = dataRepository.SetAccomodation();
 
@@ -134,8 +133,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
         {
-            AboutBox aboutBox = new AboutBox();
-            aboutBox.ShowDialog();
+            presenter.OpenAboutBox();
         }
 
         private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)
@@ -150,13 +148,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
         {
-            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (logout == DialogResult.Yes)
-            {
-                Close();
-                formLogin.Show();
-            }
+            presenter.Logout(this);
         }
 
         private void toolStripMenuItemQuit_MouseHover(object sender, EventArgs e)
@@ -170,5 +162,20 @@ namespace virtual_receptionist.View
         }
 
         #endregion
+
+        private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonBilling_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

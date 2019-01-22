@@ -46,9 +46,9 @@
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRoomEditor = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonGuestDatabase = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
             this.pictureBoxBSLogo = new System.Windows.Forms.PictureBox();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
@@ -196,24 +196,24 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButtonRoomEditor,
             this.toolStripButtonGuestDatabase,
-            this.toolStripButton2});
+            this.toolStripButtonBilling});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1008, 39);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripButtonRoomEditor
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton1.Text = "Szobakezelő";
+            this.toolStripButtonRoomEditor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonRoomEditor.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRoomEditor.Image")));
+            this.toolStripButtonRoomEditor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonRoomEditor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRoomEditor.Name = "toolStripButtonRoomEditor";
+            this.toolStripButtonRoomEditor.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButtonRoomEditor.Text = "Szobakezelő";
             // 
             // toolStripButtonGuestDatabase
             // 
@@ -224,17 +224,18 @@
             this.toolStripButtonGuestDatabase.Name = "toolStripButtonGuestDatabase";
             this.toolStripButtonGuestDatabase.Size = new System.Drawing.Size(36, 36);
             this.toolStripButtonGuestDatabase.Text = "Vendégadatbázis";
+            this.toolStripButtonGuestDatabase.Click += new System.EventHandler(this.toolStripButtonGuestDatabase_Click);
             // 
-            // toolStripButton2
+            // toolStripButtonBilling
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripButton2.Size = new System.Drawing.Size(28, 36);
-            this.toolStripButton2.Text = "Számlázás";
+            this.toolStripButtonBilling.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonBilling.Image")));
+            this.toolStripButtonBilling.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonBilling.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonBilling.Name = "toolStripButtonBilling";
+            this.toolStripButtonBilling.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripButtonBilling.Size = new System.Drawing.Size(28, 36);
+            this.toolStripButtonBilling.Text = "Számlázás";
             // 
             // pictureBoxBSLogo
             // 
@@ -285,8 +286,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelp;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelClient;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonRoomEditor;
+        private System.Windows.Forms.ToolStripButton toolStripButtonBilling;
         private System.Windows.Forms.ToolStripButton toolStripButtonGuestDatabase;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;

@@ -54,7 +54,7 @@ namespace virtual_receptionist.View
         private void EnterApplication()
         {
             Hide();
-            FormMainMenu formMainMenu = new FormMainMenu(this);
+            FormMainMenu formMainMenu = new FormMainMenu();
             formMainMenu.Show();
         }
 

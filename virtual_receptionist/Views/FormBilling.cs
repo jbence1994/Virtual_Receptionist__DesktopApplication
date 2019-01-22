@@ -21,9 +21,8 @@ namespace virtual_receptionist.View
         #region Konstruktor
 
         /// <summary>
-        /// Számlázó modul ablak konstruktora, amely összeköti a főmenü ablakot a számlázó modul ablakkal
+        /// Számlázó modul ablak konstruktora
         /// </summary>
-        /// <param name="formMainMenu">Főmenü ablak egy példánya</param>
         public FormBilling()
         {
             InitializeComponent();
