@@ -44,14 +44,11 @@
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxOperations = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
             this.tabControlRoomEditor.SuspendLayout();
             this.tabPageReservations.SuspendLayout();
             this.tabPageRooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
-            this.groupBoxOperations.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonBackToMainMenu
@@ -211,29 +208,11 @@
             this.ColumnCapacity.ReadOnly = true;
             this.ColumnCapacity.Width = 200;
             // 
-            // groupBoxOperations
-            // 
-            this.groupBoxOperations.Controls.Add(this.comboBox1);
-            this.groupBoxOperations.Location = new System.Drawing.Point(877, 12);
-            this.groupBoxOperations.Name = "groupBoxOperations";
-            this.groupBoxOperations.Size = new System.Drawing.Size(159, 521);
-            this.groupBoxOperations.TabIndex = 10;
-            this.groupBoxOperations.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
             // FormRoomEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 613);
-            this.Controls.Add(this.groupBoxOperations);
             this.Controls.Add(this.tabControlRoomEditor);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -246,7 +225,6 @@
             this.tabPageReservations.ResumeLayout(false);
             this.tabPageRooms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).EndInit();
-            this.groupBoxOperations.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -268,7 +246,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGuestCapacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArrival;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDeparture;
-        private System.Windows.Forms.GroupBox groupBoxOperations;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
