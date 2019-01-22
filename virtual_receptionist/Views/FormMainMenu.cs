@@ -171,7 +171,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemWebsite_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("A Virtual Receptionist weblapja");
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("A Virtual Receptionist weboldala");
         }
 
         private void toolStripMenuItemWebsite_MouseLeave(object sender, EventArgs e)

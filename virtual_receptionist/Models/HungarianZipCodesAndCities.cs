@@ -28,13 +28,6 @@
             this.zipCode = zipCode;
             this.city = city;
         }
-        /// <summary>
-        /// HungarianZipCodesAndCities osztály üres konstruktora
-        /// </summary>
-        public HungarianZipCodesAndCities()
-        {
-
-        }
 
         #endregion
 

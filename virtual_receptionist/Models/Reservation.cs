@@ -45,13 +45,6 @@ namespace virtual_receptionist.Model
             this.arrival = arrival;
             this.departure = departure;
         }
-        /// <summary>
-        /// Reservation osztály üres konstruktora
-        /// </summary>
-        public Reservation()
-        {
-
-        }
 
         #endregion
 

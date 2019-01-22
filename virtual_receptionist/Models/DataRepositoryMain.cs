@@ -55,6 +55,7 @@ namespace virtual_receptionist.Model
         public DataRepository()
         {
             database = Database.DatabaseInstance;
+            client = Environment.MachineName;
 
             billingItems = new List<BillingItems>();
             guests = new List<Guest>();
@@ -75,7 +76,7 @@ namespace virtual_receptionist.Model
         {
             get
             {
-                return client = Environment.MachineName;
+                return client;
             }
         }
 
