@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="buttonBackToMainMenu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonBackToMainMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -135,6 +138,9 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="dataGridViewRoomRents.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ColumnGuest.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -150,6 +156,18 @@
   <metadata name="ColumnDeparture.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="tabControlRoomEditor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tabPageReservations.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tabPageRooms.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewRooms.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ColumnName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -160,6 +178,70 @@
     <value>True</value>
   </metadata>
   <metadata name="ColumnCapacity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonNewReservation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="buttonNewReservation.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAB6MAAAejATAvssUAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACSUlEQVRYR+2VX2vTUBiHi174LbzwE3i7z+C1H0NWh0z0Yg7ZklGno5Up03khyJCNMSbihU6pWWpT
+        23W165+kbdrNdOuashSGrmqV13NSqs1y2vTUE8bAAw+Ek8P7e3rO2xNPXS9drNeK8C8cVAugKtIKAHho
+        YSaQTrwZSIKpwCASzAVoJVwRoJFwTaBfCVcFME4SRAFDL0A+K0Iu/f4YAtQqimVte31BDnVldyfBk8Ix
+        XXegupuBfS1lpZy2resHo1Z8TgrHMDkCJ06nwN7nJJS3E9QQe4RWADdVKSeBKn+gpqJtWWqZ9f73wKkT
+        wD2QTb4j3mxOlEubllpmvUF2AF+vB/t5auo11VbrxI5Ar+Ygo22AVsksk8Ixrgis5V8D/3EWRtZ5uLrO
+        tVG8Ajd6eXHxrKOAoauwo0ZhOx+hQlZE8Mced4aSkIbFqfMOO6CCVoybEjTMRudtgf7EU9scQhiH8TM9
+        BOgR1SApCGUAjEl+wrvJYaYCDzeJv7QlECEJcLGeAvijou9l+2YsPPOnOB+bg+n4ExM8HmwtmM++uKU/
+        flx5FTjXpQkLIKeC6DJ62xfp5Brq+FbhW5EAHH7/Ao3mNxM8Gj9bz1+bR+Db6JTgLzA7gonI/Y7Cf8Gj
+        yxEc4kZkJjD/6RkppJdAEL1i14QpLXr84jE5ajbgZviebd4rTF5iKoBZya7agm6E79rmEI9wOHMBA11g
+        L+SXcE2cIoVifo0I3B3c/a4ItFHKcVhILcE0+jteD/ngthQw0MUz5w1xQ+3gFuD5DYvznM6mUB3eAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="buttonUpdateReservation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="buttonUpdateReservation.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAB4sAAAeLAYaNmzQAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACiElEQVRYR+2WzWvTYByA+xd48iJenDTz4nV+zY8WdNEpngaiE8GToocxb3rw4kFwHSLoQSaidtMh
+        uOnFg58VXd26xdXWJU2bNB/t2rRpm9mDBT38TFJTF/dmbbZkMPDwEGjS93lIfnlbT0XmzityGlZDlpst
+        imykAwA8dnEkQGCnIREP/VxJhGMBc9HXegTHfd6JElnhaIARkeWIXSgZCscDNKj4+1+tRrgSYETwfGQP
+        SroY1wJajUAGFLJz6pffARUzw1ATpusMcmIMuOQkEoGdUcrl1AaUXMPyDhRzCRXKRElKLrmuJfLcFpRc
+        w5FH0JR1F1CSaOCZiG1EdgYqRda0lo79gKQ+2XbJpAlnAhxnXQagXsNmyHl6yTo6dgOsNqJm0N8+qDPA
+        mNbS+T8DfwLoM8c2U73dj8mTRy+seQB5Gt9EnepOqgBx4jA7gvuvWAYU5kn1eYZskyI/Imfg+8T1Duac
+        /40hH8b9hSDug0dH/AeQAdpmog2iZBPtTfh3LSUzDdX7GFsd2lr4etYXNuTBLt8P9eh19xFo8tH9UL3X
+        BsrdtjQ/0E6N9XSyqrj2EPcddHcGdPm+unwIE4VBTBICGAgDmPj0eOehZYewLKXUff2LbbJ89K/8yd66
+        fHg3iIPbZF0ewGpiwIsbcssAOZ9A/rtphvaLWBGnGvKFoCq/s0MT1+U3vF2L5ZYBK2Y+aiFvr6nHxm13
+        LaCSjcPCq4tm+c3tkBvp6UXJNZwN4AkoJsOQeXGpIZdjz9ZmK9Y2IGb2LdCTL4H89Bwy432qfKx+3u0A
+        beO6fSsA165eBpEMgyTE9M8a1ywXoMi8XymmH6wGYio03t/fV2JoYhR1vpqjN6LkAOD5DQaGosxfWCIL
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="buttonDeleteReservation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="buttonDeleteReservation.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAB6MAAAejATAvssUAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACa0lEQVRYR+2VTW8SURSGiS78Fy78BW79Da67NTLWGGNIB6zFNFrRYGvEhRpDUk1cNJo00foRExca
+        TWlapdFYLEWgMFAKpQV671BKtW0ir3OnzpSRoTA4E9PExbMY5ua8D+ccLjaxmD4qllL4G0ghCSEefA7A
+        ZhTTBCKhtx1JmCrQiYTpAkYlLBEwImGZQLsSlgowWknoCtBiEonoJOYjgT+YQGk5rjmrnE/GppqylAkN
+        6YUzmnagsPQNK9k5LblIw7l2oKXUqF44w5QRtGJ/CuQXZ5FbCBlGd0eMCrClSs8HIcQ+GGY5G9bUkuv9
+        34F9J8B2IDr7Xvdma0UuPaOpJdfrpAPseiUrCcOIJaGh1r8bQV76SYanIC6Gx/TCGZYI0DdPQQbdIC4O
+        xGn/DRenvL0PXV0HWwrQooCM8AkLiWlDZMIBrN721IXqEqQ9Jw636ICAbOqLLGGEwj2vXqAeE/B4Duwh
+        YBwaeKUG0P5zqPh99YFYuzsIcYCv++xkj7kC/iG1uHiFR22jio2Xo/Lz+qNh1DZ/oHyjXz1DndznPQXY
+        n0oxH20bctmhFmeUfQOoVdexNTMth1f8NzXvJbbhcBxqsoRJxObGpcvoXXtIF5B243f4/vqZ9CWBzY+B
+        hneMspM7YtoIiLdXU1xpe/XJiNwJZRx1VNgimrcDD26pxcvX3Zq2y+OQdmLtzu6vZNVpHzd1CcWvk7tj
+        uHAaordPDWOIV8+DXjyrPlP+1HFzBSTo2ENNaHO4+yzcdAFRukHpixGQ3m6dUJmfxGX3se23RkAhEgR9
+        7AfxXQJxnwG95qJS+DDhuWNK8A6w/QJ8oJ+5JVmkvgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>
