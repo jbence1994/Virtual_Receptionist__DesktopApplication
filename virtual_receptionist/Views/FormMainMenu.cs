@@ -71,7 +71,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
         {
-            presenter.CHM();
+            presenter.OpenCHM();
         }
 
         private void toolStripMenuItemAbout_Click(object sender, EventArgs e)

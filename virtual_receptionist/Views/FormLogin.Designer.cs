@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxAccomodationID = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -36,11 +35,7 @@
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelConnectTo = new System.Windows.Forms.Label();
             this.comboBoxConnectionType = new System.Windows.Forms.ComboBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelCopyright = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.groupBoxLogin = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,37 +106,6 @@
             this.comboBoxConnectionType.TabIndex = 3;
             this.comboBoxConnectionType.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBoxConnectionType_KeyUp);
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 159);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(514, 37);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 8;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // labelCopyright
-            // 
-            this.labelCopyright.AutoSize = true;
-            this.labelCopyright.Enabled = false;
-            this.labelCopyright.Location = new System.Drawing.Point(223, 199);
-            this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(303, 13);
-            this.labelCopyright.TabIndex = 9;
-            this.labelCopyright.Text = "Copyright ©️ 2019 Binary Software, Inc. - Minden jog fenntartva";
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Enabled = false;
-            this.labelTitle.Location = new System.Drawing.Point(9, 199);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(122, 13);
-            this.labelTitle.TabIndex = 10;
-            this.labelTitle.Text = "Virtual Receptionist v1.0";
-            // 
             // groupBoxLogin
             // 
             this.groupBoxLogin.Controls.Add(this.buttonLogin);
@@ -153,7 +117,7 @@
             this.groupBoxLogin.Controls.Add(this.labelAccomodationID);
             this.groupBoxLogin.Location = new System.Drawing.Point(12, 12);
             this.groupBoxLogin.Name = "groupBoxLogin";
-            this.groupBoxLogin.Size = new System.Drawing.Size(514, 141);
+            this.groupBoxLogin.Size = new System.Drawing.Size(514, 146);
             this.groupBoxLogin.TabIndex = 11;
             this.groupBoxLogin.TabStop = false;
             // 
@@ -161,21 +125,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 220);
-            this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.labelCopyright);
-            this.Controls.Add(this.pictureBoxLogo);
+            this.ClientSize = new System.Drawing.Size(538, 170);
             this.Controls.Add(this.groupBoxLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bejelentkezés | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxLogin.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -188,9 +146,6 @@
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelConnectTo;
         private System.Windows.Forms.ComboBox comboBoxConnectionType;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelCopyright;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.GroupBox groupBoxLogin;
     }
 }

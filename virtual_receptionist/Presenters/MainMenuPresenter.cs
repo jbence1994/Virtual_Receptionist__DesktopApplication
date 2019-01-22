@@ -91,11 +91,11 @@ namespace virtual_receptionist.Presenter
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
         /// <summary>
-        /// Metódus, amely megnyitja a beépített CHM súgót
+        /// Metódus, amely megnyitja a súgót
         /// </summary>
-        public void CHM()
+        public void OpenCHM()
         {
-            throw new System.NotImplementedException();
+            Help.ShowHelp(new Control(), "");
         }
         /// <summary>
         /// 
