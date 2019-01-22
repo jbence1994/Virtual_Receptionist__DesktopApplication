@@ -27,7 +27,10 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        
+        private void FormApplicationOpening_Load(object sender, System.EventArgs e)
+        {
+
+        }
 
         #endregion
     }

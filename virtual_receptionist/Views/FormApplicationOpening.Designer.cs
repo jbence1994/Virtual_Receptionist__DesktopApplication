@@ -90,6 +90,7 @@
             this.Name = "FormApplicationOpening";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormApplicationOpening";
+            this.Load += new System.EventHandler(this.FormApplicationOpening_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBinarySoftwareLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).EndInit();
             this.ResumeLayout(false);
