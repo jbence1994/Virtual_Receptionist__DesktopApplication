@@ -80,7 +80,8 @@ namespace virtual_receptionist.Presenter
             if (listViewGuests.SelectedItems.Count > 0)
             {
                 string name = listViewGuests.SelectedItems[0].Text;
-                bool nationality = false;
+
+                bool nationality;
 
                 if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
                 {

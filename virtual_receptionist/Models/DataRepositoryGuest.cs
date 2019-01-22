@@ -13,7 +13,8 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadGuestsList()
         {
-            string sql = "SELECT guest.Name, guest.Nationality, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
+            string sql =
+                "SELECT guest.Name, guest.Nationality, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -28,7 +29,8 @@ namespace virtual_receptionist.Model
                 string phoneNumber = row["PhoneNumber"].ToString();
                 string emailAddress = row["EmailAddress"].ToString();
 
-                Guest guestInstance = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber, emailAddress);
+                Guest guestInstance = new Guest(name, nationality, country, zipCode, city, address, vatNumber,
+                    phoneNumber, emailAddress);
                 guests.Add(guestInstance);
             }
         }
@@ -84,7 +86,8 @@ namespace virtual_receptionist.Model
                 nationality = false;
             }
 
-            string sql = $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.Nationality=\"{nationality.ToString()}\", guest.Country=\"{guest.Country}\", guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.VATNumber=\"{guest.VatNumber}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.Name LIKE \"{guest.Name}\"";
+            string sql =
+                $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.Nationality=\"{nationality.ToString()}\", guest.Country=\"{guest.Country}\", guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.VATNumber=\"{guest.VatNumber}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.Name LIKE \"{guest.Name}\"";
             database.DML(sql);
         }
         /// <summary>
@@ -93,18 +96,19 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void CreateGuest(Guest guest)
         {
-            bool nationality = false;
+            bool nationality;
 
             if (guest.Nationality == "belföldi")
             {
                 nationality = true;
             }
-            else if (guest.Nationality == "külföldi")
+            else
             {
                 nationality = false;
             }
 
-            string sql = $"INSERT INTO guest(Name, Nationality, Country, ZipCode, City, Address, VATNumber, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{nationality.ToString()}\", \"{guest.Country}\", \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.VatNumber}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\"";
+            string sql =
+                $"INSERT INTO guest(Name, Nationality, Country, ZipCode, City, Address, VATNumber, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{nationality.ToString()}\", \"{guest.Country}\", \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.VatNumber}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\"";
             database.DML(sql);
         }
 
