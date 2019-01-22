@@ -12,7 +12,7 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// 
+        /// Bejelentkező ablak prezenter egy példánya
         /// </summary>
         private LoginPresenter presenter;
 

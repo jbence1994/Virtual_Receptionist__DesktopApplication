@@ -36,6 +36,7 @@ namespace virtual_receptionist.Presenter
         /// Főmenü ablak prezenter konstruktora
         /// </summary>
         /// <param name="formMainMenu"></param>
+        /// <param name="formLogin"></param>
         /// <param name="toolStripStatusLabelMenuName"></param>
         /// <param name="toolStripStatusLabelClient"></param>
         public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, ToolStripLabel toolStripStatusLabelMenuName, ToolStripLabel toolStripStatusLabelClient)
@@ -66,9 +67,8 @@ namespace virtual_receptionist.Presenter
             }
         }
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
-        /// <param name="form"></param>
         public void SetMainMenu()
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
@@ -76,7 +76,7 @@ namespace virtual_receptionist.Presenter
             formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
         /// <summary>
-        /// 
+        /// Metódus, amely megnyitja a Névjegy ablakot
         /// </summary>
         public void OpenAboutBox()
         {
@@ -91,7 +91,7 @@ namespace virtual_receptionist.Presenter
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely megnyitja a beépített CHM súgót
         /// </summary>
         public void CHM()
         {
@@ -117,7 +117,7 @@ namespace virtual_receptionist.Presenter
             toolStripStatusLabelMenuName.Text = menuName;
         }
         /// <summary>
-        /// 
+        /// Metódus, amely megnyitja a szobakezelő modult
         /// </summary>
         public void OpenRoomEditor()
         {
@@ -125,7 +125,7 @@ namespace virtual_receptionist.Presenter
             formRoomEditor.ShowDialog();
         }
         /// <summary>
-        /// 
+        /// Metódus, amely megnyitja a számlázó modult
         /// </summary>
         public void OpenBilling()
         {
@@ -133,14 +133,16 @@ namespace virtual_receptionist.Presenter
             formBilling.ShowDialog();
         }
         /// <summary>
-        /// 
+        /// Metódus, amely megnyitja a vendégadatbázis-kezelő modult
         /// </summary>
         public void OpenGuestDatabase()
         {
             FormGuestDatabase formGuestDatabase = new FormGuestDatabase();
             formGuestDatabase.ShowDialog();
         }
-
+        /// <summary>
+        /// Metódus, amely megnyitja az alkalmazáss weboldalát internetböngészőben
+        /// </summary>
         public void OpenVirtualReceptionistWebsite()
         {
             throw new System.NotImplementedException();
