@@ -6,14 +6,14 @@ using virtual_receptionist.Model;
 namespace virtual_receptionist.Presenter
 {
     /// <summary>
-    /// 
+    /// Számlázó modul prezentere
     /// </summary>
     public class BillingPresenter : DefaultPresenter
     {
         #region Adattagok
 
         /// <summary>
-        /// 
+        /// Számlázási tételek táblázat
         /// </summary>
         private DataGridView dataGridViewItems;
         /// <summary>
@@ -30,9 +30,9 @@ namespace virtual_receptionist.Presenter
         #region Konstruktor
 
         /// <summary>
-        /// 
+        /// Számlázó modul prezenter konstruktora
         /// </summary>
-        /// <param name="dataGridViewItems"></param>
+        /// <param name="dataGridViewItems">Számlázási tételek táblázat</param>
         public BillingPresenter(DataGridView dataGridViewItems)
         {
             this.dataGridViewItems = dataGridViewItems;

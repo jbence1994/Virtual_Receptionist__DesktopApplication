@@ -6,7 +6,7 @@ using virtual_receptionist.View;
 namespace virtual_receptionist.Presenter
 {
     /// <summary>
-    /// Vendégadatbázis-kezelő prezenter osztálya
+    /// Vendégadatbázis-kezelő prezentere
     /// </summary>
     public class GuestDatabasePresenter : DefaultPresenter
     {

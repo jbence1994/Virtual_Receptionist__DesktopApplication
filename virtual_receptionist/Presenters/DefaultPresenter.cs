@@ -4,7 +4,7 @@ using virtual_receptionist.Model;
 namespace virtual_receptionist.Presenter
 {
     /// <summary>
-    /// Az alkalmazás prezenter osztálya, amely modell kezelésért és nézet frissítésért felel
+    /// Az alkalmazás prezentere, amely modell kezelésért és nézet frissítésért felel
     /// </summary>
     public class DefaultPresenter
     {
