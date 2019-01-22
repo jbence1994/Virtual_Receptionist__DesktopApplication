@@ -37,11 +37,11 @@
             this.toolStripMenuItemGuestDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemBilling = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemWebsite = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemHelpCHM = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemHelpSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemAccomodationInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemHelpSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemHelpCHM = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWebsite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -51,11 +51,15 @@
             this.toolStripButtonGuestDatabase = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
             this.pictureBoxBSLogo = new System.Windows.Forms.PictureBox();
+            this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.labelWelcome = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
             this.toolStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSLogo)).BeginInit();
+            this.panelMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -131,7 +135,7 @@
             // 
             this.toolStripMenuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemAccomodationInfo,
-            this.toolStripMenuItemHelpSeparator1,
+            this.toolStripMenuItemHelpSeparator,
             this.toolStripMenuItemHelpCHM,
             this.toolStripMenuItemWebsite,
             this.toolStripMenuItemAbout});
@@ -141,14 +145,19 @@
             this.toolStripMenuItemHelp.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelp_MouseLeave);
             this.toolStripMenuItemHelp.MouseHover += new System.EventHandler(this.toolStripMenuItemHelp_MouseHover);
             // 
-            // toolStripMenuItemWebsite
+            // toolStripMenuItemAccomodationInfo
             // 
-            this.toolStripMenuItemWebsite.Name = "toolStripMenuItemWebsite";
-            this.toolStripMenuItemWebsite.Size = new System.Drawing.Size(244, 22);
-            this.toolStripMenuItemWebsite.Text = "A Virtual Receptionist weboldala";
-            this.toolStripMenuItemWebsite.Click += new System.EventHandler(this.toolStripMenuItemWebsite_Click);
-            this.toolStripMenuItemWebsite.MouseLeave += new System.EventHandler(this.toolStripMenuItemWebsite_MouseLeave);
-            this.toolStripMenuItemWebsite.MouseHover += new System.EventHandler(this.toolStripMenuItemWebsite_MouseHover);
+            this.toolStripMenuItemAccomodationInfo.Name = "toolStripMenuItemAccomodationInfo";
+            this.toolStripMenuItemAccomodationInfo.Size = new System.Drawing.Size(244, 22);
+            this.toolStripMenuItemAccomodationInfo.Text = "Szálláshely adatai";
+            this.toolStripMenuItemAccomodationInfo.Click += new System.EventHandler(this.toolStripMenuItemAccomodationInfo_Click);
+            this.toolStripMenuItemAccomodationInfo.MouseLeave += new System.EventHandler(this.toolStripMenuItemAccomodationInfo_MouseLeave);
+            this.toolStripMenuItemAccomodationInfo.MouseHover += new System.EventHandler(this.toolStripMenuItemAccomodationInfo_MouseHover);
+            // 
+            // toolStripMenuItemHelpSeparator
+            // 
+            this.toolStripMenuItemHelpSeparator.Name = "toolStripMenuItemHelpSeparator";
+            this.toolStripMenuItemHelpSeparator.Size = new System.Drawing.Size(241, 6);
             // 
             // toolStripMenuItemHelpCHM
             // 
@@ -159,6 +168,15 @@
             this.toolStripMenuItemHelpCHM.MouseLeave += new System.EventHandler(this.toolStripMenuItemHelpCHM_MouseLeave);
             this.toolStripMenuItemHelpCHM.MouseHover += new System.EventHandler(this.toolStripMenuItemHelpCHM_MouseHover);
             // 
+            // toolStripMenuItemWebsite
+            // 
+            this.toolStripMenuItemWebsite.Name = "toolStripMenuItemWebsite";
+            this.toolStripMenuItemWebsite.Size = new System.Drawing.Size(244, 22);
+            this.toolStripMenuItemWebsite.Text = "A Virtual Receptionist weboldala";
+            this.toolStripMenuItemWebsite.Click += new System.EventHandler(this.toolStripMenuItemWebsite_Click);
+            this.toolStripMenuItemWebsite.MouseLeave += new System.EventHandler(this.toolStripMenuItemWebsite_MouseLeave);
+            this.toolStripMenuItemWebsite.MouseHover += new System.EventHandler(this.toolStripMenuItemWebsite_MouseHover);
+            // 
             // toolStripMenuItemAbout
             // 
             this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
@@ -167,20 +185,6 @@
             this.toolStripMenuItemAbout.Click += new System.EventHandler(this.toolStripMenuItemAbout_Click);
             this.toolStripMenuItemAbout.MouseLeave += new System.EventHandler(this.toolStripMenuItemAbout_MouseLeave);
             this.toolStripMenuItemAbout.MouseHover += new System.EventHandler(this.toolStripMenuItemAbout_MouseHover);
-            // 
-            // toolStripMenuItemHelpSeparator1
-            // 
-            this.toolStripMenuItemHelpSeparator1.Name = "toolStripMenuItemHelpSeparator1";
-            this.toolStripMenuItemHelpSeparator1.Size = new System.Drawing.Size(241, 6);
-            // 
-            // toolStripMenuItemAccomodationInfo
-            // 
-            this.toolStripMenuItemAccomodationInfo.Name = "toolStripMenuItemAccomodationInfo";
-            this.toolStripMenuItemAccomodationInfo.Size = new System.Drawing.Size(244, 22);
-            this.toolStripMenuItemAccomodationInfo.Text = "Szálláshely adatai";
-            this.toolStripMenuItemAccomodationInfo.Click += new System.EventHandler(this.toolStripMenuItemAccomodationInfo_Click);
-            this.toolStripMenuItemAccomodationInfo.MouseLeave += new System.EventHandler(this.toolStripMenuItemAccomodationInfo_MouseLeave);
-            this.toolStripMenuItemAccomodationInfo.MouseHover += new System.EventHandler(this.toolStripMenuItemAccomodationInfo_MouseHover);
             // 
             // statusStripMainMenu
             // 
@@ -207,6 +211,7 @@
             // 
             // pictureBoxVRLogo
             // 
+            this.pictureBoxVRLogo.BackColor = System.Drawing.Color.White;
             this.pictureBoxVRLogo.Location = new System.Drawing.Point(12, 66);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
             this.pictureBoxVRLogo.Size = new System.Drawing.Size(326, 436);
@@ -259,7 +264,7 @@
             this.toolStripButtonBilling.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonBilling.Name = "toolStripButtonBilling";
             this.toolStripButtonBilling.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripButtonBilling.Size = new System.Drawing.Size(28, 36);
+            this.toolStripButtonBilling.Size = new System.Drawing.Size(36, 36);
             this.toolStripButtonBilling.Text = "Számlázás";
             this.toolStripButtonBilling.Click += new System.EventHandler(this.toolStripButtonBilling_Click);
             this.toolStripButtonBilling.MouseLeave += new System.EventHandler(this.toolStripButtonBilling_MouseLeave);
@@ -267,17 +272,49 @@
             // 
             // pictureBoxBSLogo
             // 
+            this.pictureBoxBSLogo.BackColor = System.Drawing.Color.White;
+            this.pictureBoxBSLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBSLogo.Image")));
             this.pictureBoxBSLogo.Location = new System.Drawing.Point(12, 508);
             this.pictureBoxBSLogo.Name = "pictureBoxBSLogo";
             this.pictureBoxBSLogo.Size = new System.Drawing.Size(326, 182);
+            this.pictureBoxBSLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBSLogo.TabIndex = 7;
             this.pictureBoxBSLogo.TabStop = false;
+            // 
+            // panelMainMenu
+            // 
+            this.panelMainMenu.Controls.Add(this.labelDescription);
+            this.panelMainMenu.Controls.Add(this.labelWelcome);
+            this.panelMainMenu.Location = new System.Drawing.Point(344, 66);
+            this.panelMainMenu.Name = "panelMainMenu";
+            this.panelMainMenu.Size = new System.Drawing.Size(652, 623);
+            this.panelMainMenu.TabIndex = 8;
+            // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelWelcome.Location = new System.Drawing.Point(3, 19);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(371, 16);
+            this.labelWelcome.TabIndex = 0;
+            this.labelWelcome.Text = "Üdvözöljük a Virtual Receptionist asztali platformján!";
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(3, 62);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(593, 143);
+            this.labelDescription.TabIndex = 1;
+            this.labelDescription.Text = resources.GetString("labelDescription.Text");
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.pictureBoxBSLogo);
             this.Controls.Add(this.toolStripMainMenu);
             this.Controls.Add(this.pictureBoxVRLogo);
@@ -288,7 +325,6 @@
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Virtual Receptionist | ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
@@ -298,6 +334,8 @@
             this.toolStripMainMenu.ResumeLayout(false);
             this.toolStripMainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSLogo)).EndInit();
+            this.panelMainMenu.ResumeLayout(false);
+            this.panelMainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +356,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAccomodationInfo;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItemHelpSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItemHelpSeparator;
         private System.Windows.Forms.PictureBox pictureBoxBSLogo;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWebsite;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFile;
@@ -327,5 +365,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRoomEditor;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuestDatabase;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBilling;
+        private System.Windows.Forms.Panel panelMainMenu;
+        private System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Label labelDescription;
     }
 }
