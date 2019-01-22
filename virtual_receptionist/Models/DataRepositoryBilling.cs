@@ -106,6 +106,15 @@ namespace virtual_receptionist.Model
             return filtratedCountries;
         }
         /// <summary>
+        /// Metódus, amely visszaadja az országok neveit a hozzátartozó országkóddal
+        /// </summary>
+        /// <returns>Országok neveivel és országkódjaival feltöltött listát adja vissza</returns>
+        public List<Country> GetCountriesWithCountryCode()
+        {
+            UploadCountriesList();
+            return countries;
+        }
+        /// <summary>
         /// Metódus, amely adatforrásként szolgált a számlázó modális ablak ComboBox komponensének
         /// </summary>
         /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
