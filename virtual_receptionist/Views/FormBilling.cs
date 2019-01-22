@@ -41,7 +41,7 @@ namespace virtual_receptionist.View
 
         private void buttonNewData_Click(object sender, EventArgs e)
         {
-            presenter.NewData(buttonAddItem, buttonUpdateItem, buttonDeleteItem, buttonPrintInvoice, buttonSaveInvoice);
+            presenter.NewBillingData(buttonAddItem, buttonUpdateItem, buttonDeleteItem, buttonPrintInvoice, buttonSaveInvoice);
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)

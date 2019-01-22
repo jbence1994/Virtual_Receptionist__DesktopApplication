@@ -104,7 +104,7 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         /// <param name="buttons"></param>
-        public void NewData(params Button[] buttons)
+        public void NewBillingData(params Button[] buttons)
         {
             formModalBilling = new FormModalBilling();
 
