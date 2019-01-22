@@ -15,6 +15,7 @@ namespace virtual_receptionist.View
         /// Főmenü ablak prezenter egy példánya
         /// </summary>
         private MainMenuPresenter presenter;
+
         /// <summary>
         /// 
         /// </summary>
@@ -38,136 +39,9 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        private void FormMainMenu_Load(object sender, EventArgs e)
-        {
-            presenter.SetMainMenu();
-        }
-
-        private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
-        {
-            presenter.OpenRoomEditor();
-        }
-
-        private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szobakezelő");
-        }
-
-        private void toolStripMenuItemRoomEditor_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
-        {
-            presenter.OpenGuestDatabase();
-        }
-
-        private void toolStripMenuItemGuestDatabase_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendégadatbázis");
-        }
-
-        private void toolStripMenuItemGuestDatabase_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
-        {
-            presenter.OpenBilling();
-        }
-
-        private void toolStripMenuItemBilling_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Számlázás");
-        }
-
-        private void toolStripMenuItemBilling_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripMenuItemHelp_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Súgó");
-        }
-
-        private void toolStripMenuItemHelp_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
-        {
-            presenter.SetAccomodationData();
-        }
-
-        private void toolStripMenuItemAccomodationData_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szálláshely adatai");
-        }
-
-        private void toolStripMenuItemAccomodationData_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
-        {
-            presenter.CHM();
-        }
-
-        private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Segítség");
-        }
-
-        private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
-        {
-            presenter.OpenAboutBox();
-        }
-
-        private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Névjegy");
-        }
-
-        private void toolStripMenuItemAboutUs_MouseLeave(object sender, EventArgs e)
-        {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
-        }
-
-        private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)
-        {
-            presenter.OpenGuestDatabase();
-        }
         
-        private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
-        {
-            presenter.OpenRoomEditor();
-        }
-
-        private void toolStripButtonBilling_Click(object sender, EventArgs e)
-        {
-            presenter.OpenBilling();
-        }
-
-        private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
-        {
-            presenter.Logout();
-        }
-
-        private void toolStripMenuItemWebsite_Click(object sender, EventArgs e)
-        {
-            presenter.OpenVirtualReceptionistWebsite();
-        }
 
         #endregion
+
     }
 }
