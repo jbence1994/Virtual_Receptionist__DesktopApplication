@@ -170,22 +170,23 @@
             this.statusStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelClient,
             this.toolStripStatusLabelMenuName});
-            this.statusStripMainMenu.Location = new System.Drawing.Point(0, 708);
+            this.statusStripMainMenu.Location = new System.Drawing.Point(0, 693);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
-            this.statusStripMainMenu.Size = new System.Drawing.Size(1008, 22);
+            this.statusStripMainMenu.Size = new System.Drawing.Size(1008, 37);
             this.statusStripMainMenu.TabIndex = 1;
             // 
             // toolStripStatusLabelClient
             // 
             this.toolStripStatusLabelClient.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabelClient.Image")));
+            this.toolStripStatusLabelClient.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripStatusLabelClient.Name = "toolStripStatusLabelClient";
-            this.toolStripStatusLabelClient.Size = new System.Drawing.Size(107, 17);
+            this.toolStripStatusLabelClient.Size = new System.Drawing.Size(123, 32);
             this.toolStripStatusLabelClient.Text = "Munkaállomás: ";
             // 
             // toolStripStatusLabelMenuName
             // 
             this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
-            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 32);
             // 
             // pictureBoxVRLogo
             // 
@@ -245,7 +246,7 @@
             // 
             this.pictureBoxBSLogo.Location = new System.Drawing.Point(12, 508);
             this.pictureBoxBSLogo.Name = "pictureBoxBSLogo";
-            this.pictureBoxBSLogo.Size = new System.Drawing.Size(326, 197);
+            this.pictureBoxBSLogo.Size = new System.Drawing.Size(326, 182);
             this.pictureBoxBSLogo.TabIndex = 7;
             this.pictureBoxBSLogo.TabStop = false;
             // 
