@@ -110,11 +110,10 @@ namespace virtual_receptionist.Presenter
 
             if (formModalBilling.ShowDialog() == DialogResult.OK)
             {
-                buttons[0].Enabled = true;
-                buttons[1].Enabled = true;
-                buttons[2].Enabled = true;
-                buttons[3].Enabled = true;
-                buttons[4].Enabled = true;
+                foreach (Button button in buttons)
+                {
+                    button.Enabled = true;
+                }
             }
         }
 
