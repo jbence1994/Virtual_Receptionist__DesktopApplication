@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenters\BillingPresenter.cs" />
+    <Compile Include="Presenters\MainMenuPresenter.cs" />
     <Compile Include="Views\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
