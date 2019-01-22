@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
     <Compile Include="Views\FormApplicationOpening.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,7 +131,7 @@
     <Compile Include="Models\InputFunctions.cs" />
     <Compile Include="Models\InputAutomatizedFunctions.cs" />
     <Compile Include="Presenters\DefaultPresenter.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Views\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Room.cs" />
