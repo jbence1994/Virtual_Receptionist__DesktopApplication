@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using virtual_receptionist.View;
 
-namespace virtual_receptionist.View
+namespace virtual_receptionist
 {
-    public static class Program
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.

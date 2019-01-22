@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenters\BillingPresenter.cs" />
+    <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainMenuPresenter.cs" />
     <Compile Include="Views\AboutBox.cs">
       <SubType>Form</SubType>
@@ -123,7 +124,7 @@
     <Compile Include="Models\InputFunctions.cs" />
     <Compile Include="Models\InputAutomatizedFunctions.cs" />
     <Compile Include="Presenters\DefaultPresenter.cs" />
-    <Compile Include="Views\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Room.cs" />
