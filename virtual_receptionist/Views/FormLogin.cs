@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {
@@ -9,6 +10,11 @@ namespace virtual_receptionist.View
     public partial class FormLogin : Form
     {
         #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private LoginPresenter presenter;
 
         #endregion
 
@@ -20,6 +26,7 @@ namespace virtual_receptionist.View
         public FormLogin()
         {
             InitializeComponent();
+            presenter = new LoginPresenter(this);
         }
 
         #endregion
@@ -33,14 +40,14 @@ namespace virtual_receptionist.View
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            EnterApplication();
+            presenter.EnterApplication();
         }
 
         private void buttonLogin_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                EnterApplication();
+                presenter.EnterApplication();
             }
         }
 
@@ -48,15 +55,7 @@ namespace virtual_receptionist.View
 
         #region Metódusok
 
-        /// <summary>
-        /// Metódus, amely megnyitja az alkalmazás főmenüjét, a bejelentkezés ablakot pedig bezárja
-        /// </summary>
-        private void EnterApplication()
-        {
-            Hide();
-            FormMainMenu formMainMenu = new FormMainMenu();
-            formMainMenu.Show();
-        }
+
 
         #endregion
     }

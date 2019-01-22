@@ -38,9 +38,10 @@ namespace virtual_receptionist.Presenter
         /// <param name="formMainMenu"></param>
         /// <param name="toolStripStatusLabelMenuName"></param>
         /// <param name="toolStripStatusLabelClient"></param>
-        public MainMenuPresenter(FormMainMenu formMainMenu, ToolStripLabel toolStripStatusLabelMenuName, ToolStripLabel toolStripStatusLabelClient)
+        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, ToolStripLabel toolStripStatusLabelMenuName, ToolStripLabel toolStripStatusLabelClient)
         {
             this.formMainMenu = formMainMenu;
+            this.formLogin = formLogin;
             this.toolStripStatusLabelMenuName = toolStripStatusLabelMenuName;
             this.toolStripStatusLabelClient = toolStripStatusLabelClient;
         }

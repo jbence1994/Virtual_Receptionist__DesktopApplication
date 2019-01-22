@@ -15,6 +15,10 @@ namespace virtual_receptionist.View
         /// Főmenü ablak prezenter egy példánya
         /// </summary>
         private MainMenuPresenter presenter;
+        /// <summary>
+        /// 
+        /// </summary>
+        private FormLogin formLogin;
 
         #endregion
 
@@ -26,7 +30,8 @@ namespace virtual_receptionist.View
         public FormMainMenu()
         {
             InitializeComponent();
-            presenter = new MainMenuPresenter(this, toolStripStatusLabelMenuName, toolStripStatusLabelClient);
+            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName,
+                toolStripStatusLabelClient);
         }
 
         #endregion

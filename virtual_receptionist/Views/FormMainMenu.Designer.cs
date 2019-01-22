@@ -81,7 +81,7 @@
             // toolStripMenuItemLogout
             // 
             this.toolStripMenuItemLogout.Name = "toolStripMenuItemLogout";
-            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(141, 22);
             this.toolStripMenuItemLogout.Text = "Kijelentkezés";
             this.toolStripMenuItemLogout.Click += new System.EventHandler(this.toolStripMenuItemLogout_Click);
             // 
@@ -170,7 +170,7 @@
             this.statusStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelClient,
             this.toolStripStatusLabelMenuName});
-            this.statusStripMainMenu.Location = new System.Drawing.Point(0, 693);
+            this.statusStripMainMenu.Location = new System.Drawing.Point(0, 692);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
             this.statusStripMainMenu.Size = new System.Drawing.Size(1008, 37);
             this.statusStripMainMenu.TabIndex = 1;
@@ -254,7 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.pictureBoxBSLogo);
             this.Controls.Add(this.toolStripMainMenu);
             this.Controls.Add(this.pictureBoxVRLogo);
