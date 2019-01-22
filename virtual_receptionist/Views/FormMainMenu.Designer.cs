@@ -170,6 +170,7 @@
             // 
             // toolStripMenuItemHelpCHM
             // 
+            this.toolStripMenuItemHelpCHM.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemHelpCHM.Image")));
             this.toolStripMenuItemHelpCHM.Name = "toolStripMenuItemHelpCHM";
             this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemHelpCHM.Text = "Segítség";
