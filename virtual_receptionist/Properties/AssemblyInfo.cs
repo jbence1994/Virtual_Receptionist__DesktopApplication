@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Virtual Receptionist")]
 [assembly: AssemblyDescription("Ez a projekt az Szegedi Szakképzési Centrum Vasvári Pál Gazdasági és Informatikai Szakgimnáziuma, OKJ 54 213 05 Szoftverfejlesztő szakképzés záródolgozatát képező asztali alkalmazás. Minden a szoftverre vonatkozó licenszkérdésről a Szakmai Vizsgakövetelmény az irányadó.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Juhász Bence")]
+[assembly: AssemblyCompany("Binary Software, Inc.")]
 [assembly: AssemblyProduct("Virtual Receptionist")]
 [assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]

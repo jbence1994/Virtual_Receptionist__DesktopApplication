@@ -126,11 +126,11 @@
             // 
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.Enabled = false;
-            this.labelCopyright.Location = new System.Drawing.Point(254, 199);
+            this.labelCopyright.Location = new System.Drawing.Point(223, 199);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(272, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(303, 13);
             this.labelCopyright.TabIndex = 9;
-            this.labelCopyright.Text = "Copyright ©️ 2019 Juhász Bence - Minden jog fenntartva";
+            this.labelCopyright.Text = "Copyright ©️ 2019 Binary Software, Inc. - Minden jog fenntartva";
             // 
             // labelTitle
             // 
