@@ -35,8 +35,8 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Főmenü ablak prezenter konstruktora
         /// </summary>
-        /// <param name="formMainMenu"></param>
-        /// <param name="formLogin"></param>
+        /// <param name="formMainMenu">Főmenü ablak</param>
+        /// <param name="formLogin">Bejelnetkező ablak</param>
         /// <param name="toolStripStatusLabelMenuName"></param>
         /// <param name="toolStripStatusLabelClient"></param>
         public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, ToolStripLabel toolStripStatusLabelMenuName, ToolStripLabel toolStripStatusLabelClient)

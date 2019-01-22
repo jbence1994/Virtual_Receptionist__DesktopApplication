@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using virtual_receptionist.View;
 using virtual_receptionist.Model;
 
@@ -15,18 +16,29 @@ namespace virtual_receptionist.Presenter
         /// Bejelentkező ablak egy példánya
         /// </summary>
         private FormLogin formLogin;
+        /// <summary>
+        /// Szálláshely azonosító
+        /// </summary>
+        private string accomodationID;
+        /// <summary>
+        /// Regisztrációhoz tartozó jelszó
+        /// </summary>
+        private string password;
 
         #endregion
 
         #region Konstruktor
 
-        /// <summary>
-        /// Bejelentkező ablak prezenter konstruktora
+        /// <summary>Bejelentkező ablak prezenter konstruktora
         /// </summary>
         /// <param name="formLogin">Bejelentkező ablak</param>
-        public LoginPresenter(FormLogin formLogin)
+        /// <param name="accomodationID">Szálláshely azonosító</param>
+        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
+        public LoginPresenter(FormLogin formLogin, string accomodationID, string password)
         {
             this.formLogin = formLogin;
+            this.accomodationID = accomodationID;
+            this.password = password;
         }
 
         #endregion
@@ -38,10 +50,16 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void EnterApplication()
         {
-            dataRepository.Authentication();
-            formLogin.Hide();
-            FormMainMenu formMainMenu = new FormMainMenu();
-            formMainMenu.Show();
+            if (dataRepository.Authentication(accomodationID, password))
+            {
+                formLogin.Hide();
+                FormMainMenu formMainMenu = new FormMainMenu();
+                formMainMenu.Show();
+            }
+            else
+            {
+                throw new Exception("Sikertelen bejelentlezés...");
+            }
         }
         /// <summary>
         /// Metódus, amely 'Enter' billentyű lenyomása utána beenged a főmenübe

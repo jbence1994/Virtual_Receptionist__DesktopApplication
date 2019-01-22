@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace virtual_receptionist.Model
 {
@@ -17,10 +18,15 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely összehasonlítja a felhasználó által megadott felhasználónevet és jelszót, egyezik-e az érvényes, előre regisztrált felhasználói fiókkal
         /// </summary>
+        /// <param name="accomodationID">Szálláshely azonosító</param>
+        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
-        public bool Authentication()
+        public bool Authentication(string accomodationID, string password)
         {
-            throw new NotImplementedException();
+            string sql = "SELECT AccomodationID, Password FROM accomodation_registration";
+            database.DQL(sql);
+            
+            return true;
         }
 
         #endregion

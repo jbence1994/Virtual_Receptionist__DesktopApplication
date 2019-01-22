@@ -17,7 +17,7 @@ namespace virtual_receptionist.View
         private MainMenuPresenter presenter;
 
         /// <summary>
-        /// 
+        /// Bejelentkező ablak egy példánya
         /// </summary>
         private FormLogin formLogin;
 

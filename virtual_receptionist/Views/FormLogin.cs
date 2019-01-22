@@ -26,7 +26,11 @@ namespace virtual_receptionist.View
         public FormLogin()
         {
             InitializeComponent();
-            presenter = new LoginPresenter(this);
+
+            string accomodationID = textBoxAccomodationID.Text;
+            string password = textBoxPassword.Text;
+
+            presenter = new LoginPresenter(this, accomodationID, password);
         }
 
         #endregion
