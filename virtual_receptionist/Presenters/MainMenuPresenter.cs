@@ -147,6 +147,40 @@ namespace virtual_receptionist.Presenter
         {
             throw new System.NotImplementedException();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="toolStripMenuItemShowStatusStrip"></param>
+        /// <param name="statusStripMainMenu"></param>
+        public void SetStatusStripVisibility(ToolStripMenuItem toolStripMenuItemShowStatusStrip,
+            StatusStrip statusStripMainMenu)
+        {
+            if (toolStripMenuItemShowStatusStrip.CheckState == CheckState.Checked)
+            {
+                statusStripMainMenu.Visible = true;
+            }
+            else
+            {
+                statusStripMainMenu.Visible = false;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="toolStripMenuItemShowToolStrip"></param>
+        /// <param name="toolStripMainMenu"></param>
+        public void SetToolStripVisibility(ToolStripMenuItem toolStripMenuItemShowToolStrip,
+            ToolStrip toolStripMainMenu)
+        {
+            if (toolStripMenuItemShowToolStrip.CheckState == CheckState.Checked)
+            {
+                toolStripMainMenu.Visible = true;
+            }
+            else
+            {
+                toolStripMainMenu.Visible = false;
+            }
+        }
 
         #endregion
     }

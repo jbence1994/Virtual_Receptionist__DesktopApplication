@@ -332,18 +332,22 @@
             // toolStripMenuItemShowStatusStrip
             // 
             this.toolStripMenuItemShowStatusStrip.Checked = true;
+            this.toolStripMenuItemShowStatusStrip.CheckOnClick = true;
             this.toolStripMenuItemShowStatusStrip.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemShowStatusStrip.Name = "toolStripMenuItemShowStatusStrip";
             this.toolStripMenuItemShowStatusStrip.Size = new System.Drawing.Size(204, 22);
             this.toolStripMenuItemShowStatusStrip.Text = "Állapotsor megjelenítése";
+            this.toolStripMenuItemShowStatusStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_CheckStateChanged);
             // 
             // toolStripMenuItemShowToolStrip
             // 
             this.toolStripMenuItemShowToolStrip.Checked = true;
+            this.toolStripMenuItemShowToolStrip.CheckOnClick = true;
             this.toolStripMenuItemShowToolStrip.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemShowToolStrip.Name = "toolStripMenuItemShowToolStrip";
             this.toolStripMenuItemShowToolStrip.Size = new System.Drawing.Size(204, 22);
             this.toolStripMenuItemShowToolStrip.Text = "Eszköztár meglenítése";
+            this.toolStripMenuItemShowToolStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowToolStrip_CheckStateChanged);
             // 
             // FormMainMenu
             // 

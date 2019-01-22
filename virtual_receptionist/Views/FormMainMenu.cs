@@ -240,6 +240,16 @@ namespace virtual_receptionist.View
             presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
+        private void toolStripMenuItemShowStatusStrip_CheckStateChanged(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripVisibility(toolStripMenuItemShowStatusStrip, statusStripMainMenu);
+        }
+
+        private void toolStripMenuItemShowToolStrip_CheckStateChanged(object sender, EventArgs e)
+        {
+            presenter.SetToolStripVisibility(toolStripMenuItemShowToolStrip, toolStripMainMenu);
+        }
+
         #endregion
     }
 }
