@@ -91,7 +91,8 @@ namespace virtual_receptionist.Model
         {
             Accomodation accomodation = Accomodation.AccomodationInstance;
 
-            string sql = "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
+            string sql =
+                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
 
             try
             {
@@ -99,23 +100,14 @@ namespace virtual_receptionist.Model
 
                 foreach (DataRow row in accomodationData.Rows)
                 {
-                    string name = row["AccomodationName"].ToString();
-                    string company = row["CompanyName"].ToString();
-                    string contact = row["Contact"].ToString();
-                    string vat = row["VATNUmber"].ToString();
-                    string headquarters = row["Headquarters"].ToString();
-                    string site = row["Site"].ToString();
-                    string phoneNumber = row["PhoneNumber"].ToString();
-                    string emailAddress = row["EmailAddress"].ToString();
-
-                    accomodation.Name = name;
-                    accomodation.Company = company;
-                    accomodation.Contact = contact;
-                    accomodation.VatNumber = vat;
-                    accomodation.Headquarters = headquarters;
-                    accomodation.Site = site;
-                    accomodation.PhoneNumber = phoneNumber;
-                    accomodation.EmailAddress = emailAddress;
+                    accomodation.Name = row["AccomodationName"].ToString();
+                    accomodation.Company = row["CompanyName"].ToString();
+                    accomodation.Contact = row["Contact"].ToString();
+                    accomodation.VatNumber = row["VATNumber"].ToString();
+                    accomodation.Headquarters = row["Headquarters"].ToString();
+                    accomodation.Site = row["Site"].ToString();
+                    accomodation.PhoneNumber = row["PhoneNumber"].ToString();
+                    accomodation.EmailAddress = row["EmailAddress"].ToString();
                 }
             }
             catch (Exception e)
