@@ -113,6 +113,7 @@
             // 
             // pictureBoxLogo
             // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Black;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(12, 159);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
