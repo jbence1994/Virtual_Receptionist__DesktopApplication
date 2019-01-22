@@ -59,7 +59,7 @@ namespace virtual_receptionist.Presenter
             }
             else
             {
-                throw new Exception("Sikertelen bejelentkezés...");
+                MessageBox.Show("Sikertelen bejelentkezés!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         /// <summary>
