@@ -100,22 +100,24 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        #endregion
-
-        public void NewData(params object[] buttons)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="buttons"></param>
+        public void NewData(params Button[] buttons)
         {
-
             formModalBilling = new FormModalBilling();
 
             if (formModalBilling.ShowDialog() == DialogResult.OK)
             {
-                buttonAddItem.Enabled = true;
-                buttonUpdateItem.Enabled = true;
-                buttonDeleteItem.Enabled = true;
-                buttonPrintInvoice.Enabled = true;
-                buttonSaveInvoice.Enabled = true;
+                buttons[0].Enabled = true;
+                buttons[1].Enabled = true;
+                buttons[2].Enabled = true;
+                buttons[3].Enabled = true;
+                buttons[4].Enabled = true;
             }
         }
+
+        #endregion
     }
 }
