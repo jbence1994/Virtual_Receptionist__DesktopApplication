@@ -39,96 +39,87 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
         {
-            FormRoomEditor formRoomEditor = new FormRoomEditor();
-            formRoomEditor.ShowDialog();
+            presenter.OpenRoomEditor();
         }
 
         private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Szobakiadások és foglalások";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szobakezelő");
         }
 
         private void toolStripMenuItemRoomEditor_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
         {
-            FormGuestDatabase formGuestDatabase = new FormGuestDatabase();
-            formGuestDatabase.ShowDialog();
+            presenter.OpenGuestDatabase();
         }
 
         private void toolStripMenuItemGuestDatabase_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendégadatbázis");
         }
 
         private void toolStripMenuItemGuestDatabase_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
         {
-            FormBilling formBilling = new FormBilling();
-            formBilling.ShowDialog();
+            presenter.OpenBilling();
         }
 
         private void toolStripMenuItemBilling_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Számlázás";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Számlázás");
         }
 
         private void toolStripMenuItemBilling_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemHelp_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Súgó";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Súgó");
         }
 
         private void toolStripMenuItemHelp_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemAccomodationData_Click(object sender, EventArgs e)
         {
-
-
-
-            Model.DataRepository dataRepository = new Model.DataRepository();
-            Model.Accomodation accomodation = dataRepository.SetAccomodation();
-
-            MessageBox.Show($"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}", "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            presenter.SetAccomodationData();
         }
 
         private void toolStripMenuItemAccomodationData_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Szálláshely adatai";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szálláshely adatai");
         }
 
         private void toolStripMenuItemAccomodationData_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
         {
-            // CHM
+            presenter.CHM();
         }
 
         private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Segítség";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Segítség");
         }
 
         private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemAboutUs_Click(object sender, EventArgs e)
@@ -138,44 +129,44 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemAboutUs_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Névjegy";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Névjegy");
         }
 
         private void toolStripMenuItemAboutUs_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
         {
-            presenter.Logout(this);
+            presenter.Logout();
         }
 
         private void toolStripMenuItemQuit_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = "Kilépés";
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Kilépés");
         }
 
         private void toolStripMenuItemQuit_MouseLeave(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = string.Empty;
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
-
-        #endregion
 
         private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
         {
-
+            presenter.OpenRoomEditor();
         }
 
         private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)
         {
-
+            presenter.OpenGuestDatabase();
         }
 
         private void toolStripButtonBilling_Click(object sender, EventArgs e)
         {
-
+            presenter.OpenBilling();
         }
+
+        #endregion
     }
 }

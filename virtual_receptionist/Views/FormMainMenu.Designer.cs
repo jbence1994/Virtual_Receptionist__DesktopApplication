@@ -45,7 +45,7 @@
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonRoomEditor = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonGuestDatabase = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
@@ -53,7 +53,7 @@
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.toolStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@
             // toolStripMenuItemLogout
             // 
             this.toolStripMenuItemLogout.Name = "toolStripMenuItemLogout";
-            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(141, 22);
             this.toolStripMenuItemLogout.Text = "Kijelentkezés";
             // 
             // toolStripMenuItemRoomEditor
@@ -193,17 +193,17 @@
             this.pictureBoxVRLogo.TabIndex = 5;
             this.pictureBoxVRLogo.TabStop = false;
             // 
-            // toolStrip1
+            // toolStripMainMenu
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonRoomEditor,
             this.toolStripButtonGuestDatabase,
             this.toolStripButtonBilling});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1008, 39);
-            this.toolStrip1.TabIndex = 6;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStripMainMenu.Location = new System.Drawing.Point(0, 24);
+            this.toolStripMainMenu.Name = "toolStripMainMenu";
+            this.toolStripMainMenu.Size = new System.Drawing.Size(1008, 39);
+            this.toolStripMainMenu.TabIndex = 6;
+            this.toolStripMainMenu.Text = "toolStrip1";
             // 
             // toolStripButtonRoomEditor
             // 
@@ -251,7 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.pictureBoxBSLogo);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStripMainMenu);
             this.Controls.Add(this.pictureBoxVRLogo);
             this.Controls.Add(this.statusStripMainMenu);
             this.Controls.Add(this.menuStripMainMenu);
@@ -267,8 +267,8 @@
             this.statusStripMainMenu.ResumeLayout(false);
             this.statusStripMainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.toolStripMainMenu.ResumeLayout(false);
+            this.toolStripMainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,7 +285,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBilling;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelp;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelClient;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStripMainMenu;
         private System.Windows.Forms.ToolStripButton toolStripButtonRoomEditor;
         private System.Windows.Forms.ToolStripButton toolStripButtonBilling;
         private System.Windows.Forms.ToolStripButton toolStripButtonGuestDatabase;

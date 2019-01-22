@@ -15,6 +15,10 @@ namespace virtual_receptionist.Presenter
         /// Alkalmazás bejelentkező ablakának egy példánya
         /// </summary>
         private FormLogin formLogin;
+        /// <summary>
+        /// Főmenü ablak
+        /// </summary>
+        private FormMainMenu formMainMenu;
 
         #endregion
 
@@ -38,11 +42,12 @@ namespace virtual_receptionist.Presenter
         {
 
         }
+
         /// <summary>
         /// Metódus, amely kijelentkezik az alkalmazásból
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
-        public void Logout(FormMainMenu formMainMenu)
+        public void Logout()
         {
             DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
@@ -71,5 +76,64 @@ namespace virtual_receptionist.Presenter
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SetStatusStripLabelMenuNameInCaseMouseLeave()
+        {
+            toolStripStatusLabelMenuName.Text = string.Empty;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void CHM()
+        {
+            throw new System.NotImplementedException();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SetAccomodationData()
+        {
+            Accomodation accomodation = dataRepository.SetAccomodation();
+
+            MessageBox.Show(
+                $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",
+                "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="menuName"></param>
+        public void SetStatusStripLabelMenuNameInCaseMouseHover(string menuName)
+        {
+            toolStripStatusLabelMenuName.Text = menuName;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void OpenRoomEditor()
+        {
+            FormRoomEditor formRoomEditor = new FormRoomEditor();
+            formRoomEditor.ShowDialog();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void OpenBilling()
+        {
+            FormBilling formBilling = new FormBilling();
+            formBilling.ShowDialog();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public void OpenGuestDatabase()
+        {
+            FormGuestDatabase formGuestDatabase = new FormGuestDatabase();
+            formGuestDatabase.ShowDialog();
+        }
+
+        #endregion
     }
 }
