@@ -62,11 +62,11 @@
             // 
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.Enabled = false;
-            this.labelCopyright.Location = new System.Drawing.Point(405, 458);
+            this.labelCopyright.Location = new System.Drawing.Point(411, 458);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(303, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(297, 13);
             this.labelCopyright.TabIndex = 12;
-            this.labelCopyright.Text = "Copyright ©️ 2019 Binary Software, Inc. - Minden jog fenntartva";
+            this.labelCopyright.Text = "Copyright ©️ 2019 Binary Software, Inc. Minden jog fenntartva";
             // 
             // pictureBoxVRLogo
             // 
