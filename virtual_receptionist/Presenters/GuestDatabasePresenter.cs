@@ -101,7 +101,14 @@ namespace virtual_receptionist.Presenter
 
                 guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
                     emailAddress);
-                dataRepository.DeleteGuest(guest);
+
+                DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (delete == DialogResult.Yes)
+                {
+                    dataRepository.DeleteGuest(guest);
+                }
 
                 userIntervention = true;
             }
