@@ -240,6 +240,36 @@ namespace virtual_receptionist.View
             presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
+        private void toolStripMenuItemView_MouseHover(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Nézet");
+        }
+
+        private void toolStripMenuItemView_MouseLeave(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+        }
+
+        private void toolStripMenuItemShowStatusStrip_MouseHover(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Állapotsor megjelenítése");
+        }
+
+        private void toolStripMenuItemShowStatusStrip_MouseLeave(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+        }
+
+        private void toolStripMenuItemShowToolStrip_MouseHover(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Eszköztár megjelenítése");
+        }
+
+        private void toolStripMenuItemShowToolStrip_MouseLeave(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+        }
+
         private void toolStripMenuItemShowStatusStrip_CheckStateChanged(object sender, EventArgs e)
         {
             presenter.SetStatusStripVisibility(toolStripMenuItemShowStatusStrip, statusStripMainMenu);

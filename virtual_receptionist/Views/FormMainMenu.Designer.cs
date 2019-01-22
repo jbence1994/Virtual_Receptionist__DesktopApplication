@@ -328,6 +328,8 @@
             this.toolStripMenuItemView.Name = "toolStripMenuItemView";
             this.toolStripMenuItemView.Size = new System.Drawing.Size(49, 20);
             this.toolStripMenuItemView.Text = "Nézet";
+            this.toolStripMenuItemView.MouseLeave += new System.EventHandler(this.toolStripMenuItemView_MouseLeave);
+            this.toolStripMenuItemView.MouseHover += new System.EventHandler(this.toolStripMenuItemView_MouseHover);
             // 
             // toolStripMenuItemShowStatusStrip
             // 
@@ -338,6 +340,8 @@
             this.toolStripMenuItemShowStatusStrip.Size = new System.Drawing.Size(204, 22);
             this.toolStripMenuItemShowStatusStrip.Text = "Állapotsor megjelenítése";
             this.toolStripMenuItemShowStatusStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_CheckStateChanged);
+            this.toolStripMenuItemShowStatusStrip.MouseLeave += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_MouseLeave);
+            this.toolStripMenuItemShowStatusStrip.MouseHover += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_MouseHover);
             // 
             // toolStripMenuItemShowToolStrip
             // 
@@ -346,8 +350,10 @@
             this.toolStripMenuItemShowToolStrip.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemShowToolStrip.Name = "toolStripMenuItemShowToolStrip";
             this.toolStripMenuItemShowToolStrip.Size = new System.Drawing.Size(204, 22);
-            this.toolStripMenuItemShowToolStrip.Text = "Eszköztár meglenítése";
+            this.toolStripMenuItemShowToolStrip.Text = "Eszköztár megjelenítése";
             this.toolStripMenuItemShowToolStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowToolStrip_CheckStateChanged);
+            this.toolStripMenuItemShowToolStrip.MouseLeave += new System.EventHandler(this.toolStripMenuItemShowToolStrip_MouseLeave);
+            this.toolStripMenuItemShowToolStrip.MouseHover += new System.EventHandler(this.toolStripMenuItemShowToolStrip_MouseHover);
             // 
             // FormMainMenu
             // 
