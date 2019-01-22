@@ -95,7 +95,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void OpenCHM()
         {
-            Help.ShowHelp(new Control(), "");
+            Help.ShowHelp(formMainMenu, "");
         }
         /// <summary>
         /// 

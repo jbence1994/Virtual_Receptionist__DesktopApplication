@@ -2,11 +2,10 @@
 Compatibility=1.1 or later
 Compiled file=virtual_receptionist_help.chm
 Contents file=Table of Contents.hhc
-Default topic=virtual_receptionist_help.htm
+Default topic=index.html
 Display compile progress=No
-Index file=Index.hhk
 Language=0x40e magyar (Magyarország)
-Title=Virtual Receptiobist súgó
+Title=Virtual Receptionist súgó
 
 
 [INFOTYPES]
