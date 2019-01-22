@@ -72,7 +72,7 @@ namespace virtual_receptionist.Presenter
         public void SetMainMenu()
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
-            toolStripStatusLabelClient.Text += DataRepository.Client;
+            toolStripStatusLabelClient.Text += $"{DataRepository.Client} |";
             formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
         /// <summary>
