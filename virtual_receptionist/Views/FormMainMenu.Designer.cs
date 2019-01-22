@@ -52,8 +52,11 @@
             this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
             this.pictureBoxBSLogo = new System.Windows.Forms.PictureBox();
             this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.labelWelcome = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
+            this.labelWelcome = new System.Windows.Forms.Label();
+            this.toolStripMenuItemView = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemShowStatusStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemShowToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -66,6 +69,7 @@
             // 
             this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemFile,
+            this.toolStripMenuItemView,
             this.toolStripMenuItemTools,
             this.toolStripMenuItemHelp});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
@@ -85,6 +89,7 @@
             // 
             // toolStripMenuItemLogout
             // 
+            this.toolStripMenuItemLogout.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemLogout.Image")));
             this.toolStripMenuItemLogout.Name = "toolStripMenuItemLogout";
             this.toolStripMenuItemLogout.Size = new System.Drawing.Size(141, 22);
             this.toolStripMenuItemLogout.Text = "Kijelentkezés";
@@ -106,8 +111,9 @@
             // 
             // toolStripMenuItemRoomEditor
             // 
+            this.toolStripMenuItemRoomEditor.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemRoomEditor.Image")));
             this.toolStripMenuItemRoomEditor.Name = "toolStripMenuItemRoomEditor";
-            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(162, 22);
+            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemRoomEditor.Text = "Szobakezelő";
             this.toolStripMenuItemRoomEditor.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemRoomEditor.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
@@ -115,8 +121,9 @@
             // 
             // toolStripMenuItemGuestDatabase
             // 
+            this.toolStripMenuItemGuestDatabase.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestDatabase.Image")));
             this.toolStripMenuItemGuestDatabase.Name = "toolStripMenuItemGuestDatabase";
-            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(162, 22);
+            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
             this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
@@ -124,8 +131,9 @@
             // 
             // toolStripMenuItemBilling
             // 
+            this.toolStripMenuItemBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBilling.Image")));
             this.toolStripMenuItemBilling.Name = "toolStripMenuItemBilling";
-            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(162, 22);
+            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
             this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
@@ -147,6 +155,7 @@
             // 
             // toolStripMenuItemAccomodationInfo
             // 
+            this.toolStripMenuItemAccomodationInfo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemAccomodationInfo.Image")));
             this.toolStripMenuItemAccomodationInfo.Name = "toolStripMenuItemAccomodationInfo";
             this.toolStripMenuItemAccomodationInfo.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemAccomodationInfo.Text = "Szálláshely adatai";
@@ -170,6 +179,7 @@
             // 
             // toolStripMenuItemWebsite
             // 
+            this.toolStripMenuItemWebsite.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemWebsite.Image")));
             this.toolStripMenuItemWebsite.Name = "toolStripMenuItemWebsite";
             this.toolStripMenuItemWebsite.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemWebsite.Text = "A Virtual Receptionist weboldala";
@@ -179,6 +189,7 @@
             // 
             // toolStripMenuItemAbout
             // 
+            this.toolStripMenuItemAbout.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemAbout.Image")));
             this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
             this.toolStripMenuItemAbout.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemAbout.Text = "Névjegy";
@@ -290,6 +301,15 @@
             this.panelMainMenu.Size = new System.Drawing.Size(652, 623);
             this.panelMainMenu.TabIndex = 8;
             // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(3, 62);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(593, 143);
+            this.labelDescription.TabIndex = 1;
+            this.labelDescription.Text = resources.GetString("labelDescription.Text");
+            // 
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
@@ -300,14 +320,30 @@
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "Üdvözöljük a Virtual Receptionist asztali platformján!";
             // 
-            // labelDescription
+            // toolStripMenuItemView
             // 
-            this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(3, 62);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(593, 143);
-            this.labelDescription.TabIndex = 1;
-            this.labelDescription.Text = resources.GetString("labelDescription.Text");
+            this.toolStripMenuItemView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemShowStatusStrip,
+            this.toolStripMenuItemShowToolStrip});
+            this.toolStripMenuItemView.Name = "toolStripMenuItemView";
+            this.toolStripMenuItemView.Size = new System.Drawing.Size(49, 20);
+            this.toolStripMenuItemView.Text = "Nézet";
+            // 
+            // toolStripMenuItemShowStatusStrip
+            // 
+            this.toolStripMenuItemShowStatusStrip.Checked = true;
+            this.toolStripMenuItemShowStatusStrip.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemShowStatusStrip.Name = "toolStripMenuItemShowStatusStrip";
+            this.toolStripMenuItemShowStatusStrip.Size = new System.Drawing.Size(204, 22);
+            this.toolStripMenuItemShowStatusStrip.Text = "Állapotsor megjelenítése";
+            // 
+            // toolStripMenuItemShowToolStrip
+            // 
+            this.toolStripMenuItemShowToolStrip.Checked = true;
+            this.toolStripMenuItemShowToolStrip.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemShowToolStrip.Name = "toolStripMenuItemShowToolStrip";
+            this.toolStripMenuItemShowToolStrip.Size = new System.Drawing.Size(204, 22);
+            this.toolStripMenuItemShowToolStrip.Text = "Eszköztár meglenítése";
             // 
             // FormMainMenu
             // 
@@ -368,5 +404,8 @@
         private System.Windows.Forms.Panel panelMainMenu;
         private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemView;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShowStatusStrip;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShowToolStrip;
     }
 }
