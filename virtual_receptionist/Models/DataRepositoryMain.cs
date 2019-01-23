@@ -48,7 +48,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         private static string client;
         /// <summary>
-        /// Kiszolgáló neve
+        /// Alkalmazást kiszolgáló szerver neve
         /// </summary>
         private static string server;
 
@@ -89,7 +89,7 @@ namespace virtual_receptionist.Model
             }
         }
         /// <summary>
-        /// Kiszolgáló neve
+        /// Alkalmazást kiszolgáló szerver neve
         /// </summary>
         public static string Server
         {
