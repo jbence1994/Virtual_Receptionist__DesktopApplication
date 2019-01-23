@@ -15,39 +15,48 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Ezen osztály egyke példánya
         /// </summary>
-        private static Database databaseInstace;
+        private static Database databaseInstance;
+
         /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
         private MySqlConnection mySqlConnection;
+
         /// <summary>
         /// SQL utasítást vágrehajtó mező
         /// </summary>
         private MySqlCommand mySqlCommand;
+
         /// <summary>
         /// Adatszerkezeteket adattal feltöltő osztály egy példánya
         /// </summary>
         private MySqlDataAdapter mySqlDataAdapter;
+
         /// <summary>
         /// SQL DML parancsokat végrehajtó osztály egy példánya
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
+
         /// <summary>
         /// Adatbázis szerver neve
         /// </summary>
         private string server;
+
         /// <summary>
         /// Adatbázis neve
         /// </summary>
         private string database;
+
         /// <summary>
         /// Adatbázis szerver felhasználóneve
         /// </summary>
         private string username;
+
         /// <summary>
         /// Adatbázis szerver jelszava
         /// </summary>
         private string password;
+
         /// <summary>
         /// Adatbázis szerver elérésére szolgáló hálózati port
         /// </summary>
@@ -78,12 +87,12 @@ namespace virtual_receptionist.Model
         {
             get
             {
-                if (databaseInstace == null)
+                if (databaseInstance == null)
                 {
-                    return databaseInstace = new Database();
+                    return databaseInstance = new Database();
                 }
 
-                return databaseInstace;
+                return databaseInstance;
             }
         }
 
@@ -111,6 +120,7 @@ namespace virtual_receptionist.Model
                 Debug.WriteLine(e.Message);
             }
         }
+
         /// <summary>
         /// Adatbázis kapcsolatot lezáró metódus
         /// </summary>
@@ -122,6 +132,7 @@ namespace virtual_receptionist.Model
                 Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
             }
         }
+
         /// <summary>
         /// SELECT utasítást végrehajtó metódus
         /// </summary>
@@ -166,6 +177,7 @@ namespace virtual_receptionist.Model
 
             return dataTable;
         }
+
         /// <summary>
         /// INSERT, UPDATE, DELETE utasítást végrehajtó metódus
         /// </summary>
