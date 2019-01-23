@@ -12,7 +12,20 @@ namespace virtual_receptionist.Presenter
     {
         #region Adattagok
 
+        /// <summary>
+        /// Országok listáját tartalmazó legördülő menü
+        /// </summary>
+        private ComboBox comboBoxCountry;
 
+        /// <summary>
+        /// Válalalti ügyfél checkbox
+        /// </summary>
+        private CheckBox checkBoxCorporateGuest;
+
+        /// <summary>
+        /// Adószám szövegmező
+        /// </summary>
+        private TextBox textBoxVatNumber;
 
         #endregion
 
@@ -21,9 +34,12 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendég bejelentkező lap prezenter konstruktora
         /// </summary>
-        public GuestRegistrationCardPresenter()
+        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
+        public GuestRegistrationCardPresenter(params Control[] controls)
         {
-
+            comboBoxCountry = (ComboBox) controls[0];
+            checkBoxCorporateGuest = (CheckBox) controls[1];
+            textBoxVatNumber = (TextBox) controls[2];
         }
 
         #endregion
@@ -31,16 +47,15 @@ namespace virtual_receptionist.Presenter
         #region Vendég bejelentkező lap nézetfrissítései
 
         /// <summary>
-        /// Metódus, amely beállítja az ablakot betöltődéskor
+        /// Metódus, amely beállítja a legördülő lista forrásának az országok listját
         /// </summary>
-        /// <param name="comboBoxCountry">Országok listáját tartalmazó legördülő menü</param>
-        public void SetRegistrationCard(ComboBox comboBoxCountry)
+        public void InitializeComboBoxWithCountryList()
         {
             comboBoxCountry.DataSource = dataRepository.GetCountries();
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely elmenti a szobakiadást adatbázisba
         /// </summary>
         public void SaveRent()
         {
@@ -48,7 +63,7 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely elmenti a vendég adatait adatbázisba
         /// </summary>
         public void SaveGuestDataToDatabase()
         {
@@ -56,11 +71,9 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az adószám szövegmező írhatóságát, attól függően, hogy a vállalati ügyfél checkbox be van-e pipálva
         /// </summary>
-        /// <param name="checkBoxCorporateGuest"></param>
-        /// <param name="textBoxVatNumber"></param>
-        public void SetCorporateGuest(CheckBox checkBoxCorporateGuest, TextBox textBoxVatNumber)
+        public void SetCorporateGuest()
         {
             if (checkBoxCorporateGuest.Checked)
             {
