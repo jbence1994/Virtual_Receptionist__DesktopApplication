@@ -57,6 +57,7 @@
             this.textBoxIDCardOrPassportNumber = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonOK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -65,17 +66,17 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(584, 161);
+            this.buttonCancel.Location = new System.Drawing.Point(270, 627);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(179, 23);
-            this.buttonCancel.TabIndex = 28;
+            this.buttonCancel.TabIndex = 29;
             this.buttonCancel.Text = "Félbehagyás";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonSaveToDatabase
             // 
             this.buttonSaveToDatabase.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSaveToDatabase.Location = new System.Drawing.Point(584, 132);
+            this.buttonSaveToDatabase.Location = new System.Drawing.Point(270, 569);
             this.buttonSaveToDatabase.Name = "buttonSaveToDatabase";
             this.buttonSaveToDatabase.Size = new System.Drawing.Size(179, 23);
             this.buttonSaveToDatabase.TabIndex = 27;
@@ -226,7 +227,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(309, 9);
+            this.labelTitle.Location = new System.Drawing.Point(229, 28);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(243, 29);
             this.labelTitle.TabIndex = 0;
@@ -258,7 +259,7 @@
             this.groupBox1.Controls.Add(this.labelName);
             this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Controls.Add(this.textBoxCitizenship);
-            this.groupBox1.Location = new System.Drawing.Point(12, 41);
+            this.groupBox1.Location = new System.Drawing.Point(76, 93);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(517, 132);
             this.groupBox1.TabIndex = 1;
@@ -310,7 +311,7 @@
             this.groupBox2.Controls.Add(this.comboBoxCountry);
             this.groupBox2.Controls.Add(this.labelCity);
             this.groupBox2.Controls.Add(this.labelZipCode);
-            this.groupBox2.Location = new System.Drawing.Point(12, 179);
+            this.groupBox2.Location = new System.Drawing.Point(76, 231);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(517, 183);
             this.groupBox2.TabIndex = 10;
@@ -323,18 +324,28 @@
             this.groupBox3.Controls.Add(this.labelPhoneNumber);
             this.groupBox3.Controls.Add(this.textBoxPhoneNumber);
             this.groupBox3.Controls.Add(this.labelEmailAddress);
-            this.groupBox3.Location = new System.Drawing.Point(12, 368);
+            this.groupBox3.Location = new System.Drawing.Point(76, 420);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(517, 100);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Egyéb adatok";
             // 
+            // buttonOK
+            // 
+            this.buttonOK.Location = new System.Drawing.Point(270, 598);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(179, 23);
+            this.buttonOK.TabIndex = 28;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            // 
             // FormGuestRegistrationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 480);
+            this.ClientSize = new System.Drawing.Size(700, 700);
+            this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -387,5 +398,6 @@
         private System.Windows.Forms.Label labelIDCardOrPassportNumber;
         private System.Windows.Forms.Label labelBirthDate;
         private System.Windows.Forms.TextBox textBoxBirthDate;
+        private System.Windows.Forms.Button buttonOK;
     }
 }
