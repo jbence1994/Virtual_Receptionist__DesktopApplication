@@ -145,6 +145,27 @@ namespace virtual_receptionist.Model
             return Accomodation.AccomodationInstance;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Login()
+        {
+            string sql =
+                $"INSERT INTO desktop_log(MachineName, LoginDate) VALUES ({client}, {DateTime.Now})";
+
+            database.DML(sql);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Logout()
+        {
+            string sql = $"INSERT INTO desktop_log(LogoutDate) VALUES ({DateTime.Now})";
+
+            database.DML(sql);
+        }
+
         #endregion
     }
 }
