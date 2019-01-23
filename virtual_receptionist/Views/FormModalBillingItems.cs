@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Presenter;
 
@@ -13,7 +12,7 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// 
+        /// Számlázó modul tételek felvételéhez szükséges modális ablak prezenter egy példánya
         /// </summary>
         private ModalBillingItemsPresenter presenter;
 
@@ -36,35 +35,13 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            Model.DataRepository dataStore = new Model.DataRepository();
-
-            DataTable dt = dataStore.GetBillingItems();
-
-            foreach (DataRow row in dt.Rows)
-            {
-                ListViewItem billingItems = new ListViewItem(row[0].ToString());
-
-                for (int i = 1; i < dt.Columns.Count; i++)
-                {
-                    billingItems.SubItems.Add(row[i].ToString());
-                }
-
-                listViewBillingItems.Items.Add(billingItems);
-            }
+            presenter.InitializeBillingItemsListView();
         }
 
         private void listViewBillingItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listViewBillingItems.SelectedItems.Count > 0)
-            {
-                buttonAdd.Enabled = true;
-                textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
-                textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
-                maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
-                textBoxQuantity.Clear();
-                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
-                maskedTextBoxItemDiscount.Clear();
-            }
+            presenter.SetControlsWithData(textBoxQuantity, maskedTextBoxItemDiscount, buttonAdd, textBoxItem,
+                textBoxPrice, maskedTextBoxVAT, textBoxUnit);
         }
 
         private void listViewBillingItems_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
