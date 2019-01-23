@@ -18,6 +18,11 @@ namespace virtual_receptionist.Presenter
         private FormLogin formLogin;
 
         /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxAccomodationID;
+
+        /// <summary>
         /// Szálláshely azonosító
         /// </summary>
         private string accomodationID;
@@ -34,9 +39,11 @@ namespace virtual_receptionist.Presenter
         /// <summary>Bejelentkező ablak prezenter konstruktora
         /// </summary>
         /// <param name="formLogin">Bejelentkező ablak</param>
-        public LoginPresenter(FormLogin formLogin)
+        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
+        public LoginPresenter(FormLogin formLogin, params Control[] controls)
         {
             this.formLogin = formLogin;
+            textBoxAccomodationID = (TextBox) controls[0];
         }
 
         #endregion
@@ -80,8 +87,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
-        /// <param name="textBoxAccomodationID">TextBox vezérlő, amely bejelentkezéskor a kurzort fókuszba helyezi</param>
-        public void SetLogin(TextBox textBoxAccomodationID)
+        public void SetLogin()
         {
             textBoxAccomodationID.Select();
         }
