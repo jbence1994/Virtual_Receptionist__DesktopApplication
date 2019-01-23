@@ -16,10 +16,12 @@ namespace virtual_receptionist.Presenter
         /// Vendég osztály egy példánya
         /// </summary>
         private Guest guest;
+
         /// <summary>
         /// Vendégtáblázat
         /// </summary>
         private ListView listViewGuests;
+
         /// <summary>
         /// Vendégadatbázis-kezelő modális ablaka
         /// </summary>
@@ -43,7 +45,7 @@ namespace virtual_receptionist.Presenter
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// Vendgadatbázis-kezelő ablakon táblázatot vendégekkel feltöltő metódus
+        /// Vendégtáblázatot adatbázisból adatokkal feltöltő metódus
         /// </summary>
         public void InitalizeGuestTable()
         {
@@ -61,8 +63,9 @@ namespace virtual_receptionist.Presenter
                 listViewGuests.Items.Add(guests);
             }
         }
+
         /// <summary>
-        /// Adatbázis vendégtábláját feltöltő metódus
+        /// Vendégtáblázatba és adatbázisba egyidejűleg új rekord félvetélére szolgáló metódus
         /// </summary>
         public void AddNewRecordInGuestTable()
         {
@@ -72,8 +75,9 @@ namespace virtual_receptionist.Presenter
             dataRepository.CreateGuest(guest);
             userIntervention = true;
         }
+
         /// <summary>
-        /// Új rekord félvetélére szolgáló metódus (+ adatbázis)
+        /// Vendégtáblázatba és adatbázisba egyidejűleg meglévő rekord törlésére szolgáló metódus
         /// </summary>
         public void DeleteRecordInGuestTable()
         {
@@ -118,8 +122,9 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
-        /// Meglévő rekord módosítására szolgáló metódus (+ adatbázis)
+        /// Vendégtáblázatba és adatbázisba egyidejűleg meglévő rekord módosítására szolgáló metódus
         /// </summary>
         public void UpdateRecordInGuestTable()
         {
@@ -162,8 +167,9 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
-        /// Oszlopszélesség megváltoztatását letiltó metódus
+        /// Felhasználó általi oszlopszélesség megváltoztatását letiltó metódus
         /// </summary>
         /// <param name="e">Esemény példánya</param>
         public void BlockSettingColumnWidth(ColumnWidthChangingEventArgs e)
