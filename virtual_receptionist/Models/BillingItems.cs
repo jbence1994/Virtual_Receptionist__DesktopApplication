@@ -29,14 +29,7 @@
         #region Konstruktorok
 
         /// <summary>
-        /// Üres konstruktor
-        /// </summary>
-        public BillingItems()
-        {
-
-        }
-        /// <summary>
-        /// 
+        /// Számlázási tételek modell osztály konstrukora
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>
