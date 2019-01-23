@@ -133,6 +133,27 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
+        /// Metódus, amely elmenti egy listába a magyar települések neveit
+        /// </summary>
+        /// <returns>Magyar települések neveivel feltöltött listát adja vissza</returns>
+        public List<string> GetHungarianCities()
+        {
+            UploadHungarianZipCodesAndCitiesList();
+            List<string> filtratedCities = new List<string>();
+
+            foreach (HungarianZipCodesAndCities hungarianZipCodesAndCities in hungarianZipCodesAndCities)
+            {
+                if (!filtratedCities.Contains(hungarianZipCodesAndCities.City))
+                {
+                    filtratedCities.Add(hungarianZipCodesAndCities.City);
+                }
+            }
+
+            filtratedCities.Sort();
+            return filtratedCities;
+        }
+
+        /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
         /// <param name="itemPrice">Tétel értéke, amelyből kedvezményt számol a függvény</param>
