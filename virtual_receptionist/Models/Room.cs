@@ -82,6 +82,7 @@
         public string Category
         {
             get { return category; }
+            set { category = value; }
         }
 
         /// <summary>

@@ -101,10 +101,7 @@ namespace virtual_receptionist.View
         /// </summary>
         public Model.Guest Guest
         {
-            get
-            {
-                return guest;
-            }
+            get { return guest; }
         }
 
         #endregion

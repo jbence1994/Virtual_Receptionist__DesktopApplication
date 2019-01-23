@@ -17,6 +17,7 @@ namespace virtual_receptionistTests1
             double actual = dataRepository.CountDiscountPrice(8700, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
+
         /// <summary>
         /// Tesztmetódus, amely kiszámolja 11.400 Ft 10%-át
         /// </summary>
@@ -28,6 +29,7 @@ namespace virtual_receptionistTests1
             double actual = dataRepository.CountDiscountPrice(11400, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
+
         /// <summary>
         /// Tesztmetódus, amely kiszámolja 11.400 Ft 10%-át
         /// </summary>
@@ -39,6 +41,7 @@ namespace virtual_receptionistTests1
             double actual = dataRepository.CountDiscountPrice(14100, 10);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
+
         /// <summary>
         /// Tesztmetódus, amely kiszámolja 8700 Ft 20%-át
         /// </summary>
