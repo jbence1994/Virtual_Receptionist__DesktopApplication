@@ -73,7 +73,7 @@ namespace virtual_receptionist.Model
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable GetBillingItems()
         {
-            if (billingItems.Count != 0)
+            if (billingItems.Count == 0)
             {
                 UploadBillingItemsList();
             }
@@ -99,7 +99,7 @@ namespace virtual_receptionist.Model
         /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
         public List<string> GetCountries()
         {
-            if (countries.Count != 0)
+            if (countries.Count == 0)
             {
                 UploadCountriesList();
             }
@@ -125,7 +125,7 @@ namespace virtual_receptionist.Model
         /// <returns>Országok neveivel és országkódjaival feltöltött listát adja vissza</returns>
         public List<Country> GetCountriesWithCountryCode()
         {
-            if (countries.Count != 0)
+            if (countries.Count == 0)
             {
                 UploadCountriesList();
             }
@@ -139,7 +139,7 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
         public List<HungarianZipCodesAndCities> GetHungarianZipCodesAndCities()
         {
-            if (hungarianZipCodesAndCities.Count != 0)
+            if (hungarianZipCodesAndCities.Count == 0)
             {
                 UploadHungarianZipCodesAndCitiesList();
             }
@@ -153,7 +153,7 @@ namespace virtual_receptionist.Model
         /// <returns>Magyar települések neveivel feltöltött listát adja vissza</returns>
         public List<string> GetHungarianCities()
         {
-            if (hungarianZipCodesAndCities.Count != 0)
+            if (hungarianZipCodesAndCities.Count == 0)
             {
                 UploadHungarianZipCodesAndCitiesList();
             }

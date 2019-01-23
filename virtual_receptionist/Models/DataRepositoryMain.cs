@@ -140,7 +140,10 @@ namespace virtual_receptionist.Model
         /// </summary>
         public Accomodation SetAccomodation()
         {
-            UploadAccomodationList();
+            if (accomodations.Count == 0)
+            {
+                UploadAccomodationList();
+            }
 
             return Accomodation.AccomodationInstance;
         }

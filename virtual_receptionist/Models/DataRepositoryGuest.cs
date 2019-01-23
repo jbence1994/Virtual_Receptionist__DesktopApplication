@@ -41,7 +41,10 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetGuests()
         {
-            UploadGuestsList();
+            if (guests.Count == 0)
+            {
+                UploadGuestsList();
+            }
 
             DataTable guestsDataTable = new DataTable();
             guestsDataTable.Columns.Add("Name", typeof(string));

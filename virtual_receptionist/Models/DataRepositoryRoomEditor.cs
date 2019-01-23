@@ -66,7 +66,10 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetReservations()
         {
-            UploadReservationsList();
+            if (reservations.Count == 0)
+            {
+                UploadReservationsList();
+            }
 
             DataTable reservationsDataTable = new DataTable();
             reservationsDataTable.Columns.Add("GuestName", typeof(Guest));
@@ -90,7 +93,10 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         public DataTable GetRooms()
         {
-            UploadRoomsList();
+            if (rooms.Count == 0)
+            {
+                UploadRoomsList();
+            }
 
             DataTable roomsDataTable = new DataTable();
             roomsDataTable.Columns.Add("Name", typeof(string));
