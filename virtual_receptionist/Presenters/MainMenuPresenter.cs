@@ -20,7 +20,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private FormMainMenu formMainMenu;
         /// <summary>
-        /// 
+        /// Címke, amely adott menü nevét írja ki az állapotsorra
         /// </summary>
         private ToolStripLabel toolStripStatusLabelMenuName;
 
@@ -33,7 +33,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
-        /// <param name="toolStripStatusLabelMenuName"></param>
+        /// <param name="toolStripStatusLabelMenuName">Címke, amely adott menü nevét írja ki az állapotsorra</param>
         public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin,
             ToolStripLabel toolStripStatusLabelMenuName)
         {
@@ -63,6 +63,8 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
+        /// <param name="toolStripStatusLabelClient">Címke, amely megjeleníti a futtató számítógép NetBIOS nevét</param>
+        /// <param name="toolStripStatusLabelServer">Címke, amely megjeleníti az alkalmazást kiszolgáló szerver adatait</param>
         public void SetMainMenu(ToolStripLabel toolStripStatusLabelClient, ToolStripLabel toolStripStatusLabelServer)
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
@@ -71,7 +73,7 @@ namespace virtual_receptionist.Presenter
             formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
         /// <summary>
-        /// Metódus, amely megnyitja a Névjegy ablakot
+        /// Metódus, amely megnyitja a névjegy ablakot
         /// </summary>
         public void OpenAboutBox()
         {
@@ -79,14 +81,14 @@ namespace virtual_receptionist.Presenter
             aboutBox.ShowDialog();
         }
         /// <summary>
-        /// 
+        /// Metódus, amely törli a címke tartalmát, ha nincs adott menüre az egér kurzor rátartva
         /// </summary>
         public void SetStatusStripLabelMenuNameInCaseMouseLeave()
         {
             toolStripStatusLabelMenuName.Text = string.Empty;
         }
         /// <summary>
-        /// Metódus, amely megnyitja a súgót
+        /// Metódus, amely megnyitja a beépített HTML súgót
         /// </summary>
         public void OpenCHM()
         {
@@ -94,7 +96,7 @@ namespace virtual_receptionist.Presenter
                 "file://C:\\Users\\Bence\\Desktop\\zarodolgozat\\Virtual-Receptionist-desktop\\virtual_receptionist\\Help\\virtual_receptionist_help.chm");
         }
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az alkalmazást használó szálláshely adatait egy MessageBoxba
         /// </summary>
         public void SetAccomodationData()
         {
@@ -105,9 +107,9 @@ namespace virtual_receptionist.Presenter
                 "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja a címke tartalmát, ha egy adott menüre az egéret rátartjuk
         /// </summary>
-        /// <param name="menuName"></param>
+        /// <param name="menuName">Adott menü neve</param>
         public void SetStatusStripLabelMenuNameInCaseMouseHover(string menuName)
         {
             toolStripStatusLabelMenuName.Text = menuName;
@@ -137,19 +139,18 @@ namespace virtual_receptionist.Presenter
             formGuestDatabase.ShowDialog();
         }
         /// <summary>
-        /// Metódus, amely megnyitja az alkalmazáss weboldalát internetböngészőben
+        /// Metódus, amely megnyitja az alkalmazáss weboldalát egy internetes böngészőben
         /// </summary>
         public void OpenVirtualReceptionistWebsite()
         {
             throw new System.NotImplementedException();
         }
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az állapotsor láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs
         /// </summary>
-        /// <param name="toolStripMenuItemShowStatusStrip"></param>
-        /// <param name="statusStripMainMenu"></param>
-        public void SetStatusStripVisibility(ToolStripMenuItem toolStripMenuItemShowStatusStrip,
-            StatusStrip statusStripMainMenu)
+        /// <param name="toolStripMenuItemShowStatusStrip">Menüpont, amely az állapotsor láthatóságát tudja be- és kikapcsolni</param>
+        /// <param name="statusStripMainMenu">Állapotsor</param>
+        public void SetStatusStripVisibility(ToolStripMenuItem toolStripMenuItemShowStatusStrip, StatusStrip statusStripMainMenu)
         {
             if (toolStripMenuItemShowStatusStrip.CheckState == CheckState.Checked)
             {
@@ -161,12 +162,11 @@ namespace virtual_receptionist.Presenter
             }
         }
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az eszkötár láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs
         /// </summary>
-        /// <param name="toolStripMenuItemShowToolStrip"></param>
-        /// <param name="toolStripMainMenu"></param>
-        public void SetToolStripVisibility(ToolStripMenuItem toolStripMenuItemShowToolStrip,
-            ToolStrip toolStripMainMenu)
+        /// <param name="toolStripMenuItemShowToolStrip">Menüpont, amely az eszköztár láthatóságát tudja be- és kikapcsolni</param>
+        /// <param name="toolStripMainMenu">Eszköztár</param>
+        public void SetToolStripVisibility(ToolStripMenuItem toolStripMenuItemShowToolStrip, ToolStrip toolStripMainMenu)
         {
             if (toolStripMenuItemShowToolStrip.CheckState == CheckState.Checked)
             {
