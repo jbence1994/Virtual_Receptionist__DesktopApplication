@@ -73,7 +73,10 @@ namespace virtual_receptionist.Model
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
         public DataTable GetBillingItems()
         {
-            UploadBillingItemsList();
+            if (billingItems.Count != 0)
+            {
+                UploadBillingItemsList();
+            }
 
             DataTable billingItemsDataTable = new DataTable();
             billingItemsDataTable.Columns.Add("Name", typeof(string));
@@ -96,7 +99,11 @@ namespace virtual_receptionist.Model
         /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
         public List<string> GetCountries()
         {
-            UploadCountriesList();
+            if (countries.Count != 0)
+            {
+                UploadCountriesList();
+            }
+
             List<string> filtratedCountries = new List<string>();
 
             foreach (Country country in countries)
@@ -118,7 +125,11 @@ namespace virtual_receptionist.Model
         /// <returns>Országok neveivel és országkódjaival feltöltött listát adja vissza</returns>
         public List<Country> GetCountriesWithCountryCode()
         {
-            UploadCountriesList();
+            if (countries.Count != 0)
+            {
+                UploadCountriesList();
+            }
+
             return countries;
         }
 
@@ -128,7 +139,11 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
         public List<HungarianZipCodesAndCities> GetHungarianZipCodesAndCities()
         {
-            UploadHungarianZipCodesAndCitiesList();
+            if (hungarianZipCodesAndCities.Count != 0)
+            {
+                UploadHungarianZipCodesAndCitiesList();
+            }
+
             return hungarianZipCodesAndCities;
         }
 
@@ -138,7 +153,11 @@ namespace virtual_receptionist.Model
         /// <returns>Magyar települések neveivel feltöltött listát adja vissza</returns>
         public List<string> GetHungarianCities()
         {
-            UploadHungarianZipCodesAndCitiesList();
+            if (hungarianZipCodesAndCities.Count != 0)
+            {
+                UploadHungarianZipCodesAndCitiesList();
+            }
+
             List<string> filtratedCities = new List<string>();
 
             foreach (HungarianZipCodesAndCities hungarianZipCodesAndCities in hungarianZipCodesAndCities)
