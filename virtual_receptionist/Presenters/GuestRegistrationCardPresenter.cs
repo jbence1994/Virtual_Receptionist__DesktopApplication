@@ -33,6 +33,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
+        /// <param name="comboBoxCountry">Országok listáját tartalmazó legördülő menü</param>
         public void SetRegistrationCard(ComboBox comboBoxCountry)
         {
             comboBoxCountry.DataSource = dataRepository.GetCountries();
@@ -60,6 +61,16 @@ namespace virtual_receptionist.Presenter
         public void SaveGuestDataToDatabase()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="checkBoxCorporateGuest"></param>
+        /// <param name="textBoxVatNumber"></param>
+        public void SetCorporateGuest(CheckBox checkBoxCorporateGuest, TextBox textBoxVatNumber)
+        {
+            textBoxVatNumber.ReadOnly = !checkBoxCorporateGuest.Checked;
         }
 
         #endregion

@@ -52,6 +52,11 @@ namespace virtual_receptionist.View
             presenter.Interrupt();
         }
 
+        private void checkBoxCorporateGuest_CheckedChanged(object sender, System.EventArgs e)
+        {
+            presenter.SetCorporateGuest(checkBoxCorporateGuest, textBoxVatNumber);
+        }
+
         #endregion
     }
 }
