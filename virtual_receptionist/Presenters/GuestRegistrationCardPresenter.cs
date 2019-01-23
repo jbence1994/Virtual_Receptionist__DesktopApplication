@@ -62,7 +62,15 @@ namespace virtual_receptionist.Presenter
         /// <param name="textBoxVatNumber"></param>
         public void SetCorporateGuest(CheckBox checkBoxCorporateGuest, TextBox textBoxVatNumber)
         {
-            textBoxVatNumber.ReadOnly = !checkBoxCorporateGuest.Checked;
+            if (checkBoxCorporateGuest.Checked)
+            {
+                textBoxVatNumber.ReadOnly = false;
+            }
+            else
+            {
+                textBoxVatNumber.Clear();
+                textBoxVatNumber.ReadOnly = true;
+            }
         }
 
         #endregion
