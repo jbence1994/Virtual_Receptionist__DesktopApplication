@@ -44,9 +44,9 @@
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonNewReservation = new System.Windows.Forms.Button();
-            this.buttonUpdateReservation = new System.Windows.Forms.Button();
-            this.buttonDeleteReservation = new System.Windows.Forms.Button();
+            this.buttonNewRent = new System.Windows.Forms.Button();
+            this.buttonUpdateRent = new System.Windows.Forms.Button();
+            this.buttonDeleteRent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
             this.tabControlRoomEditor.SuspendLayout();
             this.tabPageReservations.SuspendLayout();
@@ -211,53 +211,53 @@
             this.ColumnCapacity.ReadOnly = true;
             this.ColumnCapacity.Width = 200;
             // 
-            // buttonNewReservation
+            // buttonNewRent
             // 
-            this.buttonNewReservation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNewReservation.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewReservation.Image")));
-            this.buttonNewReservation.Location = new System.Drawing.Point(877, 34);
-            this.buttonNewReservation.Name = "buttonNewReservation";
-            this.buttonNewReservation.Size = new System.Drawing.Size(159, 64);
-            this.buttonNewReservation.TabIndex = 9;
-            this.buttonNewReservation.Text = "Foglalás rögzítése";
-            this.buttonNewReservation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonNewReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonNewReservation.UseVisualStyleBackColor = true;
+            this.buttonNewRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonNewRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewRent.Image")));
+            this.buttonNewRent.Location = new System.Drawing.Point(877, 34);
+            this.buttonNewRent.Name = "buttonNewRent";
+            this.buttonNewRent.Size = new System.Drawing.Size(159, 64);
+            this.buttonNewRent.TabIndex = 9;
+            this.buttonNewRent.Text = "Foglalás rögzítése";
+            this.buttonNewRent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonNewRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonNewRent.UseVisualStyleBackColor = true;
             // 
-            // buttonUpdateReservation
+            // buttonUpdateRent
             // 
-            this.buttonUpdateReservation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonUpdateReservation.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateReservation.Image")));
-            this.buttonUpdateReservation.Location = new System.Drawing.Point(877, 104);
-            this.buttonUpdateReservation.Name = "buttonUpdateReservation";
-            this.buttonUpdateReservation.Size = new System.Drawing.Size(159, 64);
-            this.buttonUpdateReservation.TabIndex = 10;
-            this.buttonUpdateReservation.Text = "Foglalás módosítása";
-            this.buttonUpdateReservation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonUpdateReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonUpdateReservation.UseVisualStyleBackColor = true;
+            this.buttonUpdateRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUpdateRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateRent.Image")));
+            this.buttonUpdateRent.Location = new System.Drawing.Point(877, 104);
+            this.buttonUpdateRent.Name = "buttonUpdateRent";
+            this.buttonUpdateRent.Size = new System.Drawing.Size(159, 64);
+            this.buttonUpdateRent.TabIndex = 10;
+            this.buttonUpdateRent.Text = "Foglalás módosítása";
+            this.buttonUpdateRent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUpdateRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonUpdateRent.UseVisualStyleBackColor = true;
             // 
-            // buttonDeleteReservation
+            // buttonDeleteRent
             // 
-            this.buttonDeleteReservation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeleteReservation.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteReservation.Image")));
-            this.buttonDeleteReservation.Location = new System.Drawing.Point(877, 174);
-            this.buttonDeleteReservation.Name = "buttonDeleteReservation";
-            this.buttonDeleteReservation.Size = new System.Drawing.Size(159, 64);
-            this.buttonDeleteReservation.TabIndex = 11;
-            this.buttonDeleteReservation.Text = "Foglalás törlése";
-            this.buttonDeleteReservation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeleteReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeleteReservation.UseVisualStyleBackColor = true;
+            this.buttonDeleteRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeleteRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteRent.Image")));
+            this.buttonDeleteRent.Location = new System.Drawing.Point(877, 174);
+            this.buttonDeleteRent.Name = "buttonDeleteRent";
+            this.buttonDeleteRent.Size = new System.Drawing.Size(159, 64);
+            this.buttonDeleteRent.TabIndex = 11;
+            this.buttonDeleteRent.Text = "Foglalás törlése";
+            this.buttonDeleteRent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeleteRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeleteRent.UseVisualStyleBackColor = true;
             // 
             // FormRoomEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 613);
-            this.Controls.Add(this.buttonDeleteReservation);
-            this.Controls.Add(this.buttonUpdateReservation);
-            this.Controls.Add(this.buttonNewReservation);
+            this.Controls.Add(this.buttonDeleteRent);
+            this.Controls.Add(this.buttonUpdateRent);
+            this.Controls.Add(this.buttonNewRent);
             this.Controls.Add(this.tabControlRoomEditor);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -291,8 +291,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGuestCapacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArrival;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDeparture;
-        private System.Windows.Forms.Button buttonNewReservation;
-        private System.Windows.Forms.Button buttonUpdateReservation;
-        private System.Windows.Forms.Button buttonDeleteReservation;
+        private System.Windows.Forms.Button buttonNewRent;
+        private System.Windows.Forms.Button buttonUpdateRent;
+        private System.Windows.Forms.Button buttonDeleteRent;
     }
 }
