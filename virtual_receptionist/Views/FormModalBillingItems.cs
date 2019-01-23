@@ -26,7 +26,8 @@ namespace virtual_receptionist.View
         public FormModalBillingItems()
         {
             InitializeComponent();
-            presenter = new ModalBillingItemsPresenter(listViewBillingItems);
+            presenter = new ModalBillingItemsPresenter(listViewBillingItems, buttonAdd, textBoxItem, textBoxPrice,
+                textBoxUnit, textBoxQuantity, maskedTextBoxVAT, maskedTextBoxItemDiscount);
         }
 
         #endregion
@@ -40,8 +41,7 @@ namespace virtual_receptionist.View
 
         private void listViewBillingItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            presenter.SetControlsWithData(textBoxQuantity, maskedTextBoxItemDiscount, buttonAdd, textBoxItem,
-                textBoxPrice, maskedTextBoxVAT, textBoxUnit);
+            presenter.SetControlsWithData();
         }
 
         private void listViewBillingItems_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -51,10 +51,7 @@ namespace virtual_receptionist.View
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (maskedTextBoxItemDiscount.MaskFull)
-            {
-
-            }
+            presenter.AddBillingItemToRecord();
         }
 
         #endregion

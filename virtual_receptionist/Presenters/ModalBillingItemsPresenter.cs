@@ -17,6 +17,41 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private ListView listViewBillingItems;
 
+        /// <summary>
+        /// Hozzáadás gomb
+        /// </summary>
+        private Button buttonAdd;
+
+        /// <summary>
+        /// Tétel szövegmező
+        /// </summary>
+        private TextBox textBoxItem;
+
+        /// <summary>
+        /// Ár szövegmező
+        /// </summary>
+        private TextBox textBoxPrice;
+
+        /// <summary>
+        /// Egység szövegmező
+        /// </summary>
+        private TextBox textBoxUnit;
+
+        /// <summary>
+        /// Mennyiség szövegmező
+        /// </summary>
+        private TextBox textBoxQuantity;
+
+        /// <summary>
+        /// ÁFA maszkolt szövegmező
+        /// </summary>
+        private MaskedTextBox maskedTextBoxVAT;
+
+        /// <summary>
+        /// Tétel kedvezmény maszkolt szövegmező
+        /// </summary>
+        private MaskedTextBox maskedTextBoxItemDiscount;
+
         #endregion
 
         #region Konstruktor
@@ -24,10 +59,17 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Számlázó modul tételek felvételéhez szükséges modális ablak prezenter konstruktora
         /// </summary>
-        /// <param name="listViewBillingItems">Számlázási tételek táblázat</param>
-        public ModalBillingItemsPresenter(ListView listViewBillingItems)
+        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
+        public ModalBillingItemsPresenter(params Control[] controls)
         {
-            this.listViewBillingItems = listViewBillingItems;
+            listViewBillingItems = (ListView) controls[0];
+            buttonAdd = (Button) controls[1];
+            textBoxItem = (TextBox) controls[2];
+            textBoxPrice = (TextBox) controls[3];
+            textBoxUnit = (TextBox) controls[4];
+            textBoxQuantity = (TextBox) controls[5];
+            maskedTextBoxVAT = (MaskedTextBox) controls[6];
+            maskedTextBoxItemDiscount = (MaskedTextBox) controls[7];
         }
 
         #endregion
@@ -57,20 +99,16 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely a táblázat adatait GUI vezérlőkbe menti el módosítás céljából
         /// </summary>
-        /// <param name="textBoxQuantity">Mennyiség szövegmező</param>
-        /// <param name="maskedTextBoxItemDiscount">Tételkedvezmény maszkolt szövegmező</param>
-        /// <param name="controls">Egyéb GUI vezérlők</param>
-        public void SetControlsWithData(TextBox textBoxQuantity, MaskedTextBox maskedTextBoxItemDiscount,
-            params Control[] controls)
+        public void SetControlsWithData()
         {
             if (listViewBillingItems.SelectedItems.Count > 0)
             {
-                controls[0].Enabled = true;
-                controls[1].Text = listViewBillingItems.SelectedItems[0].Text;
-                controls[2].Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
-                controls[3].Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                buttonAdd.Enabled = true;
+                textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
+                textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
+                maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 textBoxQuantity.Clear();
-                controls[4].Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 maskedTextBoxItemDiscount.Clear();
             }
         }
@@ -80,7 +118,10 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddBillingItemToRecord()
         {
+            if (maskedTextBoxItemDiscount.MaskFull)
+            {
 
+            }
         }
 
         #endregion
