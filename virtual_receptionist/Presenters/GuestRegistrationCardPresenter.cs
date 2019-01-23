@@ -1,4 +1,6 @@
-﻿using virtual_receptionist.Model;
+﻿using System;
+using System.Windows.Forms;
+using virtual_receptionist.Model;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
@@ -28,7 +30,37 @@ namespace virtual_receptionist.Presenter
 
         #region Vendég bejelentkező lap nézetfrissítései
 
+        /// <summary>
+        /// Metódus, amely beállítja az ablakot betöltődéskor
+        /// </summary>
+        public void SetRegistrationCard(ComboBox comboBoxCountry)
+        {
+            comboBoxCountry.DataSource = dataRepository.GetCountries();
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Interrupt()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SaveRent()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SaveGuestDataToDatabase()
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }

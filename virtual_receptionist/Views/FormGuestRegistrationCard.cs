@@ -34,22 +34,22 @@ namespace virtual_receptionist.View
 
         private void FormGuestRegistrationCard_Load(object sender, System.EventArgs e)
         {
-
+            presenter.SetRegistrationCard(comboBoxCountry);
         }
 
         private void buttonSaveToDatabase_Click(object sender, System.EventArgs e)
         {
-
+            presenter.SaveGuestDataToDatabase();
         }
 
         private void buttonOK_Click(object sender, System.EventArgs e)
         {
-
+            presenter.SaveRent();
         }
 
         private void buttonCancel_Click(object sender, System.EventArgs e)
         {
-
+            presenter.Interrupt();
         }
 
         #endregion

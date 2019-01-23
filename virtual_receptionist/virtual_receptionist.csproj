@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\GuestRegistrationCardPresenter.cs" />
     <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
     <Compile Include="Presenters\RoomEditorPresenter.cs" />
     <Compile Include="Views\FormApplicationOpening.cs">
