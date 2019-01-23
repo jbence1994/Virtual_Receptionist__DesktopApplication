@@ -49,7 +49,7 @@ namespace virtual_receptionist.View
 
         private void buttonCancel_Click(object sender, System.EventArgs e)
         {
-            presenter.Interrupt();
+            presenter.BackToMainMenu(this);
         }
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, System.EventArgs e)

@@ -42,14 +42,6 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// 
         /// </summary>
-        public void Interrupt()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public void SaveRent()
         {
             throw new NotImplementedException();
