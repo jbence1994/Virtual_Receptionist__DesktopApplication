@@ -57,6 +57,7 @@ namespace virtual_receptionist.Model
                 throw new Exception("Név nem tartalmazhat számot!");
             }
         }
+
         /// <summary>
         /// Szálláshely azonosító ellenőrző metódus
         /// </summary>
@@ -73,6 +74,7 @@ namespace virtual_receptionist.Model
                 throw new Exception("Szállásazonosító nem tartalmazhat számot!");
             }
         }
+
         /// <summary>
         /// Jelszó ellenőrző metódus
         /// </summary>
@@ -89,6 +91,7 @@ namespace virtual_receptionist.Model
                 throw new Exception("Jelszó nem tartalmazhat vezérlőbillentyű karaktert!");
             }
         }
+
         /// <summary>
         /// E-mail cím ellenőrző metódus
         /// </summary>
@@ -105,6 +108,7 @@ namespace virtual_receptionist.Model
                 throw new Exception("Nem érvényes e-mail cím formátum!");
             }
         }
+
         /// <summary>
         /// Irányítószám ellenőrző metódus
         /// </summary>
@@ -126,6 +130,7 @@ namespace virtual_receptionist.Model
                 throw new Exception("Irányítószám nem tartalmazhat kisebetűs karaktert!");
             }
         }
+
         /// <summary>
         /// Település nevét és címet ellenőrző metódus
         /// </summary>
@@ -147,6 +152,7 @@ namespace virtual_receptionist.Model
                 throw new Exception("Település vagy cím nem kezdődhet kisbetűvel!");
             }
         }
+
         /// <summary>
         /// Aszám ellenőrző metódus
         /// </summary>

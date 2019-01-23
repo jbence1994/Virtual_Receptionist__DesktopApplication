@@ -9,18 +9,22 @@
         /// Számlázási tétel neve
         /// </summary>
         private string name;
+
         /// <summary>
         /// Számlázási tétel kategóriája
         /// </summary>
         private string category;
+
         /// <summary>
         /// Számlázási tétel ÁFA-kulcsának értéke
         /// </summary>
         private double vat;
+
         /// <summary>
         /// Számlázási tétel egysége
         /// </summary>
         private string unit;
+
         /// <summary>
         /// Számlázási tétel összege (ára)
         /// </summary>
@@ -54,70 +58,44 @@
         /// </summary>
         public string Name
         {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
+            get { return name; }
+            set { name = value; }
         }
+
         /// <summary>
         /// Számlázási tétel kategóriája
         /// </summary>
         public string Category
         {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                category = value;
-            }
+            get { return category; }
+            set { category = value; }
         }
+
         /// <summary>
         /// Számlázási tétel ÁFA-kulcsának értéke
         /// </summary>
         public double Vat
         {
-            get
-            {
-                return vat;
-            }
-            set
-            {
-                vat = value;
-            }
+            get { return vat; }
+            set { vat = value; }
         }
+
         /// <summary>
         /// Számlázási tétel egysége
         /// </summary>
         public string Unit
         {
-            get
-            {
-                return unit;
-            }
-            set
-            {
-                unit = value;
-            }
+            get { return unit; }
+            set { unit = value; }
         }
+
         /// <summary>
         /// Számlázási tétel összege (ára)
         /// </summary>
         public double Price
         {
-            get
-            {
-                return price;
-            }
-            set
-            {
-                price = value;
-            }
+            get { return price; }
+            set { price = value; }
         }
 
         #endregion

@@ -11,34 +11,42 @@
         /// Vendég neve
         /// </summary>
         private string name;
+
         /// <summary>
         /// Vendég nemzetisége
         /// </summary>
         private string nationality;
+
         /// <summary>
         /// Vendég száramázási országának neve
         /// </summary>
         private string country;
+
         /// <summary>
         /// Vendég lakhelyének irányítószáma
         /// </summary>
         private string zipCode;
+
         /// <summary>
         /// Vendég lakhelyének települése
         /// </summary>
         private string city;
+
         /// <summary>
         /// Vendég lakhelyének címe (utca, házszám)
         /// </summary>
         private string address;
+
         /// <summary>
         /// Vállalati vendég adószáma
         /// </summary>
         private string vatNumber;
+
         /// <summary>
         /// Vendég telefonszáma
         /// </summary>
         private string phoneNumber;
+
         /// <summary>
         /// Vendég e-mail címe
         /// </summary>
@@ -60,7 +68,8 @@
         /// <param name="vatNumber">Céges vendég adószáma</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, bool nationality, string country, string zipCode, string city, string address, string vatNumber, string phoneNumber, string emailAddress)
+        public Guest(string name, bool nationality, string country, string zipCode, string city, string address,
+            string vatNumber, string phoneNumber, string emailAddress)
         {
             this.name = name;
 
@@ -81,6 +90,7 @@
             this.phoneNumber = phoneNumber;
             this.emailAddress = emailAddress;
         }
+
         /// <summary>
         /// Guest osztály üres konstruktora
         /// </summary>
@@ -98,126 +108,80 @@
         /// </summary>
         public string Name
         {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
+            get { return name; }
+            set { name = value; }
         }
+
         /// <summary>
         /// Vendég nemzetisége
         /// </summary>
         public string Nationality
         {
-            get
-            {
-                return nationality;
-            }
-            set
-            {
-                nationality = value;
-            }
+            get { return nationality; }
+            set { nationality = value; }
         }
+
         /// <summary>
         /// Vendég száramázási országának neve
         /// </summary>
         public string Country
         {
-            get
-            {
-                return country;
-            }
-            set
-            {
-                country = value;
-            }
+            get { return country; }
+            set { country = value; }
         }
+
         /// <summary>
         /// Vendég lakhelyének irányítószáma
         /// </summary>
         public string ZipCode
         {
-            get
-            {
-                return zipCode;
-            }
-            set
-            {
-                zipCode = value;
-            }
+            get { return zipCode; }
+            set { zipCode = value; }
         }
+
         /// <summary>
         /// Vendég lakhelyének települése
         /// </summary>
         public string City
         {
-            get
-            {
-                return city;
-            }
-            set
-            {
-                city = value;
-            }
+            get { return city; }
+            set { city = value; }
         }
+
         /// <summary>
         /// Vendég lakhelyének címe (utca, házszám)
         /// </summary>
         public string Address
         {
-            get
-            {
-                return address;
-            }
-            set
-            {
-                address = value;
-            }
+            get { return address; }
+            set { address = value; }
         }
+
         /// <summary>
         /// Céges vendég adószáma
         /// </summary>
         public string VatNumber
         {
-            get
-            {
-                return vatNumber;
-            }
-            set
-            {
-                vatNumber = value;
-            }
+            get { return vatNumber; }
+            set { vatNumber = value; }
         }
+
         /// <summary>
         /// Vendég telefonszáma
         /// </summary>
         public string PhoneNumber
         {
-            get
-            {
-                return phoneNumber;
-            }
-            set
-            {
-                phoneNumber = value;
-            }
+            get { return phoneNumber; }
+            set { phoneNumber = value; }
         }
+
         /// <summary>
         /// Vendég e-mail címe
         /// </summary>
         public string EmailAddress
         {
-            get
-            {
-                return emailAddress;
-            }
-            set
-            {
-                emailAddress = value;
-            }
+            get { return emailAddress; }
+            set { emailAddress = value; }
         }
 
         #endregion
@@ -230,7 +194,8 @@
         /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{name} {nationality} {country} {zipCode} {city} {address} {vatNumber} {phoneNumber} {emailAddress}";
+            return
+                $"{name} {nationality} {country} {zipCode} {city} {address} {vatNumber} {phoneNumber} {emailAddress}";
         }
 
         #endregion

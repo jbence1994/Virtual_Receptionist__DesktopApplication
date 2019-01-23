@@ -11,6 +11,7 @@
         /// Település irányítószáma
         /// </summary>
         private string zipCode;
+
         /// <summary>
         /// Település neve
         /// </summary>
@@ -38,28 +39,17 @@
         /// </summary>
         public string ZipCode
         {
-            get
-            {
-                return zipCode;
-            }
-            set
-            {
-                zipCode = value;
-            }
+            get { return zipCode; }
+            set { zipCode = value; }
         }
+
         /// <summary>
         /// Település neve
         /// </summary>
         public string City
         {
-            get
-            {
-                return city;
-            }
-            set
-            {
-                city = value;
-            }
+            get { return city; }
+            set { city = value; }
         }
 
         #endregion

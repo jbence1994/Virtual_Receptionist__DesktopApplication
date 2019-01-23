@@ -11,6 +11,7 @@
         /// Ország kódja
         /// </summary>
         private string code;
+
         /// <summary>
         /// Ország neve
         /// </summary>
@@ -30,6 +31,7 @@
             this.code = code;
             this.name = name;
         }
+
         /// <summary>
         /// Country osztály üres konstruktora
         /// </summary>
@@ -47,28 +49,17 @@
         /// </summary>
         public string Code
         {
-            get
-            {
-                return code;
-            }
-            set
-            {
-                code = value;
-            }
+            get { return code; }
+            set { code = value; }
         }
+
         /// <summary>
         /// Ország neve
         /// </summary>
         public string Name
         {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
+            get { return name; }
+            set { name = value; }
         }
 
         #endregion

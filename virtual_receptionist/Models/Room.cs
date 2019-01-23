@@ -11,14 +11,17 @@
         /// Szoba elnevezése / fantázianeve
         /// </summary>
         private string name;
+
         /// <summary>
         /// Szobaszám
         /// </summary>
         private int number;
+
         /// <summary>
         /// Szobakategória
         /// </summary>
         private string category;
+
         /// <summary>
         /// Szoba férőhelye
         /// </summary>
@@ -42,6 +45,7 @@
             this.category = category;
             this.capacity = capacity;
         }
+
         /// <summary>
         /// Room osztály üres konstruktora
         /// </summary>
@@ -59,56 +63,34 @@
         /// </summary>
         public string Name
         {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
+            get { return name; }
+            set { name = value; }
         }
+
         /// <summary>
         /// Szobaszám
         /// </summary>
         public int Number
         {
-            get
-            {
-                return number;
-            }
-            set
-            {
-                number = value;
-            }
+            get { return number; }
+            set { number = value; }
         }
+
         /// <summary>
         /// Szobakategória
         /// </summary>
         public string Category
         {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                category = value;
-            }
+            get { return category; }
         }
+
         /// <summary>
         /// Szoba férőhelye
         /// </summary>
         public int Capacity
         {
-            get
-            {
-                return capacity;
-            }
-            set
-            {
-                capacity = value;
-            }
+            get { return capacity; }
+            set { capacity = value; }
         }
 
         #endregion

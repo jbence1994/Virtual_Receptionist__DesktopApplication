@@ -15,38 +15,47 @@ namespace virtual_receptionist.Model
         /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
         /// </summary>
         private static Database database;
+
         /// <summary>
         /// Szálláshelyek adatait tároló lista
         /// </summary>
         private List<Accomodation> accomodations;
+
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
         private List<BillingItems> billingItems;
+
         /// <summary>
         /// Vendégeket tartalmazó lista
         /// </summary>
         private List<Guest> guests;
+
         /// <summary>
         /// Orszgáokat tartalmazó lista
         /// </summary>
         private List<Country> countries;
+
         /// <summary>
         /// Magyarországi irányítószámokat és településeket tartalmazó lista
         /// </summary>
         private List<HungarianZipCodesAndCities> hungarianZipCodesAndCities;
+
         /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
         private List<Room> rooms;
+
         /// <summary>
         /// Foglalásokat tartalmazó lista
         /// </summary>
         private List<Reservation> reservations;
+
         /// <summary>
         /// Alkalmazást futtató számítógép NetBIOS neve
         /// </summary>
         private static string client;
+
         /// <summary>
         /// Alkalmazást kiszolgáló szerver neve
         /// </summary>
@@ -83,20 +92,15 @@ namespace virtual_receptionist.Model
         /// </summary>
         public static string Client
         {
-            get
-            {
-                return client;
-            }
+            get { return client; }
         }
+
         /// <summary>
         /// Alkalmazást kiszolgáló szerver neve
         /// </summary>
         public static string Server
         {
-            get
-            {
-                return server;
-            }
+            get { return server; }
         }
 
         #endregion
@@ -130,6 +134,7 @@ namespace virtual_receptionist.Model
                 accomodations.Add(accomodation);
             }
         }
+
         /// <summary>
         /// Metódus, amely beállítja az adott szálláshely adatait
         /// </summary>

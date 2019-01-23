@@ -25,7 +25,7 @@ namespace virtual_receptionist.Model
         {
             string sql = "SELECT AccomodationID, Password FROM accomodation_registration";
             database.DQL(sql);
-            
+
             return true;
         }
 

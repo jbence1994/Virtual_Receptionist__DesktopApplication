@@ -34,6 +34,7 @@ namespace virtual_receptionist.Model
                 guests.Add(guestInstance);
             }
         }
+
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
         /// </summary>
@@ -55,11 +56,13 @@ namespace virtual_receptionist.Model
 
             foreach (Guest guest in guests)
             {
-                guestsDataTable.Rows.Add(guest.Name, guest.Nationality, guest.Country, guest.ZipCode, guest.City, guest.Address, guest.VatNumber, guest.PhoneNumber, guest.EmailAddress);
+                guestsDataTable.Rows.Add(guest.Name, guest.Nationality, guest.Country, guest.ZipCode, guest.City,
+                    guest.Address, guest.VatNumber, guest.PhoneNumber, guest.EmailAddress);
             }
 
             return guestsDataTable;
         }
+
         /// <summary>
         /// Vendég törlése
         /// </summary>
@@ -69,13 +72,14 @@ namespace virtual_receptionist.Model
             string sql = $"DELETE FROM guest WHERE guest.Name LIKE \"{guest.Name}\"";
             database.DML(sql);
         }
+
         /// <summary>
         /// Vendég módosítása
         /// </summary>
         /// <param name="guest">Guest objektum</param>
         public void UpdateGuest(Guest guest)
         {
-            bool nationality = false;
+            bool nationality;
 
             if (guest.Nationality == "belföldi")
             {
@@ -90,6 +94,7 @@ namespace virtual_receptionist.Model
                 $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.Nationality=\"{nationality.ToString()}\", guest.Country=\"{guest.Country}\", guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.VATNumber=\"{guest.VatNumber}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.Name LIKE \"{guest.Name}\"";
             database.DML(sql);
         }
+
         /// <summary>
         /// Vendég létrehozása
         /// </summary>

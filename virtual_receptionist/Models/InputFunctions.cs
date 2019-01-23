@@ -14,6 +14,7 @@ namespace virtual_receptionist.Model
         {
             return string.IsNullOrWhiteSpace(input) ? true : false;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi az input tartalmaz-e vezérlőbillentyű karaktert
         /// </summary>
@@ -32,6 +33,7 @@ namespace virtual_receptionist.Model
 
             return criticalIndex;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi az input tartalmaz-e számot
         /// </summary>
@@ -50,6 +52,7 @@ namespace virtual_receptionist.Model
 
             return criticalIndex;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi az input tartalmaz-e betűt
         /// </summary>
@@ -68,6 +71,7 @@ namespace virtual_receptionist.Model
 
             return criticalIndex;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi az input tartalmaz-e nagybetűs karaktert
         /// </summary>
@@ -86,6 +90,7 @@ namespace virtual_receptionist.Model
 
             return criticalIndex;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi az input tartalmaz-e kisebtűs karaktert
         /// </summary>
@@ -104,6 +109,7 @@ namespace virtual_receptionist.Model
 
             return criticalIndex;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi, hogy az input első karaktere nagybetű-e
         /// </summary>
@@ -117,6 +123,7 @@ namespace virtual_receptionist.Model
 
             return false;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi, hogy az input első karaktere kisbetű-e
         /// </summary>
@@ -130,6 +137,7 @@ namespace virtual_receptionist.Model
 
             return false;
         }
+
         /// <summary>
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>

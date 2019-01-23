@@ -13,18 +13,22 @@ namespace virtual_receptionist.Model
         /// Guest modell osztály egy példánya
         /// </summary>
         private Guest guest;
+
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
         private Room room;
+
         /// <summary>
         /// Vendégek száma
         /// </summary>
         private int numberOfGuests;
+
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
         private DateTime arrival;
+
         /// <summary>
         /// Távozás dátuma
         /// </summary>
@@ -55,70 +59,44 @@ namespace virtual_receptionist.Model
         /// </summary>
         public Guest Guest
         {
-            get
-            {
-                return guest;
-            }
-            set
-            {
-                guest = value;
-            }
+            get { return guest; }
+            set { guest = value; }
         }
+
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
         public Room Room
         {
-            get
-            {
-                return room;
-            }
-            set
-            {
-                room = value;
-            }
+            get { return room; }
+            set { room = value; }
         }
+
         /// <summary>
         /// Vendégek száma
         /// </summary>
         public int NumberOfGuests
         {
-            get
-            {
-                return numberOfGuests;
-            }
-            set
-            {
-                numberOfGuests = value;
-            }
+            get { return numberOfGuests; }
+            set { numberOfGuests = value; }
         }
+
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
         public DateTime Arrival
         {
-            get
-            {
-                return arrival;
-            }
-            set
-            {
-                arrival = value;
-            }
+            get { return arrival; }
+            set { arrival = value; }
         }
+
         /// <summary>
         /// Távozás dátuma
         /// </summary>
         public DateTime Departure
         {
-            get
-            {
-                return departure;
-            }
-            set
-            {
-                departure = value;
-            }
+            get { return departure; }
+            set { departure = value; }
         }
 
         #endregion

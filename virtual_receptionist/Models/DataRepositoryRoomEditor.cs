@@ -13,7 +13,8 @@ namespace virtual_receptionist.Model
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadReservationsList()
         {
-            string sql = "SELECT guest.Name, room.Number, reservation.NumberOfGuests, reservation.ArrivalDate, reservation.DepartureDate FROM reservation, guest, room WHERE reservation.GuestID = guest.ID AND reservation.RoomID = room.ID ORDER BY reservation.ArrivalDate ASC";
+            string sql =
+                "SELECT guest.Name, room.Number, reservation.NumberOfGuests, reservation.ArrivalDate, reservation.DepartureDate FROM reservation, guest, room WHERE reservation.GuestID = guest.ID AND reservation.RoomID = room.ID ORDER BY reservation.ArrivalDate ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -29,20 +30,22 @@ namespace virtual_receptionist.Model
                 };
 
                 int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
-                DateTime arrival = (DateTime)row["ArrivalDate"];
-                DateTime departure = (DateTime)row["DepartureDate"];
+                DateTime arrival = (DateTime) row["ArrivalDate"];
+                DateTime departure = (DateTime) row["DepartureDate"];
 
                 Reservation reservationInstance = new Reservation(guest, room, numberOfGuests, arrival, departure);
                 reservations.Add(reservationInstance);
             }
         }
+
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobákat tartalmazó listát
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadRoomsList()
         {
-            string sql = "SELECT room.Name, room.Number, room_category.CategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
+            string sql =
+                "SELECT room.Name, room.Number, room_category.CategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -56,6 +59,7 @@ namespace virtual_receptionist.Model
                 rooms.Add(roomInstance);
             }
         }
+
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
@@ -73,11 +77,13 @@ namespace virtual_receptionist.Model
 
             foreach (Reservation reservation in reservations)
             {
-                reservationsDataTable.Rows.Add(reservation.Guest, reservation.Room, reservation.NumberOfGuests, reservation.Arrival, reservation.Departure);
+                reservationsDataTable.Rows.Add(reservation.Guest, reservation.Room, reservation.NumberOfGuests,
+                    reservation.Arrival, reservation.Departure);
             }
 
             return reservationsDataTable;
         }
+
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szoba adatát egy DataTable adatszerkezetben
         /// </summary>
