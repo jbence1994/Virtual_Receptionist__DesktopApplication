@@ -103,8 +103,8 @@
             // toolStripMenuItemView
             // 
             this.toolStripMenuItemView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemShowStatusStrip,
-            this.toolStripMenuItemShowToolStrip});
+            this.toolStripMenuItemShowToolStrip,
+            this.toolStripMenuItemShowStatusStrip});
             this.toolStripMenuItemView.Name = "toolStripMenuItemView";
             this.toolStripMenuItemView.Size = new System.Drawing.Size(49, 20);
             this.toolStripMenuItemView.Text = "Nézet";
