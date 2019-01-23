@@ -23,10 +23,6 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         private ToolStripLabel toolStripStatusLabelMenuName;
-        /// <summary>
-        /// 
-        /// </summary>
-        private ToolStripLabel toolStripStatusLabelClient;
 
         #endregion
 
@@ -38,13 +34,12 @@ namespace virtual_receptionist.Presenter
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
         /// <param name="toolStripStatusLabelMenuName"></param>
-        /// <param name="toolStripStatusLabelClient"></param>
-        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, ToolStripLabel toolStripStatusLabelMenuName, ToolStripLabel toolStripStatusLabelClient)
+        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin,
+            ToolStripLabel toolStripStatusLabelMenuName)
         {
             this.formMainMenu = formMainMenu;
             this.formLogin = formLogin;
             this.toolStripStatusLabelMenuName = toolStripStatusLabelMenuName;
-            this.toolStripStatusLabelClient = toolStripStatusLabelClient;
         }
 
         #endregion
@@ -68,10 +63,11 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
-        public void SetMainMenu()
+        public void SetMainMenu(ToolStripLabel toolStripStatusLabelClient, ToolStripLabel toolStripStatusLabelServer)
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
-            toolStripStatusLabelClient.Text += $"{DataRepository.Client} |";
+            toolStripStatusLabelClient.Text += DataRepository.Client;
+            toolStripStatusLabelServer.Text += DataRepository.Server;
             formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
         /// <summary>

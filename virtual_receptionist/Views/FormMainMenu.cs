@@ -32,8 +32,7 @@ namespace virtual_receptionist.View
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName,
-                toolStripStatusLabelClient);
+            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName);
         }
 
         #endregion
@@ -42,7 +41,7 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            presenter.SetMainMenu();
+            presenter.SetMainMenu(toolStripStatusLabelClient, toolStripStatusLabelServer);
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)

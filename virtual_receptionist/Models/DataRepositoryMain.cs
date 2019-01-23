@@ -47,6 +47,10 @@ namespace virtual_receptionist.Model
         /// Alkalmazást futtató számítógép NetBIOS neve
         /// </summary>
         private static string client;
+        /// <summary>
+        /// Kiszolgáló neve
+        /// </summary>
+        private static string server;
 
         #endregion
 
@@ -59,6 +63,7 @@ namespace virtual_receptionist.Model
         {
             database = Database.DatabaseInstance;
             client = Environment.MachineName;
+            server = "Javítsd ki!";
 
             accomodations = new List<Accomodation>();
             billingItems = new List<BillingItems>();
@@ -81,6 +86,16 @@ namespace virtual_receptionist.Model
             get
             {
                 return client;
+            }
+        }
+        /// <summary>
+        /// Kiszolgáló neve
+        /// </summary>
+        public static string Server
+        {
+            get
+            {
+                return server;
             }
         }
 
