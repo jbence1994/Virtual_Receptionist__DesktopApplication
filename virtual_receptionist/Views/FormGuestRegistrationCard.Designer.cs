@@ -356,10 +356,10 @@
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSaveToDatabase);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendég bejelentkezés | Virtual Receptionist";
+            this.Text = "Vendég bejelentkező lap kitöltése | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -279,6 +279,36 @@ namespace virtual_receptionist.View
             presenter.SetToolStripVisibility(toolStripMenuItemShowToolStrip, toolStripMainMenu);
         }
 
+        private void toolStripButtonGuestRegistrationCard_Click(object sender, EventArgs e)
+        {
+            presenter.OpenGuestRegistrationCard();
+        }
+
+        private void toolStripMenuItemGuestRegistrationCard_Click(object sender, EventArgs e)
+        {
+            presenter.OpenGuestRegistrationCard();
+        }
+
+        private void toolStripButtonGuestRegistrationCard_MouseHover(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendég bejelentkező lap kitöltése");
+        }
+
+        private void toolStripButtonGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+        }
+
+        private void toolStripMenuItemGuestRegistrationCard_MouseHover(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendég bejelentkező lap kitöltése");
+        }
+
+        private void toolStripMenuItemGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
+        {
+            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+        }
+
         #endregion
     }
 }

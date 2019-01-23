@@ -194,6 +194,15 @@ namespace virtual_receptionist.Presenter
             }
         }
 
+        /// <summary>
+        /// Metódus, amely megnyitja a vendég bejelentlező lap ablakot
+        /// </summary>
+        public void OpenGuestRegistrationCard()
+        {
+            FormGuestRegistrationCard formGuestRegistrationCard = new FormGuestRegistrationCard();
+            formGuestRegistrationCard.ShowDialog();
+        }
+
         #endregion
     }
 }
