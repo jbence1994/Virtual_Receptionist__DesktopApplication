@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {
     /// <summary>
-    /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak
+    /// Számlázó modul tételek felvételéhez szükséges modális ablak
     /// </summary>
     public partial class FormModalBillingItems : Form
     {
         #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ModalBillingItemsPresenter presenter;
 
         #endregion
 
@@ -21,6 +27,7 @@ namespace virtual_receptionist.View
         public FormModalBillingItems()
         {
             InitializeComponent();
+            presenter = new ModalBillingItemsPresenter(listViewBillingItems);
         }
 
         #endregion
