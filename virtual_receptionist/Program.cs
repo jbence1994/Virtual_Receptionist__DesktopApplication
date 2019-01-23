@@ -4,10 +4,9 @@ using virtual_receptionist.View;
 
 namespace virtual_receptionist
 {
-    static class Program
+    public static class Program
     {
-        private static int a = 0;
-
+        private static int a = 10;
 
         /// <summary>
         /// The main entry point for the application.
