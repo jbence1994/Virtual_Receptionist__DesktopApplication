@@ -114,11 +114,11 @@
     <Compile Include="Views\FormModalGuestDatabase.Designer.cs">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormCheckInForm.cs">
+    <Compile Include="Views\FormGuestRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormCheckInForm.Designer.cs">
-      <DependentUpon>FormCheckInForm.cs</DependentUpon>
+    <Compile Include="Views\FormGuestRegistrationCard.Designer.cs">
+      <DependentUpon>FormGuestRegistrationCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormRoomEditor.cs">
       <SubType>Form</SubType>
@@ -163,8 +163,8 @@
     <EmbeddedResource Include="Views\FormModalGuestDatabase.resx">
       <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormCheckInForm.resx">
-      <DependentUpon>FormCheckInForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FormGuestRegistrationCard.resx">
+      <DependentUpon>FormGuestRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormRoomEditor.resx">
       <DependentUpon>FormRoomEditor.cs</DependentUpon>

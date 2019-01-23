@@ -2,9 +2,9 @@
 
 namespace virtual_receptionist.View
 {
-    public partial class FormCheckInForm : Form
+    public partial class FormGuestRegistrationCard : Form
     {
-        public FormCheckInForm()
+        public FormGuestRegistrationCard()
         {
             InitializeComponent();
         }
