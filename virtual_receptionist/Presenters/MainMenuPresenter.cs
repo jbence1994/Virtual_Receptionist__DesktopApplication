@@ -24,7 +24,27 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Címke, amely adott menü nevét írja ki az állapotsorra
         /// </summary>
-        private ToolStripLabel toolStripStatusLabelMenuName;
+        private ToolStripStatusLabel toolStripStatusLabelMenuName;
+
+        /// <summary>
+        /// Címke, amely megjeleníti a futtató számítógép NetBIOS nevét
+        /// </summary>
+        private ToolStripStatusLabel toolStripStatusLabelClient;
+
+        /// <summary>
+        /// Címke, amely megjeleníti az alkalmazást kiszolgáló szerver adatait
+        /// </summary>
+        private ToolStripStatusLabel toolStripStatusLabelServer;
+
+        /// <summary>
+        /// Állapotsor
+        /// </summary>
+        private StatusStrip statusStripMainMenu;
+
+        /// <summary>
+        /// Eszköztár
+        /// </summary>
+        private ToolStrip toolStripMainMenu;
 
         #endregion
 
@@ -35,13 +55,16 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
-        /// <param name="toolStripStatusLabelMenuName">Címke, amely adott menü nevét írja ki az állapotsorra</param>
-        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin,
-            ToolStripLabel toolStripStatusLabelMenuName)
+        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
+        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, params Control[] controls)
         {
             this.formMainMenu = formMainMenu;
             this.formLogin = formLogin;
-            this.toolStripStatusLabelMenuName = toolStripStatusLabelMenuName;
+            toolStripStatusLabelMenuName = controls[0];
+            toolStripStatusLabelClient = controls[1];
+            toolStripStatusLabelServer = controls[2];
+            statusStripMainMenu = controls[3];
+            toolStripMainMenu = controls[4];
         }
 
         #endregion
@@ -66,9 +89,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
-        /// <param name="toolStripStatusLabelClient">Címke, amely megjeleníti a futtató számítógép NetBIOS nevét</param>
-        /// <param name="toolStripStatusLabelServer">Címke, amely megjeleníti az alkalmazást kiszolgáló szerver adatait</param>
-        public void SetMainMenu(ToolStripLabel toolStripStatusLabelClient, ToolStripLabel toolStripStatusLabelServer)
+        public void SetMainMenu()
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
             toolStripStatusLabelClient.Text += DataRepository.Client;
@@ -159,12 +180,10 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Metódus, amely beállítja az állapotsor láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs
+        /// 
         /// </summary>
-        /// <param name="toolStripMenuItemShowStatusStrip">Menüpont, amely az állapotsor láthatóságát tudja be- és kikapcsolni</param>
-        /// <param name="statusStripMainMenu">Állapotsor</param>
-        public void SetStatusStripVisibility(ToolStripMenuItem toolStripMenuItemShowStatusStrip,
-            StatusStrip statusStripMainMenu)
+        /// <param name="toolStripMenuItemShowStatusStrip">Metódus, amely beállítja az állapotsor láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs</param>
+        public void SetStatusStripVisibility(ToolStripMenuItem toolStripMenuItemShowStatusStrip)
         {
             if (toolStripMenuItemShowStatusStrip.CheckState == CheckState.Checked)
             {
@@ -177,12 +196,10 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Metódus, amely beállítja az eszkötár láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs
+        /// 
         /// </summary>
-        /// <param name="toolStripMenuItemShowToolStrip">Menüpont, amely az eszköztár láthatóságát tudja be- és kikapcsolni</param>
-        /// <param name="toolStripMainMenu">Eszköztár</param>
-        public void SetToolStripVisibility(ToolStripMenuItem toolStripMenuItemShowToolStrip,
-            ToolStrip toolStripMainMenu)
+        /// <param name="toolStripMenuItemShowToolStrip">Metódus, amely beállítja az eszkötár láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs</param>
+        public void SetToolStripVisibility(ToolStripMenuItem toolStripMenuItemShowToolStrip)
         {
             if (toolStripMenuItemShowToolStrip.CheckState == CheckState.Checked)
             {

@@ -32,7 +32,8 @@ namespace virtual_receptionist.View
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName);
+            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName, toolStripStatusLabelClient,
+                toolStripStatusLabelServer, statusStripMainMenu, toolStripMainMenu);
         }
 
         #endregion
@@ -41,7 +42,7 @@ namespace virtual_receptionist.View
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            presenter.SetMainMenu(toolStripStatusLabelClient, toolStripStatusLabelServer);
+            presenter.SetMainMenu();
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
@@ -271,12 +272,12 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemShowStatusStrip_CheckStateChanged(object sender, EventArgs e)
         {
-            presenter.SetStatusStripVisibility(toolStripMenuItemShowStatusStrip, statusStripMainMenu);
+            presenter.SetStatusStripVisibility(toolStripMenuItemShowStatusStrip);
         }
 
         private void toolStripMenuItemShowToolStrip_CheckStateChanged(object sender, EventArgs e)
         {
-            presenter.SetToolStripVisibility(toolStripMenuItemShowToolStrip, toolStripMainMenu);
+            presenter.SetToolStripVisibility(toolStripMenuItemShowToolStrip);
         }
 
         private void toolStripButtonGuestRegistrationCard_Click(object sender, EventArgs e)
