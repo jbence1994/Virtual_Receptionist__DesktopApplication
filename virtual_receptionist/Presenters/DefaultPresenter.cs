@@ -25,7 +25,7 @@ namespace virtual_receptionist.Presenter
         #region Konstruktor
 
         /// <summary>
-        /// Konstruktor
+        /// Alkalmazás prezenter konstruktora
         /// </summary>
         public DefaultPresenter()
         {
@@ -37,7 +37,7 @@ namespace virtual_receptionist.Presenter
         #region Általános nézetfrissítések
 
         /// <summary>
-        /// Főmenübe visszalépés
+        /// Főmenübe visszalépésre szolgáló metódus
         /// </summary>
         /// <param name="form">Ablak, amely bezárásra kerül</param>
         public void BackToMainMenu(Form form)
