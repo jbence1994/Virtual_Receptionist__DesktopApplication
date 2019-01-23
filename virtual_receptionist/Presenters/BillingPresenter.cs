@@ -16,10 +16,12 @@ namespace virtual_receptionist.Presenter
         /// Számlázási tételek táblázat
         /// </summary>
         private DataGridView dataGridViewItems;
+
         /// <summary>
         /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBillingItems formModalBillingItems;
+
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
         /// </summary>
@@ -43,36 +45,40 @@ namespace virtual_receptionist.Presenter
         #region Számlázó modul nézetfrissítései
 
         /// <summary>
-        /// 
+        /// Számlázási adathoz meglévő ügyfél adatait beimportáló metódus
         /// </summary>
         public void ImportData()
         {
             throw new System.NotImplementedException();
         }
+
         /// <summary>
-        /// 
+        /// Elkészült számlát nyomtatását vezérlő metódus
         /// </summary>
         public void PrintInvoice()
         {
             throw new System.NotImplementedException();
         }
+
         /// <summary>
-        /// 
+        /// Elkészült számlát elmentő metódus
         /// </summary>
         public void SaveInvoice()
         {
             throw new System.NotImplementedException();
         }
+
         /// <summary>
-        /// 
+        /// Számlázási tételek táblázatba új rekordot beszúró metódus
         /// </summary>
         public void AddNewRow()
         {
             formModalBillingItems = new FormModalBillingItems();
             formModalBillingItems.ShowDialog();
         }
+
         /// <summary>
-        /// 
+        /// Számlázási tételek táblázatból meglévő rekordot törlő metódus
         /// </summary>
         public void DeleteRow()
         {
@@ -86,8 +92,9 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
-        /// 
+        /// Számlázási tételek táblázatból meglévő rekordot módosító metódus
         /// </summary>
         public void UpdateRow()
         {
@@ -100,11 +107,12 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
-        /// 
+        /// Új számla írását végző metódus, amely megjeleníti a számlázási adatokhoz kitöltendő modális ablakot, és aktiválja a tételek manipulálását végző gombokat
         /// </summary>
         /// <param name="buttons"></param>
-        public void NewBillingData(params Button[] buttons)
+        public void StartInvoice(params Button[] buttons)
         {
             formModalBilling = new FormModalBilling();
 

@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using System.Threading;
+using System;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
@@ -12,11 +12,12 @@ namespace virtual_receptionist.Presenter
         #region Adattagok
 
         /// <summary>
-        /// 
+        /// Bejelentkező ablak egy példánya
         /// </summary>
         private FormLogin formLogin;
+
         /// <summary>
-        /// 
+        /// Nyitóablak egy példánya
         /// </summary>
         private FormApplicationOpening formApplicationOpening;
 
@@ -39,11 +40,11 @@ namespace virtual_receptionist.Presenter
         #region Nyitóablak nézetfrissítései
 
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
         public void ApplicationStarting()
         {
-
+            throw new NotImplementedException();
         }
 
         #endregion

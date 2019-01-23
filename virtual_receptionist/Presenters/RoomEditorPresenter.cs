@@ -16,8 +16,9 @@ namespace virtual_receptionist.Presenter
         /// Szobakiadások táblázat
         /// </summary>
         private DataGridView dataGridViewRoomRents;
+
         /// <summary>
-        /// Szobák táblázat
+        /// Szobatáblázat
         /// </summary>
         private DataGridView dataGridViewRooms;
 
@@ -29,7 +30,7 @@ namespace virtual_receptionist.Presenter
         /// Szobakezelő modul prezenter konstruktora
         /// </summary>
         /// <param name="dataGridViewRoomRents">Szobakiadások táblázat</param>
-        /// <param name="dataGridViewRooms">Szobák táblázat</param>
+        /// <param name="dataGridViewRooms">Szobatáblázat</param>
         public RoomEditorPresenter(DataGridView dataGridViewRoomRents, DataGridView dataGridViewRooms)
         {
             this.dataGridViewRoomRents = dataGridViewRoomRents;

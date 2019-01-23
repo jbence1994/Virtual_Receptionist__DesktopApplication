@@ -16,10 +16,12 @@ namespace virtual_receptionist.Presenter
         /// Bejelentkező ablak egy példánya
         /// </summary>
         private FormLogin formLogin;
+
         /// <summary>
         /// Szálláshely azonosító
         /// </summary>
         private string accomodationID;
+
         /// <summary>
         /// Regisztrációhoz tartozó jelszó
         /// </summary>
@@ -62,6 +64,7 @@ namespace virtual_receptionist.Presenter
                 MessageBox.Show("Sikertelen bejelentkezés!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Metódus, amely 'Enter' billentyű lenyomása utána beenged a főmenübe
         /// </summary>
@@ -73,6 +76,7 @@ namespace virtual_receptionist.Presenter
                 EnterApplication(accomodationID, password);
             }
         }
+
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
