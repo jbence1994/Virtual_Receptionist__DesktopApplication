@@ -32,8 +32,9 @@ namespace virtual_receptionist.View
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName, toolStripStatusLabelClient,
-                toolStripStatusLabelServer, statusStripMainMenu, toolStripMainMenu);
+            presenter = new MainMenuPresenter(this, formLogin, statusStripMainMenu,
+                toolStripMainMenu, toolStripStatusLabelMenuName, toolStripStatusLabelClient,
+                toolStripStatusLabelServer);
         }
 
         #endregion

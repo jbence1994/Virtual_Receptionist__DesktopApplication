@@ -55,16 +55,19 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
+        /// <param name="statusStripMainMenu">Főmenü állapotsora</param>
+        /// <param name="toolStripMainMenu">Főmenü eszköztára</param>
         /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
-        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, params Control[] controls)
+        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, StatusStrip statusStripMainMenu,
+            ToolStrip toolStripMainMenu, params ToolStripLabel[] controls)
         {
             this.formMainMenu = formMainMenu;
             this.formLogin = formLogin;
-            toolStripStatusLabelMenuName = controls[0];
-            toolStripStatusLabelClient = controls[1];
-            toolStripStatusLabelServer = controls[2];
-            statusStripMainMenu = controls[3];
-            toolStripMainMenu = controls[4];
+            toolStripStatusLabelMenuName = (ToolStripStatusLabel) controls[0];
+            toolStripStatusLabelClient = (ToolStripStatusLabel) controls[1];
+            toolStripStatusLabelServer = (ToolStripStatusLabel) controls[2];
+            this.statusStripMainMenu = statusStripMainMenu;
+            this.toolStripMainMenu = toolStripMainMenu;
         }
 
         #endregion
