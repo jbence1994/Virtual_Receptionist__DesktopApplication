@@ -72,6 +72,7 @@
             this.buttonCancel.TabIndex = 29;
             this.buttonCancel.Text = "Félbehagyás";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSaveToDatabase
             // 
@@ -82,6 +83,7 @@
             this.buttonSaveToDatabase.TabIndex = 27;
             this.buttonSaveToDatabase.Text = "Vendég mentése adatbázisba";
             this.buttonSaveToDatabase.UseVisualStyleBackColor = true;
+            this.buttonSaveToDatabase.Click += new System.EventHandler(this.buttonSaveToDatabase_Click);
             // 
             // checkBoxCorporateGuest
             // 
@@ -339,6 +341,7 @@
             this.buttonOK.TabIndex = 28;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // FormGuestRegistrationCard
             // 
@@ -356,6 +359,7 @@
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendég bejelentkezés | Virtual Receptionist";
+            this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
