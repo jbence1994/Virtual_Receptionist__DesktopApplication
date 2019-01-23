@@ -57,6 +57,17 @@ namespace virtual_receptionist.Presenter
             form.Close();
         }
 
+        /// <summary>
+        /// Felhasználó általi oszlopszélesség megváltoztatását letiltó metódus
+        /// </summary>
+        /// <param name="e">Esemény példánya</param>
+        /// <param name="maxWidth">Oszlopszélesség maximum szélessége</param>
+        public void BlockSettingColumnWidth(ColumnWidthChangingEventArgs e, int maxWidth)
+        {
+            e.Cancel = true;
+            e.NewWidth = maxWidth;
+        }
+
         #endregion
     }
 }

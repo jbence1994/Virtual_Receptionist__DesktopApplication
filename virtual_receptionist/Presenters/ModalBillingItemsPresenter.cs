@@ -10,6 +10,9 @@ namespace virtual_receptionist.Presenter
     {
         #region Adattagok
 
+        /// <summary>
+        /// Számlázási tételek táblázat
+        /// </summary>
         private ListView listViewBillingItems;
 
         #endregion
@@ -19,7 +22,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Számlázó modul tételek felvételéhez szükséges modális ablak prezenter konstruktora
         /// </summary>
-        /// <param name="listViewBillingItems"></param>
+        /// <param name="listViewBillingItems">Számlázási tételek táblázat</param>
         public ModalBillingItemsPresenter(ListView listViewBillingItems)
         {
             this.listViewBillingItems = listViewBillingItems;

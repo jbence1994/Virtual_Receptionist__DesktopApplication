@@ -168,16 +168,6 @@ namespace virtual_receptionist.Presenter
             }
         }
 
-        /// <summary>
-        /// Felhasználó általi oszlopszélesség megváltoztatását letiltó metódus
-        /// </summary>
-        /// <param name="e">Esemény példánya</param>
-        public void BlockSettingColumnWidth(ColumnWidthChangingEventArgs e)
-        {
-            e.Cancel = true;
-            e.NewWidth = 110;
-        }
-
         #endregion
     }
 }
