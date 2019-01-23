@@ -79,15 +79,11 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void UpdateGuest(Guest guest)
         {
-            bool nationality;
+            bool nationality = false;
 
             if (guest.Nationality == "belföldi")
             {
                 nationality = true;
-            }
-            else if (guest.Nationality == "külföldi")
-            {
-                nationality = false;
             }
 
             string sql =
