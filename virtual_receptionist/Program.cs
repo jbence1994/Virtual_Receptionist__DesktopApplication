@@ -8,7 +8,7 @@ namespace virtual_receptionist
     public static class Program
     {
         /// <summary>
-        /// 
+        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
         /// </summary>
         private static Database database;
 
@@ -26,9 +26,16 @@ namespace virtual_receptionist
         [STAThread]
         private static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            if (!database.OpenConnection())
+            {
+                MessageBox.Show("Adatbázis kapcsolódás hiba!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FormLogin());
+            }
         }
     }
 }

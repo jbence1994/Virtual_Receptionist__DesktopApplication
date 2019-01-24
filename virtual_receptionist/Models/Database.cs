@@ -101,7 +101,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
         /// </summary>
-        private void OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -109,6 +109,8 @@ namespace virtual_receptionist.Model
                 {
                     mySqlConnection.Open();
                     Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
+
+                    return true;
                 }
             }
             catch (MySqlException e)
@@ -119,6 +121,8 @@ namespace virtual_receptionist.Model
             {
                 Debug.WriteLine(e.Message);
             }
+
+            return false;
         }
 
         /// <summary>
