@@ -68,6 +68,33 @@ namespace virtual_receptionist.Presenter
             e.NewWidth = maxWidth;
         }
 
+        /// <summary>
+        /// Metódus, amely beállítja az adószám szövegmező írhatóságát, attól függően, hogy a vállalati ügyfél checkbox be van-e pipálva
+        /// </summary>
+        /// <param name="checkBoxCorporateGuest">Vállalati ügyfél checkbox</param>
+        /// <param name="textBoxVatNumber">Adószám szövegmező</param>
+        public void SetCorporateGuest(CheckBox checkBoxCorporateGuest, TextBox textBoxVatNumber)
+        {
+            if (checkBoxCorporateGuest.Checked)
+            {
+                textBoxVatNumber.ReadOnly = false;
+            }
+            else
+            {
+                textBoxVatNumber.Clear();
+                textBoxVatNumber.ReadOnly = true;
+            }
+        }
+
+        /// <summary>
+        /// Metódus, amely beállítja a legördülő lista forrásának az országok listját
+        /// </summary>
+        /// <param name="comboBoxCountry">Országok listáját tartalmazó legördülő menü</param>
+        public void InitializeComboBoxWithCountryList(ComboBox comboBoxCountry)
+        {
+            comboBoxCountry.DataSource = dataRepository.GetCountries();
+        }
+
         #endregion
     }
 }

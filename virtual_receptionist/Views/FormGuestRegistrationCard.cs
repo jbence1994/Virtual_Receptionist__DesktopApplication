@@ -25,7 +25,7 @@ namespace virtual_receptionist.View
         public FormGuestRegistrationCard()
         {
             InitializeComponent();
-            presenter = new GuestRegistrationCardPresenter(comboBoxCountry, checkBoxCorporateGuest, textBoxVatNumber);
+            presenter = new GuestRegistrationCardPresenter();
         }
 
         #endregion
@@ -34,7 +34,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestRegistrationCard_Load(object sender, System.EventArgs e)
         {
-            presenter.InitializeComboBoxWithCountryList();
+            presenter.InitializeComboBoxWithCountryList(comboBoxCountry);
         }
 
         private void buttonSaveToDatabase_Click(object sender, System.EventArgs e)
@@ -54,7 +54,7 @@ namespace virtual_receptionist.View
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, System.EventArgs e)
         {
-            presenter.SetCorporateGuest();
+            presenter.SetCorporateGuest(checkBoxCorporateGuest, textBoxVatNumber);
         }
 
         #endregion

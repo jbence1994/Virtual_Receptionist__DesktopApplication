@@ -26,17 +26,17 @@ namespace virtual_receptionist.View
         public FormModalBilling()
         {
             InitializeComponent();
-            presenter = new ModalBillingPresenter(textBoxVatNumber, checkBoxCorporateGuest, comboBoxCountry);
+            presenter = new ModalBillingPresenter();
         }
 
         private void FormModalBilling_Load(object sender, EventArgs e)
         {
-            presenter.InitializeComboBoxWithCountryList();
+            presenter.InitializeComboBoxWithCountryList(comboBoxCountry);
         }
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, EventArgs e)
         {
-            presenter.SetCorporateGuest();
+            presenter.SetCorporateGuest(checkBoxCorporateGuest, textBoxVatNumber);
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
