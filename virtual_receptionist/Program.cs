@@ -18,13 +18,13 @@ namespace virtual_receptionist
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormLogin());
+                Application.Run(new FormApplicationOpening());
             }
             else
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormGuestRegistrationCard());
+                Application.Run(new FormLogin());
             }
         }
     }
