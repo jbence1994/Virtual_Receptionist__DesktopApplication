@@ -26,7 +26,13 @@ namespace virtual_receptionist.View
         public FormModalGuestDatabase(Model.Guest guest)
         {
             InitializeComponent();
-            this.guest = guest;
+            presenter = new ModalGuestDatabasePresenter(guest);
+        }
+
+        /*
+
+        
+        this.guest = guest;
 
             textBoxName.Text = guest.Name;
             comboBoxCountry.Text = guest.Country;
@@ -55,8 +61,7 @@ namespace virtual_receptionist.View
             if (checkBoxCorporateGuest.Checked)
             {
                 textBoxVatNumber.Text = guest.VatNumber;
-            }
-        }
+            }*/
 
         #endregion
 
@@ -64,33 +69,12 @@ namespace virtual_receptionist.View
 
         private void FormModalGuestDatabase_Load(object sender, System.EventArgs e)
         {
-            Model.DataRepository dataRepository = new Model.DataRepository();
-            comboBoxCountry.DataSource = dataRepository.GetCountries();
+            presenter.InitializeComboBoxWithCountryList(comboBoxCountry);
         }
 
         private void buttonOK_Click(object sender, System.EventArgs e)
         {
-            guest.Name = textBoxName.Text;
-            guest.Country = comboBoxCountry.Text;
-            guest.ZipCode = textBoxZipCode.Text;
-            guest.City = textBoxCity.Text;
-            guest.Address = textBoxAddress.Text;
-            guest.PhoneNumber = textBoxPhoneNumber.Text;
-            guest.EmailAddress = textBoxEmailAddress.Text;
-
-            if (radioButtonNational.Checked)
-            {
-                guest.Nationality = "belföldi";
-            }
-            else if (radioButtonForeign.Checked)
-            {
-                guest.Nationality = "külföldi";
-            }
-
-            if (checkBoxCorporateGuest.Checked)
-            {
-                guest.VatNumber = textBoxVatNumber.Text;
-            }
+            presenter.ReturnInpit();
         }
 
         #endregion
