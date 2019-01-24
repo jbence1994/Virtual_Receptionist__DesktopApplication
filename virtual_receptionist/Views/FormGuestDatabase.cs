@@ -63,6 +63,11 @@ namespace virtual_receptionist.View
             presenter.DeleteRecordInGuestTable();
         }
 
+        private void listViewGuests_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
     }
 }

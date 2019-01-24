@@ -66,6 +66,7 @@
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
             this.listViewGuests.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewGuests_ColumnWidthChanging);
+            this.listViewGuests.SelectedIndexChanged += new System.EventHandler(this.listViewGuests_SelectedIndexChanged);
             // 
             // columnHeaderName
             // 

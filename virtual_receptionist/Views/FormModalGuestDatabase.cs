@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using virtual_receptionist.Presenter;
+using System.Windows.Forms;
 
 namespace virtual_receptionist.View
 {
@@ -10,9 +11,9 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Guest objektum
+        /// 
         /// </summary>
-        Model.Guest guest;
+        private ModalGuestDatabasePresenter presenter;
 
         #endregion
 

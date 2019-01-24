@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\ModalGuestDatabasePresenter.cs" />
     <Compile Include="Presenters\ModalBillingPresenter.cs" />
     <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenters\GuestRegistrationCardPresenter.cs" />
