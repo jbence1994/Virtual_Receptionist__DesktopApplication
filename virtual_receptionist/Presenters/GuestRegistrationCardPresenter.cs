@@ -18,7 +18,7 @@ namespace virtual_receptionist.Presenter
         private ComboBox comboBoxCountry;
 
         /// <summary>
-        /// Válalalti ügyfél checkbox
+        /// Vállalati ügyfél checkbox
         /// </summary>
         private CheckBox checkBoxCorporateGuest;
 

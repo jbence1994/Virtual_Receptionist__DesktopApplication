@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using virtual_receptionist.Presenter;
 
 namespace virtual_receptionist.View
 {
@@ -9,6 +10,11 @@ namespace virtual_receptionist.View
     public partial class FormModalBilling : Form
     {
         #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ModalBillingPresenter presenter;
 
         #endregion
 
@@ -20,24 +26,27 @@ namespace virtual_receptionist.View
         public FormModalBilling()
         {
             InitializeComponent();
+            presenter = new ModalBillingPresenter(textBoxVatNumber, checkBoxCorporateGuest, comboBoxCountry);
         }
 
         private void FormModalBilling_Load(object sender, EventArgs e)
         {
-
+            presenter.InitializeComboBoxWithCountryList();
         }
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxCorporateGuest.Checked)
-            {
-                textBoxVatNumber.ReadOnly = false;
-            }
-            else
-            {
-                textBoxVatNumber.Clear();
-                textBoxVatNumber.ReadOnly = true;
-            }
+            presenter.SetCorporateGuest();
+        }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
