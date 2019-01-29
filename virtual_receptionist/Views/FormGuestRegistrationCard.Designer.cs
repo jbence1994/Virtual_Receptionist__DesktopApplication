@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
             this.labelEmailAddress = new System.Windows.Forms.Label();
@@ -50,25 +51,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCitizenship = new System.Windows.Forms.TextBox();
             this.groupBoxGeneralData = new System.Windows.Forms.GroupBox();
+            this.labelNumberOfGuests = new System.Windows.Forms.Label();
+            this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
+            this.labelDepartureDate = new System.Windows.Forms.Label();
+            this.labelArrivalDate = new System.Windows.Forms.Label();
             this.labelIDCardOrPassportNumber = new System.Windows.Forms.Label();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.textBoxBirthDate = new System.Windows.Forms.TextBox();
             this.textBoxIDCardOrPassportNumber = new System.Windows.Forms.TextBox();
             this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
+            this.textBoxBillingName = new System.Windows.Forms.TextBox();
+            this.labelBillingName = new System.Windows.Forms.Label();
             this.groupBoxOtherData = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
-            this.labelBillingName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
-            this.labelDepartureDate = new System.Windows.Forms.Label();
-            this.labelArrivalDate = new System.Windows.Forms.Label();
-            this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
-            this.labelNumberOfGuests = new System.Windows.Forms.Label();
+            this.errorProviderInput = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxGeneralData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
             this.groupBoxOtherData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInput)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -272,6 +275,54 @@
             this.groupBoxGeneralData.TabStop = false;
             this.groupBoxGeneralData.Text = "Általános adatok";
             // 
+            // labelNumberOfGuests
+            // 
+            this.labelNumberOfGuests.AutoSize = true;
+            this.labelNumberOfGuests.Location = new System.Drawing.Point(137, 125);
+            this.labelNumberOfGuests.Name = "labelNumberOfGuests";
+            this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
+            this.labelNumberOfGuests.TabIndex = 36;
+            this.labelNumberOfGuests.Text = "Vendégek száma:";
+            // 
+            // numericUpDownNumberOfGuests
+            // 
+            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(235, 123);
+            this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
+            this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
+            this.numericUpDownNumberOfGuests.TabIndex = 30;
+            // 
+            // dateTimePickerDepartureDate
+            // 
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(235, 175);
+            this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
+            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
+            this.dateTimePickerDepartureDate.TabIndex = 35;
+            // 
+            // dateTimePickerArrivalDate
+            // 
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(235, 149);
+            this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
+            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
+            this.dateTimePickerArrivalDate.TabIndex = 34;
+            // 
+            // labelDepartureDate
+            // 
+            this.labelDepartureDate.AutoSize = true;
+            this.labelDepartureDate.Location = new System.Drawing.Point(178, 181);
+            this.labelDepartureDate.Name = "labelDepartureDate";
+            this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
+            this.labelDepartureDate.TabIndex = 33;
+            this.labelDepartureDate.Text = "Távozás:";
+            // 
+            // labelArrivalDate
+            // 
+            this.labelArrivalDate.AutoSize = true;
+            this.labelArrivalDate.Location = new System.Drawing.Point(181, 155);
+            this.labelArrivalDate.Name = "labelArrivalDate";
+            this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
+            this.labelArrivalDate.TabIndex = 32;
+            this.labelArrivalDate.Text = "Érkezés:";
+            // 
             // labelIDCardOrPassportNumber
             // 
             this.labelIDCardOrPassportNumber.AutoSize = true;
@@ -306,7 +357,7 @@
             // 
             // groupBoxBillingData
             // 
-            this.groupBoxBillingData.Controls.Add(this.textBox1);
+            this.groupBoxBillingData.Controls.Add(this.textBoxBillingName);
             this.groupBoxBillingData.Controls.Add(this.labelBillingName);
             this.groupBoxBillingData.Controls.Add(this.textBoxVatNumber);
             this.groupBoxBillingData.Controls.Add(this.labelVatNumber);
@@ -325,6 +376,22 @@
             this.groupBoxBillingData.TabIndex = 10;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
+            // 
+            // textBoxBillingName
+            // 
+            this.textBoxBillingName.Location = new System.Drawing.Point(235, 23);
+            this.textBoxBillingName.Name = "textBoxBillingName";
+            this.textBoxBillingName.Size = new System.Drawing.Size(276, 20);
+            this.textBoxBillingName.TabIndex = 23;
+            // 
+            // labelBillingName
+            // 
+            this.labelBillingName.AutoSize = true;
+            this.labelBillingName.Location = new System.Drawing.Point(199, 26);
+            this.labelBillingName.Name = "labelBillingName";
+            this.labelBillingName.Size = new System.Drawing.Size(30, 13);
+            this.labelBillingName.TabIndex = 22;
+            this.labelBillingName.Text = "Név:";
             // 
             // groupBoxOtherData
             // 
@@ -349,69 +416,10 @@
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
-            // labelBillingName
+            // errorProviderInput
             // 
-            this.labelBillingName.AutoSize = true;
-            this.labelBillingName.Location = new System.Drawing.Point(199, 26);
-            this.labelBillingName.Name = "labelBillingName";
-            this.labelBillingName.Size = new System.Drawing.Size(30, 13);
-            this.labelBillingName.TabIndex = 22;
-            this.labelBillingName.Text = "Név:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(235, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 20);
-            this.textBox1.TabIndex = 23;
-            // 
-            // dateTimePickerDepartureDate
-            // 
-            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(235, 175);
-            this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
-            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePickerDepartureDate.TabIndex = 35;
-            // 
-            // dateTimePickerArrivalDate
-            // 
-            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(235, 149);
-            this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
-            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePickerArrivalDate.TabIndex = 34;
-            // 
-            // labelDepartureDate
-            // 
-            this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Location = new System.Drawing.Point(178, 181);
-            this.labelDepartureDate.Name = "labelDepartureDate";
-            this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
-            this.labelDepartureDate.TabIndex = 33;
-            this.labelDepartureDate.Text = "Távozás:";
-            // 
-            // labelArrivalDate
-            // 
-            this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Location = new System.Drawing.Point(181, 155);
-            this.labelArrivalDate.Name = "labelArrivalDate";
-            this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
-            this.labelArrivalDate.TabIndex = 32;
-            this.labelArrivalDate.Text = "Érkezés:";
-            // 
-            // numericUpDownNumberOfGuests
-            // 
-            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(235, 123);
-            this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
-            this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
-            this.numericUpDownNumberOfGuests.TabIndex = 30;
-            // 
-            // labelNumberOfGuests
-            // 
-            this.labelNumberOfGuests.AutoSize = true;
-            this.labelNumberOfGuests.Location = new System.Drawing.Point(137, 125);
-            this.labelNumberOfGuests.Name = "labelNumberOfGuests";
-            this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
-            this.labelNumberOfGuests.TabIndex = 36;
-            this.labelNumberOfGuests.Text = "Vendégek száma:";
+            this.errorProviderInput.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderInput.ContainerControl = this;
             // 
             // FormGuestRegistrationCard
             // 
@@ -431,11 +439,12 @@
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
             this.groupBoxGeneralData.ResumeLayout(false);
             this.groupBoxGeneralData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
             this.groupBoxBillingData.ResumeLayout(false);
             this.groupBoxBillingData.PerformLayout();
             this.groupBoxOtherData.ResumeLayout(false);
             this.groupBoxOtherData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,7 +481,7 @@
         private System.Windows.Forms.Label labelBirthDate;
         private System.Windows.Forms.TextBox textBoxBirthDate;
         private System.Windows.Forms.Button buttonOK;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBillingName;
         private System.Windows.Forms.Label labelBillingName;
         private System.Windows.Forms.DateTimePicker dateTimePickerDepartureDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerArrivalDate;
@@ -480,5 +489,6 @@
         private System.Windows.Forms.Label labelArrivalDate;
         private System.Windows.Forms.NumericUpDown numericUpDownNumberOfGuests;
         private System.Windows.Forms.Label labelNumberOfGuests;
+        private System.Windows.Forms.ErrorProvider errorProviderInput;
     }
 }
