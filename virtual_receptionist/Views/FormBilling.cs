@@ -40,8 +40,7 @@ namespace virtual_receptionist.View
 
         private void buttonNewData_Click(object sender, EventArgs e)
         {
-            presenter.StartInvoice(buttonAddItem, buttonUpdateItem, buttonDeleteItem, buttonPrintInvoice,
-                buttonSaveInvoice);
+            presenter.StartInvoice(buttonAddItem, buttonUpdateItem, buttonDeleteItem, buttonPrintInvoice);
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
@@ -62,16 +61,6 @@ namespace virtual_receptionist.View
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
             presenter.PrintInvoice();
-        }
-
-        private void buttonSaveInvoice_Click(object sender, EventArgs e)
-        {
-            presenter.SaveInvoice();
-        }
-
-        private void buttonImportData_Click(object sender, EventArgs e)
-        {
-            presenter.ImportData();
         }
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)

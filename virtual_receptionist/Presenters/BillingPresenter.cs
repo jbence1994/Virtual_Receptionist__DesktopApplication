@@ -41,25 +41,9 @@ namespace virtual_receptionist.Presenter
         #region Számlázó modul nézetfrissítései
 
         /// <summary>
-        /// Számlázási adathoz meglévő ügyfél adatait beimportáló metódus
-        /// </summary>
-        public void ImportData()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
         /// Elkészült számlát nyomtatását vezérlő metódus
         /// </summary>
         public void PrintInvoice()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Elkészült számlát elmentő metódus
-        /// </summary>
-        public void SaveInvoice()
         {
             throw new System.NotImplementedException();
         }
