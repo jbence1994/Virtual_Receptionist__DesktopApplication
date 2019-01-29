@@ -33,8 +33,8 @@
             this.toolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemView = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemShowStatusStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemShowToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemShowStatusStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemTools = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemGuestRegistrationCard = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemRoomEditor = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +48,6 @@
             this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelServer = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonGuestRegistrationCard = new System.Windows.Forms.ToolStripButton();
@@ -60,6 +58,7 @@
             this.panelMainMenu = new System.Windows.Forms.Panel();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelWelcome = new System.Windows.Forms.Label();
+            this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -111,18 +110,6 @@
             this.toolStripMenuItemView.MouseLeave += new System.EventHandler(this.toolStripMenuItemView_MouseLeave);
             this.toolStripMenuItemView.MouseHover += new System.EventHandler(this.toolStripMenuItemView_MouseHover);
             // 
-            // toolStripMenuItemShowStatusStrip
-            // 
-            this.toolStripMenuItemShowStatusStrip.Checked = true;
-            this.toolStripMenuItemShowStatusStrip.CheckOnClick = true;
-            this.toolStripMenuItemShowStatusStrip.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItemShowStatusStrip.Name = "toolStripMenuItemShowStatusStrip";
-            this.toolStripMenuItemShowStatusStrip.Size = new System.Drawing.Size(204, 22);
-            this.toolStripMenuItemShowStatusStrip.Text = "Állapotsor megjelenítése";
-            this.toolStripMenuItemShowStatusStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_CheckStateChanged);
-            this.toolStripMenuItemShowStatusStrip.MouseLeave += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_MouseLeave);
-            this.toolStripMenuItemShowStatusStrip.MouseHover += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_MouseHover);
-            // 
             // toolStripMenuItemShowToolStrip
             // 
             this.toolStripMenuItemShowToolStrip.Checked = true;
@@ -134,6 +121,18 @@
             this.toolStripMenuItemShowToolStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowToolStrip_CheckStateChanged);
             this.toolStripMenuItemShowToolStrip.MouseLeave += new System.EventHandler(this.toolStripMenuItemShowToolStrip_MouseLeave);
             this.toolStripMenuItemShowToolStrip.MouseHover += new System.EventHandler(this.toolStripMenuItemShowToolStrip_MouseHover);
+            // 
+            // toolStripMenuItemShowStatusStrip
+            // 
+            this.toolStripMenuItemShowStatusStrip.Checked = true;
+            this.toolStripMenuItemShowStatusStrip.CheckOnClick = true;
+            this.toolStripMenuItemShowStatusStrip.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemShowStatusStrip.Name = "toolStripMenuItemShowStatusStrip";
+            this.toolStripMenuItemShowStatusStrip.Size = new System.Drawing.Size(204, 22);
+            this.toolStripMenuItemShowStatusStrip.Text = "Állapotsor megjelenítése";
+            this.toolStripMenuItemShowStatusStrip.CheckStateChanged += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_CheckStateChanged);
+            this.toolStripMenuItemShowStatusStrip.MouseLeave += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_MouseLeave);
+            this.toolStripMenuItemShowStatusStrip.MouseHover += new System.EventHandler(this.toolStripMenuItemShowStatusStrip_MouseHover);
             // 
             // toolStripMenuItemTools
             // 
@@ -162,7 +161,7 @@
             // 
             this.toolStripMenuItemRoomEditor.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemRoomEditor.Image")));
             this.toolStripMenuItemRoomEditor.Name = "toolStripMenuItemRoomEditor";
-            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuItemRoomEditor.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemRoomEditor.Text = "Szobakezelő";
             this.toolStripMenuItemRoomEditor.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemRoomEditor.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
@@ -172,7 +171,7 @@
             // 
             this.toolStripMenuItemGuestDatabase.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestDatabase.Image")));
             this.toolStripMenuItemGuestDatabase.Name = "toolStripMenuItemGuestDatabase";
-            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
             this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
@@ -182,7 +181,7 @@
             // 
             this.toolStripMenuItemBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBilling.Image")));
             this.toolStripMenuItemBilling.Name = "toolStripMenuItemBilling";
-            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
             this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
@@ -251,7 +250,6 @@
             // 
             this.statusStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelClient,
-            this.toolStripStatusLabelServer,
             this.toolStripStatusLabelMenuName});
             this.statusStripMainMenu.Location = new System.Drawing.Point(0, 692);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
@@ -265,19 +263,6 @@
             this.toolStripStatusLabelClient.Name = "toolStripStatusLabelClient";
             this.toolStripStatusLabelClient.Size = new System.Drawing.Size(123, 32);
             this.toolStripStatusLabelClient.Text = "Munkaállomás: ";
-            // 
-            // toolStripStatusLabelServer
-            // 
-            this.toolStripStatusLabelServer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabelServer.Image")));
-            this.toolStripStatusLabelServer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripStatusLabelServer.Name = "toolStripStatusLabelServer";
-            this.toolStripStatusLabelServer.Size = new System.Drawing.Size(98, 32);
-            this.toolStripStatusLabelServer.Text = "Kiszolgáló: ";
-            // 
-            // toolStripStatusLabelMenuName
-            // 
-            this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
-            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 32);
             // 
             // pictureBoxVRLogo
             // 
@@ -393,6 +378,11 @@
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "Üdvözöljük a Virtual Receptionist asztali platformján!";
             // 
+            // toolStripStatusLabelMenuName
+            // 
+            this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
+            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 32);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +426,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonRoomEditor;
         private System.Windows.Forms.ToolStripButton toolStripButtonBilling;
         private System.Windows.Forms.ToolStripButton toolStripButtonGuestDatabase;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAccomodationInfo;
@@ -455,8 +444,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemView;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShowStatusStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShowToolStrip;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelServer;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuestRegistrationCard;
         private System.Windows.Forms.ToolStripButton toolStripButtonGuestRegistrationCard;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
     }
 }

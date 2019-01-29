@@ -32,11 +32,6 @@ namespace virtual_receptionist.Presenter
         private ToolStripStatusLabel toolStripStatusLabelClient;
 
         /// <summary>
-        /// Címke, amely megjeleníti az alkalmazást kiszolgáló szerver adatait
-        /// </summary>
-        private ToolStripStatusLabel toolStripStatusLabelServer;
-
-        /// <summary>
         /// Állapotsor
         /// </summary>
         private StatusStrip statusStripMainMenu;
@@ -65,7 +60,6 @@ namespace virtual_receptionist.Presenter
             this.formLogin = formLogin;
             toolStripStatusLabelMenuName = (ToolStripStatusLabel) controls[0];
             toolStripStatusLabelClient = (ToolStripStatusLabel) controls[1];
-            toolStripStatusLabelServer = (ToolStripStatusLabel) controls[2];
             this.statusStripMainMenu = statusStripMainMenu;
             this.toolStripMainMenu = toolStripMainMenu;
         }
@@ -96,7 +90,6 @@ namespace virtual_receptionist.Presenter
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
             toolStripStatusLabelClient.Text += DataRepository.Client;
-            toolStripStatusLabelServer.Text += DataRepository.Server;
             formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
         }
 
