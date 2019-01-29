@@ -47,11 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CorporateGuest.cs" />
     <Compile Include="Presenters\ModalGuestDatabasePresenter.cs" />
     <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenters\GuestRegistrationCardPresenter.cs" />
     <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
     <Compile Include="Presenters\RoomEditorPresenter.cs" />
+    <Compile Include="Models\PrivateGuest.cs" />
     <Compile Include="Views\FormApplicationOpening.cs">
       <SubType>Form</SubType>
     </Compile>

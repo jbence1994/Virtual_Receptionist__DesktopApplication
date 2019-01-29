@@ -1,9 +1,9 @@
 ﻿namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Vendég egyed modell osztálya
+    /// Vendég egyed absztrakt modell osztálya
     /// </summary>
-    public class Guest
+    public abstract class Guest
     {
         #region Adattagok
 
