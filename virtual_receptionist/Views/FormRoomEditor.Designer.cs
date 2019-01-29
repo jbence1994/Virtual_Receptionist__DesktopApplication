@@ -47,6 +47,7 @@
             this.buttonNewRent = new System.Windows.Forms.Button();
             this.buttonUpdateRent = new System.Windows.Forms.Button();
             this.buttonDeleteRent = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
             this.tabControlRoomEditor.SuspendLayout();
             this.tabPageReservations.SuspendLayout();
@@ -250,11 +251,19 @@
             this.buttonDeleteRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteRent.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(877, 244);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(159, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
             // FormRoomEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 613);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonDeleteRent);
             this.Controls.Add(this.buttonUpdateRent);
             this.Controls.Add(this.buttonNewRent);
@@ -294,5 +303,6 @@
         private System.Windows.Forms.Button buttonNewRent;
         private System.Windows.Forms.Button buttonUpdateRent;
         private System.Windows.Forms.Button buttonDeleteRent;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

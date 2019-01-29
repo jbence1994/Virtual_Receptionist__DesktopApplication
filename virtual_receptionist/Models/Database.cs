@@ -4,7 +4,7 @@ using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 
-namespace virtual_receptionist.Model
+namespace virtual_receptionist.MySQL_ORM
 {
     /// <summary>
     /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály

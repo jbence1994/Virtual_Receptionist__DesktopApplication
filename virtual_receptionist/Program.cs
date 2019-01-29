@@ -1,6 +1,6 @@
 ﻿using System;
+using virtual_receptionist.MySQL_ORM;
 using System.Windows.Forms;
-using virtual_receptionist.Model;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist
@@ -34,7 +34,7 @@ namespace virtual_receptionist
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormLogin());
+                Application.Run(new FormRoomEditor());
             }
         }
     }
