@@ -63,15 +63,18 @@
             this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
             this.labelDepartureDate = new System.Windows.Forms.Label();
             this.labelArrivalDate = new System.Windows.Forms.Label();
+            this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
+            this.labelNumberOfGuests = new System.Windows.Forms.Label();
             this.groupBoxGeneralData.SuspendLayout();
             this.groupBoxBillingData.SuspendLayout();
             this.groupBoxOtherData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(76, 614);
+            this.buttonCancel.Location = new System.Drawing.Point(29, 629);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(517, 23);
             this.buttonCancel.TabIndex = 29;
@@ -224,7 +227,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(71, 36);
+            this.labelTitle.Location = new System.Drawing.Point(24, 27);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(243, 29);
             this.labelTitle.TabIndex = 0;
@@ -248,6 +251,8 @@
             // 
             // groupBoxGeneralData
             // 
+            this.groupBoxGeneralData.Controls.Add(this.labelNumberOfGuests);
+            this.groupBoxGeneralData.Controls.Add(this.numericUpDownNumberOfGuests);
             this.groupBoxGeneralData.Controls.Add(this.dateTimePickerDepartureDate);
             this.groupBoxGeneralData.Controls.Add(this.dateTimePickerArrivalDate);
             this.groupBoxGeneralData.Controls.Add(this.labelDepartureDate);
@@ -260,9 +265,9 @@
             this.groupBoxGeneralData.Controls.Add(this.labelName);
             this.groupBoxGeneralData.Controls.Add(this.textBoxName);
             this.groupBoxGeneralData.Controls.Add(this.textBoxCitizenship);
-            this.groupBoxGeneralData.Location = new System.Drawing.Point(76, 93);
+            this.groupBoxGeneralData.Location = new System.Drawing.Point(29, 84);
             this.groupBoxGeneralData.Name = "groupBoxGeneralData";
-            this.groupBoxGeneralData.Size = new System.Drawing.Size(517, 186);
+            this.groupBoxGeneralData.Size = new System.Drawing.Size(517, 210);
             this.groupBoxGeneralData.TabIndex = 1;
             this.groupBoxGeneralData.TabStop = false;
             this.groupBoxGeneralData.Text = "Általános adatok";
@@ -314,7 +319,7 @@
             this.groupBoxBillingData.Controls.Add(this.comboBoxCountry);
             this.groupBoxBillingData.Controls.Add(this.labelCity);
             this.groupBoxBillingData.Controls.Add(this.labelZipCode);
-            this.groupBoxBillingData.Location = new System.Drawing.Point(76, 285);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(29, 300);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
             this.groupBoxBillingData.Size = new System.Drawing.Size(517, 210);
             this.groupBoxBillingData.TabIndex = 10;
@@ -327,7 +332,7 @@
             this.groupBoxOtherData.Controls.Add(this.labelPhoneNumber);
             this.groupBoxOtherData.Controls.Add(this.textBoxPhoneNumber);
             this.groupBoxOtherData.Controls.Add(this.labelEmailAddress);
-            this.groupBoxOtherData.Location = new System.Drawing.Point(76, 501);
+            this.groupBoxOtherData.Location = new System.Drawing.Point(29, 516);
             this.groupBoxOtherData.Name = "groupBoxOtherData";
             this.groupBoxOtherData.Size = new System.Drawing.Size(517, 78);
             this.groupBoxOtherData.TabIndex = 22;
@@ -336,7 +341,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(76, 585);
+            this.buttonOK.Location = new System.Drawing.Point(29, 600);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(517, 23);
             this.buttonOK.TabIndex = 28;
@@ -362,14 +367,14 @@
             // 
             // dateTimePickerDepartureDate
             // 
-            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(235, 150);
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(235, 175);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
             this.dateTimePickerDepartureDate.TabIndex = 35;
             // 
             // dateTimePickerArrivalDate
             // 
-            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(235, 123);
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(235, 149);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
             this.dateTimePickerArrivalDate.TabIndex = 34;
@@ -377,7 +382,7 @@
             // labelDepartureDate
             // 
             this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Location = new System.Drawing.Point(178, 156);
+            this.labelDepartureDate.Location = new System.Drawing.Point(178, 181);
             this.labelDepartureDate.Name = "labelDepartureDate";
             this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
             this.labelDepartureDate.TabIndex = 33;
@@ -386,17 +391,33 @@
             // labelArrivalDate
             // 
             this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Location = new System.Drawing.Point(181, 129);
+            this.labelArrivalDate.Location = new System.Drawing.Point(181, 155);
             this.labelArrivalDate.Name = "labelArrivalDate";
             this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
             this.labelArrivalDate.TabIndex = 32;
             this.labelArrivalDate.Text = "Érkezés:";
             // 
+            // numericUpDownNumberOfGuests
+            // 
+            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(235, 123);
+            this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
+            this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
+            this.numericUpDownNumberOfGuests.TabIndex = 30;
+            // 
+            // labelNumberOfGuests
+            // 
+            this.labelNumberOfGuests.AutoSize = true;
+            this.labelNumberOfGuests.Location = new System.Drawing.Point(137, 125);
+            this.labelNumberOfGuests.Name = "labelNumberOfGuests";
+            this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
+            this.labelNumberOfGuests.TabIndex = 36;
+            this.labelNumberOfGuests.Text = "Vendégek száma:";
+            // 
             // FormGuestRegistrationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 661);
+            this.ClientSize = new System.Drawing.Size(596, 690);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxOtherData);
             this.Controls.Add(this.groupBoxBillingData);
@@ -414,6 +435,7 @@
             this.groupBoxBillingData.PerformLayout();
             this.groupBoxOtherData.ResumeLayout(false);
             this.groupBoxOtherData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,5 +478,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerArrivalDate;
         private System.Windows.Forms.Label labelDepartureDate;
         private System.Windows.Forms.Label labelArrivalDate;
+        private System.Windows.Forms.NumericUpDown numericUpDownNumberOfGuests;
+        private System.Windows.Forms.Label labelNumberOfGuests;
     }
 }
