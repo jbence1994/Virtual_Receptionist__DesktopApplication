@@ -79,7 +79,7 @@
             this.dataGridViewItems.ReadOnly = true;
             this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewItems.Size = new System.Drawing.Size(646, 204);
-            this.dataGridViewItems.TabIndex = 7;
+            this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
             // 
@@ -123,7 +123,7 @@
             this.buttonPrintInvoice.Location = new System.Drawing.Point(12, 342);
             this.buttonPrintInvoice.Name = "buttonPrintInvoice";
             this.buttonPrintInvoice.Size = new System.Drawing.Size(157, 64);
-            this.buttonPrintInvoice.TabIndex = 8;
+            this.buttonPrintInvoice.TabIndex = 5;
             this.buttonPrintInvoice.Text = "Számla nyomtatása";
             this.buttonPrintInvoice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonPrintInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -138,7 +138,7 @@
             this.buttonAddItem.Location = new System.Drawing.Point(262, 272);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 64);
-            this.buttonAddItem.TabIndex = 9;
+            this.buttonAddItem.TabIndex = 2;
             this.buttonAddItem.Text = "Tétel hozzáadása";
             this.buttonAddItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -153,7 +153,7 @@
             this.buttonUpdateItem.Location = new System.Drawing.Point(262, 342);
             this.buttonUpdateItem.Name = "buttonUpdateItem";
             this.buttonUpdateItem.Size = new System.Drawing.Size(157, 64);
-            this.buttonUpdateItem.TabIndex = 10;
+            this.buttonUpdateItem.TabIndex = 3;
             this.buttonUpdateItem.Text = "Tétel módosítása";
             this.buttonUpdateItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonUpdateItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -168,7 +168,7 @@
             this.buttonDeleteItem.Location = new System.Drawing.Point(501, 272);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(157, 64);
-            this.buttonDeleteItem.TabIndex = 11;
+            this.buttonDeleteItem.TabIndex = 4;
             this.buttonDeleteItem.Text = "Tétel törlése";
             this.buttonDeleteItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDeleteItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -186,7 +186,7 @@
             this.buttonNewData.Location = new System.Drawing.Point(12, 272);
             this.buttonNewData.Name = "buttonNewData";
             this.buttonNewData.Size = new System.Drawing.Size(157, 64);
-            this.buttonNewData.TabIndex = 15;
+            this.buttonNewData.TabIndex = 1;
             this.buttonNewData.Text = "Ügyfél adatai";
             this.buttonNewData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonNewData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -211,7 +211,7 @@
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.ReadOnly = true;
             this.textBoxTotal.Size = new System.Drawing.Size(396, 25);
-            this.textBoxTotal.TabIndex = 17;
+            this.textBoxTotal.TabIndex = 7;
             this.textBoxTotal.Text = "0";
             // 
             // FormBilling
