@@ -37,11 +37,6 @@ namespace virtual_receptionist.View
             presenter.InitializeComboBoxWithCountryList(comboBoxCountry);
         }
 
-        private void buttonSaveToDatabase_Click(object sender, System.EventArgs e)
-        {
-            presenter.SaveGuestDataToDatabase();
-        }
-
         private void buttonOK_Click(object sender, System.EventArgs e)
         {
             presenter.SaveRent();

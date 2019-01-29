@@ -32,14 +32,6 @@ namespace virtual_receptionist.Presenter
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Metódus, amely elmenti a vendég adatait adatbázisba
-        /// </summary>
-        public void SaveGuestDataToDatabase()
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
     }
 }
