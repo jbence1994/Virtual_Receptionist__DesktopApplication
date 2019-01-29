@@ -74,7 +74,7 @@ namespace virtual_receptionist.View
 
         private void buttonOK_Click(object sender, System.EventArgs e)
         {
-            presenter.ReturnInpit();
+            presenter.ReturnInput();
         }
 
         #endregion
@@ -84,10 +84,10 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Guest objektum
         /// </summary>
-        public Model.Guest Guest
-        {
-            get { return guest; }
-        }
+        //public Model.Guest Guest
+        //{
+        //    get { return guest; }
+        //}
 
         #endregion
     }

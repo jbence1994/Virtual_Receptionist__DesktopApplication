@@ -34,29 +34,29 @@ namespace virtual_receptionist.Presenter
 
         #endregion
 
-        public void ReturnInpit()
+        public void ReturnInput()
         {
-            guest.Name = textBoxName.Text;
-            guest.Country = comboBoxCountry.Text;
-            guest.ZipCode = textBoxZipCode.Text;
-            guest.City = textBoxCity.Text;
-            guest.Address = textBoxAddress.Text;
-            guest.PhoneNumber = textBoxPhoneNumber.Text;
-            guest.EmailAddress = textBoxEmailAddress.Text;
+            //guest.Name = textBoxName.Text;
+            //guest.Country = comboBoxCountry.Text;
+            //guest.ZipCode = textBoxZipCode.Text;
+            //guest.City = textBoxCity.Text;
+            //guest.Address = textBoxAddress.Text;
+            //guest.PhoneNumber = textBoxPhoneNumber.Text;
+            //guest.EmailAddress = textBoxEmailAddress.Text;
 
-            if (radioButtonNational.Checked)
-            {
-                guest.Nationality = "belföldi";
-            }
-            else if (radioButtonForeign.Checked)
-            {
-                guest.Nationality = "külföldi";
-            }
+            //if (radioButtonNational.Checked)
+            //{
+            //    guest.Nationality = "belföldi";
+            //}
+            //else if (radioButtonForeign.Checked)
+            //{
+            //    guest.Nationality = "külföldi";
+            //}
 
-            if (checkBoxCorporateGuest.Checked)
-            {
-                guest.VatNumber = textBoxVatNumber.Text;
-            }
+            //if (checkBoxCorporateGuest.Checked)
+            //{
+            //    guest.VatNumber = textBoxVatNumber.Text;
+            //}
         }
     }
 }

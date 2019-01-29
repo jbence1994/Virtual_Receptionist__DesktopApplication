@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using virtual_receptionist.View;
 using virtual_receptionist.Model;
@@ -21,11 +22,6 @@ namespace virtual_receptionist.Presenter
         /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBillingItems formModalBillingItems;
-
-        /// <summary>
-        /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak egy példánya
-        /// </summary>
-        private FormModalBilling formModalBilling;
 
         #endregion
 
@@ -114,15 +110,7 @@ namespace virtual_receptionist.Presenter
         /// <param name="buttons"></param>
         public void StartInvoice(params Button[] buttons)
         {
-            formModalBilling = new FormModalBilling();
-
-            if (formModalBilling.ShowDialog() == DialogResult.OK)
-            {
-                foreach (Button button in buttons)
-                {
-                    button.Enabled = true;
-                }
-            }
+            throw new NotImplementedException();
         }
 
         #endregion

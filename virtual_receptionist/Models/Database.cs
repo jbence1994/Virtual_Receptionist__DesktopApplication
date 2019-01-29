@@ -72,6 +72,12 @@ namespace virtual_receptionist.MySQL_ORM
         /// </summary>
         private Database()
         {
+            server = string.Empty;
+            database = string.Empty;
+            username = string.Empty;
+            password = string.Empty;
+            port = string.Empty;
+
             mySqlConnection = new MySqlConnection()
             {
                 ConnectionString =

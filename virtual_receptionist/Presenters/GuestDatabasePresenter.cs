@@ -157,7 +157,7 @@ namespace virtual_receptionist.Presenter
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
                 {
-                    guest = formModalGuestDatabase.Guest;
+                    //guest = formModalGuestDatabase.Guest;
                     dataRepository.UpdateGuest(guest);
 
                     userIntervention = true;
