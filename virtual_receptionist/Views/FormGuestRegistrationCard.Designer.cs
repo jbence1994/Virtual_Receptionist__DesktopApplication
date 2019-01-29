@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonSaveToDatabase = new System.Windows.Forms.Button();
             this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
             this.labelEmailAddress = new System.Windows.Forms.Label();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
@@ -50,45 +49,40 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCitizenship = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxGeneralData = new System.Windows.Forms.GroupBox();
             this.labelIDCardOrPassportNumber = new System.Windows.Forms.Label();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.textBoxBirthDate = new System.Windows.Forms.TextBox();
             this.textBoxIDCardOrPassportNumber = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
+            this.groupBoxOtherData = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.labelBillingName = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
+            this.labelDepartureDate = new System.Windows.Forms.Label();
+            this.labelArrivalDate = new System.Windows.Forms.Label();
+            this.groupBoxGeneralData.SuspendLayout();
+            this.groupBoxBillingData.SuspendLayout();
+            this.groupBoxOtherData.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(270, 627);
+            this.buttonCancel.Location = new System.Drawing.Point(76, 614);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(179, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(517, 23);
             this.buttonCancel.TabIndex = 29;
             this.buttonCancel.Text = "Félbehagyás";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // buttonSaveToDatabase
-            // 
-            this.buttonSaveToDatabase.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSaveToDatabase.Location = new System.Drawing.Point(270, 569);
-            this.buttonSaveToDatabase.Name = "buttonSaveToDatabase";
-            this.buttonSaveToDatabase.Size = new System.Drawing.Size(179, 23);
-            this.buttonSaveToDatabase.TabIndex = 27;
-            this.buttonSaveToDatabase.Text = "Vendég mentése adatbázisba";
-            this.buttonSaveToDatabase.UseVisualStyleBackColor = true;
-            this.buttonSaveToDatabase.Click += new System.EventHandler(this.buttonSaveToDatabase_Click);
-            // 
             // checkBoxCorporateGuest
             // 
             this.checkBoxCorporateGuest.AutoSize = true;
-            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(235, 151);
+            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(235, 181);
             this.checkBoxCorporateGuest.Name = "checkBoxCorporateGuest";
             this.checkBoxCorporateGuest.Size = new System.Drawing.Size(141, 17);
             this.checkBoxCorporateGuest.TabIndex = 21;
@@ -117,7 +111,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(200, 102);
+            this.labelAddress.Location = new System.Drawing.Point(200, 132);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
             this.labelAddress.TabIndex = 17;
@@ -126,7 +120,7 @@
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(159, 49);
+            this.labelZipCode.Location = new System.Drawing.Point(159, 79);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelZipCode.TabIndex = 13;
@@ -135,7 +129,7 @@
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(186, 22);
+            this.labelCountry.Location = new System.Drawing.Point(186, 52);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
             this.labelCountry.TabIndex = 11;
@@ -144,7 +138,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(173, 77);
+            this.labelCity.Location = new System.Drawing.Point(173, 107);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
             this.labelCity.TabIndex = 15;
@@ -153,7 +147,7 @@
             // labelVatNumber
             // 
             this.labelVatNumber.AutoSize = true;
-            this.labelVatNumber.Location = new System.Drawing.Point(176, 128);
+            this.labelVatNumber.Location = new System.Drawing.Point(176, 158);
             this.labelVatNumber.Name = "labelVatNumber";
             this.labelVatNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVatNumber.TabIndex = 19;
@@ -178,7 +172,7 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(235, 19);
+            this.comboBoxCountry.Location = new System.Drawing.Point(235, 49);
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(276, 21);
             this.comboBoxCountry.TabIndex = 12;
@@ -192,7 +186,7 @@
             // 
             // textBoxVatNumber
             // 
-            this.textBoxVatNumber.Location = new System.Drawing.Point(235, 125);
+            this.textBoxVatNumber.Location = new System.Drawing.Point(235, 155);
             this.textBoxVatNumber.Name = "textBoxVatNumber";
             this.textBoxVatNumber.ReadOnly = true;
             this.textBoxVatNumber.Size = new System.Drawing.Size(276, 20);
@@ -200,21 +194,21 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(235, 99);
+            this.textBoxAddress.Location = new System.Drawing.Point(235, 129);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(276, 20);
             this.textBoxAddress.TabIndex = 18;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(235, 72);
+            this.textBoxCity.Location = new System.Drawing.Point(235, 102);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(276, 20);
             this.textBoxCity.TabIndex = 16;
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(235, 46);
+            this.textBoxZipCode.Location = new System.Drawing.Point(235, 76);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(276, 20);
             this.textBoxZipCode.TabIndex = 14;
@@ -230,7 +224,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(229, 28);
+            this.labelTitle.Location = new System.Drawing.Point(71, 36);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(243, 29);
             this.labelTitle.TabIndex = 0;
@@ -252,31 +246,35 @@
             this.textBoxCitizenship.Size = new System.Drawing.Size(276, 20);
             this.textBoxCitizenship.TabIndex = 5;
             // 
-            // groupBox1
+            // groupBoxGeneralData
             // 
-            this.groupBox1.Controls.Add(this.labelIDCardOrPassportNumber);
-            this.groupBox1.Controls.Add(this.labelBirthDate);
-            this.groupBox1.Controls.Add(this.textBoxBirthDate);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBoxIDCardOrPassportNumber);
-            this.groupBox1.Controls.Add(this.labelName);
-            this.groupBox1.Controls.Add(this.textBoxName);
-            this.groupBox1.Controls.Add(this.textBoxCitizenship);
-            this.groupBox1.Location = new System.Drawing.Point(76, 93);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(517, 132);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Általános adatok";
+            this.groupBoxGeneralData.Controls.Add(this.dateTimePickerDepartureDate);
+            this.groupBoxGeneralData.Controls.Add(this.dateTimePickerArrivalDate);
+            this.groupBoxGeneralData.Controls.Add(this.labelDepartureDate);
+            this.groupBoxGeneralData.Controls.Add(this.labelArrivalDate);
+            this.groupBoxGeneralData.Controls.Add(this.labelIDCardOrPassportNumber);
+            this.groupBoxGeneralData.Controls.Add(this.labelBirthDate);
+            this.groupBoxGeneralData.Controls.Add(this.textBoxBirthDate);
+            this.groupBoxGeneralData.Controls.Add(this.label1);
+            this.groupBoxGeneralData.Controls.Add(this.textBoxIDCardOrPassportNumber);
+            this.groupBoxGeneralData.Controls.Add(this.labelName);
+            this.groupBoxGeneralData.Controls.Add(this.textBoxName);
+            this.groupBoxGeneralData.Controls.Add(this.textBoxCitizenship);
+            this.groupBoxGeneralData.Location = new System.Drawing.Point(76, 93);
+            this.groupBoxGeneralData.Name = "groupBoxGeneralData";
+            this.groupBoxGeneralData.Size = new System.Drawing.Size(517, 186);
+            this.groupBoxGeneralData.TabIndex = 1;
+            this.groupBoxGeneralData.TabStop = false;
+            this.groupBoxGeneralData.Text = "Általános adatok";
             // 
             // labelIDCardOrPassportNumber
             // 
             this.labelIDCardOrPassportNumber.AutoSize = true;
-            this.labelIDCardOrPassportNumber.Location = new System.Drawing.Point(15, 100);
+            this.labelIDCardOrPassportNumber.Location = new System.Drawing.Point(17, 100);
             this.labelIDCardOrPassportNumber.Name = "labelIDCardOrPassportNumber";
-            this.labelIDCardOrPassportNumber.Size = new System.Drawing.Size(214, 13);
+            this.labelIDCardOrPassportNumber.Size = new System.Drawing.Size(212, 13);
             this.labelIDCardOrPassportNumber.TabIndex = 8;
-            this.labelIDCardOrPassportNumber.Text = "Személyi igazolvány száma / Útlevél száma:";
+            this.labelIDCardOrPassportNumber.Text = "Személyi igazolvány száma / útlevél száma:";
             // 
             // labelBirthDate
             // 
@@ -301,72 +299,121 @@
             this.textBoxIDCardOrPassportNumber.Size = new System.Drawing.Size(276, 20);
             this.textBoxIDCardOrPassportNumber.TabIndex = 9;
             // 
-            // groupBox2
+            // groupBoxBillingData
             // 
-            this.groupBox2.Controls.Add(this.textBoxVatNumber);
-            this.groupBox2.Controls.Add(this.labelVatNumber);
-            this.groupBox2.Controls.Add(this.checkBoxCorporateGuest);
-            this.groupBox2.Controls.Add(this.textBoxZipCode);
-            this.groupBox2.Controls.Add(this.textBoxCity);
-            this.groupBox2.Controls.Add(this.textBoxAddress);
-            this.groupBox2.Controls.Add(this.labelCountry);
-            this.groupBox2.Controls.Add(this.labelAddress);
-            this.groupBox2.Controls.Add(this.comboBoxCountry);
-            this.groupBox2.Controls.Add(this.labelCity);
-            this.groupBox2.Controls.Add(this.labelZipCode);
-            this.groupBox2.Location = new System.Drawing.Point(76, 231);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(517, 183);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Számlázási adatok";
+            this.groupBoxBillingData.Controls.Add(this.textBox1);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingName);
+            this.groupBoxBillingData.Controls.Add(this.textBoxVatNumber);
+            this.groupBoxBillingData.Controls.Add(this.labelVatNumber);
+            this.groupBoxBillingData.Controls.Add(this.checkBoxCorporateGuest);
+            this.groupBoxBillingData.Controls.Add(this.textBoxZipCode);
+            this.groupBoxBillingData.Controls.Add(this.textBoxCity);
+            this.groupBoxBillingData.Controls.Add(this.textBoxAddress);
+            this.groupBoxBillingData.Controls.Add(this.labelCountry);
+            this.groupBoxBillingData.Controls.Add(this.labelAddress);
+            this.groupBoxBillingData.Controls.Add(this.comboBoxCountry);
+            this.groupBoxBillingData.Controls.Add(this.labelCity);
+            this.groupBoxBillingData.Controls.Add(this.labelZipCode);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(76, 285);
+            this.groupBoxBillingData.Name = "groupBoxBillingData";
+            this.groupBoxBillingData.Size = new System.Drawing.Size(517, 210);
+            this.groupBoxBillingData.TabIndex = 10;
+            this.groupBoxBillingData.TabStop = false;
+            this.groupBoxBillingData.Text = "Számlázási adatok";
             // 
-            // groupBox3
+            // groupBoxOtherData
             // 
-            this.groupBox3.Controls.Add(this.textBoxEmailAddress);
-            this.groupBox3.Controls.Add(this.labelPhoneNumber);
-            this.groupBox3.Controls.Add(this.textBoxPhoneNumber);
-            this.groupBox3.Controls.Add(this.labelEmailAddress);
-            this.groupBox3.Location = new System.Drawing.Point(76, 420);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(517, 100);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Egyéb adatok";
+            this.groupBoxOtherData.Controls.Add(this.textBoxEmailAddress);
+            this.groupBoxOtherData.Controls.Add(this.labelPhoneNumber);
+            this.groupBoxOtherData.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBoxOtherData.Controls.Add(this.labelEmailAddress);
+            this.groupBoxOtherData.Location = new System.Drawing.Point(76, 501);
+            this.groupBoxOtherData.Name = "groupBoxOtherData";
+            this.groupBoxOtherData.Size = new System.Drawing.Size(517, 78);
+            this.groupBoxOtherData.TabIndex = 22;
+            this.groupBoxOtherData.TabStop = false;
+            this.groupBoxOtherData.Text = "Egyéb adatok";
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(270, 598);
+            this.buttonOK.Location = new System.Drawing.Point(76, 585);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(179, 23);
+            this.buttonOK.Size = new System.Drawing.Size(517, 23);
             this.buttonOK.TabIndex = 28;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
+            // labelBillingName
+            // 
+            this.labelBillingName.AutoSize = true;
+            this.labelBillingName.Location = new System.Drawing.Point(199, 26);
+            this.labelBillingName.Name = "labelBillingName";
+            this.labelBillingName.Size = new System.Drawing.Size(30, 13);
+            this.labelBillingName.TabIndex = 22;
+            this.labelBillingName.Text = "Név:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(235, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(276, 20);
+            this.textBox1.TabIndex = 23;
+            // 
+            // dateTimePickerDepartureDate
+            // 
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(235, 150);
+            this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
+            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
+            this.dateTimePickerDepartureDate.TabIndex = 35;
+            // 
+            // dateTimePickerArrivalDate
+            // 
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(235, 123);
+            this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
+            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
+            this.dateTimePickerArrivalDate.TabIndex = 34;
+            // 
+            // labelDepartureDate
+            // 
+            this.labelDepartureDate.AutoSize = true;
+            this.labelDepartureDate.Location = new System.Drawing.Point(178, 156);
+            this.labelDepartureDate.Name = "labelDepartureDate";
+            this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
+            this.labelDepartureDate.TabIndex = 33;
+            this.labelDepartureDate.Text = "Távozás:";
+            // 
+            // labelArrivalDate
+            // 
+            this.labelArrivalDate.AutoSize = true;
+            this.labelArrivalDate.Location = new System.Drawing.Point(181, 129);
+            this.labelArrivalDate.Name = "labelArrivalDate";
+            this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
+            this.labelArrivalDate.TabIndex = 32;
+            this.labelArrivalDate.Text = "Érkezés:";
+            // 
             // FormGuestRegistrationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 700);
+            this.ClientSize = new System.Drawing.Size(700, 661);
             this.Controls.Add(this.buttonOK);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxOtherData);
+            this.Controls.Add(this.groupBoxBillingData);
+            this.Controls.Add(this.groupBoxGeneralData);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonSaveToDatabase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendég bejelentkező lap kitöltése | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBoxGeneralData.ResumeLayout(false);
+            this.groupBoxGeneralData.PerformLayout();
+            this.groupBoxBillingData.ResumeLayout(false);
+            this.groupBoxBillingData.PerformLayout();
+            this.groupBoxOtherData.ResumeLayout(false);
+            this.groupBoxOtherData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,7 +422,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonSaveToDatabase;
         private System.Windows.Forms.CheckBox checkBoxCorporateGuest;
         private System.Windows.Forms.Label labelEmailAddress;
         private System.Windows.Forms.Label labelPhoneNumber;
@@ -396,13 +442,19 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxCitizenship;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxGeneralData;
+        private System.Windows.Forms.GroupBox groupBoxBillingData;
+        private System.Windows.Forms.GroupBox groupBoxOtherData;
         private System.Windows.Forms.TextBox textBoxIDCardOrPassportNumber;
         private System.Windows.Forms.Label labelIDCardOrPassportNumber;
         private System.Windows.Forms.Label labelBirthDate;
         private System.Windows.Forms.TextBox textBoxBirthDate;
         private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelBillingName;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDepartureDate;
+        private System.Windows.Forms.DateTimePicker dateTimePickerArrivalDate;
+        private System.Windows.Forms.Label labelDepartureDate;
+        private System.Windows.Forms.Label labelArrivalDate;
     }
 }

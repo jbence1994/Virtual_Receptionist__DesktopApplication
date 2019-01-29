@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenters\ModalGuestDatabasePresenter.cs" />
-    <Compile Include="Presenters\ModalBillingPresenter.cs" />
     <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenters\GuestRegistrationCardPresenter.cs" />
     <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
@@ -101,12 +100,6 @@
     <Compile Include="Views\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormModalBilling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormModalBilling.Designer.cs">
-      <DependentUpon>FormModalBilling.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormModalBillingItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormModalBilling.resx">
-      <DependentUpon>FormModalBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormModalBillingItems.resx">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
