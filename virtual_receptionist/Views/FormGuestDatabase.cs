@@ -43,26 +43,6 @@ namespace virtual_receptionist.View
             presenter.BackToMainMenu(this);
         }
 
-        private void buttonAddGuest_Click(object sender, EventArgs e)
-        {
-            presenter.AddNewRecordInGuestTable();
-        }
-
-        private void buttonUpdateGuest_Click(object sender, EventArgs e)
-        {
-            presenter.UpdateRecordInGuestTable();
-        }
-
-        private void buttonDeleteGuest_Click(object sender, EventArgs e)
-        {
-            presenter.DeleteRecordInGuestTable();
-        }
-
-        private void listViewGuests_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         #endregion
     }
 }
