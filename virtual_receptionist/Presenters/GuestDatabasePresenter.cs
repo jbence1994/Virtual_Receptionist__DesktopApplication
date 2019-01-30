@@ -13,16 +13,6 @@ namespace virtual_receptionist.Presenter
         #region Adattagok
 
         /// <summary>
-        /// Vendég osztály egy példánya
-        /// </summary>
-        private PrivateGuest privateGuest;
-
-        /// <summary>
-        /// Céges vendég osztály egy példánya
-        /// </summary>
-        private CorporateGuest corporateGuest;
-
-        /// <summary>
         /// Magánvendég táblázat
         /// </summary>
         private ListView listViewPrivateGuests;
@@ -108,7 +98,16 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToPrivateGuestTable()
         {
-            throw new System.NotImplementedException();
+            PrivateGuest privateGuest = new PrivateGuest();
+
+            string[] record = new string[5];
+
+
+            ListViewItem newRecord = new ListViewItem(record);
+
+            listViewPrivateGuests.Items.Add(newRecord);
+
+            dataRepository.CreateGuest(privateGuest);
         }
 
         /// <summary>
@@ -116,7 +115,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToPrivateGuestTableModal()
         {
-            privateGuest = new PrivateGuest();
+            PrivateGuest privateGuest = new PrivateGuest();
             formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
             formModalGuestDatabase.ShowDialog();
             dataRepository.CreateGuest(privateGuest);
@@ -135,7 +134,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToCorporateGuestTableModal()
         {
-            corporateGuest = new CorporateGuest();
+            CorporateGuest corporateGuest = new CorporateGuest();
             formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
             formModalGuestDatabase.ShowDialog();
             dataRepository.CreateGuest(corporateGuest);
@@ -167,7 +166,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
-                privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+                PrivateGuest privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country,
+                    zipCode, city,
                     address,
                     phoneNumber, emailAddress);
                 formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
@@ -215,7 +215,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
 
-                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
+                CorporateGuest corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address,
+                    phoneNumber,
                     emailAddress);
                 formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
 
@@ -254,7 +255,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
-                privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+                PrivateGuest privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country,
+                    zipCode, city,
                     address,
                     phoneNumber, emailAddress);
 
@@ -294,7 +296,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
 
-                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
+                CorporateGuest corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address,
+                    phoneNumber,
                     emailAddress);
 
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
@@ -314,6 +317,42 @@ namespace virtual_receptionist.Presenter
             else
             {
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void ListViewPrivateGuestsSelectedIndexChanged(params TextBox[] textBox)
+        {
+            if (listViewPrivateGuests.SelectedItems.Count > 0)
+            {
+                textBox[0].Text = listViewPrivateGuests.SelectedItems[0].Text;
+                textBox[1].Text = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                textBox[2].Text = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                textBox[3].Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                textBox[4].Text = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                textBox[5].Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                textBox[6].Text = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                textBox[7].Text = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
+                textBox[8].Text = listViewPrivateGuests.SelectedItems[0].SubItems[9].Text;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void ListViewCorporateGuestsSelectedIndexChanged(params TextBox[] textBox)
+        {
+            if (listViewCorporateGuests.SelectedItems.Count > 0)
+            {
+                textBox[0].Text = listViewCorporateGuests.SelectedItems[0].Text;
+                textBox[1].Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
+                textBox[2].Text = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
+                textBox[3].Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
+                textBox[4].Text = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;
+                textBox[5].Text = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
+                textBox[6].Text = listViewCorporateGuests.SelectedItems[0].SubItems[7].Text;
             }
         }
 

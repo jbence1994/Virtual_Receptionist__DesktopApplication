@@ -89,6 +89,19 @@ namespace virtual_receptionist.View
             presenter.DeleteRecordFromCorporateGuestTable();
         }
 
+        private void listViewPrivateGuests_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            presenter.ListViewPrivateGuestsSelectedIndexChanged(textBoxName, textBoxDocumentID, textBoxCitizenship,
+                textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress);
+        }
+
+        private void listViewCorporateGuests_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            presenter.ListViewCorporateGuestsSelectedIndexChanged(textBoxCompanyName, textBoxVATNumber,
+                textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
+                textBoxCompanyEmailAddress);
+        }
+
         #endregion
     }
 }

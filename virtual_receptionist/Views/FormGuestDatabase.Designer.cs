@@ -174,7 +174,7 @@
             // 
             // buttonAddPrivateGuest
             // 
-            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(484, 122);
+            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(615, 93);
             this.buttonAddPrivateGuest.Name = "buttonAddPrivateGuest";
             this.buttonAddPrivateGuest.Size = new System.Drawing.Size(125, 23);
             this.buttonAddPrivateGuest.TabIndex = 47;
@@ -406,6 +406,7 @@
             this.listViewPrivateGuests.TabIndex = 1;
             this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
             this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
+            this.listViewPrivateGuests.SelectedIndexChanged += new System.EventHandler(this.listViewPrivateGuests_SelectedIndexChanged);
             // 
             // columnHeaderName
             // 
@@ -510,7 +511,7 @@
             // 
             // buttonAddCorporateGuest
             // 
-            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(484, 95);
+            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(615, 67);
             this.buttonAddCorporateGuest.Name = "buttonAddCorporateGuest";
             this.buttonAddCorporateGuest.Size = new System.Drawing.Size(125, 23);
             this.buttonAddCorporateGuest.TabIndex = 47;
@@ -708,6 +709,7 @@
             this.listViewCorporateGuests.TabIndex = 2;
             this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
             this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
+            this.listViewCorporateGuests.SelectedIndexChanged += new System.EventHandler(this.listViewCorporateGuests_SelectedIndexChanged);
             // 
             // columnHeaderCompanyName
             // 
