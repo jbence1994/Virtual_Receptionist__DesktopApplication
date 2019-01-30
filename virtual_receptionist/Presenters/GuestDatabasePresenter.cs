@@ -168,9 +168,12 @@ namespace virtual_receptionist.Presenter
                 {
                     // ListView rekord módosítás (GUI)
 
+
+
                     //guest = formModalGuestDatabase.Guest;
 
                     // Adatbázis rekord módosítása
+
                     dataRepository.UpdateGuest(privateGuest);
                 }
             }
@@ -257,6 +260,7 @@ namespace virtual_receptionist.Presenter
                     //guest = formModalGuestDatabase.Guest;
 
                     // Adatbázis rekord módosítása
+
                     dataRepository.UpdateGuest(corporateGuest);
                 }
             }
