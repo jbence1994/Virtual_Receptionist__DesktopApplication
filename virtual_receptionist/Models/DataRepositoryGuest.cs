@@ -8,7 +8,7 @@ namespace virtual_receptionist.Model
         #region Vendégadatbázis-kezelő modul metódusai
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a vendégeket és lista adatszerkezetek menti őket
+        /// Metódus, amely adatbázisból kiolvassa a vendégeket és lista adatszerkezetbe menti őket
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadPrivateGuestsList()
@@ -37,6 +37,9 @@ namespace virtual_receptionist.Model
             }
         }
 
+        /// <summary>
+        /// Metódus, amely adatbázisból kiolvassa a céges vendégeket és lista adatszerkezetbe menti őket
+        /// </summary>
         private void UploadCorporateGuestList()
         {
             string sql =
@@ -65,42 +68,64 @@ namespace virtual_receptionist.Model
         /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable GetGuests()
+        public DataTable GetPrivateGuests()
         {
-            if (privateGuests.Count == 0 && corporateGuests.Count == 0)
+            if (privateGuests.Count == 0)
             {
                 UploadPrivateGuestsList();
-                UploadCorporateGuestList();
             }
 
-            DataTable guestsDataTable = new DataTable();
-            guestsDataTable.Columns.Add("Name", typeof(string));
-            guestsDataTable.Columns.Add("DocumentNumber", typeof(string));
-            guestsDataTable.Columns.Add("Citizenship", typeof(string));
-            guestsDataTable.Columns.Add("BirthDate", typeof(string));
-            guestsDataTable.Columns.Add("VATNumber", typeof(string));
-            guestsDataTable.Columns.Add("Country", typeof(string));
-            guestsDataTable.Columns.Add("ZipCode", typeof(string));
-            guestsDataTable.Columns.Add("City", typeof(string));
-            guestsDataTable.Columns.Add("Address", typeof(string));
-            guestsDataTable.Columns.Add("PhoneNumber", typeof(string));
-            guestsDataTable.Columns.Add("EmailAddress", typeof(string));
+            DataTable privateGuestsDataTable = new DataTable();
+            privateGuestsDataTable.Columns.Add("Name", typeof(string));
+            privateGuestsDataTable.Columns.Add("DocumentNumber", typeof(string));
+            privateGuestsDataTable.Columns.Add("Citizenship", typeof(string));
+            privateGuestsDataTable.Columns.Add("BirthDate", typeof(string));
+            privateGuestsDataTable.Columns.Add("Country", typeof(string));
+            privateGuestsDataTable.Columns.Add("ZipCode", typeof(string));
+            privateGuestsDataTable.Columns.Add("City", typeof(string));
+            privateGuestsDataTable.Columns.Add("Address", typeof(string));
+            privateGuestsDataTable.Columns.Add("PhoneNumber", typeof(string));
+            privateGuestsDataTable.Columns.Add("EmailAddress", typeof(string));
 
             foreach (PrivateGuest privateGuest in privateGuests)
             {
-                guestsDataTable.Rows.Add(privateGuest.Name, privateGuest.DocumentNumber, privateGuest.Citizenship,
+                privateGuestsDataTable.Rows.Add(privateGuest.Name, privateGuest.DocumentNumber, privateGuest.Citizenship,
                     privateGuest.BirthDate, null, privateGuest.Country, privateGuest.ZipCode, privateGuest.City,
                     privateGuest.Address, privateGuest.PhoneNumber, privateGuest.EmailAddress);
             }
 
+            return privateGuestsDataTable;
+        }
+
+        /// <summary>
+        /// Metódus, amely visszaadja az adatbázisban tárolt összes céges vendéget egy DataTable adatszerkezetben
+        /// </summary>
+        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
+        public DataTable GetCorporateGuests()
+        {
+            if (corporateGuests.Count == 0)
+            {
+                UploadCorporateGuestList();
+            }
+
+            DataTable corporateGuestDataTable = new DataTable();
+            corporateGuestDataTable.Columns.Add("Name", typeof(string));
+            corporateGuestDataTable.Columns.Add("VATNumber", typeof(string));
+            corporateGuestDataTable.Columns.Add("Country", typeof(string));
+            corporateGuestDataTable.Columns.Add("ZipCode", typeof(string));
+            corporateGuestDataTable.Columns.Add("City", typeof(string));
+            corporateGuestDataTable.Columns.Add("Address", typeof(string));
+            corporateGuestDataTable.Columns.Add("PhoneNumber", typeof(string));
+            corporateGuestDataTable.Columns.Add("EmailAddress", typeof(string));
+
             foreach (CorporateGuest corporateGuest in corporateGuests)
             {
-                guestsDataTable.Rows.Add(corporateGuest.Name, null, null, null, corporateGuest.VatNumber,
+                corporateGuestDataTable.Rows.Add(corporateGuest.Name, null, null, null, corporateGuest.VatNumber,
                     corporateGuest.Country, corporateGuest.ZipCode, corporateGuest.City, corporateGuest.Address,
                     corporateGuest.PhoneNumber, corporateGuest.EmailAddress);
             }
 
-            return guestsDataTable;
+            return corporateGuestDataTable;
         }
 
         /// <summary>

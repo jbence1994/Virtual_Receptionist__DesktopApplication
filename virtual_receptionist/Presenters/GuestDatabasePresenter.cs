@@ -18,9 +18,14 @@ namespace virtual_receptionist.Presenter
         private Guest guest;
 
         /// <summary>
-        /// Vendégtáblázat
+        /// Magánvendég táblázat
         /// </summary>
-        private ListView listViewGuests;
+        private ListView listViewPrivateGuests;
+
+        /// <summary>
+        /// Céges vendég táblázat
+        /// </summary>
+        private ListView listViewCorporateGuests;
 
         /// <summary>
         /// Vendégadatbázis-kezelő modális ablaka
@@ -34,10 +39,11 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégadatbázis-kezelő prezenter konstruktora
         /// </summary>
-        /// <param name="listViewGuests">Vendégtáblázat</param>
-        public GuestDatabasePresenter(ListView listViewGuests)
+        /// <param name="listViews">Vendégtáblázatok</param>
+        public GuestDatabasePresenter(params ListView[] listViews)
         {
-            this.listViewGuests = listViewGuests;
+            listViewPrivateGuests = listViews[0];
+            listViewCorporateGuests = listViews[1];
         }
 
         #endregion
@@ -45,11 +51,11 @@ namespace virtual_receptionist.Presenter
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// Vendégtáblázatot adatbázisból adatokkal feltöltő metódus
+        /// Vendégtáblázatotat adatbázisból adatokkal feltöltő metódus
         /// </summary>
         public void InitalizeGuestTable()
         {
-            DataTable guestDataTable = dataRepository.GetGuests();
+            DataTable guestDataTable = dataRepository.GetPrivateGuests();
 
             foreach (DataRow row in guestDataTable.Rows)
             {
@@ -60,7 +66,7 @@ namespace virtual_receptionist.Presenter
                     guests.SubItems.Add(row[i].ToString());
                 }
 
-                listViewGuests.Items.Add(guests);
+                listViewPrivateGuests.Items.Add(guests);
             }
         }
 

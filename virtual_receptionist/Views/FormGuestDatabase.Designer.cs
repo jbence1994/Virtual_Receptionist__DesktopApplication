@@ -33,7 +33,7 @@
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPagePrivateGuest = new System.Windows.Forms.TabPage();
             this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
-            this.listViewGuests = new System.Windows.Forms.ListView();
+            this.listViewPrivateGuests = new System.Windows.Forms.ListView();
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDocumentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCitizenship = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,7 +44,7 @@
             this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewCorporateGuests = new System.Windows.Forms.ListView();
             this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderHeadqurterCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -93,7 +93,7 @@
             this.tabPagePrivateGuest.Controls.Add(this.buttonUpdatePrivateGuest);
             this.tabPagePrivateGuest.Controls.Add(this.buttonDeletePrivateGuest);
             this.tabPagePrivateGuest.Controls.Add(this.buttonAddPrivateGuest);
-            this.tabPagePrivateGuest.Controls.Add(this.listViewGuests);
+            this.tabPagePrivateGuest.Controls.Add(this.listViewPrivateGuests);
             this.tabPagePrivateGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPagePrivateGuest.Name = "tabPagePrivateGuest";
             this.tabPagePrivateGuest.Padding = new System.Windows.Forms.Padding(3);
@@ -107,7 +107,7 @@
             this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
             this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
             this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.listView1);
+            this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
             this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
             this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
@@ -116,9 +116,9 @@
             this.tabPageCorporateGuest.Text = "Céges vendégek";
             this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
             // 
-            // listViewGuests
+            // listViewPrivateGuests
             // 
-            this.listViewGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderName,
             this.columnHeaderDocumentID,
             this.columnHeaderCitizenship,
@@ -129,14 +129,14 @@
             this.columnHeaderAddress,
             this.columnHeaderPhoneNumber,
             this.columnHeaderEmailAddress});
-            this.listViewGuests.FullRowSelect = true;
-            this.listViewGuests.GridLines = true;
-            this.listViewGuests.Location = new System.Drawing.Point(3, 3);
-            this.listViewGuests.Name = "listViewGuests";
-            this.listViewGuests.Size = new System.Drawing.Size(981, 528);
-            this.listViewGuests.TabIndex = 1;
-            this.listViewGuests.UseCompatibleStateImageBehavior = false;
-            this.listViewGuests.View = System.Windows.Forms.View.Details;
+            this.listViewPrivateGuests.FullRowSelect = true;
+            this.listViewPrivateGuests.GridLines = true;
+            this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
+            this.listViewPrivateGuests.Name = "listViewPrivateGuests";
+            this.listViewPrivateGuests.Size = new System.Drawing.Size(981, 528);
+            this.listViewPrivateGuests.TabIndex = 1;
+            this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
+            this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
             // 
             // columnHeaderName
             // 
@@ -188,9 +188,9 @@
             this.columnHeaderEmailAddress.Text = "E-mail cím";
             this.columnHeaderEmailAddress.Width = 120;
             // 
-            // listView1
+            // listViewCorporateGuests
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCompanyName,
             this.columnHeaderVATNumber,
             this.columnHeaderHeadqurterCountry,
@@ -199,14 +199,14 @@
             this.columnHeaderHeadqurterAddress,
             this.columnHeaderCompanyPhoneNumber,
             this.columnHeaderCompanyEmailAddress});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(981, 528);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewCorporateGuests.FullRowSelect = true;
+            this.listViewCorporateGuests.GridLines = true;
+            this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
+            this.listViewCorporateGuests.Name = "listViewCorporateGuests";
+            this.listViewCorporateGuests.Size = new System.Drawing.Size(981, 528);
+            this.listViewCorporateGuests.TabIndex = 2;
+            this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
+            this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
             // 
             // columnHeaderCompanyName
             // 
@@ -349,7 +349,7 @@
         private System.Windows.Forms.Button buttonBackToMainMenu;
         private System.Windows.Forms.TabControl tabControlGuestDatabase;
         private System.Windows.Forms.TabPage tabPagePrivateGuest;
-        private System.Windows.Forms.ListView listViewGuests;
+        private System.Windows.Forms.ListView listViewPrivateGuests;
         private System.Windows.Forms.ColumnHeader columnHeaderName;
         private System.Windows.Forms.ColumnHeader columnHeaderDocumentID;
         private System.Windows.Forms.ColumnHeader columnHeaderCitizenship;
@@ -361,7 +361,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderPhoneNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderEmailAddress;
         private System.Windows.Forms.TabPage tabPageCorporateGuest;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewCorporateGuests;
         private System.Windows.Forms.ColumnHeader columnHeaderCompanyName;
         private System.Windows.Forms.ColumnHeader columnHeaderVATNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterCountry;

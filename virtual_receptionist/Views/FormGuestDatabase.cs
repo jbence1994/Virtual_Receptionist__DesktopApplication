@@ -26,7 +26,7 @@ namespace virtual_receptionist.View
         public FormGuestDatabase()
         {
             InitializeComponent();
-            presenter = new GuestDatabasePresenter(listViewGuests);
+            presenter = new GuestDatabasePresenter(listViewPrivateGuests, listViewCorporateGuests);
         }
 
         #endregion

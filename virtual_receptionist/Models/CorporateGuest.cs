@@ -3,14 +3,14 @@
 namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Vállalati vendég modell osztálya
+    /// Céges vendég modell osztálya
     /// </summary>
     public class CorporateGuest : Guest
     {
         #region Adattagok
 
         /// <summary>
-        /// Vállalati vendég adószáma
+        /// Céges vendég adószáma
         /// </summary>
         private string vatNumber;
 
@@ -21,14 +21,14 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// CorporateGuest osztály konstruktora
         /// </summary>
-        /// <param name="name">Vállalati vendég cégneve</param>
-        /// <param name="vatNumber">Vállalati vendég adószáma</param>
-        /// <param name="country">Vállalati vendég országának neve</param>
-        /// <param name="zipCode">Vállalati vendég irányítószáma</param>
-        /// <param name="city">Vállalati vendég települése</param>
-        /// <param name="address">Vállalati vendég címe (utca, házszám)</param>
-        /// <param name="phoneNumber">Vállalati vendég telefonszáma</param>
-        /// <param name="emailAddress">Vállalati vendég e-mail címe</param>
+        /// <param name="name">Céges vendég cégneve</param>
+        /// <param name="vatNumber">Céges vendég adószáma</param>
+        /// <param name="country">Céges vendég országának neve</param>
+        /// <param name="zipCode">Céges vendég irányítószáma</param>
+        /// <param name="city">Céges vendég települése</param>
+        /// <param name="address">Céges vendég címe (utca, házszám)</param>
+        /// <param name="phoneNumber">Céges vendég telefonszáma</param>
+        /// <param name="emailAddress">Céges vendég e-mail címe</param>
         public CorporateGuest(string name, string vatNumber, string country, string zipCode, string city,
             string address, string phoneNumber, string emailAddress) : base(name, country, zipCode, city, address,
             phoneNumber, emailAddress)
@@ -62,7 +62,7 @@ namespace virtual_receptionist.Model
         #region Metódusok
 
         /// <summary>
-        /// Guest osztályból készült objektum string típusúvá alakítása
+        /// CorporateGuest osztályból készült objektum string típusúvá alakítása
         /// </summary>
         /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
         public override string ToString()

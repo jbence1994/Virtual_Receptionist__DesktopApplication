@@ -3,24 +3,24 @@
 namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Magánvendég modell osztálya
+    /// Vendég modell osztály
     /// </summary>
     public class PrivateGuest : Guest
     {
         #region Adattagok
 
         /// <summary>
-        /// Magánvendég útlevél vagy személyi igazolvány száma
+        /// Vendég útlevél vagy személyi igazolvány száma
         /// </summary>
         private string documentNumber;
 
         /// <summary>
-        /// Magánvendég állampolgársága
+        /// Vendég állampolgársága
         /// </summary>
         private string citizenship;
 
         /// <summary>
-        /// Magánvendég születési ideje
+        /// Vendég születési ideje
         /// </summary>
         private string birthDate;
 
@@ -31,16 +31,16 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// PrivateGuest osztály konstruktora
         /// </summary>
-        /// <param name="name">Magánvendég neve</param>
-        /// <param name="documentNumber">Magánvendég útlevelének vagy személyi igazolványának száma</param>
-        /// <param name="citizenship">Magánvendég állampolgársága</param>
-        /// <param name="birthDate">Magánvendég születési ideje</param>
-        /// <param name="country">Magánvendég száramázási országának neve</param>
-        /// <param name="zipCode">Magánvendég lakhelyének irányítószáma</param>
-        /// <param name="city">Magánvendég lakhelyének települése</param>
-        /// <param name="address">Magánvendég lakhelyének címe (utca, házszám)</param>
-        /// <param name="phoneNumber">Magánvendég telefonszáma</param>
-        /// <param name="emailAddress">Magánvendég e-mail címe</param>
+        /// <param name="name">Vendég neve</param>
+        /// <param name="documentNumber">Vendég útlevelének vagy személyi igazolványának száma</param>
+        /// <param name="citizenship">Vendég állampolgársága</param>
+        /// <param name="birthDate">Vendég születési ideje</param>
+        /// <param name="country">Vendég száramázási országának neve</param>
+        /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
+        /// <param name="city">Vendég lakhelyének települése</param>
+        /// <param name="address">Vendég lakhelyének címe (utca, házszám)</param>
+        /// <param name="phoneNumber">Vendég telefonszáma</param>
+        /// <param name="emailAddress">Vendég e-mail címe</param>
         public PrivateGuest(string name, string documentNumber, string citizenship, string birthDate, string country,
             string zipCode,
             string city,
@@ -65,7 +65,7 @@ namespace virtual_receptionist.Model
         #region Getter és setter tulajdonságok
 
         /// <summary>
-        /// Magánvendég útlevél vagy személyi igazolvány száma
+        /// Vendég útlevél vagy személyi igazolvány száma
         /// </summary>
         public string DocumentNumber
         {
@@ -82,6 +82,9 @@ namespace virtual_receptionist.Model
             set { citizenship = value; }
         }
 
+        /// <summary>
+        /// Vendég születési ideje
+        /// </summary>
         public string BirthDate
         {
             get { return birthDate; }
@@ -93,7 +96,7 @@ namespace virtual_receptionist.Model
         #region Metódusok
 
         /// <summary>
-        /// Guest osztályból készült objektum string típusúvá alakítása
+        /// PrivateGuest osztályból készült objektum string típusúvá alakítása
         /// </summary>
         /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
