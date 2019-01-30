@@ -89,8 +89,9 @@ namespace virtual_receptionist.Model
 
             foreach (PrivateGuest privateGuest in privateGuests)
             {
-                privateGuestsDataTable.Rows.Add(privateGuest.Name, privateGuest.DocumentNumber, privateGuest.Citizenship,
-                    privateGuest.BirthDate, null, privateGuest.Country, privateGuest.ZipCode, privateGuest.City,
+                privateGuestsDataTable.Rows.Add(privateGuest.Name, privateGuest.DocumentNumber,
+                    privateGuest.Citizenship,
+                    privateGuest.BirthDate, privateGuest.Country, privateGuest.ZipCode, privateGuest.City,
                     privateGuest.Address, privateGuest.PhoneNumber, privateGuest.EmailAddress);
             }
 
@@ -120,7 +121,7 @@ namespace virtual_receptionist.Model
 
             foreach (CorporateGuest corporateGuest in corporateGuests)
             {
-                corporateGuestDataTable.Rows.Add(corporateGuest.Name, null, null, null, corporateGuest.VatNumber,
+                corporateGuestDataTable.Rows.Add(corporateGuest.Name, corporateGuest.VatNumber,
                     corporateGuest.Country, corporateGuest.ZipCode, corporateGuest.City, corporateGuest.Address,
                     corporateGuest.PhoneNumber, corporateGuest.EmailAddress);
             }

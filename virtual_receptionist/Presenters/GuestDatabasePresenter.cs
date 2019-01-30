@@ -53,20 +53,33 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégtáblázatotat adatbázisból adatokkal feltöltő metódus
         /// </summary>
-        public void InitalizeGuestTable()
+        public void InitalizeGuestTables()
         {
-            DataTable guestDataTable = dataRepository.GetPrivateGuests();
+            DataTable privateGuestDataTable = dataRepository.GetPrivateGuests();
+            DataTable corporateGuestDataTable = dataRepository.GetCorporateGuests();
 
-            foreach (DataRow row in guestDataTable.Rows)
+            foreach (DataRow row in privateGuestDataTable.Rows)
             {
-                ListViewItem guests = new ListViewItem(row[0].ToString());
+                ListViewItem privateGuests = new ListViewItem(row[0].ToString());
 
-                for (int i = 1; i < guestDataTable.Columns.Count; i++)
+                for (int i = 1; i < privateGuestDataTable.Columns.Count; i++)
                 {
-                    guests.SubItems.Add(row[i].ToString());
+                    privateGuests.SubItems.Add(row[i].ToString());
                 }
 
-                listViewPrivateGuests.Items.Add(guests);
+                listViewPrivateGuests.Items.Add(privateGuests);
+            }
+
+            foreach (DataRow row in corporateGuestDataTable.Rows)
+            {
+                ListViewItem corporateGuests = new ListViewItem(row[0].ToString());
+
+                for (int i = 1; i < corporateGuestDataTable.Columns.Count; i++)
+                {
+                    corporateGuests.SubItems.Add(row[i].ToString());
+                }
+
+                listViewCorporateGuests.Items.Add(corporateGuests);
             }
         }
 
@@ -87,46 +100,46 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void DeleteRecordInGuestTable()
         {
-            if (listViewGuests.SelectedItems.Count > 0)
-            {
-                string name = listViewGuests.SelectedItems[0].Text;
+            //if (listViewCorporateGuests.SelectedItems.Count > 0)
+            //{
+            //    string name = listViewGuests.SelectedItems[0].Text;
 
-                bool nationality;
+            //    bool nationality;
 
-                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
-                {
-                    nationality = true;
-                }
-                else
-                {
-                    nationality = false;
-                }
+            //    if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
+            //    {
+            //        nationality = true;
+            //    }
+            //    else
+            //    {
+            //        nationality = false;
+            //    }
 
-                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
-                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+            //    string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
+            //    string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
+            //    string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
+            //    string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
+            //    string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
+            //    string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
+            //    string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
-                //guest = new CorporateGuest(name, name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
-                //    emailAddress);
+            //    //guest = new CorporateGuest(name, name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
+            //    //    emailAddress);
 
-                DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //    DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
+            //        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (delete == DialogResult.Yes)
-                {
-                    dataRepository.DeleteGuest(guest);
-                }
+            //    if (delete == DialogResult.Yes)
+            //    {
+            //        dataRepository.DeleteGuest(guest);
+            //    }
 
-                userIntervention = true;
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    userIntervention = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         /// <summary>
@@ -134,45 +147,45 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInGuestTable()
         {
-            if (listViewGuests.SelectedItems.Count > 0)
-            {
-                string name = listViewGuests.SelectedItems[0].Text;
+            //if (listViewCorporateGuests.SelectedItems.Count > 0)
+            //{
+            //    string name = listViewGuests.SelectedItems[0].Text;
 
-                bool nationality;
+            //    bool nationality;
 
-                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
-                {
-                    nationality = true;
-                }
-                else
-                {
-                    nationality = false;
-                }
+            //    if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
+            //    {
+            //        nationality = true;
+            //    }
+            //    else
+            //    {
+            //        nationality = false;
+            //    }
 
-                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
-                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+            //    string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
+            //    string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
+            //    string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
+            //    string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
+            //    string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
+            //    string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
+            //    string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
-                //guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
-                //    emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(guest);
+            //    //guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
+            //    //    emailAddress);
+            //    formModalGuestDatabase = new FormModalGuestDatabase(guest);
 
-                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
-                {
-                    //guest = formModalGuestDatabase.Guest;
-                    dataRepository.UpdateGuest(guest);
+            //    if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
+            //    {
+            //        //guest = formModalGuestDatabase.Guest;
+            //        dataRepository.UpdateGuest(guest);
 
-                    userIntervention = true;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //        userIntervention = true;
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         #endregion

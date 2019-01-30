@@ -35,7 +35,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            presenter.InitalizeGuestTable();
+            presenter.InitalizeGuestTables();
         }
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
