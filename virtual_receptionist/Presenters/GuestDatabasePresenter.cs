@@ -104,7 +104,7 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
         public void AddNewRecordToPrivateGuestTable()
         {
@@ -112,23 +112,7 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public void UpdateRecordInPrivateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DeleteRecordFromPrivateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
+        /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus - modális ablak segítségével
         /// </summary>
         public void AddNewRecordToPrivateGuestTableModal()
         {
@@ -139,7 +123,34 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
+        /// </summary>
+        public void AddNewRecordToCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus - modális ablak segítségével
+        /// </summary>
+        public void AddNewRecordToCorporateGuestTableModal()
+        {
+            corporateGuest = new CorporateGuest();
+            formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
+            formModalGuestDatabase.ShowDialog();
+            dataRepository.CreateGuest(corporateGuest);
+        }
+
+        /// <summary>
         /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
+        /// </summary>
+        public void UpdateRecordInPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus - modális ablak segítségével
         /// </summary>
         public void UpdateRecordInPrivateGuestTableModal()
         {
@@ -181,9 +192,54 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
+        /// </summary>
+        public void UpdateRecordInCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus - modális ablak segítségével
+        /// </summary>
+        public void UpdateRecordInCorporateGuestTableModal()
+        {
+            if (listViewCorporateGuests.SelectedItems.Count > 0)
+            {
+                string name = listViewCorporateGuests.SelectedItems[0].Text;
+                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+
+                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
+                    emailAddress);
+                formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
+
+                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
+                {
+                    // ListView rekord módosítás (GUI)
+
+                    //guest = formModalGuestDatabase.Guest;
+
+                    // Adatbázis rekord módosítása
+
+                    dataRepository.UpdateGuest(corporateGuest);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void DeleteRecordFromPrivateGuestTableModal()
+        public void DeleteRecordFromPrivateGuestTable()
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
@@ -223,81 +279,9 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public void AddNewRecordToCorporateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void UpdateRecordInCorporateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DeleteRecordFromCorporateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
-        /// </summary>
-        public void AddNewRecordToCorporateGuestTableModal()
-        {
-            corporateGuest = new CorporateGuest();
-            formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
-            formModalGuestDatabase.ShowDialog();
-            dataRepository.CreateGuest(corporateGuest);
-        }
-
-        /// <summary>
-        /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
-        /// </summary>
-        public void UpdateRecordInCorporateGuestTableModal()
-        {
-            if (listViewCorporateGuests.SelectedItems.Count > 0)
-            {
-                string name = listViewCorporateGuests.SelectedItems[0].Text;
-                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
-                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-
-                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
-                    emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
-
-                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
-                {
-                    // ListView rekord módosítás (GUI)
-
-                    //guest = formModalGuestDatabase.Guest;
-
-                    // Adatbázis rekord módosítása
-
-                    dataRepository.UpdateGuest(corporateGuest);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
         /// Céges vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void DeleteRecordFromCorporateGuestTableModal()
+        public void DeleteRecordFromCorporateGuestTable()
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {

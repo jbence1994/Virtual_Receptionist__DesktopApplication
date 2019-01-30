@@ -32,7 +32,6 @@
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPagePrivateGuest = new System.Windows.Forms.TabPage();
             this.groupBoxPrivateGuest = new System.Windows.Forms.GroupBox();
-            this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
             this.buttonUpdatePrivateGuest = new System.Windows.Forms.Button();
             this.buttonAddPrivateGuest = new System.Windows.Forms.Button();
             this.textBoxEmailAddress = new System.Windows.Forms.TextBox();
@@ -56,7 +55,7 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonUpdatePrivateGuestModal = new System.Windows.Forms.Button();
-            this.buttonDeletePrivateGuestModal = new System.Windows.Forms.Button();
+            this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
             this.buttonAddPrivateGuestModal = new System.Windows.Forms.Button();
             this.listViewPrivateGuests = new System.Windows.Forms.ListView();
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,7 +70,6 @@
             this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
             this.groupBoxCorporateGuest = new System.Windows.Forms.GroupBox();
-            this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
             this.buttonUpdateCorporateGuest = new System.Windows.Forms.Button();
             this.buttonAddCorporateGuest = new System.Windows.Forms.Button();
             this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
@@ -91,7 +89,7 @@
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
             this.labelCompanyEmailAddress = new System.Windows.Forms.Label();
             this.buttonUpdateCorporateGuestModal = new System.Windows.Forms.Button();
-            this.buttonDeleteCorporateGuestModal = new System.Windows.Forms.Button();
+            this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
             this.buttonAddCorporateGuestModal = new System.Windows.Forms.Button();
             this.listViewCorporateGuests = new System.Windows.Forms.ListView();
             this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -123,7 +121,7 @@
             // 
             this.tabPagePrivateGuest.Controls.Add(this.groupBoxPrivateGuest);
             this.tabPagePrivateGuest.Controls.Add(this.buttonUpdatePrivateGuestModal);
-            this.tabPagePrivateGuest.Controls.Add(this.buttonDeletePrivateGuestModal);
+            this.tabPagePrivateGuest.Controls.Add(this.buttonDeletePrivateGuest);
             this.tabPagePrivateGuest.Controls.Add(this.buttonAddPrivateGuestModal);
             this.tabPagePrivateGuest.Controls.Add(this.listViewPrivateGuests);
             this.tabPagePrivateGuest.Location = new System.Drawing.Point(4, 22);
@@ -136,7 +134,6 @@
             // 
             // groupBoxPrivateGuest
             // 
-            this.groupBoxPrivateGuest.Controls.Add(this.buttonDeletePrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.buttonUpdatePrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.buttonAddPrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.textBoxEmailAddress);
@@ -164,16 +161,6 @@
             this.groupBoxPrivateGuest.Size = new System.Drawing.Size(1141, 161);
             this.groupBoxPrivateGuest.TabIndex = 27;
             this.groupBoxPrivateGuest.TabStop = false;
-            // 
-            // buttonDeletePrivateGuest
-            // 
-            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(746, 122);
-            this.buttonDeletePrivateGuest.Name = "buttonDeletePrivateGuest";
-            this.buttonDeletePrivateGuest.Size = new System.Drawing.Size(125, 23);
-            this.buttonDeletePrivateGuest.TabIndex = 49;
-            this.buttonDeletePrivateGuest.Text = "Vendég törlése";
-            this.buttonDeletePrivateGuest.UseVisualStyleBackColor = true;
-            this.buttonDeletePrivateGuest.Click += new System.EventHandler(this.buttonDeletePrivateGuest_Click);
             // 
             // buttonUpdatePrivateGuest
             // 
@@ -370,19 +357,19 @@
             this.buttonUpdatePrivateGuestModal.UseVisualStyleBackColor = true;
             this.buttonUpdatePrivateGuestModal.Click += new System.EventHandler(this.buttonUpdatePrivateGuestModal_Click);
             // 
-            // buttonDeletePrivateGuestModal
+            // buttonDeletePrivateGuest
             // 
-            this.buttonDeletePrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeletePrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePrivateGuestModal.Image")));
-            this.buttonDeletePrivateGuestModal.Location = new System.Drawing.Point(990, 146);
-            this.buttonDeletePrivateGuestModal.Name = "buttonDeletePrivateGuestModal";
-            this.buttonDeletePrivateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonDeletePrivateGuestModal.TabIndex = 5;
-            this.buttonDeletePrivateGuestModal.Text = "Vendég törlése";
-            this.buttonDeletePrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeletePrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeletePrivateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonDeletePrivateGuestModal.Click += new System.EventHandler(this.buttonDeletePrivateGuestModal_Click);
+            this.buttonDeletePrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeletePrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePrivateGuest.Image")));
+            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(990, 146);
+            this.buttonDeletePrivateGuest.Name = "buttonDeletePrivateGuest";
+            this.buttonDeletePrivateGuest.Size = new System.Drawing.Size(157, 64);
+            this.buttonDeletePrivateGuest.TabIndex = 5;
+            this.buttonDeletePrivateGuest.Text = "Vendég törlése";
+            this.buttonDeletePrivateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeletePrivateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeletePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeletePrivateGuest.Click += new System.EventHandler(this.buttonDeletePrivateGuest_Click);
             // 
             // buttonAddPrivateGuestModal
             // 
@@ -474,7 +461,7 @@
             // 
             this.tabPageCorporateGuest.Controls.Add(this.groupBoxCorporateGuest);
             this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuestModal);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuestModal);
+            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
             this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuestModal);
             this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
             this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
@@ -487,7 +474,6 @@
             // 
             // groupBoxCorporateGuest
             // 
-            this.groupBoxCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyEmailAddress);
@@ -511,16 +497,6 @@
             this.groupBoxCorporateGuest.Size = new System.Drawing.Size(1141, 161);
             this.groupBoxCorporateGuest.TabIndex = 28;
             this.groupBoxCorporateGuest.TabStop = false;
-            // 
-            // buttonDeleteCorporateGuest
-            // 
-            this.buttonDeleteCorporateGuest.Location = new System.Drawing.Point(746, 95);
-            this.buttonDeleteCorporateGuest.Name = "buttonDeleteCorporateGuest";
-            this.buttonDeleteCorporateGuest.Size = new System.Drawing.Size(125, 23);
-            this.buttonDeleteCorporateGuest.TabIndex = 49;
-            this.buttonDeleteCorporateGuest.Text = "Vendég törlése";
-            this.buttonDeleteCorporateGuest.UseVisualStyleBackColor = true;
-            this.buttonDeleteCorporateGuest.Click += new System.EventHandler(this.buttonDeleteCorporateGuest_Click);
             // 
             // buttonUpdateCorporateGuest
             // 
@@ -685,19 +661,19 @@
             this.buttonUpdateCorporateGuestModal.UseVisualStyleBackColor = true;
             this.buttonUpdateCorporateGuestModal.Click += new System.EventHandler(this.buttonUpdateCorporateGuestModal_Click);
             // 
-            // buttonDeleteCorporateGuestModal
+            // buttonDeleteCorporateGuest
             // 
-            this.buttonDeleteCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeleteCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCorporateGuestModal.Image")));
-            this.buttonDeleteCorporateGuestModal.Location = new System.Drawing.Point(990, 146);
-            this.buttonDeleteCorporateGuestModal.Name = "buttonDeleteCorporateGuestModal";
-            this.buttonDeleteCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonDeleteCorporateGuestModal.TabIndex = 8;
-            this.buttonDeleteCorporateGuestModal.Text = "Vendég törlése";
-            this.buttonDeleteCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeleteCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeleteCorporateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonDeleteCorporateGuestModal.Click += new System.EventHandler(this.buttonDeleteCorporateGuestModal_Click);
+            this.buttonDeleteCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeleteCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCorporateGuest.Image")));
+            this.buttonDeleteCorporateGuest.Location = new System.Drawing.Point(990, 146);
+            this.buttonDeleteCorporateGuest.Name = "buttonDeleteCorporateGuest";
+            this.buttonDeleteCorporateGuest.Size = new System.Drawing.Size(157, 64);
+            this.buttonDeleteCorporateGuest.TabIndex = 8;
+            this.buttonDeleteCorporateGuest.Text = "Vendég törlése";
+            this.buttonDeleteCorporateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeleteCorporateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeleteCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeleteCorporateGuest.Click += new System.EventHandler(this.buttonDeleteCorporateGuest_Click);
             // 
             // buttonAddCorporateGuestModal
             // 
@@ -816,10 +792,10 @@
         private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterCountry;
         private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterZipCode;
         private System.Windows.Forms.Button buttonUpdatePrivateGuestModal;
-        private System.Windows.Forms.Button buttonDeletePrivateGuestModal;
+        private System.Windows.Forms.Button buttonDeletePrivateGuest;
         private System.Windows.Forms.Button buttonAddPrivateGuestModal;
         private System.Windows.Forms.Button buttonUpdateCorporateGuestModal;
-        private System.Windows.Forms.Button buttonDeleteCorporateGuestModal;
+        private System.Windows.Forms.Button buttonDeleteCorporateGuest;
         private System.Windows.Forms.Button buttonAddCorporateGuestModal;
         private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterCity;
         private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterAddress;
@@ -846,11 +822,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button buttonDeletePrivateGuest;
         private System.Windows.Forms.Button buttonUpdatePrivateGuest;
         private System.Windows.Forms.Button buttonAddPrivateGuest;
         private System.Windows.Forms.GroupBox groupBoxCorporateGuest;
-        private System.Windows.Forms.Button buttonDeleteCorporateGuest;
         private System.Windows.Forms.Button buttonUpdateCorporateGuest;
         private System.Windows.Forms.Button buttonAddCorporateGuest;
         private System.Windows.Forms.TextBox textBoxCompanyEmailAddress;

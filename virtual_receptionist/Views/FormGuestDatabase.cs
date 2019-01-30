@@ -44,29 +44,9 @@ namespace virtual_receptionist.View
             presenter.AddNewRecordToPrivateGuestTable();
         }
 
-        private void buttonUpdatePrivateGuest_Click(object sender, EventArgs e)
-        {
-            presenter.UpdateRecordInPrivateGuestTable();
-        }
-
-        private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
-        {
-            presenter.DeleteRecordFromPrivateGuestTable();
-        }
-
         private void buttonAddPrivateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.AddNewRecordToPrivateGuestTableModal();
-        }
-
-        private void buttonUpdatePrivateGuestModal_Click(object sender, EventArgs e)
-        {
-            presenter.UpdateRecordInPrivateGuestTableModal();
-        }
-
-        private void buttonDeletePrivateGuestModal_Click(object sender, EventArgs e)
-        {
-            presenter.DeleteRecordFromPrivateGuestTableModal();
         }
 
         private void buttonAddCorporateGuest_Click(object sender, EventArgs e)
@@ -74,19 +54,24 @@ namespace virtual_receptionist.View
             presenter.AddNewRecordToCorporateGuestTable();
         }
 
-        private void buttonUpdateCorporateGuest_Click(object sender, EventArgs e)
-        {
-            presenter.UpdateRecordInCorporateGuestTable();
-        }
-
-        private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
-        {
-            presenter.DeleteRecordFromCorporateGuestTable();
-        }
-
         private void buttonAddCorporateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.AddNewRecordToCorporateGuestTableModal();
+        }
+
+        private void buttonUpdatePrivateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateRecordInPrivateGuestTable();
+        }
+
+        private void buttonUpdatePrivateGuestModal_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateRecordInPrivateGuestTableModal();
+        }
+
+        private void buttonUpdateCorporateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateRecordInCorporateGuestTable();
         }
 
         private void buttonUpdateCorporateGuestModal_Click(object sender, EventArgs e)
@@ -94,9 +79,14 @@ namespace virtual_receptionist.View
             presenter.UpdateRecordInCorporateGuestTableModal();
         }
 
-        private void buttonDeleteCorporateGuestModal_Click(object sender, EventArgs e)
+        private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRecordFromCorporateGuestTableModal();
+            presenter.DeleteRecordFromPrivateGuestTable();
+        }
+
+        private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.DeleteRecordFromCorporateGuestTable();
         }
 
         #endregion
