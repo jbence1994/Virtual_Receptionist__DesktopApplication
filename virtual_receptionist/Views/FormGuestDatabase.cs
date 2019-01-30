@@ -81,12 +81,15 @@ namespace virtual_receptionist.View
 
         private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRecordFromPrivateGuestTable();
+            presenter.DeleteRecordFromPrivateGuestTable(textBoxName, textBoxDocumentID, textBoxCitizenship,
+                textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress);
         }
 
         private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRecordFromCorporateGuestTable();
+            presenter.DeleteRecordFromCorporateGuestTable(textBoxCompanyName, textBoxVATNumber,
+                textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
+                textBoxCompanyEmailAddress);
         }
 
         private void listViewPrivateGuests_SelectedIndexChanged(object sender, EventArgs e)
