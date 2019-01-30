@@ -26,7 +26,8 @@ namespace virtual_receptionist.View
         public FormGuestDatabase()
         {
             InitializeComponent();
-            presenter = new GuestDatabasePresenter(listViewPrivateGuests, listViewCorporateGuests);
+            presenter = new GuestDatabasePresenter(listViewPrivateGuests, listViewCorporateGuests, comboBoxCountry,
+                comboBoxHeadquarterCountry);
         }
 
         #endregion
@@ -35,7 +36,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            presenter.InitalizeGuestTables();
+            presenter.InitalizeGuestDatabase();
         }
 
         private void buttonAddCorporateGuestModal_Click(object sender, EventArgs e)

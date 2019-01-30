@@ -33,6 +33,16 @@ namespace virtual_receptionist.Presenter
         private ListView listViewCorporateGuests;
 
         /// <summary>
+        /// Országokat tartalmazó legördülő lista (vendég)
+        /// </summary>
+        private ComboBox comboBoxCountry;
+
+        /// <summary>
+        /// Országokat tartalmazó legördülő lista (cégesvendég)
+        /// </summary>
+        private ComboBox comboBoxHeadquarterCountry;
+
+        /// <summary>
         /// Vendégadatbázis-kezelő modális ablaka
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
@@ -45,10 +55,12 @@ namespace virtual_receptionist.Presenter
         /// Vendégadatbázis-kezelő prezenter konstruktora
         /// </summary>
         /// <param name="listViews">Vendégtáblázatok</param>
-        public GuestDatabasePresenter(params ListView[] listViews)
+        public GuestDatabasePresenter(params Control[] controls)
         {
-            listViewPrivateGuests = listViews[0];
-            listViewCorporateGuests = listViews[1];
+            listViewPrivateGuests = (ListView) controls[0];
+            listViewCorporateGuests = (ListView) controls[1];
+            comboBoxCountry = (ComboBox) controls[2];
+            comboBoxHeadquarterCountry = (ComboBox) controls[3];
         }
 
         #endregion
@@ -56,9 +68,9 @@ namespace virtual_receptionist.Presenter
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// Táblázatokat adatbázisból adatokkal feltöltő metódus
+        /// Vendégadatbázis ablakot előkészítő metódus
         /// </summary>
-        public void InitalizeGuestTables()
+        public void InitalizeGuestDatabase()
         {
             DataTable privateGuestDataTable = dataRepository.GetPrivateGuests();
             DataTable corporateGuestDataTable = dataRepository.GetCorporateGuests();
@@ -86,6 +98,9 @@ namespace virtual_receptionist.Presenter
 
                 listViewCorporateGuests.Items.Add(corporateGuests);
             }
+
+            comboBoxCountry.DataSource = dataRepository.GetCountries();
+            comboBoxHeadquarterCountry.DataSource = dataRepository.GetCountries();
         }
 
         /// <summary>
