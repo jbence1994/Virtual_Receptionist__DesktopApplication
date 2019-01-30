@@ -32,7 +32,9 @@
             this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPagePrivateGuest = new System.Windows.Forms.TabPage();
-            this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
+            this.buttonUpdatePrivateGuest = new System.Windows.Forms.Button();
+            this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
+            this.buttonAddPrivateGuest = new System.Windows.Forms.Button();
             this.listViewPrivateGuests = new System.Windows.Forms.ListView();
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDocumentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,17 +46,15 @@
             this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
+            this.buttonUpdateCorporateGuest = new System.Windows.Forms.Button();
+            this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
+            this.buttonAddCorporateGuest = new System.Windows.Forms.Button();
             this.listViewCorporateGuests = new System.Windows.Forms.ListView();
             this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderHeadqurterCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderHeadqurterZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonUpdatePrivateGuest = new System.Windows.Forms.Button();
-            this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
-            this.buttonAddPrivateGuest = new System.Windows.Forms.Button();
-            this.buttonUpdateCorporateGuest = new System.Windows.Forms.Button();
-            this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
-            this.buttonAddCorporateGuest = new System.Windows.Forms.Button();
             this.columnHeaderHeadqurterCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderHeadqurterAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCompanyPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,132 +102,6 @@
             this.tabPagePrivateGuest.Text = "Vendégek";
             this.tabPagePrivateGuest.UseVisualStyleBackColor = true;
             // 
-            // tabPageCorporateGuest
-            // 
-            this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
-            this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
-            this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 534);
-            this.tabPageCorporateGuest.TabIndex = 1;
-            this.tabPageCorporateGuest.Text = "Céges vendégek";
-            this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
-            // 
-            // listViewPrivateGuests
-            // 
-            this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderName,
-            this.columnHeaderDocumentID,
-            this.columnHeaderCitizenship,
-            this.columnHeaderBirthDate,
-            this.columnHeaderCountry,
-            this.columnHeaderZipCode,
-            this.columnHeaderCity,
-            this.columnHeaderAddress,
-            this.columnHeaderPhoneNumber,
-            this.columnHeaderEmailAddress});
-            this.listViewPrivateGuests.FullRowSelect = true;
-            this.listViewPrivateGuests.GridLines = true;
-            this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
-            this.listViewPrivateGuests.Name = "listViewPrivateGuests";
-            this.listViewPrivateGuests.Size = new System.Drawing.Size(981, 528);
-            this.listViewPrivateGuests.TabIndex = 1;
-            this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
-            this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeaderName
-            // 
-            this.columnHeaderName.Text = "Név";
-            this.columnHeaderName.Width = 120;
-            // 
-            // columnHeaderDocumentID
-            // 
-            this.columnHeaderDocumentID.Text = "Okmányazonosító";
-            this.columnHeaderDocumentID.Width = 120;
-            // 
-            // columnHeaderCitizenship
-            // 
-            this.columnHeaderCitizenship.Text = "Állampolgárság";
-            this.columnHeaderCitizenship.Width = 120;
-            // 
-            // columnHeaderBirthDate
-            // 
-            this.columnHeaderBirthDate.Text = "Születési idő";
-            this.columnHeaderBirthDate.Width = 120;
-            // 
-            // columnHeaderCountry
-            // 
-            this.columnHeaderCountry.Text = "Ország";
-            this.columnHeaderCountry.Width = 120;
-            // 
-            // columnHeaderZipCode
-            // 
-            this.columnHeaderZipCode.Text = "Irányítószám";
-            this.columnHeaderZipCode.Width = 120;
-            // 
-            // columnHeaderCity
-            // 
-            this.columnHeaderCity.Text = "Település";
-            this.columnHeaderCity.Width = 120;
-            // 
-            // columnHeaderAddress
-            // 
-            this.columnHeaderAddress.Text = "Cím";
-            this.columnHeaderAddress.Width = 120;
-            // 
-            // columnHeaderPhoneNumber
-            // 
-            this.columnHeaderPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderPhoneNumber.Width = 120;
-            // 
-            // columnHeaderEmailAddress
-            // 
-            this.columnHeaderEmailAddress.Text = "E-mail cím";
-            this.columnHeaderEmailAddress.Width = 120;
-            // 
-            // listViewCorporateGuests
-            // 
-            this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderCompanyName,
-            this.columnHeaderVATNumber,
-            this.columnHeaderHeadqurterCountry,
-            this.columnHeaderHeadqurterZipCode,
-            this.columnHeaderHeadqurterCity,
-            this.columnHeaderHeadqurterAddress,
-            this.columnHeaderCompanyPhoneNumber,
-            this.columnHeaderCompanyEmailAddress});
-            this.listViewCorporateGuests.FullRowSelect = true;
-            this.listViewCorporateGuests.GridLines = true;
-            this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
-            this.listViewCorporateGuests.Name = "listViewCorporateGuests";
-            this.listViewCorporateGuests.Size = new System.Drawing.Size(981, 528);
-            this.listViewCorporateGuests.TabIndex = 2;
-            this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
-            this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeaderCompanyName
-            // 
-            this.columnHeaderCompanyName.Text = "Cégnév";
-            this.columnHeaderCompanyName.Width = 150;
-            // 
-            // columnHeaderVATNumber
-            // 
-            this.columnHeaderVATNumber.Text = "Adószám";
-            this.columnHeaderVATNumber.Width = 150;
-            // 
-            // columnHeaderHeadqurterCountry
-            // 
-            this.columnHeaderHeadqurterCountry.Text = "Ország";
-            this.columnHeaderHeadqurterCountry.Width = 150;
-            // 
-            // columnHeaderHeadqurterZipCode
-            // 
-            this.columnHeaderHeadqurterZipCode.Text = "Irányítószám";
-            this.columnHeaderHeadqurterZipCode.Width = 150;
-            // 
             // buttonUpdatePrivateGuest
             // 
             this.buttonUpdatePrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -270,6 +144,92 @@
             this.buttonAddPrivateGuest.UseVisualStyleBackColor = true;
             this.buttonAddPrivateGuest.Click += new System.EventHandler(this.buttonAddPrivateGuest_Click);
             // 
+            // listViewPrivateGuests
+            // 
+            this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderName,
+            this.columnHeaderDocumentID,
+            this.columnHeaderCitizenship,
+            this.columnHeaderBirthDate,
+            this.columnHeaderCountry,
+            this.columnHeaderZipCode,
+            this.columnHeaderCity,
+            this.columnHeaderAddress,
+            this.columnHeaderPhoneNumber,
+            this.columnHeaderEmailAddress});
+            this.listViewPrivateGuests.FullRowSelect = true;
+            this.listViewPrivateGuests.GridLines = true;
+            this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
+            this.listViewPrivateGuests.Name = "listViewPrivateGuests";
+            this.listViewPrivateGuests.Size = new System.Drawing.Size(981, 528);
+            this.listViewPrivateGuests.TabIndex = 1;
+            this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
+            this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderName
+            // 
+            this.columnHeaderName.Text = "Név";
+            this.columnHeaderName.Width = 150;
+            // 
+            // columnHeaderDocumentID
+            // 
+            this.columnHeaderDocumentID.Text = "Okmányazonosító";
+            this.columnHeaderDocumentID.Width = 150;
+            // 
+            // columnHeaderCitizenship
+            // 
+            this.columnHeaderCitizenship.Text = "Állampolgárság";
+            this.columnHeaderCitizenship.Width = 150;
+            // 
+            // columnHeaderBirthDate
+            // 
+            this.columnHeaderBirthDate.Text = "Születési idő";
+            this.columnHeaderBirthDate.Width = 150;
+            // 
+            // columnHeaderCountry
+            // 
+            this.columnHeaderCountry.Text = "Ország";
+            this.columnHeaderCountry.Width = 150;
+            // 
+            // columnHeaderZipCode
+            // 
+            this.columnHeaderZipCode.Text = "Irányítószám";
+            this.columnHeaderZipCode.Width = 150;
+            // 
+            // columnHeaderCity
+            // 
+            this.columnHeaderCity.Text = "Település";
+            this.columnHeaderCity.Width = 150;
+            // 
+            // columnHeaderAddress
+            // 
+            this.columnHeaderAddress.Text = "Cím";
+            this.columnHeaderAddress.Width = 150;
+            // 
+            // columnHeaderPhoneNumber
+            // 
+            this.columnHeaderPhoneNumber.Text = "Telefonszám";
+            this.columnHeaderPhoneNumber.Width = 150;
+            // 
+            // columnHeaderEmailAddress
+            // 
+            this.columnHeaderEmailAddress.Text = "E-mail cím";
+            this.columnHeaderEmailAddress.Width = 150;
+            // 
+            // tabPageCorporateGuest
+            // 
+            this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
+            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
+            this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
+            this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
+            this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
+            this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 534);
+            this.tabPageCorporateGuest.TabIndex = 1;
+            this.tabPageCorporateGuest.Text = "Céges vendégek";
+            this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
+            // 
             // buttonUpdateCorporateGuest
             // 
             this.buttonUpdateCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -311,6 +271,46 @@
             this.buttonAddCorporateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddCorporateGuest.UseVisualStyleBackColor = true;
             this.buttonAddCorporateGuest.Click += new System.EventHandler(this.buttonAddCorporateGuest_Click);
+            // 
+            // listViewCorporateGuests
+            // 
+            this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderCompanyName,
+            this.columnHeaderVATNumber,
+            this.columnHeaderHeadqurterCountry,
+            this.columnHeaderHeadqurterZipCode,
+            this.columnHeaderHeadqurterCity,
+            this.columnHeaderHeadqurterAddress,
+            this.columnHeaderCompanyPhoneNumber,
+            this.columnHeaderCompanyEmailAddress});
+            this.listViewCorporateGuests.FullRowSelect = true;
+            this.listViewCorporateGuests.GridLines = true;
+            this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
+            this.listViewCorporateGuests.Name = "listViewCorporateGuests";
+            this.listViewCorporateGuests.Size = new System.Drawing.Size(981, 528);
+            this.listViewCorporateGuests.TabIndex = 2;
+            this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
+            this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderCompanyName
+            // 
+            this.columnHeaderCompanyName.Text = "Cégnév";
+            this.columnHeaderCompanyName.Width = 150;
+            // 
+            // columnHeaderVATNumber
+            // 
+            this.columnHeaderVATNumber.Text = "Adószám";
+            this.columnHeaderVATNumber.Width = 150;
+            // 
+            // columnHeaderHeadqurterCountry
+            // 
+            this.columnHeaderHeadqurterCountry.Text = "Ország";
+            this.columnHeaderHeadqurterCountry.Width = 150;
+            // 
+            // columnHeaderHeadqurterZipCode
+            // 
+            this.columnHeaderHeadqurterZipCode.Text = "Irányítószám";
+            this.columnHeaderHeadqurterZipCode.Width = 150;
             // 
             // columnHeaderHeadqurterCity
             // 
