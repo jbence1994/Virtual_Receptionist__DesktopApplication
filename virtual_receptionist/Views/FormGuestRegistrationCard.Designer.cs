@@ -47,7 +47,6 @@
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxZipCode = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCitizenship = new System.Windows.Forms.TextBox();
             this.groupBoxGeneralData = new System.Windows.Forms.GroupBox();
@@ -67,6 +66,8 @@
             this.groupBoxOtherData = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.errorProviderInput = new System.Windows.Forms.ErrorProvider(this.components);
+            this.labelRoom = new System.Windows.Forms.Label();
+            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.groupBoxGeneralData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
@@ -77,7 +78,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(29, 629);
+            this.buttonCancel.Location = new System.Drawing.Point(12, 583);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(517, 23);
             this.buttonCancel.TabIndex = 29;
@@ -226,16 +227,6 @@
             this.textBoxName.Size = new System.Drawing.Size(276, 20);
             this.textBoxName.TabIndex = 3;
             // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(24, 27);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(243, 29);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Vendég bejelentő lap";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -254,6 +245,8 @@
             // 
             // groupBoxGeneralData
             // 
+            this.groupBoxGeneralData.Controls.Add(this.comboBoxRoom);
+            this.groupBoxGeneralData.Controls.Add(this.labelRoom);
             this.groupBoxGeneralData.Controls.Add(this.labelNumberOfGuests);
             this.groupBoxGeneralData.Controls.Add(this.numericUpDownNumberOfGuests);
             this.groupBoxGeneralData.Controls.Add(this.dateTimePickerDepartureDate);
@@ -268,9 +261,9 @@
             this.groupBoxGeneralData.Controls.Add(this.labelName);
             this.groupBoxGeneralData.Controls.Add(this.textBoxName);
             this.groupBoxGeneralData.Controls.Add(this.textBoxCitizenship);
-            this.groupBoxGeneralData.Location = new System.Drawing.Point(29, 84);
+            this.groupBoxGeneralData.Location = new System.Drawing.Point(12, 12);
             this.groupBoxGeneralData.Name = "groupBoxGeneralData";
-            this.groupBoxGeneralData.Size = new System.Drawing.Size(517, 210);
+            this.groupBoxGeneralData.Size = new System.Drawing.Size(517, 236);
             this.groupBoxGeneralData.TabIndex = 1;
             this.groupBoxGeneralData.TabStop = false;
             this.groupBoxGeneralData.Text = "Általános adatok";
@@ -370,7 +363,7 @@
             this.groupBoxBillingData.Controls.Add(this.comboBoxCountry);
             this.groupBoxBillingData.Controls.Add(this.labelCity);
             this.groupBoxBillingData.Controls.Add(this.labelZipCode);
-            this.groupBoxBillingData.Location = new System.Drawing.Point(29, 300);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(12, 254);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
             this.groupBoxBillingData.Size = new System.Drawing.Size(517, 210);
             this.groupBoxBillingData.TabIndex = 10;
@@ -399,7 +392,7 @@
             this.groupBoxOtherData.Controls.Add(this.labelPhoneNumber);
             this.groupBoxOtherData.Controls.Add(this.textBoxPhoneNumber);
             this.groupBoxOtherData.Controls.Add(this.labelEmailAddress);
-            this.groupBoxOtherData.Location = new System.Drawing.Point(29, 516);
+            this.groupBoxOtherData.Location = new System.Drawing.Point(12, 470);
             this.groupBoxOtherData.Name = "groupBoxOtherData";
             this.groupBoxOtherData.Size = new System.Drawing.Size(517, 78);
             this.groupBoxOtherData.TabIndex = 22;
@@ -408,7 +401,8 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(29, 600);
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOK.Location = new System.Drawing.Point(12, 554);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(517, 23);
             this.buttonOK.TabIndex = 28;
@@ -421,16 +415,32 @@
             this.errorProviderInput.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderInput.ContainerControl = this;
             // 
+            // labelRoom
+            // 
+            this.labelRoom.AutoSize = true;
+            this.labelRoom.Location = new System.Drawing.Point(189, 204);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(40, 13);
+            this.labelRoom.TabIndex = 37;
+            this.labelRoom.Text = "Szoba:";
+            // 
+            // comboBoxRoom
+            // 
+            this.comboBoxRoom.FormattingEnabled = true;
+            this.comboBoxRoom.Location = new System.Drawing.Point(235, 201);
+            this.comboBoxRoom.Name = "comboBoxRoom";
+            this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
+            this.comboBoxRoom.TabIndex = 38;
+            // 
             // FormGuestRegistrationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 690);
+            this.ClientSize = new System.Drawing.Size(542, 619);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxOtherData);
             this.Controls.Add(this.groupBoxBillingData);
             this.Controls.Add(this.groupBoxGeneralData);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.buttonCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGuestRegistrationCard";
@@ -446,7 +456,6 @@
             this.groupBoxOtherData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderInput)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -470,7 +479,6 @@
         private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.TextBox textBoxZipCode;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxCitizenship;
         private System.Windows.Forms.GroupBox groupBoxGeneralData;
@@ -490,5 +498,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownNumberOfGuests;
         private System.Windows.Forms.Label labelNumberOfGuests;
         private System.Windows.Forms.ErrorProvider errorProviderInput;
+        private System.Windows.Forms.ComboBox comboBoxRoom;
+        private System.Windows.Forms.Label labelRoom;
     }
 }

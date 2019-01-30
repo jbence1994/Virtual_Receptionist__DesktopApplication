@@ -43,11 +43,6 @@ namespace virtual_receptionist.Model
         private List<Country> countries;
 
         /// <summary>
-        /// Magyarországi irányítószámokat és településeket tartalmazó lista
-        /// </summary>
-        private List<HungarianZipCodesAndCities> hungarianZipCodesAndCities;
-
-        /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
         private List<Room> rooms;
@@ -79,7 +74,6 @@ namespace virtual_receptionist.Model
             privateGuests = new List<PrivateGuest>();
             corporateGuests = new List<CorporateGuest>();
             countries = new List<Country>();
-            hungarianZipCodesAndCities = new List<HungarianZipCodesAndCities>();
             rooms = new List<Room>();
             reservations = new List<Reservation>();
         }

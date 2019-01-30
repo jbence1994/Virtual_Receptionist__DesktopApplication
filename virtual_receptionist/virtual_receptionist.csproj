@@ -128,7 +128,6 @@
     </Compile>
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Presenters\GuestDatabasePresenter.cs" />
-    <Compile Include="Models\HungarianZipCodesAndCities.cs" />
     <Compile Include="Models\InputFunctions.cs" />
     <Compile Include="Models\InputAutomatizedFunctions.cs" />
     <Compile Include="Presenters\DefaultPresenter.cs" />

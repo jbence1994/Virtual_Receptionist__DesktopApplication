@@ -49,25 +49,6 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti a magyarországi irányítószámokat és településeket tartalmazó listát
-        /// </summary>
-        private void UploadHungarianZipCodesAndCitiesList()
-        {
-            string sql = "SELECT * FROM hungarian_zip_code_and_city";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                string zipCode = row["ZipCode"].ToString();
-                string city = row["City"].ToString();
-
-                HungarianZipCodesAndCities hungarianZipCodesAndCitiesInstance =
-                    new HungarianZipCodesAndCities(zipCode, city);
-                hungarianZipCodesAndCities.Add(hungarianZipCodesAndCitiesInstance);
-            }
-        }
-
-        /// <summary>
         /// Metódus, amely adatforrásként szolgál a számlázó főablak DataGridView komponensének
         /// </summary>
         /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
@@ -131,45 +112,6 @@ namespace virtual_receptionist.Model
             }
 
             return countries;
-        }
-
-        /// <summary>
-        /// Metódus, amely adatforrásként szolgált a számlázó modális ablak ComboBox komponensének
-        /// </summary>
-        /// <returns>Adatokkal feltöltött szótárat adja vissza</returns>
-        public List<HungarianZipCodesAndCities> GetHungarianZipCodesAndCities()
-        {
-            if (hungarianZipCodesAndCities.Count == 0)
-            {
-                UploadHungarianZipCodesAndCitiesList();
-            }
-
-            return hungarianZipCodesAndCities;
-        }
-
-        /// <summary>
-        /// Metódus, amely elmenti egy listába a magyar települések neveit
-        /// </summary>
-        /// <returns>Magyar települések neveivel feltöltött listát adja vissza</returns>
-        public List<string> GetHungarianCities()
-        {
-            if (hungarianZipCodesAndCities.Count == 0)
-            {
-                UploadHungarianZipCodesAndCitiesList();
-            }
-
-            List<string> filtratedCities = new List<string>();
-
-            foreach (HungarianZipCodesAndCities hungarianZipCodesAndCities in hungarianZipCodesAndCities)
-            {
-                if (!filtratedCities.Contains(hungarianZipCodesAndCities.City))
-                {
-                    filtratedCities.Add(hungarianZipCodesAndCities.City);
-                }
-            }
-
-            filtratedCities.Sort();
-            return filtratedCities;
         }
 
         /// <summary>
