@@ -15,7 +15,7 @@ namespace virtual_receptionist.Model
         private void UploadPrivateGuestsList()
         {
             string sql =
-                "SELECT privateGuest.Name, privateGuest.DocumentNumber, privateGuest.Citizenship, privateGuest.BirthDate, country.CountryName, privateGuest.ZipCode, privateGuest.City, privateGuest.Address, privateGuest.VATNumber, privateGuest.PhoneNumber, privateGuest.EmailAddress FROM privateGuest, country WHERE privateGuest.Country = country.ID AND privateGuest.DocumentNumber != \"\"";
+                "SELECT guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.DocumentNumber != \"\"";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -44,7 +44,7 @@ namespace virtual_receptionist.Model
         private void UploadCorporateGuestList()
         {
             string sql =
-                "SELECT privateGuest.Name, privateGuest.VATNumber, country.CountryName, privateGuest.ZipCode, privateGuest.City, privateGuest.Address, privateGuest.VATNumber, privateGuest.PhoneNumber, privateGuest.EmailAddress FROM privateGuest, country WHERE privateGuest.Country = country.ID AND privateGuest.VATNumber != \"\"";
+                "SELECT guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
