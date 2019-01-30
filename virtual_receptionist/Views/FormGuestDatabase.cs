@@ -21,7 +21,7 @@ namespace virtual_receptionist.View
         #region Konstruktor
 
         /// <summary>
-        /// Vendégadatbázis-kezelő ablak konstruktora, amely összeköti a főmenü ablakot a vendégadatbázis-kezelő ablakkal
+        /// Vendégadatbázis-kezelő ablak konstruktora
         /// </summary>
         public FormGuestDatabase()
         {
@@ -41,6 +41,36 @@ namespace virtual_receptionist.View
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             presenter.BackToMainMenu(this);
+        }
+
+        private void buttonAddCorporateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.AddNewRecordToCorporateGuestTable();
+        }
+
+        private void buttonUpdateCorporateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateRecordInCorporateGuestTable();
+        }
+
+        private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.DeleteRecordFromCorporateGuestTable();
+        }
+
+        private void buttonAddPrivateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.AddNewRecordToPrivateGuestTable();
+        }
+
+        private void buttonUpdatePrivateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateRecordInPrivateGuestTable();
+        }
+
+        private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
+        {
+            presenter.DeleteRecordFromPrivateGuestTable();
         }
 
         #endregion

@@ -240,6 +240,7 @@
             this.buttonUpdatePrivateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonUpdatePrivateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonUpdatePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonUpdatePrivateGuest.Click += new System.EventHandler(this.buttonUpdatePrivateGuest_Click);
             // 
             // buttonDeletePrivateGuest
             // 
@@ -253,6 +254,7 @@
             this.buttonDeletePrivateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDeletePrivateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeletePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeletePrivateGuest.Click += new System.EventHandler(this.buttonDeletePrivateGuest_Click);
             // 
             // buttonAddPrivateGuest
             // 
@@ -266,6 +268,7 @@
             this.buttonAddPrivateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddPrivateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddPrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonAddPrivateGuest.Click += new System.EventHandler(this.buttonAddPrivateGuest_Click);
             // 
             // buttonUpdateCorporateGuest
             // 
@@ -279,6 +282,7 @@
             this.buttonUpdateCorporateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonUpdateCorporateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonUpdateCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonUpdateCorporateGuest.Click += new System.EventHandler(this.buttonUpdateCorporateGuest_Click);
             // 
             // buttonDeleteCorporateGuest
             // 
@@ -292,6 +296,7 @@
             this.buttonDeleteCorporateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDeleteCorporateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeleteCorporateGuest.Click += new System.EventHandler(this.buttonDeleteCorporateGuest_Click);
             // 
             // buttonAddCorporateGuest
             // 
@@ -305,6 +310,7 @@
             this.buttonAddCorporateGuest.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAddCorporateGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonAddCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonAddCorporateGuest.Click += new System.EventHandler(this.buttonAddCorporateGuest_Click);
             // 
             // columnHeaderHeadqurterCity
             // 

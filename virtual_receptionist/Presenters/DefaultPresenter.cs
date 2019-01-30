@@ -15,11 +15,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         protected DataRepository dataRepository;
 
-        /// <summary>
-        /// Formon felhasználói módosítást tároló logikai változó 
-        /// </summary>
-        protected bool userIntervention;
-
         #endregion
 
         #region Konstruktor
