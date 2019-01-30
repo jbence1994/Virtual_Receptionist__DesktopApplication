@@ -287,30 +287,28 @@ namespace virtual_receptionist.Presenter
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
-                string name = listViewCorporateGuests.SelectedItems[0].Text;
-                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
-                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-
-                CorporateGuest corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address,
-                    phoneNumber,
-                    emailAddress);
-
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (delete == DialogResult.Yes)
                 {
-                    // ListView rekord törlés (GUI)
+                    string name = listViewCorporateGuests.SelectedItems[0].Text;
+                    // Country
+                    string vatNumber = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
+                    string zipCode = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
+                    string city = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
+                    string address = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;
+                    string phoneNumber = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
+                    string email = listViewCorporateGuests.SelectedItems[0].SubItems[7].Text;
 
+                    CorporateGuest corporateGuest = new CorporateGuest(name, vatNumber, null, zipCode, city, address,
+                        phoneNumber, email);
 
+                    // ListView rekord törlése (GUI)
+                    int index = listViewCorporateGuests.FocusedItem.Index;
+                    listViewCorporateGuests.Items.RemoveAt(index);
 
                     //Adatbázis rekord törlése
-
                     dataRepository.DeleteGuest(corporateGuest);
                 }
             }
@@ -321,7 +319,7 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Ha megváltozik a vendégtáblázat, a megfelelő táblázat cellák adatai kerüljenek a megfelelő szövegmezőkbe
         /// </summary>
         public void ListViewPrivateGuestsSelectedIndexChanged(params TextBox[] textBox)
         {
@@ -331,6 +329,7 @@ namespace virtual_receptionist.Presenter
                 textBox[1].Text = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
                 textBox[2].Text = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
                 textBox[3].Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                //Country
                 textBox[4].Text = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
                 textBox[5].Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 textBox[6].Text = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
@@ -340,7 +339,7 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Ha megváltozik a céges vendégtáblázat, a megfelelő táblázat cellák adatai kerüljenek a megfelelő szövegmezőkbe
         /// </summary>
         public void ListViewCorporateGuestsSelectedIndexChanged(params TextBox[] textBox)
         {
@@ -349,6 +348,7 @@ namespace virtual_receptionist.Presenter
                 textBox[0].Text = listViewCorporateGuests.SelectedItems[0].Text;
                 textBox[1].Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                 textBox[2].Text = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
+                // Country
                 textBox[3].Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
                 textBox[4].Text = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;
                 textBox[5].Text = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
