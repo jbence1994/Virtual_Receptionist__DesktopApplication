@@ -118,24 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonBackToMainMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJXSURBVEhLrVXL
-        btNAFPVPsOGlfgdC6poN4g9aO3ZaiRIW3bBA6gZ1iWADQiC2bWyPHdtpQhuJVlUXLBGoNW2XiEVBQiKB
-        qhGJh3PdaTuOJ6mbcqSjRPM45/rOnTvaKJQj+6ZVZw+siL0rR94X/P4miv8Yc+f0Wu2GWF4cs5F9rRyy
-        VxDpgfwc9kF71vcnxPbRQFT3sKEjCRRlG197V8ioYUXuQyykiFQCRdhH+ipCLgsR+WXET9jPfYnZYNcx
-        MU5ahrFtBMFVIU/Rs7eKRUrOr9X5o1ZTOSfTjNhrIY5SLFYtKRc2WrzT7fJnH7aU8xJ7lBkYeBXF5FCS
-        ASEBG3sxn6l7ynVEM/Lua2bImvIgRXYRxD8O0rTJGhJXUJpsXx68qAHh5+Efvrj5XhZOSTeeDDLVM44B
-        oZck3Nn+xK3QlU06/82gDwP780c+7VclA/cXGeyeDYyfoifrLT7Nlo7pLXMzdEgvvvQh73w/4JW6fyZ+
-        arLES4GzTS1iTjagHBo1O79B8DEuGYHKdGV3hxuIVrWOaPjOqkb9HMK5i1aCyZRiMxl0ukf86dZGbk7m
-        FFvmumdPprcZzenNoAHRDBwcWtaE0jHfDDNjKhp+9WsqTqAHBoLtQQMizihnch7x5Ym+6twS8sewQv8O
-        BIf0JJfrKD+VmIqlgL0QslmIvjT0TRh1+CdEIGtCTg16LCCmTBcRpZceYE7cryaGV30pZEZDb9hXzMh9
-        DsG/gwbEUuCml4mEqdJwoN8Mz74tthcH9XNquTiDBoRjkNoKMTYDdxPpaJ2WohKa9g+vioE/vokf2AAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="buttonUpdatePrivateGuest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonUpdatePrivateGuestModal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
         mQAAB5kBsGdIdwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARtSURBVFhHrZdt
@@ -161,7 +144,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="buttonDeletePrivateGuest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonDeletePrivateGuestModal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
         gQAAB4EB3flQ2AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARkSURBVFhHrZdv
@@ -186,7 +169,7 @@
         WYExLygi/2Va5B8xtEXFlUTx1zycEoU3YVaa6Cc9t2tI1b9tqSef0hm7RwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonAddPrivateGuest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonAddPrivateGuestModal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
         gQAAB4EB3flQ2AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARQSURBVFhHrZdv
@@ -211,7 +194,7 @@
         Gw+9BE+9LeyT7RtraMN/vQ4lSxgWYTIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonUpdateCorporateGuest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonUpdateCorporateGuestModal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
         mQAAB5kBsGdIdwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARtSURBVFhHrZdt
@@ -237,7 +220,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="buttonDeleteCorporateGuest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonDeleteCorporateGuestModal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
         gQAAB4EB3flQ2AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARkSURBVFhHrZdv
@@ -262,7 +245,7 @@
         WYExLygi/2Va5B8xtEXFlUTx1zycEoU3YVaa6Cc9t2tI1b9tqSef0hm7RwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonAddCorporateGuest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonAddCorporateGuestModal.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
         gQAAB4EB3flQ2AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARQSURBVFhHrZdv
