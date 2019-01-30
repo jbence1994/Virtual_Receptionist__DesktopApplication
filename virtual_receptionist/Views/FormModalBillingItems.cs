@@ -44,11 +44,6 @@ namespace virtual_receptionist.View
             presenter.SetControlsWithData();
         }
 
-        private void listViewBillingItems_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
-        {
-            presenter.BlockSettingColumnWidth(e, 160);
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             presenter.AddBillingItemToRecord();

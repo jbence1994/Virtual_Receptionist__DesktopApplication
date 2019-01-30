@@ -58,17 +58,6 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Felhasználó általi oszlopszélesség megváltoztatását letiltó metódus
-        /// </summary>
-        /// <param name="e">Esemény példánya</param>
-        /// <param name="maxWidth">Oszlopszélesség maximum szélessége</param>
-        public void BlockSettingColumnWidth(ColumnWidthChangingEventArgs e, int maxWidth)
-        {
-            e.Cancel = true;
-            e.NewWidth = maxWidth;
-        }
-
-        /// <summary>
         /// Metódus, amely beállítja az adószám szövegmező írhatóságát, attól függően, hogy a vállalati ügyfél checkbox be van-e pipálva
         /// </summary>
         /// <param name="checkBoxCorporateGuest">Vállalati ügyfél checkbox</param>

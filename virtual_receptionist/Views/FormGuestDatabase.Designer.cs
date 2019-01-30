@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.listViewGuests = new System.Windows.Forms.ListView();
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderNationality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDocumentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,18 +43,22 @@
             this.buttonDeleteGuest = new System.Windows.Forms.Button();
             this.buttonUpdateGuest = new System.Windows.Forms.Button();
             this.buttonBackToMainMenu = new System.Windows.Forms.Button();
+            this.columnHeaderCitizenship = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderBirthDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewGuests
             // 
             this.listViewGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderName,
-            this.columnHeaderNationality,
+            this.columnHeaderDocumentID,
+            this.columnHeaderCitizenship,
+            this.columnHeaderBirthDate,
+            this.columnHeaderVATNumber,
             this.columnHeaderCountry,
             this.columnHeaderZipCode,
             this.columnHeaderCity,
             this.columnHeaderAddress,
-            this.columnHeaderVATNumber,
             this.columnHeaderPhoneNumber,
             this.columnHeaderEmailAddress});
             this.listViewGuests.FullRowSelect = true;
@@ -65,53 +69,52 @@
             this.listViewGuests.TabIndex = 0;
             this.listViewGuests.UseCompatibleStateImageBehavior = false;
             this.listViewGuests.View = System.Windows.Forms.View.Details;
-            this.listViewGuests.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewGuests_ColumnWidthChanging);
             this.listViewGuests.SelectedIndexChanged += new System.EventHandler(this.listViewGuests_SelectedIndexChanged);
             // 
             // columnHeaderName
             // 
             this.columnHeaderName.Text = "Név";
-            this.columnHeaderName.Width = 110;
+            this.columnHeaderName.Width = 120;
             // 
-            // columnHeaderNationality
+            // columnHeaderDocumentID
             // 
-            this.columnHeaderNationality.Text = "Nemzetiség";
-            this.columnHeaderNationality.Width = 110;
+            this.columnHeaderDocumentID.Text = "Okmányazonosító";
+            this.columnHeaderDocumentID.Width = 120;
             // 
             // columnHeaderCountry
             // 
             this.columnHeaderCountry.Text = "Ország";
-            this.columnHeaderCountry.Width = 110;
+            this.columnHeaderCountry.Width = 120;
             // 
             // columnHeaderZipCode
             // 
             this.columnHeaderZipCode.Text = "Irányítószám";
-            this.columnHeaderZipCode.Width = 110;
+            this.columnHeaderZipCode.Width = 120;
             // 
             // columnHeaderCity
             // 
             this.columnHeaderCity.Text = "Település";
-            this.columnHeaderCity.Width = 110;
+            this.columnHeaderCity.Width = 120;
             // 
             // columnHeaderAddress
             // 
             this.columnHeaderAddress.Text = "Cím";
-            this.columnHeaderAddress.Width = 110;
+            this.columnHeaderAddress.Width = 120;
             // 
             // columnHeaderVATNumber
             // 
             this.columnHeaderVATNumber.Text = "Adószám";
-            this.columnHeaderVATNumber.Width = 110;
+            this.columnHeaderVATNumber.Width = 120;
             // 
             // columnHeaderPhoneNumber
             // 
             this.columnHeaderPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderPhoneNumber.Width = 110;
+            this.columnHeaderPhoneNumber.Width = 120;
             // 
             // columnHeaderEmailAddress
             // 
             this.columnHeaderEmailAddress.Text = "E-mail";
-            this.columnHeaderEmailAddress.Width = 110;
+            this.columnHeaderEmailAddress.Width = 120;
             // 
             // buttonAddGuest
             // 
@@ -169,6 +172,16 @@
             this.buttonBackToMainMenu.UseVisualStyleBackColor = true;
             this.buttonBackToMainMenu.Click += new System.EventHandler(this.buttonBackToMainMenu_Click);
             // 
+            // columnHeaderCitizenship
+            // 
+            this.columnHeaderCitizenship.Text = "Állampolgárság";
+            this.columnHeaderCitizenship.Width = 120;
+            // 
+            // columnHeaderBirthDate
+            // 
+            this.columnHeaderBirthDate.Text = "Születési idő";
+            this.columnHeaderBirthDate.Width = 120;
+            // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,7 +209,7 @@
         private System.Windows.Forms.Button buttonUpdateGuest;
         private System.Windows.Forms.Button buttonBackToMainMenu;
         private System.Windows.Forms.ColumnHeader columnHeaderName;
-        private System.Windows.Forms.ColumnHeader columnHeaderNationality;
+        private System.Windows.Forms.ColumnHeader columnHeaderDocumentID;
         private System.Windows.Forms.ColumnHeader columnHeaderCountry;
         private System.Windows.Forms.ColumnHeader columnHeaderZipCode;
         private System.Windows.Forms.ColumnHeader columnHeaderCity;
@@ -204,5 +217,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderVATNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderPhoneNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderEmailAddress;
+        private System.Windows.Forms.ColumnHeader columnHeaderCitizenship;
+        private System.Windows.Forms.ColumnHeader columnHeaderBirthDate;
     }
 }

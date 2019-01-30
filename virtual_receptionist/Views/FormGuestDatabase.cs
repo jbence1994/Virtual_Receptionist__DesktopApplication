@@ -38,11 +38,6 @@ namespace virtual_receptionist.View
             presenter.InitalizeGuestTable();
         }
 
-        private void listViewGuests_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
-        {
-            presenter.BlockSettingColumnWidth(e, 110);
-        }
-
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
             presenter.BackToMainMenu(this);

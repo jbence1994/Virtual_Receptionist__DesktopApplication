@@ -69,7 +69,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordInGuestTable()
         {
-            guest = new Guest();
+            guest = new CorporateGuest();
             formModalGuestDatabase = new FormModalGuestDatabase(guest);
             formModalGuestDatabase.ShowDialog();
             dataRepository.CreateGuest(guest);
@@ -104,8 +104,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
-                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
-                    emailAddress);
+                //guest = new CorporateGuest(name, name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
+                //    emailAddress);
 
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -151,8 +151,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
 
-                guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
-                    emailAddress);
+                //guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
+                //    emailAddress);
                 formModalGuestDatabase = new FormModalGuestDatabase(guest);
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)

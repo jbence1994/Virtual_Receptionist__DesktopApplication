@@ -68,7 +68,6 @@
             this.listViewBillingItems.TabIndex = 0;
             this.listViewBillingItems.UseCompatibleStateImageBehavior = false;
             this.listViewBillingItems.View = System.Windows.Forms.View.Details;
-            this.listViewBillingItems.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewBillingItems_ColumnWidthChanging);
             this.listViewBillingItems.SelectedIndexChanged += new System.EventHandler(this.listViewBillingItems_SelectedIndexChanged);
             // 
             // columnHeaderItem

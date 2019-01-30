@@ -19,10 +19,10 @@ namespace virtual_receptionist.Model
 
             foreach (DataRow row in dt.Rows)
             {
-                Guest guest = new Guest()
-                {
-                    Name = row["Name"].ToString()
-                };
+                //Guest guest = new Guest()
+                //{
+                //    Name = row["Name"].ToString()
+                //};
 
                 Room room = new Room
                 {
@@ -33,8 +33,8 @@ namespace virtual_receptionist.Model
                 DateTime arrival = (DateTime) row["ArrivalDate"];
                 DateTime departure = (DateTime) row["DepartureDate"];
 
-                Reservation reservationInstance = new Reservation(guest, room, numberOfGuests, arrival, departure);
-                reservations.Add(reservationInstance);
+                //Reservation reservationInstance = new Reservation(guest, room, numberOfGuests, arrival, departure);
+                //reservations.Add(reservationInstance);
             }
         }
 

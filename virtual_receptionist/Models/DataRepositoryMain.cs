@@ -28,9 +28,14 @@ namespace virtual_receptionist.Model
         private List<BillingItems> billingItems;
 
         /// <summary>
-        /// Vendégeket tartalmazó lista
+        /// Magánvendégeket tartalmazó lista
         /// </summary>
-        private List<Guest> guests;
+        private List<PrivateGuest> privateGuests;
+
+        /// <summary>
+        /// Vállalati vendégeket tartalmazó lista
+        /// </summary>
+        private List<CorporateGuest> corporateGuests;
 
         /// <summary>
         /// Orszgáokat tartalmazó lista
@@ -71,7 +76,8 @@ namespace virtual_receptionist.Model
 
             accomodations = new List<Accomodation>();
             billingItems = new List<BillingItems>();
-            guests = new List<Guest>();
+            privateGuests = new List<PrivateGuest>();
+            corporateGuests = new List<CorporateGuest>();
             countries = new List<Country>();
             hungarianZipCodesAndCities = new List<HungarianZipCodesAndCities>();
             rooms = new List<Room>();
