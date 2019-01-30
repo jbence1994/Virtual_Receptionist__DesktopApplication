@@ -141,7 +141,7 @@ namespace virtual_receptionist.Model
         public void Login()
         {
             string sql =
-                $"INSERT INTO desktop_log(Client, OS, LoginDate, LogoutDate) VALUES (\"{client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in...\")";
+                $"INSERT INTO desktop_log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in...\")";
             database.DML(sql);
         }
 
