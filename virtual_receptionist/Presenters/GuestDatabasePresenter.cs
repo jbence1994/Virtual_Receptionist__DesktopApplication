@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Specialized;
+using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Model;
 using virtual_receptionist.View;
@@ -244,33 +245,30 @@ namespace virtual_receptionist.Presenter
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
-                string name = listViewPrivateGuests.SelectedItems[0].Text;
-                string documentNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
-                string citizenship = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string birthDate = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
-
-                PrivateGuest privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country,
-                    zipCode, city,
-                    address,
-                    phoneNumber, emailAddress);
-
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (delete == DialogResult.Yes)
                 {
+                    string name = listViewPrivateGuests.SelectedItems[0].Text;
+                    string documentNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                    string citizenship = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                    string birthDate = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                    string country = comboBoxCountry.Text;
+                    string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                    string city = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                    string address = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                    string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
+                    string email = listViewPrivateGuests.SelectedItems[0].SubItems[9].Text;
+
+                    PrivateGuest privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country,
+                        zipCode, city, address, phoneNumber, email);
+
                     // ListView rekord törlés (GUI)
-
-
+                    int index = listViewPrivateGuests.FocusedItem.Index;
+                    listViewPrivateGuests.Items.RemoveAt(index);
 
                     //Adatbázis rekord törlése
-
                     dataRepository.DeleteGuest(privateGuest);
                 }
             }
@@ -293,7 +291,7 @@ namespace virtual_receptionist.Presenter
                 if (delete == DialogResult.Yes)
                 {
                     string name = listViewCorporateGuests.SelectedItems[0].Text;
-                    // Country
+                    string country = comboBoxHeadquarterCountry.Text;
                     string vatNumber = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                     string zipCode = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
                     string city = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
@@ -301,14 +299,14 @@ namespace virtual_receptionist.Presenter
                     string phoneNumber = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
                     string email = listViewCorporateGuests.SelectedItems[0].SubItems[7].Text;
 
-                    CorporateGuest corporateGuest = new CorporateGuest(name, vatNumber, null, zipCode, city, address,
+                    CorporateGuest corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address,
                         phoneNumber, email);
 
                     // ListView rekord törlése (GUI)
                     int index = listViewCorporateGuests.FocusedItem.Index;
                     listViewCorporateGuests.Items.RemoveAt(index);
 
-                    //Adatbázis rekord törlése
+                    // Adatbázis rekord törlése
                     dataRepository.DeleteGuest(corporateGuest);
                 }
             }
