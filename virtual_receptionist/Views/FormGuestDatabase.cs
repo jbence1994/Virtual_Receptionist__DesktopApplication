@@ -38,39 +38,64 @@ namespace virtual_receptionist.View
             presenter.InitalizeGuestTables();
         }
 
-        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
-        {
-            presenter.BackToMainMenu(this);
-        }
-
-        private void buttonAddCorporateGuest_Click(object sender, EventArgs e)
+        private void buttonAddCorporateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.AddNewRecordToCorporateGuestTable();
         }
 
-        private void buttonUpdateCorporateGuest_Click(object sender, EventArgs e)
+        private void buttonUpdateCorporateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.UpdateRecordInCorporateGuestTable();
         }
 
-        private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
+        private void buttonDeleteCorporateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.DeleteRecordFromCorporateGuestTable();
         }
 
-        private void buttonAddPrivateGuest_Click(object sender, EventArgs e)
+        private void buttonAddPrivateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.AddNewRecordToPrivateGuestTable();
         }
 
-        private void buttonUpdatePrivateGuest_Click(object sender, EventArgs e)
+        private void buttonUpdatePrivateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.UpdateRecordInPrivateGuestTable();
         }
 
-        private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
+        private void buttonDeletePrivateGuestModal_Click(object sender, EventArgs e)
         {
             presenter.DeleteRecordFromPrivateGuestTable();
+        }
+
+        private void buttonAddPrivateGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdatePrivateGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAddCorporateGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdateCorporateGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion

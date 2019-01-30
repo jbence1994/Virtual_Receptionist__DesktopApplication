@@ -31,34 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPagePrivateGuest = new System.Windows.Forms.TabPage();
-            this.buttonUpdatePrivateGuestModal = new System.Windows.Forms.Button();
-            this.buttonDeletePrivateGuestModal = new System.Windows.Forms.Button();
-            this.buttonAddPrivateGuestModal = new System.Windows.Forms.Button();
-            this.listViewPrivateGuests = new System.Windows.Forms.ListView();
-            this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderDocumentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCitizenship = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderBirthDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
-            this.buttonUpdateCorporateGuestModal = new System.Windows.Forms.Button();
-            this.buttonDeleteCorporateGuestModal = new System.Windows.Forms.Button();
-            this.buttonAddCorporateGuestModal = new System.Windows.Forms.Button();
-            this.listViewCorporateGuests = new System.Windows.Forms.ListView();
-            this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCompanyPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCompanyEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxPrivateGuest = new System.Windows.Forms.GroupBox();
+            this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
+            this.buttonUpdatePrivateGuest = new System.Windows.Forms.Button();
+            this.buttonAddPrivateGuest = new System.Windows.Forms.Button();
             this.textBoxEmailAddress = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
@@ -79,9 +55,21 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.buttonAddPrivateGuest = new System.Windows.Forms.Button();
-            this.buttonUpdatePrivateGuest = new System.Windows.Forms.Button();
-            this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
+            this.buttonUpdatePrivateGuestModal = new System.Windows.Forms.Button();
+            this.buttonDeletePrivateGuestModal = new System.Windows.Forms.Button();
+            this.buttonAddPrivateGuestModal = new System.Windows.Forms.Button();
+            this.listViewPrivateGuests = new System.Windows.Forms.ListView();
+            this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDocumentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCitizenship = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderBirthDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
             this.groupBoxCorporateGuest = new System.Windows.Forms.GroupBox();
             this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
             this.buttonUpdateCorporateGuest = new System.Windows.Forms.Button();
@@ -102,10 +90,22 @@
             this.labelCompanyPhoneNumber = new System.Windows.Forms.Label();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
             this.labelCompanyEmailAddress = new System.Windows.Forms.Label();
+            this.buttonUpdateCorporateGuestModal = new System.Windows.Forms.Button();
+            this.buttonDeleteCorporateGuestModal = new System.Windows.Forms.Button();
+            this.buttonAddCorporateGuestModal = new System.Windows.Forms.Button();
+            this.listViewCorporateGuests = new System.Windows.Forms.ListView();
+            this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderHeadqurterCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderHeadqurterZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderHeadqurterCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderHeadqurterAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCompanyPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCompanyEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPagePrivateGuest.SuspendLayout();
-            this.tabPageCorporateGuest.SuspendLayout();
             this.groupBoxPrivateGuest.SuspendLayout();
+            this.tabPageCorporateGuest.SuspendLayout();
             this.groupBoxCorporateGuest.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,237 +133,6 @@
             this.tabPagePrivateGuest.TabIndex = 0;
             this.tabPagePrivateGuest.Text = "Vendégek";
             this.tabPagePrivateGuest.UseVisualStyleBackColor = true;
-            // 
-            // buttonUpdatePrivateGuestModal
-            // 
-            this.buttonUpdatePrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonUpdatePrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdatePrivateGuestModal.Image")));
-            this.buttonUpdatePrivateGuestModal.Location = new System.Drawing.Point(990, 76);
-            this.buttonUpdatePrivateGuestModal.Name = "buttonUpdatePrivateGuestModal";
-            this.buttonUpdatePrivateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonUpdatePrivateGuestModal.TabIndex = 6;
-            this.buttonUpdatePrivateGuestModal.Text = "Vendég módosítása";
-            this.buttonUpdatePrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonUpdatePrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonUpdatePrivateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonUpdatePrivateGuestModal.Click += new System.EventHandler(this.buttonUpdatePrivateGuest_Click);
-            // 
-            // buttonDeletePrivateGuestModal
-            // 
-            this.buttonDeletePrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeletePrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePrivateGuestModal.Image")));
-            this.buttonDeletePrivateGuestModal.Location = new System.Drawing.Point(990, 146);
-            this.buttonDeletePrivateGuestModal.Name = "buttonDeletePrivateGuestModal";
-            this.buttonDeletePrivateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonDeletePrivateGuestModal.TabIndex = 5;
-            this.buttonDeletePrivateGuestModal.Text = "Vendég törlése";
-            this.buttonDeletePrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeletePrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeletePrivateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonDeletePrivateGuestModal.Click += new System.EventHandler(this.buttonDeletePrivateGuest_Click);
-            // 
-            // buttonAddPrivateGuestModal
-            // 
-            this.buttonAddPrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAddPrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPrivateGuestModal.Image")));
-            this.buttonAddPrivateGuestModal.Location = new System.Drawing.Point(990, 6);
-            this.buttonAddPrivateGuestModal.Name = "buttonAddPrivateGuestModal";
-            this.buttonAddPrivateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonAddPrivateGuestModal.TabIndex = 4;
-            this.buttonAddPrivateGuestModal.Text = "Új vendég hozzáadása";
-            this.buttonAddPrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonAddPrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonAddPrivateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonAddPrivateGuestModal.Click += new System.EventHandler(this.buttonAddPrivateGuest_Click);
-            // 
-            // listViewPrivateGuests
-            // 
-            this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderName,
-            this.columnHeaderDocumentID,
-            this.columnHeaderCitizenship,
-            this.columnHeaderBirthDate,
-            this.columnHeaderCountry,
-            this.columnHeaderZipCode,
-            this.columnHeaderCity,
-            this.columnHeaderAddress,
-            this.columnHeaderPhoneNumber,
-            this.columnHeaderEmailAddress});
-            this.listViewPrivateGuests.FullRowSelect = true;
-            this.listViewPrivateGuests.GridLines = true;
-            this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
-            this.listViewPrivateGuests.Name = "listViewPrivateGuests";
-            this.listViewPrivateGuests.Size = new System.Drawing.Size(981, 207);
-            this.listViewPrivateGuests.TabIndex = 1;
-            this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
-            this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeaderName
-            // 
-            this.columnHeaderName.Text = "Név";
-            this.columnHeaderName.Width = 150;
-            // 
-            // columnHeaderDocumentID
-            // 
-            this.columnHeaderDocumentID.Text = "Okmányazonosító";
-            this.columnHeaderDocumentID.Width = 150;
-            // 
-            // columnHeaderCitizenship
-            // 
-            this.columnHeaderCitizenship.Text = "Állampolgárság";
-            this.columnHeaderCitizenship.Width = 150;
-            // 
-            // columnHeaderBirthDate
-            // 
-            this.columnHeaderBirthDate.Text = "Születési idő";
-            this.columnHeaderBirthDate.Width = 150;
-            // 
-            // columnHeaderCountry
-            // 
-            this.columnHeaderCountry.Text = "Ország";
-            this.columnHeaderCountry.Width = 150;
-            // 
-            // columnHeaderZipCode
-            // 
-            this.columnHeaderZipCode.Text = "Irányítószám";
-            this.columnHeaderZipCode.Width = 150;
-            // 
-            // columnHeaderCity
-            // 
-            this.columnHeaderCity.Text = "Település";
-            this.columnHeaderCity.Width = 150;
-            // 
-            // columnHeaderAddress
-            // 
-            this.columnHeaderAddress.Text = "Cím";
-            this.columnHeaderAddress.Width = 150;
-            // 
-            // columnHeaderPhoneNumber
-            // 
-            this.columnHeaderPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderPhoneNumber.Width = 150;
-            // 
-            // columnHeaderEmailAddress
-            // 
-            this.columnHeaderEmailAddress.Text = "E-mail cím";
-            this.columnHeaderEmailAddress.Width = 150;
-            // 
-            // tabPageCorporateGuest
-            // 
-            this.tabPageCorporateGuest.Controls.Add(this.groupBoxCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuestModal);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuestModal);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuestModal);
-            this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
-            this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
-            this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 383);
-            this.tabPageCorporateGuest.TabIndex = 1;
-            this.tabPageCorporateGuest.Text = "Céges vendégek";
-            this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
-            // 
-            // buttonUpdateCorporateGuestModal
-            // 
-            this.buttonUpdateCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonUpdateCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateCorporateGuestModal.Image")));
-            this.buttonUpdateCorporateGuestModal.Location = new System.Drawing.Point(990, 76);
-            this.buttonUpdateCorporateGuestModal.Name = "buttonUpdateCorporateGuestModal";
-            this.buttonUpdateCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonUpdateCorporateGuestModal.TabIndex = 9;
-            this.buttonUpdateCorporateGuestModal.Text = "Vendég módosítása";
-            this.buttonUpdateCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonUpdateCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonUpdateCorporateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonUpdateCorporateGuestModal.Click += new System.EventHandler(this.buttonUpdateCorporateGuest_Click);
-            // 
-            // buttonDeleteCorporateGuestModal
-            // 
-            this.buttonDeleteCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeleteCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCorporateGuestModal.Image")));
-            this.buttonDeleteCorporateGuestModal.Location = new System.Drawing.Point(990, 146);
-            this.buttonDeleteCorporateGuestModal.Name = "buttonDeleteCorporateGuestModal";
-            this.buttonDeleteCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonDeleteCorporateGuestModal.TabIndex = 8;
-            this.buttonDeleteCorporateGuestModal.Text = "Vendég törlése";
-            this.buttonDeleteCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeleteCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeleteCorporateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonDeleteCorporateGuestModal.Click += new System.EventHandler(this.buttonDeleteCorporateGuest_Click);
-            // 
-            // buttonAddCorporateGuestModal
-            // 
-            this.buttonAddCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAddCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCorporateGuestModal.Image")));
-            this.buttonAddCorporateGuestModal.Location = new System.Drawing.Point(990, 6);
-            this.buttonAddCorporateGuestModal.Name = "buttonAddCorporateGuestModal";
-            this.buttonAddCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
-            this.buttonAddCorporateGuestModal.TabIndex = 7;
-            this.buttonAddCorporateGuestModal.Text = "Új vendég hozzáadása";
-            this.buttonAddCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonAddCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonAddCorporateGuestModal.UseVisualStyleBackColor = true;
-            this.buttonAddCorporateGuestModal.Click += new System.EventHandler(this.buttonAddCorporateGuest_Click);
-            // 
-            // listViewCorporateGuests
-            // 
-            this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderCompanyName,
-            this.columnHeaderVATNumber,
-            this.columnHeaderHeadqurterCountry,
-            this.columnHeaderHeadqurterZipCode,
-            this.columnHeaderHeadqurterCity,
-            this.columnHeaderHeadqurterAddress,
-            this.columnHeaderCompanyPhoneNumber,
-            this.columnHeaderCompanyEmailAddress});
-            this.listViewCorporateGuests.FullRowSelect = true;
-            this.listViewCorporateGuests.GridLines = true;
-            this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
-            this.listViewCorporateGuests.Name = "listViewCorporateGuests";
-            this.listViewCorporateGuests.Size = new System.Drawing.Size(981, 207);
-            this.listViewCorporateGuests.TabIndex = 2;
-            this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
-            this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeaderCompanyName
-            // 
-            this.columnHeaderCompanyName.Text = "Cégnév";
-            this.columnHeaderCompanyName.Width = 150;
-            // 
-            // columnHeaderVATNumber
-            // 
-            this.columnHeaderVATNumber.Text = "Adószám";
-            this.columnHeaderVATNumber.Width = 150;
-            // 
-            // columnHeaderHeadqurterCountry
-            // 
-            this.columnHeaderHeadqurterCountry.Text = "Ország";
-            this.columnHeaderHeadqurterCountry.Width = 150;
-            // 
-            // columnHeaderHeadqurterZipCode
-            // 
-            this.columnHeaderHeadqurterZipCode.Text = "Irányítószám";
-            this.columnHeaderHeadqurterZipCode.Width = 150;
-            // 
-            // columnHeaderHeadqurterCity
-            // 
-            this.columnHeaderHeadqurterCity.Text = "Település";
-            this.columnHeaderHeadqurterCity.Width = 150;
-            // 
-            // columnHeaderHeadqurterAddress
-            // 
-            this.columnHeaderHeadqurterAddress.Text = "Cím";
-            this.columnHeaderHeadqurterAddress.Width = 150;
-            // 
-            // columnHeaderCompanyPhoneNumber
-            // 
-            this.columnHeaderCompanyPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderCompanyPhoneNumber.Width = 150;
-            // 
-            // columnHeaderCompanyEmailAddress
-            // 
-            this.columnHeaderCompanyEmailAddress.Text = "E-mail cím";
-            this.columnHeaderCompanyEmailAddress.Width = 150;
             // 
             // groupBoxPrivateGuest
             // 
@@ -395,6 +164,36 @@
             this.groupBoxPrivateGuest.Size = new System.Drawing.Size(1141, 161);
             this.groupBoxPrivateGuest.TabIndex = 27;
             this.groupBoxPrivateGuest.TabStop = false;
+            // 
+            // buttonDeletePrivateGuest
+            // 
+            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(746, 122);
+            this.buttonDeletePrivateGuest.Name = "buttonDeletePrivateGuest";
+            this.buttonDeletePrivateGuest.Size = new System.Drawing.Size(125, 23);
+            this.buttonDeletePrivateGuest.TabIndex = 49;
+            this.buttonDeletePrivateGuest.Text = "Vendég törlése";
+            this.buttonDeletePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeletePrivateGuest.Click += new System.EventHandler(this.buttonDeletePrivateGuest_Click);
+            // 
+            // buttonUpdatePrivateGuest
+            // 
+            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(615, 122);
+            this.buttonUpdatePrivateGuest.Name = "buttonUpdatePrivateGuest";
+            this.buttonUpdatePrivateGuest.Size = new System.Drawing.Size(125, 23);
+            this.buttonUpdatePrivateGuest.TabIndex = 48;
+            this.buttonUpdatePrivateGuest.Text = "Vendég módosítása";
+            this.buttonUpdatePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonUpdatePrivateGuest.Click += new System.EventHandler(this.buttonUpdatePrivateGuest_Click);
+            // 
+            // buttonAddPrivateGuest
+            // 
+            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(484, 122);
+            this.buttonAddPrivateGuest.Name = "buttonAddPrivateGuest";
+            this.buttonAddPrivateGuest.Size = new System.Drawing.Size(125, 23);
+            this.buttonAddPrivateGuest.TabIndex = 47;
+            this.buttonAddPrivateGuest.Text = "Új vendég hozzáadása";
+            this.buttonAddPrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonAddPrivateGuest.Click += new System.EventHandler(this.buttonAddPrivateGuest_Click);
             // 
             // textBoxEmailAddress
             // 
@@ -557,32 +356,134 @@
             this.label10.TabIndex = 36;
             this.label10.Text = "E-mail cím:";
             // 
-            // buttonAddPrivateGuest
+            // buttonUpdatePrivateGuestModal
             // 
-            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(484, 122);
-            this.buttonAddPrivateGuest.Name = "buttonAddPrivateGuest";
-            this.buttonAddPrivateGuest.Size = new System.Drawing.Size(125, 23);
-            this.buttonAddPrivateGuest.TabIndex = 47;
-            this.buttonAddPrivateGuest.Text = "Új vendég hozzáadása";
-            this.buttonAddPrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonUpdatePrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUpdatePrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdatePrivateGuestModal.Image")));
+            this.buttonUpdatePrivateGuestModal.Location = new System.Drawing.Point(990, 76);
+            this.buttonUpdatePrivateGuestModal.Name = "buttonUpdatePrivateGuestModal";
+            this.buttonUpdatePrivateGuestModal.Size = new System.Drawing.Size(157, 64);
+            this.buttonUpdatePrivateGuestModal.TabIndex = 6;
+            this.buttonUpdatePrivateGuestModal.Text = "Vendég módosítása";
+            this.buttonUpdatePrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUpdatePrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonUpdatePrivateGuestModal.UseVisualStyleBackColor = true;
+            this.buttonUpdatePrivateGuestModal.Click += new System.EventHandler(this.buttonUpdatePrivateGuestModal_Click);
             // 
-            // buttonUpdatePrivateGuest
+            // buttonDeletePrivateGuestModal
             // 
-            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(615, 122);
-            this.buttonUpdatePrivateGuest.Name = "buttonUpdatePrivateGuest";
-            this.buttonUpdatePrivateGuest.Size = new System.Drawing.Size(125, 23);
-            this.buttonUpdatePrivateGuest.TabIndex = 48;
-            this.buttonUpdatePrivateGuest.Text = "Vendég módosítása";
-            this.buttonUpdatePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeletePrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeletePrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePrivateGuestModal.Image")));
+            this.buttonDeletePrivateGuestModal.Location = new System.Drawing.Point(990, 146);
+            this.buttonDeletePrivateGuestModal.Name = "buttonDeletePrivateGuestModal";
+            this.buttonDeletePrivateGuestModal.Size = new System.Drawing.Size(157, 64);
+            this.buttonDeletePrivateGuestModal.TabIndex = 5;
+            this.buttonDeletePrivateGuestModal.Text = "Vendég törlése";
+            this.buttonDeletePrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeletePrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeletePrivateGuestModal.UseVisualStyleBackColor = true;
+            this.buttonDeletePrivateGuestModal.Click += new System.EventHandler(this.buttonDeletePrivateGuestModal_Click);
             // 
-            // buttonDeletePrivateGuest
+            // buttonAddPrivateGuestModal
             // 
-            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(746, 122);
-            this.buttonDeletePrivateGuest.Name = "buttonDeletePrivateGuest";
-            this.buttonDeletePrivateGuest.Size = new System.Drawing.Size(125, 23);
-            this.buttonDeletePrivateGuest.TabIndex = 49;
-            this.buttonDeletePrivateGuest.Text = "Vendég törlése";
-            this.buttonDeletePrivateGuest.UseVisualStyleBackColor = true;
+            this.buttonAddPrivateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAddPrivateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPrivateGuestModal.Image")));
+            this.buttonAddPrivateGuestModal.Location = new System.Drawing.Point(990, 6);
+            this.buttonAddPrivateGuestModal.Name = "buttonAddPrivateGuestModal";
+            this.buttonAddPrivateGuestModal.Size = new System.Drawing.Size(157, 64);
+            this.buttonAddPrivateGuestModal.TabIndex = 4;
+            this.buttonAddPrivateGuestModal.Text = "Új vendég hozzáadása";
+            this.buttonAddPrivateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAddPrivateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonAddPrivateGuestModal.UseVisualStyleBackColor = true;
+            this.buttonAddPrivateGuestModal.Click += new System.EventHandler(this.buttonAddPrivateGuestModal_Click);
+            // 
+            // listViewPrivateGuests
+            // 
+            this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderName,
+            this.columnHeaderDocumentID,
+            this.columnHeaderCitizenship,
+            this.columnHeaderBirthDate,
+            this.columnHeaderCountry,
+            this.columnHeaderZipCode,
+            this.columnHeaderCity,
+            this.columnHeaderAddress,
+            this.columnHeaderPhoneNumber,
+            this.columnHeaderEmailAddress});
+            this.listViewPrivateGuests.FullRowSelect = true;
+            this.listViewPrivateGuests.GridLines = true;
+            this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
+            this.listViewPrivateGuests.Name = "listViewPrivateGuests";
+            this.listViewPrivateGuests.Size = new System.Drawing.Size(981, 207);
+            this.listViewPrivateGuests.TabIndex = 1;
+            this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
+            this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderName
+            // 
+            this.columnHeaderName.Text = "Név";
+            this.columnHeaderName.Width = 150;
+            // 
+            // columnHeaderDocumentID
+            // 
+            this.columnHeaderDocumentID.Text = "Okmányazonosító";
+            this.columnHeaderDocumentID.Width = 150;
+            // 
+            // columnHeaderCitizenship
+            // 
+            this.columnHeaderCitizenship.Text = "Állampolgárság";
+            this.columnHeaderCitizenship.Width = 150;
+            // 
+            // columnHeaderBirthDate
+            // 
+            this.columnHeaderBirthDate.Text = "Születési idő";
+            this.columnHeaderBirthDate.Width = 150;
+            // 
+            // columnHeaderCountry
+            // 
+            this.columnHeaderCountry.Text = "Ország";
+            this.columnHeaderCountry.Width = 150;
+            // 
+            // columnHeaderZipCode
+            // 
+            this.columnHeaderZipCode.Text = "Irányítószám";
+            this.columnHeaderZipCode.Width = 150;
+            // 
+            // columnHeaderCity
+            // 
+            this.columnHeaderCity.Text = "Település";
+            this.columnHeaderCity.Width = 150;
+            // 
+            // columnHeaderAddress
+            // 
+            this.columnHeaderAddress.Text = "Cím";
+            this.columnHeaderAddress.Width = 150;
+            // 
+            // columnHeaderPhoneNumber
+            // 
+            this.columnHeaderPhoneNumber.Text = "Telefonszám";
+            this.columnHeaderPhoneNumber.Width = 150;
+            // 
+            // columnHeaderEmailAddress
+            // 
+            this.columnHeaderEmailAddress.Text = "E-mail cím";
+            this.columnHeaderEmailAddress.Width = 150;
+            // 
+            // tabPageCorporateGuest
+            // 
+            this.tabPageCorporateGuest.Controls.Add(this.groupBoxCorporateGuest);
+            this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuestModal);
+            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuestModal);
+            this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuestModal);
+            this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
+            this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
+            this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 383);
+            this.tabPageCorporateGuest.TabIndex = 1;
+            this.tabPageCorporateGuest.Text = "Céges vendégek";
+            this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
             // 
             // groupBoxCorporateGuest
             // 
@@ -619,6 +520,7 @@
             this.buttonDeleteCorporateGuest.TabIndex = 49;
             this.buttonDeleteCorporateGuest.Text = "Vendég törlése";
             this.buttonDeleteCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonDeleteCorporateGuest.Click += new System.EventHandler(this.buttonDeleteCorporateGuest_Click);
             // 
             // buttonUpdateCorporateGuest
             // 
@@ -628,6 +530,7 @@
             this.buttonUpdateCorporateGuest.TabIndex = 48;
             this.buttonUpdateCorporateGuest.Text = "Vendég módosítása";
             this.buttonUpdateCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonUpdateCorporateGuest.Click += new System.EventHandler(this.buttonUpdateCorporateGuest_Click);
             // 
             // buttonAddCorporateGuest
             // 
@@ -637,6 +540,7 @@
             this.buttonAddCorporateGuest.TabIndex = 47;
             this.buttonAddCorporateGuest.Text = "Új vendég hozzáadása";
             this.buttonAddCorporateGuest.UseVisualStyleBackColor = true;
+            this.buttonAddCorporateGuest.Click += new System.EventHandler(this.buttonAddCorporateGuest_Click);
             // 
             // textBoxCompanyEmailAddress
             // 
@@ -767,6 +671,108 @@
             this.labelCompanyEmailAddress.TabIndex = 36;
             this.labelCompanyEmailAddress.Text = "E-mail cím:";
             // 
+            // buttonUpdateCorporateGuestModal
+            // 
+            this.buttonUpdateCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUpdateCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateCorporateGuestModal.Image")));
+            this.buttonUpdateCorporateGuestModal.Location = new System.Drawing.Point(990, 76);
+            this.buttonUpdateCorporateGuestModal.Name = "buttonUpdateCorporateGuestModal";
+            this.buttonUpdateCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
+            this.buttonUpdateCorporateGuestModal.TabIndex = 9;
+            this.buttonUpdateCorporateGuestModal.Text = "Vendég módosítása";
+            this.buttonUpdateCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUpdateCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonUpdateCorporateGuestModal.UseVisualStyleBackColor = true;
+            this.buttonUpdateCorporateGuestModal.Click += new System.EventHandler(this.buttonUpdateCorporateGuestModal_Click);
+            // 
+            // buttonDeleteCorporateGuestModal
+            // 
+            this.buttonDeleteCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeleteCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCorporateGuestModal.Image")));
+            this.buttonDeleteCorporateGuestModal.Location = new System.Drawing.Point(990, 146);
+            this.buttonDeleteCorporateGuestModal.Name = "buttonDeleteCorporateGuestModal";
+            this.buttonDeleteCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
+            this.buttonDeleteCorporateGuestModal.TabIndex = 8;
+            this.buttonDeleteCorporateGuestModal.Text = "Vendég törlése";
+            this.buttonDeleteCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeleteCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeleteCorporateGuestModal.UseVisualStyleBackColor = true;
+            this.buttonDeleteCorporateGuestModal.Click += new System.EventHandler(this.buttonDeleteCorporateGuestModal_Click);
+            // 
+            // buttonAddCorporateGuestModal
+            // 
+            this.buttonAddCorporateGuestModal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAddCorporateGuestModal.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCorporateGuestModal.Image")));
+            this.buttonAddCorporateGuestModal.Location = new System.Drawing.Point(990, 6);
+            this.buttonAddCorporateGuestModal.Name = "buttonAddCorporateGuestModal";
+            this.buttonAddCorporateGuestModal.Size = new System.Drawing.Size(157, 64);
+            this.buttonAddCorporateGuestModal.TabIndex = 7;
+            this.buttonAddCorporateGuestModal.Text = "Új vendég hozzáadása";
+            this.buttonAddCorporateGuestModal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAddCorporateGuestModal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonAddCorporateGuestModal.UseVisualStyleBackColor = true;
+            this.buttonAddCorporateGuestModal.Click += new System.EventHandler(this.buttonAddCorporateGuestModal_Click);
+            // 
+            // listViewCorporateGuests
+            // 
+            this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderCompanyName,
+            this.columnHeaderVATNumber,
+            this.columnHeaderHeadqurterCountry,
+            this.columnHeaderHeadqurterZipCode,
+            this.columnHeaderHeadqurterCity,
+            this.columnHeaderHeadqurterAddress,
+            this.columnHeaderCompanyPhoneNumber,
+            this.columnHeaderCompanyEmailAddress});
+            this.listViewCorporateGuests.FullRowSelect = true;
+            this.listViewCorporateGuests.GridLines = true;
+            this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
+            this.listViewCorporateGuests.Name = "listViewCorporateGuests";
+            this.listViewCorporateGuests.Size = new System.Drawing.Size(981, 207);
+            this.listViewCorporateGuests.TabIndex = 2;
+            this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
+            this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderCompanyName
+            // 
+            this.columnHeaderCompanyName.Text = "Cégnév";
+            this.columnHeaderCompanyName.Width = 150;
+            // 
+            // columnHeaderVATNumber
+            // 
+            this.columnHeaderVATNumber.Text = "Adószám";
+            this.columnHeaderVATNumber.Width = 150;
+            // 
+            // columnHeaderHeadqurterCountry
+            // 
+            this.columnHeaderHeadqurterCountry.Text = "Ország";
+            this.columnHeaderHeadqurterCountry.Width = 150;
+            // 
+            // columnHeaderHeadqurterZipCode
+            // 
+            this.columnHeaderHeadqurterZipCode.Text = "Irányítószám";
+            this.columnHeaderHeadqurterZipCode.Width = 150;
+            // 
+            // columnHeaderHeadqurterCity
+            // 
+            this.columnHeaderHeadqurterCity.Text = "Település";
+            this.columnHeaderHeadqurterCity.Width = 150;
+            // 
+            // columnHeaderHeadqurterAddress
+            // 
+            this.columnHeaderHeadqurterAddress.Text = "Cím";
+            this.columnHeaderHeadqurterAddress.Width = 150;
+            // 
+            // columnHeaderCompanyPhoneNumber
+            // 
+            this.columnHeaderCompanyPhoneNumber.Text = "Telefonszám";
+            this.columnHeaderCompanyPhoneNumber.Width = 150;
+            // 
+            // columnHeaderCompanyEmailAddress
+            // 
+            this.columnHeaderCompanyEmailAddress.Text = "E-mail cím";
+            this.columnHeaderCompanyEmailAddress.Width = 150;
+            // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -780,9 +786,9 @@
             this.Load += new System.EventHandler(this.FormGuestDatabase_Load);
             this.tabControlGuestDatabase.ResumeLayout(false);
             this.tabPagePrivateGuest.ResumeLayout(false);
-            this.tabPageCorporateGuest.ResumeLayout(false);
             this.groupBoxPrivateGuest.ResumeLayout(false);
             this.groupBoxPrivateGuest.PerformLayout();
+            this.tabPageCorporateGuest.ResumeLayout(false);
             this.groupBoxCorporateGuest.ResumeLayout(false);
             this.groupBoxCorporateGuest.PerformLayout();
             this.ResumeLayout(false);
