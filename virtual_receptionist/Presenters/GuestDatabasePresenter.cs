@@ -106,7 +106,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
-        public void AddNewRecordToPrivateGuestTable()
+        public void AddNewRecordToPrivateGuestTableModal()
         {
             privateGuest = new PrivateGuest();
             formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
@@ -117,7 +117,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void DeleteRecordFromPrivateGuestTable()
+        public void DeleteRecordFromPrivateGuestTableModal()
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
@@ -159,7 +159,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
-        public void UpdateRecordInPrivateGuestTable()
+        public void UpdateRecordInPrivateGuestTableModal()
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
@@ -201,7 +201,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
-        public void AddNewRecordToCorporateGuestTable()
+        public void AddNewRecordToCorporateGuestTableModal()
         {
             corporateGuest = new CorporateGuest();
             formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
@@ -212,7 +212,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Céges vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void DeleteRecordFromCorporateGuestTable()
+        public void DeleteRecordFromCorporateGuestTableModal()
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
@@ -251,7 +251,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
-        public void UpdateRecordInCorporateGuestTable()
+        public void UpdateRecordInCorporateGuestTableModal()
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
@@ -283,6 +283,54 @@ namespace virtual_receptionist.Presenter
             {
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void AddNewRecordToPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdateRecordInPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DeleteRecordFromPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DeleteRecordFromCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdateRecordInCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void AddNewRecordToCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion
