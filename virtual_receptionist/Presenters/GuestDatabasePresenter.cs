@@ -101,26 +101,15 @@ namespace virtual_receptionist.Presenter
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
-                string name = listViewGuests.SelectedItems[0].Text;
+                string name = listViewPrivateGuests.SelectedItems[0].Text;
 
-                bool nationality;
-
-                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
-                {
-                    nationality = true;
-                }
-                else
-                {
-                    nationality = false;
-                }
-
-                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
-                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
                 //guest = new CorporateGuest(name, name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
                 //    emailAddress);
@@ -132,8 +121,6 @@ namespace virtual_receptionist.Presenter
                 {
                     dataRepository.DeleteGuest(guest);
                 }
-
-                userIntervention = true;
             }
             else
             {
@@ -148,26 +135,15 @@ namespace virtual_receptionist.Presenter
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
-                string name = listViewGuests.SelectedItems[0].Text;
+                string name = listViewPrivateGuests.SelectedItems[0].Text;
 
-                bool nationality;
-
-                if (listViewGuests.SelectedItems[0].SubItems[1].Text == "belföldi")
-                {
-                    nationality = true;
-                }
-                else
-                {
-                    nationality = false;
-                }
-
-                string country = listViewGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewGuests.SelectedItems[0].SubItems[5].Text;
-                string vatNumber = listViewGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewGuests.SelectedItems[0].SubItems[8].Text;
+                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
                 //guest = new Guest(name, nationality, country, zipCode, city, address, vatNumber, phoneNumber,
                 //    emailAddress);
@@ -177,8 +153,6 @@ namespace virtual_receptionist.Presenter
                 {
                     //guest = formModalGuestDatabase.Guest;
                     dataRepository.UpdateGuest(guest);
-
-                    userIntervention = true;
                 }
             }
             else

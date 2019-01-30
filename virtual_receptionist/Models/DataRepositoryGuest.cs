@@ -145,13 +145,6 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void UpdateGuest(Guest guest)
         {
-            bool nationality = false;
-
-            //if (guest.Nationality == "belföldi")
-            //{
-            //    nationality = true;
-            //}
-
             //string sql =
             //    $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.Nationality=\"{nationality.ToString()}\", guest.Country=\"{guest.Country}\", guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.VATNumber=\"{guest.VatNumber}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.Name LIKE \"{guest.Name}\"";
             //database.DML(sql);
@@ -163,17 +156,6 @@ namespace virtual_receptionist.Model
         /// <param name="guest">Guest objektum</param>
         public void CreateGuest(Guest guest)
         {
-            bool nationality;
-
-            //if (guest.Nationality == "belföldi")
-            //{
-            //    nationality = true;
-            //}
-            //else
-            //{
-            //    nationality = false;
-            //}
-
             //string sql =
             //    $"INSERT INTO guest(Name, Nationality, Country, ZipCode, City, Address, VATNumber, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{nationality.ToString()}\", \"{guest.Country}\", \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.VatNumber}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\"";
             //database.DML(sql);

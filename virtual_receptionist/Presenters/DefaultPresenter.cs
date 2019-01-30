@@ -37,19 +37,14 @@ namespace virtual_receptionist.Presenter
         /// <param name="form">Ablak, amely bezárásra kerül</param>
         public void BackToMainMenu(Form form)
         {
-            if (userIntervention)
+            DialogResult backToMainMenu =
+                MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (backToMainMenu == DialogResult.Yes)
             {
-                DialogResult backToMainMenu =
-                    MessageBox.Show("Nem mentett változásai vannak! Biztosan visszalép a főmenübe?", "",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (backToMainMenu == DialogResult.Yes)
-                {
-                    form.Close();
-                }
+                form.Close();
             }
-
-            form.Close();
         }
 
         /// <summary>
