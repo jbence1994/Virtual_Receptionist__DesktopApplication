@@ -283,6 +283,11 @@
             this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
             this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
             this.numericUpDownNumberOfGuests.TabIndex = 30;
+            this.numericUpDownNumberOfGuests.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // dateTimePickerDepartureDate
             // 
