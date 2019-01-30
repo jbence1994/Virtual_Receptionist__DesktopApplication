@@ -108,11 +108,17 @@
     <Compile Include="Views\FormModalBillingItems.Designer.cs">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormModalGuestDatabase.cs">
+    <Compile Include="Views\FormModalCorporateGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormModalGuestDatabase.Designer.cs">
-      <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
+    <Compile Include="Views\FormModalCorporateGuestDatabase.Designer.cs">
+      <DependentUpon>FormModalCorporateGuestDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormModalPrivateGuestDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormModalPrivateGuestDatabase.Designer.cs">
+      <DependentUpon>FormModalPrivateGuestDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormGuestRegistrationCard.cs">
       <SubType>Form</SubType>
@@ -156,8 +162,11 @@
     <EmbeddedResource Include="Views\FormModalBillingItems.resx">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormModalGuestDatabase.resx">
-      <DependentUpon>FormModalGuestDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FormModalCorporateGuestDatabase.resx">
+      <DependentUpon>FormModalCorporateGuestDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormModalPrivateGuestDatabase.resx">
+      <DependentUpon>FormModalPrivateGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormGuestRegistrationCard.resx">
       <DependentUpon>FormGuestRegistrationCard.cs</DependentUpon>
