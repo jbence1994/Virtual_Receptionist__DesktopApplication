@@ -65,6 +65,7 @@ namespace virtual_receptionist.Presenter
                 formLogin.Hide();
                 FormMainMenu formMainMenu = new FormMainMenu(formLogin);
                 formMainMenu.Show();
+                dataRepository.Login();
             }
             else
             {

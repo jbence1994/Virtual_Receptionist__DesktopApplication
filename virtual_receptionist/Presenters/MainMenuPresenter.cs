@@ -80,6 +80,7 @@ namespace virtual_receptionist.Presenter
             {
                 formMainMenu.Close();
                 formLogin.Show();
+                dataRepository.Logout();
             }
         }
 

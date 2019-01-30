@@ -136,23 +136,22 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely naplózza az alkalmazásba bejelentkezést
         /// </summary>
         public void Login()
         {
             string sql =
-                $"INSERT INTO desktop_log(MachineName, LoginDate) VALUES ({client}, {DateTime.Now})";
-
+                $"INSERT INTO desktop_log(Client, OS, LoginDate, LogoutDate) VALUES (\"{client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in...\")";
             database.DML(sql);
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely naplózza az alkalmazásból kijelentkezést
         /// </summary>
         public void Logout()
         {
-            string sql = $"INSERT INTO desktop_log(LogoutDate) VALUES ({DateTime.Now})";
-
+            string sql =
+                $"UPDATE desktop_log SET LogoutDate = \"{DateTime.Now}\" WHERE LogoutDate LIKE \"Logged in...\"";
             database.DML(sql);
         }
 
