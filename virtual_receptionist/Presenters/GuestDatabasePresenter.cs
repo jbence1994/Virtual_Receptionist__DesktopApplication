@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Model;
@@ -38,6 +39,11 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private FormModalGuestDatabase formModalGuestDatabase;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private List<string> countries;
+
         #endregion
 
         #region Konstruktor
@@ -52,6 +58,7 @@ namespace virtual_receptionist.Presenter
             listViewCorporateGuests = (ListView) controls[1];
             comboBoxCountry = (ComboBox) controls[2];
             comboBoxHeadquarterCountry = (ComboBox) controls[3];
+            countries = dataRepository.GetCountries();
         }
 
         #endregion
@@ -90,8 +97,8 @@ namespace virtual_receptionist.Presenter
                 listViewCorporateGuests.Items.Add(corporateGuests);
             }
 
-            comboBoxCountry.DataSource = dataRepository.GetCountries();
-            comboBoxHeadquarterCountry.DataSource = dataRepository.GetCountries();
+            comboBoxCountry.DataSource = countries;
+            comboBoxHeadquarterCountry.DataSource = countries;
         }
 
         /// <summary>
@@ -327,7 +334,18 @@ namespace virtual_receptionist.Presenter
                 textBox[1].Text = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
                 textBox[2].Text = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
                 textBox[3].Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                //Country
+
+                string selectedCountry = null;
+
+                foreach (string country in countries)
+                {
+                    if (country.Contains(listViewPrivateGuests.SelectedItems[0].SubItems[4].Text))
+                    {
+                        selectedCountry = country;
+                    }
+                }
+
+                comboBoxCountry.SelectedItem = selectedCountry;
                 textBox[4].Text = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
                 textBox[5].Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 textBox[6].Text = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
@@ -346,7 +364,18 @@ namespace virtual_receptionist.Presenter
                 textBox[0].Text = listViewCorporateGuests.SelectedItems[0].Text;
                 textBox[1].Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                 textBox[2].Text = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
-                // Country
+
+                string selectedCountry = null;
+
+                foreach (string country in countries)
+                {
+                    if (country.Contains(listViewPrivateGuests.SelectedItems[0].SubItems[4].Text))
+                    {
+                        selectedCountry = country;
+                    }
+                }
+
+                comboBoxCountry.SelectedItem = selectedCountry;
                 textBox[3].Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
                 textBox[4].Text = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;
                 textBox[5].Text = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
