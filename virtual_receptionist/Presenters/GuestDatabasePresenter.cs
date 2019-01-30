@@ -15,7 +15,12 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendég osztály egy példánya
         /// </summary>
-        private Guest guest;
+        private PrivateGuest privateGuest;
+
+        /// <summary>
+        /// Céges vendég osztály egy példánya
+        /// </summary>
+        private CorporateGuest corporateGuest;
 
         /// <summary>
         /// Magánvendég táblázat
@@ -88,10 +93,10 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToPrivateGuestTable()
         {
-            guest = new PrivateGuest();
-            formModalGuestDatabase = new FormModalGuestDatabase(guest);
+            privateGuest = new PrivateGuest();
+            formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
             formModalGuestDatabase.ShowDialog();
-            dataRepository.CreateGuest(guest);
+            dataRepository.CreateGuest(privateGuest);
         }
 
         /// <summary>
@@ -112,7 +117,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
-                guest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
+                privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+                    address,
                     phoneNumber, emailAddress);
 
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
@@ -126,7 +132,7 @@ namespace virtual_receptionist.Presenter
 
                     //Adatbázis rekord törlése
 
-                    dataRepository.DeleteGuest(guest);
+                    dataRepository.DeleteGuest(privateGuest);
                 }
             }
             else
@@ -153,9 +159,10 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
-                guest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
+                privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+                    address,
                     phoneNumber, emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(guest);
+                formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
                 {
@@ -164,7 +171,7 @@ namespace virtual_receptionist.Presenter
                     //guest = formModalGuestDatabase.Guest;
 
                     // Adatbázis rekord módosítása
-                    dataRepository.UpdateGuest(guest);
+                    dataRepository.UpdateGuest(privateGuest);
                 }
             }
             else
@@ -178,10 +185,10 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToCorporateGuestTable()
         {
-            guest = new CorporateGuest();
-            formModalGuestDatabase = new FormModalGuestDatabase(guest);
+            corporateGuest = new CorporateGuest();
+            formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
             formModalGuestDatabase.ShowDialog();
-            dataRepository.CreateGuest(guest);
+            dataRepository.CreateGuest(corporateGuest);
         }
 
         /// <summary>
@@ -200,7 +207,8 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
 
-                guest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber, emailAddress);
+                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
+                    emailAddress);
 
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -213,7 +221,7 @@ namespace virtual_receptionist.Presenter
 
                     //Adatbázis rekord törlése
 
-                    dataRepository.DeleteGuest(guest);
+                    dataRepository.DeleteGuest(corporateGuest);
                 }
             }
             else
@@ -238,8 +246,9 @@ namespace virtual_receptionist.Presenter
                 string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
 
-                guest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber, emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(guest);
+                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
+                    emailAddress);
+                formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
 
                 if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
                 {
@@ -248,7 +257,7 @@ namespace virtual_receptionist.Presenter
                     //guest = formModalGuestDatabase.Guest;
 
                     // Adatbázis rekord módosítása
-                    dataRepository.UpdateGuest(guest);
+                    dataRepository.UpdateGuest(corporateGuest);
                 }
             }
             else

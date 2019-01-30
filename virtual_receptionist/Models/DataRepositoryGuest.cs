@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Security.Policy;
 
 namespace virtual_receptionist.Model
 {
@@ -14,7 +15,7 @@ namespace virtual_receptionist.Model
         private void UploadPrivateGuestsList()
         {
             string sql =
-                "SELECT guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.DocumentNumber != \"\"";
+                "SELECT privateGuest.Name, privateGuest.DocumentNumber, privateGuest.Citizenship, privateGuest.BirthDate, country.CountryName, privateGuest.ZipCode, privateGuest.City, privateGuest.Address, privateGuest.VATNumber, privateGuest.PhoneNumber, privateGuest.EmailAddress FROM privateGuest, country WHERE privateGuest.Country = country.ID AND privateGuest.DocumentNumber != \"\"";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -43,7 +44,7 @@ namespace virtual_receptionist.Model
         private void UploadCorporateGuestList()
         {
             string sql =
-                "SELECT guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
+                "SELECT privateGuest.Name, privateGuest.VATNumber, country.CountryName, privateGuest.ZipCode, privateGuest.City, privateGuest.Address, privateGuest.VATNumber, privateGuest.PhoneNumber, privateGuest.EmailAddress FROM privateGuest, country WHERE privateGuest.Country = country.ID AND privateGuest.VATNumber != \"\"";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -132,33 +133,65 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Vendég törlése
         /// </summary>
-        /// <param name="guest">Guest objektum</param>
-        public void DeleteGuest(Guest guest)
+        /// <param name="privateGuest">PrivateGuest objektum</param>
+        public void DeleteGuest(PrivateGuest privateGuest)
         {
-            string sql = $"DELETE FROM guest WHERE guest.Name LIKE \"{guest.Name}\"";
+            string sql = $"DELETE FROM guest WHERE guest.Name LIKE \"{privateGuest.Name}\"";
+            database.DML(sql);
+        }
+
+        /// <summary>
+        /// Céges vendég törlése
+        /// </summary>
+        /// <param name="corporateGuest">CorporateGuest objektum</param>
+        public void DeleteGuest(CorporateGuest corporateGuest)
+        {
+            string sql = $"DELETE FROM guest WHERE guest.Name LIKE \"{corporateGuest.Name}\"";
             database.DML(sql);
         }
 
         /// <summary>
         /// Vendég módosítása
         /// </summary>
-        /// <param name="guest">Guest objektum</param>
-        public void UpdateGuest(Guest guest)
+        /// <param name="privateGuest">PrivateGuest objektum</param>
+        public void UpdateGuest(PrivateGuest privateGuest)
         {
-            //string sql =
-            //    $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.Nationality=\"{nationality.ToString()}\", guest.Country=\"{guest.Country}\", guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.VATNumber=\"{guest.VatNumber}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.Name LIKE \"{guest.Name}\"";
-            //database.DML(sql);
+            string sql =
+                $"UPDATE guest SET guest.Name=\"{privateGuest.Name}\", guest.DocumentNumber=\"{privateGuest.DocumentNumber}\", guest.Citizenship=\"{privateGuest.Citizenship}\", guest.BirthDate=\"{privateGuest.BirthDate}\", guest.Country=\"{privateGuest.Country}\", guest.ZipCode=\"{privateGuest.ZipCode}\", guest.City=\"{privateGuest.City}\", guest.Address=\"{privateGuest.Address}\", guest.PhoneNumber=\"{privateGuest.PhoneNumber}\", guest.EmailAddress=\"{privateGuest.EmailAddress}\" WHERE guest.Name LIKE \"{privateGuest.Name}\"";
+            database.DML(sql);
+        }
+
+        /// <summary>
+        /// Vendég módosítása
+        /// </summary>
+        /// <param name="corporateGuest">CorporateGuest objektum</param>
+        public void UpdateGuest(CorporateGuest corporateGuest)
+        {
+            string sql =
+                $"UPDATE guest SET guest.Name=\"{corporateGuest.Name}\", guest.VATNumber=\"{corporateGuest.VatNumber}\", guest.Country=\"{corporateGuest.Country}\", guest.ZipCode=\"{corporateGuest.ZipCode}\", guest.City=\"{corporateGuest.City}\", guest.Address=\"{corporateGuest.Address}\", guest.PhoneNumber=\"{corporateGuest.PhoneNumber}\", guest.EmailAddress=\"{corporateGuest.EmailAddress}\" WHERE guest.Name LIKE \"{corporateGuest.Name}\"";
+            database.DML(sql);
         }
 
         /// <summary>
         /// Vendég létrehozása
         /// </summary>
-        /// <param name="guest">Guest objektum</param>
-        public void CreateGuest(Guest guest)
+        /// <param name="privateGuest">PrivateGuest objektum</param>
+        public void CreateGuest(PrivateGuest privateGuest)
         {
-            //string sql =
-            //    $"INSERT INTO guest(Name, Nationality, Country, ZipCode, City, Address, VATNumber, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{nationality.ToString()}\", \"{guest.Country}\", \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.VatNumber}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\"";
-            //database.DML(sql);
+            string sql =
+                $"INSERT INTO guest(Name, DocumentNumber, Citizenship, BirthDate, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{privateGuest.Name}\", \"{privateGuest.DocumentNumber}\", \"{privateGuest.Citizenship}\", \"{privateGuest.BirthDate}\", \"{privateGuest.Country}\", \"{privateGuest.ZipCode}\", \"{privateGuest.City}\", \"{privateGuest.Address}\", \"{privateGuest.PhoneNumber}\", \"{privateGuest.EmailAddress}\"";
+            database.DML(sql);
+        }
+
+        /// <summary>
+        /// Vendég módosítása
+        /// </summary>
+        /// <param name="corporateGuest">CorporateGuest objektum</param>
+        public void CreateGuest(CorporateGuest corporateGuest)
+        {
+            string sql =
+                $"INSERT INTO guest(Name, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{corporateGuest.Name}\", \"{corporateGuest.VatNumber}\", \"{corporateGuest.Country}\", \"{corporateGuest.ZipCode}\", \"{corporateGuest.City}\", \"{corporateGuest.Address}\", \"{corporateGuest.PhoneNumber}\", \"{corporateGuest.EmailAddress}\"";
+            database.DML(sql);
         }
 
         #endregion
