@@ -104,6 +104,30 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public void AddNewRecordToPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdateRecordInPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DeleteRecordFromPrivateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
         /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
         public void AddNewRecordToPrivateGuestTableModal()
@@ -112,48 +136,6 @@ namespace virtual_receptionist.Presenter
             formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
             formModalGuestDatabase.ShowDialog();
             dataRepository.CreateGuest(privateGuest);
-        }
-
-        /// <summary>
-        /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
-        /// </summary>
-        public void DeleteRecordFromPrivateGuestTableModal()
-        {
-            if (listViewPrivateGuests.SelectedItems.Count > 0)
-            {
-                string name = listViewPrivateGuests.SelectedItems[0].Text;
-                string documentNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
-                string citizenship = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string birthDate = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
-                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
-
-                privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
-                    address,
-                    phoneNumber, emailAddress);
-
-                DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (delete == DialogResult.Yes)
-                {
-                    // ListView rekord törlés (GUI)
-
-
-
-                    //Adatbázis rekord törlése
-
-                    dataRepository.DeleteGuest(privateGuest);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         /// <summary>
@@ -199,34 +181,26 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
+        /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void AddNewRecordToCorporateGuestTableModal()
+        public void DeleteRecordFromPrivateGuestTableModal()
         {
-            corporateGuest = new CorporateGuest();
-            formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
-            formModalGuestDatabase.ShowDialog();
-            dataRepository.CreateGuest(corporateGuest);
-        }
-
-        /// <summary>
-        /// Céges vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
-        /// </summary>
-        public void DeleteRecordFromCorporateGuestTableModal()
-        {
-            if (listViewCorporateGuests.SelectedItems.Count > 0)
+            if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
-                string name = listViewCorporateGuests.SelectedItems[0].Text;
-                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                string name = listViewPrivateGuests.SelectedItems[0].Text;
+                string documentNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                string citizenship = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                string birthDate = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
                 string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
                 string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
                 string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
                 string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
 
-                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
-                    emailAddress);
+                privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+                    address,
+                    phoneNumber, emailAddress);
 
                 DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -239,13 +213,48 @@ namespace virtual_receptionist.Presenter
 
                     //Adatbázis rekord törlése
 
-                    dataRepository.DeleteGuest(corporateGuest);
+                    dataRepository.DeleteGuest(privateGuest);
                 }
             }
             else
             {
                 MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void AddNewRecordToCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdateRecordInCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DeleteRecordFromCorporateGuestTable()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
+        /// </summary>
+        public void AddNewRecordToCorporateGuestTableModal()
+        {
+            corporateGuest = new CorporateGuest();
+            formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
+            formModalGuestDatabase.ShowDialog();
+            dataRepository.CreateGuest(corporateGuest);
         }
 
         /// <summary>
@@ -286,51 +295,42 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Céges vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void AddNewRecordToPrivateGuestTable()
+        public void DeleteRecordFromCorporateGuestTableModal()
         {
-            throw new System.NotImplementedException();
-        }
+            if (listViewCorporateGuests.SelectedItems.Count > 0)
+            {
+                string name = listViewCorporateGuests.SelectedItems[0].Text;
+                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                string country = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                string city = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
+                string address = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void UpdateRecordInPrivateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
+                corporateGuest = new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber,
+                    emailAddress);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DeleteRecordFromPrivateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
+                DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DeleteRecordFromCorporateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
+                if (delete == DialogResult.Yes)
+                {
+                    // ListView rekord törlés (GUI)
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void UpdateRecordInCorporateGuestTable()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void AddNewRecordToCorporateGuestTable()
-        {
-            throw new System.NotImplementedException();
+
+                    //Adatbázis rekord törlése
+
+                    dataRepository.DeleteGuest(corporateGuest);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
