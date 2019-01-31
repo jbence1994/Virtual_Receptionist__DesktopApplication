@@ -204,15 +204,36 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToPrivateGuestTable()
         {
-            PrivateGuest privateGuest = new PrivateGuest();
+            string name = textBoxName.Text;
+            string documentNumber = textBoxDocumentID.Text;
+            string citizenship = textBoxCitizenship.Text;
+            string birthDate = textBoxBirthDate.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
+            string zipCode = textBoxZipCode.Text;
+            string city = textBoxCity.Text;
+            string address = textBoxAddress.Text;
+            string phoneNumber = textBoxPhoneNumber.Text;
+            string email = textBoxEmailAddress.Text;
 
-            string[] record = new string[5];
+            PrivateGuest privateGuest = new PrivateGuest(name, documentNumber, citizenship, birthDate, country, zipCode,
+                city, address, phoneNumber, email);
 
 
-            ListViewItem newRecord = new ListViewItem(record);
-
+            // ListView rekord hozzáadás (GUI)
+            ListViewItem newRecord = new ListViewItem();
+            newRecord.Text = name;
+            newRecord.SubItems.Add(documentNumber);
+            newRecord.SubItems.Add(citizenship);
+            newRecord.SubItems.Add(birthDate);
+            newRecord.SubItems.Add(country);
+            newRecord.SubItems.Add(zipCode);
+            newRecord.SubItems.Add(city);
+            newRecord.SubItems.Add(address);
+            newRecord.SubItems.Add(phoneNumber);
+            newRecord.SubItems.Add(email);
             listViewPrivateGuests.Items.Add(newRecord);
 
+            //Adatbázis rekord törlése
             dataRepository.CreateGuest(privateGuest);
         }
 
@@ -359,7 +380,7 @@ namespace virtual_receptionist.Presenter
                     string documentNumber = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
                     string citizenship = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
                     string birthDate = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                    string country = comboBoxCountry.Text;
+                    string country = comboBoxCountry.SelectedItem.ToString();
                     string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
                     string city = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                     string address = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
@@ -410,7 +431,7 @@ namespace virtual_receptionist.Presenter
                 if (delete == DialogResult.Yes)
                 {
                     string name = listViewCorporateGuests.SelectedItems[0].Text;
-                    string country = comboBoxHeadquarterCountry.Text;
+                    string country = comboBoxHeadquarterCountry.SelectedItem.ToString();
                     string vatNumber = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                     string zipCode = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
                     string city = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
