@@ -75,7 +75,7 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Metódus, amely adatforrásként szolgál a számlázó modális ablak ComboBox komponensének
+        /// Metódus, amely országok neveit tartalmazza
         /// </summary>
         /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
         public List<string> GetCountries()

@@ -27,7 +27,11 @@ namespace virtual_receptionist.View
         {
             InitializeComponent();
             presenter = new GuestDatabasePresenter(listViewPrivateGuests, listViewCorporateGuests, comboBoxCountry,
-                comboBoxHeadquarterCountry);
+                comboBoxHeadquarterCountry, textBoxName, textBoxDocumentID, textBoxCitizenship,
+                textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress,
+                textBoxCompanyName, textBoxVATNumber,
+                textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
+                textBoxCompanyEmailAddress);
         }
 
         #endregion
@@ -81,28 +85,22 @@ namespace virtual_receptionist.View
 
         private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRecordFromPrivateGuestTable(textBoxName, textBoxDocumentID, textBoxCitizenship,
-                textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress);
+            presenter.DeleteRecordFromPrivateGuestTable();
         }
 
         private void buttonDeleteCorporateGuest_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRecordFromCorporateGuestTable(textBoxCompanyName, textBoxVATNumber,
-                textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
-                textBoxCompanyEmailAddress);
+            presenter.DeleteRecordFromCorporateGuestTable();
         }
 
         private void listViewPrivateGuests_SelectedIndexChanged(object sender, EventArgs e)
         {
-            presenter.ListViewPrivateGuestsSelectedIndexChanged(textBoxName, textBoxDocumentID, textBoxCitizenship,
-                textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress);
+            presenter.ListViewPrivateGuestsSelectedIndexChanged();
         }
 
         private void listViewCorporateGuests_SelectedIndexChanged(object sender, EventArgs e)
         {
-            presenter.ListViewCorporateGuestsSelectedIndexChanged(textBoxCompanyName, textBoxVATNumber,
-                textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
-                textBoxCompanyEmailAddress);
+            presenter.ListViewCorporateGuestsSelectedIndexChanged();
         }
 
         #endregion

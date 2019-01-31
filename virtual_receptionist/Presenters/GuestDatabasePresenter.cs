@@ -39,71 +39,87 @@ namespace virtual_receptionist.Presenter
         private FormModalGuestDatabase formModalGuestDatabase;
 
         /// <summary>
-        /// 
+        /// Országokat tartalmazó lista
         /// </summary>
         private List<string> countries;
+
         /// <summary>
-        /// 
+        /// Vendég e-mail címe szövegmező
         /// </summary>
         private TextBox textBoxEmailAddress;
+
         /// <summary>
-        /// 
+        /// Vendég telefonszáma szövegmező
         /// </summary>
         private TextBox textBoxPhoneNumber;
+
         /// <summary>
-        /// 
+        /// Vendég lakhelyének címe (utca, házszám) szövegmező
         /// </summary>
         private TextBox textBoxAddress;
+
         /// <summary>
-        /// 
+        /// Vendég lakhelyének települése szövegmező
         /// </summary>
         private TextBox textBoxCity;
+
         /// <summary>
-        /// 
+        /// Vendég lakhelyének irányítószáma szövegmező
         /// </summary>
         private TextBox textBoxZipCode;
+
         /// <summary>
-        /// 
+        /// Vendég születési ideje szövegmező
         /// </summary>
         private TextBox textBoxBirthDate;
+
         /// <summary>
-        /// 
+        /// Vendég állampolgársága szövegmező
         /// </summary>
         private TextBox textBoxCitizenship;
+
         /// <summary>
-        /// 
+        /// Vendég útlevél vagy személyi igazolvány száma szövegmező
         /// </summary>
         private TextBox textBoxDocumentID;
+
         /// <summary>
-        /// 
+        /// Vendég neve szövegmező
         /// </summary>
         private TextBox textBoxName;
+
         /// <summary>
-        /// 
+        /// Céges vendég e-mail címe szövegmező
         /// </summary>
         private TextBox textBoxCompanyEmailAddress;
+
         /// <summary>
-        /// 
+        /// Céges vendég telefonszáma szövegmező
         /// </summary>
         private TextBox textBoxCompanyPhoneNumber;
+
         /// <summary>
-        /// 
+        /// Céges vendég települése szövegmező
         /// </summary>
         private TextBox textBoxHeadquarterCity;
+
         /// <summary>
-        /// 
+        /// Céges vendég címe (utca, házszám) szövegmező
         /// </summary>
         private TextBox textBoxHeadquarterAddress;
+
         /// <summary>
-        /// 
+        /// Céges vendég irányítószáma szövegmező
         /// </summary>
         private TextBox textBoxHeadquarterZipCode;
+
         /// <summary>
-        /// 
+        /// Céges vendég adószáma szövegmező
         /// </summary>
         private TextBox textBoxVATNumber;
+
         /// <summary>
-        /// 
+        /// Céges vendég cégneve szövegmező
         /// </summary>
         private TextBox textBoxCompanyName;
 
@@ -123,6 +139,24 @@ namespace virtual_receptionist.Presenter
             listViewCorporateGuests = (ListView) controls[1];
             comboBoxCountry = (ComboBox) controls[2];
             comboBoxHeadquarterCountry = (ComboBox) controls[3];
+
+            textBoxName = (TextBox) controls[4];
+            textBoxDocumentID = (TextBox) controls[5];
+            textBoxCitizenship = (TextBox) controls[6];
+            textBoxBirthDate = (TextBox) controls[7];
+            textBoxZipCode = (TextBox) controls[8];
+            textBoxCity = (TextBox) controls[9];
+            textBoxAddress = (TextBox) controls[10];
+            textBoxPhoneNumber = (TextBox) controls[11];
+            textBoxEmailAddress = (TextBox) controls[12];
+
+            textBoxCompanyName = (TextBox) controls[13];
+            textBoxVATNumber = (TextBox) controls[14];
+            textBoxHeadquarterZipCode = (TextBox) controls[15];
+            textBoxHeadquarterCity = (TextBox) controls[16];
+            textBoxHeadquarterAddress = (TextBox) controls[17];
+            textBoxCompanyPhoneNumber = (TextBox) controls[18];
+            textBoxCompanyEmailAddress = (TextBox) controls[19];
         }
 
         #endregion
@@ -312,7 +346,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void DeleteRecordFromPrivateGuestTable(params TextBox[] textBoxs)
+        public void DeleteRecordFromPrivateGuestTable()
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
@@ -339,13 +373,19 @@ namespace virtual_receptionist.Presenter
                     int index = listViewPrivateGuests.FocusedItem.Index;
                     listViewPrivateGuests.Items.RemoveAt(index);
 
-                    foreach (var textBox in textBoxs)
-                    {
-                        textBox.Clear();
-                    }
+                    //GUI vezérlők alaphelyzetbe állítása
+                    textBoxName.Clear();
+                    textBoxDocumentID.Clear();
+                    textBoxCitizenship.Clear();
+                    textBoxBirthDate.Clear();
                     comboBoxCountry.DataSource = null;
                     comboBoxCountry.DataSource = countries;
                     comboBoxCountry.SelectedItem = countries[0];
+                    textBoxZipCode.Clear();
+                    textBoxCity.Clear();
+                    textBoxAddress.Clear();
+                    textBoxPhoneNumber.Clear();
+                    textBoxEmailAddress.Clear();
 
                     //Adatbázis rekord törlése
                     dataRepository.DeleteGuest(privateGuest);
@@ -360,7 +400,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Céges vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        public void DeleteRecordFromCorporateGuestTable(params TextBox[] textBoxs)
+        public void DeleteRecordFromCorporateGuestTable()
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
@@ -385,10 +425,14 @@ namespace virtual_receptionist.Presenter
                     int index = listViewCorporateGuests.FocusedItem.Index;
                     listViewCorporateGuests.Items.RemoveAt(index);
 
-                    foreach(var textBox in textBoxs)
-                    {
-                        textBox.Clear();
-                    }
+                    textBoxCompanyName.Clear();
+                    textBoxVATNumber.Clear();
+                    textBoxHeadquarterZipCode.Clear();
+                    textBoxHeadquarterCity.Clear();
+                    textBoxHeadquarterAddress.Clear();
+                    textBoxCompanyPhoneNumber.Clear();
+                    textBoxCompanyEmailAddress.Clear();
+
                     comboBoxHeadquarterCountry.DataSource = null;
                     comboBoxHeadquarterCountry.DataSource = countries;
                     comboBoxHeadquarterCountry.SelectedItem = countries[0];
@@ -406,14 +450,14 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Ha megváltozik a vendégtáblázat, a megfelelő táblázat cellák adatai kerüljenek a megfelelő szövegmezőkbe
         /// </summary>
-        public void ListViewPrivateGuestsSelectedIndexChanged(params TextBox[] textBoxs)
+        public void ListViewPrivateGuestsSelectedIndexChanged()
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
-                textBoxs[0].Text = listViewPrivateGuests.SelectedItems[0].Text;
-                textBoxs[1].Text = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
-                textBoxs[2].Text = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                textBoxs[3].Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
+                textBoxName.Text = listViewPrivateGuests.SelectedItems[0].Text;
+                textBoxDocumentID.Text = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
+                textBoxCitizenship.Text = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
+                textBoxBirthDate.Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
 
                 string selectedCountry = null;
 
@@ -426,23 +470,24 @@ namespace virtual_receptionist.Presenter
                 }
 
                 comboBoxCountry.SelectedItem = selectedCountry;
-                textBoxs[4].Text = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                textBoxs[5].Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
-                textBoxs[6].Text = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-                textBoxs[7].Text = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
-                textBoxs[8].Text = listViewPrivateGuests.SelectedItems[0].SubItems[9].Text;
+
+                textBoxZipCode.Text = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                textBoxCity.Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
+                textBoxAddress.Text = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
+                textBoxPhoneNumber.Text = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
+                textBoxEmailAddress.Text = listViewPrivateGuests.SelectedItems[0].SubItems[9].Text;
             }
         }
 
         /// <summary>
         /// Ha megváltozik a céges vendégtáblázat, a megfelelő táblázat cellák adatai kerüljenek a megfelelő szövegmezőkbe
         /// </summary>
-        public void ListViewCorporateGuestsSelectedIndexChanged(params TextBox[] textBoxs)
+        public void ListViewCorporateGuestsSelectedIndexChanged()
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
-                textBoxs[0].Text = listViewCorporateGuests.SelectedItems[0].Text;
-                textBoxs[1].Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
+                textBoxCompanyName.Text = listViewCorporateGuests.SelectedItems[0].Text;
+                textBoxVATNumber.Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
 
                 string selectedCountry = null;
 
@@ -455,11 +500,12 @@ namespace virtual_receptionist.Presenter
                 }
 
                 comboBoxCountry.SelectedItem = selectedCountry;
-                textBoxs[2].Text = listViewCorporateGuests.SelectedItems[0].SubItems[3].Text;
-                textBoxs[3].Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
-                textBoxs[4].Text = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;
-                textBoxs[5].Text = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
-                textBoxs[6].Text = listViewCorporateGuests.SelectedItems[0].SubItems[7].Text;
+
+                textBoxHeadquarterZipCode.Text = listViewCorporateGuests.SelectedItems[0].SubItems[3].Text;
+                textBoxHeadquarterCity.Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
+                textBoxHeadquarterAddress.Text = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;
+                textBoxCompanyPhoneNumber.Text = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
+                textBoxCompanyEmailAddress.Text = listViewCorporateGuests.SelectedItems[0].SubItems[7].Text;
             }
         }
 
