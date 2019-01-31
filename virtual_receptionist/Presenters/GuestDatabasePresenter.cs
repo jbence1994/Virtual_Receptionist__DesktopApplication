@@ -230,14 +230,14 @@ namespace virtual_receptionist.Presenter
             string phoneNumber = textBoxPhoneNumber.Text;
             string email = textBoxEmailAddress.Text;
 
-            PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
+            PrivateGuest privateGuest = new PrivateGuest(id+1, name, documentNumber, citizenship, birthDate, country,
                 zipCode,
                 city, address, phoneNumber, email);
 
 
             // ListView rekord hozzáadás (GUI)
             ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = id.ToString();
+            newRecord.Text = (id + 1).ToString();
             newRecord.SubItems.Add(name);
             newRecord.SubItems.Add(documentNumber);
             newRecord.SubItems.Add(citizenship);
@@ -281,12 +281,12 @@ namespace virtual_receptionist.Presenter
             string email = textBoxCompanyEmailAddress.Text;
 
             CorporateGuest corporateGuest =
-                new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+                new CorporateGuest(id + 1, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
 
 
             // ListView rekord hozzáadás (GUI)
             ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = id.ToString();
+            newRecord.Text = (id + 1).ToString();
             newRecord.SubItems.Add(name);
             newRecord.SubItems.Add(vatNumber);
             newRecord.SubItems.Add(country);
@@ -500,6 +500,7 @@ namespace virtual_receptionist.Presenter
                     int index = listViewCorporateGuests.FocusedItem.Index;
                     listViewCorporateGuests.Items.RemoveAt(index);
 
+                    textBoxCompanyID.Clear();                    
                     textBoxCompanyName.Clear();
                     textBoxVATNumber.Clear();
                     textBoxHeadquarterZipCode.Clear();
