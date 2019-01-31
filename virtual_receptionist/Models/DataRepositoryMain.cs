@@ -102,7 +102,7 @@ namespace virtual_receptionist.Model
             Accomodation accomodation = Accomodation.AccomodationInstance;
 
             string sql =
-                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation.AccomodationID, accomodation.Password FROM accomodation, accomodation_registration WHERE accomodation.ID = accomodation_registration.Accomodation";
+                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation.AccomodationID, accomodation.Password FROM accomodation, accomodation WHERE accomodation.ID = accomodation.Accomodation";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
