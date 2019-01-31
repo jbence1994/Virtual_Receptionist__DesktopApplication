@@ -120,4 +120,51 @@
   <metadata name="errorProviderInput.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAGBgAAAEAIACICQAAFgAAACgAAAAYAAAAMAAAAAEAIAAAAAAAAAkAAKkAAACpAAAAAAAAAAAA
+        AAC6trE7urewxbu2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2
+        sP+7trD/yMS/2OPh4Pzo5+bo6OjkQ////wD///8A////AP///wC6t7DFu7aw/7u2sP+7trD/u7aw/7u2
+        sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+8t7Hu5+Xk/+jn5v/o5+b/6Ofl2///
+        /wD///8A////AP///wC7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2
+        sP+7trD/u7aw/7u2sP/Cvbja6Ofm/+jn5v/o5+b/6Ofm+////wD///8A////AP///wC7trD/u7aw/7u2
+        sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP+7trD/u7aw/7u2sP/Bvrjb6Ofm/+jn
+        5v/o5+b/6ejn+////wD///8A////AP///wC6tbGcu7aw+Lu2sPi7trD4u7aw+Lu2sfi7trH4u7ax+Lu2
+        sfi7trH4u7ax+Lu2sfi7trH4u7ax+Lu2sfjCv7na6Ofm/+jn5v/o5+b/6ejn+////wD///8A////AP//
+        /wD///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn
+        5v/o5+b/6Ofm/+jn5v/o5+b/6ejn+////wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn
+        5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/j5N7/1dzF/9Pbwv/i49v/6Ofm/+jn5v/o5+b/6ejn+///
+        /wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/8zX
+        tv+jv3D/oL1q/6C9av+hvmz/xNKo/+fn5f/o5+b/6ejn+////wD///8A////AP///wD///8A////AP//
+        /wD///8A6ejn++jn5v/h393/2tjV/9rY1f/a2NX/zta8/6C9av+iv27/1eK9/6nDd/+gvWr/oL1q/8nV
+        sP/o5+b/6ejn+////wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn5v/a19X/0M3J/9DN
+        yf/Qzcn/q8J//6K/bv/i69H/3efK/+Hq0P+gvWr/oL1q/6XAcv/o5+b/6ejn+////wD///8A////AP//
+        /wD///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/n5uT/ob5s/7DIhP/E1qL/oL1q/93n
+        yv/B1J7/oL1q/6C9av/d4dT/6ejn+////wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn
+        5v/T0M3/w7+6/8O/uv/Dv7r/pcBz/6C9av+gvWr/oL1q/6fCdf/v9Ob/qMN3/6C9av/j5N7/6ejn+///
+        /wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/o5+b/u82Y/6C9
+        av+gvWr/oL1q/6C9av+80JX/vdGX/7HHiP/o5+b/6ejn+////wD///8A////AP///wD///8A////AP//
+        /wD///8A6ejn++jn5v/g3tz/2NbT/9jW0//Y1tP/1NTM/6jBef+gvWr/oL1q/6C9av+gvWr/pcBz/93g
+        0//o5+b/6ejn+////wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn5v/b2df/09DN/9PQ
+        zf/T0M3/09DN/9TUzf/C0aX/sMaF/63Fgf++z57/4ePa/+jn5v/o5+b/6ejn+////wD///8A////AP//
+        /wD///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn
+        5v/o5+b/6Ofm/+jn5v/o5+b/6ejn+////wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn
+        5v/Sz8z/wr24/8K9uP/Cvbj/wr24/8K9uP/Cvbj/wr24/8K9uP/Cvbj/wr24/9LPzP/o5+b/6ejn+///
+        /wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn
+        5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/6ejn+////wD///8A////AP///wD///8A////AP//
+        /wD///8A6ejn++jn5v/e3dv/19XS/9fV0v/X1dL/19XS/9fV0v/X1dL/19XS/9fV0v/X1dL/19XS/97d
+        2//o5+b/6ejn+////wD///8A////AP///wD///8A////AP///wD///8A6ejn++jn5v/c2tj/1NHO/9TR
+        zv/U0c7/1NHO/9TRzv/U0c7/1NHO/9TRzv/U0c7/1NHO/9za2P/o5+b/5OLh+7u2sPi7trD4u7aw+Lq1
+        sZz///8A////AP///wD///8A6ejn++jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn
+        5v/o5+b/6Ofm/+jn5v/o5+b/4+Hg/Lu2sP+7trD/u7aw/7u2sP////8A////AP///wD///8A6ejn++jn
+        5v/o5+b/6Ofm/+jn5v/Oy8f/wr24/8K9uP/Cvbj/wr24/87Lx//o5+b/6Ofm/+jn5v/o5+b/5OLh+7u2
+        sP+7trD/u7aw/7u2sP////8A////AP///wD///8A6Ofm8+jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn
+        5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/5+bl/7y4sui7trD/u7aw/7q3sMX///8A////AP//
+        /wD///8A6ufld+jn5vvo5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn5v/o5+b/6Ofm/+jn
+        5v/o5+b/6Ofm/9rX1e6+urTgurewxbq2sTsAAA8AAAAPAAAADwAAAA8AAAAPAPAADwDwAA8A8AAPAPAA
+        DwDwAA8A8AAPAPAADwDwAA8A8AAPAPAADwDwAA8A8AAPAPAADwDwAA8A8AAAAPAAAADwAAAA8AAAAPAA
+        AAA=
+</value>
+  </data>
 </root>

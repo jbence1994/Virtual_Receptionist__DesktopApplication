@@ -261,6 +261,7 @@
             this.Controls.Add(this.tabControlRoomEditor);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRoomEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szobakezelő | Virtual Receptionist";

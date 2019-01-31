@@ -229,6 +229,7 @@
             this.Controls.Add(this.dataGridViewItems);
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számla kiállítása | Virtual Receptionist";

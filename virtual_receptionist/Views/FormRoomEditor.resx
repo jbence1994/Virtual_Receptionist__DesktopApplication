@@ -156,21 +156,6 @@
   <metadata name="ColumnDeparture.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ColumnGuest.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnRoomNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnGuestCapacity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnArrival.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnDeparture.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="tabControlRoomEditor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -180,28 +165,7 @@
   <metadata name="tabPageRooms.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="tabPageReservations.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tabPageRooms.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="dataGridViewRooms.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewRooms.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnCategory.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColumnCapacity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="ColumnName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -278,4 +242,50 @@
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAGBgAAAEAIACICQAAFgAAACgAAAAYAAAAMAAAAAEAIAAAAAAAAAkAALoFAAC6BQAAAAAAAAAA
+        AADe6+7I3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r
+        7//e6+//2+nm/8jbsP+60Yb/v9SU/8/gwv/e6+//3ezvkP///wDe6+7I3uvv/97r7//e6+//3uvv/97r
+        7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//N373/or9A/5m5Jv+ZuSb/mbkm/5m5
+        Jv+vyWX/0uPSmv///wDe6+7I3uvv/97r7//c6u7/2+jt/9vo7f/b6O3/2+jt/9vo7f/b6O3/2+jt/9vo
+        7f/b6O3/2+jt/9Hhz/+buy3/mbkm/5m5Jv+ZuSb/mbkm/5m5Jv+ZuSb/o8FE5ICAAALe6+7I3uvv/97r
+        7//O3uP/wdXa/8XY3P/F2Nz/vdLX/8TX3P/F2Nz/xNfc/73S1//F2Nz/xdjc/6XBWf+ZuSb/mbkm/5u6
+        Kf/L3JH/pcJA/5m5Jv+ZuSb/mbkm/5m5Jl/e6+7I3uvv/97r7//O3uP/0uLm/97r7//e6+//xNfb/9zp
+        7f/e6+//3eru/8PW2//e6+//3uvu/5y7MP+ZuSb/ob42/+Ttxv/X5Kr/5e3J/5q6KP+ZuSb/mbkm/5q5
+        Jpze6+7I3uvv/97r7//O3uP/0uLm/97r7//e6+//xNfb/9zp7f/e6+//3eru/8PW2//e6+//2efh/5m5
+        Jv+ZuSb/vdJz/7jOaP+ZuSb/0d+c/8jZiv+ZuSb/mbkm/5q5Jrre6+7I3uvv/97r7//O3uP/ydvg/9Hh
+        5f/R4eX/wNTZ/8/g5P/R4eX/0ODl/8DU2P/R4eX/0eHl/528N/+ZuSb/mbkm/5m5Jv+ZuSb/nLss/+vx
+        1P+rxk3/mbkm/5i4JZDe6+7I3uvv/97r7//O3uP/yNrf/8/f5P/P3+T/wNTZ/5Kjrv+Pn6v/kKGs/7/T
+        2P/P3+T/z9/k/6zGcP+ZuSb/mbkm/5m5Jv+ZuSb/mbkm/6zGTv/F14T/mbkm/5m4J0He6+7I3uvv/97r
+        7//O3uP/0uLm/97r7//e6+//xNfb/2R1hf9dbn//YXGC/8PW2//e6+//3uvv/9Dh3P+fvT3/mbkm/5m5
+        Jv+ZuSb/mbkm/5m5Jv+ZuSb/rMdf0v///wDe6+7I3uvv/97r7//O3uP/0uLm/97r7//e6+//xNfb/2R1
+        hf9dbn//YXGC/8PW2//e6+//3uvv/9Pj5//H2tH/rshk/5m5Jv+ZuSb/mbkm/5u7LP+/1JT/3Orskf//
+        /wDe6+7I3uvv/97r7//O3uP/w9bb/8fZ3v/H2d7/vtLX/6S3v/+itL3/pLW+/77S1//H2d7/x9ne/8PW
+        2//B1Nn/x9ne/8PWzv+1zaj/ydvA/9zp6f/e6+//3ezvkP///wDe6+7I3uvv/97r7//O3uP/zt7j/9fm
+        6v/X5ur/wtXa/9bl6f/X5ur/1+Xp/8HV2v/X5ur/1+bq/87f4//I2t//1+bq/9fm6v/H2d7/1eTo/97r
+        7//e6+//3ezvkP///wDe6+7I3uvv/97r7//O3uP/0uLm/97r7//e6+//xNfb/9zp7f/e6+//3eru/8PW
+        2//e6+//3uvv/9Pj5//L3eH/3uvv/97r7//J2+D/1eTo/97r7//e6+//3ezvkP///wDe6+7I3uvv/97r
+        7//O3uP/0uLm/97r7//e6+//xNfb/9zp7f/e6+//3eru/8PW2//e6+//3uvv/9Pj5//L3eH/3uvv/97r
+        7//J2+D/1eTo/97r7//e6+//3ezvkP///wDe6+7I3uvv/97r7//P4OT/wNTY/8DU2f/A1Nn/v9PY/8DU
+        2f/A1Nn/wNTZ/7/T2P/A1Nn/wNTZ/8DU2P+/09j/wNTZ/8DU2f+/09j/1uXp/97r7//e6+//3ezvkP//
+        /wDe6+7I3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r
+        7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3ezvkP///wDe6+7I3uvv/97r7//e6+//3uvv/97r
+        7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r7//e6+//3uvv/97r
+        7//e6+//3ezvkP///wDR3O+t1+Lv1Nfi79TX4u/U1+Lv1Nfi79TX4u/U1+Lv1Nfi79TX4u/U1+Lv1Nfi
+        79TX4u/U1+Lv1Nfi79TX4u/U1+Lv1Nfi79TX4u/U1+Lv1Nfi79TX4u/Uztfvgf///wBlVfDIZVXw/2VV
+        8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV
+        8P9lVfD/ZVXw/2VV8P9lVfD/ZVXxkP///wBlVfDIZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV
+        8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXxkP//
+        /wBlVfDIZVXw/2VV8P9jU9HfY1CmyWNQpslkU9XjZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV
+        8P9lVfD/Y1LC1mNQpsljUKbJZFXh7WVV8P9lVfD/ZVXxkP///wBlVfDIZVXw/2VV8P9hTXzAXkk2/15J
+        Nv9hT43CZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/ZVXw/2VV8P9lVfD/X0tSxl5JNv9eSTb/Y1G30GVV
+        8P9lVfD/ZVXxkP///wBlVvBEZVTxWGVU8VhgSlWQXkk2/15JNv9gTGCHZVTxWGVU8VhlVPFYZVTxWGVU
+        8VhlVPFYZVTxWGVU8VhlVPFYX0pAsl5JNv9eSTb/YU+HcWVU8VhlVPFYY1PvMf///wD///8A////AP//
+        /wBeSDV4Xkk2/15JNv9dSjZo////AP///wD///8A////AP///wD///8A////AP///wD///8AXkk3qF5J
+        Nv9eSTb/YEg4QP///wD///8A////AP///wAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAOH/
+        DwA=
+</value>
+  </data>
 </root>

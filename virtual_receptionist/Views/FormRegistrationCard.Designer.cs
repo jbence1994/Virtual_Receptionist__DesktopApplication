@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestRegistrationCard));
             this.buttonCancel = new System.Windows.Forms.Button();
             this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
             this.labelEmailAddress = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCitizenship = new System.Windows.Forms.TextBox();
             this.groupBoxGeneralData = new System.Windows.Forms.GroupBox();
+            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
+            this.labelRoom = new System.Windows.Forms.Label();
             this.labelNumberOfGuests = new System.Windows.Forms.Label();
             this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
             this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
@@ -66,8 +69,6 @@
             this.groupBoxOtherData = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.errorProviderInput = new System.Windows.Forms.ErrorProvider(this.components);
-            this.labelRoom = new System.Windows.Forms.Label();
-            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.groupBoxGeneralData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
@@ -268,6 +269,23 @@
             this.groupBoxGeneralData.TabStop = false;
             this.groupBoxGeneralData.Text = "Általános adatok";
             // 
+            // comboBoxRoom
+            // 
+            this.comboBoxRoom.FormattingEnabled = true;
+            this.comboBoxRoom.Location = new System.Drawing.Point(235, 201);
+            this.comboBoxRoom.Name = "comboBoxRoom";
+            this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
+            this.comboBoxRoom.TabIndex = 38;
+            // 
+            // labelRoom
+            // 
+            this.labelRoom.AutoSize = true;
+            this.labelRoom.Location = new System.Drawing.Point(189, 204);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(40, 13);
+            this.labelRoom.TabIndex = 37;
+            this.labelRoom.Text = "Szoba:";
+            // 
             // labelNumberOfGuests
             // 
             this.labelNumberOfGuests.AutoSize = true;
@@ -420,23 +438,6 @@
             this.errorProviderInput.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderInput.ContainerControl = this;
             // 
-            // labelRoom
-            // 
-            this.labelRoom.AutoSize = true;
-            this.labelRoom.Location = new System.Drawing.Point(189, 204);
-            this.labelRoom.Name = "labelRoom";
-            this.labelRoom.Size = new System.Drawing.Size(40, 13);
-            this.labelRoom.TabIndex = 37;
-            this.labelRoom.Text = "Szoba:";
-            // 
-            // comboBoxRoom
-            // 
-            this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Location = new System.Drawing.Point(235, 201);
-            this.comboBoxRoom.Name = "comboBoxRoom";
-            this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
-            this.comboBoxRoom.TabIndex = 38;
-            // 
             // FormGuestRegistrationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +449,7 @@
             this.Controls.Add(this.groupBoxGeneralData);
             this.Controls.Add(this.buttonCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendég bejelentkező lap kitöltése | Virtual Receptionist";
