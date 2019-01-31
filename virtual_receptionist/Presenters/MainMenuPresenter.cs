@@ -112,7 +112,7 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Metódus, amely megnyitja a beépített HTML súgót
+        /// Metódus, amely megnyitja a beépített CHM-súgót
         /// </summary>
         public void OpenCHM()
         {
