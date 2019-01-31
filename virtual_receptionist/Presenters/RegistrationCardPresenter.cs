@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using virtual_receptionist.Model;
-using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
 {
     /// <summary>
     /// Vendég bejelentkező lap prezentere
     /// </summary>
-    public class GuestRegistrationCardPresenter : DefaultPresenter
+    public class RegistrationCardPresenter : DefaultPresenter
     {
         #region Adattagok
 
@@ -27,7 +26,7 @@ namespace virtual_receptionist.Presenter
 
         #region Konstruktor
 
-        public GuestRegistrationCardPresenter(params Control[] controls)
+        public RegistrationCardPresenter(params Control[] controls)
         {
             countries = dataRepository.GetCountries();
             comboBoxCountries = (ComboBox) controls[0];

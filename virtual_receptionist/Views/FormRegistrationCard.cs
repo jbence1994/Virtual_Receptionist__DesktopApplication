@@ -13,7 +13,7 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Vendég bejelentkező lap prezenter egy példánya
         /// </summary>
-        private GuestRegistrationCardPresenter presenter;
+        private RegistrationCardPresenter presenter;
 
         #endregion
 
@@ -25,7 +25,7 @@ namespace virtual_receptionist.View
         public FormGuestRegistrationCard()
         {
             InitializeComponent();
-            presenter = new GuestRegistrationCardPresenter();
+            presenter = new RegistrationCardPresenter();
         }
 
         #endregion
