@@ -31,16 +31,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private ToolStripStatusLabel toolStripStatusLabelClient;
 
-        /// <summary>
-        /// Állapotsor
-        /// </summary>
-        private StatusStrip statusStripMainMenu;
-
-        /// <summary>
-        /// Eszköztár
-        /// </summary>
-        private ToolStrip toolStripMainMenu;
-
         #endregion
 
         #region Konstruktor
@@ -50,18 +40,13 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
-        /// <param name="statusStripMainMenu">Főmenü állapotsora</param>
-        /// <param name="toolStripMainMenu">Főmenü eszköztára</param>
         /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
-        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, StatusStrip statusStripMainMenu,
-            ToolStrip toolStripMainMenu, params ToolStripLabel[] controls)
+        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, params ToolStripLabel[] controls)
         {
             this.formMainMenu = formMainMenu;
             this.formLogin = formLogin;
             toolStripStatusLabelMenuName = (ToolStripStatusLabel) controls[0];
             toolStripStatusLabelClient = (ToolStripStatusLabel) controls[1];
-            this.statusStripMainMenu = statusStripMainMenu;
-            this.toolStripMainMenu = toolStripMainMenu;
         }
 
         #endregion
@@ -174,38 +159,6 @@ namespace virtual_receptionist.Presenter
         public void OpenVirtualReceptionistWebsite()
         {
             throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="toolStripMenuItemShowStatusStrip">Metódus, amely beállítja az állapotsor láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs</param>
-        public void SetStatusStripVisibility(ToolStripMenuItem toolStripMenuItemShowStatusStrip)
-        {
-            if (toolStripMenuItemShowStatusStrip.CheckState == CheckState.Checked)
-            {
-                statusStripMainMenu.Visible = true;
-            }
-            else
-            {
-                statusStripMainMenu.Visible = false;
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="toolStripMenuItemShowToolStrip">Metódus, amely beállítja az eszkötár láthatóságát, attól függően, hogy be van egy kapcsolva a láthatósága, vagy nincs</param>
-        public void SetToolStripVisibility(ToolStripMenuItem toolStripMenuItemShowToolStrip)
-        {
-            if (toolStripMenuItemShowToolStrip.CheckState == CheckState.Checked)
-            {
-                toolStripMainMenu.Visible = true;
-            }
-            else
-            {
-                toolStripMainMenu.Visible = false;
-            }
         }
 
         /// <summary>
