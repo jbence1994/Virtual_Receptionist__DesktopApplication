@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Model;
-using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
 {
@@ -37,7 +36,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Országokat tartalmazó lista
         /// </summary>
-        private List<string> countries;
+        private List<Country> countries;
 
         /// <summary>
         /// Vendég e-mail címe szövegmező
@@ -225,7 +224,7 @@ namespace virtual_receptionist.Presenter
             string phoneNumber = textBoxPhoneNumber.Text;
             string email = textBoxEmailAddress.Text;
 
-            PrivateGuest privateGuest = new PrivateGuest(id+1, name, documentNumber, citizenship, birthDate, country,
+            PrivateGuest privateGuest = new PrivateGuest(id + 1, name, documentNumber, citizenship, birthDate, country,
                 zipCode,
                 city, address, phoneNumber, email);
 
@@ -392,7 +391,7 @@ namespace virtual_receptionist.Presenter
                     int index = listViewCorporateGuests.FocusedItem.Index;
                     listViewCorporateGuests.Items.RemoveAt(index);
 
-                    textBoxCompanyID.Clear();                    
+                    textBoxCompanyID.Clear();
                     textBoxCompanyName.Clear();
                     textBoxVATNumber.Clear();
                     textBoxHeadquarterZipCode.Clear();
@@ -428,15 +427,16 @@ namespace virtual_receptionist.Presenter
                 textBoxCitizenship.Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
                 textBoxBirthDate.Text = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
 
-                string selectedCountry = null;
+                Country selectedCountry = null;
 
-                foreach (string country in countries)
+                foreach (Country country in countries)
                 {
-                    if (country.Contains(listViewPrivateGuests.SelectedItems[0].SubItems[5].Text))
+                    if (listViewPrivateGuests.SelectedItems[0].SubItems[5].Text.Contains(country.Name))
                     {
                         selectedCountry = country;
                     }
                 }
+
                 comboBoxCountry.SelectedItem = selectedCountry;
 
                 textBoxZipCode.Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
@@ -458,15 +458,16 @@ namespace virtual_receptionist.Presenter
                 textBoxCompanyName.Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                 textBoxVATNumber.Text = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
 
-                string selectedCountry = null;
+                Country selectedCountry = null;
 
-                foreach (string country in countries)
+                foreach (Country country in countries)
                 {
-                    if (country.Contains(listViewCorporateGuests.SelectedItems[0].SubItems[3].Text))
+                    if (listViewCorporateGuests.SelectedItems[0].SubItems[3].Text.Contains(country.Name))
                     {
                         selectedCountry = country;
                     }
                 }
+
                 comboBoxCountry.SelectedItem = selectedCountry;
 
                 textBoxHeadquarterZipCode.Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;

@@ -29,24 +29,7 @@ namespace virtual_receptionist.Model
                 billingItems.Add(billingItemInstance);
             }
         }
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti az országok kódjait és neveit tartalmazó listát
-        /// </summary>
-        private void UploadCountriesList()
-        {
-            string sql = "SELECT * FROM country";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                string name = row["CountryName"].ToString();
-
-                Country countryInstance = new Country(name);
-                countries.Add(countryInstance);
-            }
-        }
-
+        
         /// <summary>
         /// Metódus, amely adatforrásként szolgál a számlázó főablak DataGridView komponensének
         /// </summary>
@@ -71,32 +54,6 @@ namespace virtual_receptionist.Model
             }
 
             return billingItemsDataTable;
-        }
-
-        /// <summary>
-        /// Metódus, amely országok neveit tartalmazza
-        /// </summary>
-        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
-        public List<string> GetCountries()
-        {
-            if (countries.Count == 0)
-            {
-                UploadCountriesList();
-            }
-
-            List<string> filtratedCountries = new List<string>();
-
-            foreach (Country country in countries)
-            {
-                if (!filtratedCountries.Contains(country.Name))
-                {
-                    filtratedCountries.Add(country.Name);
-                }
-            }
-
-            filtratedCountries.Sort();
-
-            return filtratedCountries;
         }
 
         /// <summary>

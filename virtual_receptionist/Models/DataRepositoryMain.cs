@@ -136,6 +136,37 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
+        /// Metódus, amely adatbázisból feltölti az országok kódjait és neveit tartalmazó listát
+        /// </summary>
+        private void UploadCountriesList()
+        {
+            string sql = "SELECT * FROM country";
+            DataTable dt = database.DQL(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string name = row["CountryName"].ToString();
+
+                Country countryInstance = new Country(name);
+                countries.Add(countryInstance);
+            }
+        }
+
+        /// <summary>
+        /// Metódus, amely országok neveit tartalmazza
+        /// </summary>
+        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
+        public List<Country> GetCountries()
+        {
+            if (countries.Count == 0)
+            {
+                UploadCountriesList();
+            }
+
+            return countries;
+        }
+
+        /// <summary>
         /// Metódus, amely naplózza az alkalmazásba bejelentkezést
         /// </summary>
         public void Login()
