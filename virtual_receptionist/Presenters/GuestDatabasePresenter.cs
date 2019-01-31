@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Model;
@@ -43,6 +42,70 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         private List<string> countries;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxEmailAddress;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxPhoneNumber;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxAddress;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxCity;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxZipCode;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxBirthDate;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxCitizenship;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxDocumentID;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxName;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxCompanyEmailAddress;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxCompanyPhoneNumber;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxHeadquarterCity;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxHeadquarterAddress;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxHeadquarterZipCode;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxVATNumber;
+        /// <summary>
+        /// 
+        /// </summary>
+        private TextBox textBoxCompanyName;
 
         #endregion
 
@@ -54,11 +117,12 @@ namespace virtual_receptionist.Presenter
         /// <param name="listViews">Vendégtáblázatok</param>
         public GuestDatabasePresenter(params Control[] controls)
         {
+            countries = dataRepository.GetCountries();
+
             listViewPrivateGuests = (ListView) controls[0];
             listViewCorporateGuests = (ListView) controls[1];
             comboBoxCountry = (ComboBox) controls[2];
             comboBoxHeadquarterCountry = (ComboBox) controls[3];
-            countries = dataRepository.GetCountries();
         }
 
         #endregion
