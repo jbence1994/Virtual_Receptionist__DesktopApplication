@@ -100,6 +100,8 @@
             this.columnHeaderHeadqurterAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCompanyPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCompanyEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPrivateGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCorporateGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPagePrivateGuest.SuspendLayout();
             this.groupBoxPrivateGuest.SuspendLayout();
@@ -115,6 +117,7 @@
             this.tabControlGuestDatabase.Name = "tabControlGuestDatabase";
             this.tabControlGuestDatabase.SelectedIndex = 0;
             this.tabControlGuestDatabase.Size = new System.Drawing.Size(1161, 409);
+            this.tabControlGuestDatabase.TabIndex = 0;
             // 
             // tabPagePrivateGuest
             // 
@@ -242,6 +245,7 @@
             this.labelBirthDate.Location = new System.Drawing.Point(56, 101);
             this.labelBirthDate.Name = "labelBirthDate";
             this.labelBirthDate.Size = new System.Drawing.Size(69, 13);
+            this.labelBirthDate.TabIndex = 30;
             this.labelBirthDate.Text = "Születési idő:";
             // 
             // textBoxZipCode
@@ -257,6 +261,7 @@
             this.labelCountry.Location = new System.Drawing.Point(82, 127);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelCountry.TabIndex = 31;
             this.labelCountry.Text = "Ország:";
             // 
             // comboBoxCountry
@@ -273,6 +278,7 @@
             this.labelZipCode.Location = new System.Drawing.Point(277, 22);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
+            this.labelZipCode.TabIndex = 32;
             this.labelZipCode.Text = "Irányítószám:";
             // 
             // textBoxBirthDate
@@ -288,6 +294,7 @@
             this.labelCity.Location = new System.Drawing.Point(291, 48);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
+            this.labelCity.TabIndex = 33;
             this.labelCity.Text = "Település:";
             // 
             // textBoxCitizenship
@@ -303,6 +310,7 @@
             this.labelAddress.Location = new System.Drawing.Point(318, 75);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
+            this.labelAddress.TabIndex = 34;
             this.labelAddress.Text = "Cím:";
             // 
             // textBoxDocumentID
@@ -318,6 +326,7 @@
             this.labelPhoneNumber.Location = new System.Drawing.Point(277, 101);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(70, 13);
+            this.labelPhoneNumber.TabIndex = 35;
             this.labelPhoneNumber.Text = "Telefonszám:";
             // 
             // textBoxName
@@ -333,6 +342,7 @@
             this.labelEmailAddress.Location = new System.Drawing.Point(288, 127);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(59, 13);
+            this.labelEmailAddress.TabIndex = 36;
             this.labelEmailAddress.Text = "E-mail cím:";
             // 
             // buttonUpdatePrivateGuestModal
@@ -380,6 +390,7 @@
             // listViewPrivateGuests
             // 
             this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderPrivateGuestID,
             this.columnHeaderName,
             this.columnHeaderDocumentID,
             this.columnHeaderCitizenship,
@@ -524,6 +535,7 @@
             this.labelCompanyName.Location = new System.Drawing.Point(78, 22);
             this.labelCompanyName.Name = "labelCompanyName";
             this.labelCompanyName.Size = new System.Drawing.Size(47, 13);
+            this.labelCompanyName.TabIndex = 32;
             this.labelCompanyName.Text = "Cégnév:";
             // 
             // textBoxCompanyPhoneNumber
@@ -539,6 +551,7 @@
             this.labelVATNumber.Location = new System.Drawing.Point(72, 48);
             this.labelVATNumber.Name = "labelVATNumber";
             this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
+            this.labelVATNumber.TabIndex = 33;
             this.labelVATNumber.Text = "Adószám:";
             // 
             // textBoxHeadquarterCity
@@ -568,6 +581,7 @@
             this.labelHeadquarterCountry.Location = new System.Drawing.Point(82, 75);
             this.labelHeadquarterCountry.Name = "labelHeadquarterCountry";
             this.labelHeadquarterCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelHeadquarterCountry.TabIndex = 34;
             this.labelHeadquarterCountry.Text = "Ország:";
             // 
             // comboBoxHeadquarterCountry
@@ -584,6 +598,7 @@
             this.labelHeadquarterZipCode.Location = new System.Drawing.Point(55, 101);
             this.labelHeadquarterZipCode.Name = "labelHeadquarterZipCode";
             this.labelHeadquarterZipCode.Size = new System.Drawing.Size(70, 13);
+            this.labelHeadquarterZipCode.TabIndex = 35;
             this.labelHeadquarterZipCode.Text = "Irányítószám:";
             // 
             // labelHeadquarterCity
@@ -592,6 +607,7 @@
             this.labelHeadquarterCity.Location = new System.Drawing.Point(291, 22);
             this.labelHeadquarterCity.Name = "labelHeadquarterCity";
             this.labelHeadquarterCity.Size = new System.Drawing.Size(56, 13);
+            this.labelHeadquarterCity.TabIndex = 36;
             this.labelHeadquarterCity.Text = "Település:";
             // 
             // labelHeadquarterAddress
@@ -600,6 +616,7 @@
             this.labelHeadquarterAddress.Location = new System.Drawing.Point(318, 48);
             this.labelHeadquarterAddress.Name = "labelHeadquarterAddress";
             this.labelHeadquarterAddress.Size = new System.Drawing.Size(29, 13);
+            this.labelHeadquarterAddress.TabIndex = 37;
             this.labelHeadquarterAddress.Text = "Cím:";
             // 
             // textBoxVATNumber
@@ -615,6 +632,7 @@
             this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(277, 74);
             this.labelCompanyPhoneNumber.Name = "labelCompanyPhoneNumber";
             this.labelCompanyPhoneNumber.Size = new System.Drawing.Size(70, 13);
+            this.labelCompanyPhoneNumber.TabIndex = 38;
             this.labelCompanyPhoneNumber.Text = "Telefonszám:";
             // 
             // textBoxCompanyName
@@ -630,6 +648,7 @@
             this.labelCompanyEmailAddress.Location = new System.Drawing.Point(288, 100);
             this.labelCompanyEmailAddress.Name = "labelCompanyEmailAddress";
             this.labelCompanyEmailAddress.Size = new System.Drawing.Size(59, 13);
+            this.labelCompanyEmailAddress.TabIndex = 39;
             this.labelCompanyEmailAddress.Text = "E-mail cím:";
             // 
             // buttonUpdateCorporateGuestModal
@@ -677,6 +696,7 @@
             // listViewCorporateGuests
             // 
             this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderCorporateGuestID,
             this.columnHeaderCompanyName,
             this.columnHeaderVATNumber,
             this.columnHeaderHeadqurterCountry,
@@ -734,6 +754,16 @@
             // 
             this.columnHeaderCompanyEmailAddress.Text = "E-mail cím";
             this.columnHeaderCompanyEmailAddress.Width = 150;
+            // 
+            // columnHeaderPrivateGuestID
+            // 
+            this.columnHeaderPrivateGuestID.Text = "Vendégazonosító";
+            this.columnHeaderPrivateGuestID.Width = 150;
+            // 
+            // columnHeaderCorporateGuestID
+            // 
+            this.columnHeaderCorporateGuestID.Text = "Vendégazonosító";
+            this.columnHeaderCorporateGuestID.Width = 150;
             // 
             // FormGuestDatabase
             // 
@@ -829,5 +859,7 @@
         private System.Windows.Forms.Label labelCompanyPhoneNumber;
         private System.Windows.Forms.TextBox textBoxCompanyName;
         private System.Windows.Forms.Label labelCompanyEmailAddress;
+        private System.Windows.Forms.ColumnHeader columnHeaderPrivateGuestID;
+        private System.Windows.Forms.ColumnHeader columnHeaderCorporateGuestID;
     }
 }
