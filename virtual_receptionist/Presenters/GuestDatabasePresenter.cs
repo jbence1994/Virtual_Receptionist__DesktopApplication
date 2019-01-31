@@ -236,6 +236,7 @@ namespace virtual_receptionist.Presenter
 
 
             // ListView rekord hozzáadás (GUI)
+            textBoxID.Text = (id + 1).ToString();
             ListViewItem newRecord = new ListViewItem();
             newRecord.Text = (id + 1).ToString();
             newRecord.SubItems.Add(name);
@@ -285,6 +286,7 @@ namespace virtual_receptionist.Presenter
 
 
             // ListView rekord hozzáadás (GUI)
+            textBoxCompanyID.Text = (id + 1).ToString();
             ListViewItem newRecord = new ListViewItem();
             newRecord.Text = (id + 1).ToString();
             newRecord.SubItems.Add(name);
