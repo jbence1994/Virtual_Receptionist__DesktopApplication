@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\CorporateGuest.cs" />
-    <Compile Include="Presenters\ModalGuestDatabasePresenter.cs" />
     <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenters\GuestRegistrationCardPresenter.cs" />
     <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
@@ -108,18 +107,6 @@
     <Compile Include="Views\FormModalBillingItems.Designer.cs">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormModalCorporateGuestDatabase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormModalCorporateGuestDatabase.Designer.cs">
-      <DependentUpon>FormModalCorporateGuestDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormModalPrivateGuestDatabase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormModalPrivateGuestDatabase.Designer.cs">
-      <DependentUpon>FormModalPrivateGuestDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormGuestRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,12 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormModalBillingItems.resx">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormModalCorporateGuestDatabase.resx">
-      <DependentUpon>FormModalCorporateGuestDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormModalPrivateGuestDatabase.resx">
-      <DependentUpon>FormModalPrivateGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormGuestRegistrationCard.resx">
       <DependentUpon>FormGuestRegistrationCard.cs</DependentUpon>

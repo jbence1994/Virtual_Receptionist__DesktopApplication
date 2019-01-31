@@ -35,11 +35,6 @@ namespace virtual_receptionist.Presenter
         private ComboBox comboBoxHeadquarterCountry;
 
         /// <summary>
-        /// Vendégadatbázis-kezelő modális ablaka
-        /// </summary>
-        private FormModalGuestDatabase formModalGuestDatabase;
-
-        /// <summary>
         /// Országokat tartalmazó lista
         /// </summary>
         private List<string> countries;
@@ -256,17 +251,6 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus - modális ablak segítségével
-        /// </summary>
-        public void AddNewRecordToPrivateGuestTableModal()
-        {
-            PrivateGuest privateGuest = new PrivateGuest();
-            formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
-            formModalGuestDatabase.ShowDialog();
-            dataRepository.CreateGuest(privateGuest);
-        }
-
-        /// <summary>
         /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
         public void AddNewRecordToCorporateGuestTable()
@@ -304,17 +288,6 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus - modális ablak segítségével
-        /// </summary>
-        public void AddNewRecordToCorporateGuestTableModal()
-        {
-            CorporateGuest corporateGuest = new CorporateGuest();
-            formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
-            formModalGuestDatabase.ShowDialog();
-            dataRepository.CreateGuest(corporateGuest);
-        }
-
-        /// <summary>
         /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
         public void UpdateRecordInPrivateGuestTable()
@@ -324,95 +297,12 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus - modális ablak segítségével
-        /// </summary>
-        public void UpdateRecordInPrivateGuestTableModal()
-        {
-            if (listViewPrivateGuests.SelectedItems.Count > 0)
-            {
-                int id = int.Parse(listViewPrivateGuests.SelectedItems[0].Text);
-                string name = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
-                string documentNumber = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string citizenship = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string birthDate = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
-                string country = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
-                string city = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-                string address = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[9].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[10].Text;
-
-                PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
-                    zipCode, city,
-                    address,
-                    phoneNumber, emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(privateGuest);
-
-                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
-                {
-                    // ListView rekord módosítás (GUI)
-
-
-
-                    //guest = formModalGuestDatabase.Guest;
-
-                    // Adatbázis rekord módosítása
-
-                    dataRepository.UpdateGuest(privateGuest);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
         /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
         public void UpdateRecordInCorporateGuestTable()
         {
             CorporateGuest corporateGuest = new CorporateGuest();
             dataRepository.UpdateGuest(corporateGuest);
-        }
-
-        /// <summary>
-        /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus - modális ablak segítségével
-        /// </summary>
-        public void UpdateRecordInCorporateGuestTableModal()
-        {
-            if (listViewCorporateGuests.SelectedItems.Count > 0)
-            {
-                int id = int.Parse(listViewCorporateGuests.SelectedItems[0].Text);
-                string name = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
-                string vatNumber = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
-                string country = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
-                string zipCode = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
-                string city = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
-                string address = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
-                string phoneNumber = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
-                string emailAddress = listViewPrivateGuests.SelectedItems[0].SubItems[8].Text;
-
-                CorporateGuest corporateGuest = new CorporateGuest(id, name, vatNumber, country, zipCode, city, address,
-                    phoneNumber,
-                    emailAddress);
-                formModalGuestDatabase = new FormModalGuestDatabase(corporateGuest);
-
-                if (formModalGuestDatabase.ShowDialog() == DialogResult.OK)
-                {
-                    // ListView rekord módosítás (GUI)
-
-                    //guest = formModalGuestDatabase.Guest;
-
-                    // Adatbázis rekord módosítása
-
-                    dataRepository.UpdateGuest(corporateGuest);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         /// <summary>

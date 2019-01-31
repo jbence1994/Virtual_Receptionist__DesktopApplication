@@ -48,19 +48,9 @@ namespace virtual_receptionist.View
             presenter.AddNewRecordToPrivateGuestTable();
         }
 
-        private void buttonAddPrivateGuestModal_Click(object sender, EventArgs e)
-        {
-            presenter.AddNewRecordToPrivateGuestTableModal();
-        }
-
         private void buttonAddCorporateGuest_Click(object sender, EventArgs e)
         {
             presenter.AddNewRecordToCorporateGuestTable();
-        }
-
-        private void buttonAddCorporateGuestModal_Click(object sender, EventArgs e)
-        {
-            presenter.AddNewRecordToCorporateGuestTableModal();
         }
 
         private void buttonUpdatePrivateGuest_Click(object sender, EventArgs e)
@@ -68,19 +58,9 @@ namespace virtual_receptionist.View
             presenter.UpdateRecordInPrivateGuestTable();
         }
 
-        private void buttonUpdatePrivateGuestModal_Click(object sender, EventArgs e)
-        {
-            presenter.UpdateRecordInPrivateGuestTableModal();
-        }
-
         private void buttonUpdateCorporateGuest_Click(object sender, EventArgs e)
         {
             presenter.UpdateRecordInCorporateGuestTable();
-        }
-
-        private void buttonUpdateCorporateGuestModal_Click(object sender, EventArgs e)
-        {
-            presenter.UpdateRecordInCorporateGuestTableModal();
         }
 
         private void buttonDeletePrivateGuest_Click(object sender, EventArgs e)
