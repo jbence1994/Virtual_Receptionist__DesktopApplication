@@ -193,7 +193,7 @@ namespace virtual_receptionist.Model
 
             if (!IsValidBirthDate())
             {
-                throw new Exception("Nem megfelelő a születési dátum formátuma!\nMegfelelő formátum: \"YYYY-MM-DD\"");
+                throw new Exception("Nem megfelelő a születési dátum formátuma!\nHelyes formátum: \"YYYY-MM-DD\"");
             }
         }
 
