@@ -31,6 +31,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// PrivateGuest osztály konstruktora
         /// </summary>
+        /// <param name="id">Vendég azonosítója</param>
         /// <param name="name">Vendég neve</param>
         /// <param name="documentNumber">Vendég útlevelének vagy személyi igazolványának száma</param>
         /// <param name="citizenship">Vendég állampolgársága</param>
@@ -41,11 +42,12 @@ namespace virtual_receptionist.Model
         /// <param name="address">Vendég lakhelyének címe (utca, házszám)</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public PrivateGuest(string name, string documentNumber, string citizenship, string birthDate, string country,
+        public PrivateGuest(int id, string name, string documentNumber, string citizenship, string birthDate,
+            string country,
             string zipCode,
             string city,
             string address, string phoneNumber,
-            string emailAddress) : base(name, country, zipCode, city, address, phoneNumber, emailAddress)
+            string emailAddress) : base(id, name, country, zipCode, city, address, phoneNumber, emailAddress)
         {
             this.documentNumber = documentNumber;
             this.citizenship = citizenship;
@@ -102,7 +104,7 @@ namespace virtual_receptionist.Model
         public override string ToString()
         {
             return
-                $"{name} {documentNumber} {citizenship} {birthDate} {country} {zipCode} {city} {address} {phoneNumber} {emailAddress}";
+                $"{id} {name} {documentNumber} {citizenship} {birthDate} {country} {zipCode} {city} {address} {phoneNumber} {emailAddress}";
         }
 
         #endregion

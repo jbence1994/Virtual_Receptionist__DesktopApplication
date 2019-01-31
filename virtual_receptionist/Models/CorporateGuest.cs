@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace virtual_receptionist.Model
+﻿namespace virtual_receptionist.Model
 {
     /// <summary>
     /// Céges vendég modell osztálya
@@ -21,6 +19,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// CorporateGuest osztály konstruktora
         /// </summary>
+        ///<param name="id">Céges vendég azonosítója</param>
         /// <param name="name">Céges vendég cégneve</param>
         /// <param name="vatNumber">Céges vendég adószáma</param>
         /// <param name="country">Céges vendég országának neve</param>
@@ -29,8 +28,8 @@ namespace virtual_receptionist.Model
         /// <param name="address">Céges vendég címe (utca, házszám)</param>
         /// <param name="phoneNumber">Céges vendég telefonszáma</param>
         /// <param name="emailAddress">Céges vendég e-mail címe</param>
-        public CorporateGuest(string name, string vatNumber, string country, string zipCode, string city,
-            string address, string phoneNumber, string emailAddress) : base(name, country, zipCode, city, address,
+        public CorporateGuest(int id, string name, string vatNumber, string country, string zipCode, string city,
+            string address, string phoneNumber, string emailAddress) : base(id, name, country, zipCode, city, address,
             phoneNumber, emailAddress)
         {
             this.vatNumber = vatNumber;
@@ -68,7 +67,7 @@ namespace virtual_receptionist.Model
         public override string ToString()
         {
             return
-                $"{name} {vatNumber} {country} {zipCode} {city} {address} {phoneNumber} {emailAddress}";
+                $"{id} {name} {vatNumber} {country} {zipCode} {city} {address} {phoneNumber} {emailAddress}";
         }
 
         #endregion

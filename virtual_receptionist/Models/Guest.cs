@@ -8,6 +8,11 @@
         #region Adattagok
 
         /// <summary>
+        /// Vendég azonosítója
+        /// </summary>
+        protected int id;
+
+        /// <summary>
         /// Vendég neve
         /// </summary>
         protected string name;
@@ -49,6 +54,7 @@
         /// <summary>
         /// Guest osztály konstruktora
         /// </summary>
+        /// <param name="id">Vendég azonosítója</param>
         /// <param name="name">Vendég neve</param>
         /// <param name="country">Vendég száramázási országának neve</param>
         /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
@@ -56,9 +62,11 @@
         /// <param name="address">Vendég lakhelyének címe (utca, házszám)</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(string name, string country, string zipCode, string city, string address, string phoneNumber,
+        public Guest(int id, string name, string country, string zipCode, string city, string address,
+            string phoneNumber,
             string emailAddress)
         {
+            this.id = id;
             this.name = name;
             this.country = country;
             this.zipCode = zipCode;
@@ -79,6 +87,15 @@
         #endregion
 
         #region Getter és setter tulajdonságok
+
+        /// <summary>
+        /// Vendég azonosítója
+        /// </summary>
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         /// <summary>
         /// Vendég neve
