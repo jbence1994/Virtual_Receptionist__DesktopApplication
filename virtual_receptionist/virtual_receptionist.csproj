@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="Models\CorporateGuest.cs" />
     <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
-    <Compile Include="Presenters\GuestRegistrationCardPresenter.cs" />
+    <Compile Include="Presenters\RegistrationCardPresenter.cs" />
     <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
     <Compile Include="Presenters\RoomEditorPresenter.cs" />
     <Compile Include="Models\PrivateGuest.cs" />
@@ -107,11 +107,11 @@
     <Compile Include="Views\FormModalBillingItems.Designer.cs">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormGuestRegistrationCard.cs">
+    <Compile Include="Views\FormRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormGuestRegistrationCard.Designer.cs">
-      <DependentUpon>FormGuestRegistrationCard.cs</DependentUpon>
+    <Compile Include="Views\FormRegistrationCard.Designer.cs">
+      <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormRoomEditor.cs">
       <SubType>Form</SubType>
@@ -149,8 +149,8 @@
     <EmbeddedResource Include="Views\FormModalBillingItems.resx">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormGuestRegistrationCard.resx">
-      <DependentUpon>FormGuestRegistrationCard.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FormRegistrationCard.resx">
+      <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormRoomEditor.resx">
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
