@@ -220,7 +220,7 @@ namespace virtual_receptionist.MySQL_ORM
         }
 
         /// <summary>
-        /// Scalar lekérdezést végrehajtó metódus
+        /// SCALAR SELECT utasítást végrehajtó metódus
         /// </summary>
         /// <param name="sql">SQL utasítás</param>
         /// <returns>SQL utasítás eredményét adja vissza</returns>
