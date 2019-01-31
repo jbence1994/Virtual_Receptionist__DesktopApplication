@@ -130,7 +130,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégadatbázis-kezelő prezenter konstruktora
         /// </summary>
-        /// <param name="listViews">Vendégtáblázatok</param>
+        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
         public GuestDatabasePresenter(params Control[] controls)
         {
             countries = dataRepository.GetCountries();
