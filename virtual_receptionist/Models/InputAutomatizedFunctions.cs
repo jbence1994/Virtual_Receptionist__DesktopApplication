@@ -170,6 +170,23 @@ namespace virtual_receptionist.Model
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="Exception"></exception>
+        public void ProvideBirthDate()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Üres bemenet!");
+            }
+
+            if (IsValidBirthDate())
+            {
+                throw new Exception("Nem megfelelő a születési dátum formátuma!\nMegfelelő formátum: \"YYYY-MM-DD\"");
+            }
+        }
+
         #endregion
     }
 }

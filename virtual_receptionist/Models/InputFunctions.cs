@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace virtual_receptionist.Model
@@ -149,6 +150,24 @@ namespace virtual_receptionist.Model
             Regex validEmail = new Regex("^[0-9a-z\\.-]+@([0-9a-z-]+\\.)+[a-z]{2,4}$");
 
             if (validEmail.IsMatch(input))
+            {
+                valid = true;
+            }
+
+            return valid;
+        }
+
+        /// <summary>
+        /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt születési dátum
+        /// </summary>
+        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        private bool IsValidBirthDate()
+        {
+            bool valid = false;
+
+            Regex validBirthDate = new Regex("");
+
+            if (validBirthDate.IsMatch(input))
             {
                 valid = true;
             }
