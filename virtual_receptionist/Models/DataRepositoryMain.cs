@@ -6,7 +6,7 @@ using System.Data;
 namespace virtual_receptionist.Model
 {
     /// <summary>
-    /// Az alkalmazáshoz szükséges adatokat tároló adattár osztály, amely az alkalmazás üzleti logikájáért is felel
+    /// Az alkalmazáshoz szükséges adatokat tároló adattár osztály, amely az alkalmazás üzleti logikájáért felel
     /// </summary>
     public partial class DataRepository
     {
