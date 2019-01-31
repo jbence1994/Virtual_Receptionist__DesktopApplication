@@ -298,7 +298,8 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInPrivateGuestTable()
         {
-            throw new System.NotImplementedException();
+            PrivateGuest privateGuest = new PrivateGuest();
+            dataRepository.UpdateGuest(privateGuest);
         }
 
         /// <summary>
@@ -349,7 +350,8 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInCorporateGuestTable()
         {
-            throw new System.NotImplementedException();
+            CorporateGuest corporateGuest = new CorporateGuest();
+            dataRepository.UpdateGuest(corporateGuest);
         }
 
         /// <summary>
