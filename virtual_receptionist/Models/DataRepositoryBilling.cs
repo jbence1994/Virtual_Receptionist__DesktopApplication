@@ -100,20 +100,6 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja az országok neveit a hozzátartozó országkóddal
-        /// </summary>
-        /// <returns>Országok neveivel és országkódjaival feltöltött listát adja vissza</returns>
-        public List<Country> GetCountriesWithCountryCode()
-        {
-            if (countries.Count == 0)
-            {
-                UploadCountriesList();
-            }
-
-            return countries;
-        }
-
-        /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
         /// <param name="itemPrice">Tétel értéke, amelyből kedvezményt számol a függvény</param>
