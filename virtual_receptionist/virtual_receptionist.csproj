@@ -72,7 +72,7 @@
     <Compile Include="Models\Accomodation.cs" />
     <Compile Include="Models\BillingItems.cs" />
     <Compile Include="Models\Country.cs" />
-    <Compile Include="Models\Database.cs" />
+    <Compile Include="MySQL_ORM\Database.cs" />
     <Compile Include="Models\DataRepositoryGuest.cs" />
     <Compile Include="Models\DataRepositoryBilling.cs" />
     <Compile Include="Models\DataRepositoryLogin.cs" />
