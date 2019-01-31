@@ -8,11 +8,6 @@
         #region Adattagok
 
         /// <summary>
-        /// Ország kódja
-        /// </summary>
-        private string code;
-
-        /// <summary>
         /// Ország neve
         /// </summary>
         private string name;
@@ -24,11 +19,9 @@
         /// <summary>
         /// Country osztály konstruktora
         /// </summary>
-        /// <param name="code">Ország kódja</param>
         /// <param name="name">Ország neve</param>
-        public Country(string code, string name)
+        public Country(string name)
         {
-            this.code = code;
             this.name = name;
         }
 
@@ -43,15 +36,6 @@
         #endregion
 
         #region Getter és setter tulajdonságok
-
-        /// <summary>
-        /// Ország kódja
-        /// </summary>
-        public string Code
-        {
-            get { return code; }
-            set { code = value; }
-        }
 
         /// <summary>
         /// Ország neve
@@ -72,7 +56,7 @@
         /// <returns>Visszaadja a Country típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{code} {name}";
+            return $"{name}";
         }
 
         #endregion

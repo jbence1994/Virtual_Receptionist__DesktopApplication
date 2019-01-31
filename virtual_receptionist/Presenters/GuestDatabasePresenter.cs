@@ -253,7 +253,33 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToCorporateGuestTable()
         {
-            throw new System.NotImplementedException();
+            string name = textBoxCompanyName.Text;
+            string vatNumber = textBoxVATNumber.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
+            string zipCode = textBoxHeadquarterZipCode.Text;
+            string city = textBoxHeadquarterCity.Text;
+            string address = textBoxHeadquarterAddress.Text;
+            string phoneNumber = textBoxCompanyPhoneNumber.Text;
+            string email = textBoxCompanyEmailAddress.Text;
+
+            CorporateGuest corporateGuest =
+                new CorporateGuest(name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+
+
+            // ListView rekord hozzáadás (GUI)
+            ListViewItem newRecord = new ListViewItem();
+            newRecord.Text = name;
+            newRecord.SubItems.Add(vatNumber);
+            newRecord.SubItems.Add(country);
+            newRecord.SubItems.Add(zipCode);
+            newRecord.SubItems.Add(city);
+            newRecord.SubItems.Add(address);
+            newRecord.SubItems.Add(phoneNumber);
+            newRecord.SubItems.Add(email);
+            listViewCorporateGuests.Items.Add(newRecord);
+
+            //Adatbázis rekord törlése
+            dataRepository.CreateGuest(corporateGuest);
         }
 
         /// <summary>

@@ -40,10 +40,9 @@ namespace virtual_receptionist.Model
 
             foreach (DataRow row in dt.Rows)
             {
-                string code = row["CountryCode"].ToString();
                 string name = row["CountryName"].ToString();
 
-                Country countryInstance = new Country(code, name);
+                Country countryInstance = new Country(name);
                 countries.Add(countryInstance);
             }
         }
