@@ -154,7 +154,7 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Aszám ellenőrző metódus
+        /// Adószám ellenőrző metódus
         /// </summary>
         /// <exception cref="Exception"></exception>
         public void ProvideVATNumber()
@@ -171,7 +171,7 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// 
+        /// Születési idő ellenőrző metódus
         /// </summary>
         /// <exception cref="Exception"></exception>
         public void ProvideBirthDate()
@@ -181,7 +181,17 @@ namespace virtual_receptionist.Model
                 throw new Exception("Üres bemenet!");
             }
 
-            if (IsValidBirthDate())
+            if (ContainsControlCharacters())
+            {
+                throw new Exception("Születési dátum nem tartalmazhat vezérlőbillentyű karaktert!");
+            }
+
+            if (ContainsLetterCharacters())
+            {
+                throw new Exception("Születési dátum nem tartalmazhat betűt!");
+            }
+
+            if (!IsValidBirthDate())
             {
                 throw new Exception("Nem megfelelő a születési dátum formátuma!\nMegfelelő formátum: \"YYYY-MM-DD\"");
             }
