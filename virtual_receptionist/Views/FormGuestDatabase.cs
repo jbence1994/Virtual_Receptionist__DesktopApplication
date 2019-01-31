@@ -27,9 +27,9 @@ namespace virtual_receptionist.View
         {
             InitializeComponent();
             presenter = new GuestDatabasePresenter(listViewPrivateGuests, listViewCorporateGuests, comboBoxCountry,
-                comboBoxHeadquarterCountry, textBoxName, textBoxDocumentID, textBoxCitizenship,
+                comboBoxHeadquarterCountry, textBoxID, textBoxName, textBoxDocumentID, textBoxCitizenship,
                 textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress,
-                textBoxCompanyName, textBoxVATNumber,
+                textBoxCompnayID, textBoxCompanyName, textBoxVATNumber,
                 textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
                 textBoxCompanyEmailAddress);
         }

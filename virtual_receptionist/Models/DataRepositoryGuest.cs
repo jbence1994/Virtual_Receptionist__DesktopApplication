@@ -46,7 +46,7 @@ namespace virtual_receptionist.Model
         private void UploadCorporateGuestList()
         {
             string sql =
-                "SELECT guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
+                "SELECT guest.ID, guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)

@@ -32,6 +32,8 @@
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPagePrivateGuest = new System.Windows.Forms.TabPage();
             this.groupBoxPrivateGuest = new System.Windows.Forms.GroupBox();
+            this.labelID = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.buttonUpdatePrivateGuest = new System.Windows.Forms.Button();
             this.buttonAddPrivateGuest = new System.Windows.Forms.Button();
             this.textBoxEmailAddress = new System.Windows.Forms.TextBox();
@@ -58,6 +60,7 @@
             this.buttonDeletePrivateGuest = new System.Windows.Forms.Button();
             this.buttonAddPrivateGuestModal = new System.Windows.Forms.Button();
             this.listViewPrivateGuests = new System.Windows.Forms.ListView();
+            this.columnHeaderPrivateGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDocumentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCitizenship = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -70,6 +73,8 @@
             this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPageCorporateGuest = new System.Windows.Forms.TabPage();
             this.groupBoxCorporateGuest = new System.Windows.Forms.GroupBox();
+            this.labelCorporateID = new System.Windows.Forms.Label();
+            this.textBoxCompnayID = new System.Windows.Forms.TextBox();
             this.buttonUpdateCorporateGuest = new System.Windows.Forms.Button();
             this.buttonAddCorporateGuest = new System.Windows.Forms.Button();
             this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
@@ -92,6 +97,7 @@
             this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
             this.buttonAddCorporateGuestModal = new System.Windows.Forms.Button();
             this.listViewCorporateGuests = new System.Windows.Forms.ListView();
+            this.columnHeaderCorporateGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderHeadqurterCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -100,8 +106,6 @@
             this.columnHeaderHeadqurterAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCompanyPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCompanyEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPrivateGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCorporateGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPagePrivateGuest.SuspendLayout();
             this.groupBoxPrivateGuest.SuspendLayout();
@@ -136,6 +140,8 @@
             // 
             // groupBoxPrivateGuest
             // 
+            this.groupBoxPrivateGuest.Controls.Add(this.labelID);
+            this.groupBoxPrivateGuest.Controls.Add(this.textBoxID);
             this.groupBoxPrivateGuest.Controls.Add(this.buttonUpdatePrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.buttonAddPrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.textBoxEmailAddress);
@@ -164,9 +170,26 @@
             this.groupBoxPrivateGuest.TabIndex = 0;
             this.groupBoxPrivateGuest.TabStop = false;
             // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(910, 80);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(94, 13);
+            this.labelID.TabIndex = 38;
+            this.labelID.Text = "Vendégazonosító:";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(1010, 77);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
+            this.textBoxID.Size = new System.Drawing.Size(125, 20);
+            this.textBoxID.TabIndex = 37;
+            // 
             // buttonUpdatePrivateGuest
             // 
-            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(615, 122);
+            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(1010, 132);
             this.buttonUpdatePrivateGuest.Name = "buttonUpdatePrivateGuest";
             this.buttonUpdatePrivateGuest.Size = new System.Drawing.Size(125, 23);
             this.buttonUpdatePrivateGuest.TabIndex = 16;
@@ -176,7 +199,7 @@
             // 
             // buttonAddPrivateGuest
             // 
-            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(615, 93);
+            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(1010, 103);
             this.buttonAddPrivateGuest.Name = "buttonAddPrivateGuest";
             this.buttonAddPrivateGuest.Size = new System.Drawing.Size(125, 23);
             this.buttonAddPrivateGuest.TabIndex = 15;
@@ -411,6 +434,11 @@
             this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
             this.listViewPrivateGuests.SelectedIndexChanged += new System.EventHandler(this.listViewPrivateGuests_SelectedIndexChanged);
             // 
+            // columnHeaderPrivateGuestID
+            // 
+            this.columnHeaderPrivateGuestID.Text = "Vendégazonosító";
+            this.columnHeaderPrivateGuestID.Width = 150;
+            // 
             // columnHeaderName
             // 
             this.columnHeaderName.Text = "Név";
@@ -478,6 +506,8 @@
             // 
             // groupBoxCorporateGuest
             // 
+            this.groupBoxCorporateGuest.Controls.Add(this.labelCorporateID);
+            this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompnayID);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyEmailAddress);
@@ -502,9 +532,26 @@
             this.groupBoxCorporateGuest.TabIndex = 28;
             this.groupBoxCorporateGuest.TabStop = false;
             // 
+            // labelCorporateID
+            // 
+            this.labelCorporateID.AutoSize = true;
+            this.labelCorporateID.Location = new System.Drawing.Point(910, 80);
+            this.labelCorporateID.Name = "labelCorporateID";
+            this.labelCorporateID.Size = new System.Drawing.Size(94, 13);
+            this.labelCorporateID.TabIndex = 41;
+            this.labelCorporateID.Text = "Vendégazonosító:";
+            // 
+            // textBoxCompnayID
+            // 
+            this.textBoxCompnayID.Location = new System.Drawing.Point(1010, 77);
+            this.textBoxCompnayID.Name = "textBoxCompnayID";
+            this.textBoxCompnayID.ReadOnly = true;
+            this.textBoxCompnayID.Size = new System.Drawing.Size(125, 20);
+            this.textBoxCompnayID.TabIndex = 40;
+            // 
             // buttonUpdateCorporateGuest
             // 
-            this.buttonUpdateCorporateGuest.Location = new System.Drawing.Point(615, 96);
+            this.buttonUpdateCorporateGuest.Location = new System.Drawing.Point(1010, 132);
             this.buttonUpdateCorporateGuest.Name = "buttonUpdateCorporateGuest";
             this.buttonUpdateCorporateGuest.Size = new System.Drawing.Size(125, 23);
             this.buttonUpdateCorporateGuest.TabIndex = 31;
@@ -514,7 +561,7 @@
             // 
             // buttonAddCorporateGuest
             // 
-            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(615, 67);
+            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(1010, 103);
             this.buttonAddCorporateGuest.Name = "buttonAddCorporateGuest";
             this.buttonAddCorporateGuest.Size = new System.Drawing.Size(125, 23);
             this.buttonAddCorporateGuest.TabIndex = 30;
@@ -715,6 +762,11 @@
             this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
             this.listViewCorporateGuests.SelectedIndexChanged += new System.EventHandler(this.listViewCorporateGuests_SelectedIndexChanged);
             // 
+            // columnHeaderCorporateGuestID
+            // 
+            this.columnHeaderCorporateGuestID.Text = "Vendégazonosító";
+            this.columnHeaderCorporateGuestID.Width = 150;
+            // 
             // columnHeaderCompanyName
             // 
             this.columnHeaderCompanyName.Text = "Cégnév";
@@ -754,16 +806,6 @@
             // 
             this.columnHeaderCompanyEmailAddress.Text = "E-mail cím";
             this.columnHeaderCompanyEmailAddress.Width = 150;
-            // 
-            // columnHeaderPrivateGuestID
-            // 
-            this.columnHeaderPrivateGuestID.Text = "Vendégazonosító";
-            this.columnHeaderPrivateGuestID.Width = 150;
-            // 
-            // columnHeaderCorporateGuestID
-            // 
-            this.columnHeaderCorporateGuestID.Text = "Vendégazonosító";
-            this.columnHeaderCorporateGuestID.Width = 150;
             // 
             // FormGuestDatabase
             // 
@@ -861,5 +903,9 @@
         private System.Windows.Forms.Label labelCompanyEmailAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderPrivateGuestID;
         private System.Windows.Forms.ColumnHeader columnHeaderCorporateGuestID;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox textBoxCompnayID;
+        private System.Windows.Forms.Label labelCorporateID;
     }
 }
