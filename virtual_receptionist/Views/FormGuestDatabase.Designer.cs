@@ -116,20 +116,17 @@
             this.tabControlGuestDatabase.Location = new System.Drawing.Point(12, 12);
             this.tabControlGuestDatabase.Name = "tabControlGuestDatabase";
             this.tabControlGuestDatabase.SelectedIndex = 0;
-            this.tabControlGuestDatabase.Size = new System.Drawing.Size(1161, 409);
+            this.tabControlGuestDatabase.Size = new System.Drawing.Size(1161, 431);
             this.tabControlGuestDatabase.TabIndex = 0;
             // 
             // tabPagePrivateGuest
             // 
             this.tabPagePrivateGuest.Controls.Add(this.groupBoxPrivateGuest);
-            this.tabPagePrivateGuest.Controls.Add(this.buttonUpdatePrivateGuest);
-            this.tabPagePrivateGuest.Controls.Add(this.buttonDeletePrivateGuest);
-            this.tabPagePrivateGuest.Controls.Add(this.buttonAddPrivateGuest);
             this.tabPagePrivateGuest.Controls.Add(this.listViewPrivateGuests);
             this.tabPagePrivateGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPagePrivateGuest.Name = "tabPagePrivateGuest";
             this.tabPagePrivateGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrivateGuest.Size = new System.Drawing.Size(1153, 383);
+            this.tabPagePrivateGuest.Size = new System.Drawing.Size(1153, 405);
             this.tabPagePrivateGuest.TabIndex = 1;
             this.tabPagePrivateGuest.Text = "Vendégek";
             this.tabPagePrivateGuest.UseVisualStyleBackColor = true;
@@ -137,8 +134,11 @@
             // groupBoxPrivateGuest
             // 
             this.groupBoxPrivateGuest.Controls.Add(this.labelID);
+            this.groupBoxPrivateGuest.Controls.Add(this.buttonDeletePrivateGuest);
+            this.groupBoxPrivateGuest.Controls.Add(this.buttonUpdatePrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.textBoxID);
             this.groupBoxPrivateGuest.Controls.Add(this.textBoxEmailAddress);
+            this.groupBoxPrivateGuest.Controls.Add(this.buttonAddPrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.labelName);
             this.groupBoxPrivateGuest.Controls.Add(this.textBoxPhoneNumber);
             this.groupBoxPrivateGuest.Controls.Add(this.labelDocumentID);
@@ -160,14 +160,14 @@
             this.groupBoxPrivateGuest.Controls.Add(this.labelEmailAddress);
             this.groupBoxPrivateGuest.Location = new System.Drawing.Point(6, 216);
             this.groupBoxPrivateGuest.Name = "groupBoxPrivateGuest";
-            this.groupBoxPrivateGuest.Size = new System.Drawing.Size(1141, 161);
+            this.groupBoxPrivateGuest.Size = new System.Drawing.Size(1141, 183);
             this.groupBoxPrivateGuest.TabIndex = 0;
             this.groupBoxPrivateGuest.TabStop = false;
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(910, 80);
+            this.labelID.Location = new System.Drawing.Point(8, 22);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(94, 13);
             this.labelID.TabIndex = 38;
@@ -175,7 +175,7 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(1010, 77);
+            this.textBoxID.Location = new System.Drawing.Point(108, 19);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(125, 20);
@@ -183,7 +183,7 @@
             // 
             // textBoxEmailAddress
             // 
-            this.textBoxEmailAddress.Location = new System.Drawing.Point(353, 124);
+            this.textBoxEmailAddress.Location = new System.Drawing.Point(315, 124);
             this.textBoxEmailAddress.Name = "textBoxEmailAddress";
             this.textBoxEmailAddress.Size = new System.Drawing.Size(125, 20);
             this.textBoxEmailAddress.TabIndex = 14;
@@ -191,7 +191,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(95, 22);
+            this.labelName.Location = new System.Drawing.Point(72, 48);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(30, 13);
             this.labelName.TabIndex = 27;
@@ -199,7 +199,7 @@
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(353, 98);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(315, 98);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(125, 20);
             this.textBoxPhoneNumber.TabIndex = 13;
@@ -207,7 +207,7 @@
             // labelDocumentID
             // 
             this.labelDocumentID.AutoSize = true;
-            this.labelDocumentID.Location = new System.Drawing.Point(29, 48);
+            this.labelDocumentID.Location = new System.Drawing.Point(6, 74);
             this.labelDocumentID.Name = "labelDocumentID";
             this.labelDocumentID.Size = new System.Drawing.Size(96, 13);
             this.labelDocumentID.TabIndex = 28;
@@ -215,7 +215,7 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(353, 72);
+            this.textBoxAddress.Location = new System.Drawing.Point(315, 72);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(125, 20);
             this.textBoxAddress.TabIndex = 12;
@@ -223,7 +223,7 @@
             // labelCitizenship
             // 
             this.labelCitizenship.AutoSize = true;
-            this.labelCitizenship.Location = new System.Drawing.Point(44, 75);
+            this.labelCitizenship.Location = new System.Drawing.Point(21, 101);
             this.labelCitizenship.Name = "labelCitizenship";
             this.labelCitizenship.Size = new System.Drawing.Size(81, 13);
             this.labelCitizenship.TabIndex = 29;
@@ -231,7 +231,7 @@
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(353, 45);
+            this.textBoxCity.Location = new System.Drawing.Point(315, 45);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(125, 20);
             this.textBoxCity.TabIndex = 11;
@@ -239,7 +239,7 @@
             // labelBirthDate
             // 
             this.labelBirthDate.AutoSize = true;
-            this.labelBirthDate.Location = new System.Drawing.Point(56, 101);
+            this.labelBirthDate.Location = new System.Drawing.Point(33, 127);
             this.labelBirthDate.Name = "labelBirthDate";
             this.labelBirthDate.Size = new System.Drawing.Size(69, 13);
             this.labelBirthDate.TabIndex = 30;
@@ -247,7 +247,7 @@
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(353, 19);
+            this.textBoxZipCode.Location = new System.Drawing.Point(315, 19);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(125, 20);
             this.textBoxZipCode.TabIndex = 10;
@@ -255,7 +255,7 @@
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(82, 127);
+            this.labelCountry.Location = new System.Drawing.Point(59, 154);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
             this.labelCountry.TabIndex = 31;
@@ -264,7 +264,7 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(131, 124);
+            this.comboBoxCountry.Location = new System.Drawing.Point(108, 151);
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(125, 21);
             this.comboBoxCountry.TabIndex = 9;
@@ -272,7 +272,7 @@
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(277, 22);
+            this.labelZipCode.Location = new System.Drawing.Point(239, 22);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelZipCode.TabIndex = 32;
@@ -280,7 +280,7 @@
             // 
             // textBoxBirthDate
             // 
-            this.textBoxBirthDate.Location = new System.Drawing.Point(131, 98);
+            this.textBoxBirthDate.Location = new System.Drawing.Point(108, 124);
             this.textBoxBirthDate.Name = "textBoxBirthDate";
             this.textBoxBirthDate.Size = new System.Drawing.Size(125, 20);
             this.textBoxBirthDate.TabIndex = 8;
@@ -288,7 +288,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(291, 48);
+            this.labelCity.Location = new System.Drawing.Point(253, 48);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
             this.labelCity.TabIndex = 33;
@@ -296,7 +296,7 @@
             // 
             // textBoxCitizenship
             // 
-            this.textBoxCitizenship.Location = new System.Drawing.Point(131, 72);
+            this.textBoxCitizenship.Location = new System.Drawing.Point(108, 97);
             this.textBoxCitizenship.Name = "textBoxCitizenship";
             this.textBoxCitizenship.Size = new System.Drawing.Size(125, 20);
             this.textBoxCitizenship.TabIndex = 7;
@@ -304,7 +304,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(318, 75);
+            this.labelAddress.Location = new System.Drawing.Point(280, 75);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
             this.labelAddress.TabIndex = 34;
@@ -312,7 +312,7 @@
             // 
             // textBoxDocumentID
             // 
-            this.textBoxDocumentID.Location = new System.Drawing.Point(131, 45);
+            this.textBoxDocumentID.Location = new System.Drawing.Point(108, 71);
             this.textBoxDocumentID.Name = "textBoxDocumentID";
             this.textBoxDocumentID.Size = new System.Drawing.Size(125, 20);
             this.textBoxDocumentID.TabIndex = 6;
@@ -320,7 +320,7 @@
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(277, 101);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(239, 100);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelPhoneNumber.TabIndex = 35;
@@ -328,7 +328,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(131, 19);
+            this.textBoxName.Location = new System.Drawing.Point(108, 45);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(125, 20);
             this.textBoxName.TabIndex = 5;
@@ -336,7 +336,7 @@
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(288, 127);
+            this.labelEmailAddress.Location = new System.Drawing.Point(250, 127);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(59, 13);
             this.labelEmailAddress.TabIndex = 36;
@@ -346,7 +346,7 @@
             // 
             this.buttonUpdatePrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdatePrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdatePrivateGuest.Image")));
-            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(990, 76);
+            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(815, 113);
             this.buttonUpdatePrivateGuest.Name = "buttonUpdatePrivateGuest";
             this.buttonUpdatePrivateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdatePrivateGuest.TabIndex = 3;
@@ -360,7 +360,7 @@
             // 
             this.buttonDeletePrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeletePrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePrivateGuest.Image")));
-            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(990, 146);
+            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(978, 113);
             this.buttonDeletePrivateGuest.Name = "buttonDeletePrivateGuest";
             this.buttonDeletePrivateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonDeletePrivateGuest.TabIndex = 4;
@@ -374,7 +374,7 @@
             // 
             this.buttonAddPrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddPrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPrivateGuest.Image")));
-            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(990, 6);
+            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(652, 113);
             this.buttonAddPrivateGuest.Name = "buttonAddPrivateGuest";
             this.buttonAddPrivateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddPrivateGuest.TabIndex = 2;
@@ -402,7 +402,7 @@
             this.listViewPrivateGuests.GridLines = true;
             this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
             this.listViewPrivateGuests.Name = "listViewPrivateGuests";
-            this.listViewPrivateGuests.Size = new System.Drawing.Size(981, 207);
+            this.listViewPrivateGuests.Size = new System.Drawing.Size(1144, 207);
             this.listViewPrivateGuests.TabIndex = 1;
             this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
             this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
@@ -466,14 +466,11 @@
             // tabPageCorporateGuest
             // 
             this.tabPageCorporateGuest.Controls.Add(this.groupBoxCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
-            this.tabPageCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
             this.tabPageCorporateGuest.Controls.Add(this.listViewCorporateGuests);
             this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
             this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 383);
+            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 405);
             this.tabPageCorporateGuest.TabIndex = 1;
             this.tabPageCorporateGuest.Text = "Céges vendégek";
             this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
@@ -481,7 +478,10 @@
             // groupBoxCorporateGuest
             // 
             this.groupBoxCorporateGuest.Controls.Add(this.labelCorporateID);
+            this.groupBoxCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
+            this.groupBoxCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompnayID);
+            this.groupBoxCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyEmailAddress);
             this.groupBoxCorporateGuest.Controls.Add(this.labelCompanyName);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyPhoneNumber);
@@ -500,14 +500,14 @@
             this.groupBoxCorporateGuest.Controls.Add(this.labelCompanyEmailAddress);
             this.groupBoxCorporateGuest.Location = new System.Drawing.Point(6, 216);
             this.groupBoxCorporateGuest.Name = "groupBoxCorporateGuest";
-            this.groupBoxCorporateGuest.Size = new System.Drawing.Size(1141, 161);
+            this.groupBoxCorporateGuest.Size = new System.Drawing.Size(1141, 183);
             this.groupBoxCorporateGuest.TabIndex = 28;
             this.groupBoxCorporateGuest.TabStop = false;
             // 
             // labelCorporateID
             // 
             this.labelCorporateID.AutoSize = true;
-            this.labelCorporateID.Location = new System.Drawing.Point(910, 80);
+            this.labelCorporateID.Location = new System.Drawing.Point(8, 22);
             this.labelCorporateID.Name = "labelCorporateID";
             this.labelCorporateID.Size = new System.Drawing.Size(94, 13);
             this.labelCorporateID.TabIndex = 41;
@@ -515,7 +515,7 @@
             // 
             // textBoxCompnayID
             // 
-            this.textBoxCompnayID.Location = new System.Drawing.Point(1010, 77);
+            this.textBoxCompnayID.Location = new System.Drawing.Point(108, 19);
             this.textBoxCompnayID.Name = "textBoxCompnayID";
             this.textBoxCompnayID.ReadOnly = true;
             this.textBoxCompnayID.Size = new System.Drawing.Size(125, 20);
@@ -523,7 +523,7 @@
             // 
             // textBoxCompanyEmailAddress
             // 
-            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(353, 97);
+            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(315, 71);
             this.textBoxCompanyEmailAddress.Name = "textBoxCompanyEmailAddress";
             this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(125, 20);
             this.textBoxCompanyEmailAddress.TabIndex = 29;
@@ -531,7 +531,7 @@
             // labelCompanyName
             // 
             this.labelCompanyName.AutoSize = true;
-            this.labelCompanyName.Location = new System.Drawing.Point(78, 22);
+            this.labelCompanyName.Location = new System.Drawing.Point(55, 48);
             this.labelCompanyName.Name = "labelCompanyName";
             this.labelCompanyName.Size = new System.Drawing.Size(47, 13);
             this.labelCompanyName.TabIndex = 32;
@@ -539,7 +539,7 @@
             // 
             // textBoxCompanyPhoneNumber
             // 
-            this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(353, 71);
+            this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(315, 45);
             this.textBoxCompanyPhoneNumber.Name = "textBoxCompanyPhoneNumber";
             this.textBoxCompanyPhoneNumber.Size = new System.Drawing.Size(125, 20);
             this.textBoxCompanyPhoneNumber.TabIndex = 28;
@@ -547,7 +547,7 @@
             // labelVATNumber
             // 
             this.labelVATNumber.AutoSize = true;
-            this.labelVATNumber.Location = new System.Drawing.Point(72, 48);
+            this.labelVATNumber.Location = new System.Drawing.Point(49, 74);
             this.labelVATNumber.Name = "labelVATNumber";
             this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVATNumber.TabIndex = 33;
@@ -555,21 +555,21 @@
             // 
             // textBoxHeadquarterCity
             // 
-            this.textBoxHeadquarterCity.Location = new System.Drawing.Point(353, 19);
+            this.textBoxHeadquarterCity.Location = new System.Drawing.Point(108, 150);
             this.textBoxHeadquarterCity.Name = "textBoxHeadquarterCity";
             this.textBoxHeadquarterCity.Size = new System.Drawing.Size(125, 20);
             this.textBoxHeadquarterCity.TabIndex = 26;
             // 
             // textBoxHeadquarterAddress
             // 
-            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(353, 45);
+            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(315, 19);
             this.textBoxHeadquarterAddress.Name = "textBoxHeadquarterAddress";
             this.textBoxHeadquarterAddress.Size = new System.Drawing.Size(125, 20);
             this.textBoxHeadquarterAddress.TabIndex = 27;
             // 
             // textBoxHeadquarterZipCode
             // 
-            this.textBoxHeadquarterZipCode.Location = new System.Drawing.Point(131, 98);
+            this.textBoxHeadquarterZipCode.Location = new System.Drawing.Point(108, 124);
             this.textBoxHeadquarterZipCode.Name = "textBoxHeadquarterZipCode";
             this.textBoxHeadquarterZipCode.Size = new System.Drawing.Size(125, 20);
             this.textBoxHeadquarterZipCode.TabIndex = 25;
@@ -577,7 +577,7 @@
             // labelHeadquarterCountry
             // 
             this.labelHeadquarterCountry.AutoSize = true;
-            this.labelHeadquarterCountry.Location = new System.Drawing.Point(82, 75);
+            this.labelHeadquarterCountry.Location = new System.Drawing.Point(59, 100);
             this.labelHeadquarterCountry.Name = "labelHeadquarterCountry";
             this.labelHeadquarterCountry.Size = new System.Drawing.Size(43, 13);
             this.labelHeadquarterCountry.TabIndex = 34;
@@ -586,7 +586,7 @@
             // comboBoxHeadquarterCountry
             // 
             this.comboBoxHeadquarterCountry.FormattingEnabled = true;
-            this.comboBoxHeadquarterCountry.Location = new System.Drawing.Point(131, 71);
+            this.comboBoxHeadquarterCountry.Location = new System.Drawing.Point(108, 97);
             this.comboBoxHeadquarterCountry.Name = "comboBoxHeadquarterCountry";
             this.comboBoxHeadquarterCountry.Size = new System.Drawing.Size(125, 21);
             this.comboBoxHeadquarterCountry.TabIndex = 24;
@@ -594,7 +594,7 @@
             // labelHeadquarterZipCode
             // 
             this.labelHeadquarterZipCode.AutoSize = true;
-            this.labelHeadquarterZipCode.Location = new System.Drawing.Point(55, 101);
+            this.labelHeadquarterZipCode.Location = new System.Drawing.Point(32, 127);
             this.labelHeadquarterZipCode.Name = "labelHeadquarterZipCode";
             this.labelHeadquarterZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelHeadquarterZipCode.TabIndex = 35;
@@ -603,7 +603,7 @@
             // labelHeadquarterCity
             // 
             this.labelHeadquarterCity.AutoSize = true;
-            this.labelHeadquarterCity.Location = new System.Drawing.Point(291, 22);
+            this.labelHeadquarterCity.Location = new System.Drawing.Point(46, 153);
             this.labelHeadquarterCity.Name = "labelHeadquarterCity";
             this.labelHeadquarterCity.Size = new System.Drawing.Size(56, 13);
             this.labelHeadquarterCity.TabIndex = 36;
@@ -612,7 +612,7 @@
             // labelHeadquarterAddress
             // 
             this.labelHeadquarterAddress.AutoSize = true;
-            this.labelHeadquarterAddress.Location = new System.Drawing.Point(318, 48);
+            this.labelHeadquarterAddress.Location = new System.Drawing.Point(280, 22);
             this.labelHeadquarterAddress.Name = "labelHeadquarterAddress";
             this.labelHeadquarterAddress.Size = new System.Drawing.Size(29, 13);
             this.labelHeadquarterAddress.TabIndex = 37;
@@ -620,7 +620,7 @@
             // 
             // textBoxVATNumber
             // 
-            this.textBoxVATNumber.Location = new System.Drawing.Point(131, 45);
+            this.textBoxVATNumber.Location = new System.Drawing.Point(108, 71);
             this.textBoxVATNumber.Name = "textBoxVATNumber";
             this.textBoxVATNumber.Size = new System.Drawing.Size(125, 20);
             this.textBoxVATNumber.TabIndex = 23;
@@ -628,7 +628,7 @@
             // labelCompanyPhoneNumber
             // 
             this.labelCompanyPhoneNumber.AutoSize = true;
-            this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(277, 74);
+            this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(239, 48);
             this.labelCompanyPhoneNumber.Name = "labelCompanyPhoneNumber";
             this.labelCompanyPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelCompanyPhoneNumber.TabIndex = 38;
@@ -636,7 +636,7 @@
             // 
             // textBoxCompanyName
             // 
-            this.textBoxCompanyName.Location = new System.Drawing.Point(131, 19);
+            this.textBoxCompanyName.Location = new System.Drawing.Point(108, 45);
             this.textBoxCompanyName.Name = "textBoxCompanyName";
             this.textBoxCompanyName.Size = new System.Drawing.Size(125, 20);
             this.textBoxCompanyName.TabIndex = 22;
@@ -644,7 +644,7 @@
             // labelCompanyEmailAddress
             // 
             this.labelCompanyEmailAddress.AutoSize = true;
-            this.labelCompanyEmailAddress.Location = new System.Drawing.Point(288, 100);
+            this.labelCompanyEmailAddress.Location = new System.Drawing.Point(250, 74);
             this.labelCompanyEmailAddress.Name = "labelCompanyEmailAddress";
             this.labelCompanyEmailAddress.Size = new System.Drawing.Size(59, 13);
             this.labelCompanyEmailAddress.TabIndex = 39;
@@ -654,7 +654,7 @@
             // 
             this.buttonUpdateCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateCorporateGuest.Image")));
-            this.buttonUpdateCorporateGuest.Location = new System.Drawing.Point(990, 76);
+            this.buttonUpdateCorporateGuest.Location = new System.Drawing.Point(815, 113);
             this.buttonUpdateCorporateGuest.Name = "buttonUpdateCorporateGuest";
             this.buttonUpdateCorporateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateCorporateGuest.TabIndex = 20;
@@ -668,7 +668,7 @@
             // 
             this.buttonDeleteCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCorporateGuest.Image")));
-            this.buttonDeleteCorporateGuest.Location = new System.Drawing.Point(990, 146);
+            this.buttonDeleteCorporateGuest.Location = new System.Drawing.Point(978, 113);
             this.buttonDeleteCorporateGuest.Name = "buttonDeleteCorporateGuest";
             this.buttonDeleteCorporateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonDeleteCorporateGuest.TabIndex = 21;
@@ -682,7 +682,7 @@
             // 
             this.buttonAddCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCorporateGuest.Image")));
-            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(990, 6);
+            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(652, 113);
             this.buttonAddCorporateGuest.Name = "buttonAddCorporateGuest";
             this.buttonAddCorporateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddCorporateGuest.TabIndex = 19;
@@ -708,7 +708,7 @@
             this.listViewCorporateGuests.GridLines = true;
             this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
             this.listViewCorporateGuests.Name = "listViewCorporateGuests";
-            this.listViewCorporateGuests.Size = new System.Drawing.Size(981, 207);
+            this.listViewCorporateGuests.Size = new System.Drawing.Size(1144, 207);
             this.listViewCorporateGuests.TabIndex = 18;
             this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
             this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
@@ -763,7 +763,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 433);
+            this.ClientSize = new System.Drawing.Size(1203, 455);
             this.Controls.Add(this.tabControlGuestDatabase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGuestDatabase";
