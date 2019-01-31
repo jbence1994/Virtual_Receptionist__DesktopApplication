@@ -193,7 +193,6 @@ namespace virtual_receptionist.MySQL_ORM
         /// INSERT, UPDATE, DELETE utasítást végrehajtó metódus
         /// </summary>
         /// <param name="sql">SQL utasítás</param>
-        /// <returns></returns>
         public void DML(string sql)
         {
             OpenConnection();
@@ -219,6 +218,43 @@ namespace virtual_receptionist.MySQL_ORM
             }
 
             CloseConnection();
+        }
+
+        /// <summary>
+        /// Scalar lekérdezést végrehajtó metódus
+        /// </summary>
+        /// <param name="sql">SQL utasítás</param>
+        /// <returns>SQL utasítás eredményét adja vissza</returns>
+        public string DQLScalar(string sql)
+        {
+            string scalarQuery = string.Empty;
+
+            OpenConnection();
+
+            try
+            {
+                mySqlCommand = new MySqlCommand()
+                {
+
+                    CommandText = sql,
+                    Connection = mySqlConnection
+                };
+
+                mySqlCommand.Prepare();
+                scalarQuery = mySqlCommand.ExecuteScalar().ToString();
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
+            CloseConnection();
+
+            return scalarQuery;
         }
 
         #endregion
