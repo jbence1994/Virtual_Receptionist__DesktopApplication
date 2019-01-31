@@ -58,15 +58,6 @@ namespace virtual_receptionist.Presenter
             }
         }
 
-        /// <summary>
-        /// Metódus, amely beállítja a legördülő lista forrásának az országok listját
-        /// </summary>
-        /// <param name="comboBoxCountry">Országok listáját tartalmazó legördülő menü</param>
-        public void InitializeComboBoxWithCountryList(ComboBox comboBoxCountry)
-        {
-            comboBoxCountry.DataSource = dataRepository.GetCountries();
-        }
-
         #endregion
     }
 }
