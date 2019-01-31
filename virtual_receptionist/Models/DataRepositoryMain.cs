@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using virtual_receptionist.MySQL_ORM;
 
 namespace virtual_receptionist.Model
@@ -102,7 +103,7 @@ namespace virtual_receptionist.Model
             Accomodation accomodation = Accomodation.AccomodationInstance;
 
             string sql =
-                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation.AccomodationID, accomodation.Password FROM accomodation, accomodation WHERE accomodation.ID = accomodation.Accomodation";
+                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -115,8 +116,6 @@ namespace virtual_receptionist.Model
                 accomodation.Site = row["Site"].ToString();
                 accomodation.PhoneNumber = row["PhoneNumber"].ToString();
                 accomodation.EmailAddress = row["EmailAddress"].ToString();
-                accomodation.AccomodationID = row["AccomodationID"].ToString();
-                accomodation.Password = row["Password"].ToString();
 
                 accomodations.Add(accomodation);
             }
