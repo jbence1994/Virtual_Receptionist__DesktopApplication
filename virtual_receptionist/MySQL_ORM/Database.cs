@@ -223,7 +223,7 @@ namespace virtual_receptionist.MySQL_ORM
         /// SCALAR SELECT utasítást végrehajtó metódus
         /// </summary>
         /// <param name="sql">SQL utasítás</param>
-        /// <returns>SQL utasítás eredményét adja vissza</returns>
+        /// <returns>SQL utasítás eredményét adja vissza karakterláncban</returns>
         public string DQLScalar(string sql)
         {
             string scalarQuery = string.Empty;
