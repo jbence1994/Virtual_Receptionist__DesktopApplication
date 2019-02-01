@@ -170,7 +170,14 @@ namespace virtual_receptionist.Presenter
             textBoxCompanyPhoneNumber = (TextBox) controls[20];
             textBoxCompanyEmailAddress = (TextBox) controls[21];
 
-            nextID = int.Parse(dataRepository.GetMaxGuestID()) + 1;
+            if (dataRepository.GetMaxGuestID() != "")
+            {
+                nextID = int.Parse(dataRepository.GetMaxGuestID()) + 1;
+            }
+            else
+            {
+                nextID = 1;
+            }
         }
 
         #endregion
