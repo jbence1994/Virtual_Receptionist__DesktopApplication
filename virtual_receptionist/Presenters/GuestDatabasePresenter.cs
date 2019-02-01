@@ -444,6 +444,21 @@ namespace virtual_receptionist.Presenter
                 textBoxPhoneNumber.Text = listViewPrivateGuests.SelectedItems[0].SubItems[9].Text;
                 textBoxEmailAddress.Text = listViewPrivateGuests.SelectedItems[0].SubItems[10].Text;
             }
+            else
+            {
+                textBoxID.Clear();
+                textBoxName.Clear();
+                textBoxDocumentID.Clear();
+                textBoxCitizenship.Clear();
+                textBoxBirthDate.Clear();
+                comboBoxCountry.DataSource = null;
+                comboBoxCountry.DataSource = countries;
+                textBoxZipCode.Clear();
+                textBoxCity.Clear();
+                textBoxAddress.Clear();
+                textBoxPhoneNumber.Clear();
+                textBoxEmailAddress.Clear();
+            }
         }
 
         /// <summary>
@@ -474,6 +489,19 @@ namespace virtual_receptionist.Presenter
                 textBoxHeadquarterAddress.Text = listViewCorporateGuests.SelectedItems[0].SubItems[6].Text;
                 textBoxCompanyPhoneNumber.Text = listViewCorporateGuests.SelectedItems[0].SubItems[7].Text;
                 textBoxCompanyEmailAddress.Text = listViewCorporateGuests.SelectedItems[0].SubItems[8].Text;
+            }
+            else
+            {
+                textBoxCompanyID.Clear();
+                textBoxCompanyName.Clear();
+                textBoxVATNumber.Clear();
+                comboBoxCountry.DataSource = null;
+                comboBoxCountry.DataSource = countries;
+                textBoxHeadquarterZipCode.Clear();
+                textBoxHeadquarterCity.Clear();
+                textBoxHeadquarterAddress.Clear();
+                textBoxCompanyPhoneNumber.Clear();
+                textBoxCompanyEmailAddress.Clear();
             }
         }
 
