@@ -471,6 +471,7 @@ namespace virtual_receptionist.Presenter
                 textBoxBirthDate.Clear();
                 comboBoxCountry.DataSource = null;
                 comboBoxCountry.DataSource = countries;
+                comboBoxCountry.SelectedItem = countries[0];
                 textBoxZipCode.Clear();
                 textBoxCity.Clear();
                 textBoxAddress.Clear();
@@ -516,6 +517,7 @@ namespace virtual_receptionist.Presenter
                 textBoxVATNumber.Clear();
                 comboBoxCountry.DataSource = null;
                 comboBoxCountry.DataSource = countries;
+                comboBoxCountry.SelectedItem = countries[0];
                 textBoxHeadquarterZipCode.Clear();
                 textBoxHeadquarterCity.Clear();
                 textBoxHeadquarterAddress.Clear();
