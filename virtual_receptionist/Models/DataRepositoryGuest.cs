@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Diagnostics;
-using System.Security.Policy;
 
 namespace virtual_receptionist.Model
 {
@@ -205,9 +203,6 @@ namespace virtual_receptionist.Model
         {
             string sql =
                 $"INSERT INTO guest(Name, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{corporateGuest.Name}\", \"{corporateGuest.VatNumber}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), \"{corporateGuest.ZipCode}\", \"{corporateGuest.City}\", \"{corporateGuest.Address}\", \"{corporateGuest.PhoneNumber}\", \"{corporateGuest.EmailAddress}\")";
-
-            Debug.WriteLine(sql);
-
             database.DML(sql);
         }
 
