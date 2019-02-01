@@ -136,6 +136,15 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
+        /// Metódus, amely visszaadja a legutolsó vendégazonosítót
+        /// </summary>
+        /// <returns>A legutolsó vendégazonosítót adja vissza a függvény</returns>
+        public string GetMaxGuestID()
+        {
+            return database.DQLScalar("SELECT MAX(guest.ID) FROM guest");
+        }
+
+        /// <summary>
         /// Vendég törlése
         /// </summary>
         /// <param name="privateGuest">PrivateGuest objektum</param>

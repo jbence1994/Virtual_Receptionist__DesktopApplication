@@ -127,6 +127,11 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private TextBox textBoxCompanyID;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private int nextID;
+
         #endregion
 
         #region Konstruktor
@@ -164,6 +169,8 @@ namespace virtual_receptionist.Presenter
             textBoxHeadquarterAddress = (TextBox) controls[19];
             textBoxCompanyPhoneNumber = (TextBox) controls[20];
             textBoxCompanyEmailAddress = (TextBox) controls[21];
+
+            nextID = int.Parse(dataRepository.GetMaxGuestID()) + 1;
         }
 
         #endregion
@@ -202,6 +209,9 @@ namespace virtual_receptionist.Presenter
                 listViewCorporateGuests.Items.Add(corporateGuests);
             }
 
+            textBoxID.Text = nextID.ToString();
+            textBoxCompanyID.Text = nextID.ToString();
+
             comboBoxCountry.DataSource = countries;
             comboBoxHeadquarterCountry.DataSource = countries;
         }
@@ -223,15 +233,15 @@ namespace virtual_receptionist.Presenter
             string phoneNumber = textBoxPhoneNumber.Text;
             string email = textBoxEmailAddress.Text;
 
-            PrivateGuest privateGuest = new PrivateGuest(id + 1, name, documentNumber, citizenship, birthDate, country,
+            PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
                 zipCode,
                 city, address, phoneNumber, email);
 
 
             // ListView rekord hozzáadás (GUI)
-            textBoxID.Text = (id + 1).ToString();
+            textBoxID.Text = id.ToString();
             ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = (id + 1).ToString();
+            newRecord.Text = id.ToString();
             newRecord.SubItems.Add(name);
             newRecord.SubItems.Add(documentNumber);
             newRecord.SubItems.Add(citizenship);
@@ -264,13 +274,13 @@ namespace virtual_receptionist.Presenter
             string email = textBoxCompanyEmailAddress.Text;
 
             CorporateGuest corporateGuest =
-                new CorporateGuest(id + 1, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+                new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
 
 
             // ListView rekord hozzáadás (GUI)
-            textBoxCompanyID.Text = (id + 1).ToString();
+            textBoxCompanyID.Text = id.ToString();
             ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = (id + 1).ToString();
+            newRecord.Text = id.ToString();
             newRecord.SubItems.Add(name);
             newRecord.SubItems.Add(vatNumber);
             newRecord.SubItems.Add(country);
@@ -447,6 +457,7 @@ namespace virtual_receptionist.Presenter
             else
             {
                 textBoxID.Clear();
+                textBoxID.Text = nextID.ToString();
                 textBoxName.Clear();
                 textBoxDocumentID.Clear();
                 textBoxCitizenship.Clear();
@@ -493,6 +504,7 @@ namespace virtual_receptionist.Presenter
             else
             {
                 textBoxCompanyID.Clear();
+                textBoxCompanyID.Text = nextID.ToString();
                 textBoxCompanyName.Clear();
                 textBoxVATNumber.Clear();
                 comboBoxCountry.DataSource = null;
