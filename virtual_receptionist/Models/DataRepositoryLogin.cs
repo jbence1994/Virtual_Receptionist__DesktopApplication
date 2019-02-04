@@ -24,11 +24,18 @@ namespace virtual_receptionist.Model
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public bool Authentication(string accomodationID, string password, string connectionType)
         {
-            string sql = "SELECT AccomodationID, Password FROM accomodation";
-            database.SetConnection(connectionType);
-            database.DQL(sql);
-
-            return true;
+            try
+            {
+                string sql = "SELECT AccomodationID, Password FROM accomodation";
+                database.SetConnection(connectionType);
+                database.DQL(sql);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return false;
+            }
         }
 
         #endregion
