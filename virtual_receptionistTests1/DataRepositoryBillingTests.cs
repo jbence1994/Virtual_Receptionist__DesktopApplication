@@ -31,7 +31,7 @@ namespace virtual_receptionistTests1
         }
 
         /// <summary>
-        /// Tesztmetódus, amely kiszámolja 11.400 Ft 10%-át
+        /// Tesztmetódus, amely kiszámolja 14.100 Ft 10%-át
         /// </summary>
         [TestMethod()]
         public void CountItemPriceWithDiscountTest_Test2()
