@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionist", "vir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionistTests1", "..\virtual_receptionistTests1\virtual_receptionistTests1.csproj", "{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlORM", "MySqlORM\MySqlORM.csproj", "{FAAEC312-E627-4617-8F2D-2D60FE5779C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAEC312-E627-4617-8F2D-2D60FE5779C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAEC312-E627-4617-8F2D-2D60FE5779C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAEC312-E627-4617-8F2D-2D60FE5779C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAEC312-E627-4617-8F2D-2D60FE5779C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
