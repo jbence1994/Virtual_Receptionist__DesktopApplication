@@ -22,16 +22,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private TextBox textBoxAccomodationID;
 
-        /// <summary>
-        /// Szálláshely azonosító
-        /// </summary>
-        private string accomodationID;
-
-        /// <summary>
-        /// Regisztrációhoz tartozó jelszó
-        /// </summary>
-        private string password;
-
         #endregion
 
         #region Konstruktor
@@ -58,9 +48,6 @@ namespace virtual_receptionist.Presenter
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         public void EnterApplication(string accomodationID, string password, string connectionType)
         {
-            this.accomodationID = accomodationID;
-            this.password = password;
-
             if (dataRepository.Authentication(accomodationID, password, connectionType))
             {
                 formLogin.Hide();
