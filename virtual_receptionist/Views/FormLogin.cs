@@ -43,26 +43,6 @@ namespace virtual_receptionist.View
             presenter.EnterApplication(textBoxAccomodationID.Text, textBoxPassword.Text, comboBoxConnectionType.Text);
         }
 
-        private void buttonLogin_KeyUp(object sender, KeyEventArgs e)
-        {
-            presenter.EnterApplication(e);
-        }
-
-        private void textBoxAccomodationID_KeyUp(object sender, KeyEventArgs e)
-        {
-            presenter.EnterApplication(e);
-        }
-
-        private void textBoxPassword_KeyUp(object sender, KeyEventArgs e)
-        {
-            presenter.EnterApplication(e);
-        }
-
-        private void comboBoxConnectionType_KeyUp(object sender, KeyEventArgs e)
-        {
-            presenter.EnterApplication(e);
-        }
-
         #endregion
     }
 }

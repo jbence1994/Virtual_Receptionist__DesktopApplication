@@ -55,6 +55,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
+        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         public void EnterApplication(string accomodationID, string password, string connectionType)
         {
             this.accomodationID = accomodationID;
@@ -70,18 +71,6 @@ namespace virtual_receptionist.Presenter
             else
             {
                 MessageBox.Show("Sikertelen bejelentkezés!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely 'Enter' billentyű lenyomása utána beenged a főmenübe
-        /// </summary>
-        /// <param name="e">Billentyű esemény</param>
-        public void EnterApplication(KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                EnterApplication(accomodationID, password, "");
             }
         }
 

@@ -20,6 +20,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
+        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public bool Authentication(string accomodationID, string password, string connectionType)
         {
