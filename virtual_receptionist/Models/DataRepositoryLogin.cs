@@ -21,9 +21,10 @@ namespace virtual_receptionist.Model
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
-        public bool Authentication(string accomodationID, string password)
+        public bool Authentication(string accomodationID, string password, string connectionType)
         {
-            string sql = "SELECT AccomodationID, Password FROM accomodation_registration";
+            string sql = "SELECT AccomodationID, Password FROM accomodation";
+            database.SetConnection(connectionType);
             database.DQL(sql);
 
             return true;

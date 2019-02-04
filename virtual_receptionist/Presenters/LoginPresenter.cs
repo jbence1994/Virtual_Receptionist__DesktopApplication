@@ -55,12 +55,12 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
-        public void EnterApplication(string accomodationID, string password)
+        public void EnterApplication(string accomodationID, string password, string connectionType)
         {
             this.accomodationID = accomodationID;
             this.password = password;
 
-            if (dataRepository.Authentication(accomodationID, password))
+            if (dataRepository.Authentication(accomodationID, password, connectionType))
             {
                 formLogin.Hide();
                 FormMainMenu formMainMenu = new FormMainMenu(formLogin);
@@ -81,7 +81,7 @@ namespace virtual_receptionist.Presenter
         {
             if (e.KeyCode == Keys.Enter)
             {
-                EnterApplication(accomodationID, password);
+                EnterApplication(accomodationID, password, "");
             }
         }
 

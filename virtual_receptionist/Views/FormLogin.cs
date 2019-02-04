@@ -40,7 +40,7 @@ namespace virtual_receptionist.View
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            presenter.EnterApplication(textBoxAccomodationID.Text, textBoxPassword.Text);
+            presenter.EnterApplication(textBoxAccomodationID.Text, textBoxPassword.Text, comboBoxConnectionType.Text);
         }
 
         private void buttonLogin_KeyUp(object sender, KeyEventArgs e)

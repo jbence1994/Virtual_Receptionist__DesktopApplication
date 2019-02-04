@@ -19,6 +19,16 @@ namespace virtual_receptionist.MySQL_ORM
         private static Database databaseInstance;
 
         /// <summary>
+        /// Helyi szerver elérési útja
+        /// </summary>
+        private string localConnection;
+
+        /// <summary>
+        /// Távoli szerver elérési útja
+        /// </summary>
+        private string remoteConnection;
+
+        /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
         private MySqlConnection mySqlConnection;
@@ -38,31 +48,6 @@ namespace virtual_receptionist.MySQL_ORM
         /// </summary>
         private MySqlCommandBuilder mySqlCommandBuilder;
 
-        /// <summary>
-        /// Adatbázis szerver neve
-        /// </summary>
-        private string server;
-
-        /// <summary>
-        /// Adatbázis neve
-        /// </summary>
-        private string database;
-
-        /// <summary>
-        /// Adatbázis szerver felhasználóneve
-        /// </summary>
-        private string username;
-
-        /// <summary>
-        /// Adatbázis szerver jelszava
-        /// </summary>
-        private string password;
-
-        /// <summary>
-        /// Adatbázis szerver elérésére szolgáló hálózati port
-        /// </summary>
-        private string port;
-
         #endregion
 
         #region Konstruktor
@@ -72,20 +57,12 @@ namespace virtual_receptionist.MySQL_ORM
         /// </summary>
         private Database()
         {
-            server = string.Empty;
-            database = string.Empty;
-            username = string.Empty;
-            password = string.Empty;
-            port = string.Empty;
 
-            mySqlConnection = new MySqlConnection()
-            {
-                ConnectionString =
-                    "SERVER=127.0.0.1; DATABASE=virtual_receptionist; UID=root; PASSWORD=\"\"; PORT=3306; SslMode=None;"
-            };
         }
 
         #endregion
+
+        #region Getter és setter tulajdonságok
 
         /// <summary>
         /// Ezen osztály egyke példánya
@@ -103,7 +80,42 @@ namespace virtual_receptionist.MySQL_ORM
             }
         }
 
+        #endregion
+
         #region Metódusok
+
+        /// <summary>
+        /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát (otthoni, iskolai)
+        /// </summary>
+        /// <param name="connectionType">Kapcsolat típusa</param>
+        /// <exception cref="Exception"></exception>
+        public void SetConnection(string connectionType)
+        {
+            localConnection = ConfigurationManager.ConnectionStrings["local"].ConnectionString;
+            remoteConnection = ConfigurationManager.ConnectionStrings["remote"].ConnectionString;
+
+            Debug.WriteLine(localConnection);
+            Debug.WriteLine(remoteConnection);
+
+            if (connectionType == "otthoni")
+            {
+                mySqlConnection = new MySqlConnection()
+                {
+                    ConnectionString = localConnection
+                };
+            }
+            else if (connectionType == "iskolai")
+            {
+                mySqlConnection = new MySqlConnection()
+                {
+                    ConnectionString = remoteConnection
+                };
+            }
+            else
+            {
+                throw new Exception("Adatbázis kapcsolat típusa érvénytelen!");
+            }
+        }
 
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
