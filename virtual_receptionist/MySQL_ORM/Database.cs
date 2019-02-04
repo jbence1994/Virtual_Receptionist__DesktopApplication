@@ -2,6 +2,7 @@
 using System.Data;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace virtual_receptionist.MySQL_ORM
 {
