@@ -87,7 +87,7 @@ namespace virtual_receptionist.MySQL_ORM
         /// <summary>
         /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát (otthoni, iskolai)
         /// </summary>
-        /// <param name="connectionType">Kapcsolat típusa</param>
+        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="Exception"></exception>
         public void SetConnection(string connectionType)
         {
