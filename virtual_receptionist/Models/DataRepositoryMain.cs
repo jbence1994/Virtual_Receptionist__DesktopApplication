@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using MySQL_ORM;
+using virtual_receptionist.Exceptions;
 
 namespace virtual_receptionist.Model
 {
@@ -182,6 +183,23 @@ namespace virtual_receptionist.Model
                     "SELECT accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation_profile";
                 database.SetConnection(connectionType);
                 DataTable accounts = database.DQL(sql);
+
+                foreach (var item in accounts.Rows)
+                {
+                    int i = 0;
+
+                    if (i < 2)
+                    {
+
+                    }
+                    else
+                    {
+                        throw new LoginException("Hibás szállásazonosító vagy jelszó!");
+                    }
+                }
+
+                // AccomodationID és Password vizsgálat IDE !!!
+                
                 entry = true;
             }
             catch (Exception e)

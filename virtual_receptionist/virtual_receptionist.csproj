@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\LoginException.cs" />
     <Compile Include="Models\CorporateGuest.cs" />
     <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenters\RegistrationCardPresenter.cs" />
