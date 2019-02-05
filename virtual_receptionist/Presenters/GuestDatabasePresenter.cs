@@ -307,12 +307,43 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInPrivateGuestTable()
         {
-            // ListView rekord módosítása
+            int id = int.Parse(textBoxID.Text);
+            string name = textBoxName.Text;
+            string documentNumber = textBoxDocumentID.Text;
+            string citizenship = textBoxCitizenship.Text;
+            string birthDate = textBoxBirthDate.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
+            string zipCode = textBoxZipCode.Text;
+            string city = textBoxCity.Text;
+            string address = textBoxAddress.Text;
+            string phoneNumber = textBoxPhoneNumber.Text;
+            string email = textBoxEmailAddress.Text;
+
+            PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
+                zipCode,
+                city, address, phoneNumber, email);
+
+            // ListView rekord módosítása (GUI)
+            textBoxID.Text = id.ToString();
+            ListViewItem newRecord = new ListViewItem();
+            newRecord.Text = id.ToString();
+            newRecord.SubItems.Add(name);
+            newRecord.SubItems.Add(documentNumber);
+            newRecord.SubItems.Add(citizenship);
+            newRecord.SubItems.Add(birthDate);
+            newRecord.SubItems.Add(country);
+            newRecord.SubItems.Add(zipCode);
+            newRecord.SubItems.Add(city);
+            newRecord.SubItems.Add(address);
+            newRecord.SubItems.Add(phoneNumber);
+            newRecord.SubItems.Add(email);
+
+            int index = listViewPrivateGuests.FocusedItem.Index;
+            listViewPrivateGuests.Items.RemoveAt(index);
+            listViewPrivateGuests.Items.Insert(index, newRecord);
+
 
             // Adatbázis rekord módosítása
-
-
-            PrivateGuest privateGuest = new PrivateGuest();
             dataRepository.UpdateGuest(privateGuest);
         }
 
@@ -321,12 +352,39 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInCorporateGuestTable()
         {
-            // ListView rekord módosítása
+            int id = int.Parse(textBoxCompanyID.Text);
+            string name = textBoxCompanyName.Text;
+            string vatNumber = textBoxVATNumber.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
+            string zipCode = textBoxHeadquarterZipCode.Text;
+            string city = textBoxHeadquarterCity.Text;
+            string address = textBoxHeadquarterAddress.Text;
+            string phoneNumber = textBoxCompanyPhoneNumber.Text;
+            string email = textBoxCompanyEmailAddress.Text;
+
+            CorporateGuest corporateGuest =
+                new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+
+            // ListView rekord hozzáadás (GUI)
+            textBoxCompanyID.Text = id.ToString();
+            ListViewItem newRecord = new ListViewItem();
+            newRecord.Text = id.ToString();
+            newRecord.SubItems.Add(name);
+            newRecord.SubItems.Add(vatNumber);
+            newRecord.SubItems.Add(country);
+            newRecord.SubItems.Add(zipCode);
+            newRecord.SubItems.Add(city);
+            newRecord.SubItems.Add(address);
+            newRecord.SubItems.Add(phoneNumber);
+            newRecord.SubItems.Add(email);
+            listViewCorporateGuests.Items.Add(newRecord);
+
+            // ListView rekord módosítása (GUI)
+            int index = listViewCorporateGuests.FocusedItem.Index;
+            listViewCorporateGuests.Items.RemoveAt(index);
+            listViewCorporateGuests.Items.Insert(index, newRecord);
 
             // Adatbázis rekord módosítása
-
-
-            CorporateGuest corporateGuest = new CorporateGuest();
             dataRepository.UpdateGuest(corporateGuest);
         }
 
