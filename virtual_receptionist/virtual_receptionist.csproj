@@ -176,5 +176,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MySQL_ORM\MySQL_ORM.csproj">
+      <Project>{c4687368-a6cf-4580-9dc0-6e2124c2e8c2}</Project>
+      <Name>MySQL_ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
