@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FAAEC312-E627-4617-8F2D-2D60FE5779C1}</ProjectGuid>
+    <ProjectGuid>{C4687368-A6CF-4580-9DC0-6E2124C2E8C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MySqlORM</RootNamespace>
-    <AssemblyName>MySqlORM</AssemblyName>
+    <RootNamespace>MySQL_ORM</RootNamespace>
+    <AssemblyName>MySQL_ORM</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using virtual_receptionist.MySQL_ORM;
+using MySQL_ORM;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist

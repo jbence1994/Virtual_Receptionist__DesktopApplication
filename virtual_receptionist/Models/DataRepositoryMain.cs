@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using virtual_receptionist.MySQL_ORM;
+using MySQL_ORM;
 
 namespace virtual_receptionist.Model
 {

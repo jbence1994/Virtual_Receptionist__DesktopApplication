@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MySqlORM")]
+[assembly: AssemblyTitle("MySQL_ORM")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MySqlORM")]
+[assembly: AssemblyProduct("MySQL_ORM")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("faaec312-e627-4617-8f2d-2d60fe5779c1")]
+[assembly: Guid("c4687368-a6cf-4580-9dc0-6e2124c2e8c2")]
 
 // Version information for an assembly consists of the following four values:
 //
