@@ -193,7 +193,7 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Metódus, amely naplózza az alkalmazásba bejelentkezést
+        /// Metódus, amely naplózza a bejelentkezéseket az alkalmazásba
         /// </summary>
         public void Login()
         {
@@ -203,7 +203,7 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Metódus, amely naplózza az alkalmazásból kijelentkezést
+        /// Metódus, amely naplózza a kijelentlezéseket az alkalmazásból
         /// </summary>
         public void Logout()
         {
