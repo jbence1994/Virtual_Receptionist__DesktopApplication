@@ -130,11 +130,6 @@ namespace virtual_receptionist.Model
         /// </summary>
         public Accomodation SetAccomodation()
         {
-            if (accomodations.Count == 0)
-            {
-                UploadAccomodationList();
-            }
-
             return Accomodation.GetInstance;
         }
 
@@ -190,6 +185,7 @@ namespace virtual_receptionist.Model
                     if (account.AccomodationID == accomodationID && account.Password == password)
                     {
                         entry = true;
+                        break;
                     }
                 }
             }
