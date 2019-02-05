@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using MySQL_ORM;
 
 namespace virtual_receptionist.Model
@@ -99,7 +100,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         private void UploadAccomodationList()
         {
-            Accomodation accomodation = Accomodation.AccomodationInstance;
+            Accomodation accomodation = Accomodation.GetInstance;
 
             string sql =
                 "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation";
@@ -130,7 +131,7 @@ namespace virtual_receptionist.Model
                 UploadAccomodationList();
             }
 
-            return Accomodation.AccomodationInstance;
+            return Accomodation.GetInstance;
         }
 
         /// <summary>
@@ -162,6 +163,33 @@ namespace virtual_receptionist.Model
             }
 
             return countries;
+        }
+
+        /// <summary>
+        /// Metódus, amely összehasonlítja a felhasználó által megadott felhasználónevet és jelszót, egyezik-e az érvényes, előre regisztrált felhasználói fiókkal
+        /// </summary>
+        /// <param name="accomodationID">Szálláshely azonosító</param>
+        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
+        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
+        /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
+        public bool Authentication(string accomodationID, string password, string connectionType)
+        {
+            bool entry = false;
+
+            try
+            {
+                string sql =
+                    "SELECT accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation_profile";
+                database.SetConnection(connectionType);
+                DataTable accounts = database.DQL(sql);
+                entry = true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
+            return entry;
         }
 
         /// <summary>

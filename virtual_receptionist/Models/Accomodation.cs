@@ -10,7 +10,7 @@
         /// <summary>
         /// Szálláshely példány
         /// </summary>
-        private static Accomodation accomodationInstance;
+        private static Accomodation instance;
 
         /// <summary>
         /// Szálláshely neve
@@ -81,16 +81,16 @@
         /// <summary>
         /// Szálláshely példány, amely példányosítja az egyke osztályt
         /// </summary>
-        public static Accomodation AccomodationInstance
+        public static Accomodation GetInstance
         {
             get
             {
-                if (accomodationInstance == null)
+                if (instance == null)
                 {
-                    return accomodationInstance = new Accomodation();
+                    return instance = new Accomodation();
                 }
 
-                return accomodationInstance;
+                return instance;
             }
         }
 

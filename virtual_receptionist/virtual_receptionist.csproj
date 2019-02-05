@@ -73,7 +73,6 @@
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\DataRepositoryGuest.cs" />
     <Compile Include="Models\DataRepositoryBilling.cs" />
-    <Compile Include="Models\DataRepositoryLogin.cs" />
     <Compile Include="Models\DataRepositoryMain.cs" />
     <Compile Include="Models\DataRepositoryRoomEditor.cs" />
     <Compile Include="Views\FormBilling.cs">
