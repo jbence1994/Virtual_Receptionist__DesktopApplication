@@ -7,8 +7,12 @@ namespace virtual_receptionist.Exceptions
     /// </summary>
     public class LoginException : Exception
     {
+        #region Konstruktor
+
         public LoginException(string message) : base(message)
         {
         }
+
+        #endregion
     }
 }

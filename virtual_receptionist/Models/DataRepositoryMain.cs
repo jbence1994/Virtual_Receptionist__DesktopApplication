@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.Linq;
 using MySQL_ORM;
 using virtual_receptionist.Exceptions;
 
@@ -182,24 +183,20 @@ namespace virtual_receptionist.Model
                 string sql =
                     "SELECT accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation_profile";
                 database.SetConnection(connectionType);
-                DataTable accounts = database.DQL(sql);
 
-                foreach (var item in accounts.Rows)
+                var findAccount = from account in accomodations
+                    where account.AccomodationID == accomodationID
+                    select account;
+
+                if (true)
                 {
-                    int i = 0;
 
-                    if (i < 2)
-                    {
-
-                    }
-                    else
-                    {
-                        throw new LoginException("Hibás szállásazonosító vagy jelszó!");
-                    }
+                }
+                else
+                {
+                    throw new LoginException("Hibás szállásazonosító vagy jelszó!");
                 }
 
-                // AccomodationID és Password vizsgálat IDE !!!
-                
                 entry = true;
             }
             catch (Exception e)
