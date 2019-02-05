@@ -325,22 +325,22 @@ namespace virtual_receptionist.Presenter
 
             // ListView rekord módosítása (GUI)
             textBoxID.Text = id.ToString();
-            ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = id.ToString();
-            newRecord.SubItems.Add(name);
-            newRecord.SubItems.Add(documentNumber);
-            newRecord.SubItems.Add(citizenship);
-            newRecord.SubItems.Add(birthDate);
-            newRecord.SubItems.Add(country);
-            newRecord.SubItems.Add(zipCode);
-            newRecord.SubItems.Add(city);
-            newRecord.SubItems.Add(address);
-            newRecord.SubItems.Add(phoneNumber);
-            newRecord.SubItems.Add(email);
+            ListViewItem updatedRecord = new ListViewItem();
+            updatedRecord.Text = id.ToString();
+            updatedRecord.SubItems.Add(name);
+            updatedRecord.SubItems.Add(documentNumber);
+            updatedRecord.SubItems.Add(citizenship);
+            updatedRecord.SubItems.Add(birthDate);
+            updatedRecord.SubItems.Add(country);
+            updatedRecord.SubItems.Add(zipCode);
+            updatedRecord.SubItems.Add(city);
+            updatedRecord.SubItems.Add(address);
+            updatedRecord.SubItems.Add(phoneNumber);
+            updatedRecord.SubItems.Add(email);
 
             int index = listViewPrivateGuests.FocusedItem.Index;
             listViewPrivateGuests.Items.RemoveAt(index);
-            listViewPrivateGuests.Items.Insert(index, newRecord);
+            listViewPrivateGuests.Items.Insert(index, updatedRecord);
 
 
             // Adatbázis rekord módosítása
@@ -367,22 +367,21 @@ namespace virtual_receptionist.Presenter
 
             // ListView rekord hozzáadás (GUI)
             textBoxCompanyID.Text = id.ToString();
-            ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = id.ToString();
-            newRecord.SubItems.Add(name);
-            newRecord.SubItems.Add(vatNumber);
-            newRecord.SubItems.Add(country);
-            newRecord.SubItems.Add(zipCode);
-            newRecord.SubItems.Add(city);
-            newRecord.SubItems.Add(address);
-            newRecord.SubItems.Add(phoneNumber);
-            newRecord.SubItems.Add(email);
-            listViewCorporateGuests.Items.Add(newRecord);
+            ListViewItem updatedRecord = new ListViewItem();
+            updatedRecord.Text = id.ToString();
+            updatedRecord.SubItems.Add(name);
+            updatedRecord.SubItems.Add(vatNumber);
+            updatedRecord.SubItems.Add(country);
+            updatedRecord.SubItems.Add(zipCode);
+            updatedRecord.SubItems.Add(city);
+            updatedRecord.SubItems.Add(address);
+            updatedRecord.SubItems.Add(phoneNumber);
+            updatedRecord.SubItems.Add(email);
 
             // ListView rekord módosítása (GUI)
             int index = listViewCorporateGuests.FocusedItem.Index;
             listViewCorporateGuests.Items.RemoveAt(index);
-            listViewCorporateGuests.Items.Insert(index, newRecord);
+            listViewCorporateGuests.Items.Insert(index, updatedRecord);
 
             // Adatbázis rekord módosítása
             dataRepository.UpdateGuest(corporateGuest);
