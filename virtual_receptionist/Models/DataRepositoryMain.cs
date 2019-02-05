@@ -105,7 +105,7 @@ namespace virtual_receptionist.Model
             Accomodation accomodation = Accomodation.GetInstance;
 
             string sql =
-                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress FROM accomodation";
+                "SELECT accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation, accomodation_profile WHERE accomodation.ID = accomodation_profile.Accomodation";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -118,6 +118,8 @@ namespace virtual_receptionist.Model
                 accomodation.Site = row["Site"].ToString();
                 accomodation.PhoneNumber = row["PhoneNumber"].ToString();
                 accomodation.EmailAddress = row["EmailAddress"].ToString();
+                accomodation.AccomodationID = row["AccomodationID"].ToString();
+                accomodation.Password = row["Password"].ToString();
 
                 accomodations.Add(accomodation);
             }
@@ -180,24 +182,16 @@ namespace virtual_receptionist.Model
 
             try
             {
-                string sql =
-                    "SELECT accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation_profile";
                 database.SetConnection(connectionType);
+                UploadAccomodationList();
 
-                var findAccount = from account in accomodations
-                    where account.AccomodationID == accomodationID
-                    select account;
-
-                if (true)
+                foreach (Accomodation account in accomodations)
                 {
-
+                    if (account.AccomodationID == accomodationID && account.Password == password)
+                    {
+                        entry = true;
+                    }
                 }
-                else
-                {
-                    throw new LoginException("Hibás szállásazonosító vagy jelszó!");
-                }
-
-                entry = true;
             }
             catch (Exception e)
             {
