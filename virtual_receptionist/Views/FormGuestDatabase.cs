@@ -31,7 +31,7 @@ namespace virtual_receptionist.View
                 textBoxBirthDate, textBoxZipCode, textBoxCity, textBoxAddress, textBoxPhoneNumber, textBoxEmailAddress,
                 textBoxCompnayID, textBoxCompanyName, textBoxVATNumber,
                 textBoxHeadquarterZipCode, textBoxHeadquarterCity, textBoxHeadquarterAddress, textBoxCompanyPhoneNumber,
-                textBoxCompanyEmailAddress);
+                textBoxCompanyEmailAddress, buttonAddPrivateGuest, buttonAddCorporateGuest);
         }
 
         #endregion

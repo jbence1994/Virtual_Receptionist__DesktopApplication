@@ -132,6 +132,16 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private int nextID;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private Button buttonAddCorporateGuest;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private Button buttonAddPrivateGuest;
+
         #endregion
 
         #region Konstruktor
@@ -169,6 +179,9 @@ namespace virtual_receptionist.Presenter
             textBoxHeadquarterAddress = (TextBox) controls[19];
             textBoxCompanyPhoneNumber = (TextBox) controls[20];
             textBoxCompanyEmailAddress = (TextBox) controls[21];
+
+            buttonAddPrivateGuest = (Button) controls[22];
+            buttonAddCorporateGuest = (Button) controls[23];
 
             if (dataRepository.GetMaxGuestID() != "")
             {
@@ -283,7 +296,6 @@ namespace virtual_receptionist.Presenter
             CorporateGuest corporateGuest =
                 new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
 
-
             // ListView rekord hozzáadás (GUI)
             textBoxCompanyID.Text = id.ToString();
             ListViewItem newRecord = new ListViewItem();
@@ -307,44 +319,51 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInPrivateGuestTable()
         {
-            int id = int.Parse(textBoxID.Text);
-            string name = textBoxName.Text;
-            string documentNumber = textBoxDocumentID.Text;
-            string citizenship = textBoxCitizenship.Text;
-            string birthDate = textBoxBirthDate.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
-            string zipCode = textBoxZipCode.Text;
-            string city = textBoxCity.Text;
-            string address = textBoxAddress.Text;
-            string phoneNumber = textBoxPhoneNumber.Text;
-            string email = textBoxEmailAddress.Text;
+            if (listViewPrivateGuests.SelectedItems.Count > 0)
+            {
+                int id = int.Parse(textBoxID.Text);
+                string name = textBoxName.Text;
+                string documentNumber = textBoxDocumentID.Text;
+                string citizenship = textBoxCitizenship.Text;
+                string birthDate = textBoxBirthDate.Text;
+                string country = comboBoxCountry.SelectedItem.ToString();
+                string zipCode = textBoxZipCode.Text;
+                string city = textBoxCity.Text;
+                string address = textBoxAddress.Text;
+                string phoneNumber = textBoxPhoneNumber.Text;
+                string email = textBoxEmailAddress.Text;
 
-            PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
-                zipCode,
-                city, address, phoneNumber, email);
+                PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
+                    zipCode,
+                    city, address, phoneNumber, email);
 
-            // ListView rekord módosítása (GUI)
-            textBoxID.Text = id.ToString();
-            ListViewItem updatedRecord = new ListViewItem();
-            updatedRecord.Text = id.ToString();
-            updatedRecord.SubItems.Add(name);
-            updatedRecord.SubItems.Add(documentNumber);
-            updatedRecord.SubItems.Add(citizenship);
-            updatedRecord.SubItems.Add(birthDate);
-            updatedRecord.SubItems.Add(country);
-            updatedRecord.SubItems.Add(zipCode);
-            updatedRecord.SubItems.Add(city);
-            updatedRecord.SubItems.Add(address);
-            updatedRecord.SubItems.Add(phoneNumber);
-            updatedRecord.SubItems.Add(email);
+                // ListView rekord módosítása (GUI)
+                textBoxID.Text = id.ToString();
+                ListViewItem updatedRecord = new ListViewItem();
+                updatedRecord.Text = id.ToString();
+                updatedRecord.SubItems.Add(name);
+                updatedRecord.SubItems.Add(documentNumber);
+                updatedRecord.SubItems.Add(citizenship);
+                updatedRecord.SubItems.Add(birthDate);
+                updatedRecord.SubItems.Add(country);
+                updatedRecord.SubItems.Add(zipCode);
+                updatedRecord.SubItems.Add(city);
+                updatedRecord.SubItems.Add(address);
+                updatedRecord.SubItems.Add(phoneNumber);
+                updatedRecord.SubItems.Add(email);
 
-            int index = listViewPrivateGuests.FocusedItem.Index;
-            listViewPrivateGuests.Items.RemoveAt(index);
-            listViewPrivateGuests.Items.Insert(index, updatedRecord);
+                int index = listViewPrivateGuests.FocusedItem.Index;
+                listViewPrivateGuests.Items.RemoveAt(index);
+                listViewPrivateGuests.Items.Insert(index, updatedRecord);
 
 
-            // Adatbázis rekord módosítása
-            dataRepository.UpdateGuest(privateGuest);
+                // Adatbázis rekord módosítása
+                dataRepository.UpdateGuest(privateGuest);
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -352,39 +371,46 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInCorporateGuestTable()
         {
-            int id = int.Parse(textBoxCompanyID.Text);
-            string name = textBoxCompanyName.Text;
-            string vatNumber = textBoxVATNumber.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
-            string zipCode = textBoxHeadquarterZipCode.Text;
-            string city = textBoxHeadquarterCity.Text;
-            string address = textBoxHeadquarterAddress.Text;
-            string phoneNumber = textBoxCompanyPhoneNumber.Text;
-            string email = textBoxCompanyEmailAddress.Text;
+            if (listViewCorporateGuests.SelectedItems.Count > 0)
+            {
+                int id = int.Parse(textBoxCompanyID.Text);
+                string name = textBoxCompanyName.Text;
+                string vatNumber = textBoxVATNumber.Text;
+                string country = comboBoxCountry.SelectedItem.ToString();
+                string zipCode = textBoxHeadquarterZipCode.Text;
+                string city = textBoxHeadquarterCity.Text;
+                string address = textBoxHeadquarterAddress.Text;
+                string phoneNumber = textBoxCompanyPhoneNumber.Text;
+                string email = textBoxCompanyEmailAddress.Text;
 
-            CorporateGuest corporateGuest =
-                new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+                CorporateGuest corporateGuest =
+                    new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
 
-            // ListView rekord hozzáadás (GUI)
-            textBoxCompanyID.Text = id.ToString();
-            ListViewItem updatedRecord = new ListViewItem();
-            updatedRecord.Text = id.ToString();
-            updatedRecord.SubItems.Add(name);
-            updatedRecord.SubItems.Add(vatNumber);
-            updatedRecord.SubItems.Add(country);
-            updatedRecord.SubItems.Add(zipCode);
-            updatedRecord.SubItems.Add(city);
-            updatedRecord.SubItems.Add(address);
-            updatedRecord.SubItems.Add(phoneNumber);
-            updatedRecord.SubItems.Add(email);
+                // ListView rekord hozzáadás (GUI)
+                textBoxCompanyID.Text = id.ToString();
+                ListViewItem updatedRecord = new ListViewItem();
+                updatedRecord.Text = id.ToString();
+                updatedRecord.SubItems.Add(name);
+                updatedRecord.SubItems.Add(vatNumber);
+                updatedRecord.SubItems.Add(country);
+                updatedRecord.SubItems.Add(zipCode);
+                updatedRecord.SubItems.Add(city);
+                updatedRecord.SubItems.Add(address);
+                updatedRecord.SubItems.Add(phoneNumber);
+                updatedRecord.SubItems.Add(email);
 
-            // ListView rekord módosítása (GUI)
-            int index = listViewCorporateGuests.FocusedItem.Index;
-            listViewCorporateGuests.Items.RemoveAt(index);
-            listViewCorporateGuests.Items.Insert(index, updatedRecord);
+                // ListView rekord módosítása (GUI)
+                int index = listViewCorporateGuests.FocusedItem.Index;
+                listViewCorporateGuests.Items.RemoveAt(index);
+                listViewCorporateGuests.Items.Insert(index, updatedRecord);
 
-            // Adatbázis rekord módosítása
-            dataRepository.UpdateGuest(corporateGuest);
+                // Adatbázis rekord módosítása
+                dataRepository.UpdateGuest(corporateGuest);
+            }
+            else
+            {
+                MessageBox.Show("Nincs vendég kijelölve!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -504,6 +530,8 @@ namespace virtual_receptionist.Presenter
         {
             if (listViewPrivateGuests.SelectedItems.Count > 0)
             {
+                buttonAddPrivateGuest.Enabled = false;
+
                 textBoxID.Text = listViewPrivateGuests.SelectedItems[0].Text;
                 textBoxName.Text = listViewPrivateGuests.SelectedItems[0].SubItems[1].Text;
                 textBoxDocumentID.Text = listViewPrivateGuests.SelectedItems[0].SubItems[2].Text;
@@ -530,6 +558,8 @@ namespace virtual_receptionist.Presenter
             }
             else
             {
+                buttonAddPrivateGuest.Enabled = true;
+
                 textBoxID.Clear();
                 textBoxID.Text = nextID.ToString();
                 textBoxName.Clear();
@@ -554,6 +584,8 @@ namespace virtual_receptionist.Presenter
         {
             if (listViewCorporateGuests.SelectedItems.Count > 0)
             {
+                buttonAddCorporateGuest.Enabled = false;
+
                 textBoxCompanyID.Text = listViewCorporateGuests.SelectedItems[0].Text;
                 textBoxCompanyName.Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                 textBoxVATNumber.Text = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
@@ -578,6 +610,8 @@ namespace virtual_receptionist.Presenter
             }
             else
             {
+                buttonAddCorporateGuest.Enabled = true;
+
                 textBoxCompanyID.Clear();
                 textBoxCompanyID.Text = nextID.ToString();
                 textBoxCompanyName.Clear();
