@@ -307,6 +307,11 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInPrivateGuestTable()
         {
+            // ListView rekord módosítása
+
+            // Adatbázis rekord módosítása
+
+
             PrivateGuest privateGuest = new PrivateGuest();
             dataRepository.UpdateGuest(privateGuest);
         }
@@ -316,6 +321,11 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInCorporateGuestTable()
         {
+            // ListView rekord módosítása
+
+            // Adatbázis rekord módosítása
+
+
             CorporateGuest corporateGuest = new CorporateGuest();
             dataRepository.UpdateGuest(corporateGuest);
         }
