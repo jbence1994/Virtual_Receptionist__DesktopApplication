@@ -48,110 +48,111 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\LoginException.cs" />
-    <Compile Include="Models\CorporateGuest.cs" />
-    <Compile Include="Presenters\ModalBillingItemsPresenter.cs" />
-    <Compile Include="Presenters\RegistrationCardPresenter.cs" />
-    <Compile Include="Presenters\ApplicationOpeningPresenter.cs" />
-    <Compile Include="Presenters\RoomEditorPresenter.cs" />
-    <Compile Include="Models\PrivateGuest.cs" />
-    <Compile Include="Views\FormApplicationOpening.cs">
+    <Compile Include="Model\CorporateGuest.cs" />
+    <Compile Include="Presenter\ModalBillingItemsPresenter.cs" />
+    <Compile Include="Presenter\RegistrationCardPresenter.cs" />
+    <Compile Include="Presenter\ApplicationOpeningPresenter.cs" />
+    <Compile Include="Presenter\RoomEditorPresenter.cs" />
+    <Compile Include="Model\PrivateGuest.cs" />
+    <Compile Include="View\FormApplicationOpening.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormApplicationOpening.Designer.cs">
+    <Compile Include="View\FormApplicationOpening.Designer.cs">
       <DependentUpon>FormApplicationOpening.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenters\BillingPresenter.cs" />
-    <Compile Include="Presenters\LoginPresenter.cs" />
-    <Compile Include="Presenters\MainMenuPresenter.cs" />
-    <Compile Include="Views\AboutBox.cs">
+    <Compile Include="Presenter\BillingPresenter.cs" />
+    <Compile Include="Presenter\LoginPresenter.cs" />
+    <Compile Include="Presenter\MainMenuPresenter.cs" />
+    <Compile Include="View\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AboutBox.Designer.cs">
+    <Compile Include="View\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Accomodation.cs" />
-    <Compile Include="Models\BillingItems.cs" />
-    <Compile Include="Models\Country.cs" />
-    <Compile Include="Models\DataRepositoryGuest.cs" />
-    <Compile Include="Models\DataRepositoryBilling.cs" />
-    <Compile Include="Models\DataRepositoryMain.cs" />
-    <Compile Include="Models\DataRepositoryRoomEditor.cs" />
-    <Compile Include="Views\FormBilling.cs">
+    <Compile Include="Model\Accomodation.cs" />
+    <Compile Include="Model\BillingItems.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\DataRepositoryGuest.cs" />
+    <Compile Include="Model\DataRepositoryBilling.cs" />
+    <Compile Include="Model\DataRepositoryMain.cs" />
+    <Compile Include="Model\DataRepositoryRoomEditor.cs" />
+    <Compile Include="View\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormBilling.Designer.cs">
+    <Compile Include="View\FormBilling.Designer.cs">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormLogin.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormLogin.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormGuestDatabase.cs">
+    <Compile Include="View\FormGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormGuestDatabase.Designer.cs">
+    <Compile Include="View\FormGuestDatabase.Designer.cs">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormMainMenu.cs">
+    <Compile Include="View\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormMainMenu.Designer.cs">
+    <Compile Include="View\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormModalBillingItems.cs">
+    <Compile Include="View\FormModalBillingItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormModalBillingItems.Designer.cs">
+    <Compile Include="View\FormModalBillingItems.Designer.cs">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormRegistrationCard.cs">
+    <Compile Include="View\FormRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormRegistrationCard.Designer.cs">
+    <Compile Include="View\FormRegistrationCard.Designer.cs">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormRoomEditor.cs">
+    <Compile Include="View\FormRoomEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormRoomEditor.Designer.cs">
+    <Compile Include="View\FormRoomEditor.Designer.cs">
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Guest.cs" />
-    <Compile Include="Presenters\GuestDatabasePresenter.cs" />
+    <Compile Include="Model\Guest.cs" />
+    <Compile Include="Presenter\GuestDatabasePresenter.cs" />
     <Compile Include="Validation\InputFunctions.cs" />
     <Compile Include="Validation\InputAutomatizedFunctions.cs" />
-    <Compile Include="Presenters\DefaultPresenter.cs" />
+    <Compile Include="Presenter\DefaultPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Reservation.cs" />
-    <Compile Include="Models\Room.cs" />
-    <EmbeddedResource Include="Views\FormApplicationOpening.resx">
+    <Compile Include="Model\Reservation.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="View\IMainMenu.cs" />
+    <EmbeddedResource Include="View\FormApplicationOpening.resx">
       <DependentUpon>FormApplicationOpening.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AboutBox.resx">
+    <EmbeddedResource Include="View\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormBilling.resx">
+    <EmbeddedResource Include="View\FormBilling.resx">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormGuestDatabase.resx">
+    <EmbeddedResource Include="View\FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormLogin.resx">
+    <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormMainmenu.resx">
+    <EmbeddedResource Include="View\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormModalBillingItems.resx">
+    <EmbeddedResource Include="View\FormModalBillingItems.resx">
       <DependentUpon>FormModalBillingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormRegistrationCard.resx">
+    <EmbeddedResource Include="View\FormRegistrationCard.resx">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormRoomEditor.resx">
+    <EmbeddedResource Include="View\FormRoomEditor.resx">
       <DependentUpon>FormRoomEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
