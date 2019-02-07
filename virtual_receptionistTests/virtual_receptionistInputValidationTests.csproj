@@ -7,8 +7,8 @@
     <ProjectGuid>{8F0D3A6E-7DC3-4938-BFDF-76B3EEE64743}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>virtual_receptionist.Validation.ValidationTests</RootNamespace>
-    <AssemblyName>virtual_receptionistValidationInputTests</AssemblyName>
+    <RootNamespace>virtual_receptionist.Validation.InputValidationTests</RootNamespace>
+    <AssemblyName>virtual_receptionistInputValidationTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
