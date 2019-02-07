@@ -149,5 +149,94 @@ namespace virtual_receptionist.Validation.ValidationTests
         }
 
         #endregion
+
+        #region Születési dátum tesztek
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti születési dátum
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseInputBirthDateIsEmpty()
+        {
+            try
+            {
+                Input inputBirthDate = new Input("");
+                inputBirthDate.ProvideBirthDate();
+                Assert.Fail("Nem dob kivételt üres születési dátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat1()
+        {
+            try
+            {
+                Input inputBirthDate = new Input("");
+                inputBirthDate.ProvideBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat2()
+        {
+            try
+            {
+                Input inputBirthDate = new Input("");
+                inputBirthDate.ProvideBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat3()
+        {
+            try
+            {
+                Input inputBirthDate = new Input("");
+                inputBirthDate.ProvideBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat4()
+        {
+            try
+            {
+                Input inputBirthDate = new Input("");
+                inputBirthDate.ProvideBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        #endregion
     }
 }
