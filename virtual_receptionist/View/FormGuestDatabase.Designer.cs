@@ -74,7 +74,7 @@
             this.labelCorporateID = new System.Windows.Forms.Label();
             this.buttonAddCorporateGuest = new System.Windows.Forms.Button();
             this.buttonUpdateCorporateGuest = new System.Windows.Forms.Button();
-            this.textBoxCompnayID = new System.Windows.Forms.TextBox();
+            this.textBoxCompanyID = new System.Windows.Forms.TextBox();
             this.buttonDeleteCorporateGuest = new System.Windows.Forms.Button();
             this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
             this.labelCompanyName = new System.Windows.Forms.Label();
@@ -480,7 +480,7 @@
             this.groupBoxCorporateGuest.Controls.Add(this.labelCorporateID);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
-            this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompnayID);
+            this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyID);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonDeleteCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyEmailAddress);
             this.groupBoxCorporateGuest.Controls.Add(this.labelCompanyName);
@@ -541,13 +541,13 @@
             this.buttonUpdateCorporateGuest.UseVisualStyleBackColor = true;
             this.buttonUpdateCorporateGuest.Click += new System.EventHandler(this.buttonUpdateCorporateGuest_Click);
             // 
-            // textBoxCompnayID
+            // textBoxCompanyID
             // 
-            this.textBoxCompnayID.Location = new System.Drawing.Point(108, 19);
-            this.textBoxCompnayID.Name = "textBoxCompnayID";
-            this.textBoxCompnayID.ReadOnly = true;
-            this.textBoxCompnayID.Size = new System.Drawing.Size(125, 20);
-            this.textBoxCompnayID.TabIndex = 40;
+            this.textBoxCompanyID.Location = new System.Drawing.Point(108, 19);
+            this.textBoxCompanyID.Name = "textBoxCompanyID";
+            this.textBoxCompanyID.ReadOnly = true;
+            this.textBoxCompanyID.Size = new System.Drawing.Size(125, 20);
+            this.textBoxCompanyID.TabIndex = 40;
             // 
             // buttonDeleteCorporateGuest
             // 
@@ -854,7 +854,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderCorporateGuestID;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.TextBox textBoxCompnayID;
+        private System.Windows.Forms.TextBox textBoxCompanyID;
         private System.Windows.Forms.Label labelCorporateID;
     }
 }
