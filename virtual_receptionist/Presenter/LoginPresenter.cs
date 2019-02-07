@@ -15,11 +15,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private FormLogin formLogin;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private TextBox textBoxAccomodationID;
-
         #endregion
 
         #region Konstruktor
@@ -28,10 +23,9 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="formLogin">Bejelentkező ablak</param>
         /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
-        public LoginPresenter(FormLogin formLogin, params Control[] controls)
+        public LoginPresenter(FormLogin formLogin)
         {
             this.formLogin = formLogin;
-            textBoxAccomodationID = (TextBox) controls[0];
         }
 
         #endregion
@@ -57,14 +51,6 @@ namespace virtual_receptionist.Presenter
             {
                 MessageBox.Show("Sikertelen bejelentkezés!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        /// <summary>
-        /// Metódus, amely beállítja az ablakot betöltődéskor
-        /// </summary>
-        public void SetLogin()
-        {
-            textBoxAccomodationID.Select();
         }
 
         #endregion
