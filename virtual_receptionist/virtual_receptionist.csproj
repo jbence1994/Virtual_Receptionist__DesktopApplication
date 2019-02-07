@@ -120,8 +120,8 @@
     </Compile>
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Presenters\GuestDatabasePresenter.cs" />
-    <Compile Include="Models\InputFunctions.cs" />
-    <Compile Include="Models\InputAutomatizedFunctions.cs" />
+    <Compile Include="Validation\InputFunctions.cs" />
+    <Compile Include="Validation\InputAutomatizedFunctions.cs" />
     <Compile Include="Presenters\DefaultPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

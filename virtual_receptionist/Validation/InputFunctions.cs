@@ -1,7 +1,6 @@
-using System;
 using System.Text.RegularExpressions;
 
-namespace virtual_receptionist.Model
+namespace virtual_receptionist.Validation
 {
     public partial class Input
     {
