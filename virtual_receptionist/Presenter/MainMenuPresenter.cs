@@ -67,10 +67,20 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Metódus, amely adott menüelem egér elhagyás esetén törli a menümegjelenítő címkét
+        /// Metódus, amely adott menü nevét megjeleníti egy címkében az állapotsoron
+        /// </summary>
+        /// <param name="menuName">Menü neve</param>
+        /// <returns></returns>
+        public string SetMenuName(string menuName)
+        {
+            return menuName;
+        }
+
+        /// <summary>
+        /// Metódus, amely adott az állapotsor menümegjelenítő címke tartalmát törli
         /// </summary>
         /// <returns>Üres karakterláncot ad vissza a függvény</returns>
-        public string ClearStatusStripLabelMenuNameInCaseMouseLeave()
+        public string ClearMenuName()
         {
             return string.Empty;
         }
