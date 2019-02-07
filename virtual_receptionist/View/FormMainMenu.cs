@@ -31,8 +31,9 @@ namespace virtual_receptionist.View
         public FormMainMenu(FormLogin formLogin)
         {
             InitializeComponent();
+
             this.formLogin = formLogin;
-            presenter = new MainMenuPresenter(this, formLogin, toolStripStatusLabelMenuName);
+            presenter = new MainMenuPresenter(this, formLogin);
         }
 
         #endregion
@@ -42,7 +43,7 @@ namespace virtual_receptionist.View
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
             toolStripStatusLabelClient.Text += presenter.GetClient();
-            presenter.SetMainMenu();
+            Text += presenter.SetMainMenuHeader();
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
@@ -102,142 +103,142 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemFile_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Fájl");
+            toolStripStatusLabelMenuName.Text = "Fájl";
         }
 
         private void toolStripMenuItemFile_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
         private void toolStripMenuItemLogout_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Kijelentkezés");
+            toolStripStatusLabelMenuName.Text = "Kijelentkezés";
         }
 
         private void toolStripMenuItemLogout_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemTools_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Eszközök");
+            toolStripStatusLabelMenuName.Text = "Eszközök";
         }
 
         private void toolStripMenuItemTools_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szobakezelő");
+            toolStripStatusLabelMenuName.Text = "Szobakezelő";
         }
 
         private void toolStripMenuItemRoomEditor_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemGuestDatabase_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendégadatbázis");
+            toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
         }
 
         private void toolStripMenuItemGuestDatabase_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemBilling_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Számlázás");
+            toolStripStatusLabelMenuName.Text = "Számlázás";
         }
 
         private void toolStripMenuItemBilling_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemHelp_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Súgó");
+            toolStripStatusLabelMenuName.Text = "Súgó";
         }
 
         private void toolStripMenuItemHelp_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemWebsite_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("A Virtual Receptionist weboldala");
+            toolStripStatusLabelMenuName.Text = "A Virtual Receptionist weboldala";
         }
 
         private void toolStripMenuItemWebsite_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Segítség");
+            toolStripStatusLabelMenuName.Text = "Segítség";
         }
 
         private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemAbout_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Névjegy");
+            toolStripStatusLabelMenuName.Text = "Névjegy";
         }
 
         private void toolStripMenuItemAbout_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemAccomodationInfo_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szálláshely adatai");
+            toolStripStatusLabelMenuName.Text = "Szálláshely adatai";
         }
 
         private void toolStripMenuItemAccomodationInfo_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripButtonRoomEditor_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Szobakezelő");
+            toolStripStatusLabelMenuName.Text = "Szobakezelő";
         }
 
         private void toolStripButtonRoomEditor_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripButtonGuestDatabase_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendégadatbázis");
+            toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
         }
 
         private void toolStripButtonGuestDatabase_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripButtonBilling_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Számlázás");
+            toolStripStatusLabelMenuName.Text = "Számlázás";
         }
 
         private void toolStripButtonBilling_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripButtonGuestRegistrationCard_Click(object sender, EventArgs e)
@@ -252,22 +253,22 @@ namespace virtual_receptionist.View
 
         private void toolStripButtonGuestRegistrationCard_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendég bejelentkező lap kitöltése");
+            toolStripStatusLabelMenuName.Text = "Vendég bejelentkező lap kitöltése";
         }
 
         private void toolStripButtonGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         private void toolStripMenuItemGuestRegistrationCard_MouseHover(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseHover("Vendég bejelentkező lap kitöltése");
+            toolStripStatusLabelMenuName.Text = "Vendég bejelentkező lap kitöltése";
         }
 
         private void toolStripMenuItemGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
         {
-            presenter.SetStatusStripLabelMenuNameInCaseMouseLeave();
+            toolStripStatusLabelMenuName.Text = presenter.ClearStatusStripLabelMenuNameInCaseMouseLeave();
         }
 
         #endregion

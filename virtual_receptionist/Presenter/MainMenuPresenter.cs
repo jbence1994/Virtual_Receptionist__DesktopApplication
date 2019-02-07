@@ -21,16 +21,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private FormMainMenu formMainMenu;
 
-        /// <summary>
-        /// Címke, amely adott menü nevét írja ki az állapotsorra
-        /// </summary>
-        private ToolStripStatusLabel toolStripStatusLabelMenuName;
-
-        /// <summary>
-        /// Címke, amely megjeleníti a futtató számítógép NetBIOS nevét
-        /// </summary>
-        private ToolStripStatusLabel toolStripStatusLabelClient;
-
         #endregion
 
         #region Konstruktor
@@ -41,12 +31,10 @@ namespace virtual_receptionist.Presenter
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
         /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
-        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin, params ToolStripLabel[] controls)
+        public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin)
         {
             this.formMainMenu = formMainMenu;
             this.formLogin = formLogin;
-            toolStripStatusLabelMenuName = (ToolStripStatusLabel) controls[0];
-            toolStripStatusLabelClient = (ToolStripStatusLabel) controls[1];
         }
 
         #endregion
@@ -72,10 +60,19 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor
         /// </summary>
-        public void SetMainMenu()
+        public string SetMainMenuHeader()
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
-            formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
+            return $"{accomodation.Name} ({accomodation.VatNumber})";
+        }
+
+        /// <summary>
+        /// Metódus, amely adott menüelem egér elhagyás esetén törli a menümegjelenítő címkét
+        /// </summary>
+        /// <returns>Üres karakterláncot ad vissza a függvény</returns>
+        public string ClearStatusStripLabelMenuNameInCaseMouseLeave()
+        {
+            return string.Empty;
         }
 
         /// <summary>
@@ -93,14 +90,6 @@ namespace virtual_receptionist.Presenter
         {
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
-        }
-
-        /// <summary>
-        /// Metódus, amely törli a címke tartalmát, ha nincs adott menüre az egér kurzor rátartva
-        /// </summary>
-        public void SetStatusStripLabelMenuNameInCaseMouseLeave()
-        {
-            toolStripStatusLabelMenuName.Text = string.Empty;
         }
 
         /// <summary>
@@ -122,15 +111,6 @@ namespace virtual_receptionist.Presenter
             MessageBox.Show(
                 $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",
                 "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        /// <summary>
-        /// Metódus, amely beállítja a címke tartalmát, ha egy adott menüre az egéret rátartjuk
-        /// </summary>
-        /// <param name="menuName">Adott menü neve</param>
-        public void SetStatusStripLabelMenuNameInCaseMouseHover(string menuName)
-        {
-            toolStripStatusLabelMenuName.Text = menuName;
         }
 
         /// <summary>
