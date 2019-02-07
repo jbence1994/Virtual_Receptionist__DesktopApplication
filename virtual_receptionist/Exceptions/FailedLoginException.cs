@@ -5,14 +5,14 @@ namespace virtual_receptionist.Exceptions
     /// <summary>
     /// Bejelentkezés kivétel
     /// </summary>
-    public class LoginException : Exception
+    public class FailedLoginException : Exception
     {
         #region Konstruktor
 
         /// <summary>
         /// Bejelentkezés kivétel
         /// </summary>
-        public LoginException() : base("Sikertelen bejelentkezés!\nHibás szállásazonosító vagy jelszó!")
+        public FailedLoginException() : base("Sikertelen bejelentkezés!\nHibás szállásazonosító vagy jelszó!")
         {
         }
 

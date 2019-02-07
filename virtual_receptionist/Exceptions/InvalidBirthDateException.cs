@@ -9,14 +9,14 @@ namespace virtual_receptionist.Exceptions
     /// <summary>
     /// Születési dátum kivétel
     /// </summary>
-    public class BirthDateException : Exception
+    public class InvalidBirthDateException : Exception
     {
         #region Konstuktor
 
         /// <summary>
         /// Születési dátum kivétel
         /// </summary>
-        public BirthDateException(string message) : base(message)
+        public InvalidBirthDateException(string message) : base(message)
         {
         }
 

@@ -3,16 +3,17 @@
 namespace virtual_receptionist.Exceptions
 {
     /// <summary>
-    /// Adószám kivétel
+    /// Név kivétel
     /// </summary>
-    public class VATNumberException : Exception
+    public class InvalidNameException : Exception
     {
         #region Konstruktor
 
         /// <summary>
-        /// Adószám kivétel
+        /// Név kivétel
         /// </summary>
-        public VATNumberException(string message) : base(message)
+        /// <param name="message"></param>
+        public InvalidNameException(string message) : base(message)
         {
         }
 

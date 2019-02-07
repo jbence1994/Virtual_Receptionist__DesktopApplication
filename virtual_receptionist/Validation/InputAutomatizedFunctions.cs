@@ -35,100 +35,100 @@ namespace virtual_receptionist.Validation
         /// <summary>
         /// Név ellenőrző függvény
         /// </summary>
-        /// <exception cref="NameException"></exception>
+        /// <exception cref="InvalidNameException"></exception>
         public void ProvideName()
         {
             if (IsEmpty())
             {
-                throw new NameException("Üres bemenet");
+                throw new InvalidNameException("Üres bemenet");
             }
 
             if (FirstLetterIsLowercaseCharacter())
             {
-                throw new NameException("Név nem kezdődhet kisbetűvel!");
+                throw new InvalidNameException("Név nem kezdődhet kisbetűvel!");
             }
 
             if (ContainsControlCharacters())
             {
-                throw new NameException("Név nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new InvalidNameException("Név nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsDigitCharacters())
             {
-                throw new NameException("Név nem tartalmazhat számot!");
+                throw new InvalidNameException("Név nem tartalmazhat számot!");
             }
         }
 
         /// <summary>
         /// Szálláshely azonosító ellenőrző metódus
         /// </summary>
-        /// <exception cref="AccomodationIDException"></exception>
+        /// <exception cref="InvalidAccomodationIDException"></exception>
         public void ProvideAccomodationID()
         {
             if (IsEmpty())
             {
-                throw new AccomodationIDException("Üres bemenet!");
+                throw new InvalidAccomodationIDException("Üres bemenet!");
             }
 
             if (ContainsDigitCharacters())
             {
-                throw new AccomodationIDException("Szállásazonosító nem tartalmazhat számot!");
+                throw new InvalidAccomodationIDException("Szállásazonosító nem tartalmazhat számot!");
             }
         }
 
         /// <summary>
         /// Jelszó ellenőrző metódus
         /// </summary>
-        /// <exception cref="PasswordException"></exception>
+        /// <exception cref="InvalidPasswordException"></exception>
         public void ProvidePassword()
         {
             if (IsEmpty())
             {
-                throw new PasswordException("Üres bemenet!");
+                throw new InvalidPasswordException("Üres bemenet!");
             }
 
             if (ContainsControlCharacters())
             {
-                throw new PasswordException("Jelszó nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new InvalidPasswordException("Jelszó nem tartalmazhat vezérlőbillentyű karaktert!");
             }
         }
 
         /// <summary>
         /// E-mail cím ellenőrző metódus
         /// </summary>
-        /// <exception cref="EmailAddressException"></exception>
+        /// <exception cref="InvalidEmailAddressException"></exception>
         public void ProvideEmail()
         {
             if (IsEmpty())
             {
-                throw new EmailAddressException("Üres bemenet!");
+                throw new InvalidEmailAddressException("Üres bemenet!");
             }
 
             if (!IsValidEmailAddress())
             {
-                throw new EmailAddressException("Nem érvényes e-mail cím formátum!");
+                throw new InvalidEmailAddressException("Nem érvényes e-mail cím formátum!");
             }
         }
 
         /// <summary>
         /// Irányítószám ellenőrző metódus
         /// </summary>
-        /// <exception cref="ZipCodeException"></exception>
+        /// <exception cref="InvalidZipCodeException"></exception>
         public void ProvideZipCode()
         {
             if (IsEmpty())
             {
-                throw new ZipCodeException("Üres bemenet!");
+                throw new InvalidZipCodeException("Üres bemenet!");
             }
 
             if (ContainsControlCharacters())
             {
-                throw new ZipCodeException("Irányítószám nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new InvalidZipCodeException("Irányítószám nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLowercaseCharacter())
             {
-                throw new ZipCodeException("Irányítószám nem tartalmazhat kisebetűs karaktert!");
+                throw new InvalidZipCodeException("Irányítószám nem tartalmazhat kisebetűs karaktert!");
             }
         }
 
@@ -157,44 +157,44 @@ namespace virtual_receptionist.Validation
         /// <summary>
         /// Adószám ellenőrző metódus
         /// </summary>
-        /// <exception cref="VATNumberException"></exception>
+        /// <exception cref="InvalidVATNumberException"></exception>
         public void ProvideVATNumber()
         {
             if (IsEmpty())
             {
-                throw new VATNumberException("Üres bemenet!");
+                throw new InvalidVATNumberException("Üres bemenet!");
             }
 
             if (ContainsControlCharacters())
             {
-                throw new VATNumberException("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new InvalidVATNumberException("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
             }
         }
 
         /// <summary>
         /// Születési idő ellenőrző metódus
         /// </summary>
-        /// <exception cref="BirthDateException"></exception>
+        /// <exception cref="InvalidBirthDateException"></exception>
         public void ProvideBirthDate()
         {
             if (IsEmpty())
             {
-                throw new BirthDateException("Üres bemenet!");
+                throw new InvalidBirthDateException("Üres bemenet!");
             }
 
             if (ContainsControlCharacters())
             {
-                throw new BirthDateException("Születési dátum nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new InvalidBirthDateException("Születési dátum nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLetterCharacters())
             {
-                throw new BirthDateException("Születési dátum nem tartalmazhat betűt!");
+                throw new InvalidBirthDateException("Születési dátum nem tartalmazhat betűt!");
             }
 
             if (!IsValidBirthDate())
             {
-                throw new BirthDateException(
+                throw new InvalidBirthDateException(
                     "Nem megfelelő a születési dátum formátuma!\nHelyes formátum: \"YYYY-MM-DD\"");
             }
         }

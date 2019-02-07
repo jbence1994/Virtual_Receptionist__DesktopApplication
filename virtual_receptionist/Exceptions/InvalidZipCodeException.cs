@@ -5,14 +5,14 @@ namespace virtual_receptionist.Exceptions
     /// <summary>
     /// Irányítószám kivétel
     /// </summary>
-    public class ZipCodeException : Exception
+    public class InvalidZipCodeException : Exception
     {
         #region Konstruktor
 
         /// <summary>
         /// Jelszó kivétel
         /// </summary>
-        public ZipCodeException(string message) : base(message)
+        public InvalidZipCodeException(string message) : base(message)
         {
         }
 

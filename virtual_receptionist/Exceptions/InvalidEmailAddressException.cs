@@ -3,17 +3,16 @@
 namespace virtual_receptionist.Exceptions
 {
     /// <summary>
-    /// Név kivétel
+    /// E-mail cím kivétel
     /// </summary>
-    public class NameException : Exception
+    public class InvalidEmailAddressException : Exception
     {
         #region Konstruktor
 
         /// <summary>
-        /// Név kivétel
+        /// E-mail cím kivétel
         /// </summary>
-        /// <param name="message"></param>
-        public NameException(string message) : base(message)
+        public InvalidEmailAddressException(string message) : base(message)
         {
         }
 
