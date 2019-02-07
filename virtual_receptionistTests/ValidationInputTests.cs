@@ -6,6 +6,8 @@ namespace virtual_receptionist.Validation.ValidationTests
     [TestClass()]
     public class ValidationInputTests
     {
+        #region Névellenőrző tesztek
+
         /// <summary>
         /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti név
         /// </summary>
@@ -56,5 +58,25 @@ namespace virtual_receptionist.Validation.ValidationTests
             {
             }
         }
+
+        #endregion
+
+        #region E-mail cím ellenőrző tesztek
+
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseInputNameIsEmpty()
+        {
+            try
+            {
+                Input inputEmail = new Input("");
+                inputEmail.ProvideEmail();
+                Assert.Fail("Nem dob kivételt üres e-mail címre!");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        #endregion
     }
 }
