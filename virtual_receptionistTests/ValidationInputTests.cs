@@ -24,7 +24,7 @@ namespace virtual_receptionist.Validation.ValidationTests
         }
 
         /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti név
+        /// Tesztmetódus, amely ellenőrzi, kisbetűvel kezdődik-e bemeneti név
         /// </summary>
         [TestMethod()]
         public void ProvideNameTest_InCaseInputNamesFirstLetterIsLowercase()
@@ -34,6 +34,23 @@ namespace virtual_receptionist.Validation.ValidationTests
                 Input inputName = new Input("juhász");
                 inputName.ProvideName();
                 Assert.Fail("Nem dobott kivételt kisbetűs névre!");
+            }
+            catch (InvalidNameException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, tartalmaz-e számot a bemeneti név
+        /// </summary>
+        [TestMethod()]
+        public void ProvideNameTest_InCaseContainsDigitCharacters()
+        {
+            try
+            {
+                Input inputName = new Input("Juhász1");
+                inputName.ProvideName();
+                Assert.Fail("Nem dobott kivételt számot tartalmazó bemeneti névre");
             }
             catch (InvalidNameException)
             {
