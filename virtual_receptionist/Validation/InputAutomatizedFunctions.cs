@@ -133,24 +133,46 @@ namespace virtual_receptionist.Validation
         }
 
         /// <summary>
-        /// Település nevét és címet ellenőrző metódus
+        /// Település nevét ellenőrző metódus
         /// </summary>
-        /// <exception cref="Exception"></exception>
-        public void ProvideCityAndAddress()
+        /// <exception cref="InvalidCityException"></exception>
+        public void ProvideCity()
         {
             if (IsEmpty())
             {
-                throw new Exception("Üres bemenet!");
+                throw new InvalidCityException("Üres bemenet!");
             }
 
             if (ContainsControlCharacters())
             {
-                throw new Exception("Település vagy cím nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new InvalidCityException("Település nem tartalmaz vezérlőbillentyű karaktert!");
             }
 
             if (FirstLetterIsLowercaseCharacter())
             {
-                throw new Exception("Település vagy cím nem kezdődhet kisbetűvel!");
+                throw new InvalidCityException("Település nem kezdődhet kisbetűvel!");
+            }
+        }
+
+        /// <summary>
+        /// Címet ellenőrző metódus
+        /// </summary>
+        /// <exception cref="InvalidAddressException"></exception>
+        public void ProvideAddress()
+        {
+            if (IsEmpty())
+            {
+                throw new InvalidAddressException("Üres bemenet!");
+            }
+
+            if (ContainsControlCharacters())
+            {
+                throw new InvalidAddressException("Cím nem tartalmaz vezérlőbillentyű karaktert!");
+            }
+
+            if (FirstLetterIsLowercaseCharacter())
+            {
+                throw new InvalidAddressException("Cím nem kezdődhet kisbetűvel!");
             }
         }
 
