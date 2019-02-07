@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionist", "virtual_receptionist.csproj", "{C36EBE0F-791C-4574-9170-E1088411CD33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionistTests1", "..\virtual_receptionistTests1\virtual_receptionistTests1.csproj", "{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtual_receptionistBillingTests", "..\virtual_receptionistTests1\virtual_receptionistBillingTests.csproj", "{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL_ORM", "..\MySQL_ORM\MySQL_ORM.csproj", "{C4687368-A6CF-4580-9DC0-6E2124C2E8C2}"
 EndProject
