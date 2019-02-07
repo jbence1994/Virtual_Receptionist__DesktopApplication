@@ -22,5 +22,22 @@ namespace virtual_receptionist.Validation.ValidationTests
             {
             }
         }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti név
+        /// </summary>
+        [TestMethod()]
+        public void ProvideNameTest_InCaseInputNamesFirstLetterIsLowercase()
+        {
+            try
+            {
+                Input inputName = new Input("juhász");
+                inputName.ProvideName();
+                Assert.Fail("Nem dobott kivételt kisbetűs névre!");
+            }
+            catch (InvalidNameException)
+            {
+            }
+        }
     }
 }
