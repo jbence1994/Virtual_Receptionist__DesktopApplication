@@ -75,8 +75,15 @@ namespace virtual_receptionist.Presenter
         public void SetMainMenu()
         {
             Accomodation accomodation = dataRepository.SetAccomodation();
-            toolStripStatusLabelClient.Text += DataRepository.Client;
             formMainMenu.Text += $"{accomodation.Name} ({accomodation.VatNumber})";
+        }
+
+        /// <summary>
+        /// Metódus, amely visszaadja az alkalmazást futtató számítógép NetBIOS nevét
+        /// </summary>Alkalmazást futtató számítógép NetBIOS nevével tér vissza a függvény<returns></returns>
+        public string GetClient()
+        {
+            return DataRepository.Client;
         }
 
         /// <summary>
