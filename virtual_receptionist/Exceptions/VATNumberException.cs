@@ -3,16 +3,16 @@
 namespace virtual_receptionist.Exceptions
 {
     /// <summary>
-    /// Bejelentkezés kivétel
+    /// Adószám kivétel
     /// </summary>
-    public class LoginException : Exception
+    public class VATNumberException : Exception
     {
         #region Konstruktor
 
         /// <summary>
-        /// Bejelentkezés kivétel
+        /// Adószám kivétel
         /// </summary>
-        public LoginException() : base("Sikertelen bejelentkezés!\nHibás szállásazonosító vagy jelszó!")
+        public VATNumberException(string message) : base(message)
         {
         }
 

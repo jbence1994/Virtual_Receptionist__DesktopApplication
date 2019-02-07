@@ -47,7 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\AccomodationIDException.cs" />
+    <Compile Include="Exceptions\BirthDateException.cs" />
+    <Compile Include="Exceptions\EmailAddressException.cs" />
     <Compile Include="Exceptions\LoginException.cs" />
+    <Compile Include="Exceptions\NameException.cs" />
+    <Compile Include="Exceptions\PasswordException.cs" />
+    <Compile Include="Exceptions\VATNumberException.cs" />
+    <Compile Include="Exceptions\ZipCodeException.cs" />
     <Compile Include="Model\CorporateGuest.cs" />
     <Compile Include="Presenter\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
