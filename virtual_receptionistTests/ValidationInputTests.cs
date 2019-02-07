@@ -63,6 +63,9 @@ namespace virtual_receptionist.Validation.ValidationTests
 
         #region E-mail cím ellenőrző tesztek
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti e-mail cím
+        /// </summary>
         [TestMethod()]
         public void ProvideEmailTest_InCaseInputNameIsEmpty()
         {
@@ -71,6 +74,40 @@ namespace virtual_receptionist.Validation.ValidationTests
                 Input inputEmail = new Input("");
                 inputEmail.ProvideEmail();
                 Assert.Fail("Nem dob kivételt üres e-mail címre!");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat1()
+        {
+            try
+            {
+                Input inputEmail = new Input("teszt.teszt.com");
+                inputEmail.ProvideEmail();
+                Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat2()
+        {
+            try
+            {
+                Input inputEmail = new Input("teszt.@teszt.com");
+                inputEmail.ProvideEmail();
+                Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
             }
             catch (InvalidEmailAddressException)
             {
