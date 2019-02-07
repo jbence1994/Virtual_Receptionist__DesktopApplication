@@ -10,7 +10,7 @@ namespace virtual_receptionist.Exceptions
         #region Konstruktor
 
         /// <summary>
-        /// Jelszó kivétel
+        /// Irányítószám kivétel
         /// </summary>
         public InvalidZipCodeException(string message) : base(message)
         {
