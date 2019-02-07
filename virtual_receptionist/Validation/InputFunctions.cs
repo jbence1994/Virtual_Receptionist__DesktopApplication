@@ -12,7 +12,7 @@ namespace virtual_receptionist.Validation
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
         private bool IsEmpty()
         {
-            return string.IsNullOrWhiteSpace(input) ? true : false;
+            return string.IsNullOrWhiteSpace(input);
         }
 
         /// <summary>
