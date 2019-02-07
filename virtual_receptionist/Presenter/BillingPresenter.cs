@@ -14,11 +14,6 @@ namespace virtual_receptionist.Presenter
         #region Adattagok
 
         /// <summary>
-        /// Számlázási tételek táblázat
-        /// </summary>
-        private DataGridView dataGridViewItems;
-
-        /// <summary>
         /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
         /// </summary>
         private FormModalBillingItems formModalBillingItems;
@@ -26,27 +21,10 @@ namespace virtual_receptionist.Presenter
         #endregion
 
         #region Konstruktor
-
-        /// <summary>
-        /// Számlázó modul prezenter konstruktora
-        /// </summary>
-        /// <param name="dataGridViewItems">Számlázási tételek táblázat</param>
-        public BillingPresenter(DataGridView dataGridViewItems)
-        {
-            this.dataGridViewItems = dataGridViewItems;
-        }
-
+        
         #endregion
 
         #region Számlázó modul nézetfrissítései
-
-        /// <summary>
-        /// Elkészült számlát nyomtatását vezérlő metódus
-        /// </summary>
-        public void PrintInvoice()
-        {
-            throw new System.NotImplementedException();
-        }
 
         /// <summary>
         /// Számlázási tételek táblázatba új rekordot beszúró metódus
@@ -62,15 +40,15 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void DeleteRow()
         {
-            if (dataGridViewItems.SelectedRows.Count != 0)
-            {
-                int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-                dataGridViewItems.Rows.RemoveAt(rowToDelete);
-            }
-            else
-            {
-                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (dataGridViewItems.SelectedRows.Count != 0)
+            //{
+            //    int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
+            //    dataGridViewItems.Rows.RemoveAt(rowToDelete);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         /// <summary>
@@ -78,23 +56,14 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRow()
         {
-            if (dataGridViewItems.SelectedRows.Count != 0)
-            {
+            //if (dataGridViewItems.SelectedRows.Count != 0)
+            //{
 
-            }
-            else
-            {
-                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Új számla írását végző metódus, amely megjeleníti a számlázási adatokhoz kitöltendő modális ablakot, és aktiválja a tételek manipulálását végző gombokat
-        /// </summary>
-        /// <param name="buttons"></param>
-        public void StartInvoice(params Button[] buttons)
-        {
-            throw new NotImplementedException();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         #endregion

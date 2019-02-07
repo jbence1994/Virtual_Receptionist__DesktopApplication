@@ -26,7 +26,7 @@ namespace virtual_receptionist.View
         public FormBilling()
         {
             InitializeComponent();
-            presenter = new BillingPresenter(dataGridViewItems);
+            presenter = new BillingPresenter();
         }
 
         #endregion
@@ -35,12 +35,12 @@ namespace virtual_receptionist.View
 
         private void buttonBackToMainMenu_Click(object sender, EventArgs e)
         {
-            presenter.BackToMainMenu(this);
+            Close();
         }
 
         private void buttonNewData_Click(object sender, EventArgs e)
         {
-            presenter.StartInvoice(buttonAddItem, buttonUpdateItem, buttonDeleteItem, buttonPrintInvoice);
+
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace virtual_receptionist.View
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
-            presenter.PrintInvoice();
+
         }
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)

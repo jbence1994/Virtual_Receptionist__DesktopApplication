@@ -28,36 +28,5 @@ namespace virtual_receptionist.Presenter
         }
 
         #endregion
-
-        #region Általános nézetfrissítések
-
-        /// <summary>
-        /// Főmenübe visszalépésre szolgáló metódus
-        /// </summary>
-        /// <param name="form">Ablak, amely bezárásra kerül</param>
-        public void BackToMainMenu(Form form)
-        {
-            form.Close();
-        }
-
-        /// <summary>
-        /// Metódus, amely beállítja az adószám szövegmező írhatóságát, attól függően, hogy a vállalati ügyfél checkbox be van-e pipálva
-        /// </summary>
-        /// <param name="checkBoxCorporateGuest">Vállalati ügyfél checkbox</param>
-        /// <param name="textBoxVatNumber">Adószám szövegmező</param>
-        public void SetCorporateGuest(CheckBox checkBoxCorporateGuest, TextBox textBoxVatNumber)
-        {
-            if (checkBoxCorporateGuest.Checked)
-            {
-                textBoxVatNumber.ReadOnly = false;
-            }
-            else
-            {
-                textBoxVatNumber.Clear();
-                textBoxVatNumber.ReadOnly = true;
-            }
-        }
-
-        #endregion
     }
 }
