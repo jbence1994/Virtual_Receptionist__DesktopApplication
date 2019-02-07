@@ -114,6 +114,40 @@ namespace virtual_receptionist.Validation.ValidationTests
             }
         }
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat3()
+        {
+            try
+            {
+                Input inputEmail = new Input("teszt.teszt@teszt.com.hu");
+                inputEmail.ProvideEmail();
+                Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat4()
+        {
+            try
+            {
+                Input inputEmail = new Input("teszt...................@teszt.com");
+                inputEmail.ProvideEmail();
+                Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
         #endregion
     }
 }
