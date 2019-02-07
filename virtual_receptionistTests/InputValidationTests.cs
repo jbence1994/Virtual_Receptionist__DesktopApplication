@@ -4,7 +4,7 @@ using virtual_receptionist.Exceptions;
 namespace virtual_receptionist.Validation.ValidationTests
 {
     [TestClass()]
-    public class ValidationInputTests
+    public class InputValidationTests
     {
         #region Névellenőrző tesztek
 
