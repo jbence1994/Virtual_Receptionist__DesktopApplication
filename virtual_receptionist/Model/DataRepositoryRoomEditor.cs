@@ -19,7 +19,7 @@ namespace virtual_receptionist.Model
 
             foreach (DataRow row in dt.Rows)
             {
-                //Guest guest = new Guest()
+                //Guest guest = new PrivateGuest()
                 //{
                 //    Name = row["Name"].ToString()
                 //};
@@ -41,7 +41,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobákat tartalmazó listát
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
+        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
         private void UploadRoomsList()
         {
             string sql =
@@ -63,7 +63,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
+        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
         public DataTable GetReservations()
         {
             if (reservations.Count == 0)
@@ -90,7 +90,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szoba adatát egy DataTable adatszerkezetben
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
+        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
         public DataTable GetRooms()
         {
             if (rooms.Count == 0)

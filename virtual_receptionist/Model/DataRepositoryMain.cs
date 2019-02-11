@@ -189,7 +189,7 @@ namespace virtual_receptionist.Model
                     }
                 }
             }
-            catch (Exception e)
+            catch (InvalidConnectionTypeException e)
             {
                 Debug.WriteLine(e.Message);
             }

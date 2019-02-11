@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.Exceptions;
+﻿using System;
+using virtual_receptionist.Exceptions;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
@@ -42,14 +43,17 @@ namespace virtual_receptionist.Presenter
         {
             if (dataRepository.Authentication(accomodationID, password, connectionType))
             {
-                formLogin.Hide();
-                FormMainMenu formMainMenu = new FormMainMenu(formLogin);
-                formMainMenu.Show();
-                dataRepository.Login();
-            }
-            else
-            {
-                throw new FailedLoginException();
+                try
+                {
+                    formLogin.Hide();
+                    FormMainMenu formMainMenu = new FormMainMenu(formLogin);
+                    formMainMenu.Show();
+                    dataRepository.Login();
+                }
+                catch (Exception)
+                {
+                    throw new FailedLoginException();
+                }
             }
         }
 

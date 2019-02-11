@@ -57,7 +57,6 @@ namespace MySQL_ORM
         /// </summary>
         private Database()
         {
-
         }
 
         #endregion
@@ -88,7 +87,7 @@ namespace MySQL_ORM
         /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát (otthoni, iskolai)
         /// </summary>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
-        /// <exception cref="Exception"></exception>
+        /// <exception cref="InvalidConnectionTypeException"></exception>
         public void SetConnection(string connectionType)
         {
             localConnection = ConfigurationManager.ConnectionStrings["local"].ConnectionString;
@@ -113,7 +112,7 @@ namespace MySQL_ORM
             }
             else
             {
-                throw new Exception("Adatbázis kapcsolat típusa érvénytelen!");
+                throw new InvalidConnectionTypeException();
             }
         }
 
