@@ -22,7 +22,6 @@ namespace virtual_receptionist.Presenter
         /// <summary>Bejelentkező ablak prezenter konstruktora
         /// </summary>
         /// <param name="formLogin">Bejelentkező ablak</param>
-        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
         public LoginPresenter(FormLogin formLogin)
         {
             this.formLogin = formLogin;

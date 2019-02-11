@@ -76,14 +76,6 @@
             this.emailAddress = emailAddress;
         }
 
-        /// <summary>
-        /// Guest osztály üres konstruktora
-        /// </summary>
-        public Guest()
-        {
-
-        }
-
         #endregion
 
         #region Getter és setter tulajdonságok
