@@ -5,7 +5,7 @@ namespace virtual_receptionist.Model
 {
     public partial class DataRepository
     {
-        #region Szoba kezelő modul metódusai
+        #region Szoba kezelő modul
 
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát

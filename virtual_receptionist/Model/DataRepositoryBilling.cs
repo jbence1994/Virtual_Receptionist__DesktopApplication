@@ -6,7 +6,7 @@ namespace virtual_receptionist.Model
 {
     public partial class DataRepository
     {
-        #region Számlázó modul metódusai
+        #region Számlázó modul
 
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a számlázási tételeket tartalmazó listát

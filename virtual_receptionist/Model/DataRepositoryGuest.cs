@@ -5,7 +5,7 @@ namespace virtual_receptionist.Model
 {
     public partial class DataRepository
     {
-        #region Vendégadatbázis-kezelő modul metódusai
+        #region Vendégadatbázis-kezelő modul
 
         /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a vendégeket és lista adatszerkezetbe menti őket
