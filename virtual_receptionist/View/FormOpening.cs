@@ -6,14 +6,14 @@ namespace virtual_receptionist.View
     /// <summary>
     /// Nyitóablak
     /// </summary>
-    public partial class FormApplicationOpening : Form
+    public partial class FormOpening : Form
     {
         #region Adattagok
 
         /// <summary>
         /// nyitóablak prezenter egy példánya
         /// </summary>
-        private ApplicationOpeningPresenter presenter;
+        private OpeningPresenter presenter;
 
         #endregion
 
@@ -22,10 +22,10 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Nyitóablak konstruktora
         /// </summary>
-        public FormApplicationOpening()
+        public FormOpening()
         {
             InitializeComponent();
-            presenter = new ApplicationOpeningPresenter(this);
+            presenter = new OpeningPresenter(this);
         }
 
         #endregion

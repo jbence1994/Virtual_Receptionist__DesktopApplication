@@ -1,6 +1,6 @@
 ﻿namespace virtual_receptionist.View
 {
-    partial class FormApplicationOpening
+    partial class FormOpening
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApplicationOpening));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOpening));
             this.pictureBoxBinarySoftwareLogo = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
