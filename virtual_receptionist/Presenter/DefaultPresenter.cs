@@ -27,6 +27,10 @@ namespace virtual_receptionist.Presenter
             dataRepository = new DataRepository();
         }
 
+        #endregion
+
+        #region Általános nézetfrissítések
+
         /// <summary>
         /// Országokat lista adatszerkezetben visszaadó metódus
         /// </summary>
