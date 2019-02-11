@@ -12,6 +12,7 @@ namespace virtual_receptionist.Exceptions
         /// <summary>
         /// Település kivétel
         /// </summary>
+        /// <param name="message">Kivétel szövege</param>
         public InvalidCityException(string message) : base(message)
         {
         }

@@ -47,14 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\InvalidAccomodationIDException.cs" />
     <Compile Include="Exceptions\InvalidAddressException.cs" />
     <Compile Include="Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Exceptions\InvalidCityException.cs" />
     <Compile Include="Exceptions\InvalidEmailAddressException.cs" />
     <Compile Include="Exceptions\FailedLoginException.cs" />
     <Compile Include="Exceptions\InvalidNameException.cs" />
-    <Compile Include="Exceptions\InvalidPasswordException.cs" />
     <Compile Include="Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Model\CorporateGuest.cs" />

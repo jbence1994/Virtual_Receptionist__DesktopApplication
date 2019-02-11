@@ -1,5 +1,4 @@
-﻿using System;
-using virtual_receptionist.Exceptions;
+﻿using virtual_receptionist.Exceptions;
 
 namespace virtual_receptionist.Validation
 {
@@ -56,40 +55,6 @@ namespace virtual_receptionist.Validation
             if (ContainsDigitCharacters())
             {
                 throw new InvalidNameException("Név nem tartalmazhat számot!");
-            }
-        }
-
-        /// <summary>
-        /// Szálláshely azonosító ellenőrző metódus
-        /// </summary>
-        /// <exception cref="InvalidAccomodationIDException"></exception>
-        public void ProvideAccomodationID()
-        {
-            if (IsEmpty())
-            {
-                throw new InvalidAccomodationIDException("Üres bemenet!");
-            }
-
-            if (ContainsDigitCharacters())
-            {
-                throw new InvalidAccomodationIDException("Szállásazonosító nem tartalmazhat számot!");
-            }
-        }
-
-        /// <summary>
-        /// Jelszó ellenőrző metódus
-        /// </summary>
-        /// <exception cref="InvalidPasswordException"></exception>
-        public void ProvidePassword()
-        {
-            if (IsEmpty())
-            {
-                throw new InvalidPasswordException("Üres bemenet!");
-            }
-
-            if (ContainsControlCharacters())
-            {
-                throw new InvalidPasswordException("Jelszó nem tartalmazhat vezérlőbillentyű karaktert!");
             }
         }
 
@@ -217,7 +182,7 @@ namespace virtual_receptionist.Validation
             if (!IsValidBirthDate())
             {
                 throw new InvalidBirthDateException(
-                    "Nem megfelelő a születési dátum formátuma!\nHelyes formátum: \"YYYY-MM-DD\"");
+                    "Nem megfelelő a születési dátum formátuma!\nHelyes formátum: YYYY-MM-DD");
             }
         }
 

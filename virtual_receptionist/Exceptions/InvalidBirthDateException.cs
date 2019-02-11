@@ -12,6 +12,7 @@ namespace virtual_receptionist.Exceptions
         /// <summary>
         /// Születési dátum kivétel
         /// </summary>
+        /// <param name="message">Kivétel szövege</param>
         public InvalidBirthDateException(string message) : base(message)
         {
         }

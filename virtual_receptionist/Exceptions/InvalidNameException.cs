@@ -12,7 +12,7 @@ namespace virtual_receptionist.Exceptions
         /// <summary>
         /// Név kivétel
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="message">Kivétel szövege</param>
         public InvalidNameException(string message) : base(message)
         {
         }

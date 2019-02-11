@@ -12,6 +12,7 @@ namespace virtual_receptionist.Exceptions
         /// <summary>
         /// E-mail cím kivétel
         /// </summary>
+        /// <param name="message">Kivétel szövege</param>
         public InvalidEmailAddressException(string message) : base(message)
         {
         }

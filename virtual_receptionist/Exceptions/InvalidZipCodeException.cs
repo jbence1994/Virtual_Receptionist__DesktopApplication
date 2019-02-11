@@ -12,6 +12,7 @@ namespace virtual_receptionist.Exceptions
         /// <summary>
         /// Irányítószám kivétel
         /// </summary>
+        /// <param name="message">Kivétel szövege</param>
         public InvalidZipCodeException(string message) : base(message)
         {
         }

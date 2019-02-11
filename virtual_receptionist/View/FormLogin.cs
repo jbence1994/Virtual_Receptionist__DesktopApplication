@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using virtual_receptionist.Presenter;
+using virtual_receptionist.Exceptions;
 
 namespace virtual_receptionist.View
 {
@@ -44,7 +45,19 @@ namespace virtual_receptionist.View
             string password = textBoxPassword.Text;
             string connectionType = comboBoxConnectionType.Text;
 
-            presenter.EnterApplication(accomodationID, password, connectionType);
+            try
+            {
+                presenter.EnterApplication(accomodationID, password, connectionType);
+            }
+            catch (FailedLoginException exception)
+            {
+                MessageBox.Show(exception.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show($"Ismeretlen hiba történt!\n{exception.Message}", "", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         #endregion

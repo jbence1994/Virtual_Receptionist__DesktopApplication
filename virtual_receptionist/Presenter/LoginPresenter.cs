@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿using virtual_receptionist.Exceptions;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
@@ -37,6 +37,7 @@ namespace virtual_receptionist.Presenter
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
+        /// <exception cref="FailedLoginException"></exception>
         public void EnterApplication(string accomodationID, string password, string connectionType)
         {
             if (dataRepository.Authentication(accomodationID, password, connectionType))
@@ -48,7 +49,7 @@ namespace virtual_receptionist.Presenter
             }
             else
             {
-                MessageBox.Show("Sikertelen bejelentkezés!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new FailedLoginException();
             }
         }
 
