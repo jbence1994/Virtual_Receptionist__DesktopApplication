@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Presenter;
 
@@ -26,8 +27,7 @@ namespace virtual_receptionist.View
         public FormModalBillingItems()
         {
             InitializeComponent();
-            presenter = new ModalBillingItemsPresenter(listViewBillingItems, buttonAdd, textBoxItem, textBoxPrice,
-                textBoxUnit, textBoxQuantity, maskedTextBoxVAT, maskedTextBoxItemDiscount);
+            presenter = new ModalBillingItemsPresenter();
         }
 
         #endregion
@@ -36,17 +36,41 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            presenter.InitializeBillingItemsListView();
+            DataTable billingItemsTable = presenter.InitializeBillingItemsTable();
+
+            foreach (DataRow row in billingItemsTable.Rows)
+            {
+                ListViewItem billingItems = new ListViewItem(row[0].ToString());
+
+                for (int i = 1; i < billingItemsTable.Columns.Count; i++)
+                {
+                    billingItems.SubItems.Add(row[i].ToString());
+                }
+
+                listViewBillingItems.Items.Add(billingItems);
+            }
         }
 
         private void listViewBillingItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            presenter.SetControlsWithData();
+            if (listViewBillingItems.SelectedItems.Count > 0)
+            {
+                buttonAdd.Enabled = true;
+                textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
+                textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
+                maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
+                textBoxQuantity.Clear();
+                maskedTextBoxItemDiscount.Clear();
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            presenter.AddBillingItemToRecord();
+            if (maskedTextBoxItemDiscount.MaskFull)
+            {
+
+            }
         }
 
         #endregion
