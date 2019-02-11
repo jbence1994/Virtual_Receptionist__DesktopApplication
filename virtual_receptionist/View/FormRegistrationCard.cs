@@ -25,7 +25,7 @@ namespace virtual_receptionist.View
         public FormGuestRegistrationCard()
         {
             InitializeComponent();
-            presenter = new RegistrationCardPresenter(comboBoxCountry);
+            presenter = new RegistrationCardPresenter();
         }
 
         #endregion
@@ -34,7 +34,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestRegistrationCard_Load(object sender, System.EventArgs e)
         {
-            presenter.SetGuestRegistrationCard();
+            comboBoxCountry.DataSource = presenter.GetCountries();
         }
 
         private void buttonOK_Click(object sender, System.EventArgs e)

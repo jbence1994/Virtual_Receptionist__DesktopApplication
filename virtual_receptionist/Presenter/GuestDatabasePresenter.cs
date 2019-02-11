@@ -69,15 +69,6 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Országokat lista adatszerkezetben visszaadó metódus
-        /// </summary>
-        /// <returns>Országlistával tér vissza a függvény</returns>
-        public List<Country> GetCountries()
-        {
-            return countries;
-        }
-
-        /// <summary>
         /// Vendég adatbázis tábla soron következő azonosítóját visszaadó metódus
         /// </summary>
         /// <returns>Soron következő vendégazonosítóval tér vissza a függvény</returns>
@@ -234,22 +225,6 @@ namespace virtual_receptionist.Presenter
                 phoneNumber, email);
 
             dataRepository.DeleteGuest(corporateGuest);
-        }
-
-        /// <summary>
-        /// Ha megváltozik a vendégtáblázat, a megfelelő táblázat cellák adatai kerüljenek a megfelelő szövegmezőkbe
-        /// </summary>
-        public void ListViewPrivateGuestsSelectedIndexChanged()
-        {
-
-        }
-
-        /// <summary>
-        /// Ha megváltozik a céges vendégtáblázat, a megfelelő táblázat cellák adatai kerüljenek a megfelelő szövegmezőkbe
-        /// </summary>
-        public void ListViewCorporateGuestsSelectedIndexChanged()
-        {
-
         }
 
         #endregion

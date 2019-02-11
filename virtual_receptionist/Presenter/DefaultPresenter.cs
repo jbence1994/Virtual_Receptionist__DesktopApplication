@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.Model;
+﻿using System.Collections.Generic;
+using virtual_receptionist.Model;
 
 namespace virtual_receptionist.Presenter
 {
@@ -24,6 +25,16 @@ namespace virtual_receptionist.Presenter
         public DefaultPresenter()
         {
             dataRepository = new DataRepository();
+        }
+
+        /// <summary>
+        /// Országokat lista adatszerkezetben visszaadó metódus
+        /// </summary>
+        /// <returns>Országlistával tér vissza a függvény</returns>
+        public List<Country> GetCountries()
+        {
+            List<Country> countries = dataRepository.GetCountries();
+            return countries;
         }
 
         #endregion

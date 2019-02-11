@@ -12,25 +12,9 @@ namespace virtual_receptionist.Presenter
     {
         #region Adattagok
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private List<Country> countries;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private ComboBox comboBoxCountries;
-
         #endregion
 
         #region Konstruktor
-
-        public RegistrationCardPresenter(params Control[] controls)
-        {
-            countries = dataRepository.GetCountries();
-            comboBoxCountries = (ComboBox) controls[0];
-        }
 
         #endregion
 
@@ -42,11 +26,6 @@ namespace virtual_receptionist.Presenter
         public void SaveRent()
         {
             throw new NotImplementedException();
-        }
-
-        public void SetGuestRegistrationCard()
-        {
-            comboBoxCountries.DataSource = countries;
         }
 
         #endregion
