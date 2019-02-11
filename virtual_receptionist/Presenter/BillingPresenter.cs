@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Windows.Forms;
 using virtual_receptionist.View;
-using virtual_receptionist.Model;
 
 namespace virtual_receptionist.Presenter
 {
@@ -21,7 +18,7 @@ namespace virtual_receptionist.Presenter
         #endregion
 
         #region Konstruktor
-        
+
         #endregion
 
         #region Számlázó modul nézetfrissítései
@@ -38,32 +35,29 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Számlázási tételek táblázatból meglévő rekordot törlő metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void DeleteRow()
         {
-            //if (dataGridViewItems.SelectedRows.Count != 0)
-            //{
-            //    int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-            //    dataGridViewItems.Rows.RemoveAt(rowToDelete);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            throw new Exception("");
         }
 
         /// <summary>
         /// Számlázási tételek táblázatból meglévő rekordot módosító metódus
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void UpdateRow()
         {
-            //if (dataGridViewItems.SelectedRows.Count != 0)
-            //{
+            throw new Exception("");
+        }
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+        /// <summary>
+        /// Metódus, amely visszaadja a fizetendő végösszeget
+        /// </summary>
+        /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
+        public double GetTotalPrice()
+        {
+            double total = dataRepository.CountTotalPrice();
+            return total;
         }
 
         #endregion

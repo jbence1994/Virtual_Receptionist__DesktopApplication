@@ -51,11 +51,31 @@ namespace virtual_receptionist.View
         private void buttonUpdateItem_Click(object sender, EventArgs e)
         {
             presenter.UpdateRow();
+
+            if (dataGridViewItems.SelectedRows.Count != 0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
             presenter.DeleteRow();
+
+
+            if (dataGridViewItems.SelectedRows.Count != 0)
+            {
+                int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
+                dataGridViewItems.Rows.RemoveAt(rowToDelete);
+            }
+            else
+            {
+                MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
@@ -65,12 +85,12 @@ namespace virtual_receptionist.View
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-
+            textBoxTotal.Text = presenter.GetTotalPrice().ToString();
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-
+            textBoxTotal.Text = presenter.GetTotalPrice().ToString();
         }
 
         #endregion

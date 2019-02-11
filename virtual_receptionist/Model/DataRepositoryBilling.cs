@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace virtual_receptionist.Model
@@ -29,7 +30,7 @@ namespace virtual_receptionist.Model
                 billingItems.Add(billingItemInstance);
             }
         }
-        
+
         /// <summary>
         /// Metódus, amely adatforrásként szolgál a számlázó főablak DataGridView komponensének
         /// </summary>
@@ -66,6 +67,16 @@ namespace virtual_receptionist.Model
         {
             double difference = (itemPrice * footPercent) / 100;
             return itemPrice - difference;
+        }
+
+        /// <summary>
+        /// Metódus, amely kiszámolja a fizetendő végösszeget
+        /// </summary>
+        /// <returns>Fizetendő </returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public double CountTotalPrice()
+        {
+            throw new NotImplementedException("");
         }
 
         #endregion
