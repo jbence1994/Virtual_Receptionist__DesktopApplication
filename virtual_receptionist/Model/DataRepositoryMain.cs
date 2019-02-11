@@ -170,25 +170,33 @@ namespace virtual_receptionist.Model
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         /// <exception cref="FailedLoginException"></exception>
+        /// <exception cref="InvalidConnectionTypeException"></exception>
         public bool Authentication(string accomodationID, string password, string connectionType)
         {
-            bool entry = false;
-            database.SetConnection(connectionType);
-
-            UploadAccomodationList();
-
-            foreach (Accomodation account in accomodations)
+            try
             {
-                if (account.AccomodationID == accomodationID && account.Password == password)
+                bool entry = false;
+                database.SetConnection(connectionType);
+
+                UploadAccomodationList();
+
+                foreach (Accomodation account in accomodations)
                 {
-                    entry = true;
-                    break;
+                    if (account.AccomodationID == accomodationID && account.Password == password)
+                    {
+                        entry = true;
+                        break;
+                    }
+
+                    throw new FailedLoginException();
                 }
 
-                throw new FailedLoginException();
+                return entry;
             }
-
-            return entry;
+            catch (InvalidConnectionTypeException)
+            {
+                throw new InvalidConnectionTypeException();
+            }
         }
 
         /// <summary>

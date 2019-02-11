@@ -1,4 +1,4 @@
-﻿using System;
+﻿using MySQL_ORM;
 using virtual_receptionist.Exceptions;
 using virtual_receptionist.View;
 
@@ -38,14 +38,27 @@ namespace virtual_receptionist.Presenter
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
+        /// <exception cref="FailedLoginException"></exception>
+        /// <exception cref="InvalidConnectionTypeException"></exception>
         public void EnterApplication(string accomodationID, string password, string connectionType)
         {
-            if (dataRepository.Authentication(accomodationID, password, connectionType))
+            try
             {
-                formLogin.Hide();
-                FormMainMenu formMainMenu = new FormMainMenu(formLogin);
-                formMainMenu.Show();
-                dataRepository.Login();
+                if (dataRepository.Authentication(accomodationID, password, connectionType))
+                {
+                    formLogin.Hide();
+                    FormMainMenu formMainMenu = new FormMainMenu(formLogin);
+                    formMainMenu.Show();
+                    dataRepository.Login();
+                }
+            }
+            catch (FailedLoginException)
+            {
+                throw new FailedLoginException();
+            }
+            catch (InvalidConnectionTypeException)
+            {
+                throw new InvalidConnectionTypeException();
             }
         }
 
