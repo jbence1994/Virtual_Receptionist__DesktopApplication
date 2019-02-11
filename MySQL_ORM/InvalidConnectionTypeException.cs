@@ -12,7 +12,7 @@ namespace MySQL_ORM
         /// <summary>
         /// Adatbázis kapcsolódás típus kivétel
         /// </summary>
-        public InvalidConnectionTypeException() : base("Érvénytelen adatbázis kapcsolódás típus")
+        public InvalidConnectionTypeException() : base("Érvénytelen adatbázis kapcsolódás típus!")
         {
         }
 

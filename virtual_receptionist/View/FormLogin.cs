@@ -55,8 +55,7 @@ namespace virtual_receptionist.View
             }
             catch (Exception exception)
             {
-                MessageBox.Show($"Ismeretlen hiba történt!\n{exception.Message}", "", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show(exception.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

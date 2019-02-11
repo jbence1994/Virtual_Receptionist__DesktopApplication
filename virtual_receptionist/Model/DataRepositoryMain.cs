@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.Linq;
 using MySQL_ORM;
 using virtual_receptionist.Exceptions;
 
@@ -171,27 +169,23 @@ namespace virtual_receptionist.Model
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
+        /// <exception cref="FailedLoginException"></exception>
         public bool Authentication(string accomodationID, string password, string connectionType)
         {
             bool entry = false;
+            database.SetConnection(connectionType);
 
-            try
+            UploadAccomodationList();
+
+            foreach (Accomodation account in accomodations)
             {
-                database.SetConnection(connectionType);
-                UploadAccomodationList();
-
-                foreach (Accomodation account in accomodations)
+                if (account.AccomodationID == accomodationID && account.Password == password)
                 {
-                    if (account.AccomodationID == accomodationID && account.Password == password)
-                    {
-                        entry = true;
-                        break;
-                    }
+                    entry = true;
+                    break;
                 }
-            }
-            catch (InvalidConnectionTypeException e)
-            {
-                Debug.WriteLine(e.Message);
+
+                throw new FailedLoginException();
             }
 
             return entry;

@@ -93,9 +93,6 @@ namespace MySQL_ORM
             localConnection = ConfigurationManager.ConnectionStrings["local"].ConnectionString;
             remoteConnection = ConfigurationManager.ConnectionStrings["remote"].ConnectionString;
 
-            Debug.WriteLine(localConnection);
-            Debug.WriteLine(remoteConnection);
-
             if (connectionType == "otthoni")
             {
                 mySqlConnection = new MySqlConnection()
