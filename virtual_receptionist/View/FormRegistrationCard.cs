@@ -44,12 +44,12 @@ namespace virtual_receptionist.View
 
         private void buttonCancel_Click(object sender, System.EventArgs e)
         {
-            presenter.BackToMainMenu(this);
+
         }
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, System.EventArgs e)
         {
-            presenter.SetCorporateGuest(checkBoxCorporateGuest, textBoxVatNumber);
+            textBoxVatNumber.Enabled = checkBoxCorporateGuest.Checked;
         }
 
         #endregion

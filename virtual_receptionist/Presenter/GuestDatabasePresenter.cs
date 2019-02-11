@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Reflection;
+﻿using System.Data;
+using System.Collections.Generic;
 using virtual_receptionist.Model;
 
 namespace virtual_receptionist.Presenter
