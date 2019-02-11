@@ -333,17 +333,8 @@ namespace virtual_receptionist.View
                 textBoxCitizenship.Text = listViewPrivateGuests.SelectedItems[0].SubItems[3].Text;
                 textBoxBirthDate.Text = listViewPrivateGuests.SelectedItems[0].SubItems[4].Text;
 
-                Country selectedCountry = null;
-
-                foreach (Country country in countries)
-                {
-                    if (listViewPrivateGuests.SelectedItems[0].SubItems[5].Text.Contains(country.Name))
-                    {
-                        selectedCountry = country;
-                    }
-                }
-
-                comboBoxCountry.SelectedItem = selectedCountry;
+                string selectedCountryInTable = listViewPrivateGuests.SelectedItems[0].SubItems[5].Text;
+                comboBoxCountry.SelectedItem = presenter.SetSelectedCountry(selectedCountryInTable);
 
                 textBoxZipCode.Text = listViewPrivateGuests.SelectedItems[0].SubItems[6].Text;
                 textBoxCity.Text = listViewPrivateGuests.SelectedItems[0].SubItems[7].Text;
@@ -382,17 +373,8 @@ namespace virtual_receptionist.View
                 textBoxCompanyName.Text = listViewCorporateGuests.SelectedItems[0].SubItems[1].Text;
                 textBoxVATNumber.Text = listViewCorporateGuests.SelectedItems[0].SubItems[2].Text;
 
-                Country selectedCountry = null;
-
-                foreach (Country country in countries)
-                {
-                    if (listViewCorporateGuests.SelectedItems[0].SubItems[3].Text.Contains(country.Name))
-                    {
-                        selectedCountry = country;
-                    }
-                }
-
-                comboBoxCountry.SelectedItem = selectedCountry;
+                string selectedCountryInTable = listViewCorporateGuests.SelectedItems[0].SubItems[3].Text;
+                comboBoxHeadquarterCountry.SelectedItem = presenter.SetSelectedCountry(selectedCountryInTable);
 
                 textBoxHeadquarterZipCode.Text = listViewCorporateGuests.SelectedItems[0].SubItems[4].Text;
                 textBoxHeadquarterCity.Text = listViewCorporateGuests.SelectedItems[0].SubItems[5].Text;

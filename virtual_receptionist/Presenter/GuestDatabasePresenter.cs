@@ -11,11 +11,19 @@ namespace virtual_receptionist.Presenter
     {
         #region Adattagok
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private List<Country> countries;
 
         #endregion
 
         #region Konstruktor
 
+        public GuestDatabasePresenter()
+        {
+            countries = dataRepository.GetCountries();
+        }
 
         #endregion
 
@@ -42,12 +50,30 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// Metódus, amely beállítja a vendégtáblázat alapján ComboBoxban a kijelölt rekord országát
+        /// </summary>
+        /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
+        public Country SetSelectedCountry(string selectedCountryInTable)
+        {
+            Country selectedCountry = null;
+
+            foreach (Country country in countries)
+            {
+                if (selectedCountryInTable.Contains(country.Name))
+                {
+                    selectedCountry = country;
+                }
+            }
+
+            return selectedCountry;
+        }
+
+        /// <summary>
         /// Országokat lista adatszerkezetben visszaadó metódus
         /// </summary>
         /// <returns>Országlistával tér vissza a függvény</returns>
         public List<Country> GetCountries()
         {
-            List<Country> countries = dataRepository.GetCountries();
             return countries;
         }
 
