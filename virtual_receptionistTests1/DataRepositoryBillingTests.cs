@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace virtual_receptionist.Model.BillingTests
+namespace virtual_receptionist.Model.Repository.BillingTests
 {
     [TestClass()]
     public class DataRepositoryBillingTests

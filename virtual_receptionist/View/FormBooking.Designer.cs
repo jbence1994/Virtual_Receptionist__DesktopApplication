@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBooking));
-            this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.dataGridViewRoomRents = new System.Windows.Forms.DataGridView();
             this.ColumnGuest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,20 +52,6 @@
             this.tabPageRooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonBackToMainMenu
-            // 
-            this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
-            this.buttonBackToMainMenu.Location = new System.Drawing.Point(877, 539);
-            this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
-            this.buttonBackToMainMenu.Size = new System.Drawing.Size(159, 64);
-            this.buttonBackToMainMenu.TabIndex = 6;
-            this.buttonBackToMainMenu.Text = "Vissza a főmenübe";
-            this.buttonBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonBackToMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonBackToMainMenu.UseVisualStyleBackColor = true;
-            this.buttonBackToMainMenu.Click += new System.EventHandler(this.buttonBackToMainMenu_Click);
             // 
             // dataGridViewRoomRents
             // 
@@ -259,7 +244,6 @@
             this.Controls.Add(this.buttonUpdateRent);
             this.Controls.Add(this.buttonNewRent);
             this.Controls.Add(this.tabControlRoomEditor);
-            this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBooking";
@@ -276,8 +260,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonBackToMainMenu;
         private System.Windows.Forms.DataGridView dataGridViewRoomRents;
         private System.Windows.Forms.TabControl tabControlRoomEditor;
         private System.Windows.Forms.TabPage tabPageReservations;

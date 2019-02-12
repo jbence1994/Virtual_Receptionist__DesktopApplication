@@ -7,7 +7,7 @@
     <ProjectGuid>{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>virtual_receptionist.Model.BillingTests</RootNamespace>
+    <RootNamespace>virtual_receptionist.Model.Repository.BillingTests</RootNamespace>
     <AssemblyName>virtual_receptionistDataRepositoryBillingTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBilling));
-            this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
             this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,20 +45,6 @@
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonBackToMainMenu
-            // 
-            this.buttonBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonBackToMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackToMainMenu.Image")));
-            this.buttonBackToMainMenu.Location = new System.Drawing.Point(501, 342);
-            this.buttonBackToMainMenu.Name = "buttonBackToMainMenu";
-            this.buttonBackToMainMenu.Size = new System.Drawing.Size(157, 64);
-            this.buttonBackToMainMenu.TabIndex = 6;
-            this.buttonBackToMainMenu.Text = "Vissza a főmenübe";
-            this.buttonBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonBackToMainMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonBackToMainMenu.UseVisualStyleBackColor = true;
-            this.buttonBackToMainMenu.Click += new System.EventHandler(this.buttonBackToMainMenu_Click);
             // 
             // dataGridViewItems
             // 
@@ -135,7 +120,7 @@
             this.buttonAddItem.Enabled = false;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
-            this.buttonAddItem.Location = new System.Drawing.Point(262, 272);
+            this.buttonAddItem.Location = new System.Drawing.Point(175, 272);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 64);
             this.buttonAddItem.TabIndex = 2;
@@ -150,7 +135,7 @@
             this.buttonUpdateItem.Enabled = false;
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
-            this.buttonUpdateItem.Location = new System.Drawing.Point(262, 342);
+            this.buttonUpdateItem.Location = new System.Drawing.Point(338, 272);
             this.buttonUpdateItem.Name = "buttonUpdateItem";
             this.buttonUpdateItem.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateItem.TabIndex = 3;
@@ -227,7 +212,6 @@
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.buttonPrintInvoice);
             this.Controls.Add(this.dataGridViewItems);
-            this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBilling";
@@ -240,8 +224,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonBackToMainMenu;
         private System.Windows.Forms.DataGridView dataGridViewItems;
         private System.Windows.Forms.Button buttonPrintInvoice;
         private System.Windows.Forms.Button buttonAddItem;

@@ -33,11 +33,6 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void buttonNewData_Click(object sender, EventArgs e)
         {
 

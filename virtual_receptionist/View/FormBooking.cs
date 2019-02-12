@@ -39,12 +39,6 @@ namespace virtual_receptionist.View
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 
-
-        private void buttonBackToMainMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
         #endregion
     }
 }
