@@ -50,7 +50,6 @@ namespace virtual_receptionist.View
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            dataGridViewItems.DataSource = null;
             dataGridViewItems.DataSource = presenter.AddNewRow();
         }
 
@@ -59,7 +58,6 @@ namespace virtual_receptionist.View
             if (dataGridViewItems.SelectedRows.Count != 0)
             {
                 int rowToUpdate = dataGridViewItems.SelectedRows[0].Index;
-                dataGridViewItems.DataSource = null;
                 dataGridViewItems.DataSource = presenter.UpdateRow(rowToUpdate);
             }
             else
@@ -73,7 +71,6 @@ namespace virtual_receptionist.View
             if (dataGridViewItems.SelectedRows.Count != 0)
             {
                 int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-                dataGridViewItems.DataSource = null;
                 dataGridViewItems.DataSource = presenter.DeleteRow(rowToDelete);
             }
             else

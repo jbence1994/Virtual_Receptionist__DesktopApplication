@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
 {
@@ -40,10 +39,10 @@ namespace virtual_receptionist.Presenter
         {
             DataTable billingDataTable = new DataTable();
 
-            billingDataTable.Columns.Add("Item", typeof(string));
-            billingDataTable.Columns.Add("Price", typeof(double));
-            billingDataTable.Columns.Add("Unit", typeof(string));
-            billingDataTable.Columns.Add("Quantity", typeof(int));
+            billingDataTable.Columns.Add("Tétel", typeof(string));
+            billingDataTable.Columns.Add("Ár", typeof(double));
+            billingDataTable.Columns.Add("Egység", typeof(string));
+            billingDataTable.Columns.Add("Mennyiség", typeof(int));
 
             return billingDataTable;
         }

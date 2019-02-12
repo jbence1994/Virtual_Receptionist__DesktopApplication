@@ -166,7 +166,7 @@
             // 
             // ColumnItem
             // 
-            this.ColumnItem.DataPropertyName = "Item";
+            this.ColumnItem.DataPropertyName = "Tétel";
             this.ColumnItem.HeaderText = "Tétel";
             this.ColumnItem.Name = "ColumnItem";
             this.ColumnItem.ReadOnly = true;
@@ -174,7 +174,7 @@
             // 
             // ColumnPrice
             // 
-            this.ColumnPrice.DataPropertyName = "Price";
+            this.ColumnPrice.DataPropertyName = "Ár";
             this.ColumnPrice.HeaderText = "Ár";
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
@@ -182,7 +182,7 @@
             // 
             // ColumnUnit
             // 
-            this.ColumnUnit.DataPropertyName = "Unit";
+            this.ColumnUnit.DataPropertyName = "Egység";
             this.ColumnUnit.HeaderText = "Egység";
             this.ColumnUnit.Name = "ColumnUnit";
             this.ColumnUnit.ReadOnly = true;
@@ -190,7 +190,7 @@
             // 
             // ColumnQuantity
             // 
-            this.ColumnQuantity.DataPropertyName = "Quantity";
+            this.ColumnQuantity.DataPropertyName = "Mennyiség";
             this.ColumnQuantity.HeaderText = "Mennyiség";
             this.ColumnQuantity.Name = "ColumnQuantity";
             this.ColumnQuantity.ReadOnly = true;
