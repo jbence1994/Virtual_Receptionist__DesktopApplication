@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using System.Collections.Generic;
 using virtual_receptionist.Model;
 
 namespace virtual_receptionist.Presenter
@@ -9,30 +8,12 @@ namespace virtual_receptionist.Presenter
     /// </summary>
     public class GuestDatabasePresenter : DefaultPresenter
     {
-        #region Adattagok
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private List<Country> countries;
-
-        #endregion
-
-        #region Konstruktor
-
-        public GuestDatabasePresenter()
-        {
-            countries = dataRepository.GetCountries();
-        }
-
-        #endregion
-
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// 
+        /// Metódus, amely visszaaadja a vendégeket az adattárból
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A vendégekkkel feltöltött adattbálát adja vissza a függvény</returns>
         public DataTable InitializePrivateGuests()
         {
             DataTable privateGuestDataTable = dataRepository.GetPrivateGuests();
@@ -40,9 +21,9 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely visszaaadja a céges vendégeket az adattárból
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A céges vendégekkkel feltöltött adattbálát adja vissza a függvény</returns>
         public DataTable InitializeCorporateGuests()
         {
             DataTable corporateGuestDataTable = dataRepository.GetCorporateGuests();
@@ -57,7 +38,7 @@ namespace virtual_receptionist.Presenter
         {
             Country selectedCountry = null;
 
-            foreach (Country country in countries)
+            foreach (Country country in GetCountries())
             {
                 if (selectedCountryInTable.Contains(country.Name))
                 {

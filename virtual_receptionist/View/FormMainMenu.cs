@@ -133,7 +133,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = presenter.SetMenuName("Szobakezelő");
+            toolStripStatusLabelMenuName.Text = presenter.SetMenuName("Foglalási napló");
         }
 
         private void toolStripMenuItemRoomEditor_MouseLeave(object sender, EventArgs e)
@@ -213,7 +213,7 @@ namespace virtual_receptionist.View
 
         private void toolStripButtonRoomEditor_MouseHover(object sender, EventArgs e)
         {
-            toolStripStatusLabelMenuName.Text = presenter.SetMenuName("Szobakezelő");
+            toolStripStatusLabelMenuName.Text = presenter.SetMenuName("Foglalási napló");
         }
 
         private void toolStripButtonRoomEditor_MouseLeave(object sender, EventArgs e)
@@ -267,6 +267,21 @@ namespace virtual_receptionist.View
         }
 
         private void toolStripMenuItemGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = presenter.ClearMenuName();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            presenter.Logout();
+        }
+
+        private void buttonLogout_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabelMenuName.Text = presenter.SetMenuName("Kijelentkezés");
+        }
+
+        private void buttonLogout_MouseLeave(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = presenter.ClearMenuName();
         }

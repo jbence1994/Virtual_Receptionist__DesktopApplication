@@ -59,7 +59,7 @@
     <Compile Include="Presenter\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\OpeningPresenter.cs" />
-    <Compile Include="Presenter\RoomEditorPresenter.cs" />
+    <Compile Include="Presenter\BookingPresenter.cs" />
     <Compile Include="Model\PrivateGuest.cs" />
     <Compile Include="View\FormOpening.cs">
       <SubType>Form</SubType>
@@ -82,7 +82,7 @@
     <Compile Include="Model\DataRepositoryGuest.cs" />
     <Compile Include="Model\DataRepositoryBilling.cs" />
     <Compile Include="Model\DataRepositoryMain.cs" />
-    <Compile Include="Model\DataRepositoryRoomEditor.cs" />
+    <Compile Include="Model\DataRepositoryBooking.cs" />
     <Compile Include="View\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +119,11 @@
     <Compile Include="View\FormRegistrationCard.Designer.cs">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormRoomEditor.cs">
+    <Compile Include="View\FormBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormRoomEditor.Designer.cs">
-      <DependentUpon>FormRoomEditor.cs</DependentUpon>
+    <Compile Include="View\FormBooking.Designer.cs">
+      <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Guest.cs" />
     <Compile Include="Presenter\GuestDatabasePresenter.cs" />
@@ -132,7 +132,7 @@
     <Compile Include="Presenter\DefaultPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Reservation.cs" />
+    <Compile Include="Model\Booking.cs" />
     <Compile Include="Model\Room.cs" />
     <EmbeddedResource Include="View\FormOpening.resx">
       <DependentUpon>FormOpening.cs</DependentUpon>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="View\FormRegistrationCard.resx">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormRoomEditor.resx">
-      <DependentUpon>FormRoomEditor.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormBooking.resx">
+      <DependentUpon>FormBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

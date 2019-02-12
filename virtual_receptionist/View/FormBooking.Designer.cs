@@ -1,6 +1,6 @@
 ﻿namespace virtual_receptionist.View
 {
-    partial class FormRoomEditor
+    partial class FormBooking
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRoomEditor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBooking));
             this.buttonBackToMainMenu = new System.Windows.Forms.Button();
             this.dataGridViewRoomRents = new System.Windows.Forms.DataGridView();
             this.ColumnGuest = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -250,7 +250,7 @@
             this.buttonDeleteRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteRent.UseVisualStyleBackColor = true;
             // 
-            // FormRoomEditor
+            // FormBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -262,9 +262,9 @@
             this.Controls.Add(this.buttonBackToMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormRoomEditor";
+            this.Name = "FormBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Szobakezelő | Virtual Receptionist";
+            this.Text = "Foglalási napló | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormRoomEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).EndInit();
             this.tabControlRoomEditor.ResumeLayout(false);

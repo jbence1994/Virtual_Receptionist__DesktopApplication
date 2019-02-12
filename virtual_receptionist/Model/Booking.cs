@@ -5,7 +5,7 @@ namespace virtual_receptionist.Model
     /// <summary>
     /// Foglalások modell osztálya
     /// </summary>
-    public class Reservation
+    public class Booking
     {
         #region Adattagok
 
@@ -41,7 +41,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Reservation osztály konstruktora
         /// </summary>
-        public Reservation(Guest guest, Room room, int numberOfGuests, DateTime arrival, DateTime departure)
+        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrival, DateTime departure)
         {
             this.guest = guest;
             this.room = room;

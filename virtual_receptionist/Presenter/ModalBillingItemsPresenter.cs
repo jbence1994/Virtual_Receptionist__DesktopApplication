@@ -7,20 +7,12 @@ namespace virtual_receptionist.Presenter
     /// </summary>
     public class ModalBillingItemsPresenter : DefaultPresenter
     {
-        #region Adattagok
-
-        #endregion
-
-        #region Konstruktor
-
-        #endregion
-
         #region Számlázási tételek modális ablak nézetfrissítései
 
         /// <summary>
-        /// Számlázi tételek táblázatot adatbázisból adatokkal feltöltő metódus
+        /// Metódus, amely visszaadja a számlázási tételeket az adattárból
         /// </summary>
-        /// <returns>Feltöltött adattáblával tér vissza a függvény</returns>
+        /// <returns>A számlázási tételekkel feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable InitializeBillingItemsTable()
         {
             DataTable billingItems = dataRepository.GetBillingItems();

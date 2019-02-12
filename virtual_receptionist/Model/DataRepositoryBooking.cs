@@ -5,13 +5,13 @@ namespace virtual_receptionist.Model
 {
     public partial class DataRepository
     {
-        #region Szoba kezelő modul
+        #region Foglalási napló modul
 
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát
         /// </summary>
         /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        private void UploadReservationsList()
+        private void UploadBookingsList()
         {
             string sql =
                 "SELECT guest.Name, room.Number, reservation.NumberOfGuests, reservation.ArrivalDate, reservation.DepartureDate FROM reservation, guest, room WHERE reservation.GuestID = guest.ID AND reservation.RoomID = room.ID ORDER BY reservation.ArrivalDate ASC";
@@ -33,8 +33,8 @@ namespace virtual_receptionist.Model
                 DateTime arrival = (DateTime) row["ArrivalDate"];
                 DateTime departure = (DateTime) row["DepartureDate"];
 
-                //Reservation reservationInstance = new Reservation(guest, room, numberOfGuests, arrival, departure);
-                //reservations.Add(reservationInstance);
+                //Booking bookingInstance = new Booking(guest, room, numberOfGuests, arrival, departure);
+                //bookings.Add(bookingInstance);
             }
         }
 
@@ -64,27 +64,27 @@ namespace virtual_receptionist.Model
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        public DataTable GetReservations()
+        public DataTable GetBookings()
         {
-            if (reservations.Count == 0)
+            if (bookings.Count == 0)
             {
-                UploadReservationsList();
+                UploadBookingsList();
             }
 
-            DataTable reservationsDataTable = new DataTable();
-            reservationsDataTable.Columns.Add("GuestName", typeof(Guest));
-            reservationsDataTable.Columns.Add("RoomNumber", typeof(Room));
-            reservationsDataTable.Columns.Add("NumberOfGuests", typeof(int));
-            reservationsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
-            reservationsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
+            DataTable bookingsDataTable = new DataTable();
+            bookingsDataTable.Columns.Add("GuestName", typeof(Guest));
+            bookingsDataTable.Columns.Add("RoomNumber", typeof(Room));
+            bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
+            bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
 
-            foreach (Reservation reservation in reservations)
+            foreach (Booking booking in bookings)
             {
-                reservationsDataTable.Rows.Add(reservation.Guest, reservation.Room, reservation.NumberOfGuests,
-                    reservation.Arrival, reservation.Departure);
+                bookingsDataTable.Rows.Add(booking.Guest, booking.Room, booking.NumberOfGuests,
+                    booking.Arrival, booking.Departure);
             }
 
-            return reservationsDataTable;
+            return bookingsDataTable;
         }
 
         /// <summary>

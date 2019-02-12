@@ -51,7 +51,7 @@ namespace virtual_receptionist.Model
         /// <summary>
         /// Foglalásokat tartalmazó lista
         /// </summary>
-        private List<Reservation> reservations;
+        private List<Booking> bookings;
 
         /// <summary>
         /// Alkalmazást futtató számítógép NetBIOS neve
@@ -76,7 +76,7 @@ namespace virtual_receptionist.Model
             corporateGuests = new List<CorporateGuest>();
             countries = new List<Country>();
             rooms = new List<Room>();
-            reservations = new List<Reservation>();
+            bookings = new List<Booking>();
         }
 
         #endregion

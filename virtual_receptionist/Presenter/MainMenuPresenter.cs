@@ -30,7 +30,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
         /// <param name="formLogin">Bejelnetkező ablak</param>
-        /// <param name="controls">Paraméterül átadott GUI vezérlők</param>
         public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin)
         {
             this.formMainMenu = formMainMenu;
@@ -70,7 +69,7 @@ namespace virtual_receptionist.Presenter
         /// Metódus, amely adott menü nevét megjeleníti egy címkében az állapotsoron
         /// </summary>
         /// <param name="menuName">Menü neve</param>
-        /// <returns></returns>
+        /// <returns>A paraméterül megadott menü nevét adja vissza a függvény</returns>
         public string SetMenuName(string menuName)
         {
             return menuName;
@@ -128,7 +127,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void OpenRoomEditor()
         {
-            FormRoomEditor formRoomEditor = new FormRoomEditor();
+            FormBooking formRoomEditor = new FormBooking();
             formRoomEditor.ShowDialog();
         }
 

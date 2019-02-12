@@ -10,14 +10,6 @@ namespace virtual_receptionist.Presenter
     /// </summary>
     public class RegistrationCardPresenter : DefaultPresenter
     {
-        #region Adattagok
-
-        #endregion
-
-        #region Konstruktor
-
-        #endregion
-
         #region Vendég bejelentkező lap nézetfrissítései
 
         /// <summary>

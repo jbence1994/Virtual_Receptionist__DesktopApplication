@@ -81,6 +81,7 @@
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
             this.buttonCancel.Location = new System.Drawing.Point(177, 554);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(159, 64);
@@ -448,11 +449,12 @@
             // 
             this.buttonSaveToDatabase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSaveToDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSaveToDatabase.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveToDatabase.Image")));
             this.buttonSaveToDatabase.Location = new System.Drawing.Point(342, 554);
             this.buttonSaveToDatabase.Name = "buttonSaveToDatabase";
             this.buttonSaveToDatabase.Size = new System.Drawing.Size(159, 64);
             this.buttonSaveToDatabase.TabIndex = 30;
-            this.buttonSaveToDatabase.Text = "Vendégadatok mentése adatbázisba";
+            this.buttonSaveToDatabase.Text = "Adatok mentése adatbázisba";
             this.buttonSaveToDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSaveToDatabase.UseVisualStyleBackColor = true;
             // 
