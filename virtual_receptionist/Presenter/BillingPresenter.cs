@@ -12,42 +12,38 @@ namespace virtual_receptionist.Presenter
 
         public BillingPresenter()
         {
-            billingDataTable = new DataTable();
+            billingDataTable = InitializeBillingDataTable();
         }
 
         #region Számlázó modul nézetfrissítései
 
         public DataTable AddNewRow(params object[] items) // <= modális ablak prezenterétől kapja
         {
-            DataTable addToDataTable = InitializeBillingDataTable();
-            addToDataTable.Rows.Add(items);
-
-            return addToDataTable;
+            billingDataTable.Rows.Add(items);
+            return billingDataTable;
         }
 
         public DataTable DeleteRow(int index)
         {
-            DataTable deleteFromDataTable = InitializeBillingDataTable();
-            deleteFromDataTable.Rows.RemoveAt(index);
-
-            return deleteFromDataTable;
+            billingDataTable.Rows.RemoveAt(index);
+            return billingDataTable;
         }
 
         public DataTable UpdateRow(int index, params object[] items)
         {
-            DataTable updateInDataTable = InitializeBillingDataTable();
-            updateInDataTable.Rows.RemoveAt(index);
-            updateInDataTable.Rows.Add(items);
-
-            return updateInDataTable;
+            billingDataTable.Rows.RemoveAt(index);
+            billingDataTable.Rows.Add(items);
+            return billingDataTable;
         }
 
         private DataTable InitializeBillingDataTable()
         {
-            billingDataTable.Columns.Add("Tétel", typeof(string));
-            billingDataTable.Columns.Add("Ár", typeof(double));
-            billingDataTable.Columns.Add("Egység", typeof(string));
-            billingDataTable.Columns.Add("Mennyiség", typeof(int));
+            DataTable billingDataTable = new DataTable();
+
+            billingDataTable.Columns.Add("Item", typeof(string));
+            billingDataTable.Columns.Add("Price", typeof(double));
+            billingDataTable.Columns.Add("Unit", typeof(string));
+            billingDataTable.Columns.Add("Quantity", typeof(int));
 
             return billingDataTable;
         }

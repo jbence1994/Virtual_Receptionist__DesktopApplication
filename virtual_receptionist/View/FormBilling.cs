@@ -33,7 +33,17 @@ namespace virtual_receptionist.View
 
         #region UI események
 
+        private void FormBilling_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonNewData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
 
         }
@@ -80,11 +90,6 @@ namespace virtual_receptionist.View
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             textBoxTotal.Text = presenter.GetTotalPrice().ToString();
-        }
-
-        private void buttonPrintInvoice_Click(object sender, EventArgs e)
-        {
-
         }
 
         #endregion

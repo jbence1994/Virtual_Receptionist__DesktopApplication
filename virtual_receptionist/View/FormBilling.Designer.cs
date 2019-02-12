@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBilling));
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
-            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonPrintInvoice = new System.Windows.Forms.Button();
             this.buttonAddItem = new System.Windows.Forms.Button();
             this.buttonUpdateItem = new System.Windows.Forms.Button();
@@ -43,6 +39,10 @@
             this.buttonNewData = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,38 +67,6 @@
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
-            // 
-            // ColumnItem
-            // 
-            this.ColumnItem.DataPropertyName = "Tétel";
-            this.ColumnItem.HeaderText = "Tétel";
-            this.ColumnItem.Name = "ColumnItem";
-            this.ColumnItem.ReadOnly = true;
-            this.ColumnItem.Width = 150;
-            // 
-            // ColumnPrice
-            // 
-            this.ColumnPrice.DataPropertyName = "Ár";
-            this.ColumnPrice.HeaderText = "Ár";
-            this.ColumnPrice.Name = "ColumnPrice";
-            this.ColumnPrice.ReadOnly = true;
-            this.ColumnPrice.Width = 150;
-            // 
-            // ColumnUnit
-            // 
-            this.ColumnUnit.DataPropertyName = "Egység";
-            this.ColumnUnit.HeaderText = "Egység";
-            this.ColumnUnit.Name = "ColumnUnit";
-            this.ColumnUnit.ReadOnly = true;
-            this.ColumnUnit.Width = 150;
-            // 
-            // ColumnQuantity
-            // 
-            this.ColumnQuantity.DataPropertyName = "Mennyiség";
-            this.ColumnQuantity.HeaderText = "Mennyiség";
-            this.ColumnQuantity.Name = "ColumnQuantity";
-            this.ColumnQuantity.ReadOnly = true;
-            this.ColumnQuantity.Width = 150;
             // 
             // buttonPrintInvoice
             // 
@@ -196,6 +164,38 @@
             this.textBoxTotal.TabIndex = 7;
             this.textBoxTotal.Text = "0";
             // 
+            // ColumnItem
+            // 
+            this.ColumnItem.DataPropertyName = "Item";
+            this.ColumnItem.HeaderText = "Tétel";
+            this.ColumnItem.Name = "ColumnItem";
+            this.ColumnItem.ReadOnly = true;
+            this.ColumnItem.Width = 150;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.DataPropertyName = "Price";
+            this.ColumnPrice.HeaderText = "Ár";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
+            this.ColumnPrice.Width = 150;
+            // 
+            // ColumnUnit
+            // 
+            this.ColumnUnit.DataPropertyName = "Unit";
+            this.ColumnUnit.HeaderText = "Egység";
+            this.ColumnUnit.Name = "ColumnUnit";
+            this.ColumnUnit.ReadOnly = true;
+            this.ColumnUnit.Width = 150;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.DataPropertyName = "Quantity";
+            this.ColumnQuantity.HeaderText = "Mennyiség";
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
+            this.ColumnQuantity.Width = 150;
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +214,7 @@
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számla kiállítása";
+            this.Load += new System.EventHandler(this.FormBilling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
