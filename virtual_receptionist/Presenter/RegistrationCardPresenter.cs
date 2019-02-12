@@ -23,7 +23,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely elmenti a szobakiadást adatbázisba
         /// </summary>
-        public void SaveRent()
+        public void Save()
         {
             throw new NotImplementedException();
         }
