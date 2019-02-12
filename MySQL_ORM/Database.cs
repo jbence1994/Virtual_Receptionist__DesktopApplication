@@ -229,7 +229,7 @@ namespace MySQL_ORM
         }
 
         /// <summary>
-        /// SCALAR SELECT utasítást végrehajtó metódus
+        /// Skalár SELECT utasítást végrehajtó metódus
         /// </summary>
         /// <param name="sql">SQL utasítás</param>
         /// <returns>SQL utasítás eredményét adja vissza karakterláncban</returns>

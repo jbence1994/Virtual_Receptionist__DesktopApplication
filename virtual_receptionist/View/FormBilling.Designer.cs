@@ -117,7 +117,6 @@
             // 
             // buttonAddItem
             // 
-            this.buttonAddItem.Enabled = false;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
             this.buttonAddItem.Location = new System.Drawing.Point(175, 272);
@@ -132,7 +131,6 @@
             // 
             // buttonUpdateItem
             // 
-            this.buttonUpdateItem.Enabled = false;
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
             this.buttonUpdateItem.Location = new System.Drawing.Point(338, 272);
@@ -147,7 +145,6 @@
             // 
             // buttonDeleteItem
             // 
-            this.buttonDeleteItem.Enabled = false;
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
             this.buttonDeleteItem.Location = new System.Drawing.Point(501, 272);
