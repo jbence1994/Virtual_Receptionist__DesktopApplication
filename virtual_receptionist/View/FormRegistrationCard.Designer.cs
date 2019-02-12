@@ -476,7 +476,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendég bejelentkező lap kitöltése | Virtual Receptionist";
+            this.Text = "Vendég bejelentkező lap";
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
             this.groupBoxGeneralData.ResumeLayout(false);
             this.groupBoxGeneralData.PerformLayout();

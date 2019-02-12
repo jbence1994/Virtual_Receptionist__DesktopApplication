@@ -264,7 +264,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Foglalási napló | Virtual Receptionist";
+            this.Text = "Foglalási napló";
             this.Load += new System.EventHandler(this.FormRoomEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).EndInit();
             this.tabControlRoomEditor.ResumeLayout(false);

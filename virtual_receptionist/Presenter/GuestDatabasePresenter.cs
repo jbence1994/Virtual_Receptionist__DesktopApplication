@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using virtual_receptionist.Model;
+using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Presenter
 {
@@ -57,7 +57,7 @@ namespace virtual_receptionist.Presenter
         {
             int nextID = 1;
 
-            if (dataRepository.GetMaxGuestID() != "")
+            if (dataRepository.GetMaxGuestID() != string.Empty)
             {
                 nextID = int.Parse(dataRepository.GetMaxGuestID()) + 1;
             }

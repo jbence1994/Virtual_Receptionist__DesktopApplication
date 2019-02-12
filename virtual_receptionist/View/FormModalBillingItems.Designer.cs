@@ -242,7 +242,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModalBillingItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tételek | Virtual Receptionist";
+            this.Text = "Számlázási tételek";
             this.Load += new System.EventHandler(this.FormModalBillingItems_Load);
             this.groupBoxItemParameters.ResumeLayout(false);
             this.groupBoxItemParameters.PerformLayout();
