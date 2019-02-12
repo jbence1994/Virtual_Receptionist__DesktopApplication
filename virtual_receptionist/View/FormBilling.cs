@@ -32,12 +32,7 @@ namespace virtual_receptionist.View
         #endregion
 
         #region UI események
-
-        private void FormBilling_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void buttonNewData_Click(object sender, EventArgs e)
         {
 
@@ -55,7 +50,7 @@ namespace virtual_receptionist.View
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItems.SelectedRows.Count != 0)
+            if (dataGridViewItems.SelectedRows.Count > 0)
             {
                 int rowToUpdate = dataGridViewItems.SelectedRows[0].Index;
                 dataGridViewItems.DataSource = presenter.UpdateRow(rowToUpdate);
@@ -68,7 +63,7 @@ namespace virtual_receptionist.View
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItems.SelectedRows.Count != 0)
+            if (dataGridViewItems.SelectedRows.Count > 0)
             {
                 int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
                 dataGridViewItems.DataSource = presenter.DeleteRow(rowToDelete);

@@ -8,14 +8,14 @@ namespace virtual_receptionist.View
     /// <summary>
     /// Számlázó modul tételek felvételéhez szükséges modális ablak
     /// </summary>
-    public partial class FormModalBillingItems : Form
+    public partial class FormBillingItems : Form
     {
         #region Adattagok
 
         /// <summary>
         /// Számlázó modul tételek felvételéhez szükséges modális ablak prezenter egy példánya
         /// </summary>
-        private ModalBillingItemsPresenter presenter;
+        private BillingItemsPresenter presenter;
 
         #endregion
 
@@ -24,10 +24,10 @@ namespace virtual_receptionist.View
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
         /// </summary>
-        public FormModalBillingItems()
+        public FormBillingItems()
         {
             InitializeComponent();
-            presenter = new ModalBillingItemsPresenter();
+            presenter = new BillingItemsPresenter();
         }
 
         #endregion

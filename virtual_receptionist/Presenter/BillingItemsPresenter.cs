@@ -5,7 +5,7 @@ namespace virtual_receptionist.Presenter
     /// <summary>
     /// Számlázó modul tételek felvételéhez szükséges modális ablak prezentere
     /// </summary>
-    public class ModalBillingItemsPresenter : DefaultPresenter
+    public class BillingItemsPresenter : DefaultPresenter
     {
         #region Számlázási tételek modális ablak nézetfrissítései
 

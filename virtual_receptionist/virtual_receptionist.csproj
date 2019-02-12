@@ -56,7 +56,7 @@
     <Compile Include="Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Model\Entity\CorporateGuest.cs" />
-    <Compile Include="Presenter\ModalBillingItemsPresenter.cs" />
+    <Compile Include="Presenter\BillingItemsPresenter.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\OpeningPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />
@@ -107,11 +107,11 @@
     <Compile Include="View\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormModalBillingItems.cs">
+    <Compile Include="View\FormBillingItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormModalBillingItems.Designer.cs">
-      <DependentUpon>FormModalBillingItems.cs</DependentUpon>
+    <Compile Include="View\FormBillingItems.Designer.cs">
+      <DependentUpon>FormBillingItems.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormRegistrationCard.cs">
       <SubType>Form</SubType>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="View\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormModalBillingItems.resx">
-      <DependentUpon>FormModalBillingItems.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormBillingItems.resx">
+      <DependentUpon>FormBillingItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormRegistrationCard.resx">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
