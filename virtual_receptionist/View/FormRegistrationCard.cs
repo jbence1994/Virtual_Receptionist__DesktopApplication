@@ -49,7 +49,12 @@ namespace virtual_receptionist.View
 
         private void checkBoxCorporateGuest_CheckedChanged(object sender, System.EventArgs e)
         {
-            textBoxVatNumber.Enabled = checkBoxCorporateGuest.Checked;
+            textBoxVatNumber.ReadOnly = !checkBoxCorporateGuest.Checked;
+
+            if (textBoxVatNumber.ReadOnly)
+            {
+                textBoxVatNumber.Clear();
+            }
         }
 
         #endregion
