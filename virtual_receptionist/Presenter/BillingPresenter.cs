@@ -3,36 +3,32 @@
 namespace virtual_receptionist.Presenter
 {
     /// <summary>
-    /// Számlázó modul prezentere
+    /// Számlázó ablak és számlázási tételek modális ablak prezentere
     /// </summary>
     public class BillingPresenter : DefaultPresenter
     {
-        private DataTable billingDataTable;
-
-        public BillingPresenter()
-        {
-            billingDataTable = InitializeBillingDataTable();
-        }
-
         #region Számlázó modul nézetfrissítései
 
-        public DataTable AddNewRow(params object[] items) // <= modális ablak prezenterétől kapja
+        /// <summary>
+        /// Metódus, amely visszaadja a számlázási tételeket az adattárból
+        /// </summary>
+        /// <returns>A számlázási tételekkel feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable InitializeBillingItemsTable()
         {
-            billingDataTable.Rows.Add(items);
-            return billingDataTable;
+            DataTable billingItems = dataRepository.GetBillingItems();
+            return billingItems;
+        }
+
+        public DataTable AddNewRow(params object[] items)
+        {return new DataTable();
         }
 
         public DataTable DeleteRow(int index)
-        {
-            billingDataTable.Rows.RemoveAt(index);
-            return billingDataTable;
+        {return new DataTable();
         }
 
         public DataTable UpdateRow(int index, params object[] items)
-        {
-            billingDataTable.Rows.RemoveAt(index);
-            billingDataTable.Rows.Add(items);
-            return billingDataTable;
+        {return new DataTable();
         }
 
         private DataTable InitializeBillingDataTable()

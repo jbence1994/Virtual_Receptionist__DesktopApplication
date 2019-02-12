@@ -56,7 +56,6 @@
     <Compile Include="Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Model\Entity\CorporateGuest.cs" />
-    <Compile Include="Presenter\BillingItemsPresenter.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\OpeningPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />

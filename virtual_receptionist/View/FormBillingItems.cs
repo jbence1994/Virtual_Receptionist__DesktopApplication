@@ -13,9 +13,9 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Számlázó modul tételek felvételéhez szükséges modális ablak prezenter egy példánya
+        /// Számlázó ablak és számlázási tételek modális ablak prezenter egy példánya
         /// </summary>
-        private BillingItemsPresenter presenter;
+        private BillingPresenter presenter;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace virtual_receptionist.View
         public FormBillingItems()
         {
             InitializeComponent();
-            presenter = new BillingItemsPresenter();
+            presenter = new BillingPresenter();
         }
 
         #endregion
@@ -67,10 +67,7 @@ namespace virtual_receptionist.View
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (maskedTextBoxItemDiscount.MaskFull)
-            {
 
-            }
         }
 
         #endregion

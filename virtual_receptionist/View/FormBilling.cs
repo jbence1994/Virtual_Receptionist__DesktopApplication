@@ -12,7 +12,7 @@ namespace virtual_receptionist.View
         #region Adattagok
 
         /// <summary>
-        /// Számlázó modul prezenter egy példánya
+        /// Számlázó ablak és számlázási tételek modális ablak prezenter egy példánya
         /// </summary>
         private BillingPresenter presenter;
 
@@ -45,7 +45,12 @@ namespace virtual_receptionist.View
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            dataGridViewItems.DataSource = presenter.AddNewRow();
+            FormBillingItems billingItems = new FormBillingItems();
+
+            if (billingItems.ShowDialog() == DialogResult.OK)
+            {
+                dataGridViewItems.DataSource = presenter.AddNewRow();
+            }
         }
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
