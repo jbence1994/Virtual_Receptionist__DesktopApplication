@@ -87,6 +87,7 @@
             this.buttonCancel.Size = new System.Drawing.Size(159, 64);
             this.buttonCancel.TabIndex = 29;
             this.buttonCancel.Text = "Félbehagyás";
+            this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -436,6 +437,7 @@
             this.buttonOK.Size = new System.Drawing.Size(159, 64);
             this.buttonOK.TabIndex = 28;
             this.buttonOK.Text = "Felvitel";
+            this.buttonOK.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -455,6 +457,7 @@
             this.buttonSaveToDatabase.Size = new System.Drawing.Size(159, 64);
             this.buttonSaveToDatabase.TabIndex = 30;
             this.buttonSaveToDatabase.Text = "Adatok mentése adatbázisba";
+            this.buttonSaveToDatabase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSaveToDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSaveToDatabase.UseVisualStyleBackColor = true;
             // 
