@@ -274,7 +274,7 @@
             this.toolStripButtonBooking.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonBooking.Name = "toolStripButtonBooking";
             this.toolStripButtonBooking.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButtonBooking.Text = "Szobakezelő";
+            this.toolStripButtonBooking.Text = "Foglalási napló";
             this.toolStripButtonBooking.ToolTipText = "Foglalási napló";
             this.toolStripButtonBooking.Click += new System.EventHandler(this.toolStripButtonRoomEditor_Click);
             this.toolStripButtonBooking.MouseLeave += new System.EventHandler(this.toolStripButtonRoomEditor_MouseLeave);
