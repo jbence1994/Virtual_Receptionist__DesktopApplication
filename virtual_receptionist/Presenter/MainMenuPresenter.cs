@@ -30,7 +30,7 @@ namespace virtual_receptionist.Presenter
         /// Főmenü ablak prezenter konstruktora
         /// </summary>
         /// <param name="formMainMenu">Főmenü ablak</param>
-        /// <param name="formLogin">Bejelnetkező ablak</param>
+        /// <param name="formLogin">Bejelentkező ablak</param>
         public MainMenuPresenter(FormMainMenu formMainMenu, FormLogin formLogin)
         {
             this.formMainMenu = formMainMenu;

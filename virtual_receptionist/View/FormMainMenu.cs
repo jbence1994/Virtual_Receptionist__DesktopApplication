@@ -31,7 +31,6 @@ namespace virtual_receptionist.View
         public FormMainMenu(FormLogin formLogin)
         {
             InitializeComponent();
-
             this.formLogin = formLogin;
             presenter = new MainMenuPresenter(this, formLogin);
         }

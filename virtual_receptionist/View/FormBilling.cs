@@ -40,16 +40,17 @@ namespace virtual_receptionist.View
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            presenter.AddNewRow();
+            dataGridViewItems.DataSource = null;
+            dataGridViewItems.DataSource = presenter.AddNewRow();
         }
 
         private void buttonUpdateItem_Click(object sender, EventArgs e)
         {
-            presenter.UpdateRow();
-
             if (dataGridViewItems.SelectedRows.Count != 0)
             {
-
+                int rowToUpdate = dataGridViewItems.SelectedRows[0].Index;
+                dataGridViewItems.DataSource = null;
+                dataGridViewItems.DataSource = presenter.UpdateRow(rowToUpdate);
             }
             else
             {
@@ -59,23 +60,16 @@ namespace virtual_receptionist.View
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
-            presenter.DeleteRow();
-
-
             if (dataGridViewItems.SelectedRows.Count != 0)
             {
                 int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-                dataGridViewItems.Rows.RemoveAt(rowToDelete);
+                dataGridViewItems.DataSource = null;
+                dataGridViewItems.DataSource = presenter.DeleteRow(rowToDelete);
             }
             else
             {
                 MessageBox.Show("Nincs kijelölt elem!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void buttonPrintInvoice_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -86,6 +80,11 @@ namespace virtual_receptionist.View
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             textBoxTotal.Text = presenter.GetTotalPrice().ToString();
+        }
+
+        private void buttonPrintInvoice_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion

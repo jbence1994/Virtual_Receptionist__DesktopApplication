@@ -72,11 +72,10 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely kiszámolja a fizetendő végösszeget
         /// </summary>
-        /// <returns>Fizetendő </returns>
-        /// <exception cref="NotImplementedException"></exception>
+        /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
         public double CountTotalPrice()
         {
-            throw new NotImplementedException("");
+            return new double();
         }
 
         #endregion

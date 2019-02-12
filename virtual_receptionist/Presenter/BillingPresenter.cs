@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Data;
 using virtual_receptionist.View;
 
 namespace virtual_receptionist.Presenter
@@ -8,46 +8,48 @@ namespace virtual_receptionist.Presenter
     /// </summary>
     public class BillingPresenter : DefaultPresenter
     {
-        #region Adattagok
+        private DataTable billingDataTable;
 
-        /// <summary>
-        /// Számlázó modul vendégadatok felvételéhez szükséges modális ablak egy példánya
-        /// </summary>
-        private FormModalBillingItems formModalBillingItems;
-
-        #endregion
-
-        #region Konstruktor
-
-        #endregion
+        public BillingPresenter()
+        {
+            billingDataTable = new DataTable();
+        }
 
         #region Számlázó modul nézetfrissítései
 
-        /// <summary>
-        /// Számlázási tételek táblázatba új rekordot beszúró metódus
-        /// </summary>
-        public void AddNewRow()
+        public DataTable AddNewRow(params object[] items) // <= modális ablak prezenterétől kapja
         {
-            formModalBillingItems = new FormModalBillingItems();
-            formModalBillingItems.ShowDialog();
+            DataTable addToDataTable = InitializeBillingDataTable();
+            addToDataTable.Rows.Add(items);
+
+            return addToDataTable;
         }
 
-        /// <summary>
-        /// Számlázási tételek táblázatból meglévő rekordot törlő metódus
-        /// </summary>
-        /// <exception cref="Exception"></exception>
-        public void DeleteRow()
+        public DataTable DeleteRow(int index)
         {
-            throw new Exception("");
+            DataTable deleteFromDataTable = InitializeBillingDataTable();
+            deleteFromDataTable.Rows.RemoveAt(index);
+
+            return deleteFromDataTable;
         }
 
-        /// <summary>
-        /// Számlázási tételek táblázatból meglévő rekordot módosító metódus
-        /// </summary>
-        /// <exception cref="Exception"></exception>
-        public void UpdateRow()
+        public DataTable UpdateRow(int index, params object[] items)
         {
-            throw new Exception("");
+            DataTable updateInDataTable = InitializeBillingDataTable();
+            updateInDataTable.Rows.RemoveAt(index);
+            updateInDataTable.Rows.Add(items);
+
+            return updateInDataTable;
+        }
+
+        private DataTable InitializeBillingDataTable()
+        {
+            billingDataTable.Columns.Add("Tétel", typeof(string));
+            billingDataTable.Columns.Add("Ár", typeof(double));
+            billingDataTable.Columns.Add("Egység", typeof(string));
+            billingDataTable.Columns.Add("Mennyiség", typeof(int));
+
+            return billingDataTable;
         }
 
         /// <summary>
