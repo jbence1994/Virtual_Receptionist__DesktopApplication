@@ -199,7 +199,7 @@ namespace virtual_receptionist.Model
         public void Login()
         {
             string sql =
-                $"INSERT INTO desktop_log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{Client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in\")";
+                $"INSERT INTO log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{Client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in\")";
             database.DML(sql);
         }
 
@@ -209,7 +209,7 @@ namespace virtual_receptionist.Model
         public void Logout()
         {
             string sql =
-                $"UPDATE desktop_log SET LogoutDate = \"{DateTime.Now}\" WHERE LogoutDate LIKE \"Logged in\"";
+                $"UPDATE log SET LogoutDate = \"{DateTime.Now}\" WHERE LogoutDate LIKE \"Logged in\"";
             database.DML(sql);
         }
 
