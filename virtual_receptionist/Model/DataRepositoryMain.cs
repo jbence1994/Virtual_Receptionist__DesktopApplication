@@ -53,11 +53,6 @@ namespace virtual_receptionist.Model
         /// </summary>
         private List<Booking> bookings;
 
-        /// <summary>
-        /// Alkalmazást futtató számítógép NetBIOS neve
-        /// </summary>
-        private static string client;
-
         #endregion
 
         #region Konstruktor
@@ -68,7 +63,6 @@ namespace virtual_receptionist.Model
         public DataRepository()
         {
             database = Database.DatabaseInstance;
-            client = Environment.MachineName;
 
             accomodations = new List<Accomodation>();
             billingItems = new List<BillingItems>();
@@ -88,7 +82,7 @@ namespace virtual_receptionist.Model
         /// </summary>
         public static string Client
         {
-            get { return client; }
+            get { return Environment.MachineName; }
         }
 
         #endregion
@@ -163,7 +157,7 @@ namespace virtual_receptionist.Model
         }
 
         /// <summary>
-        /// Metódus, amely összehasonlítja a felhasználó által megadott felhasználónevet és jelszót, egyezik-e az érvényes, előre regisztrált felhasználói fiókkal
+        /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor
         /// </summary>
         /// <param name="accomodationID">Szálláshely azonosító</param>
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
@@ -205,7 +199,7 @@ namespace virtual_receptionist.Model
         public void Login()
         {
             string sql =
-                $"INSERT INTO desktop_log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in\")";
+                $"INSERT INTO desktop_log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{Client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in\")";
             database.DML(sql);
         }
 
