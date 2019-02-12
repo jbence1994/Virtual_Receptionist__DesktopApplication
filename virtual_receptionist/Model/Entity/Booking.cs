@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace virtual_receptionist.Model
+namespace virtual_receptionist.Model.Entity
 {
     /// <summary>
     /// Foglalások modell osztálya

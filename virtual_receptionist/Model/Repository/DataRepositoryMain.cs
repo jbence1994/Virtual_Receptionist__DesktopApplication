@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using MySQL_ORM;
+using System.Collections.Generic;
 using virtual_receptionist.Exceptions;
+using virtual_receptionist.Model.Entity;
 
-namespace virtual_receptionist.Model
+namespace virtual_receptionist.Model.Repository
 {
     /// <summary>
     /// Az alkalmazáshoz szükséges adatokat tároló adattár osztály, amely az alkalmazás üzleti logikájáért felel

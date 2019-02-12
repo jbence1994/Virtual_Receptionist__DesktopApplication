@@ -55,12 +55,12 @@
     <Compile Include="Exceptions\InvalidNameException.cs" />
     <Compile Include="Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Exceptions\InvalidZipCodeException.cs" />
-    <Compile Include="Model\CorporateGuest.cs" />
+    <Compile Include="Model\Entity\CorporateGuest.cs" />
     <Compile Include="Presenter\ModalBillingItemsPresenter.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\OpeningPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />
-    <Compile Include="Model\PrivateGuest.cs" />
+    <Compile Include="Model\Entity\PrivateGuest.cs" />
     <Compile Include="View\FormOpening.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,13 +76,13 @@
     <Compile Include="View\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Accomodation.cs" />
-    <Compile Include="Model\BillingItems.cs" />
-    <Compile Include="Model\Country.cs" />
-    <Compile Include="Model\DataRepositoryGuest.cs" />
-    <Compile Include="Model\DataRepositoryBilling.cs" />
-    <Compile Include="Model\DataRepositoryMain.cs" />
-    <Compile Include="Model\DataRepositoryBooking.cs" />
+    <Compile Include="Model\Entity\Accomodation.cs" />
+    <Compile Include="Model\Entity\BillingItems.cs" />
+    <Compile Include="Model\Entity\Country.cs" />
+    <Compile Include="Model\Repository\DataRepositoryGuest.cs" />
+    <Compile Include="Model\Repository\DataRepositoryBilling.cs" />
+    <Compile Include="Model\Repository\DataRepositoryMain.cs" />
+    <Compile Include="Model\Repository\DataRepositoryBooking.cs" />
     <Compile Include="View\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,15 +125,15 @@
     <Compile Include="View\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Guest.cs" />
+    <Compile Include="Model\Entity\Guest.cs" />
     <Compile Include="Presenter\GuestDatabasePresenter.cs" />
     <Compile Include="Validation\InputFunctions.cs" />
     <Compile Include="Validation\InputAutomatizedFunctions.cs" />
     <Compile Include="Presenter\DefaultPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Booking.cs" />
-    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Entity\Booking.cs" />
+    <Compile Include="Model\Entity\Room.cs" />
     <EmbeddedResource Include="View\FormOpening.resx">
       <DependentUpon>FormOpening.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,5 +189,6 @@
       <Name>MySQL_ORM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

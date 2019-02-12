@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.Model
+﻿namespace virtual_receptionist.Model.Entity
 {
     /// <summary>
     /// Szoba egyed modell osztálya

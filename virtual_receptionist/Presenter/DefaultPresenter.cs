@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using virtual_receptionist.Model;
+using virtual_receptionist.Model.Entity;
+using virtual_receptionist.Model.Repository;
 
 namespace virtual_receptionist.Presenter
 {

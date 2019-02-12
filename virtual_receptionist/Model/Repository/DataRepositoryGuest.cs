@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Data;
+using virtual_receptionist.Model.Entity;
 
-namespace virtual_receptionist.Model
+namespace virtual_receptionist.Model.Repository
 {
     public partial class DataRepository
     {
