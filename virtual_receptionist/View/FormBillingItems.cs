@@ -67,7 +67,10 @@ namespace virtual_receptionist.View
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
+            string item = textBoxItem.Text;
+            double price = double.Parse(textBoxPrice.Text);
+            string unit = textBoxUnit.Text;
+            int quantity = int.Parse(textBoxQuantity.Text);
         }
 
         #endregion
