@@ -32,7 +32,7 @@ namespace virtual_receptionist.View
         #endregion
 
         #region UI események
-        
+
         private void buttonNewData_Click(object sender, EventArgs e)
         {
 
