@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestRegistrationCard));
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.checkBoxCorporateGuest = new System.Windows.Forms.CheckBox();
             this.labelEmailAddress = new System.Windows.Forms.Label();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
@@ -76,21 +75,6 @@
             this.groupBoxOtherData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderInput)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
-            this.buttonCancel.Location = new System.Drawing.Point(177, 554);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(159, 64);
-            this.buttonCancel.TabIndex = 29;
-            this.buttonCancel.Text = "Félbehagyás";
-            this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // checkBoxCorporateGuest
             // 
@@ -269,7 +253,7 @@
             this.groupBoxGeneralData.Controls.Add(this.textBoxCitizenship);
             this.groupBoxGeneralData.Location = new System.Drawing.Point(12, 12);
             this.groupBoxGeneralData.Name = "groupBoxGeneralData";
-            this.groupBoxGeneralData.Size = new System.Drawing.Size(489, 236);
+            this.groupBoxGeneralData.Size = new System.Drawing.Size(490, 236);
             this.groupBoxGeneralData.TabIndex = 1;
             this.groupBoxGeneralData.TabStop = false;
             this.groupBoxGeneralData.Text = "Általános adatok";
@@ -393,7 +377,7 @@
             this.groupBoxBillingData.Controls.Add(this.labelZipCode);
             this.groupBoxBillingData.Location = new System.Drawing.Point(12, 254);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
-            this.groupBoxBillingData.Size = new System.Drawing.Size(489, 210);
+            this.groupBoxBillingData.Size = new System.Drawing.Size(490, 210);
             this.groupBoxBillingData.TabIndex = 10;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
@@ -422,7 +406,7 @@
             this.groupBoxOtherData.Controls.Add(this.labelEmailAddress);
             this.groupBoxOtherData.Location = new System.Drawing.Point(12, 470);
             this.groupBoxOtherData.Name = "groupBoxOtherData";
-            this.groupBoxOtherData.Size = new System.Drawing.Size(489, 78);
+            this.groupBoxOtherData.Size = new System.Drawing.Size(490, 78);
             this.groupBoxOtherData.TabIndex = 22;
             this.groupBoxOtherData.TabStop = false;
             this.groupBoxOtherData.Text = "Egyéb adatok";
@@ -432,7 +416,7 @@
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOK.Image = ((System.Drawing.Image)(resources.GetObject("buttonOK.Image")));
-            this.buttonOK.Location = new System.Drawing.Point(12, 554);
+            this.buttonOK.Location = new System.Drawing.Point(343, 554);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(159, 64);
             this.buttonOK.TabIndex = 28;
@@ -452,7 +436,7 @@
             this.buttonSaveToDatabase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSaveToDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSaveToDatabase.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveToDatabase.Image")));
-            this.buttonSaveToDatabase.Location = new System.Drawing.Point(342, 554);
+            this.buttonSaveToDatabase.Location = new System.Drawing.Point(12, 554);
             this.buttonSaveToDatabase.Name = "buttonSaveToDatabase";
             this.buttonSaveToDatabase.Size = new System.Drawing.Size(159, 64);
             this.buttonSaveToDatabase.TabIndex = 30;
@@ -471,7 +455,6 @@
             this.Controls.Add(this.groupBoxOtherData);
             this.Controls.Add(this.groupBoxBillingData);
             this.Controls.Add(this.groupBoxGeneralData);
-            this.Controls.Add(this.buttonCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestRegistrationCard";
@@ -491,8 +474,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.CheckBox checkBoxCorporateGuest;
         private System.Windows.Forms.Label labelEmailAddress;
         private System.Windows.Forms.Label labelPhoneNumber;
