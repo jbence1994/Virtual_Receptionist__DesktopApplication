@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 
 namespace virtual_receptionist.Presenter
 {
@@ -10,38 +9,86 @@ namespace virtual_receptionist.Presenter
     {
         #region Számlázó modul nézetfrissítései
 
-        private DataTable table;
+        /// <summary>
+        /// Számlázási tételek adattábla
+        /// </summary>
+        private DataTable billingDataTable;
+
+        /// <summary>
+        /// Számlázási tétel neve
+        /// </summary>
         private static string item;
+
+        /// <summary>
+        /// Számlázási tétel ára
+        /// </summary>
         private static double price;
+
+        /// <summary>
+        /// Számlázási tétel egysége
+        /// </summary>
         private static string unit;
+
+        /// <summary>
+        /// Számlázási tétel mennyisége
+        /// </summary>
         private static int quantity;
 
+        /// <summary>
+        /// Számlázó ablak és számlázási tételek modális ablak prezenter konstruktora
+        /// </summary>
         public BillingPresenter()
         {
-            table = new DataTable();
-            table.Columns.Add("Tétel", typeof(string));
-            table.Columns.Add("Ár", typeof(double));
-            table.Columns.Add("Egység", typeof(string));
-            table.Columns.Add("Mennyiség", typeof(int));
+            billingDataTable = new DataTable();
+            billingDataTable.Columns.Add("Tétel", typeof(string));
+            billingDataTable.Columns.Add("Ár", typeof(double));
+            billingDataTable.Columns.Add("Egység", typeof(string));
+            billingDataTable.Columns.Add("Mennyiség", typeof(int));
         }
 
+        /// <summary>
+        /// Metódus, amely beállítja a számlázási tétel adatait
+        /// </summary>
+        /// <param name="itemParamteres">Számlázási tétel adatai</param>
+        public void SetItemParameters(params object[] itemParamteres)
+        {
+            item = itemParamteres[0].ToString();
+            price = double.Parse(itemParamteres[1].ToString());
+            unit = itemParamteres[2].ToString();
+            quantity = int.Parse(itemParamteres[3].ToString());
+        }
+
+        /// <summary>
+        /// Új rekord hozzáadása
+        /// </summary>
+        /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable AddNewRow()
         {
-            table.Rows.Add(item, price, unit, quantity);
-            return table;
+            billingDataTable.Rows.Add(item, price, unit, quantity);
+            return billingDataTable;
         }
 
+        /// <summary>
+        /// Rekord törlése
+        /// </summary>
+        /// <param name="index">Törlendő rekord</param>
+        /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable DeleteRow(int index)
         {
-            table.Rows.RemoveAt(index);
-            return table;
+            billingDataTable.Rows.RemoveAt(index);
+            return billingDataTable;
         }
 
-        public DataTable UpdateRow(int index, params object[] items)
+        /// <summary>
+        /// Rekord módosítása
+        /// </summary>
+        /// <param name="index">Módosítandó rekord</param>
+        /// <returns>Módosított adattáblát adja vissza a függvény</returns>
+        public DataTable UpdateRow(int index)
         {
-            table.Rows.RemoveAt(index);
-            table.Rows.Add(item, price, unit, quantity);
-            return table;
+            billingDataTable.Rows.RemoveAt(index);
+            billingDataTable.Rows.Add(item, price, unit, quantity);
+            return billingDataTable;
         }
 
         /// <summary>
@@ -65,13 +112,5 @@ namespace virtual_receptionist.Presenter
         }
 
         #endregion
-
-        public void AddItemToTable(params object[] itemParamteres)
-        {
-            item = itemParamteres[0].ToString();
-            price = double.Parse(itemParamteres[1].ToString());
-            unit = itemParamteres[2].ToString();
-            quantity = int.Parse(itemParamteres[3].ToString());
-        }
     }
 }

@@ -72,7 +72,7 @@ namespace virtual_receptionist.View
             string unit = textBoxUnit.Text;
             int quantity = int.Parse(textBoxQuantity.Text);
 
-            presenter.AddItemToTable(item, price, unit, quantity);
+            presenter.SetItemParameters(item, price, unit, quantity);
         }
 
         #endregion
