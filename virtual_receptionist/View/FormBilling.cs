@@ -70,8 +70,8 @@ namespace virtual_receptionist.View
         {
             if (dataGridViewItems.SelectedRows.Count > 0)
             {
-                //int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-                //dataGridViewItems.DataSource = presenter.DeleteRow(rowToDelete);
+                int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
+                dataGridViewItems.DataSource = presenter.DeleteRow(rowToDelete);
             }
             else
             {

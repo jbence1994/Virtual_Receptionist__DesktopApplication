@@ -31,9 +31,11 @@ namespace virtual_receptionist.Presenter
             return table;
         }
 
-        //public DataTable DeleteRow(int index)
-        //{
-        //}
+        public DataTable DeleteRow(int index)
+        {
+            table.Rows.RemoveAt(index);
+            return table;
+        }
 
         //public DataTable UpdateRow(int index, params object[] items)
         //{
