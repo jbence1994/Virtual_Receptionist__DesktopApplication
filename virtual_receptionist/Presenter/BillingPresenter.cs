@@ -37,9 +37,12 @@ namespace virtual_receptionist.Presenter
             return table;
         }
 
-        //public DataTable UpdateRow(int index, params object[] items)
-        //{
-        //}
+        public DataTable UpdateRow(int index, params object[] items)
+        {
+            table.Rows.RemoveAt(index);
+            table.Rows.Add(item, price, unit, quantity);
+            return table;
+        }
 
         /// <summary>
         /// Metódus, amely visszaadja a számlázási tételeket az adattárból

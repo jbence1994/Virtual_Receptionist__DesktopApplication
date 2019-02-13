@@ -57,8 +57,13 @@ namespace virtual_receptionist.View
         {
             if (dataGridViewItems.SelectedRows.Count > 0)
             {
-                //int rowToUpdate = dataGridViewItems.SelectedRows[0].Index;
-                //dataGridViewItems.DataSource = presenter.UpdateRow(rowToUpdate);
+                FormBillingItems billingItems = new FormBillingItems();
+
+                if (billingItems.ShowDialog() == DialogResult.OK)
+                {
+                    int rowToUpdate = dataGridViewItems.SelectedRows[0].Index;
+                    dataGridViewItems.DataSource = presenter.UpdateRow(rowToUpdate);
+                }
             }
             else
             {
