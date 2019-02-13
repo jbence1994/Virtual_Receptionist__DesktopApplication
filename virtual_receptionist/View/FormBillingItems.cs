@@ -71,6 +71,8 @@ namespace virtual_receptionist.View
             double price = double.Parse(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
             int quantity = int.Parse(textBoxQuantity.Text);
+
+            presenter.AddItemToTable(item, price, unit, quantity);
         }
 
         #endregion

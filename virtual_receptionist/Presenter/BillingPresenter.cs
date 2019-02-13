@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace virtual_receptionist.Presenter
 {
@@ -9,6 +10,35 @@ namespace virtual_receptionist.Presenter
     {
         #region Számlázó modul nézetfrissítései
 
+        private DataTable table;
+        private static string item;
+        private static double price;
+        private static string unit;
+        private static int quantity;
+
+        public BillingPresenter()
+        {
+            table = new DataTable();
+            table.Columns.Add("Tétel", typeof(string));
+            table.Columns.Add("Ár", typeof(double));
+            table.Columns.Add("Egység", typeof(string));
+            table.Columns.Add("Mennyiség", typeof(int));
+        }
+
+        public DataTable AddNewRow()
+        {
+            table.Rows.Add(item, price, unit, quantity);
+            return table;
+        }
+
+        //public DataTable DeleteRow(int index)
+        //{
+        //}
+
+        //public DataTable UpdateRow(int index, params object[] items)
+        //{
+        //}
+
         /// <summary>
         /// Metódus, amely visszaadja a számlázási tételeket az adattárból
         /// </summary>
@@ -17,30 +47,6 @@ namespace virtual_receptionist.Presenter
         {
             DataTable billingItems = dataRepository.GetBillingItems();
             return billingItems;
-        }
-
-        public DataTable AddNewRow(params object[] items)
-        {return new DataTable();
-        }
-
-        public DataTable DeleteRow(int index)
-        {return new DataTable();
-        }
-
-        public DataTable UpdateRow(int index, params object[] items)
-        {return new DataTable();
-        }
-
-        private DataTable InitializeBillingDataTable()
-        {
-            DataTable billingDataTable = new DataTable();
-
-            billingDataTable.Columns.Add("Tétel", typeof(string));
-            billingDataTable.Columns.Add("Ár", typeof(double));
-            billingDataTable.Columns.Add("Egység", typeof(string));
-            billingDataTable.Columns.Add("Mennyiség", typeof(int));
-
-            return billingDataTable;
         }
 
         /// <summary>
@@ -54,5 +60,13 @@ namespace virtual_receptionist.Presenter
         }
 
         #endregion
+
+        public void AddItemToTable(params object[] itemParamteres)
+        {
+            item = itemParamteres[0].ToString();
+            price = double.Parse(itemParamteres[1].ToString());
+            unit = itemParamteres[2].ToString();
+            quantity = int.Parse(itemParamteres[3].ToString());
+        }
     }
 }
