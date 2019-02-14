@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Presenter
 {
@@ -15,19 +16,9 @@ namespace virtual_receptionist.Presenter
         private DataTable billingDataTable;
 
         /// <summary>
-        /// Számlázási tétel neve
+        /// Számlázási tétel modell osztály egy példánya
         /// </summary>
-        private static string item;
-
-        /// <summary>
-        /// Számlázási tétel ára
-        /// </summary>
-        private static double price;
-
-        /// <summary>
-        /// Számlázási tétel egysége
-        /// </summary>
-        private static string unit;
+        private static BillingItem billingItem;
 
         /// <summary>
         /// Számlázási tétel mennyisége
@@ -39,6 +30,8 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public BillingPresenter()
         {
+            billingItem = new BillingItem();
+
             billingDataTable = new DataTable();
             billingDataTable.Columns.Add("Tétel", typeof(string));
             billingDataTable.Columns.Add("Ár", typeof(double));
@@ -52,9 +45,9 @@ namespace virtual_receptionist.Presenter
         /// <param name="itemParamteres">Számlázási tétel adatai</param>
         public void SetItemParameters(params object[] itemParamteres)
         {
-            item = itemParamteres[0].ToString();
-            price = double.Parse(itemParamteres[1].ToString());
-            unit = itemParamteres[2].ToString();
+            billingItem.Name = itemParamteres[0].ToString();
+            billingItem.Price = double.Parse(itemParamteres[1].ToString());
+            billingItem.Unit = itemParamteres[2].ToString();
             quantity = int.Parse(itemParamteres[3].ToString());
         }
 
@@ -64,7 +57,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable AddNewRow()
         {
-            billingDataTable.Rows.Add(item, price, unit, quantity);
+            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, quantity);
             return billingDataTable;
         }
 
@@ -87,7 +80,7 @@ namespace virtual_receptionist.Presenter
         public DataTable UpdateRow(int index)
         {
             billingDataTable.Rows.RemoveAt(index);
-            billingDataTable.Rows.Add(item, price, unit, quantity);
+            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, quantity);
             return billingDataTable;
         }
 

@@ -49,6 +49,11 @@
             this.price = price;
         }
 
+        public BillingItem()
+        {
+            
+        }
+
         #endregion
 
         #region Getter és setter tulajdonságok
