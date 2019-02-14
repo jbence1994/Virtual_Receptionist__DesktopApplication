@@ -55,6 +55,21 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// Metódus, amely ellenőrzi üres-e a számlázási tételek adattáblát tartalmazó GUI vezárlő
+        /// </summary>
+        /// <param name="rows">Sorok száma</param>
+        /// <returns>Ha üres a GUI vezérlő logikai igazzal tér vissza a metódus, ellenkező esetben logikai hamissal tér vissza a függvény</returns>
+        public bool IsEmptyBillingTable(int rows)
+        {
+            if (rows != 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
         /// Új rekord hozzáadása
         /// </summary>
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>

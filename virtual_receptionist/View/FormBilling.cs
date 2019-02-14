@@ -86,18 +86,14 @@ namespace virtual_receptionist.View
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            if (dataGridViewItems.Rows.Count != 0)
-            {
-                buttonPrintInvoice.Enabled = true;
-            }
+            int rows = dataGridViewItems.Rows.Count;
+            buttonPrintInvoice.Enabled = !presenter.IsEmptyBillingTable(rows);
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            if (dataGridViewItems.Rows.Count == 0)
-            {
-                buttonPrintInvoice.Enabled = false;
-            }
+            int rows = dataGridViewItems.Rows.Count;
+            buttonPrintInvoice.Enabled = !presenter.IsEmptyBillingTable(rows);
         }
 
         #endregion
