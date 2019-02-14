@@ -106,7 +106,8 @@ namespace virtual_receptionist.Model.Repository
             foreach (BillingData billingData in billingData)
             {
                 billingDataDataTable.Rows.Add(billingData.ID, billingData.GuestName, billingData.RoomNumber,
-                    billingData.RoomCategory, billingData.ArrivalDate, billingData.DepartureDate);
+                    billingData.RoomCategory, billingData.NumberOfGuest, billingData.ArrivalDate,
+                    billingData.DepartureDate);
             }
 
             return billingDataDataTable;
