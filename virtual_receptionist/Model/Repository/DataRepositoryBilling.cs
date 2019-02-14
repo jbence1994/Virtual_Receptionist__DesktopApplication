@@ -95,17 +95,18 @@ namespace virtual_receptionist.Model.Repository
             }
 
             DataTable billingDataDataTable = new DataTable();
-            billingDataDataTable.Columns.Add("ID"),typeof(int));
-            billingDataDataTable.Columns.Add(""),typeof());
-            billingDataDataTable.Columns.Add(""),typeof());
-            billingDataDataTable.Columns.Add(""),typeof());
-            billingDataDataTable.Columns.Add(""),typeof());
-            billingDataDataTable.Columns.Add(""),typeof());
-            billingDataDataTable.Columns.Add(""),typeof());
+            billingDataDataTable.Columns.Add("ID", typeof(int));
+            billingDataDataTable.Columns.Add("Name", typeof(string));
+            billingDataDataTable.Columns.Add("RoomNumber", typeof(int));
+            billingDataDataTable.Columns.Add("RoomCategory", typeof(string));
+            billingDataDataTable.Columns.Add("NumberOfGuests", typeof(int));
+            billingDataDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
+            billingDataDataTable.Columns.Add("DepartureDate", typeof(DateTime));
 
             foreach (BillingData billingData in billingData)
             {
-                billingDataDataTable.Rows.Add(billingData.ID, billingData.GuestName, billingData.);
+                billingDataDataTable.Rows.Add(billingData.ID, billingData.GuestName, billingData.RoomNumber,
+                    billingData.RoomCategory, billingData.ArrivalDate, billingData.DepartureDate);
             }
 
             return billingDataDataTable;
