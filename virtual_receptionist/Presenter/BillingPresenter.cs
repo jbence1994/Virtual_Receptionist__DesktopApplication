@@ -113,9 +113,9 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely visszaadja a számlázási adatokat az adattárból
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A számlázási adatokkal feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetBillingData()
         {
             DataTable bookingsToBill = dataRepository.GetBillingData();

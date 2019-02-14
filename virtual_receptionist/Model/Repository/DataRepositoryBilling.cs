@@ -11,7 +11,6 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a számlázási tételeket tartalmazó listát
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadBillingItemsList()
         {
             string sql =
@@ -32,9 +31,9 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely adatforrásként szolgál a számlázó főablak DataGridView komponensének
+        /// Metódus, amely feltölti a számlázási tételeket tartalmazó adattáblát a listában tárolt adatokkal
         /// </summary>
-        /// <returns>A metódus visszatér egy Dattable adatszerkezettel, oszlopokkal</returns>
+        /// <returns>A számlázási tételeket tartalmazó listából feltöltött adattáblával tér vissza a függvény</returns>
         public DataTable GetBillingItems()
         {
             if (billingItems.Count == 0)
@@ -58,7 +57,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely adatbázisból feltölti a számlázási adatokat tartalmazó listát
         /// </summary>
         private void UploadBillingDataList()
         {
@@ -84,9 +83,9 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely feltölti a számlázási adatokat tartalmazó adattáblát a listában tárolt adatokkal
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A számlázási adatokat tartalmazó listából feltöltött adattáblával tér vissza a függvény</returns>
         public DataTable GetBillingData()
         {
             if (billingData.Count == 0)

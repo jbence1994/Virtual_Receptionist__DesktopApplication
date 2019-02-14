@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.Model.Entity
 {
     /// <summary>
-    /// Országok modell osztálya
+    /// Ország egyed modell osztálya
     /// </summary>
     public class Country
     {
