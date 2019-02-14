@@ -103,11 +103,10 @@ namespace virtual_receptionist.Model.Repository
             billingDataDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
             billingDataDataTable.Columns.Add("DepartureDate", typeof(DateTime));
 
-            foreach (BillingData billingData in billingData)
+            foreach (BillingData data in billingData)
             {
-                billingDataDataTable.Rows.Add(billingData.ID, billingData.GuestName, billingData.RoomNumber,
-                    billingData.RoomCategory, billingData.NumberOfGuest, billingData.ArrivalDate,
-                    billingData.DepartureDate);
+                billingDataDataTable.Rows.Add(data.ID, data.GuestName, data.RoomNumber, data.RoomCategory,
+                    data.NumberOfGuest, data.ArrivalDate, data.DepartureDate);
             }
 
             return billingDataDataTable;
