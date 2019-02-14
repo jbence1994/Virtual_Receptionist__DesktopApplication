@@ -86,12 +86,18 @@ namespace virtual_receptionist.View
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            textBoxTotal.Text = presenter.GetTotalPrice().ToString();
+            if (dataGridViewItems.Rows.Count != 0)
+            {
+                buttonPrintInvoice.Enabled = true;
+            }
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            textBoxTotal.Text = presenter.GetTotalPrice().ToString();
+            if (dataGridViewItems.Rows.Count == 0)
+            {
+                buttonPrintInvoice.Enabled = false;
+            }
         }
 
         #endregion
