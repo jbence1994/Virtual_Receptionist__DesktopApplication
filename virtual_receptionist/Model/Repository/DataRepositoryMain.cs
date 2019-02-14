@@ -27,7 +27,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
-        private List<BillingItems> billingItems;
+        private List<BillingItem> billingItems;
 
         /// <summary>
         /// Magánvendégeket tartalmazó lista
@@ -66,7 +66,7 @@ namespace virtual_receptionist.Model.Repository
             database = Database.DatabaseInstance;
 
             accomodations = new List<Accomodation>();
-            billingItems = new List<BillingItems>();
+            billingItems = new List<BillingItem>();
             privateGuests = new List<PrivateGuest>();
             corporateGuests = new List<CorporateGuest>();
             countries = new List<Country>();

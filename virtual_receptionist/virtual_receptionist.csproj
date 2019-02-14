@@ -76,7 +76,7 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Entity\Accomodation.cs" />
-    <Compile Include="Model\Entity\BillingItems.cs" />
+    <Compile Include="Model\Entity\BillingItem.cs" />
     <Compile Include="Model\Entity\Country.cs" />
     <Compile Include="Model\Repository\DataRepositoryGuest.cs" />
     <Compile Include="Model\Repository\DataRepositoryBilling.cs" />

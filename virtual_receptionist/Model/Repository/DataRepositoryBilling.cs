@@ -26,7 +26,7 @@ namespace virtual_receptionist.Model.Repository
                 string unit = row["Unit"].ToString();
                 double price = double.Parse(row["Price"].ToString());
 
-                BillingItems billingItemInstance = new BillingItems(name, category, vat, unit, price);
+                BillingItem billingItemInstance = new BillingItem(name, category, vat, unit, price);
                 billingItems.Add(billingItemInstance);
             }
         }
@@ -49,7 +49,7 @@ namespace virtual_receptionist.Model.Repository
             billingItemsDataTable.Columns.Add("Category", typeof(string));
             billingItemsDataTable.Columns.Add("Unit", typeof(string));
 
-            foreach (BillingItems item in billingItems)
+            foreach (BillingItem item in billingItems)
             {
                 billingItemsDataTable.Rows.Add(item.Name, item.Price, item.Vat, item.Category, item.Unit);
             }

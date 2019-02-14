@@ -3,7 +3,7 @@
     /// <summary>
     /// Számlázási tételek modell osztálya
     /// </summary>
-    public class BillingItems
+    public class BillingItem
     {
         /// <summary>
         /// Számlázási tétel neve
@@ -40,7 +40,7 @@
         /// <param name="vat">Számlázási tétel ÁFA-kulcsának értéke</param>
         /// <param name="unit">Számlázási tétel egysége</param>
         /// <param name="price">Számlázási tétel összege (ára)</param>
-        public BillingItems(string name, string category, double vat, string unit, double price)
+        public BillingItem(string name, string category, double vat, string unit, double price)
         {
             this.name = name;
             this.category = category;
