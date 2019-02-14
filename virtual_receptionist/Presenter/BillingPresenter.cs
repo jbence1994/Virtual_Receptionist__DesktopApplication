@@ -8,7 +8,7 @@ namespace virtual_receptionist.Presenter
     /// </summary>
     public class BillingPresenter : DefaultPresenter
     {
-        #region Számlázó modul nézetfrissítései
+        #region Adattagok
 
         /// <summary>
         /// Számlázási tételek adattábla
@@ -20,18 +20,15 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private static BillingItem billingItem;
 
-        /// <summary>
-        /// Számlázási tétel mennyisége
-        /// </summary>
-        private static int quantity;
+        #endregion
+
+        #region Konstruktor
 
         /// <summary>
         /// Számlázó ablak és számlázási tételek modális ablak prezenter konstruktora
         /// </summary>
         public BillingPresenter()
         {
-            billingItem = new BillingItem();
-
             billingDataTable = new DataTable();
             billingDataTable.Columns.Add("Tétel", typeof(string));
             billingDataTable.Columns.Add("Ár", typeof(double));
@@ -39,16 +36,22 @@ namespace virtual_receptionist.Presenter
             billingDataTable.Columns.Add("Mennyiség", typeof(int));
         }
 
+        #endregion
+
+        #region Számlázó modul nézetfrissítései
+
         /// <summary>
         /// Metódus, amely beállítja a számlázási tétel adatait
         /// </summary>
-        /// <param name="itemParamteres">Számlázási tétel adatai</param>
-        public void SetItemParameters(params object[] itemParamteres)
+        /// <param name="itemParameters">Számlázási tétel adatai</param>
+        public void SetBillingItemParameters(params object[] itemParameters)
         {
-            billingItem.Name = itemParamteres[0].ToString();
-            billingItem.Price = double.Parse(itemParamteres[1].ToString());
-            billingItem.Unit = itemParamteres[2].ToString();
-            quantity = int.Parse(itemParamteres[3].ToString());
+            string item = itemParameters[0].ToString();
+            string unit = itemParameters[1].ToString();
+            double price = double.Parse(itemParameters[2].ToString());
+            int quantity = int.Parse(itemParameters[3].ToString());
+
+            billingItem = new BillingItem(item, unit, price, quantity);
         }
 
         /// <summary>
@@ -57,7 +60,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable AddNewRow()
         {
-            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, quantity);
+            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, billingItem.Quantity);
             return billingDataTable;
         }
 
@@ -80,7 +83,7 @@ namespace virtual_receptionist.Presenter
         public DataTable UpdateRow(int index)
         {
             billingDataTable.Rows.RemoveAt(index);
-            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, quantity);
+            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, billingItem.Quantity);
             return billingDataTable;
         }
 
