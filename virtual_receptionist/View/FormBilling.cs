@@ -35,7 +35,8 @@ namespace virtual_receptionist.View
 
         private void buttonNewData_Click(object sender, EventArgs e)
         {
-
+            FormBillingData billingData = new FormBillingData();
+            billingData.ShowDialog();
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
