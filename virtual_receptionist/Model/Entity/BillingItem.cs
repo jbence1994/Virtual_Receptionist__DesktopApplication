@@ -58,16 +58,12 @@
         /// Számlázási tételek modell osztály konstrukora
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
-        /// <param name="category">Számlázási tétel kategóriája</param>
-        /// <param name="vat">Számlázási tétel ÁFA-kulcsának értéke</param>
         /// <param name="unit">Számlázási tétel egysége</param>
         /// <param name="price">Számlázási tétel összege (ára)</param>
         /// <param name="quantity">Számlázási tétel mennyisége</param>
-        public BillingItem(string name, string category, double vat, string unit, double price, int quantity)
+        public BillingItem(string name, string unit, double price, int quantity)
         {
             this.name = name;
-            this.category = category;
-            this.vat = vat;
             this.unit = unit;
             this.price = price;
             this.quantity = quantity;
