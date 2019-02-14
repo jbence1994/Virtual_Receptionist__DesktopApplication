@@ -58,6 +58,60 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        private void UploadBillingDataList()
+        {
+            string sql =
+                "SELECT booking_to_bill.ID, guest.Name, room.Name, room.Number, room_category.CategoryName, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking_to_bill, guest, booking, room_category, room WHERE booking_to_bill.BookingID=booking.ID AND booking.GuestID = guest.ID AND booking.RoomID = room.ID AND room.Category = room_category.ID";
+            DataTable dt = database.DQL(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int id = int.Parse(row["ID"].ToString());
+                string guestName = row["Name"].ToString();
+                int roomNumber = int.Parse(row["Number"].ToString());
+                string roomCategory = row["CategoryName"].ToString();
+                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
+                DateTime arrivalDate = DateTime.Parse(row["ArrivalDate"].ToString());
+                DateTime departureDate = DateTime.Parse(row["DepartureDate"].ToString());
+
+                BillingData billingDataInstance =
+                    new BillingData(id, guestName, roomNumber, roomCategory, numberOfGuests, arrivalDate,
+                        departureDate);
+                billingData.Add(billingDataInstance);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetBillingData()
+        {
+            if (billingData.Count == 0)
+            {
+                UploadBillingDataList();
+            }
+
+            DataTable billingDataDataTable = new DataTable();
+            billingDataDataTable.Columns.Add("ID"),typeof(int));
+            billingDataDataTable.Columns.Add(""),typeof());
+            billingDataDataTable.Columns.Add(""),typeof());
+            billingDataDataTable.Columns.Add(""),typeof());
+            billingDataDataTable.Columns.Add(""),typeof());
+            billingDataDataTable.Columns.Add(""),typeof());
+            billingDataDataTable.Columns.Add(""),typeof());
+
+            foreach (BillingData billingData in billingData)
+            {
+                billingDataDataTable.Rows.Add(billingData.ID, billingData.GuestName, billingData.);
+            }
+
+            return billingDataDataTable;
+        }
+
+        /// <summary>
         /// Metódus, amely tétel kedvezményt számít
         /// </summary>
         /// <param name="itemPrice">Tétel értéke, amelyből kedvezményt számol a függvény</param>

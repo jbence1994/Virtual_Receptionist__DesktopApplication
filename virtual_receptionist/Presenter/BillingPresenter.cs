@@ -113,6 +113,16 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetBillingData()
+        {
+            DataTable bookingsToBill = dataRepository.GetBillingData();
+            return bookingsToBill;
+        }
+
+        /// <summary>
         /// Metódus, amely visszaadja a fizetendő végösszeget
         /// </summary>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
