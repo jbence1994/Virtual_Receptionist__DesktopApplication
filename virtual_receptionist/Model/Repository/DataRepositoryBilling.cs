@@ -127,6 +127,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely kiszámolja a fizetendő végösszeget
         /// </summary>
+        /// <param name="prices">Bementi paraméter tétel árak</param>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
         public double CountTotalPrice(params double[] prices)
         {

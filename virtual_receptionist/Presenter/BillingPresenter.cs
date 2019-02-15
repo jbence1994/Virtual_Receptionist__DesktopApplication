@@ -125,10 +125,11 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely visszaadja a fizetendő végösszeget
         /// </summary>
+        /// <param name="prices">Bementi paraméter tétel árak</param>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
-        public double GetTotalPrice()
+        public double GetTotalPrice(params double[] prices)
         {
-            double total = dataRepository.CountTotalPrice();
+            double total = dataRepository.CountTotalPrice(prices);
             return total;
         }
 

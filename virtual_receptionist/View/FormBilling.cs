@@ -89,12 +89,26 @@ namespace virtual_receptionist.View
         {
             int rows = dataGridViewItems.Rows.Count;
             buttonPrintInvoice.Enabled = !presenter.IsEmptyBillingTable(rows);
+
+            //foreach ()
+            //{
+
+            //}
+
+            textBoxTotal.Text = presenter.GetTotalPrice().ToString();
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             int rows = dataGridViewItems.Rows.Count;
             buttonPrintInvoice.Enabled = !presenter.IsEmptyBillingTable(rows);
+
+            //foreach ()
+            //{
+
+            //}
+
+            textBoxTotal.Text = presenter.GetTotalPrice().ToString();
         }
 
         #endregion
