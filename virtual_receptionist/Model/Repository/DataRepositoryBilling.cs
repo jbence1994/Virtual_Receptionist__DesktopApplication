@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Model.Repository
@@ -127,9 +128,9 @@ namespace virtual_receptionist.Model.Repository
         /// Metódus, amely kiszámolja a fizetendő végösszeget
         /// </summary>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
-        public double CountTotalPrice()
+        public double CountTotalPrice(params double[] prices)
         {
-            return new double();
+            return prices.Sum();
         }
 
         #endregion
