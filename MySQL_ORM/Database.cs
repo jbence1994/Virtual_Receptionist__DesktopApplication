@@ -84,7 +84,7 @@ namespace MySQL_ORM
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát (otthoni, iskolai)
+        /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát
         /// </summary>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="InvalidConnectionTypeException"></exception>
@@ -116,6 +116,7 @@ namespace MySQL_ORM
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
         /// </summary>
+        /// <returns>Amennyiben sikeres az adatbázis elérés logikai igazzal, ellenkező esetben logikai hamissal tér vissza a függvény</returns>
         public bool OpenConnection()
         {
             try
@@ -229,7 +230,7 @@ namespace MySQL_ORM
         }
 
         /// <summary>
-        /// Skalár SELECT utasítást végrehajtó metódus
+        /// Skaláris SELECT utasítást végrehajtó metódus
         /// </summary>
         /// <param name="sql">SQL utasítás</param>
         /// <returns>SQL utasítás eredményét adja vissza karakterláncban</returns>
