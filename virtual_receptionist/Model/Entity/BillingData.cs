@@ -147,7 +147,7 @@ namespace virtual_receptionist.Model.Entity
         /// <returns>Visszaadja a BillingData típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{id}{guestName}{roomNumber}{roomCategory}{numberOfGuests}{arrivalDate}{departureDate}";
+            return $"{id} {guestName} {roomNumber} {roomCategory} {numberOfGuests} {arrivalDate} {departureDate}";
         }
 
         #endregion
