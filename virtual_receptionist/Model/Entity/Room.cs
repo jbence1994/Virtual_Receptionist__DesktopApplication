@@ -8,7 +8,7 @@
         #region Adattagok
 
         /// <summary>
-        /// Szoba elnevezése / fantázianeve
+        /// Szoba elnevezése
         /// </summary>
         private string name;
 
@@ -34,7 +34,7 @@
         /// <summary>
         /// Room osztály konstruktora
         /// </summary>
-        /// <param name="name">Szoba elnevezése / fantázianeve</param>
+        /// <param name="name">Szoba elnevezése</param>
         /// <param name="number">Szobaszám</param>
         /// <param name="category">Szobakategória</param>
         /// <param name="capacity">Szoba férőhelye</param>
@@ -51,7 +51,6 @@
         /// </summary>
         public Room()
         {
-
         }
 
         #endregion
@@ -59,7 +58,7 @@
         #region Getter és setter tulajdonságok
 
         /// <summary>
-        /// Szoba elnevezése/fantázianeve
+        /// Szoba elnevezése
         /// </summary>
         public string Name
         {

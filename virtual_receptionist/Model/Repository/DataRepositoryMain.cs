@@ -54,11 +54,6 @@ namespace virtual_receptionist.Model.Repository
         /// </summary>
         private List<Booking> bookings;
 
-        /// <summary>
-        /// Számlázandó foglalásokat tartalmazó lista
-        /// </summary>
-        private List<BillingData> billingData;
-
         #endregion
 
         #region Konstruktor
@@ -77,7 +72,6 @@ namespace virtual_receptionist.Model.Repository
             countries = new List<Country>();
             rooms = new List<Room>();
             bookings = new List<Booking>();
-            billingData = new List<BillingData>();
         }
 
         #endregion
