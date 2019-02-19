@@ -20,6 +20,8 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private static BillingItem billingItem;
 
+        private static BillingItemCategory billingItemCategory;
+
         #endregion
 
         #region Konstruktor
@@ -47,11 +49,13 @@ namespace virtual_receptionist.Presenter
         public void SetBillingItemParameters(params object[] itemParameters)
         {
             string item = itemParameters[0].ToString();
+            int vat = int.Parse(itemParameters[1].ToString());
             string unit = itemParameters[1].ToString();
             double price = double.Parse(itemParameters[2].ToString());
             int quantity = int.Parse(itemParameters[3].ToString());
 
-            billingItem = new BillingItem(item, unit, price, quantity);
+            billingItemCategory = new BillingItemCategory("", vat, unit);
+            billingItem = new BillingItem(item, billingItemCategory, price, quantity);
         }
 
         /// <summary>
@@ -75,7 +79,8 @@ namespace virtual_receptionist.Presenter
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable AddNewRow()
         {
-            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, billingItem.Quantity);
+            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItemCategory.Unit,
+                billingItem.Quantity);
             return billingDataTable;
         }
 
@@ -98,7 +103,8 @@ namespace virtual_receptionist.Presenter
         public DataTable UpdateRow(int index)
         {
             billingDataTable.Rows.RemoveAt(index);
-            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Unit, billingItem.Quantity);
+            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItemCategory.Unit,
+                billingItem.Quantity);
             return billingDataTable;
         }
 
@@ -110,16 +116,6 @@ namespace virtual_receptionist.Presenter
         {
             DataTable billingItems = dataRepository.GetBillingItems();
             return billingItems;
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja a számlázási adatokat az adattárból
-        /// </summary>
-        /// <returns>A számlázási adatokkal feltöltött adattáblát adja vissza a függvény</returns>
-        public DataTable GetBillingData()
-        {
-            DataTable bookingsToBill = dataRepository.GetBillingData();
-            return bookingsToBill;
         }
 
         /// <summary>

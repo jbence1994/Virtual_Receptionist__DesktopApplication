@@ -8,6 +8,11 @@
         #region Adattagok
 
         /// <summary>
+        /// Számlázási tétel kategórianeve
+        /// </summary>
+        private string name;
+
+        /// <summary>
         /// Számlázási tétel kategória ÁFA-kulcsának értéke
         /// </summary>
         private double vat;
@@ -17,11 +22,6 @@
         /// </summary>
         private string unit;
 
-        /// <summary>
-        /// Számlázási tétel kategóriának az összege ára
-        /// </summary>
-        private double price;
-
         #endregion
 
         #region Konstruktor
@@ -29,19 +29,28 @@
         /// <summary>
         /// BillingItemCategory osztály konstruktora
         /// </summary>
+        /// <param name="name">Számlázási tétel kategórianeve</param>
         /// <param name="vat">Számlázási tétel kategória ÁFA-kulcsának értéke</param>
         /// <param name="unit">Számlázási tétel kategóriájának egysége</param>
-        /// <param name="price">Számlázási tétel kategóriának az összege ára</param>
-        public BillingItemCategory(double vat, string unit, double price)
+        public BillingItemCategory(string name, double vat, string unit)
         {
+            this.name = name;
             this.vat = vat;
             this.unit = unit;
-            this.price = price;
         }
 
         #endregion
 
         #region Getter és setter tulajdonságok
+
+        /// <summary>
+        /// Számlázási tétel kategórianeve
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
         /// <summary>
         /// Számlázási tétel kategória ÁFA-kulcsának értéke
@@ -61,15 +70,6 @@
             set { unit = value; }
         }
 
-        /// <summary>
-        /// Számlázási tétel kategóriának az összege ára
-        /// </summary>
-        public double Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
-
         #endregion
 
         #region Metódusok
@@ -80,7 +80,7 @@
         /// <returns>Visszaadja a BillingItemCategory típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{vat} {unit} {price}";
+            return $"{name} {vat} {unit}";
         }
 
         #endregion

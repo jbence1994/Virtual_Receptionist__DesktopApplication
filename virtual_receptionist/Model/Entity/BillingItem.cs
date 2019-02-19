@@ -18,6 +18,11 @@
         private BillingItemCategory category;
 
         /// <summary>
+        /// Számlázási tétel ára
+        /// </summary>
+        private double price;
+
+        /// <summary>
         /// Számlázási tétel mennyisége
         /// </summary>
         private int quantity;
@@ -31,10 +36,12 @@
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>
-        public BillingItem(string name, BillingItemCategory category)
+        /// <param name="price">Számlázási tétel ára</param>
+        public BillingItem(string name, BillingItemCategory category, double price)
         {
             this.name = name;
             this.category = category;
+            this.price = price;
         }
 
         /// <summary>
@@ -42,11 +49,13 @@
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>
+        /// <param name="price"></param>
         /// <param name="quantity">Számlázási tétel mennyisége</param>
-        public BillingItem(string name, BillingItemCategory category, int quantity)
+        public BillingItem(string name, BillingItemCategory category, double price, int quantity)
         {
             this.name = name;
             this.category = category;
+            this.price = price;
             this.quantity = quantity;
         }
 
@@ -73,6 +82,15 @@
         }
 
         /// <summary>
+        /// Számlázási tétel ára
+        /// </summary>
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+
+        /// <summary>
         /// Számlázási tétel mennyisége
         /// </summary>
         public int Quantity
@@ -91,7 +109,7 @@
         /// <returns>Visszaadja a BillingItems típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{name} {category} {category} {quantity}";
+            return $"{name} {category} {price} {quantity}";
         }
 
         #endregion

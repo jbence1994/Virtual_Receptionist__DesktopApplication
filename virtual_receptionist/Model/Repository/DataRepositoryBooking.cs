@@ -56,7 +56,8 @@ namespace virtual_receptionist.Model.Repository
                 string category = row["RoomCategoryName"].ToString();
                 int capacity = int.Parse(row["Capacity"].ToString());
 
-                Room roomInstance = new Room(name, number, category, capacity);
+                RoomCategory roomCategoryInstance = new RoomCategory(category);
+                Room roomInstance = new Room(name, number, roomCategoryInstance, capacity);
                 rooms.Add(roomInstance);
             }
         }

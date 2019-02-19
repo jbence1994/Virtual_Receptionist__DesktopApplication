@@ -20,12 +20,13 @@ namespace virtual_receptionist.Model.Repository
             foreach (DataRow row in dt.Rows)
             {
                 string name = row["BillingItemName"].ToString();
-                string category = row["BillingItemCategoryName"].ToString();
+                string categoryName = row["BillingItemCategoryName"].ToString();
                 double vat = double.Parse(row["VAT"].ToString());
                 string unit = row["Unit"].ToString();
                 double price = double.Parse(row["Price"].ToString());
 
-                BillingItem billingItemInstance = new BillingItem(name, category, vat, unit, price);
+                BillingItemCategory billingItemCategory = new BillingItemCategory(categoryName, vat, unit);
+                BillingItem billingItemInstance = new BillingItem(name, billingItemCategory, price);
                 billingItems.Add(billingItemInstance);
             }
         }
@@ -50,26 +51,10 @@ namespace virtual_receptionist.Model.Repository
 
             foreach (BillingItem item in billingItems)
             {
-                billingItemsDataTable.Rows.Add(item.Name, item.Price, item.Vat, item.Category, item.Unit);
+                billingItemsDataTable.Rows.Add(item.Name, item.Category);
             }
 
             return billingItemsDataTable;
-        }
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti a számlázási adatokat tartalmazó listát
-        /// </summary>
-        private void UploadBillingDataList()
-        {
-        }
-
-        /// <summary>
-        /// Metódus, amely feltölti a számlázási adatokat tartalmazó adattáblát a listában tárolt adatokkal
-        /// </summary>
-        /// <returns>A számlázási adatokat tartalmazó listából feltöltött adattáblával tér vissza a függvény</returns>
-        public DataTable GetBillingData()
-        {
-            return null;
         }
 
         /// <summary>

@@ -33,7 +33,7 @@ namespace virtual_receptionist.View
 
         private void FormBillingData_Load(object sender, System.EventArgs e)
         {
-            DataTable billingDataDataTable = presenter.GetBillingData();
+            DataTable billingDataDataTable = null;
 
             foreach (DataRow row in billingDataDataTable.Rows)
             {
