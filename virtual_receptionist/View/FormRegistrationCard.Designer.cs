@@ -391,11 +391,11 @@
             // labelBillingName
             // 
             this.labelBillingName.AutoSize = true;
-            this.labelBillingName.Location = new System.Drawing.Point(156, 22);
+            this.labelBillingName.Location = new System.Drawing.Point(103, 22);
             this.labelBillingName.Name = "labelBillingName";
-            this.labelBillingName.Size = new System.Drawing.Size(30, 13);
+            this.labelBillingName.Size = new System.Drawing.Size(83, 13);
             this.labelBillingName.TabIndex = 22;
-            this.labelBillingName.Text = "Név:";
+            this.labelBillingName.Text = "Számlázási név:";
             // 
             // groupBoxOtherData
             // 
