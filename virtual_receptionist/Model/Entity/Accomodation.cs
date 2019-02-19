@@ -71,7 +71,6 @@
         /// </summary>
         private Accomodation()
         {
-
         }
 
         #endregion
