@@ -21,7 +21,7 @@ namespace virtual_receptionist.View
         #region Konstruktor
 
         /// <summary>
-        /// Foglalás-kezelő ablak konstruktora, amely összeköti a főmenü ablakot a foglalás-kezelő ablakkal
+        /// Foglalási napló ablak konstruktora
         /// </summary>
         public FormBooking()
         {
@@ -41,6 +41,8 @@ namespace virtual_receptionist.View
 
         private void FormBooking_Load(object sender, EventArgs e)
         {
+            DateTime arrivalDate = dateTimePickerBooking.Value;
+            dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 

@@ -128,7 +128,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Konfiguráció | Virtual Receptionist";
+            this.Text = "Bejelentkezés | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxLogin.PerformLayout();
