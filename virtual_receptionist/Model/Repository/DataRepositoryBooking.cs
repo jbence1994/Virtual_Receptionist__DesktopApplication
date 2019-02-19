@@ -9,9 +9,8 @@ namespace virtual_receptionist.Model.Repository
         #region Foglalási napló modul
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát
+        /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát érkezési dátum szerint
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadBookingsList()
         {
             string sql =
@@ -66,8 +65,7 @@ namespace virtual_receptionist.Model.Repository
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        /// <param name="arrivalDate">Érkezási dátum</param>
-        public DataTable GetBookings(DateTime arrivalDate)
+        public DataTable GetBookings()
         {
             if (bookings.Count == 0)
             {
