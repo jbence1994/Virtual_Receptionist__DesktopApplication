@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Presenter
 {
@@ -36,25 +37,31 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// 
         /// </summary>
-        public void AddNewRecordToBookingTable()
+        /// <param name="bookingParameters"></param>
+        public void AddNewRecordToBookingTable(params object[] bookingParameters)
         {
-            dataRepository.CreateBooking();
+            Booking booking = new Booking();
+            dataRepository.CreateBooking(booking);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public void DeleteRecordFromBookingTable()
+        /// <param name="bookingParameters"></param>
+        public void DeleteRecordFromBookingTable(params object[] bookingParameters)
         {
-            dataRepository.DeleteBooking();
+            Booking booking = new Booking();
+            dataRepository.DeleteBooking(booking);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public void UpdateRecordInBookingTable()
+        /// <param name="bookingParameters"></param>
+        public void UpdateRecordInBookingTable(params object[] bookingParameters)
         {
-            dataRepository.UpdateBooking();
+            Booking booking = new Booking();
+            dataRepository.UpdateBooking(booking);
         }
 
         #endregion
