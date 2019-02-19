@@ -20,6 +20,9 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         private static BillingItem billingItem;
 
+        /// <summary>
+        /// Számlázási tétel katgória osztály egy példánya
+        /// </summary>
         private static BillingItemCategory billingItemCategory;
 
         #endregion
@@ -45,7 +48,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja a számlázási tétel adatait
         /// </summary>
-        /// <param name="itemParameters">Számlázási tétel adatai</param>
+        /// <param name="itemParameters">Számlázási tétel paraméterei</param>
         public void SetBillingItemParameters(params object[] itemParameters)
         {
             string item = itemParameters[0].ToString();

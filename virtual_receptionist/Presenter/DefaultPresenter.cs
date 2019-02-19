@@ -30,7 +30,7 @@ namespace virtual_receptionist.Presenter
 
         #endregion
 
-        #region Általános nézetfrissítések
+        #region Általános metódusok
 
         /// <summary>
         /// Országokat lista adatszerkezetben visszaadó metódus

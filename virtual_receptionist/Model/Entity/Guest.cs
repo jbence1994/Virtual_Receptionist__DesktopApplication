@@ -49,7 +49,7 @@
 
         #endregion
 
-        #region Konstruktor
+        #region Konstruktorok
 
         /// <summary>
         /// Guest osztály konstruktora

@@ -68,7 +68,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
-        /// <param name="guestParameters">Vendég pataméterei</param>
+        /// <param name="guestParameters">Vendég paraméterei</param>
         public void AddNewRecordToPrivateGuestTable(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());

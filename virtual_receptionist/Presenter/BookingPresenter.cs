@@ -37,7 +37,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="bookingParameters"></param>
+        /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void AddNewRecordToBookingTable(params object[] bookingParameters)
         {
             Booking booking = new Booking();
@@ -47,7 +47,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="bookingParameters"></param>
+        /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void DeleteRecordFromBookingTable(params object[] bookingParameters)
         {
             Booking booking = new Booking();
@@ -57,7 +57,7 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="bookingParameters"></param>
+        /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void UpdateRecordInBookingTable(params object[] bookingParameters)
         {
             Booking booking = new Booking();

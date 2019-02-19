@@ -116,7 +116,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="booking"></param>
+        /// <param name="booking">Booking objektum</param>
         public void CreateBooking(Booking booking)
         {
 
@@ -125,7 +125,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="booking"></param>>
+        /// <param name="booking">Booking objektum</param>>
         public void DeleteBooking(Booking booking)
         {
 
@@ -134,7 +134,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="booking"></param>
+        /// <param name="booking">Booking objektum</param>
         public void UpdateBooking(Booking booking)
         {
 
