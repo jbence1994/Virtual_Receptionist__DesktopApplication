@@ -63,7 +63,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
+        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait érkezési dátum alapján egy DataTable adatszerkezetben
         /// </summary>
         /// <param name="arrivalDate">Érkezési dátum</param>
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
