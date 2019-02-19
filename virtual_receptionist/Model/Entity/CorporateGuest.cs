@@ -35,6 +35,13 @@
             this.vatNumber = vatNumber;
         }
 
+        /// <summary>
+        /// CorporateGuest osztály üres konstruktora
+        /// </summary>
+        public CorporateGuest()
+        {
+        }
+
         #endregion
 
         #region Getter és setter tulajdonságok

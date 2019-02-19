@@ -52,6 +52,13 @@
             this.birthDate = birthDate;
         }
 
+        /// <summary>
+        /// PrivateGuest osztály üres konstruktora
+        /// </summary>
+        public PrivateGuest()
+        {
+        }
+
         #endregion
 
         #region Getter és setter tulajdonságok
