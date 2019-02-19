@@ -46,14 +46,14 @@ namespace virtual_receptionist.Model.Repository
         private void UploadRoomsList()
         {
             string sql =
-                "SELECT room.Name, room.Number, room_category.CategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
+                "SELECT room.Name, room.Number, room_category.RoomCategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
                 string name = row["Name"].ToString();
                 int number = int.Parse(row["Number"].ToString());
-                string category = row["CategoryName"].ToString();
+                string category = row["RoomCategoryName"].ToString();
                 int capacity = int.Parse(row["Capacity"].ToString());
 
                 Room roomInstance = new Room(name, number, category, capacity);
@@ -81,7 +81,7 @@ namespace virtual_receptionist.Model.Repository
 
             foreach (Booking booking in bookings)
             {
-                bookingsDataTable.Rows.Add(booking.Guest, booking.Room, booking.NumberOfGuests,
+                bookingsDataTable.Rows.Add(booking.Guests, booking.Rooms, booking.NumberOfGuests,
                     booking.Arrival, booking.Departure);
             }
 
