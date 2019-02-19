@@ -242,6 +242,7 @@
             this.dateTimePickerBooking.Name = "dateTimePickerBooking";
             this.dateTimePickerBooking.Size = new System.Drawing.Size(159, 20);
             this.dateTimePickerBooking.TabIndex = 12;
+            this.dateTimePickerBooking.ValueChanged += new System.EventHandler(this.dateTimePickerBooking_ValueChanged);
             // 
             // FormBooking
             // 
@@ -258,7 +259,6 @@
             this.Name = "FormBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Foglalási napló";
-            this.Load += new System.EventHandler(this.FormRoomEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).EndInit();
             this.tabControlRoomEditor.ResumeLayout(false);
             this.tabPageReservations.ResumeLayout(false);

@@ -33,7 +33,7 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        private void FormRoomEditor_Load(object sender, EventArgs e)
+        private void dateTimePickerBooking_ValueChanged(object sender, EventArgs e)
         {
             DateTime arrivalDate = dateTimePickerBooking.Value;
             dataGridViewRoomRents.DataSource = presenter.GetBookings(arrivalDate);
