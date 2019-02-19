@@ -33,6 +33,30 @@ namespace virtual_receptionist.Presenter
             return rooms;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void AddNewRecordToBookingTable()
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DeleteRecordFromBookingTable()
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdateRecordInBookingTable()
+        {
+
+        }
+
         #endregion
     }
 }

@@ -44,6 +44,21 @@ namespace virtual_receptionist.View
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 
+        private void buttonNewBooking_Click(object sender, EventArgs e)
+        {
+            presenter.AddNewRecordToBookingTable();
+        }
+
+        private void buttonUpdateBooking_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateRecordInBookingTable();
+        }
+
+        private void buttonDeleteBooking_Click(object sender, EventArgs e)
+        {
+            presenter.DeleteRecordFromBookingTable();
+        }
+
         #endregion
     }
 }

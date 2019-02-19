@@ -209,6 +209,7 @@
             this.buttonNewBooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonNewBooking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonNewBooking.UseVisualStyleBackColor = true;
+            this.buttonNewBooking.Click += new System.EventHandler(this.buttonNewBooking_Click);
             // 
             // buttonUpdateBooking
             // 
@@ -222,6 +223,7 @@
             this.buttonUpdateBooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonUpdateBooking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonUpdateBooking.UseVisualStyleBackColor = true;
+            this.buttonUpdateBooking.Click += new System.EventHandler(this.buttonUpdateBooking_Click);
             // 
             // buttonDeleteBooking
             // 
@@ -235,6 +237,7 @@
             this.buttonDeleteBooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDeleteBooking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteBooking.UseVisualStyleBackColor = true;
+            this.buttonDeleteBooking.Click += new System.EventHandler(this.buttonDeleteBooking_Click);
             // 
             // dateTimePickerBooking
             // 
