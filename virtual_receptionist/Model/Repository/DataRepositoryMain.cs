@@ -54,6 +54,9 @@ namespace virtual_receptionist.Model.Repository
         /// </summary>
         private List<Booking> bookings;
 
+        private List<RoomCategory> roomCategories;
+        private List<BillingItemCategory> billingItemCategories;
+
         #endregion
 
         #region Konstruktor
@@ -72,6 +75,8 @@ namespace virtual_receptionist.Model.Repository
             countries = new List<Country>();
             rooms = new List<Room>();
             bookings = new List<Booking>();
+            roomCategories = new List<RoomCategory>();
+            billingItemCategories = new List<BillingItemCategory>();
         }
 
         #endregion
@@ -127,9 +132,10 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti az országok kódjait és neveit tartalmazó listát
+        /// Metódus, amely adatbázisból feltölti az országok neveit tartalmazó listát
         /// </summary>
-        private void UploadCountriesList()
+        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
+        public List<Country> GetCountries()
         {
             string sql = "SELECT * FROM country";
             DataTable dt = database.DQL(sql);
@@ -140,18 +146,6 @@ namespace virtual_receptionist.Model.Repository
 
                 Country countryInstance = new Country(name);
                 countries.Add(countryInstance);
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely országok neveit tartalmazza
-        /// </summary>
-        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
-        public List<Country> GetCountries()
-        {
-            if (countries.Count == 0)
-            {
-                UploadCountriesList();
             }
 
             return countries;
