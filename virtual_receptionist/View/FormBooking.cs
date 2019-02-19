@@ -35,8 +35,9 @@ namespace virtual_receptionist.View
 
         private void dateTimePickerBooking_ValueChanged(object sender, EventArgs e)
         {
-            string arrivalDate = dateTimePickerBooking.Value.ToString("yyyy-MM-dd");
-            dataGridViewRoomRents.DataSource = presenter.GetBookings(arrivalDate);
+            dataGridViewBookings.DataSource = null;
+            DateTime arrivalDate = dateTimePickerBooking.Value;
+            dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 

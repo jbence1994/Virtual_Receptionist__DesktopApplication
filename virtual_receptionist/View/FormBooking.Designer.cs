@@ -29,51 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBooking));
-            this.dataGridViewRoomRents = new System.Windows.Forms.DataGridView();
+            this.dataGridViewBookings = new System.Windows.Forms.DataGridView();
             this.ColumnGuest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGuestCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControlRoomEditor = new System.Windows.Forms.TabControl();
-            this.tabPageReservations = new System.Windows.Forms.TabPage();
+            this.tabControlBooking = new System.Windows.Forms.TabControl();
+            this.tabPageBookings = new System.Windows.Forms.TabPage();
             this.tabPageRooms = new System.Windows.Forms.TabPage();
             this.dataGridViewRooms = new System.Windows.Forms.DataGridView();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonNewRent = new System.Windows.Forms.Button();
-            this.buttonUpdateRent = new System.Windows.Forms.Button();
-            this.buttonDeleteRent = new System.Windows.Forms.Button();
+            this.buttonNewBooking = new System.Windows.Forms.Button();
+            this.buttonUpdateBooking = new System.Windows.Forms.Button();
+            this.buttonDeleteBooking = new System.Windows.Forms.Button();
             this.dateTimePickerBooking = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
-            this.tabControlRoomEditor.SuspendLayout();
-            this.tabPageReservations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).BeginInit();
+            this.tabControlBooking.SuspendLayout();
+            this.tabPageBookings.SuspendLayout();
             this.tabPageRooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewRoomRents
+            // dataGridViewBookings
             // 
-            this.dataGridViewRoomRents.AllowUserToAddRows = false;
-            this.dataGridViewRoomRents.AllowUserToDeleteRows = false;
-            this.dataGridViewRoomRents.AllowUserToResizeColumns = false;
-            this.dataGridViewRoomRents.AllowUserToResizeRows = false;
-            this.dataGridViewRoomRents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRoomRents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewBookings.AllowUserToAddRows = false;
+            this.dataGridViewBookings.AllowUserToDeleteRows = false;
+            this.dataGridViewBookings.AllowUserToResizeColumns = false;
+            this.dataGridViewBookings.AllowUserToResizeRows = false;
+            this.dataGridViewBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBookings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnGuest,
             this.ColumnRoomNumber,
             this.ColumnGuestCapacity,
             this.ColumnArrival,
             this.ColumnDeparture});
-            this.dataGridViewRoomRents.Location = new System.Drawing.Point(6, 6);
-            this.dataGridViewRoomRents.MultiSelect = false;
-            this.dataGridViewRoomRents.Name = "dataGridViewRoomRents";
-            this.dataGridViewRoomRents.ReadOnly = true;
-            this.dataGridViewRoomRents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRoomRents.Size = new System.Drawing.Size(843, 506);
-            this.dataGridViewRoomRents.TabIndex = 7;
+            this.dataGridViewBookings.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewBookings.MultiSelect = false;
+            this.dataGridViewBookings.Name = "dataGridViewBookings";
+            this.dataGridViewBookings.ReadOnly = true;
+            this.dataGridViewBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBookings.Size = new System.Drawing.Size(843, 506);
+            this.dataGridViewBookings.TabIndex = 7;
             // 
             // ColumnGuest
             // 
@@ -113,26 +113,26 @@
             this.ColumnDeparture.Name = "ColumnDeparture";
             this.ColumnDeparture.ReadOnly = true;
             // 
-            // tabControlRoomEditor
+            // tabControlBooking
             // 
-            this.tabControlRoomEditor.Controls.Add(this.tabPageReservations);
-            this.tabControlRoomEditor.Controls.Add(this.tabPageRooms);
-            this.tabControlRoomEditor.Location = new System.Drawing.Point(12, 12);
-            this.tabControlRoomEditor.Name = "tabControlRoomEditor";
-            this.tabControlRoomEditor.SelectedIndex = 0;
-            this.tabControlRoomEditor.Size = new System.Drawing.Size(863, 544);
-            this.tabControlRoomEditor.TabIndex = 8;
+            this.tabControlBooking.Controls.Add(this.tabPageBookings);
+            this.tabControlBooking.Controls.Add(this.tabPageRooms);
+            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
+            this.tabControlBooking.Name = "tabControlBooking";
+            this.tabControlBooking.SelectedIndex = 0;
+            this.tabControlBooking.Size = new System.Drawing.Size(863, 544);
+            this.tabControlBooking.TabIndex = 8;
             // 
-            // tabPageReservations
+            // tabPageBookings
             // 
-            this.tabPageReservations.Controls.Add(this.dataGridViewRoomRents);
-            this.tabPageReservations.Location = new System.Drawing.Point(4, 22);
-            this.tabPageReservations.Name = "tabPageReservations";
-            this.tabPageReservations.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageReservations.Size = new System.Drawing.Size(855, 518);
-            this.tabPageReservations.TabIndex = 0;
-            this.tabPageReservations.Text = "Szobakiadások";
-            this.tabPageReservations.UseVisualStyleBackColor = true;
+            this.tabPageBookings.Controls.Add(this.dataGridViewBookings);
+            this.tabPageBookings.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBookings.Name = "tabPageBookings";
+            this.tabPageBookings.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBookings.Size = new System.Drawing.Size(855, 518);
+            this.tabPageBookings.TabIndex = 0;
+            this.tabPageBookings.Text = "Foglalások";
+            this.tabPageBookings.UseVisualStyleBackColor = true;
             // 
             // tabPageRooms
             // 
@@ -142,7 +142,7 @@
             this.tabPageRooms.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageRooms.Size = new System.Drawing.Size(855, 518);
             this.tabPageRooms.TabIndex = 1;
-            this.tabPageRooms.Text = "Szobák";
+            this.tabPageRooms.Text = "Kiadó szobák";
             this.tabPageRooms.UseVisualStyleBackColor = true;
             // 
             // dataGridViewRooms
@@ -197,44 +197,44 @@
             this.ColumnCapacity.ReadOnly = true;
             this.ColumnCapacity.Width = 200;
             // 
-            // buttonNewRent
+            // buttonNewBooking
             // 
-            this.buttonNewRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNewRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewRent.Image")));
-            this.buttonNewRent.Location = new System.Drawing.Point(881, 60);
-            this.buttonNewRent.Name = "buttonNewRent";
-            this.buttonNewRent.Size = new System.Drawing.Size(159, 64);
-            this.buttonNewRent.TabIndex = 9;
-            this.buttonNewRent.Text = "Foglalás rögzítése";
-            this.buttonNewRent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonNewRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonNewRent.UseVisualStyleBackColor = true;
+            this.buttonNewBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonNewBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewBooking.Image")));
+            this.buttonNewBooking.Location = new System.Drawing.Point(881, 60);
+            this.buttonNewBooking.Name = "buttonNewBooking";
+            this.buttonNewBooking.Size = new System.Drawing.Size(159, 64);
+            this.buttonNewBooking.TabIndex = 9;
+            this.buttonNewBooking.Text = "Foglalás rögzítése";
+            this.buttonNewBooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonNewBooking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonNewBooking.UseVisualStyleBackColor = true;
             // 
-            // buttonUpdateRent
+            // buttonUpdateBooking
             // 
-            this.buttonUpdateRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonUpdateRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateRent.Image")));
-            this.buttonUpdateRent.Location = new System.Drawing.Point(881, 130);
-            this.buttonUpdateRent.Name = "buttonUpdateRent";
-            this.buttonUpdateRent.Size = new System.Drawing.Size(159, 64);
-            this.buttonUpdateRent.TabIndex = 10;
-            this.buttonUpdateRent.Text = "Foglalás módosítása";
-            this.buttonUpdateRent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonUpdateRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonUpdateRent.UseVisualStyleBackColor = true;
+            this.buttonUpdateBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUpdateBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateBooking.Image")));
+            this.buttonUpdateBooking.Location = new System.Drawing.Point(881, 130);
+            this.buttonUpdateBooking.Name = "buttonUpdateBooking";
+            this.buttonUpdateBooking.Size = new System.Drawing.Size(159, 64);
+            this.buttonUpdateBooking.TabIndex = 10;
+            this.buttonUpdateBooking.Text = "Foglalás módosítása";
+            this.buttonUpdateBooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUpdateBooking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonUpdateBooking.UseVisualStyleBackColor = true;
             // 
-            // buttonDeleteRent
+            // buttonDeleteBooking
             // 
-            this.buttonDeleteRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeleteRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteRent.Image")));
-            this.buttonDeleteRent.Location = new System.Drawing.Point(881, 200);
-            this.buttonDeleteRent.Name = "buttonDeleteRent";
-            this.buttonDeleteRent.Size = new System.Drawing.Size(159, 64);
-            this.buttonDeleteRent.TabIndex = 11;
-            this.buttonDeleteRent.Text = "Foglalás törlése";
-            this.buttonDeleteRent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeleteRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeleteRent.UseVisualStyleBackColor = true;
+            this.buttonDeleteBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeleteBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteBooking.Image")));
+            this.buttonDeleteBooking.Location = new System.Drawing.Point(881, 200);
+            this.buttonDeleteBooking.Name = "buttonDeleteBooking";
+            this.buttonDeleteBooking.Size = new System.Drawing.Size(159, 64);
+            this.buttonDeleteBooking.TabIndex = 11;
+            this.buttonDeleteBooking.Text = "Foglalás törlése";
+            this.buttonDeleteBooking.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeleteBooking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDeleteBooking.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerBooking
             // 
@@ -250,18 +250,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 568);
             this.Controls.Add(this.dateTimePickerBooking);
-            this.Controls.Add(this.buttonDeleteRent);
-            this.Controls.Add(this.buttonUpdateRent);
-            this.Controls.Add(this.buttonNewRent);
-            this.Controls.Add(this.tabControlRoomEditor);
+            this.Controls.Add(this.buttonDeleteBooking);
+            this.Controls.Add(this.buttonUpdateBooking);
+            this.Controls.Add(this.buttonNewBooking);
+            this.Controls.Add(this.tabControlBooking);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Foglalási napló";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).EndInit();
-            this.tabControlRoomEditor.ResumeLayout(false);
-            this.tabPageReservations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).EndInit();
+            this.tabControlBooking.ResumeLayout(false);
+            this.tabPageBookings.ResumeLayout(false);
             this.tabPageRooms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).EndInit();
             this.ResumeLayout(false);
@@ -269,9 +269,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridViewRoomRents;
-        private System.Windows.Forms.TabControl tabControlRoomEditor;
-        private System.Windows.Forms.TabPage tabPageReservations;
+        private System.Windows.Forms.DataGridView dataGridViewBookings;
+        private System.Windows.Forms.TabControl tabControlBooking;
+        private System.Windows.Forms.TabPage tabPageBookings;
         private System.Windows.Forms.TabPage tabPageRooms;
         private System.Windows.Forms.DataGridView dataGridViewRooms;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
@@ -283,9 +283,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGuestCapacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArrival;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDeparture;
-        private System.Windows.Forms.Button buttonNewRent;
-        private System.Windows.Forms.Button buttonUpdateRent;
-        private System.Windows.Forms.Button buttonDeleteRent;
+        private System.Windows.Forms.Button buttonNewBooking;
+        private System.Windows.Forms.Button buttonUpdateBooking;
+        private System.Windows.Forms.Button buttonDeleteBooking;
         private System.Windows.Forms.DateTimePicker dateTimePickerBooking;
     }
 }
