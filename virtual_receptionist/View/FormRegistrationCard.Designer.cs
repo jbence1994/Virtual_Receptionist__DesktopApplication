@@ -49,7 +49,7 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxCitizenship = new System.Windows.Forms.TextBox();
-            this.groupBoxGeneralData = new System.Windows.Forms.GroupBox();
+            this.groupBoxGuestData = new System.Windows.Forms.GroupBox();
             this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.labelRoom = new System.Windows.Forms.Label();
             this.labelNumberOfGuests = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.groupBoxOtherData = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.errorProviderInput = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBoxGeneralData.SuspendLayout();
+            this.groupBoxGuestData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
             this.groupBoxOtherData.SuspendLayout();
@@ -232,30 +232,30 @@
             this.textBoxCitizenship.Size = new System.Drawing.Size(276, 20);
             this.textBoxCitizenship.TabIndex = 5;
             // 
-            // groupBoxGeneralData
+            // groupBoxGuestData
             // 
-            this.groupBoxGeneralData.Controls.Add(this.comboBoxRoom);
-            this.groupBoxGeneralData.Controls.Add(this.labelRoom);
-            this.groupBoxGeneralData.Controls.Add(this.labelNumberOfGuests);
-            this.groupBoxGeneralData.Controls.Add(this.numericUpDownNumberOfGuests);
-            this.groupBoxGeneralData.Controls.Add(this.dateTimePickerDepartureDate);
-            this.groupBoxGeneralData.Controls.Add(this.dateTimePickerArrivalDate);
-            this.groupBoxGeneralData.Controls.Add(this.labelDepartureDate);
-            this.groupBoxGeneralData.Controls.Add(this.labelArrivalDate);
-            this.groupBoxGeneralData.Controls.Add(this.labelIDCardOrPassportNumber);
-            this.groupBoxGeneralData.Controls.Add(this.labelBirthDate);
-            this.groupBoxGeneralData.Controls.Add(this.textBoxBirthDate);
-            this.groupBoxGeneralData.Controls.Add(this.label1);
-            this.groupBoxGeneralData.Controls.Add(this.textBoxIDCardOrPassportNumber);
-            this.groupBoxGeneralData.Controls.Add(this.labelName);
-            this.groupBoxGeneralData.Controls.Add(this.textBoxName);
-            this.groupBoxGeneralData.Controls.Add(this.textBoxCitizenship);
-            this.groupBoxGeneralData.Location = new System.Drawing.Point(12, 12);
-            this.groupBoxGeneralData.Name = "groupBoxGeneralData";
-            this.groupBoxGeneralData.Size = new System.Drawing.Size(490, 236);
-            this.groupBoxGeneralData.TabIndex = 1;
-            this.groupBoxGeneralData.TabStop = false;
-            this.groupBoxGeneralData.Text = "Általános adatok";
+            this.groupBoxGuestData.Controls.Add(this.comboBoxRoom);
+            this.groupBoxGuestData.Controls.Add(this.labelRoom);
+            this.groupBoxGuestData.Controls.Add(this.labelNumberOfGuests);
+            this.groupBoxGuestData.Controls.Add(this.numericUpDownNumberOfGuests);
+            this.groupBoxGuestData.Controls.Add(this.dateTimePickerDepartureDate);
+            this.groupBoxGuestData.Controls.Add(this.dateTimePickerArrivalDate);
+            this.groupBoxGuestData.Controls.Add(this.labelDepartureDate);
+            this.groupBoxGuestData.Controls.Add(this.labelArrivalDate);
+            this.groupBoxGuestData.Controls.Add(this.labelIDCardOrPassportNumber);
+            this.groupBoxGuestData.Controls.Add(this.labelBirthDate);
+            this.groupBoxGuestData.Controls.Add(this.textBoxBirthDate);
+            this.groupBoxGuestData.Controls.Add(this.label1);
+            this.groupBoxGuestData.Controls.Add(this.textBoxIDCardOrPassportNumber);
+            this.groupBoxGuestData.Controls.Add(this.labelName);
+            this.groupBoxGuestData.Controls.Add(this.textBoxName);
+            this.groupBoxGuestData.Controls.Add(this.textBoxCitizenship);
+            this.groupBoxGuestData.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxGuestData.Name = "groupBoxGuestData";
+            this.groupBoxGuestData.Size = new System.Drawing.Size(490, 236);
+            this.groupBoxGuestData.TabIndex = 1;
+            this.groupBoxGuestData.TabStop = false;
+            this.groupBoxGuestData.Text = "Vendég adatok";
             // 
             // comboBoxRoom
             // 
@@ -438,15 +438,15 @@
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxOtherData);
             this.Controls.Add(this.groupBoxBillingData);
-            this.Controls.Add(this.groupBoxGeneralData);
+            this.Controls.Add(this.groupBoxGuestData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendég bejelentkező lap";
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
-            this.groupBoxGeneralData.ResumeLayout(false);
-            this.groupBoxGeneralData.PerformLayout();
+            this.groupBoxGuestData.ResumeLayout(false);
+            this.groupBoxGuestData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
             this.groupBoxBillingData.ResumeLayout(false);
             this.groupBoxBillingData.PerformLayout();
@@ -477,7 +477,7 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxCitizenship;
-        private System.Windows.Forms.GroupBox groupBoxGeneralData;
+        private System.Windows.Forms.GroupBox groupBoxGuestData;
         private System.Windows.Forms.GroupBox groupBoxBillingData;
         private System.Windows.Forms.GroupBox groupBoxOtherData;
         private System.Windows.Forms.TextBox textBoxIDCardOrPassportNumber;
