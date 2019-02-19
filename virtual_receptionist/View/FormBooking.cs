@@ -35,7 +35,8 @@ namespace virtual_receptionist.View
 
         private void FormRoomEditor_Load(object sender, EventArgs e)
         {
-            dataGridViewRoomRents.DataSource = presenter.GetBookings();
+            DateTime arrivalDate = dateTimePickerBooking.Value;
+            dataGridViewRoomRents.DataSource = presenter.GetBookings(arrivalDate);
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 

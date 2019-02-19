@@ -20,10 +20,10 @@ namespace virtual_receptionist.Model.Repository
 
             foreach (DataRow row in dt.Rows)
             {
-                //Guest guest = new PrivateGuest()
-                //{
-                //    Name = row["Name"].ToString()
-                //};
+                Guest guest = new PrivateGuest()
+                {
+                    Name = row["Name"].ToString()
+                };
 
                 Room room = new Room
                 {
@@ -34,8 +34,8 @@ namespace virtual_receptionist.Model.Repository
                 DateTime arrival = (DateTime) row["ArrivalDate"];
                 DateTime departure = (DateTime) row["DepartureDate"];
 
-                //Booking bookingInstance = new Booking(guest, room, numberOfGuests, arrival, departure);
-                //bookings.Add(bookingInstance);
+                Booking bookingInstance = new Booking(guest, room, numberOfGuests, arrival, departure);
+                bookings.Add(bookingInstance);
             }
         }
 

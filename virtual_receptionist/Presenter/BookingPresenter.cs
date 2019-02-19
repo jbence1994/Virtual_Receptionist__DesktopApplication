@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace virtual_receptionist.Presenter
 {
@@ -13,9 +14,10 @@ namespace virtual_receptionist.Presenter
         /// Metódus, amely visszaadja a foglalásokat adattárból
         /// </summary>
         /// <returns>A foglalásokkal feltöltött adattbálát adja vissza a függvény</returns>
-        public DataTable GetBookings()
+        /// <param name="arrivalDate">Érkezési dátum</param>
+        public DataTable GetBookings(DateTime arrivalDate)
         {
-            DataTable bookings = dataRepository.GetBookings();
+            DataTable bookings = dataRepository.GetBookings(arrivalDate);
             return bookings;
         }
 
