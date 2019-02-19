@@ -46,6 +46,7 @@
             this.buttonNewRent = new System.Windows.Forms.Button();
             this.buttonUpdateRent = new System.Windows.Forms.Button();
             this.buttonDeleteRent = new System.Windows.Forms.Button();
+            this.dateTimePickerBooking = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomRents)).BeginInit();
             this.tabControlRoomEditor.SuspendLayout();
             this.tabPageReservations.SuspendLayout();
@@ -71,7 +72,7 @@
             this.dataGridViewRoomRents.Name = "dataGridViewRoomRents";
             this.dataGridViewRoomRents.ReadOnly = true;
             this.dataGridViewRoomRents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRoomRents.Size = new System.Drawing.Size(843, 557);
+            this.dataGridViewRoomRents.Size = new System.Drawing.Size(843, 506);
             this.dataGridViewRoomRents.TabIndex = 7;
             // 
             // ColumnGuest
@@ -119,7 +120,7 @@
             this.tabControlRoomEditor.Location = new System.Drawing.Point(12, 12);
             this.tabControlRoomEditor.Name = "tabControlRoomEditor";
             this.tabControlRoomEditor.SelectedIndex = 0;
-            this.tabControlRoomEditor.Size = new System.Drawing.Size(863, 595);
+            this.tabControlRoomEditor.Size = new System.Drawing.Size(863, 544);
             this.tabControlRoomEditor.TabIndex = 8;
             // 
             // tabPageReservations
@@ -128,7 +129,7 @@
             this.tabPageReservations.Location = new System.Drawing.Point(4, 22);
             this.tabPageReservations.Name = "tabPageReservations";
             this.tabPageReservations.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageReservations.Size = new System.Drawing.Size(855, 569);
+            this.tabPageReservations.Size = new System.Drawing.Size(855, 518);
             this.tabPageReservations.TabIndex = 0;
             this.tabPageReservations.Text = "Szobakiadások";
             this.tabPageReservations.UseVisualStyleBackColor = true;
@@ -139,7 +140,7 @@
             this.tabPageRooms.Location = new System.Drawing.Point(4, 22);
             this.tabPageRooms.Name = "tabPageRooms";
             this.tabPageRooms.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRooms.Size = new System.Drawing.Size(855, 569);
+            this.tabPageRooms.Size = new System.Drawing.Size(855, 518);
             this.tabPageRooms.TabIndex = 1;
             this.tabPageRooms.Text = "Szobák";
             this.tabPageRooms.UseVisualStyleBackColor = true;
@@ -200,7 +201,7 @@
             // 
             this.buttonNewRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNewRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewRent.Image")));
-            this.buttonNewRent.Location = new System.Drawing.Point(877, 34);
+            this.buttonNewRent.Location = new System.Drawing.Point(881, 60);
             this.buttonNewRent.Name = "buttonNewRent";
             this.buttonNewRent.Size = new System.Drawing.Size(159, 64);
             this.buttonNewRent.TabIndex = 9;
@@ -213,7 +214,7 @@
             // 
             this.buttonUpdateRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateRent.Image")));
-            this.buttonUpdateRent.Location = new System.Drawing.Point(877, 104);
+            this.buttonUpdateRent.Location = new System.Drawing.Point(881, 130);
             this.buttonUpdateRent.Name = "buttonUpdateRent";
             this.buttonUpdateRent.Size = new System.Drawing.Size(159, 64);
             this.buttonUpdateRent.TabIndex = 10;
@@ -226,7 +227,7 @@
             // 
             this.buttonDeleteRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteRent.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteRent.Image")));
-            this.buttonDeleteRent.Location = new System.Drawing.Point(877, 174);
+            this.buttonDeleteRent.Location = new System.Drawing.Point(881, 200);
             this.buttonDeleteRent.Name = "buttonDeleteRent";
             this.buttonDeleteRent.Size = new System.Drawing.Size(159, 64);
             this.buttonDeleteRent.TabIndex = 11;
@@ -235,11 +236,19 @@
             this.buttonDeleteRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDeleteRent.UseVisualStyleBackColor = true;
             // 
+            // dateTimePickerBooking
+            // 
+            this.dateTimePickerBooking.Location = new System.Drawing.Point(881, 34);
+            this.dateTimePickerBooking.Name = "dateTimePickerBooking";
+            this.dateTimePickerBooking.Size = new System.Drawing.Size(159, 20);
+            this.dateTimePickerBooking.TabIndex = 12;
+            // 
             // FormBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 613);
+            this.ClientSize = new System.Drawing.Size(1049, 568);
+            this.Controls.Add(this.dateTimePickerBooking);
             this.Controls.Add(this.buttonDeleteRent);
             this.Controls.Add(this.buttonUpdateRent);
             this.Controls.Add(this.buttonNewRent);
@@ -277,5 +286,6 @@
         private System.Windows.Forms.Button buttonNewRent;
         private System.Windows.Forms.Button buttonUpdateRent;
         private System.Windows.Forms.Button buttonDeleteRent;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBooking;
     }
 }
