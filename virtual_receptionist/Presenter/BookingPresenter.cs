@@ -38,7 +38,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void AddNewRecordToBookingTable()
         {
-
+            dataRepository.CreateBooking();
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void DeleteRecordFromBookingTable()
         {
-
+            dataRepository.DeleteBooking();
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void UpdateRecordInBookingTable()
         {
-
+            dataRepository.UpdateBooking();
         }
 
         #endregion
