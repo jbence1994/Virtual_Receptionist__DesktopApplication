@@ -22,9 +22,9 @@ namespace virtual_receptionist.Presenter
             foreach (DataRow row in bookings.Rows)
             {
                 DateTime arrival = (DateTime) row["ArrivalDate"];
-                string vmi = arrival.ToString("yyyy-MM-dd");
+                string formattedArrival = arrival.ToString("yyyy-MM-dd");
 
-                if (vmi == arrivalDate)
+                if (formattedArrival == arrivalDate)
                 {
                     throw new NotImplementedException();
                 }
