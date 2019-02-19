@@ -137,15 +137,18 @@ namespace virtual_receptionist.Model.Repository
         /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
         public List<Country> GetCountries()
         {
-            string sql = "SELECT * FROM country";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
+            if (countries.Count == 0)
             {
-                string name = row["CountryName"].ToString();
+                string sql = "SELECT * FROM country";
+                DataTable dt = database.DQL(sql);
 
-                Country countryInstance = new Country(name);
-                countries.Add(countryInstance);
+                foreach (DataRow row in dt.Rows)
+                {
+                    string name = row["CountryName"].ToString();
+
+                    Country countryInstance = new Country(name);
+                    countries.Add(countryInstance);
+                }
             }
 
             return countries;
