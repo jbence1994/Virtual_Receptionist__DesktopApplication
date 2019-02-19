@@ -5,6 +5,8 @@
     /// </summary>
     public class BillingItem
     {
+        #region Adattagok
+
         /// <summary>
         /// Számlázási tétel neve
         /// </summary>
@@ -13,27 +15,14 @@
         /// <summary>
         /// Számlázási tétel kategóriája
         /// </summary>
-        private string category;
-
-        /// <summary>
-        /// Számlázási tétel ÁFA-kulcsának értéke
-        /// </summary>
-        private double vat;
-
-        /// <summary>
-        /// Számlázási tétel egysége
-        /// </summary>
-        private string unit;
-
-        /// <summary>
-        /// Számlázási tétel összege (ára)
-        /// </summary>
-        private double price;
+        private BillingItemCategory category;
 
         /// <summary>
         /// Számlázási tétel mennyisége
         /// </summary>
         private int quantity;
+
+        #endregion
 
         #region Konstruktorok
 
@@ -42,30 +31,22 @@
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>
-        /// <param name="vat">Számlázási tétel ÁFA-kulcsának értéke</param>
-        /// <param name="unit">Számlázási tétel egysége</param>
-        /// <param name="price">Számlázási tétel összege (ára)</param>
-        public BillingItem(string name, string category, double vat, string unit, double price)
+        public BillingItem(string name, BillingItemCategory category)
         {
             this.name = name;
             this.category = category;
-            this.vat = vat;
-            this.unit = unit;
-            this.price = price;
         }
 
         /// <summary>
         /// Számlázási tételek modell osztály konstrukora
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
-        /// <param name="unit">Számlázási tétel egysége</param>
-        /// <param name="price">Számlázási tétel összege (ára)</param>
+        /// <param name="category">Számlázási tétel kategóriája</param>
         /// <param name="quantity">Számlázási tétel mennyisége</param>
-        public BillingItem(string name, string unit, double price, int quantity)
+        public BillingItem(string name, BillingItemCategory category, int quantity)
         {
             this.name = name;
-            this.unit = unit;
-            this.price = price;
+            this.category = category;
             this.quantity = quantity;
         }
 
@@ -85,37 +66,10 @@
         /// <summary>
         /// Számlázási tétel kategóriája
         /// </summary>
-        public string Category
+        public BillingItemCategory Category
         {
             get { return category; }
             set { category = value; }
-        }
-
-        /// <summary>
-        /// Számlázási tétel ÁFA-kulcsának értéke
-        /// </summary>
-        public double Vat
-        {
-            get { return vat; }
-            set { vat = value; }
-        }
-
-        /// <summary>
-        /// Számlázási tétel egysége
-        /// </summary>
-        public string Unit
-        {
-            get { return unit; }
-            set { unit = value; }
-        }
-
-        /// <summary>
-        /// Számlázási tétel összege (ára)
-        /// </summary>
-        public double Price
-        {
-            get { return price; }
-            set { price = value; }
         }
 
         /// <summary>
@@ -137,7 +91,7 @@
         /// <returns>Visszaadja a BillingItems típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{name} {category} {vat} {unit} {price} {quantity}";
+            return $"{name} {category} {category} {quantity}";
         }
 
         #endregion
