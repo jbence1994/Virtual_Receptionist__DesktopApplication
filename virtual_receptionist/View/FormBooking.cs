@@ -40,11 +40,11 @@ namespace virtual_receptionist.View
             dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
         }
 
-        #endregion
-
         private void FormBooking_Load(object sender, EventArgs e)
         {
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
+
+        #endregion
     }
 }
