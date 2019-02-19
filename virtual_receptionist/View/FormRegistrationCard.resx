@@ -141,25 +141,6 @@
   <metadata name="errorProviderInput.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="buttonSaveToDatabase.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c
-        6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAB6IAAAeiAeJoUCEAAAAZdEVYdFNvZnR3YXJlAHd3dy5p
-        bmtzY2FwZS5vcmeb7jwaAAACyUlEQVRYR+2XW0/TYBjHvVO/g1/Ab8GViPFGA2hiAvMUPAQhIWAENYiR
-        xJggagJ4CkgQUREYGtTgLjiIHBRsCxR2KttYt3as5UKjMcrfvjUsLWtZ13JD4sWvad4+eZ7f+z5v3247
-        AFgmJ7fwTM6+QujIPdJoFGsV9ZJfVEHnF1fEN3Liwi2p7u7on3XKatq5jQKnyu6w2piSyqZVo1yEvNLS
-        ncYCysOikmrUXGvQUVV7H/XNUyku1rvlguJqv5byq51RbUxVXVtanpPnr0CZJFyu2l2mAiRQTgR19L8d
-        0QlYofWZJy1Pw72H9gQYhlITZsP45Oe0PLYFtortJyCJAcQjs6asxL26ApnIWkCMsvDODSsMGRLhpnUF
-        MvF/D2QtIETnMU99cAQfouwLEMhGc4KcCKRybb8WJGKLCC5+MoXzjiMp+CAsz6mQezKmjSHjtgWSgh/L
-        3Iw5SzPqWZGILaiQezKmjfnXBpsCW03WAmRGfJh2BGmLbQGRZ+FnR+FzQEw5sm0LbDXbT4D0LxKcdkSc
-        9yIYjWAuFEVTe092AuQcIO+1XagFBm5GQtf0CprHBHR9SeDRIIv2Ie9eSwJ2EAUO88psP3oF9NESTveE
-        sL/Nr3LgiR83PDy6KSnwYiyy25KAyC+ob4MR5KDSxiZFDm9mV/B4QkTtII+zfeFU8XXyFFonE9/7admV
-        UYB8DVnaY0o4oP/hOeYT8GBcTCu6kZr3/FoPLQ8N+JD6f2C6AlaZ8MfQqfS6oDNoWFTLseccWYVvSivY
-        V1Ryj2MBsvRuRrZUXEvjcPyHm1mtdywQ4sNQZmJYZDPIHun+KgUcC5CdT1ag+OWSYSEzrntiv3opaUQn
-        cPzcZdy83ZI1bQNT6JgUUP46gsNPgzi0CflKqy69438rG/FnPyMd1AmQk8oOBa5K1LX0oWN0SV2NDKz1
-        0vKie1Y6SuoC2PEXNfyqxsZ4R44AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAGBgAAAEAIACICQAAFgAAACgAAAAYAAAAMAAAAAEAIAAAAAAAAAkAALoFAAC6BQAAAAAAAAAA

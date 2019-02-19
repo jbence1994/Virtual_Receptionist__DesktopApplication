@@ -68,7 +68,6 @@
             this.groupBoxOtherData = new System.Windows.Forms.GroupBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.errorProviderInput = new System.Windows.Forms.ErrorProvider(this.components);
-            this.buttonSaveToDatabase = new System.Windows.Forms.Button();
             this.groupBoxGeneralData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
@@ -416,9 +415,9 @@
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOK.Image = ((System.Drawing.Image)(resources.GetObject("buttonOK.Image")));
-            this.buttonOK.Location = new System.Drawing.Point(343, 554);
+            this.buttonOK.Location = new System.Drawing.Point(12, 554);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(159, 64);
+            this.buttonOK.Size = new System.Drawing.Size(490, 64);
             this.buttonOK.TabIndex = 28;
             this.buttonOK.Text = "Felvitel";
             this.buttonOK.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -431,26 +430,11 @@
             this.errorProviderInput.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderInput.ContainerControl = this;
             // 
-            // buttonSaveToDatabase
-            // 
-            this.buttonSaveToDatabase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonSaveToDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSaveToDatabase.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveToDatabase.Image")));
-            this.buttonSaveToDatabase.Location = new System.Drawing.Point(12, 554);
-            this.buttonSaveToDatabase.Name = "buttonSaveToDatabase";
-            this.buttonSaveToDatabase.Size = new System.Drawing.Size(159, 64);
-            this.buttonSaveToDatabase.TabIndex = 30;
-            this.buttonSaveToDatabase.Text = "Adatok mentése adatbázisba";
-            this.buttonSaveToDatabase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonSaveToDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonSaveToDatabase.UseVisualStyleBackColor = true;
-            // 
             // FormGuestRegistrationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 630);
-            this.Controls.Add(this.buttonSaveToDatabase);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxOtherData);
             this.Controls.Add(this.groupBoxBillingData);
@@ -512,6 +496,5 @@
         private System.Windows.Forms.ErrorProvider errorProviderInput;
         private System.Windows.Forms.ComboBox comboBoxRoom;
         private System.Windows.Forms.Label labelRoom;
-        private System.Windows.Forms.Button buttonSaveToDatabase;
     }
 }
