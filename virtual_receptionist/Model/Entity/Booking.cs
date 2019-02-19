@@ -40,7 +40,7 @@ namespace virtual_receptionist.Model.Entity
         #region Konstruktorok
 
         /// <summary>
-        /// Reservation osztály konstruktora
+        /// Booking osztály konstruktora
         /// </summary>
         public Booking(List<Guest> guests, List<Room> rooms, int numberOfGuests, DateTime arrival, DateTime departure)
         {

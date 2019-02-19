@@ -27,7 +27,7 @@
         #region Konstruktor
 
         /// <summary>
-        /// Számlázási tételek kateógria modell osztály konstruktora
+        /// BillingItemCategory osztály konstruktora
         /// </summary>
         /// <param name="vat">Számlázási tétel kategória ÁFA-kulcsának értéke</param>
         /// <param name="unit">Számlázási tétel kategóriájának egysége</param>

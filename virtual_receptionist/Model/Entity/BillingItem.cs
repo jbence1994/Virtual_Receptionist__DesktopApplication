@@ -27,7 +27,7 @@
         #region Konstruktorok
 
         /// <summary>
-        /// Számlázási tételek modell osztály konstrukora
+        /// Billingitem osztály konstrukora
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>
@@ -38,7 +38,7 @@
         }
 
         /// <summary>
-        /// Számlázási tételek modell osztály konstrukora
+        /// BillingItem osztály konstrukora
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>

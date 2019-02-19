@@ -57,6 +57,7 @@
     <Compile Include="Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Model\Entity\BillingItemCategory.cs" />
     <Compile Include="Model\Entity\CorporateGuest.cs" />
+    <Compile Include="Model\Entity\RoomCategory.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\OpeningPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />

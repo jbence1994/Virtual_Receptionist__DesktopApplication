@@ -20,7 +20,7 @@
         /// <summary>
         /// Szobakategória
         /// </summary>
-        private string category;
+        private RoomCategory category;
 
         /// <summary>
         /// Szoba férőhelye
@@ -38,7 +38,7 @@
         /// <param name="number">Szobaszám</param>
         /// <param name="category">Szobakategória</param>
         /// <param name="capacity">Szoba férőhelye</param>
-        public Room(string name, int number, string category, int capacity)
+        public Room(string name, int number, RoomCategory category, int capacity)
         {
             this.name = name;
             this.number = number;
@@ -78,7 +78,7 @@
         /// <summary>
         /// Szobakategória
         /// </summary>
-        public string Category
+        public RoomCategory Category
         {
             get { return category; }
             set { category = value; }
