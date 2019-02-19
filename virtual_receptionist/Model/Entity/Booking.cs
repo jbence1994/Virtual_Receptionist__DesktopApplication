@@ -13,12 +13,12 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
-        private List<Guest> guests;
+        private Guest guest;
 
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
-        private List<Room> rooms;
+        private Room room;
 
         /// <summary>
         /// Vendégek száma
@@ -42,10 +42,10 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Booking osztály konstruktora
         /// </summary>
-        public Booking(List<Guest> guests, List<Room> rooms, int numberOfGuests, DateTime arrival, DateTime departure)
+        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrival, DateTime departure)
         {
-            this.guests = guests;
-            this.rooms = rooms;
+            this.guest = guest;
+            this.room = room;
             this.numberOfGuests = numberOfGuests;
             this.arrival = arrival;
             this.departure = departure;
@@ -58,19 +58,19 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
-        public List<Guest> Guests
+        public Guest Guest
         {
-            get { return guests; }
-            set { guests = value; }
+            get { return guest; }
+            set { guest = value; }
         }
 
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
-        public List<Room> Rooms
+        public Room Room
         {
-            get { return rooms; }
-            set { rooms = value; }
+            get { return room; }
+            set { room = value; }
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace virtual_receptionist.Model.Entity
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{guests} {rooms} {numberOfGuests} {arrival} {departure}";
+            return $"{guest} {room} {numberOfGuests} {arrival} {departure}";
         }
 
         #endregion
