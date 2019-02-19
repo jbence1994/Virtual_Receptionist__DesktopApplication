@@ -82,7 +82,7 @@ namespace virtual_receptionist.Model.Repository
 
             foreach (Booking booking in bookings)
             {
-                bookingsDataTable.Rows.Add(booking.Guests, booking.Rooms, booking.NumberOfGuests,
+                bookingsDataTable.Rows.Add(booking.Guest, booking.Room, booking.NumberOfGuests,
                     booking.Arrival, booking.Departure);
             }
 
