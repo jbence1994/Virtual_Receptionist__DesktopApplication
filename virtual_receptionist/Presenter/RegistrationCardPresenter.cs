@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using virtual_receptionist.Model;
-
-namespace virtual_receptionist.Presenter
+﻿namespace virtual_receptionist.Presenter
 {
     /// <summary>
     /// Vendég bejelentkező lap prezentere
@@ -17,7 +12,6 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void Save()
         {
-            throw new NotImplementedException();
         }
 
         #endregion
