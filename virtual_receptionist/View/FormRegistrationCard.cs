@@ -42,11 +42,6 @@ namespace virtual_receptionist.View
             presenter.Save();
         }
 
-        private void buttonCancel_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
         private void checkBoxCorporateGuest_CheckedChanged(object sender, System.EventArgs e)
         {
             textBoxVatNumber.ReadOnly = !checkBoxCorporateGuest.Checked;
