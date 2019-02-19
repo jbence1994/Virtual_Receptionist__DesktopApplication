@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace virtual_receptionist.Model.Entity
 {
@@ -12,12 +13,12 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
-        private Guest guest;
+        private List<Guest> guests;
 
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
-        private Room room;
+        private List<Room> rooms;
 
         /// <summary>
         /// Vendégek száma
@@ -41,10 +42,10 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Reservation osztály konstruktora
         /// </summary>
-        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrival, DateTime departure)
+        public Booking(List<Guest> guests, List<Room> rooms, int numberOfGuests, DateTime arrival, DateTime departure)
         {
-            this.guest = guest;
-            this.room = room;
+            this.guests = guests;
+            this.rooms = rooms;
             this.numberOfGuests = numberOfGuests;
             this.arrival = arrival;
             this.departure = departure;
@@ -57,19 +58,19 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
-        public Guest Guest
+        public List<Guest> Guests
         {
-            get { return guest; }
-            set { guest = value; }
+            get { return guests; }
+            set { guests = value; }
         }
 
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
-        public Room Room
+        public List<Room> Rooms
         {
-            get { return room; }
-            set { room = value; }
+            get { return rooms; }
+            set { rooms = value; }
         }
 
         /// <summary>
@@ -109,7 +110,7 @@ namespace virtual_receptionist.Model.Entity
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{guest} {room} {numberOfGuests} {arrival} {departure}";
+            return $"{guests} {rooms} {numberOfGuests} {arrival} {departure}";
         }
 
         #endregion
