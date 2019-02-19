@@ -259,6 +259,7 @@
             this.Name = "FormBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Foglalási napló";
+            this.Load += new System.EventHandler(this.FormBooking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).EndInit();
             this.tabControlBooking.ResumeLayout(false);
             this.tabPageBookings.ResumeLayout(false);

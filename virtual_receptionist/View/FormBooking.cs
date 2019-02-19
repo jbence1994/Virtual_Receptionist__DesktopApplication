@@ -38,9 +38,13 @@ namespace virtual_receptionist.View
             dataGridViewBookings.DataSource = null;
             DateTime arrivalDate = dateTimePickerBooking.Value;
             dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
-            dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 
         #endregion
+
+        private void FormBooking_Load(object sender, EventArgs e)
+        {
+            dataGridViewRooms.DataSource = presenter.GetRooms();
+        }
     }
 }
