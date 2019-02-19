@@ -25,8 +25,8 @@ namespace virtual_receptionist.Model.Repository
                 string unit = row["Unit"].ToString();
                 double price = double.Parse(row["Price"].ToString());
 
-                BillingItemCategory billingItemCategory = new BillingItemCategory(categoryName, vat, unit);
-                BillingItem billingItemInstance = new BillingItem(name, billingItemCategory, price);
+                BillingItemCategory billingItemCategoryInstance = new BillingItemCategory(categoryName, vat, unit);
+                BillingItem billingItemInstance = new BillingItem(name, billingItemCategoryInstance, price);
                 billingItems.Add(billingItemInstance);
             }
         }
