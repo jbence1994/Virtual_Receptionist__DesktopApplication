@@ -35,7 +35,6 @@ namespace virtual_receptionist.View
 
         private void dateTimePickerBooking_ValueChanged(object sender, EventArgs e)
         {
-            dataGridViewBookings.DataSource = null;
             DateTime arrivalDate = dateTimePickerBooking.Value;
             dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
         }

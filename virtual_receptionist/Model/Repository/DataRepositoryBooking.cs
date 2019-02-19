@@ -69,10 +69,8 @@ namespace virtual_receptionist.Model.Repository
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
         public DataTable GetBookings(string arrivalDate)
         {
-            if (bookings.Count == 0)
-            {
-                UploadBookingsList(arrivalDate);
-            }
+            bookings.Clear();
+            UploadBookingsList(arrivalDate);
 
             DataTable bookingsDataTable = new DataTable();
             bookingsDataTable.Columns.Add("GuestName", typeof(string));
