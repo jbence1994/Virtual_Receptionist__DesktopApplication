@@ -33,6 +33,7 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBinarySoftwareLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
             this.SuspendLayout();
@@ -41,9 +42,9 @@
             // 
             this.pictureBoxBinarySoftwareLogo.BackColor = System.Drawing.Color.White;
             this.pictureBoxBinarySoftwareLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBinarySoftwareLogo.Image")));
-            this.pictureBoxBinarySoftwareLogo.Location = new System.Drawing.Point(12, 281);
+            this.pictureBoxBinarySoftwareLogo.Location = new System.Drawing.Point(417, 324);
             this.pictureBoxBinarySoftwareLogo.Name = "pictureBoxBinarySoftwareLogo";
-            this.pictureBoxBinarySoftwareLogo.Size = new System.Drawing.Size(696, 174);
+            this.pictureBoxBinarySoftwareLogo.Size = new System.Drawing.Size(291, 131);
             this.pictureBoxBinarySoftwareLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBinarySoftwareLogo.TabIndex = 0;
             this.pictureBoxBinarySoftwareLogo.TabStop = false;
@@ -70,24 +71,35 @@
             // 
             // pictureBoxVRLogo
             // 
-            this.pictureBoxVRLogo.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxVRLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVRLogo.Image")));
+            this.pictureBoxVRLogo.Location = new System.Drawing.Point(15, 12);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
-            this.pictureBoxVRLogo.Size = new System.Drawing.Size(696, 263);
+            this.pictureBoxVRLogo.Size = new System.Drawing.Size(693, 306);
+            this.pictureBoxVRLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVRLogo.TabIndex = 13;
             this.pictureBoxVRLogo.TabStop = false;
             // 
-            // FormApplicationOpening
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(42, 384);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(369, 23);
+            this.progressBar1.TabIndex = 14;
+            // 
+            // FormOpening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(720, 480);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBoxVRLogo);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxBinarySoftwareLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormApplicationOpening";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormOpening";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormApplicationOpening";
             this.Load += new System.EventHandler(this.FormApplicationOpening_Load);
@@ -104,5 +116,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.PictureBox pictureBoxVRLogo;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
