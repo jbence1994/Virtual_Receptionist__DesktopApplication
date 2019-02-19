@@ -15,7 +15,7 @@ namespace virtual_receptionist.Model.Repository
         private void UploadBookingsList()
         {
             string sql =
-                "SELECT guest.Name, room.Number, reservation.NumberOfGuests, reservation.ArrivalDate, reservation.DepartureDate FROM reservation, guest, room WHERE reservation.GuestID = guest.ID AND reservation.RoomID = room.ID ORDER BY reservation.ArrivalDate ASC";
+                "SELECT guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID ORDER BY booking.ArrivalDate ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -66,7 +66,8 @@ namespace virtual_receptionist.Model.Repository
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        public DataTable GetBookings()
+        /// <param name="arrivalDate">Érkezási dátum</param>
+        public DataTable GetBookings(DateTime arrivalDate)
         {
             if (bookings.Count == 0)
             {
@@ -74,15 +75,15 @@ namespace virtual_receptionist.Model.Repository
             }
 
             DataTable bookingsDataTable = new DataTable();
-            bookingsDataTable.Columns.Add("GuestName", typeof(Guest));
-            bookingsDataTable.Columns.Add("RoomNumber", typeof(Room));
+            bookingsDataTable.Columns.Add("GuestName", typeof(string));
+            bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
             bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
             bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
             bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
 
             foreach (Booking booking in bookings)
             {
-                bookingsDataTable.Rows.Add(booking.Guest, booking.Room, booking.NumberOfGuests,
+                bookingsDataTable.Rows.Add(booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
                     booking.Arrival, booking.Departure);
             }
 
