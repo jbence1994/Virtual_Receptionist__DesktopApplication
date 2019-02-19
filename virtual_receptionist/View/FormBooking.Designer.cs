@@ -162,7 +162,7 @@
             this.dataGridViewRooms.Name = "dataGridViewRooms";
             this.dataGridViewRooms.ReadOnly = true;
             this.dataGridViewRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRooms.Size = new System.Drawing.Size(843, 557);
+            this.dataGridViewRooms.Size = new System.Drawing.Size(843, 506);
             this.dataGridViewRooms.TabIndex = 0;
             // 
             // ColumnName

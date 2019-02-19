@@ -113,6 +113,30 @@ namespace virtual_receptionist.Model.Repository
             return roomsDataTable;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void CreateBooking()
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DeleteBooking()
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void UpdateBooking()
+        {
+
+        }
+
         #endregion
     }
 }
