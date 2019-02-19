@@ -234,9 +234,11 @@
             // pictureBoxVRLogo
             // 
             this.pictureBoxVRLogo.BackColor = System.Drawing.Color.White;
+            this.pictureBoxVRLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVRLogo.Image")));
             this.pictureBoxVRLogo.Location = new System.Drawing.Point(12, 66);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
             this.pictureBoxVRLogo.Size = new System.Drawing.Size(326, 436);
+            this.pictureBoxVRLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVRLogo.TabIndex = 5;
             this.pictureBoxVRLogo.TabStop = false;
             // 
@@ -358,9 +360,9 @@
             this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWelcome.Location = new System.Drawing.Point(3, 19);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(371, 16);
+            this.labelWelcome.Size = new System.Drawing.Size(272, 16);
             this.labelWelcome.TabIndex = 0;
-            this.labelWelcome.Text = "Üdvözöljük a Virtual Receptionist asztali platformján!";
+            this.labelWelcome.Text = "Üdvözöljük a Virtual Receptionist-ben!";
             // 
             // FormMainMenu
             // 
