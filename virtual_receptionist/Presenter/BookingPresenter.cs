@@ -15,22 +15,12 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         /// <returns>A foglalásokkal feltöltött adattbálát adja vissza a függvény</returns>
         /// <param name="arrivalDate">Érkezési dátum</param>
-        public DataTable GetBookings(string arrivalDate)
+        public DataTable GetBookings(DateTime arrivalDate)
         {
-            DataTable bookings = dataRepository.GetBookings();
+            string arrival = arrivalDate.ToString("yyyy-MM-dd");
 
-            foreach (DataRow row in bookings.Rows)
-            {
-                DateTime arrival = (DateTime) row["ArrivalDate"];
-                string formattedArrival = arrival.ToString("yyyy-MM-dd");
-
-                if (formattedArrival == arrivalDate)
-                {
-                    throw new NotImplementedException();
-                }
-            }
-
-            return null;
+            DataTable bookings = dataRepository.GetBookings(arrival);
+            return bookings;
         }
 
         /// <summary>
