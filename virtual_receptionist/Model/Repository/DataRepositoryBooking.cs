@@ -11,10 +11,11 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát érkezési dátum szerint
         /// </summary>
-        private void UploadBookingsList()
+        /// <param name="arrivalDate">Érkezési dátum</param>
+        private void UploadBookingsList(string arrivalDate)
         {
             string sql =
-                "SELECT guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID ORDER BY booking.ArrivalDate ASC";
+                $"SELECT guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.ArrivalDate LIKE \"{arrivalDate}\" ORDER BY booking.ArrivalDate ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -64,12 +65,13 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely visszaadja az adatbázisban tárolt összes szobakiadás adatát egy DataTable adatszerkezetben
         /// </summary>
+        /// <param name="arrivalDate">Érkezési dátum</param>
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        public DataTable GetBookings()
+        public DataTable GetBookings(string arrivalDate)
         {
             if (bookings.Count == 0)
             {
-                UploadBookingsList();
+                UploadBookingsList(arrivalDate);
             }
 
             DataTable bookingsDataTable = new DataTable();
