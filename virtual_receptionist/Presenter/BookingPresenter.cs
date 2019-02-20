@@ -12,15 +12,28 @@ namespace virtual_receptionist.Presenter
         #region Foglalási napló nézetfrissítései
 
         /// <summary>
-        /// Metódus, amely visszaadja a foglalásokat adattárból
+        /// Metódus, amely visszaadja a foglalásokat adattárból érkezés dátuma szerint
         /// </summary>
         /// <returns>A foglalásokkal feltöltött adattbálát adja vissza a függvény</returns>
-        /// <param name="arrivalDate">Érkezési dátum</param>
-        public DataTable GetBookings(DateTime arrivalDate)
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
         {
             string arrival = arrivalDate.ToString("yyyy-MM-dd");
 
-            DataTable bookings = dataRepository.GetBookings(arrival);
+            DataTable bookings = dataRepository.GetBookingsByArrivalDate(arrival);
+            return bookings;
+        }
+
+        /// <summary>
+        /// Metódus, amely visszaadja a foglalásokat adattárból távozás dátuma szerint
+        /// </summary>
+        /// <param name="departureDate">Távozás dátuma</param>
+        /// <returns></returns>
+        public DataTable GetBookingsByDepartureDate(DateTime departureDate)
+        {
+            string departure = departureDate.ToString("yyyy-MM-dd");
+
+            DataTable bookings = dataRepository.GetBookingsByDepartureDate(departure);
             return bookings;
         }
 
@@ -40,8 +53,8 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void AddNewRecordToBookingTable(params object[] bookingParameters)
         {
-            Booking booking = new Booking();
-            dataRepository.CreateBooking(booking);
+            //Booking booking = new Booking();
+            //dataRepository.CreateBooking(booking);
         }
 
         /// <summary>
@@ -50,8 +63,8 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void DeleteRecordFromBookingTable(params object[] bookingParameters)
         {
-            Booking booking = new Booking();
-            dataRepository.DeleteBooking(booking);
+            //Booking booking = new Booking();
+            //dataRepository.DeleteBooking(booking);
         }
 
         /// <summary>
@@ -60,8 +73,8 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void UpdateRecordInBookingTable(params object[] bookingParameters)
         {
-            Booking booking = new Booking();
-            dataRepository.UpdateBooking(booking);
+            //Booking booking = new Booking();
+            //dataRepository.UpdateBooking(booking);
         }
 
         #endregion

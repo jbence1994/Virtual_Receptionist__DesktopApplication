@@ -33,17 +33,23 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        private void dateTimePickerBooking_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime arrivalDate = dateTimePickerBooking.Value;
-            dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
-        }
-
         private void FormBooking_Load(object sender, EventArgs e)
         {
-            DateTime arrivalDate = dateTimePickerBooking.Value;
-            dataGridViewBookings.DataSource = presenter.GetBookings(arrivalDate);
+            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
+            dataGridViewBookings.DataSource = presenter.GetBookingsByArrivalDate(arrivalDate);
             dataGridViewRooms.DataSource = presenter.GetRooms();
+        }
+
+        private void dateTimePickerArrivalDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
+            dataGridViewBookings.DataSource = presenter.GetBookingsByArrivalDate(arrivalDate);
+        }
+
+        private void dateTimePickerDepartureDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime departureDate = dateTimePickerDepartureDate.Value;
+            dataGridViewBookings.DataSource = presenter.GetBookingsByDepartureDate(departureDate);
         }
 
         private void buttonNewBooking_Click(object sender, EventArgs e)
