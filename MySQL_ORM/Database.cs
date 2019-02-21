@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
+using System.Linq.Expressions;
 using MySql.Data.MySqlClient;
 
 namespace MySQL_ORM
@@ -146,10 +147,21 @@ namespace MySQL_ORM
         /// </summary>
         private void CloseConnection()
         {
-            if (mySqlConnection.State == ConnectionState.Open)
+            try
             {
-                mySqlConnection.Close();
-                Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                if (mySqlConnection.State == ConnectionState.Open)
+                {
+                    mySqlConnection.Close();
+                    Debug.WriteLine("Adatbázis kapcsolat sikeresen lezárult...");
+                }
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
             }
         }
 
