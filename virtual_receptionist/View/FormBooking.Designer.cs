@@ -64,6 +64,9 @@
             this.dataGridViewBookings.AllowUserToDeleteRows = false;
             this.dataGridViewBookings.AllowUserToResizeColumns = false;
             this.dataGridViewBookings.AllowUserToResizeRows = false;
+            this.dataGridViewBookings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBookings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -125,6 +128,9 @@
             // 
             // tabControlBooking
             // 
+            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlBooking.Controls.Add(this.tabPageBookings);
             this.tabControlBooking.Controls.Add(this.tabPageRooms);
             this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
@@ -161,6 +167,9 @@
             this.dataGridViewRooms.AllowUserToDeleteRows = false;
             this.dataGridViewRooms.AllowUserToResizeColumns = false;
             this.dataGridViewRooms.AllowUserToResizeRows = false;
+            this.dataGridViewRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -206,6 +215,7 @@
             // 
             // buttonNewBooking
             // 
+            this.buttonNewBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonNewBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNewBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewBooking.Image")));
             this.buttonNewBooking.Location = new System.Drawing.Point(12, 562);
@@ -220,6 +230,7 @@
             // 
             // buttonUpdateBooking
             // 
+            this.buttonUpdateBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonUpdateBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateBooking.Image")));
             this.buttonUpdateBooking.Location = new System.Drawing.Point(177, 562);
@@ -234,6 +245,7 @@
             // 
             // buttonDeleteBooking
             // 
+            this.buttonDeleteBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteBooking.Image")));
             this.buttonDeleteBooking.Location = new System.Drawing.Point(342, 562);
@@ -248,6 +260,7 @@
             // 
             // dateTimePickerArrivalDate
             // 
+            this.dateTimePickerArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(521, 606);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(159, 20);
@@ -256,6 +269,7 @@
             // 
             // dateTimePickerDepartureDate
             // 
+            this.dateTimePickerDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(716, 606);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(159, 20);
@@ -264,6 +278,7 @@
             // 
             // labelArrivalDate
             // 
+            this.labelArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelArrivalDate.AutoSize = true;
             this.labelArrivalDate.Location = new System.Drawing.Point(521, 590);
             this.labelArrivalDate.Name = "labelArrivalDate";
@@ -273,6 +288,7 @@
             // 
             // labelDepartureDate
             // 
+            this.labelDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelDepartureDate.AutoSize = true;
             this.labelDepartureDate.Location = new System.Drawing.Point(716, 590);
             this.labelDepartureDate.Name = "labelDepartureDate";
