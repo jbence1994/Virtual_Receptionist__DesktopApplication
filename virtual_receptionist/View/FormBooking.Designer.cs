@@ -64,6 +64,7 @@
             this.dataGridViewBookings.AllowUserToDeleteRows = false;
             this.dataGridViewBookings.AllowUserToResizeColumns = false;
             this.dataGridViewBookings.AllowUserToResizeRows = false;
+            this.dataGridViewBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBookings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
@@ -93,7 +94,6 @@
             this.ColumnGuest.HeaderText = "Vendég neve";
             this.ColumnGuest.Name = "ColumnGuest";
             this.ColumnGuest.ReadOnly = true;
-            this.ColumnGuest.Width = 300;
             // 
             // ColumnRoomNumber
             // 
@@ -161,6 +161,7 @@
             this.dataGridViewRooms.AllowUserToDeleteRows = false;
             this.dataGridViewRooms.AllowUserToResizeColumns = false;
             this.dataGridViewRooms.AllowUserToResizeRows = false;
+            this.dataGridViewRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnName,
@@ -181,7 +182,6 @@
             this.ColumnName.HeaderText = "Szoba neve";
             this.ColumnName.Name = "ColumnName";
             this.ColumnName.ReadOnly = true;
-            this.ColumnName.Width = 200;
             // 
             // ColumnNumber
             // 
@@ -189,7 +189,6 @@
             this.ColumnNumber.HeaderText = "Szobaszám";
             this.ColumnNumber.Name = "ColumnNumber";
             this.ColumnNumber.ReadOnly = true;
-            this.ColumnNumber.Width = 200;
             // 
             // ColumnCategory
             // 
@@ -197,7 +196,6 @@
             this.ColumnCategory.HeaderText = "Szobakategória";
             this.ColumnCategory.Name = "ColumnCategory";
             this.ColumnCategory.ReadOnly = true;
-            this.ColumnCategory.Width = 200;
             // 
             // ColumnCapacity
             // 
@@ -205,7 +203,6 @@
             this.ColumnCapacity.HeaderText = "Kapacitás";
             this.ColumnCapacity.Name = "ColumnCapacity";
             this.ColumnCapacity.ReadOnly = true;
-            this.ColumnCapacity.Width = 200;
             // 
             // buttonNewBooking
             // 

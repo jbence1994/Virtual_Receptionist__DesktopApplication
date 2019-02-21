@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using virtual_receptionist.Model.Entity;
+﻿using System.Collections.Generic;
 
 namespace virtual_receptionist.Presenter
 {
