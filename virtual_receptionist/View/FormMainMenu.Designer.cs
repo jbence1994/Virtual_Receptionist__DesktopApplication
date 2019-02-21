@@ -52,10 +52,8 @@
             this.toolStripButtonBooking = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonGuestDatabase = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
-            this.panelMainMenu = new System.Windows.Forms.Panel();
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.labelDescription = new System.Windows.Forms.Label();
-            this.labelWelcome = new System.Windows.Forms.Label();
+            this.panelMainMenu = new System.Windows.Forms.Panel();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -71,7 +69,7 @@
             this.toolStripMenuItemHelp});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Size = new System.Drawing.Size(905, 24);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(1008, 24);
             this.menuStripMainMenu.TabIndex = 0;
             // 
             // toolStripMenuItemFile
@@ -213,7 +211,7 @@
             this.toolStripStatusLabelMenuName});
             this.statusStripMainMenu.Location = new System.Drawing.Point(0, 692);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
-            this.statusStripMainMenu.Size = new System.Drawing.Size(905, 37);
+            this.statusStripMainMenu.Size = new System.Drawing.Size(1008, 37);
             this.statusStripMainMenu.TabIndex = 1;
             // 
             // toolStripStatusLabelClient
@@ -232,10 +230,11 @@
             // pictureBoxVRLogo
             // 
             this.pictureBoxVRLogo.BackColor = System.Drawing.Color.White;
+            this.pictureBoxVRLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBoxVRLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVRLogo.Image")));
-            this.pictureBoxVRLogo.Location = new System.Drawing.Point(641, 66);
+            this.pictureBoxVRLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
-            this.pictureBoxVRLogo.Size = new System.Drawing.Size(252, 623);
+            this.pictureBoxVRLogo.Size = new System.Drawing.Size(261, 629);
             this.pictureBoxVRLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVRLogo.TabIndex = 5;
             this.pictureBoxVRLogo.TabStop = false;
@@ -249,7 +248,7 @@
             this.toolStripButtonBilling});
             this.toolStripMainMenu.Location = new System.Drawing.Point(0, 24);
             this.toolStripMainMenu.Name = "toolStripMainMenu";
-            this.toolStripMainMenu.Size = new System.Drawing.Size(905, 39);
+            this.toolStripMainMenu.Size = new System.Drawing.Size(1008, 39);
             this.toolStripMainMenu.TabIndex = 6;
             this.toolStripMainMenu.Text = "toolStrip1";
             // 
@@ -307,21 +306,12 @@
             this.toolStripButtonBilling.MouseLeave += new System.EventHandler(this.toolStripButtonBilling_MouseLeave);
             this.toolStripButtonBilling.MouseHover += new System.EventHandler(this.toolStripButtonBilling_MouseHover);
             // 
-            // panelMainMenu
-            // 
-            this.panelMainMenu.Controls.Add(this.buttonLogout);
-            this.panelMainMenu.Controls.Add(this.labelDescription);
-            this.panelMainMenu.Controls.Add(this.labelWelcome);
-            this.panelMainMenu.Location = new System.Drawing.Point(12, 66);
-            this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(623, 623);
-            this.panelMainMenu.TabIndex = 8;
-            // 
             // buttonLogout
             // 
+            this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
-            this.buttonLogout.Location = new System.Drawing.Point(461, 556);
+            this.buttonLogout.Location = new System.Drawing.Point(846, 562);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(159, 64);
             this.buttonLogout.TabIndex = 29;
@@ -332,33 +322,23 @@
             this.buttonLogout.MouseLeave += new System.EventHandler(this.buttonLogout_MouseLeave);
             this.buttonLogout.MouseHover += new System.EventHandler(this.buttonLogout_MouseHover);
             // 
-            // labelDescription
+            // panelMainMenu
             // 
-            this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(3, 58);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(593, 143);
-            this.labelDescription.TabIndex = 1;
-            this.labelDescription.Text = resources.GetString("labelDescription.Text");
-            // 
-            // labelWelcome
-            // 
-            this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelWelcome.Location = new System.Drawing.Point(3, 11);
-            this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(421, 16);
-            this.labelWelcome.TabIndex = 0;
-            this.labelWelcome.Text = "Üdvözöljük a Virtual Receptionist adminisztrrációs felületén!";
+            this.panelMainMenu.Controls.Add(this.buttonLogout);
+            this.panelMainMenu.Controls.Add(this.pictureBoxVRLogo);
+            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainMenu.Location = new System.Drawing.Point(0, 63);
+            this.panelMainMenu.Name = "panelMainMenu";
+            this.panelMainMenu.Size = new System.Drawing.Size(1008, 629);
+            this.panelMainMenu.TabIndex = 30;
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 729);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.toolStripMainMenu);
-            this.Controls.Add(this.pictureBoxVRLogo);
             this.Controls.Add(this.statusStripMainMenu);
             this.Controls.Add(this.menuStripMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -376,7 +356,6 @@
             this.toolStripMainMenu.ResumeLayout(false);
             this.toolStripMainMenu.PerformLayout();
             this.panelMainMenu.ResumeLayout(false);
-            this.panelMainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,12 +383,10 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBooking;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuestDatabase;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBilling;
-        private System.Windows.Forms.Panel panelMainMenu;
-        private System.Windows.Forms.Label labelWelcome;
-        private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuestRegistrationCard;
         private System.Windows.Forms.ToolStripButton toolStripButtonGuestRegistrationCard;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.Button buttonLogout;
+        private System.Windows.Forms.Panel panelMainMenu;
     }
 }
