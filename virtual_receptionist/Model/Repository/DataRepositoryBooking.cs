@@ -123,6 +123,37 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="booking">Booking objektum</param>
+        public void CreateBooking(Booking booking)
+        {
+            string sql =
+                $"INSERT INTO booking(GuestID, RoomID, NumberOfGuests, ArrivalDate, DepartureDate) VALUES ((SELECT guest.ID FROM guest WHERE guest.Name LIKE \"{booking.Guest.Name}\"), (SELECT room.ID FROM room WHERE room.Number LIKE \"{booking.Room.Number}\"), VENDÉGSZÁM, DÁTUM, DÁTUM);";
+            database.DML(sql);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="booking">Booking objektum</param>>
+        public void DeleteBooking(Booking booking)
+        {
+            string sql = $"DELETE FROM booking WHERE ";
+            database.DML(sql);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="booking">Booking objektum</param>
+        public void UpdateBooking(Booking booking)
+        {
+            string sql = $"UPDATE room SET WHERE";
+            database.DML(sql);
+        }
+
+        /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobákat tartalmazó listát
         /// </summary>
         /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
@@ -168,33 +199,6 @@ namespace virtual_receptionist.Model.Repository
             }
 
             return roomsDataTable;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="booking">Booking objektum</param>
-        public void CreateBooking(Booking booking)
-        {
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="booking">Booking objektum</param>>
-        public void DeleteBooking(Booking booking)
-        {
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="booking">Booking objektum</param>
-        public void UpdateBooking(Booking booking)
-        {
-
         }
 
         #endregion
