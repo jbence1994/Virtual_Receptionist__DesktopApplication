@@ -769,7 +769,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendégadatbázis";
+            this.Text = "Vendégadatbázis | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormGuestDatabase_Load);
             this.tabControlGuestDatabase.ResumeLayout(false);
             this.tabPagePrivateGuest.ResumeLayout(false);

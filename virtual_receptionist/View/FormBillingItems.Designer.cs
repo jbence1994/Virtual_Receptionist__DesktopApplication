@@ -231,7 +231,7 @@
             this.labelVAT.TabIndex = 10;
             this.labelVAT.Text = "ÁFA:";
             // 
-            // FormModalBillingItems
+            // FormBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,9 +240,9 @@
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormModalBillingItems";
+            this.Name = "FormBillingItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Számlázási tételek";
+            this.Text = "Számlázási tételek | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormModalBillingItems_Load);
             this.groupBoxItemParameters.ResumeLayout(false);
             this.groupBoxItemParameters.PerformLayout();

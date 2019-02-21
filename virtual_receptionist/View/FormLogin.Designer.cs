@@ -34,6 +34,7 @@
             this.labelCopyright = new System.Windows.Forms.Label();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.groupBoxLogin = new System.Windows.Forms.GroupBox();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.comboBoxConnectionType = new System.Windows.Forms.ComboBox();
             this.labelPassword = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.textBoxAccomodationID = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelAccomodationID = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBinarySoftwareLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
             this.groupBoxLogin.SuspendLayout();
@@ -103,6 +103,16 @@
             this.groupBoxLogin.Size = new System.Drawing.Size(441, 227);
             this.groupBoxLogin.TabIndex = 14;
             this.groupBoxLogin.TabStop = false;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(175, 179);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(214, 23);
+            this.buttonExit.TabIndex = 14;
+            this.buttonExit.Text = "Kilépés az alkalmazásból";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonLogin
             // 
@@ -167,16 +177,6 @@
             this.labelAccomodationID.TabIndex = 11;
             this.labelAccomodationID.Text = "Szálláshely azonosító:";
             // 
-            // buttonExit
-            // 
-            this.buttonExit.Location = new System.Drawing.Point(175, 179);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(214, 23);
-            this.buttonExit.TabIndex = 14;
-            this.buttonExit.Text = "Kilépés az alkalmazásból";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,7 +193,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bejelentkezés";
+            this.Text = "Bejelentkezés | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormApplicationOpening_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBinarySoftwareLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).EndInit();

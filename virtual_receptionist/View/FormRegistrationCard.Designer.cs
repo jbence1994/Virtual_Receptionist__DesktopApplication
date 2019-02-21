@@ -443,7 +443,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendég bejelentkező lap";
+            this.Text = "Vendég bejelentkező lap | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
             this.groupBoxGuestData.ResumeLayout(false);
             this.groupBoxGuestData.PerformLayout();

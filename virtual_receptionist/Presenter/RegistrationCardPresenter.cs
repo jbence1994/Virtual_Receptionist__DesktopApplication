@@ -25,7 +25,7 @@ namespace virtual_receptionist.Presenter
         /// <returns></returns>
         public List<int> GetRoomNumbers()
         {
-            throw new NotImplementedException();
+            return new List<int>();
         }
 
         #endregion

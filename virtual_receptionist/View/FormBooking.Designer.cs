@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBooking));
             this.dataGridViewBookings = new System.Windows.Forms.DataGridView();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGuest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGuestCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlBooking = new System.Windows.Forms.TabControl();
             this.tabPageBookings = new System.Windows.Forms.TabPage();
             this.tabPageRooms = new System.Windows.Forms.TabPage();
@@ -45,12 +51,6 @@
             this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.labelArrivalDate = new System.Windows.Forms.Label();
             this.labelDepartureDate = new System.Windows.Forms.Label();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGuest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGuestCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDeparture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).BeginInit();
             this.tabControlBooking.SuspendLayout();
             this.tabPageBookings.SuspendLayout();
@@ -79,6 +79,49 @@
             this.dataGridViewBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewBookings.Size = new System.Drawing.Size(843, 506);
             this.dataGridViewBookings.TabIndex = 7;
+            // 
+            // ColumnID
+            // 
+            this.ColumnID.DataPropertyName = "ID";
+            this.ColumnID.HeaderText = "Foglalás azonosító";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            // 
+            // ColumnGuest
+            // 
+            this.ColumnGuest.DataPropertyName = "GuestName";
+            this.ColumnGuest.HeaderText = "Vendég neve";
+            this.ColumnGuest.Name = "ColumnGuest";
+            this.ColumnGuest.ReadOnly = true;
+            this.ColumnGuest.Width = 300;
+            // 
+            // ColumnRoomNumber
+            // 
+            this.ColumnRoomNumber.DataPropertyName = "RoomNumber";
+            this.ColumnRoomNumber.HeaderText = "Szobaszám";
+            this.ColumnRoomNumber.Name = "ColumnRoomNumber";
+            this.ColumnRoomNumber.ReadOnly = true;
+            // 
+            // ColumnGuestCapacity
+            // 
+            this.ColumnGuestCapacity.DataPropertyName = "NumberOfGuests";
+            this.ColumnGuestCapacity.HeaderText = "Vendégszám";
+            this.ColumnGuestCapacity.Name = "ColumnGuestCapacity";
+            this.ColumnGuestCapacity.ReadOnly = true;
+            // 
+            // ColumnArrival
+            // 
+            this.ColumnArrival.DataPropertyName = "ArrivalDate";
+            this.ColumnArrival.HeaderText = "Érkezés";
+            this.ColumnArrival.Name = "ColumnArrival";
+            this.ColumnArrival.ReadOnly = true;
+            // 
+            // ColumnDeparture
+            // 
+            this.ColumnDeparture.DataPropertyName = "DepartureDate";
+            this.ColumnDeparture.HeaderText = "Távozás";
+            this.ColumnDeparture.Name = "ColumnDeparture";
+            this.ColumnDeparture.ReadOnly = true;
             // 
             // tabControlBooking
             // 
@@ -240,49 +283,6 @@
             this.labelDepartureDate.TabIndex = 15;
             this.labelDepartureDate.Text = "Távozás dátuma:";
             // 
-            // ColumnID
-            // 
-            this.ColumnID.DataPropertyName = "ID";
-            this.ColumnID.HeaderText = "Foglalás azonosító";
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.ReadOnly = true;
-            // 
-            // ColumnGuest
-            // 
-            this.ColumnGuest.DataPropertyName = "GuestName";
-            this.ColumnGuest.HeaderText = "Vendég neve";
-            this.ColumnGuest.Name = "ColumnGuest";
-            this.ColumnGuest.ReadOnly = true;
-            this.ColumnGuest.Width = 300;
-            // 
-            // ColumnRoomNumber
-            // 
-            this.ColumnRoomNumber.DataPropertyName = "RoomNumber";
-            this.ColumnRoomNumber.HeaderText = "Szobaszám";
-            this.ColumnRoomNumber.Name = "ColumnRoomNumber";
-            this.ColumnRoomNumber.ReadOnly = true;
-            // 
-            // ColumnGuestCapacity
-            // 
-            this.ColumnGuestCapacity.DataPropertyName = "NumberOfGuests";
-            this.ColumnGuestCapacity.HeaderText = "Vendégszám";
-            this.ColumnGuestCapacity.Name = "ColumnGuestCapacity";
-            this.ColumnGuestCapacity.ReadOnly = true;
-            // 
-            // ColumnArrival
-            // 
-            this.ColumnArrival.DataPropertyName = "ArrivalDate";
-            this.ColumnArrival.HeaderText = "Érkezés";
-            this.ColumnArrival.Name = "ColumnArrival";
-            this.ColumnArrival.ReadOnly = true;
-            // 
-            // ColumnDeparture
-            // 
-            this.ColumnDeparture.DataPropertyName = "DepartureDate";
-            this.ColumnDeparture.HeaderText = "Távozás";
-            this.ColumnDeparture.Name = "ColumnDeparture";
-            this.ColumnDeparture.ReadOnly = true;
-            // 
             // FormBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,7 +300,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Foglalási napló";
+            this.Text = "Foglalási napló | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormBooking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).EndInit();
             this.tabControlBooking.ResumeLayout(false);
