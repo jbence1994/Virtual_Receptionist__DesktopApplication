@@ -15,11 +15,13 @@ namespace virtual_receptionist.Model.Repository
         private void UploadBookingsListByArrivalDate(string arrivalDate)
         {
             string sql =
-                $"SELECT guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.ArrivalDate LIKE \"{arrivalDate}\" ORDER BY booking.ArrivalDate ASC";
+                $"SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.ArrivalDate LIKE \"{arrivalDate}\" ORDER BY booking.ArrivalDate ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
+                int id = Convert.ToInt32(row["ID"]);
+
                 Guest guest = new PrivateGuest()
                 {
                     Name = row["Name"].ToString()
@@ -34,7 +36,7 @@ namespace virtual_receptionist.Model.Repository
                 DateTime arrival = (DateTime) row["ArrivalDate"];
                 DateTime departure = (DateTime) row["DepartureDate"];
 
-                Booking bookingInstance = new Booking(guest, room, numberOfGuests, arrival, departure);
+                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
                 bookings.Add(bookingInstance);
             }
         }
@@ -46,11 +48,13 @@ namespace virtual_receptionist.Model.Repository
         private void UploadBookingsListByDepartureDate(string departureDate)
         {
             string sql =
-                $"SELECT guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.DepartureDate LIKE \"{departureDate}\" ORDER BY booking.DepartureDate ASC";
+                $"SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.DepartureDate LIKE \"{departureDate}\" ORDER BY booking.DepartureDate ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
+                int id = Convert.ToInt32(row["ID"]);
+
                 Guest guest = new PrivateGuest()
                 {
                     Name = row["Name"].ToString()
@@ -65,7 +69,7 @@ namespace virtual_receptionist.Model.Repository
                 DateTime arrival = (DateTime) row["ArrivalDate"];
                 DateTime departure = (DateTime) row["DepartureDate"];
 
-                Booking bookingInstance = new Booking(guest, room, numberOfGuests, arrival, departure);
+                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
                 bookings.Add(bookingInstance);
             }
         }
