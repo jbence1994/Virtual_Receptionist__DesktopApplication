@@ -81,7 +81,7 @@
             this.dataGridViewBookings.Name = "dataGridViewBookings";
             this.dataGridViewBookings.ReadOnly = true;
             this.dataGridViewBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBookings.Size = new System.Drawing.Size(843, 506);
+            this.dataGridViewBookings.Size = new System.Drawing.Size(1073, 526);
             this.dataGridViewBookings.TabIndex = 7;
             // 
             // ColumnID
@@ -136,7 +136,7 @@
             this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
             this.tabControlBooking.Name = "tabControlBooking";
             this.tabControlBooking.SelectedIndex = 0;
-            this.tabControlBooking.Size = new System.Drawing.Size(863, 544);
+            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
             this.tabControlBooking.TabIndex = 8;
             // 
             // tabPageBookings
@@ -145,7 +145,7 @@
             this.tabPageBookings.Location = new System.Drawing.Point(4, 22);
             this.tabPageBookings.Name = "tabPageBookings";
             this.tabPageBookings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBookings.Size = new System.Drawing.Size(855, 518);
+            this.tabPageBookings.Size = new System.Drawing.Size(1085, 538);
             this.tabPageBookings.TabIndex = 0;
             this.tabPageBookings.Text = "Foglalások";
             this.tabPageBookings.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@
             this.tabPageRooms.Location = new System.Drawing.Point(4, 22);
             this.tabPageRooms.Name = "tabPageRooms";
             this.tabPageRooms.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRooms.Size = new System.Drawing.Size(855, 518);
+            this.tabPageRooms.Size = new System.Drawing.Size(1085, 538);
             this.tabPageRooms.TabIndex = 1;
             this.tabPageRooms.Text = "Kiadó szobák";
             this.tabPageRooms.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.dataGridViewRooms.Name = "dataGridViewRooms";
             this.dataGridViewRooms.ReadOnly = true;
             this.dataGridViewRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRooms.Size = new System.Drawing.Size(843, 506);
+            this.dataGridViewRooms.Size = new System.Drawing.Size(1073, 526);
             this.dataGridViewRooms.TabIndex = 0;
             // 
             // ColumnName
@@ -218,7 +218,7 @@
             this.buttonNewBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonNewBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNewBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewBooking.Image")));
-            this.buttonNewBooking.Location = new System.Drawing.Point(12, 562);
+            this.buttonNewBooking.Location = new System.Drawing.Point(12, 582);
             this.buttonNewBooking.Name = "buttonNewBooking";
             this.buttonNewBooking.Size = new System.Drawing.Size(159, 64);
             this.buttonNewBooking.TabIndex = 9;
@@ -233,7 +233,7 @@
             this.buttonUpdateBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonUpdateBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateBooking.Image")));
-            this.buttonUpdateBooking.Location = new System.Drawing.Point(177, 562);
+            this.buttonUpdateBooking.Location = new System.Drawing.Point(177, 582);
             this.buttonUpdateBooking.Name = "buttonUpdateBooking";
             this.buttonUpdateBooking.Size = new System.Drawing.Size(159, 64);
             this.buttonUpdateBooking.TabIndex = 10;
@@ -248,7 +248,7 @@
             this.buttonDeleteBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteBooking.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteBooking.Image")));
-            this.buttonDeleteBooking.Location = new System.Drawing.Point(342, 562);
+            this.buttonDeleteBooking.Location = new System.Drawing.Point(342, 582);
             this.buttonDeleteBooking.Name = "buttonDeleteBooking";
             this.buttonDeleteBooking.Size = new System.Drawing.Size(159, 64);
             this.buttonDeleteBooking.TabIndex = 11;
@@ -260,27 +260,27 @@
             // 
             // dateTimePickerArrivalDate
             // 
-            this.dateTimePickerArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(521, 606);
+            this.dateTimePickerArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(720, 626);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
-            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(159, 20);
+            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(189, 20);
             this.dateTimePickerArrivalDate.TabIndex = 12;
             this.dateTimePickerArrivalDate.ValueChanged += new System.EventHandler(this.dateTimePickerArrivalDate_ValueChanged);
             // 
             // dateTimePickerDepartureDate
             // 
-            this.dateTimePickerDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(716, 606);
+            this.dateTimePickerDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(915, 626);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
-            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(159, 20);
+            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(189, 20);
             this.dateTimePickerDepartureDate.TabIndex = 13;
             this.dateTimePickerDepartureDate.ValueChanged += new System.EventHandler(this.dateTimePickerDepartureDate_ValueChanged);
             // 
             // labelArrivalDate
             // 
-            this.labelArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Location = new System.Drawing.Point(521, 590);
+            this.labelArrivalDate.Location = new System.Drawing.Point(717, 610);
             this.labelArrivalDate.Name = "labelArrivalDate";
             this.labelArrivalDate.Size = new System.Drawing.Size(86, 13);
             this.labelArrivalDate.TabIndex = 14;
@@ -288,9 +288,9 @@
             // 
             // labelDepartureDate
             // 
-            this.labelDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Location = new System.Drawing.Point(716, 590);
+            this.labelDepartureDate.Location = new System.Drawing.Point(912, 610);
             this.labelDepartureDate.Name = "labelDepartureDate";
             this.labelDepartureDate.Size = new System.Drawing.Size(89, 13);
             this.labelDepartureDate.TabIndex = 15;
@@ -300,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 645);
+            this.ClientSize = new System.Drawing.Size(1116, 658);
             this.Controls.Add(this.labelDepartureDate);
             this.Controls.Add(this.labelArrivalDate);
             this.Controls.Add(this.dateTimePickerDepartureDate);
