@@ -138,9 +138,16 @@ namespace virtual_receptionist.Model.Repository
         /// Metódus, amely visszaadja a soron következő vendégazonosítót adatbázisból
         /// </summary>
         /// <returns>Az adatbázisban soron következő vendégazonosítót adja vissza a függvény</returns>
-        public string GetMaxGuestID()
+        public int GetNextGuestID()
         {
-            return database.DQLScalar("SELECT MAX(guest.ID) FROM guest");
+            int nextID;
+
+            string sql = "SELECT MAX(guest.ID) FROM guest";
+            string maxID = database.DQLScalar(sql);
+
+            int.TryParse(maxID, out nextID);
+
+            return nextID + 1;
         }
 
         /// <summary>

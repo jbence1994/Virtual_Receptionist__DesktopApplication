@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Presenter
@@ -55,14 +56,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>Soron következő vendégazonosítóval tér vissza a függvény</returns>
         public int GetNextID()
         {
-            int nextID = 1;
-
-            if (dataRepository.GetMaxGuestID() != string.Empty)
-            {
-                nextID = int.Parse(dataRepository.GetMaxGuestID()) + 1;
-            }
-
-            return nextID;
+            return dataRepository.GetNextGuestID();
         }
 
         /// <summary>
