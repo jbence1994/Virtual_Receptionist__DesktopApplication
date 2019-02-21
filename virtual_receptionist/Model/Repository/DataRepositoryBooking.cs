@@ -81,6 +81,7 @@ namespace virtual_receptionist.Model.Repository
             UploadBookingsListByArrivalDate(arrivalDate);
 
             DataTable bookingsDataTable = new DataTable();
+            bookingsDataTable.Columns.Add("ID", typeof(int));
             bookingsDataTable.Columns.Add("GuestName", typeof(string));
             bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
             bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
@@ -89,7 +90,7 @@ namespace virtual_receptionist.Model.Repository
 
             foreach (Booking booking in bookings)
             {
-                bookingsDataTable.Rows.Add(booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
+                bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
                     booking.ArrivalDate, booking.DepartureDate);
             }
 
@@ -107,6 +108,7 @@ namespace virtual_receptionist.Model.Repository
             UploadBookingsListByDepartureDate(departureDate);
 
             DataTable bookingsDataTable = new DataTable();
+            bookingsDataTable.Columns.Add("ID", typeof(int));
             bookingsDataTable.Columns.Add("GuestName", typeof(string));
             bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
             bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
@@ -115,7 +117,7 @@ namespace virtual_receptionist.Model.Repository
 
             foreach (Booking booking in bookings)
             {
-                bookingsDataTable.Rows.Add(booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
+                bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
                     booking.ArrivalDate, booking.DepartureDate);
             }
 
