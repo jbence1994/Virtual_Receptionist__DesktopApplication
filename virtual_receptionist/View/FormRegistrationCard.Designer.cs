@@ -374,9 +374,9 @@
             this.groupBoxBillingData.Controls.Add(this.comboBoxCountry);
             this.groupBoxBillingData.Controls.Add(this.labelCity);
             this.groupBoxBillingData.Controls.Add(this.labelZipCode);
-            this.groupBoxBillingData.Location = new System.Drawing.Point(12, 254);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(508, 12);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
-            this.groupBoxBillingData.Size = new System.Drawing.Size(490, 210);
+            this.groupBoxBillingData.Size = new System.Drawing.Size(490, 236);
             this.groupBoxBillingData.TabIndex = 10;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
@@ -403,7 +403,7 @@
             this.groupBoxOtherData.Controls.Add(this.labelPhoneNumber);
             this.groupBoxOtherData.Controls.Add(this.textBoxPhoneNumber);
             this.groupBoxOtherData.Controls.Add(this.labelEmailAddress);
-            this.groupBoxOtherData.Location = new System.Drawing.Point(12, 470);
+            this.groupBoxOtherData.Location = new System.Drawing.Point(12, 254);
             this.groupBoxOtherData.Name = "groupBoxOtherData";
             this.groupBoxOtherData.Size = new System.Drawing.Size(490, 78);
             this.groupBoxOtherData.TabIndex = 22;
@@ -415,9 +415,9 @@
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOK.Image = ((System.Drawing.Image)(resources.GetObject("buttonOK.Image")));
-            this.buttonOK.Location = new System.Drawing.Point(12, 554);
+            this.buttonOK.Location = new System.Drawing.Point(508, 254);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(490, 64);
+            this.buttonOK.Size = new System.Drawing.Size(490, 78);
             this.buttonOK.TabIndex = 28;
             this.buttonOK.Text = "Felvitel";
             this.buttonOK.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -434,7 +434,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 630);
+            this.ClientSize = new System.Drawing.Size(1008, 343);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxOtherData);
             this.Controls.Add(this.groupBoxBillingData);
@@ -443,7 +443,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGuestRegistrationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vendég bejelentkező lap | Virtual Receptionist";
+            this.Text = "Vendég bejelentkező lap kitöltése | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormGuestRegistrationCard_Load);
             this.groupBoxGuestData.ResumeLayout(false);
             this.groupBoxGuestData.PerformLayout();
