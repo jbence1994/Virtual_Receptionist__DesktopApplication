@@ -52,6 +52,7 @@
             this.dataGridViewItems.AllowUserToDeleteRows = false;
             this.dataGridViewItems.AllowUserToResizeColumns = false;
             this.dataGridViewItems.AllowUserToResizeRows = false;
+            this.dataGridViewItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnItem,
@@ -74,7 +75,6 @@
             this.ColumnItem.HeaderText = "Tétel";
             this.ColumnItem.Name = "ColumnItem";
             this.ColumnItem.ReadOnly = true;
-            this.ColumnItem.Width = 195;
             // 
             // ColumnPrice
             // 
@@ -82,7 +82,6 @@
             this.ColumnPrice.HeaderText = "Ár";
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
-            this.ColumnPrice.Width = 195;
             // 
             // ColumnUnit
             // 
@@ -90,7 +89,6 @@
             this.ColumnUnit.HeaderText = "Egység";
             this.ColumnUnit.Name = "ColumnUnit";
             this.ColumnUnit.ReadOnly = true;
-            this.ColumnUnit.Width = 195;
             // 
             // ColumnQuantity
             // 
@@ -98,10 +96,10 @@
             this.ColumnQuantity.HeaderText = "Mennyiség";
             this.ColumnQuantity.Name = "ColumnQuantity";
             this.ColumnQuantity.ReadOnly = true;
-            this.ColumnQuantity.Width = 195;
             // 
             // buttonPrintInvoice
             // 
+            this.buttonPrintInvoice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
@@ -117,6 +115,7 @@
             // 
             // buttonAddItem
             // 
+            this.buttonAddItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
             this.buttonAddItem.Location = new System.Drawing.Point(175, 272);
@@ -131,6 +130,7 @@
             // 
             // buttonUpdateItem
             // 
+            this.buttonUpdateItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
             this.buttonUpdateItem.Location = new System.Drawing.Point(338, 272);
@@ -145,6 +145,7 @@
             // 
             // buttonDeleteItem
             // 
+            this.buttonDeleteItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
             this.buttonDeleteItem.Location = new System.Drawing.Point(501, 272);
@@ -163,6 +164,7 @@
             // 
             // buttonNewData
             // 
+            this.buttonNewData.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonNewData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNewData.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewData.Image")));
             this.buttonNewData.Location = new System.Drawing.Point(12, 272);
