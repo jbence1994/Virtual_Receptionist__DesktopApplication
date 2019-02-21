@@ -53,23 +53,25 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void AddNewRecordToBookingTable(params object[] bookingParameters)
         {
+            int id = Convert.ToInt32(bookingParameters[0]);
+
             Guest guest = new CorporateGuest()
             {
-                Name = bookingParameters[0].ToString()
+                Name = bookingParameters[1].ToString()
             };
 
             Room room = new Room()
             {
-                Number = Convert.ToInt32(bookingParameters[1])
+                Number = Convert.ToInt32(bookingParameters[2])
             };
 
-            int numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+            int numberOfGuests = Convert.ToInt32(bookingParameters[3]);
 
-            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[3]);
+            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[4]);
 
-            DateTime departureDate = Convert.ToDateTime(bookingParameters[4]);
+            DateTime departureDate = Convert.ToDateTime(bookingParameters[5]);
 
-            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate);
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
             dataRepository.CreateBooking(booking);
         }
@@ -80,23 +82,26 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void DeleteRecordFromBookingTable(params object[] bookingParameters)
         {
+            int id = Convert.ToInt32(bookingParameters[0]);
+
             Guest guest = new CorporateGuest()
             {
-                Name = bookingParameters[0].ToString()
+                Name = bookingParameters[1].ToString()
             };
 
             Room room = new Room()
             {
-                Number = Convert.ToInt32(bookingParameters[1])
+                Number = Convert.ToInt32(bookingParameters[2])
             };
 
-            int numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+            int numberOfGuests = Convert.ToInt32(bookingParameters[3]);
 
-            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[3]);
+            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[4]);
 
-            DateTime departureDate = Convert.ToDateTime(bookingParameters[4]);
+            DateTime departureDate = Convert.ToDateTime(bookingParameters[5]);
 
-            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate);
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+
             dataRepository.DeleteBooking(booking);
         }
 
@@ -106,23 +111,25 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void UpdateRecordInBookingTable(params object[] bookingParameters)
         {
+            int id = Convert.ToInt32(bookingParameters[0]);
+
             Guest guest = new CorporateGuest()
             {
-                Name = bookingParameters[0].ToString()
+                Name = bookingParameters[1].ToString()
             };
 
             Room room = new Room()
             {
-                Number = Convert.ToInt32(bookingParameters[1])
+                Number = Convert.ToInt32(bookingParameters[2])
             };
 
-            int numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+            int numberOfGuests = Convert.ToInt32(bookingParameters[3]);
 
-            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[3]);
+            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[4]);
 
-            DateTime departureDate = Convert.ToDateTime(bookingParameters[4]);
+            DateTime departureDate = Convert.ToDateTime(bookingParameters[5]);
 
-            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate);
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
             dataRepository.UpdateBooking(booking);
         }
