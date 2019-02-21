@@ -34,7 +34,7 @@ namespace virtual_receptionist.View
 
         #region UI események
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void FormApplicationOpening_Load(object sender, EventArgs e)
         {
             textBoxAccomodationID.Select();
         }
@@ -57,6 +57,11 @@ namespace virtual_receptionist.View
             {
                 MessageBox.Show(exception.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         #endregion

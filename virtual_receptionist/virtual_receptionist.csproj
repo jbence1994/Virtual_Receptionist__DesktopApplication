@@ -59,7 +59,6 @@
     <Compile Include="Model\Entity\CorporateGuest.cs" />
     <Compile Include="Model\Entity\RoomCategory.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
-    <Compile Include="Presenter\OpeningPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />
     <Compile Include="Model\Entity\PrivateGuest.cs" />
     <Compile Include="View\FormBillingData.cs">
@@ -68,11 +67,11 @@
     <Compile Include="View\FormBillingData.Designer.cs">
       <DependentUpon>FormBillingData.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormOpening.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormOpening.Designer.cs">
-      <DependentUpon>FormOpening.cs</DependentUpon>
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Presenter\BillingPresenter.cs" />
     <Compile Include="Presenter\LoginPresenter.cs" />
@@ -95,12 +94,6 @@
     </Compile>
     <Compile Include="View\FormBilling.Designer.cs">
       <DependentUpon>FormBilling.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormGuestDatabase.cs">
       <SubType>Form</SubType>
@@ -144,8 +137,8 @@
     <EmbeddedResource Include="View\FormBillingData.resx">
       <DependentUpon>FormBillingData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormOpening.resx">
-      <DependentUpon>FormOpening.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
@@ -155,9 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
