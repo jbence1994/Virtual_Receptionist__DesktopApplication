@@ -92,6 +92,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(720, 480);
+            this.ControlBox = false;
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBoxVRLogo);
             this.Controls.Add(this.labelCopyright);
