@@ -11,6 +11,11 @@ namespace virtual_receptionist.Model.Entity
         #region Adattagok
 
         /// <summary>
+        /// Foglalás azonosító
+        /// </summary>
+        private int id;
+
+        /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
         private Guest guest;
@@ -42,13 +47,15 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Booking osztály konstruktora
         /// </summary>
+        /// <param name="id">Foglalás azonosító</param>
         /// <param name="guest">Guest egyed</param>
         /// <param name="room">Room egyed</param>
         /// <param name="numberOfGuests">Vendégek száma</param>
-        /// <param name="arrival">Érkezés dátuma</param>
-        /// <param name="departure">Távozás dátuma</param>
-        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrivalDate, DateTime departureDate)
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <param name="departureDate">Távozás dátuma</param>
+        public Booking(int id, Guest guest, Room room, int numberOfGuests, DateTime arrivalDate, DateTime departureDate)
         {
+            this.id = id;
             this.guest = guest;
             this.room = room;
             this.numberOfGuests = numberOfGuests;
@@ -59,6 +66,15 @@ namespace virtual_receptionist.Model.Entity
         #endregion
 
         #region Getter és setter tulajdonságok
+
+        /// <summary>
+        /// Foglalás azonosító
+        /// </summary>
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         /// <summary>
         /// Guest modell osztály egy példánya
@@ -115,7 +131,7 @@ namespace virtual_receptionist.Model.Entity
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{guest} {room} {numberOfGuests} {arrivalDate} {departureDate}";
+            return $"{id} {guest} {room} {numberOfGuests} {arrivalDate} {departureDate}";
         }
 
         #endregion
