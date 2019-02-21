@@ -155,7 +155,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void OpenVirtualReceptionistWebsite()
         {
-            throw new System.NotImplementedException();
+
         }
 
         /// <summary>

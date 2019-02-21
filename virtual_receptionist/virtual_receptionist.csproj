@@ -61,12 +61,6 @@
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />
     <Compile Include="Model\Entity\PrivateGuest.cs" />
-    <Compile Include="View\FormBillingData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormBillingData.Designer.cs">
-      <DependentUpon>FormBillingData.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +128,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Entity\Booking.cs" />
     <Compile Include="Model\Entity\Room.cs" />
-    <EmbeddedResource Include="View\FormBillingData.resx">
-      <DependentUpon>FormBillingData.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
