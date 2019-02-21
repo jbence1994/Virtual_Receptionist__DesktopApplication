@@ -28,12 +28,12 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
-        private DateTime arrival;
+        private DateTime arrivalDate;
 
         /// <summary>
         /// Távozás dátuma
         /// </summary>
-        private DateTime departure;
+        private DateTime departureDate;
 
         #endregion
 
@@ -42,13 +42,18 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Booking osztály konstruktora
         /// </summary>
-        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrival, DateTime departure)
+        /// <param name="guest">Guest egyed</param>
+        /// <param name="room">Room egyed</param>
+        /// <param name="numberOfGuests">Vendégek száma</param>
+        /// <param name="arrival">Érkezés dátuma</param>
+        /// <param name="departure">Távozás dátuma</param>
+        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrivalDate, DateTime departureDate)
         {
             this.guest = guest;
             this.room = room;
             this.numberOfGuests = numberOfGuests;
-            this.arrival = arrival;
-            this.departure = departure;
+            this.arrivalDate = arrivalDate;
+            this.departureDate = departureDate;
         }
 
         #endregion
@@ -85,19 +90,19 @@ namespace virtual_receptionist.Model.Entity
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
-        public DateTime Arrival
+        public DateTime ArrivalDate
         {
-            get { return arrival; }
-            set { arrival = value; }
+            get { return arrivalDate; }
+            set { arrivalDate = value; }
         }
 
         /// <summary>
         /// Távozás dátuma
         /// </summary>
-        public DateTime Departure
+        public DateTime DepartureDate
         {
-            get { return departure; }
-            set { departure = value; }
+            get { return departureDate; }
+            set { departureDate = value; }
         }
 
         #endregion
@@ -110,7 +115,7 @@ namespace virtual_receptionist.Model.Entity
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{guest} {room} {numberOfGuests} {arrival} {departure}";
+            return $"{guest} {room} {numberOfGuests} {arrivalDate} {departureDate}";
         }
 
         #endregion

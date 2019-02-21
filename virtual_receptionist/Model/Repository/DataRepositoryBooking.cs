@@ -90,7 +90,7 @@ namespace virtual_receptionist.Model.Repository
             foreach (Booking booking in bookings)
             {
                 bookingsDataTable.Rows.Add(booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
-                    booking.Arrival, booking.Departure);
+                    booking.ArrivalDate, booking.DepartureDate);
             }
 
             return bookingsDataTable;
@@ -116,7 +116,7 @@ namespace virtual_receptionist.Model.Repository
             foreach (Booking booking in bookings)
             {
                 bookingsDataTable.Rows.Add(booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
-                    booking.Arrival, booking.Departure);
+                    booking.ArrivalDate, booking.DepartureDate);
             }
 
             return bookingsDataTable;

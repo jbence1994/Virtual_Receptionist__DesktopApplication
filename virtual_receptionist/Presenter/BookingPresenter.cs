@@ -53,8 +53,25 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void AddNewRecordToBookingTable(params object[] bookingParameters)
         {
-            //Booking booking = new Booking();
-            //dataRepository.CreateBooking(booking);
+            Guest guest = new CorporateGuest()
+            {
+                Name = bookingParameters[0].ToString()
+            };
+
+            Room room = new Room()
+            {
+                Number = Convert.ToInt32(bookingParameters[1])
+            };
+
+            int numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+
+            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[3]);
+
+            DateTime departureDate = Convert.ToDateTime(bookingParameters[4]);
+
+            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate);
+
+            dataRepository.CreateBooking(booking);
         }
 
         /// <summary>
@@ -63,8 +80,24 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void DeleteRecordFromBookingTable(params object[] bookingParameters)
         {
-            //Booking booking = new Booking();
-            //dataRepository.DeleteBooking(booking);
+            Guest guest = new CorporateGuest()
+            {
+                Name = bookingParameters[0].ToString()
+            };
+
+            Room room = new Room()
+            {
+                Number = Convert.ToInt32(bookingParameters[1])
+            };
+
+            int numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+
+            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[3]);
+
+            DateTime departureDate = Convert.ToDateTime(bookingParameters[4]);
+
+            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate);
+            dataRepository.DeleteBooking(booking);
         }
 
         /// <summary>
@@ -73,8 +106,25 @@ namespace virtual_receptionist.Presenter
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void UpdateRecordInBookingTable(params object[] bookingParameters)
         {
-            //Booking booking = new Booking();
-            //dataRepository.UpdateBooking(booking);
+            Guest guest = new CorporateGuest()
+            {
+                Name = bookingParameters[0].ToString()
+            };
+
+            Room room = new Room()
+            {
+                Number = Convert.ToInt32(bookingParameters[1])
+            };
+
+            int numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+
+            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[3]);
+
+            DateTime departureDate = Convert.ToDateTime(bookingParameters[4]);
+
+            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate);
+
+            dataRepository.UpdateBooking(booking);
         }
 
         #endregion
