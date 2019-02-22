@@ -36,7 +36,7 @@ namespace virtual_receptionist.View
         private void FormGuestRegistrationCard_Load(object sender, EventArgs e)
         {
             comboBoxCountry.DataSource = presenter.GetCountries();
-            comboBoxRoom.DataSource = presenter.GetRoomNumbers();
+            comboBoxRoom.DataSource = presenter.GetRoomNumbersWithNamesAndCategoryNames();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)

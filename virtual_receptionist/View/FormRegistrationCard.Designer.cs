@@ -330,11 +330,11 @@
             // labelIDCardOrPassportNumber
             // 
             this.labelIDCardOrPassportNumber.AutoSize = true;
-            this.labelIDCardOrPassportNumber.Location = new System.Drawing.Point(63, 108);
+            this.labelIDCardOrPassportNumber.Location = new System.Drawing.Point(90, 108);
             this.labelIDCardOrPassportNumber.Name = "labelIDCardOrPassportNumber";
-            this.labelIDCardOrPassportNumber.Size = new System.Drawing.Size(123, 13);
+            this.labelIDCardOrPassportNumber.Size = new System.Drawing.Size(96, 13);
             this.labelIDCardOrPassportNumber.TabIndex = 8;
-            this.labelIDCardOrPassportNumber.Text = "Okmány azonosítószám:";
+            this.labelIDCardOrPassportNumber.Text = "Okmányazonosító:";
             // 
             // labelBirthDate
             // 

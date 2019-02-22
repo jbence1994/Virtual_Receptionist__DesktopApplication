@@ -20,9 +20,10 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<int> GetRoomNumbers()
+        public List<string> GetRoomNumbersWithNamesAndCategoryNames()
         {
-            return new List<int>();
+            List<string> roomNumbers = dataRepository.GetRoomNumbersWithNamesAndCategoryNames();
+            return roomNumbers;
         }
 
         #endregion

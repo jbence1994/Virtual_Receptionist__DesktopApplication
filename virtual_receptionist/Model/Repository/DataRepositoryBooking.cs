@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Collections.Generic;
 using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Model.Repository
@@ -205,6 +206,27 @@ namespace virtual_receptionist.Model.Repository
             }
 
             return roomsDataTable;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<string> GetRoomNumbersWithNamesAndCategoryNames()
+        {
+            List<string> roomNumbersWithRoomNames = new List<string>();
+
+            if (rooms.Count == 0)
+            {
+                UploadRoomsList();
+            }
+
+            foreach (Room room in rooms)
+            {
+                roomNumbersWithRoomNames.Add($"{room.Number}) szoba, {room.Name} ({room.Category.Name})");
+            }
+
+            return roomNumbersWithRoomNames;
         }
 
         #endregion
