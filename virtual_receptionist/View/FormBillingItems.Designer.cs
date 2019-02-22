@@ -35,7 +35,6 @@
             this.columnHeaderVAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.labelItem = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.textBoxItem = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.buttonOK = new System.Windows.Forms.Button();
             this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
@@ -95,18 +95,6 @@
             // 
             this.columnHeaderUnit.Text = "Egység";
             this.columnHeaderUnit.Width = 160;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonAdd.Enabled = false;
-            this.buttonAdd.Location = new System.Drawing.Point(483, 74);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(274, 41);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Tétel hozzáadása";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // labelItem
             // 
@@ -176,8 +164,8 @@
             // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.buttonOK);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
-            this.groupBoxItemParameters.Controls.Add(this.buttonAdd);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
@@ -194,6 +182,16 @@
             this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 130);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
+            // 
+            // buttonOK
+            // 
+            this.buttonOK.Location = new System.Drawing.Point(483, 93);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(274, 23);
+            this.buttonOK.TabIndex = 16;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // maskedTextBoxItemDiscount
             // 
@@ -240,6 +238,7 @@
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormBillingItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számlázási tételek | Virtual Receptionist";
@@ -256,7 +255,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderItem;
         private System.Windows.Forms.ColumnHeader columnHeaderPrice;
         private System.Windows.Forms.ColumnHeader columnHeaderUnit;
-        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label labelItem;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.TextBox textBoxItem;
@@ -272,5 +270,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
         private System.Windows.Forms.ColumnHeader columnHeaderVAT;
         private System.Windows.Forms.ColumnHeader columnHeaderCategory;
+        private System.Windows.Forms.Button buttonOK;
     }
 }

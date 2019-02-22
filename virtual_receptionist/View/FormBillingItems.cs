@@ -55,7 +55,7 @@ namespace virtual_receptionist.View
         {
             if (listViewBillingItems.SelectedItems.Count > 0)
             {
-                buttonAdd.Enabled = true;
+                buttonOK.Enabled = true;
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
                 maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
@@ -65,7 +65,7 @@ namespace virtual_receptionist.View
             }
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void buttonOK_Click(object sender, EventArgs e)
         {
             string item = textBoxItem.Text;
             double price = double.Parse(textBoxPrice.Text);
