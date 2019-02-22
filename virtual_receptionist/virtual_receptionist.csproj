@@ -83,7 +83,7 @@
     <Compile Include="Model\Entity\Country.cs" />
     <Compile Include="Model\Repository\DataRepositoryGuest.cs" />
     <Compile Include="Model\Repository\DataRepositoryBilling.cs" />
-    <Compile Include="Model\Repository\DataRepositoryDataInjection.cs" />
+    <Compile Include="Model\Repository\DataRepositoryDataAccess.cs" />
     <Compile Include="Model\Repository\DataRepositoryBooking.cs" />
     <Compile Include="View\FormBilling.cs">
       <SubType>Form</SubType>

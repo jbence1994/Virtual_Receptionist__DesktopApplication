@@ -62,7 +62,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public string SetMainMenuHeader()
         {
-            Accomodation accomodation = dataRepository.SetAccomodation();
+            Accomodation accomodation = dataRepository.Accomodation;
             return $"{accomodation.Name} ({accomodation.VatNumber})";
         }
 
@@ -123,9 +123,9 @@ namespace virtual_receptionist.Presenter
         /// <summary>
         /// Metódus, amely beállítja az alkalmazást használó szálláshely adatait egy MessageBoxba
         /// </summary>
-        public void SetAccomodationData()
+        public void SetAccomodationInfo()
         {
-            Accomodation accomodation = dataRepository.SetAccomodation();
+            Accomodation accomodation = dataRepository.Accomodation;
 
             MessageBox.Show(
                 $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",

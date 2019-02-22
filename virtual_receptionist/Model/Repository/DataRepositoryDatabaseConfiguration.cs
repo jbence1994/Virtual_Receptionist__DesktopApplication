@@ -6,15 +6,6 @@ namespace virtual_receptionist.Model.Repository
 {
     public partial class DataRepository
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
-        /// </summary>
-        private static Database database;
-
-        #endregion
-
         #region Matódusok
 
         /// <summary>
