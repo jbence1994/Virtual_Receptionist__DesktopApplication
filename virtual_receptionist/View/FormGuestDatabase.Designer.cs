@@ -789,6 +789,7 @@
             this.Name = "FormGuestDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendégadatbázis | Virtual Receptionist";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormGuestDatabase_Load);
             this.tabControlGuestDatabase.ResumeLayout(false);
             this.tabPagePrivateGuest.ResumeLayout(false);
