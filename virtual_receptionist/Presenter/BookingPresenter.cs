@@ -73,7 +73,7 @@ namespace virtual_receptionist.Presenter
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
-            dataRepository.CreateBooking(booking);
+            dataRepository.Create(booking);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace virtual_receptionist.Presenter
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
-            dataRepository.DeleteBooking(booking);
+            dataRepository.Delete(booking);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace virtual_receptionist.Presenter
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
-            dataRepository.UpdateBooking(booking);
+            dataRepository.Update(booking);
         }
 
         #endregion
