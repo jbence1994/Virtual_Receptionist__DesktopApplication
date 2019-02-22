@@ -67,6 +67,15 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// Metódus, amely megadja, mikor volt legutóbb felhasználó bejelentkezve az alkalmazásba
+        /// </summary>
+        /// <returns>A legutóbbi bejelentkezés idejét adja vissza karakterláncként a függvény</returns>
+        public string GetLastTimeLoggedIn()
+        {
+            return dataRepository.GetLastTimeLoggedIn();
+        }
+
+        /// <summary>
         /// Metódus, amely adott menü nevét megjeleníti egy címkében az állapotsoron
         /// </summary>
         /// <param name="menuName">Menü neve</param>

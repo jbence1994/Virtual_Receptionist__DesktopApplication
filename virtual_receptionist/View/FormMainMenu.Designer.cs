@@ -46,6 +46,7 @@
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelLastTimeLoggedIn = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonGuestRegistrationCard = new System.Windows.Forms.ToolStripButton();
@@ -109,7 +110,7 @@
             // 
             this.toolStripMenuItemGuestRegistrationCard.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestRegistrationCard.Image")));
             this.toolStripMenuItemGuestRegistrationCard.Name = "toolStripMenuItemGuestRegistrationCard";
-            this.toolStripMenuItemGuestRegistrationCard.Size = new System.Drawing.Size(248, 22);
+            this.toolStripMenuItemGuestRegistrationCard.Size = new System.Drawing.Size(249, 22);
             this.toolStripMenuItemGuestRegistrationCard.Text = "Vendég bejelentkező lap kitöltése";
             this.toolStripMenuItemGuestRegistrationCard.Click += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_Click);
             this.toolStripMenuItemGuestRegistrationCard.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_MouseLeave);
@@ -119,7 +120,7 @@
             // 
             this.toolStripMenuItemBooking.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBooking.Image")));
             this.toolStripMenuItemBooking.Name = "toolStripMenuItemBooking";
-            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(248, 22);
+            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(249, 22);
             this.toolStripMenuItemBooking.Text = "Foglalási napló";
             this.toolStripMenuItemBooking.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemBooking.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
@@ -129,7 +130,7 @@
             // 
             this.toolStripMenuItemGuestDatabase.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestDatabase.Image")));
             this.toolStripMenuItemGuestDatabase.Name = "toolStripMenuItemGuestDatabase";
-            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(248, 22);
+            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(249, 22);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
             this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
@@ -139,7 +140,7 @@
             // 
             this.toolStripMenuItemBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBilling.Image")));
             this.toolStripMenuItemBilling.Name = "toolStripMenuItemBilling";
-            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(248, 22);
+            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(249, 22);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
             this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
@@ -208,6 +209,7 @@
             // 
             this.statusStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelClient,
+            this.toolStripStatusLabelLastTimeLoggedIn,
             this.toolStripStatusLabelMenuName});
             this.statusStripMainMenu.Location = new System.Drawing.Point(0, 692);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
@@ -225,7 +227,13 @@
             // toolStripStatusLabelMenuName
             // 
             this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
-            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 32);
+            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(176, 32);
+            // 
+            // toolStripStatusLabelLastTimeLoggedIn
+            // 
+            this.toolStripStatusLabelLastTimeLoggedIn.Name = "toolStripStatusLabelLastTimeLoggedIn";
+            this.toolStripStatusLabelLastTimeLoggedIn.Size = new System.Drawing.Size(170, 32);
+            this.toolStripStatusLabelLastTimeLoggedIn.Text = "Legutóbb bejelentkezve ekkor: ";
             // 
             // pictureBoxVRLogo
             // 
@@ -250,7 +258,6 @@
             this.toolStripMainMenu.Name = "toolStripMainMenu";
             this.toolStripMainMenu.Size = new System.Drawing.Size(1008, 39);
             this.toolStripMainMenu.TabIndex = 6;
-            this.toolStripMainMenu.Text = "toolStrip1";
             // 
             // toolStripButtonGuestRegistrationCard
             // 
@@ -389,5 +396,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Panel panelMainMenu;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLastTimeLoggedIn;
     }
 }

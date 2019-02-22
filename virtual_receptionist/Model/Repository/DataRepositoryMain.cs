@@ -211,6 +211,20 @@ namespace virtual_receptionist.Model.Repository
             database.DML(sql);
         }
 
+        /// <summary>
+        /// Metódus, amely megkeresi az adatbázis log táblájában, mikor volt legutóbb felhasználó bejelentkezve az alkalmazásba
+        /// </summary>
+        /// <returns>A legutóbbi bejelentkezés idejét adja vissza karakterláncként a függvény</returns>
+        public string GetLastTimeLoggedIn()
+        {
+            string lastTime = string.Empty;
+
+            string sql = "SELECT log.LogoutDate FROM log WHERE log.ID = (SELECT MAX(log.ID) FROM log)";
+            lastTime = database.DQLScalar(sql);
+
+            return lastTime;
+        }
+
         #endregion
     }
 }

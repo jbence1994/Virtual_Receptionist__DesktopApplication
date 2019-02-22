@@ -43,6 +43,7 @@ namespace virtual_receptionist.View
         {
             toolStripStatusLabelClient.Text += presenter.GetClient();
             Text += presenter.SetMainMenuHeader();
+            toolStripStatusLabelLastTimeLoggedIn.Text += presenter.GetLastTimeLoggedIn();
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
