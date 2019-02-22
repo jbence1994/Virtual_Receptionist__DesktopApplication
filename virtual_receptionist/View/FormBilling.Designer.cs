@@ -40,9 +40,7 @@
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
-            this.buttonNewData = new System.Windows.Forms.Button();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.groupBoxBilling = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +50,9 @@
             this.dataGridViewItems.AllowUserToDeleteRows = false;
             this.dataGridViewItems.AllowUserToResizeColumns = false;
             this.dataGridViewItems.AllowUserToResizeRows = false;
+            this.dataGridViewItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -64,7 +65,7 @@
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
             this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewItems.Size = new System.Drawing.Size(809, 204);
+            this.dataGridViewItems.Size = new System.Drawing.Size(597, 274);
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
@@ -99,11 +100,11 @@
             // 
             // buttonPrintInvoice
             // 
-            this.buttonPrintInvoice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonPrintInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
-            this.buttonPrintInvoice.Location = new System.Drawing.Point(664, 272);
+            this.buttonPrintInvoice.Location = new System.Drawing.Point(615, 222);
             this.buttonPrintInvoice.Name = "buttonPrintInvoice";
             this.buttonPrintInvoice.Size = new System.Drawing.Size(157, 64);
             this.buttonPrintInvoice.TabIndex = 5;
@@ -115,10 +116,10 @@
             // 
             // buttonAddItem
             // 
-            this.buttonAddItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
-            this.buttonAddItem.Location = new System.Drawing.Point(175, 272);
+            this.buttonAddItem.Location = new System.Drawing.Point(615, 12);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 64);
             this.buttonAddItem.TabIndex = 2;
@@ -130,10 +131,10 @@
             // 
             // buttonUpdateItem
             // 
-            this.buttonUpdateItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonUpdateItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
-            this.buttonUpdateItem.Location = new System.Drawing.Point(338, 272);
+            this.buttonUpdateItem.Location = new System.Drawing.Point(615, 82);
             this.buttonUpdateItem.Name = "buttonUpdateItem";
             this.buttonUpdateItem.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateItem.TabIndex = 3;
@@ -145,10 +146,10 @@
             // 
             // buttonDeleteItem
             // 
-            this.buttonDeleteItem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
-            this.buttonDeleteItem.Location = new System.Drawing.Point(501, 272);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(615, 152);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(157, 64);
             this.buttonDeleteItem.TabIndex = 4;
@@ -162,50 +163,22 @@
             // 
             this.printDialogPrinter.UseEXDialog = true;
             // 
-            // buttonNewData
+            // groupBoxBilling
             // 
-            this.buttonNewData.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNewData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNewData.Image = ((System.Drawing.Image)(resources.GetObject("buttonNewData.Image")));
-            this.buttonNewData.Location = new System.Drawing.Point(12, 272);
-            this.buttonNewData.Name = "buttonNewData";
-            this.buttonNewData.Size = new System.Drawing.Size(157, 64);
-            this.buttonNewData.TabIndex = 1;
-            this.buttonNewData.Text = "Számlázandó ügyfél";
-            this.buttonNewData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonNewData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonNewData.UseVisualStyleBackColor = true;
-            this.buttonNewData.Click += new System.EventHandler(this.buttonNewData_Click);
-            // 
-            // labelTotal
-            // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTotal.Location = new System.Drawing.Point(12, 225);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(243, 25);
-            this.labelTotal.TabIndex = 16;
-            this.labelTotal.Text = "Fizetendő végösszeg:";
-            // 
-            // textBoxTotal
-            // 
-            this.textBoxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxTotal.Location = new System.Drawing.Point(262, 225);
-            this.textBoxTotal.Multiline = true;
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.ReadOnly = true;
-            this.textBoxTotal.Size = new System.Drawing.Size(559, 25);
-            this.textBoxTotal.TabIndex = 7;
-            this.textBoxTotal.Text = "0";
+            this.groupBoxBilling.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBilling.Location = new System.Drawing.Point(12, 292);
+            this.groupBoxBilling.Name = "groupBoxBilling";
+            this.groupBoxBilling.Size = new System.Drawing.Size(760, 258);
+            this.groupBoxBilling.TabIndex = 9;
+            this.groupBoxBilling.TabStop = false;
             // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 355);
-            this.Controls.Add(this.textBoxTotal);
-            this.Controls.Add(this.labelTotal);
-            this.Controls.Add(this.buttonNewData);
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.groupBoxBilling);
             this.Controls.Add(this.buttonDeleteItem);
             this.Controls.Add(this.buttonUpdateItem);
             this.Controls.Add(this.buttonAddItem);
@@ -218,7 +191,6 @@
             this.Text = "Számla kiállítása | Virtual Receptionist";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -230,12 +202,10 @@
         private System.Windows.Forms.Button buttonDeleteItem;
         private System.Windows.Forms.PrintDialog printDialogPrinter;
         private System.Drawing.Printing.PrintDocument printDocumentInvoice;
-        private System.Windows.Forms.Button buttonNewData;
-        private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
+        private System.Windows.Forms.GroupBox groupBoxBilling;
     }
 }
