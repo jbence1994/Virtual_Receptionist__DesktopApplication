@@ -236,7 +236,7 @@
             this.ClientSize = new System.Drawing.Size(827, 514);
             this.Controls.Add(this.groupBoxItemParameters);
             this.Controls.Add(this.listViewBillingItems);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormBillingItems";
