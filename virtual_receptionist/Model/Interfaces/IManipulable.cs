@@ -3,27 +3,27 @@
     /// <summary>
     /// CRUD metódusokat leíró interfész
     /// </summary>
-    public interface IManipulable
+    public interface IManipulable<T> where T : class
     {
         /// <summary>
         /// Új elem létrehozása
         /// </summary>
         /// <typeparam name="T">Típus</typeparam>
         /// <param name="item">Típusú elem</param>
-        void Create<T>(T item) where T : class;
+        void Create(T item);
 
         /// <summary>
         /// Meglévő elem módosítása
         /// </summary>
         /// <typeparam name="T">Típus</typeparam>
         /// <param name="item">Típusú elem</param>
-        void Update<T>(T item) where T : class;
+        void Update(T item);
 
         /// <summary>
         /// Meglévő elem törlése
         /// </summary>
         /// <typeparam name="T">Típus</typeparam>
         /// <param name="item">Típusú elem</param>
-        void Delete<T>(T item) where T : class;
+        void Delete(T item);
     }
 }

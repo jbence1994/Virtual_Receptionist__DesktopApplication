@@ -1,8 +1,9 @@
 ﻿using virtual_receptionist.Model.Entity;
+using virtual_receptionist.Model.Interfaces;
 
 namespace virtual_receptionist.Model.Repository
 {
-    public partial class DataRepository
+    public partial class DataRepository : IManipulable<Guest>
     {
         #region Vendégadatbázis modul üzleti logika
 
@@ -71,5 +72,20 @@ namespace virtual_receptionist.Model.Repository
         }
 
         #endregion
+
+        public void Create(Guest item)
+        {
+
+        }
+
+        public void Update(Guest item)
+        {
+
+        }
+
+        public void Delete(Guest item)
+        {
+
+        }
     }
 }
