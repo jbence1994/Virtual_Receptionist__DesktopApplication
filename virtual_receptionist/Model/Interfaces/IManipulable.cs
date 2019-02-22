@@ -9,19 +9,19 @@
         /// <summary>
         /// Új elem létrehozása
         /// </summary>
-        /// <param name="item">Elem</param>
-        void Create(T item);
+        /// <param name="entity">Egyed</param>
+        void Create(T entity);
 
         /// <summary>
         /// Meglévő elem módosítása
         /// </summary>
-        /// <param name="item">Elem</param>
-        void Update(T item);
+        /// <param name="entity">Egyed</param>
+        void Update(T entity);
 
         /// <summary>
         /// Meglévő elem törlése
         /// </summary>
-        /// <param name="item">Elem</param>
-        void Delete(T item);
+        /// <param name="entity">Egyed</param>
+        void Delete(T entity);
     }
 }
