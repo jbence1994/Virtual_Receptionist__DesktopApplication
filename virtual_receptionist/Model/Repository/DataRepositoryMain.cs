@@ -54,9 +54,6 @@ namespace virtual_receptionist.Model.Repository
         /// </summary>
         private List<Booking> bookings;
 
-        private List<RoomCategory> roomCategories;
-        private List<BillingItemCategory> billingItemCategories;
-
         #endregion
 
         #region Konstruktor
@@ -217,10 +214,8 @@ namespace virtual_receptionist.Model.Repository
         /// <returns>A legutóbbi bejelentkezés idejét adja vissza karakterláncként a függvény</returns>
         public string GetLastTimeLoggedIn()
         {
-            string lastTime = string.Empty;
-
             string sql = "SELECT log.LogoutDate FROM log WHERE log.ID = (SELECT MAX(log.ID) FROM log)";
-            lastTime = database.DQLScalar(sql);
+            string lastTime = database.DQLScalar(sql);
 
             return lastTime;
         }
