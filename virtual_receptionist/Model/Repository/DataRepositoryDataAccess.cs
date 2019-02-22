@@ -87,7 +87,7 @@ namespace virtual_receptionist.Model.Repository
 
         #endregion
 
-        #region Metódusok
+        #region Adatelérési metódusok
 
         /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a szálláshelyek adatait és lista adatszerkezetek menti őket

@@ -41,7 +41,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely naplózza a kijelentlezéseket az alkalmazásból
+        /// Metódus, amely naplózza a kijelentkezéseket az alkalmazásból
         /// </summary>
         public void Logout()
         {
