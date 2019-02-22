@@ -111,12 +111,15 @@
             // 
             // tabControlGuestDatabase
             // 
+            this.tabControlGuestDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlGuestDatabase.Controls.Add(this.tabPagePrivateGuest);
             this.tabControlGuestDatabase.Controls.Add(this.tabPageCorporateGuest);
             this.tabControlGuestDatabase.Location = new System.Drawing.Point(12, 12);
             this.tabControlGuestDatabase.Name = "tabControlGuestDatabase";
             this.tabControlGuestDatabase.SelectedIndex = 0;
-            this.tabControlGuestDatabase.Size = new System.Drawing.Size(1161, 431);
+            this.tabControlGuestDatabase.Size = new System.Drawing.Size(1092, 634);
             this.tabControlGuestDatabase.TabIndex = 0;
             // 
             // tabPagePrivateGuest
@@ -126,13 +129,15 @@
             this.tabPagePrivateGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPagePrivateGuest.Name = "tabPagePrivateGuest";
             this.tabPagePrivateGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrivateGuest.Size = new System.Drawing.Size(1153, 405);
+            this.tabPagePrivateGuest.Size = new System.Drawing.Size(1084, 608);
             this.tabPagePrivateGuest.TabIndex = 1;
             this.tabPagePrivateGuest.Text = "Vendégek";
             this.tabPagePrivateGuest.UseVisualStyleBackColor = true;
             // 
             // groupBoxPrivateGuest
             // 
+            this.groupBoxPrivateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxPrivateGuest.Controls.Add(this.labelID);
             this.groupBoxPrivateGuest.Controls.Add(this.buttonDeletePrivateGuest);
             this.groupBoxPrivateGuest.Controls.Add(this.buttonUpdatePrivateGuest);
@@ -158,9 +163,9 @@
             this.groupBoxPrivateGuest.Controls.Add(this.labelPhoneNumber);
             this.groupBoxPrivateGuest.Controls.Add(this.textBoxName);
             this.groupBoxPrivateGuest.Controls.Add(this.labelEmailAddress);
-            this.groupBoxPrivateGuest.Location = new System.Drawing.Point(6, 216);
+            this.groupBoxPrivateGuest.Location = new System.Drawing.Point(6, 419);
             this.groupBoxPrivateGuest.Name = "groupBoxPrivateGuest";
-            this.groupBoxPrivateGuest.Size = new System.Drawing.Size(1141, 183);
+            this.groupBoxPrivateGuest.Size = new System.Drawing.Size(1072, 183);
             this.groupBoxPrivateGuest.TabIndex = 0;
             this.groupBoxPrivateGuest.TabStop = false;
             // 
@@ -175,9 +180,10 @@
             // 
             // buttonDeletePrivateGuest
             // 
+            this.buttonDeletePrivateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeletePrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeletePrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeletePrivateGuest.Image")));
-            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(978, 113);
+            this.buttonDeletePrivateGuest.Location = new System.Drawing.Point(909, 113);
             this.buttonDeletePrivateGuest.Name = "buttonDeletePrivateGuest";
             this.buttonDeletePrivateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonDeletePrivateGuest.TabIndex = 4;
@@ -189,9 +195,10 @@
             // 
             // buttonUpdatePrivateGuest
             // 
+            this.buttonUpdatePrivateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdatePrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdatePrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdatePrivateGuest.Image")));
-            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(815, 113);
+            this.buttonUpdatePrivateGuest.Location = new System.Drawing.Point(746, 113);
             this.buttonUpdatePrivateGuest.Name = "buttonUpdatePrivateGuest";
             this.buttonUpdatePrivateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdatePrivateGuest.TabIndex = 3;
@@ -218,9 +225,10 @@
             // 
             // buttonAddPrivateGuest
             // 
+            this.buttonAddPrivateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddPrivateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddPrivateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPrivateGuest.Image")));
-            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(652, 113);
+            this.buttonAddPrivateGuest.Location = new System.Drawing.Point(583, 113);
             this.buttonAddPrivateGuest.Name = "buttonAddPrivateGuest";
             this.buttonAddPrivateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddPrivateGuest.TabIndex = 2;
@@ -386,6 +394,9 @@
             // 
             // listViewPrivateGuests
             // 
+            this.listViewPrivateGuests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewPrivateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderPrivateGuestID,
             this.columnHeaderName,
@@ -402,7 +413,7 @@
             this.listViewPrivateGuests.GridLines = true;
             this.listViewPrivateGuests.Location = new System.Drawing.Point(3, 3);
             this.listViewPrivateGuests.Name = "listViewPrivateGuests";
-            this.listViewPrivateGuests.Size = new System.Drawing.Size(1144, 207);
+            this.listViewPrivateGuests.Size = new System.Drawing.Size(1075, 410);
             this.listViewPrivateGuests.TabIndex = 1;
             this.listViewPrivateGuests.UseCompatibleStateImageBehavior = false;
             this.listViewPrivateGuests.View = System.Windows.Forms.View.Details;
@@ -470,13 +481,15 @@
             this.tabPageCorporateGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPageCorporateGuest.Name = "tabPageCorporateGuest";
             this.tabPageCorporateGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1153, 405);
+            this.tabPageCorporateGuest.Size = new System.Drawing.Size(1084, 608);
             this.tabPageCorporateGuest.TabIndex = 1;
             this.tabPageCorporateGuest.Text = "Céges vendégek";
             this.tabPageCorporateGuest.UseVisualStyleBackColor = true;
             // 
             // groupBoxCorporateGuest
             // 
+            this.groupBoxCorporateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxCorporateGuest.Controls.Add(this.labelCorporateID);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonAddCorporateGuest);
             this.groupBoxCorporateGuest.Controls.Add(this.buttonUpdateCorporateGuest);
@@ -498,9 +511,9 @@
             this.groupBoxCorporateGuest.Controls.Add(this.labelCompanyPhoneNumber);
             this.groupBoxCorporateGuest.Controls.Add(this.textBoxCompanyName);
             this.groupBoxCorporateGuest.Controls.Add(this.labelCompanyEmailAddress);
-            this.groupBoxCorporateGuest.Location = new System.Drawing.Point(6, 216);
+            this.groupBoxCorporateGuest.Location = new System.Drawing.Point(6, 419);
             this.groupBoxCorporateGuest.Name = "groupBoxCorporateGuest";
-            this.groupBoxCorporateGuest.Size = new System.Drawing.Size(1141, 183);
+            this.groupBoxCorporateGuest.Size = new System.Drawing.Size(1072, 183);
             this.groupBoxCorporateGuest.TabIndex = 28;
             this.groupBoxCorporateGuest.TabStop = false;
             // 
@@ -515,9 +528,10 @@
             // 
             // buttonAddCorporateGuest
             // 
+            this.buttonAddCorporateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCorporateGuest.Image")));
-            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(652, 113);
+            this.buttonAddCorporateGuest.Location = new System.Drawing.Point(583, 113);
             this.buttonAddCorporateGuest.Name = "buttonAddCorporateGuest";
             this.buttonAddCorporateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonAddCorporateGuest.TabIndex = 19;
@@ -529,9 +543,10 @@
             // 
             // buttonUpdateCorporateGuest
             // 
+            this.buttonUpdateCorporateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdateCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateCorporateGuest.Image")));
-            this.buttonUpdateCorporateGuest.Location = new System.Drawing.Point(815, 113);
+            this.buttonUpdateCorporateGuest.Location = new System.Drawing.Point(746, 113);
             this.buttonUpdateCorporateGuest.Name = "buttonUpdateCorporateGuest";
             this.buttonUpdateCorporateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateCorporateGuest.TabIndex = 20;
@@ -551,9 +566,10 @@
             // 
             // buttonDeleteCorporateGuest
             // 
+            this.buttonDeleteCorporateGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteCorporateGuest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteCorporateGuest.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCorporateGuest.Image")));
-            this.buttonDeleteCorporateGuest.Location = new System.Drawing.Point(978, 113);
+            this.buttonDeleteCorporateGuest.Location = new System.Drawing.Point(909, 113);
             this.buttonDeleteCorporateGuest.Name = "buttonDeleteCorporateGuest";
             this.buttonDeleteCorporateGuest.Size = new System.Drawing.Size(157, 64);
             this.buttonDeleteCorporateGuest.TabIndex = 21;
@@ -694,6 +710,9 @@
             // 
             // listViewCorporateGuests
             // 
+            this.listViewCorporateGuests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewCorporateGuests.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCorporateGuestID,
             this.columnHeaderCompanyName,
@@ -708,7 +727,7 @@
             this.listViewCorporateGuests.GridLines = true;
             this.listViewCorporateGuests.Location = new System.Drawing.Point(3, 3);
             this.listViewCorporateGuests.Name = "listViewCorporateGuests";
-            this.listViewCorporateGuests.Size = new System.Drawing.Size(1144, 207);
+            this.listViewCorporateGuests.Size = new System.Drawing.Size(1075, 410);
             this.listViewCorporateGuests.TabIndex = 18;
             this.listViewCorporateGuests.UseCompatibleStateImageBehavior = false;
             this.listViewCorporateGuests.View = System.Windows.Forms.View.Details;
@@ -763,7 +782,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 455);
+            this.ClientSize = new System.Drawing.Size(1116, 658);
             this.Controls.Add(this.tabControlGuestDatabase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
