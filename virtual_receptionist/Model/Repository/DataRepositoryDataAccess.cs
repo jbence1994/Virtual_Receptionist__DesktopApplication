@@ -71,6 +71,13 @@ namespace virtual_receptionist.Model.Repository
             countries = new List<Country>();
             privateGuests = new List<PrivateGuest>();
             rooms = new List<Room>();
+
+            UploadAccomodationList();
+            UploadBillingItemsList();
+            UploadCorporateGuestList();
+            UploadCountriesList();
+            UploadPrivateGuestsList();
+            UploadRoomsList();
         }
 
         #endregion
@@ -120,24 +127,18 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti az országok neveit tartalmazó listát
         /// </summary>
-        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
-        public List<Country> GetCountries()
+        private void UploadCountriesList()
         {
-            if (countries.Count == 0)
+            string sql = "SELECT * FROM country";
+            DataTable dt = database.DQL(sql);
+
+            foreach (DataRow row in dt.Rows)
             {
-                string sql = "SELECT * FROM country";
-                DataTable dt = database.DQL(sql);
+                string name = row["CountryName"].ToString();
 
-                foreach (DataRow row in dt.Rows)
-                {
-                    string name = row["CountryName"].ToString();
-
-                    Country countryInstance = new Country(name);
-                    countries.Add(countryInstance);
-                }
+                Country countryInstance = new Country(name);
+                countries.Add(countryInstance);
             }
-
-            return countries;
         }
 
         /// <summary>
@@ -164,156 +165,8 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely feltölti a számlázási tételeket tartalmazó adattáblát a listában tárolt adatokkal
-        /// </summary>
-        /// <returns>A számlázási tételeket tartalmazó listából feltöltött adattáblával tér vissza a függvény</returns>
-        public DataTable GetBillingItems()
-        {
-            if (billingItems.Count == 0)
-            {
-                UploadBillingItemsList();
-            }
-
-            DataTable billingItemsDataTable = new DataTable();
-            billingItemsDataTable.Columns.Add("Name", typeof(string));
-            billingItemsDataTable.Columns.Add("Price", typeof(double));
-            billingItemsDataTable.Columns.Add("VAT", typeof(double));
-            billingItemsDataTable.Columns.Add("CategoryName", typeof(string));
-            billingItemsDataTable.Columns.Add("Unit", typeof(string));
-
-            foreach (BillingItem item in billingItems)
-            {
-                billingItemsDataTable.Rows.Add(item.Name, item.Price, item.Category.VAT, item.Category.Name,
-                    item.Category.Unit);
-            }
-
-            return billingItemsDataTable;
-        }
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát érkezés dátuma alapján
-        /// </summary>
-        /// <param name="arrivalDate">Érkezés dátuma</param>
-        private void UploadBookingsListByArrivalDate(string arrivalDate)
-        {
-            string sql =
-                $"SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.ArrivalDate LIKE \"{arrivalDate}\" ORDER BY booking.ArrivalDate ASC";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int id = Convert.ToInt32(row["ID"]);
-
-                Guest guest = new PrivateGuest()
-                {
-                    Name = row["Name"].ToString()
-                };
-
-                Room room = new Room
-                {
-                    Number = int.Parse(row["Number"].ToString())
-                };
-
-                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
-                DateTime arrival = (DateTime) row["ArrivalDate"];
-                DateTime departure = (DateTime) row["DepartureDate"];
-
-                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
-                bookings.Add(bookingInstance);
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti a szobakiadásokat tartalmazó listát távozás dátuma alapján
-        /// </summary>
-        /// <param name="departureDate">Távozás dátuma</param>
-        private void UploadBookingsListByDepartureDate(string departureDate)
-        {
-            string sql =
-                $"SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.DepartureDate LIKE \"{departureDate}\" ORDER BY booking.DepartureDate ASC";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int id = Convert.ToInt32(row["ID"]);
-
-                Guest guest = new PrivateGuest()
-                {
-                    Name = row["Name"].ToString()
-                };
-
-                Room room = new Room
-                {
-                    Number = int.Parse(row["Number"].ToString())
-                };
-
-                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
-                DateTime arrival = (DateTime) row["ArrivalDate"];
-                DateTime departure = (DateTime) row["DepartureDate"];
-
-                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
-                bookings.Add(bookingInstance);
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait érkezés dátuma szerint egy adattáblában
-        /// </summary>
-        /// <param name="arrivalDate">Érkezés dátuma</param>
-        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        public DataTable GetBookingsByArrivalDate(string arrivalDate)
-        {
-            bookings.Clear();
-            UploadBookingsListByArrivalDate(arrivalDate);
-
-            DataTable bookingsDataTable = new DataTable();
-            bookingsDataTable.Columns.Add("ID", typeof(int));
-            bookingsDataTable.Columns.Add("GuestName", typeof(string));
-            bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
-            bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
-            bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
-            bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
-
-            foreach (Booking booking in bookings)
-            {
-                bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
-                    booking.ArrivalDate, booking.DepartureDate);
-            }
-
-            return bookingsDataTable;
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait távozás dátuma szerint egy adattáblában
-        /// </summary>
-        /// <param name="departureDate"></param>
-        /// <returns></returns>
-        public DataTable GetBookingsByDepartureDate(string departureDate)
-        {
-            bookings.Clear();
-            UploadBookingsListByDepartureDate(departureDate);
-
-            DataTable bookingsDataTable = new DataTable();
-            bookingsDataTable.Columns.Add("ID", typeof(int));
-            bookingsDataTable.Columns.Add("GuestName", typeof(string));
-            bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
-            bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
-            bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
-            bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
-
-            foreach (Booking booking in bookings)
-            {
-                bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
-                    booking.ArrivalDate, booking.DepartureDate);
-            }
-
-            return bookingsDataTable;
-        }
-
-        /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobákat tartalmazó listát
         /// </summary>
-        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
         private void UploadRoomsList()
         {
             string sql =
@@ -334,55 +187,8 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt összes szoba adatát egy DataTable adatszerkezetben
-        /// </summary>
-        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        public DataTable GetRooms()
-        {
-            if (rooms.Count == 0)
-            {
-                UploadRoomsList();
-            }
-
-            DataTable roomsDataTable = new DataTable();
-            roomsDataTable.Columns.Add("Name", typeof(string));
-            roomsDataTable.Columns.Add("Number", typeof(int));
-            roomsDataTable.Columns.Add("CategoryName", typeof(string));
-            roomsDataTable.Columns.Add("Capacity", typeof(int));
-
-            foreach (Room room in rooms)
-            {
-                roomsDataTable.Rows.Add(room.Name, room.Number, room.Category, room.Capacity);
-            }
-
-            return roomsDataTable;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public List<string> GetRoomNumbersWithNamesAndCategoryNames()
-        {
-            List<string> roomNumbersWithRoomNames = new List<string>();
-
-            if (rooms.Count == 0)
-            {
-                UploadRoomsList();
-            }
-
-            foreach (Room room in rooms)
-            {
-                roomNumbersWithRoomNames.Add($"{room.Number}) szoba, {room.Name} ({room.Category.Name})");
-            }
-
-            return roomNumbersWithRoomNames;
-        }
-
-        /// <summary>
         /// Metódus, amely adatbázisból kiolvassa a vendégeket és lista adatszerkezetbe menti őket
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
         private void UploadPrivateGuestsList()
         {
             string sql =
@@ -439,86 +245,12 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt összes vendéget egy DataTable adatszerkezetben
+        /// Metódus, amely adatbázisból feltölti az országok neveit tartalmazó listát
         /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable GetPrivateGuests()
+        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
+        public List<Country> GetCountries()
         {
-            if (privateGuests.Count == 0)
-            {
-                UploadPrivateGuestsList();
-            }
-
-            DataTable privateGuestsDataTable = new DataTable();
-            privateGuestsDataTable.Columns.Add("ID", typeof(int));
-            privateGuestsDataTable.Columns.Add("Name", typeof(string));
-            privateGuestsDataTable.Columns.Add("DocumentNumber", typeof(string));
-            privateGuestsDataTable.Columns.Add("Citizenship", typeof(string));
-            privateGuestsDataTable.Columns.Add("BirthDate", typeof(string));
-            privateGuestsDataTable.Columns.Add("Country", typeof(string));
-            privateGuestsDataTable.Columns.Add("ZipCode", typeof(string));
-            privateGuestsDataTable.Columns.Add("City", typeof(string));
-            privateGuestsDataTable.Columns.Add("Address", typeof(string));
-            privateGuestsDataTable.Columns.Add("PhoneNumber", typeof(string));
-            privateGuestsDataTable.Columns.Add("EmailAddress", typeof(string));
-
-            foreach (PrivateGuest privateGuest in privateGuests)
-            {
-                privateGuestsDataTable.Rows.Add(privateGuest.ID, privateGuest.Name, privateGuest.DocumentNumber,
-                    privateGuest.Citizenship,
-                    privateGuest.BirthDate, privateGuest.Country, privateGuest.ZipCode, privateGuest.City,
-                    privateGuest.Address, privateGuest.PhoneNumber, privateGuest.EmailAddress);
-            }
-
-            return privateGuestsDataTable;
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt összes céges vendéget egy DataTable adatszerkezetben
-        /// </summary>
-        /// <returns>Adatokkal feltöltött DataTable-t adja vissza</returns>
-        public DataTable GetCorporateGuests()
-        {
-            if (corporateGuests.Count == 0)
-            {
-                UploadCorporateGuestList();
-            }
-
-            DataTable corporateGuestDataTable = new DataTable();
-            corporateGuestDataTable.Columns.Add("ID", typeof(int));
-            corporateGuestDataTable.Columns.Add("Name", typeof(string));
-            corporateGuestDataTable.Columns.Add("VATNumber", typeof(string));
-            corporateGuestDataTable.Columns.Add("Country", typeof(string));
-            corporateGuestDataTable.Columns.Add("ZipCode", typeof(string));
-            corporateGuestDataTable.Columns.Add("City", typeof(string));
-            corporateGuestDataTable.Columns.Add("Address", typeof(string));
-            corporateGuestDataTable.Columns.Add("PhoneNumber", typeof(string));
-            corporateGuestDataTable.Columns.Add("EmailAddress", typeof(string));
-
-            foreach (CorporateGuest corporateGuest in corporateGuests)
-            {
-                corporateGuestDataTable.Rows.Add(corporateGuest.ID, corporateGuest.Name, corporateGuest.VatNumber,
-                    corporateGuest.Country, corporateGuest.ZipCode, corporateGuest.City, corporateGuest.Address,
-                    corporateGuest.PhoneNumber, corporateGuest.EmailAddress);
-            }
-
-            return corporateGuestDataTable;
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja a soron következő vendégazonosítót adatbázisból
-        /// </summary>
-        /// <returns>Az adatbázisban soron következő vendégazonosítót adja vissza a függvény</returns>
-        public int GetNextGuestID()
-        {
-            int nextID;
-
-            string sql = "SELECT MAX(guest.ID) FROM guest";
-            string maxID = database.DQLScalar(sql);
-
-            int.TryParse(maxID, out nextID);
-
-            return nextID + 1;
+            return countries;
         }
 
         #endregion
