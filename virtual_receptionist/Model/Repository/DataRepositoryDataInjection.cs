@@ -1,8 +1,6 @@
-﻿using System;
+﻿using MySQL_ORM;
 using System.Data;
-using MySQL_ORM;
 using System.Collections.Generic;
-using virtual_receptionist.Exceptions;
 using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Model.Repository
@@ -13,11 +11,6 @@ namespace virtual_receptionist.Model.Repository
     public partial class DataRepository
     {
         #region Adattagok
-
-        /// <summary>
-        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
-        /// </summary>
-        private static Database database;
 
         /// <summary>
         /// Szálláshelyek adatait tároló lista
@@ -72,20 +65,6 @@ namespace virtual_receptionist.Model.Repository
             countries = new List<Country>();
             rooms = new List<Room>();
             bookings = new List<Booking>();
-            roomCategories = new List<RoomCategory>();
-            billingItemCategories = new List<BillingItemCategory>();
-        }
-
-        #endregion
-
-        #region Getter és setter metódusok
-
-        /// <summary>
-        /// Alkalmazást futtató számítógép NetBIOS neve
-        /// </summary>
-        public static string Client
-        {
-            get { return Environment.MachineName; }
         }
 
         #endregion
@@ -149,75 +128,6 @@ namespace virtual_receptionist.Model.Repository
             }
 
             return countries;
-        }
-
-        /// <summary>
-        /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor
-        /// </summary>
-        /// <param name="accomodationID">Szálláshely azonosító</param>
-        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
-        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
-        /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
-        /// <exception cref="FailedLoginException"></exception>
-        /// <exception cref="InvalidConnectionTypeException"></exception>
-        public bool Authentication(string accomodationID, string password, string connectionType)
-        {
-            try
-            {
-                bool entry = false;
-                database.SetConnection(connectionType);
-
-                UploadAccomodationList();
-
-                foreach (Accomodation account in accomodations)
-                {
-                    if (account.AccomodationID == accomodationID && account.Password == password)
-                    {
-                        entry = true;
-                        break;
-                    }
-
-                    throw new FailedLoginException();
-                }
-
-                return entry;
-            }
-            catch (InvalidConnectionTypeException)
-            {
-                throw new InvalidConnectionTypeException();
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely naplózza a bejelentkezéseket az alkalmazásba
-        /// </summary>
-        public void Login()
-        {
-            string sql =
-                $"INSERT INTO log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{Client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in\")";
-            database.DML(sql);
-        }
-
-        /// <summary>
-        /// Metódus, amely naplózza a kijelentlezéseket az alkalmazásból
-        /// </summary>
-        public void Logout()
-        {
-            string sql =
-                $"UPDATE log SET LogoutDate = \"{DateTime.Now}\" WHERE LogoutDate LIKE \"Logged in\"";
-            database.DML(sql);
-        }
-
-        /// <summary>
-        /// Metódus, amely megkeresi az adatbázis log táblájában, mikor volt legutóbb felhasználó bejelentkezve az alkalmazásba
-        /// </summary>
-        /// <returns>A legutóbbi bejelentkezés idejét adja vissza karakterláncként a függvény</returns>
-        public string GetLastTimeLoggedIn()
-        {
-            string sql = "SELECT log.LogoutDate FROM log WHERE log.ID = (SELECT MAX(log.ID) FROM log)";
-            string lastTime = database.DQLScalar(sql);
-
-            return lastTime;
         }
 
         #endregion

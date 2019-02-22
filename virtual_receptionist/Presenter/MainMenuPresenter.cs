@@ -72,7 +72,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>A legutóbbi bejelentkezés idejét adja vissza karakterláncként a függvény</returns>
         public string GetLastTimeLoggedIn()
         {
-            return dataRepository.GetLastTimeLoggedIn();
+            return dataRepository.LastTimeLoggedIn;
         }
 
         /// <summary>

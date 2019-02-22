@@ -58,6 +58,8 @@
     <Compile Include="Model\Entity\BillingItemCategory.cs" />
     <Compile Include="Model\Entity\CorporateGuest.cs" />
     <Compile Include="Model\Entity\RoomCategory.cs" />
+    <Compile Include="Model\Repository\DataRepositoryDatabaseConfiguration.cs" />
+    <Compile Include="Model\Repository\DataRepositoryUserManagement.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />
     <Compile Include="Model\Entity\PrivateGuest.cs" />
@@ -81,7 +83,7 @@
     <Compile Include="Model\Entity\Country.cs" />
     <Compile Include="Model\Repository\DataRepositoryGuest.cs" />
     <Compile Include="Model\Repository\DataRepositoryBilling.cs" />
-    <Compile Include="Model\Repository\DataRepositoryMain.cs" />
+    <Compile Include="Model\Repository\DataRepositoryDataInjection.cs" />
     <Compile Include="Model\Repository\DataRepositoryBooking.cs" />
     <Compile Include="View\FormBilling.cs">
       <SubType>Form</SubType>
