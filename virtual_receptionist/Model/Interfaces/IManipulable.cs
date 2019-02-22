@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.Model.Interfaces
 {
     /// <summary>
-    /// CRUD metódusok leíró interfész
+    /// Adatmanipulációt objektumokon leíró interfész
     /// </summary>
     /// <typeparam name="T">Típus</typeparam>
     public interface IManipulable<T> where T : class
