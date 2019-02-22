@@ -110,7 +110,7 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(214, 23);
             this.buttonExit.TabIndex = 14;
-            this.buttonExit.Text = "Kilépés az alkalmazásból";
+            this.buttonExit.Text = "Kilépés";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
