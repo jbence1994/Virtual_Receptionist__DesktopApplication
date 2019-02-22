@@ -81,7 +81,7 @@ namespace virtual_receptionist.Presenter
                 new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
                     phoneNumber, email);
 
-            dataRepository.CreateGuest(privateGuest);
+            dataRepository.Create(privateGuest);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace virtual_receptionist.Presenter
             CorporateGuest corporateGuest =
                 new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
 
-            dataRepository.CreateGuest(corporateGuest);
+            dataRepository.Create(corporateGuest);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace virtual_receptionist.Presenter
                 zipCode,
                 city, address, phoneNumber, email);
 
-            dataRepository.UpdateGuest(privateGuest);
+            dataRepository.Update(privateGuest);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace virtual_receptionist.Presenter
                 new CorporateGuest(id, name,
                     vatNumber, country, zipCode, city, address, phoneNumber, email);
 
-            dataRepository.UpdateGuest(corporateGuest);
+            dataRepository.Update(corporateGuest);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace virtual_receptionist.Presenter
                 country,
                 zipCode, city, address, phoneNumber, email);
 
-            dataRepository.DeleteGuest(privateGuest);
+            dataRepository.Delete(privateGuest);
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace virtual_receptionist.Presenter
                 address,
                 phoneNumber, email);
 
-            dataRepository.DeleteGuest(corporateGuest);
+            dataRepository.Delete(corporateGuest);
         }
 
         #endregion
