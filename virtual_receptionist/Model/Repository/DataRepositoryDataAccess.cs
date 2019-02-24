@@ -204,7 +204,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szálláshelyek adatait tartalmazó listát
         /// </summary>
-        private void UploadAccomodationList()
+        private static void UploadAccomodationList()
         {
             Accomodation accomodation = Accomodation.GetInstance;
 
@@ -232,7 +232,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a számlázási tételek adatait tartalmazó listát
         /// </summary>
-        private void UploadBillingItemsList()
+        private static void UploadBillingItemsList()
         {
             string sql =
                 "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
@@ -255,7 +255,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a foglalások adatait tartalmazó listát
         /// </summary>
-        private void UploadBookingsList()
+        private static void UploadBookingsList()
         {
             string sql =
                 "SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID";
@@ -287,7 +287,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a céges vendégek adatait tartalmazó listát
         /// </summary>
-        private void UploadCorporateGuestList()
+        private static void UploadCorporateGuestList()
         {
             string sql =
                 "SELECT guest.ID, guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
@@ -315,7 +315,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti az országok adatait tartalmazó listát
         /// </summary>
-        private void UploadCountriesList()
+        private static void UploadCountriesList()
         {
             string sql = "SELECT * FROM country";
             DataTable dt = database.DQL(sql);
@@ -332,7 +332,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a vendégek adatait tartalmazó listát
         /// </summary>
-        private void UploadPrivateGuestsList()
+        private static void UploadPrivateGuestsList()
         {
             string sql =
                 "SELECT guest.ID, guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.DocumentNumber != \"\"";
@@ -362,7 +362,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobák adatait tartalmazó listát
         /// </summary>
-        private void UploadRoomsList()
+        private static void UploadRoomsList()
         {
             string sql =
                 "SELECT room.Name, room.Number, room_category.RoomCategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
