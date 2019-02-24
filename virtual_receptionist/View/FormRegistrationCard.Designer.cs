@@ -78,7 +78,7 @@
             // checkBoxCorporateGuest
             // 
             this.checkBoxCorporateGuest.AutoSize = true;
-            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(192, 177);
+            this.checkBoxCorporateGuest.Location = new System.Drawing.Point(192, 191);
             this.checkBoxCorporateGuest.Name = "checkBoxCorporateGuest";
             this.checkBoxCorporateGuest.Size = new System.Drawing.Size(141, 17);
             this.checkBoxCorporateGuest.TabIndex = 21;
@@ -107,7 +107,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(157, 128);
+            this.labelAddress.Location = new System.Drawing.Point(157, 142);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
             this.labelAddress.TabIndex = 17;
@@ -116,7 +116,7 @@
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(116, 75);
+            this.labelZipCode.Location = new System.Drawing.Point(116, 89);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelZipCode.TabIndex = 13;
@@ -125,7 +125,7 @@
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(143, 48);
+            this.labelCountry.Location = new System.Drawing.Point(143, 62);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
             this.labelCountry.TabIndex = 11;
@@ -134,7 +134,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(130, 103);
+            this.labelCity.Location = new System.Drawing.Point(130, 117);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
             this.labelCity.TabIndex = 15;
@@ -143,7 +143,7 @@
             // labelVatNumber
             // 
             this.labelVatNumber.AutoSize = true;
-            this.labelVatNumber.Location = new System.Drawing.Point(133, 154);
+            this.labelVatNumber.Location = new System.Drawing.Point(133, 168);
             this.labelVatNumber.Name = "labelVatNumber";
             this.labelVatNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVatNumber.TabIndex = 19;
@@ -168,7 +168,7 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(192, 45);
+            this.comboBoxCountry.Location = new System.Drawing.Point(192, 59);
             this.comboBoxCountry.Name = "comboBoxCountry";
             this.comboBoxCountry.Size = new System.Drawing.Size(276, 21);
             this.comboBoxCountry.TabIndex = 12;
@@ -182,7 +182,7 @@
             // 
             // textBoxVatNumber
             // 
-            this.textBoxVatNumber.Location = new System.Drawing.Point(192, 151);
+            this.textBoxVatNumber.Location = new System.Drawing.Point(192, 165);
             this.textBoxVatNumber.Name = "textBoxVatNumber";
             this.textBoxVatNumber.ReadOnly = true;
             this.textBoxVatNumber.Size = new System.Drawing.Size(276, 20);
@@ -190,21 +190,21 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(192, 125);
+            this.textBoxAddress.Location = new System.Drawing.Point(192, 139);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(276, 20);
             this.textBoxAddress.TabIndex = 18;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(192, 98);
+            this.textBoxCity.Location = new System.Drawing.Point(192, 112);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(276, 20);
             this.textBoxCity.TabIndex = 16;
             // 
             // textBoxZipCode
             // 
-            this.textBoxZipCode.Location = new System.Drawing.Point(192, 72);
+            this.textBoxZipCode.Location = new System.Drawing.Point(192, 86);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(276, 20);
             this.textBoxZipCode.TabIndex = 14;
@@ -383,7 +383,7 @@
             // 
             // textBoxBillingName
             // 
-            this.textBoxBillingName.Location = new System.Drawing.Point(192, 19);
+            this.textBoxBillingName.Location = new System.Drawing.Point(192, 33);
             this.textBoxBillingName.Name = "textBoxBillingName";
             this.textBoxBillingName.Size = new System.Drawing.Size(276, 20);
             this.textBoxBillingName.TabIndex = 23;
@@ -391,7 +391,7 @@
             // labelBillingName
             // 
             this.labelBillingName.AutoSize = true;
-            this.labelBillingName.Location = new System.Drawing.Point(103, 22);
+            this.labelBillingName.Location = new System.Drawing.Point(103, 36);
             this.labelBillingName.Name = "labelBillingName";
             this.labelBillingName.Size = new System.Drawing.Size(83, 13);
             this.labelBillingName.TabIndex = 22;
