@@ -40,7 +40,7 @@
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
-            this.groupBoxBilling = new System.Windows.Forms.GroupBox();
+            this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,22 +163,23 @@
             // 
             this.printDialogPrinter.UseEXDialog = true;
             // 
-            // groupBoxBilling
+            // groupBoxBillingData
             // 
-            this.groupBoxBilling.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxBillingData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxBilling.Location = new System.Drawing.Point(12, 292);
-            this.groupBoxBilling.Name = "groupBoxBilling";
-            this.groupBoxBilling.Size = new System.Drawing.Size(760, 258);
-            this.groupBoxBilling.TabIndex = 9;
-            this.groupBoxBilling.TabStop = false;
+            this.groupBoxBillingData.Location = new System.Drawing.Point(12, 292);
+            this.groupBoxBillingData.Name = "groupBoxBillingData";
+            this.groupBoxBillingData.Size = new System.Drawing.Size(760, 258);
+            this.groupBoxBillingData.TabIndex = 9;
+            this.groupBoxBillingData.TabStop = false;
+            this.groupBoxBillingData.Text = "Számlázási adatok";
             // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
-            this.Controls.Add(this.groupBoxBilling);
+            this.Controls.Add(this.groupBoxBillingData);
             this.Controls.Add(this.buttonDeleteItem);
             this.Controls.Add(this.buttonUpdateItem);
             this.Controls.Add(this.buttonAddItem);
@@ -207,6 +208,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
-        private System.Windows.Forms.GroupBox groupBoxBilling;
+        private System.Windows.Forms.GroupBox groupBoxBillingData;
     }
 }

@@ -64,7 +64,7 @@ namespace MySQL_Interface
         #region Getter és setter tulajdonságok
 
         /// <summary>
-        /// Ezen osztály egyke példánya
+        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály példánya
         /// </summary>
         public static Database DatabaseInstance
         {

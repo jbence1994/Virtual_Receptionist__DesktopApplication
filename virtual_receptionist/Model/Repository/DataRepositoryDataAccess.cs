@@ -52,7 +52,7 @@ namespace virtual_receptionist.Model.Repository
         /// Szobákat tartalmazó lista
         /// </summary>
         private static List<Room> rooms;
-        
+
         #endregion
 
         #region Konstruktor
