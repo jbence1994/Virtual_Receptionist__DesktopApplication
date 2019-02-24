@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 namespace MySQL_Interface
 {
     /// <summary>
-    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály
+    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály
     /// </summary>
     public class Database
     {

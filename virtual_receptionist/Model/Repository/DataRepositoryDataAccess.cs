@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model.Repository
         #region Adattagok
 
         /// <summary>
-        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály egy példánya
+        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály egy példánya
         /// </summary>
         private static Database database;
 
