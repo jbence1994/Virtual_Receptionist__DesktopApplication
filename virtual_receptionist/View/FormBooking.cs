@@ -35,8 +35,7 @@ namespace virtual_receptionist.View
 
         private void FormBooking_Load(object sender, EventArgs e)
         {
-            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
-            dataGridViewBookings.DataSource = presenter.GetBookingsByArrivalDate(arrivalDate);
+            dataGridViewBookings.DataSource = presenter.GetBookings();
             dataGridViewRooms.DataSource = presenter.GetRooms();
         }
 

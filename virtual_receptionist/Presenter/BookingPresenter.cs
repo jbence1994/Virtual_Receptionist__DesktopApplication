@@ -45,6 +45,31 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
+        /// Metódus, amely lekéri a foglalások adatait az adattárból és visszaadja őket egy adattáblában
+        /// </summary>
+        /// <returns>A foglalások adataival feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetBookings()
+        {
+            List<Booking> bookings = dataRepository.Bookings;
+
+            DataTable bookingsDataTable = new DataTable();
+            bookingsDataTable.Columns.Add("ID", typeof(int));
+            bookingsDataTable.Columns.Add("GuestName", typeof(string));
+            bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
+            bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
+            bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
+
+            foreach (Booking booking in bookings)
+            {
+                bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
+                    booking.ArrivalDate, booking.DepartureDate);
+            }
+
+            return bookingsDataTable;
+        }
+
+        /// <summary>
         /// Metódus, amely lekéri a szobák adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <returns>A szobák adataival feltöltött adattáblát adja vissza a függvény</returns>
