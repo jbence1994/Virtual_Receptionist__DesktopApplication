@@ -21,37 +21,37 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Szálláshelyek adatait tároló lista
         /// </summary>
-        private List<Accomodation> accomodations;
+        private static List<Accomodation> accomodations;
 
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
-        private List<BillingItem> billingItems;
+        private static List<BillingItem> billingItems;
 
         /// <summary>
         /// Magánvendégeket tartalmazó lista
         /// </summary>
-        private List<PrivateGuest> privateGuests;
+        private static List<PrivateGuest> privateGuests;
 
         /// <summary>
         /// Vállalati vendégeket tartalmazó lista
         /// </summary>
-        private List<CorporateGuest> corporateGuests;
+        private static List<CorporateGuest> corporateGuests;
 
         /// <summary>
         /// Orszgáokat tartalmazó lista
         /// </summary>
-        private List<Country> countries;
+        private static List<Country> countries;
 
         /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
-        private List<Room> rooms;
+        private static List<Room> rooms;
 
         /// <summary>
         /// Foglalásokat tartalmazó lista
         /// </summary>
-        private List<Booking> bookings;
+        private static List<Booking> bookings;
 
         #endregion
 
@@ -71,13 +71,6 @@ namespace virtual_receptionist.Model.Repository
             countries = new List<Country>();
             privateGuests = new List<PrivateGuest>();
             rooms = new List<Room>();
-
-            UploadAccomodationList();
-            UploadBillingItemsList();
-            UploadCorporateGuestList();
-            UploadCountriesList();
-            UploadPrivateGuestsList();
-            UploadRoomsList();
         }
 
         #endregion
@@ -92,12 +85,124 @@ namespace virtual_receptionist.Model.Repository
             get { return Accomodation.GetInstance; }
         }
 
-        #endregion
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<Accomodation> Accomodations
+        {
+            get
+            {
+                if (accomodations.Count == 0)
+                {
+                    UploadAccomodationList();
+                }
 
-        #region Adatelérési metódusok
+                return accomodations;
+            }
+        }
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a szálláshelyek adatait és lista adatszerkezetek menti őket
+        /// 
+        /// </summary>
+        public List<BillingItem> BillingItems
+        {
+            get
+            {
+                if (billingItems.Count == 0)
+                {
+                    UploadBillingItemsList();
+                }
+
+                return billingItems;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<Booking> Bookings
+        {
+            get
+            {
+                if (bookings.Count == 0)
+                {
+                    UploadBookingsList();
+                }
+
+                return bookings;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<CorporateGuest> CorporateGuests
+        {
+            get
+            {
+                if (corporateGuests.Count == 0)
+                {
+                    UploadCorporateGuestList();
+                }
+
+                return corporateGuests;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<Country> Countries
+        {
+            get
+            {
+                if (countries.Count == 0)
+                {
+                    UploadCountriesList();
+                }
+
+                return countries;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<PrivateGuest> PrivateGuests
+        {
+            get
+            {
+                if (privateGuests.Count == 0)
+                {
+                    UploadPrivateGuestsList();
+                }
+
+                return privateGuests;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<Room> Rooms
+        {
+            get
+            {
+                if (rooms.Count == 0)
+                {
+                    UploadRoomsList();
+                }
+
+                return rooms;
+            }
+        }
+
+        #endregion
+
+        #region Adatelérési és adatfeltöltő metódusok
+
+        /// <summary>
+        /// Metódus, amely adatbázisból feltölti a szálláshelyek adatait tartalmazó listát
         /// </summary>
         private void UploadAccomodationList()
         {
@@ -125,24 +230,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti az országok neveit tartalmazó listát
-        /// </summary>
-        private void UploadCountriesList()
-        {
-            string sql = "SELECT * FROM country";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                string name = row["CountryName"].ToString();
-
-                Country countryInstance = new Country(name);
-                countries.Add(countryInstance);
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti a számlázási tételeket tartalmazó listát
+        /// Metódus, amely adatbázisból feltölti a számlázási tételek adatait tartalmazó listát
         /// </summary>
         private void UploadBillingItemsList()
         {
@@ -165,29 +253,84 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti a szobákat tartalmazó listát
+        /// Metódus, amely adatbázisból feltölti a foglalások adatait tartalmazó listát
         /// </summary>
-        private void UploadRoomsList()
+        private void UploadBookingsList()
         {
             string sql =
-                "SELECT room.Name, room.Number, room_category.RoomCategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
+                "SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
-                string name = row["Name"].ToString();
-                int number = int.Parse(row["Number"].ToString());
-                string category = row["RoomCategoryName"].ToString();
-                int capacity = int.Parse(row["Capacity"].ToString());
+                int id = Convert.ToInt32(row["ID"]);
 
-                RoomCategory roomCategoryInstance = new RoomCategory(category);
-                Room roomInstance = new Room(name, number, roomCategoryInstance, capacity);
-                rooms.Add(roomInstance);
+                Guest guest = new PrivateGuest()
+                {
+                    Name = row["Name"].ToString()
+                };
+
+                Room room = new Room()
+                {
+                    Number = int.Parse(row["Number"].ToString())
+                };
+
+                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
+                DateTime arrival = (DateTime) row["ArrivalDate"];
+                DateTime departure = (DateTime) row["DepartureDate"];
+
+                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
+                bookings.Add(bookingInstance);
             }
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a vendégeket és lista adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból feltölti a céges vendégek adatait tartalmazó listát
+        /// </summary>
+        private void UploadCorporateGuestList()
+        {
+            string sql =
+                "SELECT guest.ID, guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
+            DataTable dt = database.DQL(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int id = int.Parse(row["ID"].ToString());
+                string name = row["Name"].ToString();
+                string vatNumber = row["VATNumber"].ToString();
+                string country = row["CountryName"].ToString();
+                string zipCode = row["ZipCode"].ToString();
+                string city = row["City"].ToString();
+                string address = row["Address"].ToString();
+                string phoneNumber = row["PhoneNumber"].ToString();
+                string emailAddress = row["EmailAddress"].ToString();
+
+                CorporateGuest corporateGuestInstance = new CorporateGuest(id, name, vatNumber, country, zipCode, city,
+                    address, phoneNumber, emailAddress);
+
+                corporateGuests.Add(corporateGuestInstance);
+            }
+        }
+
+        /// <summary>
+        /// Metódus, amely adatbázisból feltölti az országok adatait tartalmazó listát
+        /// </summary>
+        private void UploadCountriesList()
+        {
+            string sql = "SELECT * FROM country";
+            DataTable dt = database.DQL(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string name = row["CountryName"].ToString();
+
+                Country countryInstance = new Country(name);
+                countries.Add(countryInstance);
+            }
+        }
+
+        /// <summary>
+        /// Metódus, amely adatbázisból feltölti a vendégek adatait tartalmazó listát
         /// </summary>
         private void UploadPrivateGuestsList()
         {
@@ -217,40 +360,25 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból kiolvassa a céges vendégeket és lista adatszerkezetbe menti őket
+        /// Metódus, amely adatbázisból feltölti a szobák adatait tartalmazó listát
         /// </summary>
-        private void UploadCorporateGuestList()
+        private void UploadRoomsList()
         {
             string sql =
-                "SELECT guest.ID, guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
+                "SELECT room.Name, room.Number, room_category.RoomCategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
-                int id = int.Parse(row["ID"].ToString());
                 string name = row["Name"].ToString();
-                string vatNumber = row["VATNumber"].ToString();
-                string country = row["CountryName"].ToString();
-                string zipCode = row["ZipCode"].ToString();
-                string city = row["City"].ToString();
-                string address = row["Address"].ToString();
-                string phoneNumber = row["PhoneNumber"].ToString();
-                string emailAddress = row["EmailAddress"].ToString();
+                int number = int.Parse(row["Number"].ToString());
+                string category = row["RoomCategoryName"].ToString();
+                int capacity = int.Parse(row["Capacity"].ToString());
 
-                CorporateGuest corporateGuestInstance = new CorporateGuest(id, name, vatNumber, country, zipCode, city,
-                    address, phoneNumber, emailAddress);
-
-                corporateGuests.Add(corporateGuestInstance);
+                RoomCategory roomCategoryInstance = new RoomCategory(category);
+                Room roomInstance = new Room(name, number, roomCategoryInstance, capacity);
+                rooms.Add(roomInstance);
             }
-        }
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti az országok neveit tartalmazó listát
-        /// </summary>
-        /// <returns>Országok neveivel feltöltött listát adja vissza</returns>
-        public List<Country> GetCountries()
-        {
-            return countries;
         }
 
         #endregion

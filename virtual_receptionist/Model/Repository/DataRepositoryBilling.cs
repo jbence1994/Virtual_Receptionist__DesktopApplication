@@ -30,27 +30,27 @@ namespace virtual_receptionist.Model.Repository
             return prices.Sum();
         }
 
-        /// <summary>
-        /// Metódus, amely feltölti a számlázási tételeket tartalmazó adattáblát a listában tárolt adatokkal
-        /// </summary>
-        /// <returns>A számlázási tételeket tartalmazó listából feltöltött adattáblával tér vissza a függvény</returns>
-        public DataTable GetBillingItems()
-        {
-            DataTable billingItemsDataTable = new DataTable();
-            billingItemsDataTable.Columns.Add("Name", typeof(string));
-            billingItemsDataTable.Columns.Add("Price", typeof(double));
-            billingItemsDataTable.Columns.Add("VAT", typeof(double));
-            billingItemsDataTable.Columns.Add("CategoryName", typeof(string));
-            billingItemsDataTable.Columns.Add("Unit", typeof(string));
+        ///// <summary>
+        ///// Metódus, amely feltölti a számlázási tételeket tartalmazó adattáblát a listában tárolt adatokkal
+        ///// </summary>
+        ///// <returns>A számlázási tételeket tartalmazó listából feltöltött adattáblával tér vissza a függvény</returns>
+        //public DataTable GetBillingItems()
+        //{
+        //    DataTable billingItemsDataTable = new DataTable();
+        //    billingItemsDataTable.Columns.Add("Name", typeof(string));
+        //    billingItemsDataTable.Columns.Add("Price", typeof(double));
+        //    billingItemsDataTable.Columns.Add("VAT", typeof(double));
+        //    billingItemsDataTable.Columns.Add("CategoryName", typeof(string));
+        //    billingItemsDataTable.Columns.Add("Unit", typeof(string));
 
-            foreach (BillingItem item in billingItems)
-            {
-                billingItemsDataTable.Rows.Add(item.Name, item.Price, item.Category.VAT, item.Category.Name,
-                    item.Category.Unit);
-            }
+        //    foreach (BillingItem item in billingItems)
+        //    {
+        //        billingItemsDataTable.Rows.Add(item.Name, item.Price, item.Category.VAT, item.Category.Name,
+        //            item.Category.Unit);
+        //    }
 
-            return billingItemsDataTable;
-        }
+        //    return billingItemsDataTable;
+        //}
 
         #endregion
     }
