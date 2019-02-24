@@ -29,9 +29,9 @@ namespace virtual_receptionist.Model.Repository
         private static List<BillingItem> billingItems;
 
         /// <summary>
-        /// Magánvendégeket tartalmazó lista
+        /// Foglalásokat tartalmazó lista
         /// </summary>
-        private static List<PrivateGuest> privateGuests;
+        private static List<Booking> bookings;
 
         /// <summary>
         /// Vállalati vendégeket tartalmazó lista
@@ -44,15 +44,15 @@ namespace virtual_receptionist.Model.Repository
         private static List<Country> countries;
 
         /// <summary>
+        /// Magánvendégeket tartalmazó lista
+        /// </summary>
+        private static List<PrivateGuest> privateGuests;
+
+        /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
         private static List<Room> rooms;
-
-        /// <summary>
-        /// Foglalásokat tartalmazó lista
-        /// </summary>
-        private static List<Booking> bookings;
-
+        
         #endregion
 
         #region Konstruktor
@@ -86,7 +86,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Szálláshelyek adatait tároló lista
         /// </summary>
         public List<Accomodation> Accomodations
         {
@@ -102,7 +102,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Számlázási tételeket tartalmazó lista
         /// </summary>
         public List<BillingItem> BillingItems
         {
@@ -118,7 +118,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Foglalásokat tartalmazó lista
         /// </summary>
         public List<Booking> Bookings
         {
@@ -134,7 +134,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Vállalati vendégeket tartalmazó lista
         /// </summary>
         public List<CorporateGuest> CorporateGuests
         {
@@ -150,7 +150,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Orszgáokat tartalmazó lista
         /// </summary>
         public List<Country> Countries
         {
@@ -166,7 +166,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Magánvendégeket tartalmazó lista
         /// </summary>
         public List<PrivateGuest> PrivateGuests
         {
@@ -182,7 +182,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Szobákat tartalmazó lista
         /// </summary>
         public List<Room> Rooms
         {
