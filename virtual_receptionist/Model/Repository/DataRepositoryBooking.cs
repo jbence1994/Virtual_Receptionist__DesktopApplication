@@ -51,7 +51,13 @@ namespace virtual_receptionist.Model.Repository
                 UploadBookingsList();
             }
 
-            return new List<Booking>();
+            List<Booking> bookingsByArrivalDate = new List<Booking>();
+
+            /*
+             * Üzleti logika
+             */
+
+            return bookingsByArrivalDate;
         }
 
         /// <summary>
@@ -66,7 +72,13 @@ namespace virtual_receptionist.Model.Repository
                 UploadBookingsList();
             }
 
-            return new List<Booking>();
+            List<Booking> bookingsByDeparturelDate = new List<Booking>();
+
+            /*
+             * Üzleti logika
+             */
+
+            return bookingsByDeparturelDate;
         }
 
         #endregion
