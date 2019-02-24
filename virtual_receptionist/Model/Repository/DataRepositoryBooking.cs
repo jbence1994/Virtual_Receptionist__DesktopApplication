@@ -11,7 +11,7 @@ namespace virtual_receptionist.Model.Repository
         #region Foglalási napló modul üzleti logika
 
         /// <summary>
-        /// 
+        /// Új foglalás felvétele adatbázisba
         /// </summary>
         /// <param name="booking">Booking objektum</param>
         public void Create(Booking booking)
@@ -22,7 +22,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Meglévő foglalás törlése adatbázisból
         /// </summary>
         /// <param name="booking">Booking objektum</param>>
         public void Delete(Booking booking)
@@ -32,7 +32,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Meglévő foglalás módosítása adatbázisban
         /// </summary>
         /// <param name="booking">Booking objektum</param>
         public void Update(Booking booking)
@@ -62,7 +62,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely visszaadja a meglévő szobák számát névvel és kategóriával
         /// </summary>
         /// <returns></returns>
         public List<string> GetRoomNumbersWithNamesAndCategoryNames()

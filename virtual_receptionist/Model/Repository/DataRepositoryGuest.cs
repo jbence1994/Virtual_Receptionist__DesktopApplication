@@ -9,7 +9,7 @@ namespace virtual_receptionist.Model.Repository
         #region Vendégadatbázis modul üzleti logika
 
         /// <summary>
-        /// Vendég törlése
+        /// Meglévő vendég törlése adatbázisból
         /// </summary>
         /// <param name="privateGuest">PrivateGuest objektum</param>
         public void Delete(PrivateGuest privateGuest)
@@ -19,7 +19,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Céges vendég törlése
+        /// Meglévő céges vendég törlése adatbázisból
         /// </summary>
         /// <param name="corporateGuest">CorporateGuest objektum</param>
         public void Delete(CorporateGuest corporateGuest)
@@ -29,7 +29,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Vendég módosítása
+        /// Meglévő vendég módosítása adatbázisban
         /// </summary>
         /// <param name="privateGuest">PrivateGuest objektum</param>
         public void Update(PrivateGuest privateGuest)
@@ -40,7 +40,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Vendég módosítása
+        /// Meglévő vendég módosítása adatbázisban
         /// </summary>
         /// <param name="corporateGuest">CorporateGuest objektum</param>
         public void Update(CorporateGuest corporateGuest)
@@ -51,7 +51,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Vendég létrehozása
+        /// Új vendég létrehozása adatbázisban
         /// </summary>
         /// <param name="privateGuest">PrivateGuest objektum</param>
         public void Create(PrivateGuest privateGuest)
@@ -62,7 +62,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Vendég módosítása
+        /// Meglévő vendég módosítása adatbázisban
         /// </summary>
         /// <param name="corporateGuest">CorporateGuest objektum</param>
         public void Create(CorporateGuest corporateGuest)
