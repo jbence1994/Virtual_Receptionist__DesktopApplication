@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using virtual_receptionist.Model.Entity;
 using virtual_receptionist.Model.Interfaces;

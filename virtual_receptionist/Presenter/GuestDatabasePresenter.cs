@@ -92,12 +92,12 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Vendég adatbázis tábla soron következő azonosítóját visszaadó metódus
+        /// Metódus, amely visszaadja a vendég adatbázis tábla soron következő azonosítóját
         /// </summary>
         /// <returns>Soron következő vendégazonosítóval tér vissza a függvény</returns>
         public int GetNextID()
         {
-            return 1;
+            return dataRepository.GetNextGuestID();
         }
 
         /// <summary>

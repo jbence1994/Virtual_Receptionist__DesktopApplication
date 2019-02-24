@@ -71,21 +71,21 @@ namespace virtual_receptionist.Model.Repository
             database.DML(sql);
         }
 
-        ///// <summary>
-        ///// Metódus, amely visszaadja a soron következő vendégazonosítót adatbázisból
-        ///// </summary>
-        ///// <returns>Az adatbázisban soron következő vendégazonosítót adja vissza a függvény</returns>
-        //public int GetNextGuestID()
-        //{
-        //    int nextID;
+        /// <summary>
+        /// Metódus, amely visszaadja a soron következő vendégazonosítót adatbázisból
+        /// </summary>
+        /// <returns>Az adatbázisban soron következő vendégazonosítót adja vissza a függvény</returns>
+        public int GetNextGuestID()
+        {
+            int nextID;
 
-        //    string sql = "SELECT MAX(guest.ID) FROM guest";
-        //    string maxID = database.DQLScalar(sql);
+            string sql = "SELECT MAX(guest.ID) FROM guest";
+            string maxID = database.DQLScalar(sql);
 
-        //    int.TryParse(maxID, out nextID);
+            int.TryParse(maxID, out nextID);
 
-        //    return nextID + 1;
-        //}
+            return nextID + 1;
+        }
 
         #endregion
     }
