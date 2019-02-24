@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using virtual_receptionist.Model.Entity;
+﻿using virtual_receptionist.Model.Entity;
 using virtual_receptionist.Model.Interfaces;
 
 namespace virtual_receptionist.Model.Repository

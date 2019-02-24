@@ -1,6 +1,4 @@
-﻿using System.Data;
-using System.Linq;
-using virtual_receptionist.Model.Entity;
+﻿using System.Linq;
 
 namespace virtual_receptionist.Model.Repository
 {

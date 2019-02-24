@@ -1,5 +1,4 @@
-﻿using System.Data;
-using virtual_receptionist.Model.Entity;
+﻿using virtual_receptionist.Model.Entity;
 using virtual_receptionist.Model.Interfaces;
 
 namespace virtual_receptionist.Model.Repository
