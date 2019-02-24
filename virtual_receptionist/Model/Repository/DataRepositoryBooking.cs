@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using virtual_receptionist.Model.Entity;
 using virtual_receptionist.Model.Interfaces;
 
@@ -40,10 +42,10 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait érkezés dátuma szerint egy adattáblában
+        /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek a paraméterben megadott dátum szerint érkeznek és egy új listába menti őket
         /// </summary>
         /// <param name="arrivalDate">Érkezés dátuma</param>
-        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
+        /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsByArrivalDate(string arrivalDate)
         {
             if (bookings.Count == 0)
@@ -53,18 +55,22 @@ namespace virtual_receptionist.Model.Repository
 
             List<Booking> bookingsByArrivalDate = new List<Booking>();
 
-            /*
-             * Üzleti logika
-             */
+            foreach (Booking booking in bookings)
+            {
+                if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
+                {
+                    bookingsByArrivalDate.Add(booking);
+                }
+            }
 
             return bookingsByArrivalDate;
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait távozás dátuma szerint egy adattáblában
+        /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek a paraméterben megadott dátum szerint távoznak és egy új listába menti őket
         /// </summary>
         /// <param name="departureDate"></param>
-        /// <returns></returns>
+        /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsByDepartureDate(string departureDate)
         {
             if (bookings.Count == 0)
@@ -72,13 +78,17 @@ namespace virtual_receptionist.Model.Repository
                 UploadBookingsList();
             }
 
-            List<Booking> bookingsByDeparturelDate = new List<Booking>();
+            List<Booking> bookingsByDepartureDate = new List<Booking>();
 
-            /*
-             * Üzleti logika
-             */
+            foreach (Booking booking in bookings)
+            {
+                if (booking.DepartureDate == DateTime.Parse(departureDate))
+                {
+                    bookingsByDepartureDate.Add(booking);
+                }
+            }
 
-            return bookingsByDeparturelDate;
+            return bookingsByDepartureDate;
         }
 
         #endregion
