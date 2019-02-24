@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MySQL_ORM
+namespace MySQL_Interface
 {
     /// <summary>
     /// Adatbázis kapcsolódás típus kivétel

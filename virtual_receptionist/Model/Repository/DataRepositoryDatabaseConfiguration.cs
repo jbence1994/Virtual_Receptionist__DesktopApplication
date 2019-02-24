@@ -1,12 +1,12 @@
 ﻿using virtual_receptionist.Model.Entity;
 using virtual_receptionist.Exceptions;
-using MySQL_ORM;
+using MySQL_Interface;
 
 namespace virtual_receptionist.Model.Repository
 {
     public partial class DataRepository
     {
-        #region Matódusok
+        #region Metódusok
 
         /// <summary>
         /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor

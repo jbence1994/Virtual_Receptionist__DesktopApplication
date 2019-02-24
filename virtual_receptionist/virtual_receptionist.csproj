@@ -58,7 +58,7 @@
     <Compile Include="Model\Entity\BillingItemCategory.cs" />
     <Compile Include="Model\Entity\CorporateGuest.cs" />
     <Compile Include="Model\Entity\RoomCategory.cs" />
-    <Compile Include="Model\Interfaces\IManipulable.cs" />
+    <Compile Include="Model\Interface\IManipulable.cs" />
     <Compile Include="Model\Repository\DataRepositoryDatabaseConfiguration.cs" />
     <Compile Include="Model\Repository\DataRepositoryUserManagement.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
@@ -178,9 +178,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MySQL_ORM\MySQL_ORM.csproj">
+    <ProjectReference Include="..\MySQL_ORM\MySQL_Interface.csproj">
       <Project>{c4687368-a6cf-4580-9dc0-6e2124c2e8c2}</Project>
-      <Name>MySQL_ORM</Name>
+      <Name>MySQL_Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

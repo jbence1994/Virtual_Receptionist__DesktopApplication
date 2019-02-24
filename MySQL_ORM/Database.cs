@@ -2,10 +2,9 @@
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
-using System.Linq.Expressions;
 using MySql.Data.MySqlClient;
 
-namespace MySQL_ORM
+namespace MySQL_Interface
 {
     /// <summary>
     /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke ORM osztály
