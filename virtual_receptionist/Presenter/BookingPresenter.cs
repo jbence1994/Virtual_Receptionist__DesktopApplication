@@ -13,38 +13,6 @@ namespace virtual_receptionist.Presenter
         #region Foglalási napló nézetfrissítései
 
         /// <summary>
-        /// Metódus, amely visszaadja a foglalásokat adattárból érkezés dátuma szerint
-        /// </summary>
-        /// <returns>A foglalásokkal feltöltött adattbálát adja vissza a függvény</returns>
-        /// <param name="arrivalDate">Érkezés dátuma</param>
-        public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
-        {
-            /*
-             * ÜZELTI LOGIKA MEGÍRANDÓ A MODELBE!
-             */
-
-            string arrival = arrivalDate.ToString("yyyy-MM-dd");
-
-            return new DataTable();
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja a foglalásokat adattárból távozás dátuma szerint
-        /// </summary>
-        /// <param name="departureDate">Távozás dátuma</param>
-        /// <returns></returns>
-        public DataTable GetBookingsByDepartureDate(DateTime departureDate)
-        {
-            /*
-             * ÜZLETI LOGIKA MEGÍRANDÓ A MODELBE!
-             */
-
-            string departure = departureDate.ToString("yyyy-MM-dd");
-
-            return new DataTable();
-        }
-
-        /// <summary>
         /// Metódus, amely lekéri a foglalások adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <returns>A foglalások adataival feltöltött adattáblát adja vissza a függvény</returns>
@@ -67,6 +35,61 @@ namespace virtual_receptionist.Presenter
             }
 
             return bookingsDataTable;
+        }
+
+        /// <summary>
+        /// Metódus, amely lekéri a foglalások adatait érkezés dátuma alapján az adattárból és visszaadja őket egy adattáblában
+        /// </summary>
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <returns>A foglalások adataival - érkezés dátuma szerint - feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
+        {
+            string arrival = arrivalDate.ToString("yyyy-MM-dd");
+            List<Booking> bookingsByArrival = dataRepository.GetBookingsByArrivalDate(arrival);
+
+            DataTable bookingsDataTableByArrival = new DataTable();
+            bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
+            bookingsDataTableByArrival.Columns.Add("GuestName", typeof(string));
+            bookingsDataTableByArrival.Columns.Add("RoomNumber", typeof(int));
+            bookingsDataTableByArrival.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(DateTime));
+            bookingsDataTableByArrival.Columns.Add("DepartureDate", typeof(DateTime));
+
+            foreach (Booking booking in bookingsByArrival)
+            {
+                bookingsDataTableByArrival.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate);
+            }
+
+            return bookingsDataTableByArrival;
+        }
+
+        /// <summary>
+        /// Metódus, amely lekéri a foglalások adatait távozás dátuma alapján az adattárból és visszaadja őket egy adattáblában
+        /// </summary>
+        /// <param name="departureDate">Távozás dátuma</param>
+        /// <returns>A foglalások adataival - távozás dátuma szerint - feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetBookingsByDepartureDate(DateTime departureDate)
+        {
+            string departure = departureDate.ToString("yyyy-MM-dd");
+            List<Booking> bookingsByDeparture = dataRepository.GetBookingsByDepartureDate(departure);
+
+            DataTable bookingsDataTableByDeparture = new DataTable();
+            bookingsDataTableByDeparture.Columns.Add("ID", typeof(int));
+            bookingsDataTableByDeparture.Columns.Add("GuestName", typeof(string));
+            bookingsDataTableByDeparture.Columns.Add("RoomNumber", typeof(int));
+            bookingsDataTableByDeparture.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsDataTableByDeparture.Columns.Add("ArrivalDate", typeof(DateTime));
+            bookingsDataTableByDeparture.Columns.Add("DepartureDate", typeof(DateTime));
+
+            foreach (Booking booking in bookingsByDeparture)
+            {
+                bookingsDataTableByDeparture.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests,
+                    booking.ArrivalDate, booking.DepartureDate);
+            }
+
+            return bookingsDataTableByDeparture;
         }
 
         /// <summary>

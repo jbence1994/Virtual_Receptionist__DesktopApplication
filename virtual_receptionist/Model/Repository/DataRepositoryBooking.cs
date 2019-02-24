@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.Model.Entity;
+﻿using System.Collections.Generic;
+using virtual_receptionist.Model.Entity;
 using virtual_receptionist.Model.Interfaces;
 
 namespace virtual_receptionist.Model.Repository
@@ -38,57 +39,35 @@ namespace virtual_receptionist.Model.Repository
             database.DML(sql);
         }
 
-        ///// <summary>
-        ///// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait érkezés dátuma szerint egy adattáblában
-        ///// </summary>
-        ///// <param name="arrivalDate">Érkezés dátuma</param>
-        ///// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        //public DataTable GetBookingsByArrivalDate(string arrivalDate)
-        //{
-        //    bookings.Clear();
+        /// <summary>
+        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait érkezés dátuma szerint egy adattáblában
+        /// </summary>
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
+        public List<Booking> GetBookingsByArrivalDate(string arrivalDate)
+        {
+            if (bookings.Count == 0)
+            {
+                UploadBookingsList();
+            }
 
-        //    DataTable bookingsDataTable = new DataTable();
-        //    bookingsDataTable.Columns.Add("ID", typeof(int));
-        //    bookingsDataTable.Columns.Add("GuestName", typeof(string));
-        //    bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
-        //    bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
-        //    bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
-        //    bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
+            return new List<Booking>();
+        }
 
-        //    foreach (Booking booking in bookings)
-        //    {
-        //        bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
-        //            booking.ArrivalDate, booking.DepartureDate);
-        //    }
+        /// <summary>
+        /// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait távozás dátuma szerint egy adattáblában
+        /// </summary>
+        /// <param name="departureDate"></param>
+        /// <returns></returns>
+        public List<Booking> GetBookingsByDepartureDate(string departureDate)
+        {
+            if (bookings.Count == 0)
+            {
+                UploadBookingsList();
+            }
 
-        //    return bookingsDataTable;
-        //}
-
-        ///// <summary>
-        ///// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait távozás dátuma szerint egy adattáblában
-        ///// </summary>
-        ///// <param name="departureDate"></param>
-        ///// <returns></returns>
-        //public DataTable GetBookingsByDepartureDate(string departureDate)
-        //{
-        //    bookings.Clear();
-
-        //    DataTable bookingsDataTable = new DataTable();
-        //    bookingsDataTable.Columns.Add("ID", typeof(int));
-        //    bookingsDataTable.Columns.Add("GuestName", typeof(string));
-        //    bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
-        //    bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
-        //    bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
-        //    bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
-
-        //    foreach (Booking booking in bookings)
-        //    {
-        //        bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
-        //            booking.ArrivalDate, booking.DepartureDate);
-        //    }
-
-        //    return bookingsDataTable;
-        //}
+            return new List<Booking>();
+        }
 
         #endregion
     }
