@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Collections.Generic;
 using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Presenter
@@ -18,10 +19,13 @@ namespace virtual_receptionist.Presenter
         /// <param name="arrivalDate">Érkezés dátuma</param>
         public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
         {
+            /*
+             * ÜZELTI LOGIKA MEGÍRANDÓ A MODELBE!
+             */
+
             string arrival = arrivalDate.ToString("yyyy-MM-dd");
 
-            DataTable bookings = dataRepository.GetBookingsByArrivalDate(arrival);
-            return bookings;
+            return new DataTable();
         }
 
         /// <summary>
@@ -31,20 +35,35 @@ namespace virtual_receptionist.Presenter
         /// <returns></returns>
         public DataTable GetBookingsByDepartureDate(DateTime departureDate)
         {
+            /*
+             * ÜZLETI LOGIKA MEGÍRANDÓ A MODELBE!
+             */
+
             string departure = departureDate.ToString("yyyy-MM-dd");
 
-            DataTable bookings = dataRepository.GetBookingsByDepartureDate(departure);
-            return bookings;
+            return new DataTable();
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja a szobákat az adattárból
+        /// Metódus, amely lekéri a szobák adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
-        /// <returns>A szobákkal feltöltött adattbálát adja vissza a függvény</returns>
+        /// <returns>A szobák adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetRooms()
         {
-            DataTable rooms = dataRepository.GetRooms();
-            return rooms;
+            List<Room> rooms = dataRepository.Rooms;
+
+            DataTable roomsDataTable = new DataTable();
+            roomsDataTable.Columns.Add("Name", typeof(string));
+            roomsDataTable.Columns.Add("Number", typeof(int));
+            roomsDataTable.Columns.Add("CategoryName", typeof(string));
+            roomsDataTable.Columns.Add("Capacity", typeof(int));
+
+            foreach (Room room in rooms)
+            {
+                roomsDataTable.Rows.Add(room.Name, room.Number, room.Category, room.Capacity);
+            }
+
+            return roomsDataTable;
         }
 
         /// <summary>

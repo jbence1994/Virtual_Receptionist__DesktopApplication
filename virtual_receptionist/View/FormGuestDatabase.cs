@@ -36,8 +36,8 @@ namespace virtual_receptionist.View
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            DataTable privateGuestDataTable = presenter.InitializePrivateGuests();
-            DataTable corporateGuestDataTable = presenter.InitializeCorporateGuests();
+            DataTable privateGuestDataTable = presenter.GetPrivateGuests();
+            DataTable corporateGuestDataTable = presenter.GetCorporateGuests();
 
             foreach (DataRow row in privateGuestDataTable.Rows)
             {

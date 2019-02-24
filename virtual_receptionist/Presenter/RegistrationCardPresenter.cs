@@ -9,22 +9,7 @@ namespace virtual_receptionist.Presenter
     {
         #region Vendég bejelentkező lap nézetfrissítései
 
-        /// <summary>
-        /// Metódus, amely elmenti a szobakiadást adatbázisba
-        /// </summary>
-        public void Save()
-        {
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public List<string> GetRoomNumbersWithNamesAndCategoryNames()
-        {
-            List<string> roomNumbers = dataRepository.GetRoomNumbersWithNamesAndCategoryNames();
-            return roomNumbers;
-        }
 
         #endregion
     }

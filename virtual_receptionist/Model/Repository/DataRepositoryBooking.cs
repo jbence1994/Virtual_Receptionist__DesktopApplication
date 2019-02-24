@@ -39,26 +39,6 @@ namespace virtual_receptionist.Model.Repository
         }
 
         ///// <summary>
-        ///// Metódus, amely visszaadja az adatbázisban tárolt összes szoba adatát egy DataTable adatszerkezetben
-        ///// </summary>
-        ///// <returns>Adatokkal feltöltött adattáblát adja vissza</returns>
-        //public DataTable GetRooms()
-        //{
-        //    DataTable roomsDataTable = new DataTable();
-        //    roomsDataTable.Columns.Add("Name", typeof(string));
-        //    roomsDataTable.Columns.Add("Number", typeof(int));
-        //    roomsDataTable.Columns.Add("CategoryName", typeof(string));
-        //    roomsDataTable.Columns.Add("Capacity", typeof(int));
-
-        //    foreach (Room room in rooms)
-        //    {
-        //        roomsDataTable.Rows.Add(room.Name, room.Number, room.Category, room.Capacity);
-        //    }
-
-        //    return roomsDataTable;
-        //}
-
-        ///// <summary>
         ///// Metódus, amely visszaadja az adatbázisban tárolt szobakiadások adatait érkezés dátuma szerint egy adattáblában
         ///// </summary>
         ///// <param name="arrivalDate">Érkezés dátuma</param>

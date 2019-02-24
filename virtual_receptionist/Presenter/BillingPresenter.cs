@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Collections.Generic;
 using virtual_receptionist.Model.Entity;
 
 namespace virtual_receptionist.Presenter
@@ -112,13 +113,27 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja a számlázási tételeket az adattárból
+        /// Metódus, amely lekéri a számlázási tételek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
-        /// <returns>A számlázási tételekkel feltöltött adattáblát adja vissza a függvény</returns>
-        public DataTable InitializeBillingItemsTable()
+        /// <returns>A számlázási tételek adataival feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetBillingItems()
         {
-            DataTable billingItems = dataRepository.GetBillingItems();
-            return billingItems;
+            List<BillingItem> billingItems = dataRepository.BillingItems;
+
+            DataTable billingItemsDataTable = new DataTable();
+            billingItemsDataTable.Columns.Add("Name", typeof(string));
+            billingItemsDataTable.Columns.Add("Price", typeof(double));
+            billingItemsDataTable.Columns.Add("VAT", typeof(double));
+            billingItemsDataTable.Columns.Add("CategoryName", typeof(string));
+            billingItemsDataTable.Columns.Add("Unit", typeof(string));
+
+            foreach (BillingItem billingItem in billingItems)
+            {
+                billingItemsDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Category.VAT,
+                    billingItem.Category.Name, billingItem.Category.Unit);
+            }
+
+            return billingItemsDataTable;
         }
 
         /// <summary>

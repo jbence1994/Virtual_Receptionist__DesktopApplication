@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using virtual_receptionist.Model.Entity;
 
@@ -12,23 +13,63 @@ namespace virtual_receptionist.Presenter
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// Metódus, amely visszaaadja a vendégeket az adattárból
+        /// Metódus, amely lekéri a céges vendégek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
-        /// <returns>A vendégekkkel feltöltött adattbálát adja vissza a függvény</returns>
-        public DataTable InitializePrivateGuests()
+        /// <returns>A céges vendégek adataival feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetCorporateGuests()
         {
-            DataTable privateGuestDataTable = dataRepository.GetPrivateGuests();
-            return privateGuestDataTable;
+            List<CorporateGuest> corporateGuests = dataRepository.CorporateGuests;
+
+            DataTable corporateGuestDataTable = new DataTable();
+            corporateGuestDataTable.Columns.Add("ID", typeof(int));
+            corporateGuestDataTable.Columns.Add("Name", typeof(string));
+            corporateGuestDataTable.Columns.Add("VATNumber", typeof(string));
+            corporateGuestDataTable.Columns.Add("Country", typeof(string));
+            corporateGuestDataTable.Columns.Add("ZipCode", typeof(string));
+            corporateGuestDataTable.Columns.Add("City", typeof(string));
+            corporateGuestDataTable.Columns.Add("Address", typeof(string));
+            corporateGuestDataTable.Columns.Add("PhoneNumber", typeof(string));
+            corporateGuestDataTable.Columns.Add("EmailAddress", typeof(string));
+
+            foreach (CorporateGuest corporateGuest in corporateGuests)
+            {
+                corporateGuestDataTable.Rows.Add(corporateGuest.ID, corporateGuest.Name, corporateGuest.VatNumber,
+                    corporateGuest.Country, corporateGuest.ZipCode, corporateGuest.City, corporateGuest.Address,
+                    corporateGuest.PhoneNumber, corporateGuest.EmailAddress);
+            }
+
+            return corporateGuestDataTable;
         }
 
         /// <summary>
-        /// Metódus, amely visszaaadja a céges vendégeket az adattárból
+        /// Metódus, amely lekéri a vendégek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
-        /// <returns>A céges vendégekkkel feltöltött adattbálát adja vissza a függvény</returns>
-        public DataTable InitializeCorporateGuests()
+        /// <returns>A vendégek adataival feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetPrivateGuests()
         {
-            DataTable corporateGuestDataTable = dataRepository.GetCorporateGuests();
-            return corporateGuestDataTable;
+            List<PrivateGuest> privateGuests = dataRepository.PrivateGuests;
+
+            DataTable privateGuestsDataTable = new DataTable();
+            privateGuestsDataTable.Columns.Add("ID", typeof(int));
+            privateGuestsDataTable.Columns.Add("Name", typeof(string));
+            privateGuestsDataTable.Columns.Add("DocumentNumber", typeof(string));
+            privateGuestsDataTable.Columns.Add("Citizenship", typeof(string));
+            privateGuestsDataTable.Columns.Add("BirthDate", typeof(string));
+            privateGuestsDataTable.Columns.Add("Country", typeof(string));
+            privateGuestsDataTable.Columns.Add("ZipCode", typeof(string));
+            privateGuestsDataTable.Columns.Add("City", typeof(string));
+            privateGuestsDataTable.Columns.Add("Address", typeof(string));
+            privateGuestsDataTable.Columns.Add("PhoneNumber", typeof(string));
+            privateGuestsDataTable.Columns.Add("EmailAddress", typeof(string));
+
+            foreach (PrivateGuest privateGuest in privateGuests)
+            {
+                privateGuestsDataTable.Rows.Add(privateGuest.ID, privateGuest.Name, privateGuest.DocumentNumber,
+                    privateGuest.Citizenship, privateGuest.BirthDate, privateGuest.Country, privateGuest.ZipCode,
+                    privateGuest.City, privateGuest.Address, privateGuest.PhoneNumber, privateGuest.EmailAddress);
+            }
+
+            return privateGuestsDataTable;
         }
 
         /// <summary>
@@ -56,7 +97,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>Soron következő vendégazonosítóval tér vissza a függvény</returns>
         public int GetNextID()
         {
-            return dataRepository.GetNextGuestID();
+            return 1;
         }
 
         /// <summary>

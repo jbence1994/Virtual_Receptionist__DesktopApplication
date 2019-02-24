@@ -38,8 +38,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>Országlistával tér vissza a függvény</returns>
         public List<Country> GetCountries()
         {
-            List<Country> countries = dataRepository.GetCountries();
-            return countries;
+            return dataRepository.Countries;
         }
 
         #endregion

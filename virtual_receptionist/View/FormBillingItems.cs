@@ -36,7 +36,7 @@ namespace virtual_receptionist.View
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            DataTable billingItemsTable = presenter.InitializeBillingItemsTable();
+            DataTable billingItemsTable = presenter.GetBillingItems();
 
             foreach (DataRow row in billingItemsTable.Rows)
             {
