@@ -93,7 +93,7 @@
             this.labelGuestEmailAddress.Location = new System.Drawing.Point(120, 258);
             this.labelGuestEmailAddress.Name = "labelGuestEmailAddress";
             this.labelGuestEmailAddress.Size = new System.Drawing.Size(38, 13);
-            this.labelGuestEmailAddress.TabIndex = 25;
+            this.labelGuestEmailAddress.TabIndex = 0;
             this.labelGuestEmailAddress.Text = "E-mail:";
             // 
             // labelGuestPhoneNumber
@@ -102,7 +102,7 @@
             this.labelGuestPhoneNumber.Location = new System.Drawing.Point(89, 232);
             this.labelGuestPhoneNumber.Name = "labelGuestPhoneNumber";
             this.labelGuestPhoneNumber.Size = new System.Drawing.Size(70, 13);
-            this.labelGuestPhoneNumber.TabIndex = 23;
+            this.labelGuestPhoneNumber.TabIndex = 0;
             this.labelGuestPhoneNumber.Text = "Telefonszám:";
             // 
             // labelGuestAddress
@@ -111,7 +111,7 @@
             this.labelGuestAddress.Location = new System.Drawing.Point(129, 206);
             this.labelGuestAddress.Name = "labelGuestAddress";
             this.labelGuestAddress.Size = new System.Drawing.Size(29, 13);
-            this.labelGuestAddress.TabIndex = 17;
+            this.labelGuestAddress.TabIndex = 0;
             this.labelGuestAddress.Text = "Cím:";
             // 
             // labelGuestZipCode
@@ -120,7 +120,7 @@
             this.labelGuestZipCode.Location = new System.Drawing.Point(88, 153);
             this.labelGuestZipCode.Name = "labelGuestZipCode";
             this.labelGuestZipCode.Size = new System.Drawing.Size(70, 13);
-            this.labelGuestZipCode.TabIndex = 13;
+            this.labelGuestZipCode.TabIndex = 0;
             this.labelGuestZipCode.Text = "Irányítószám:";
             // 
             // labelGuestCity
@@ -129,7 +129,7 @@
             this.labelGuestCity.Location = new System.Drawing.Point(102, 181);
             this.labelGuestCity.Name = "labelGuestCity";
             this.labelGuestCity.Size = new System.Drawing.Size(56, 13);
-            this.labelGuestCity.TabIndex = 15;
+            this.labelGuestCity.TabIndex = 0;
             this.labelGuestCity.Text = "Település:";
             // 
             // labelGuestName
@@ -138,7 +138,7 @@
             this.labelGuestName.Location = new System.Drawing.Point(84, 22);
             this.labelGuestName.Name = "labelGuestName";
             this.labelGuestName.Size = new System.Drawing.Size(74, 13);
-            this.labelGuestName.TabIndex = 2;
+            this.labelGuestName.TabIndex = 0;
             this.labelGuestName.Text = "Vendég neve:";
             // 
             // textBoxGuestEmailAddress
@@ -189,7 +189,7 @@
             this.labelGuestCitizenship.Location = new System.Drawing.Point(77, 48);
             this.labelGuestCitizenship.Name = "labelGuestCitizenship";
             this.labelGuestCitizenship.Size = new System.Drawing.Size(81, 13);
-            this.labelGuestCitizenship.TabIndex = 4;
+            this.labelGuestCitizenship.TabIndex = 0;
             this.labelGuestCitizenship.Text = "Állampolgárság:";
             // 
             // textBoxCitizenship
@@ -224,7 +224,7 @@
             this.groupBoxGuestData.Location = new System.Drawing.Point(12, 12);
             this.groupBoxGuestData.Name = "groupBoxGuestData";
             this.groupBoxGuestData.Size = new System.Drawing.Size(481, 290);
-            this.groupBoxGuestData.TabIndex = 1;
+            this.groupBoxGuestData.TabIndex = 0;
             this.groupBoxGuestData.TabStop = false;
             this.groupBoxGuestData.Text = "Vendég adatok";
             // 
@@ -234,7 +234,7 @@
             this.labelGuestDocumentNumber.Location = new System.Drawing.Point(62, 100);
             this.labelGuestDocumentNumber.Name = "labelGuestDocumentNumber";
             this.labelGuestDocumentNumber.Size = new System.Drawing.Size(96, 13);
-            this.labelGuestDocumentNumber.TabIndex = 8;
+            this.labelGuestDocumentNumber.TabIndex = 0;
             this.labelGuestDocumentNumber.Text = "Okmányazonosító:";
             // 
             // labelGuestBirthDate
@@ -243,7 +243,7 @@
             this.labelGuestBirthDate.Location = new System.Drawing.Point(89, 74);
             this.labelGuestBirthDate.Name = "labelGuestBirthDate";
             this.labelGuestBirthDate.Size = new System.Drawing.Size(69, 13);
-            this.labelGuestBirthDate.TabIndex = 6;
+            this.labelGuestBirthDate.TabIndex = 0;
             this.labelGuestBirthDate.Text = "Születési idő:";
             // 
             // textBoxGuestBirthDate
@@ -266,7 +266,7 @@
             this.labelGuestCountry.Location = new System.Drawing.Point(115, 126);
             this.labelGuestCountry.Name = "labelGuestCountry";
             this.labelGuestCountry.Size = new System.Drawing.Size(43, 13);
-            this.labelGuestCountry.TabIndex = 11;
+            this.labelGuestCountry.TabIndex = 0;
             this.labelGuestCountry.Text = "Ország:";
             // 
             // comboBoxGuestCountry
@@ -291,7 +291,7 @@
             this.labelRoom.Location = new System.Drawing.Point(118, 35);
             this.labelRoom.Name = "labelRoom";
             this.labelRoom.Size = new System.Drawing.Size(40, 13);
-            this.labelRoom.TabIndex = 37;
+            this.labelRoom.TabIndex = 0;
             this.labelRoom.Text = "Szoba:";
             // 
             // labelNumberOfGuests
@@ -300,7 +300,7 @@
             this.labelNumberOfGuests.Location = new System.Drawing.Point(533, 35);
             this.labelNumberOfGuests.Name = "labelNumberOfGuests";
             this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
-            this.labelNumberOfGuests.TabIndex = 36;
+            this.labelNumberOfGuests.TabIndex = 0;
             this.labelNumberOfGuests.Text = "Vendégek száma:";
             // 
             // numericUpDownNumberOfGuests
@@ -335,7 +335,7 @@
             this.labelDepartureDate.Location = new System.Drawing.Point(574, 65);
             this.labelDepartureDate.Name = "labelDepartureDate";
             this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
-            this.labelDepartureDate.TabIndex = 33;
+            this.labelDepartureDate.TabIndex = 0;
             this.labelDepartureDate.Text = "Távozás:";
             // 
             // labelArrivalDate
@@ -344,7 +344,7 @@
             this.labelArrivalDate.Location = new System.Drawing.Point(111, 65);
             this.labelArrivalDate.Name = "labelArrivalDate";
             this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
-            this.labelArrivalDate.TabIndex = 32;
+            this.labelArrivalDate.TabIndex = 0;
             this.labelArrivalDate.Text = "Érkezés:";
             // 
             // groupBoxBookingData
@@ -360,7 +360,7 @@
             this.groupBoxBookingData.Location = new System.Drawing.Point(12, 308);
             this.groupBoxBookingData.Name = "groupBoxBookingData";
             this.groupBoxBookingData.Size = new System.Drawing.Size(968, 106);
-            this.groupBoxBookingData.TabIndex = 10;
+            this.groupBoxBookingData.TabIndex = 0;
             this.groupBoxBookingData.TabStop = false;
             this.groupBoxBookingData.Text = "Foglalási adatok";
             // 
@@ -390,7 +390,7 @@
             this.labelHeadquarterCity.Location = new System.Drawing.Point(82, 167);
             this.labelHeadquarterCity.Name = "labelHeadquarterCity";
             this.labelHeadquarterCity.Size = new System.Drawing.Size(56, 13);
-            this.labelHeadquarterCity.TabIndex = 39;
+            this.labelHeadquarterCity.TabIndex = 0;
             this.labelHeadquarterCity.Text = "Település:";
             // 
             // label10
@@ -399,7 +399,7 @@
             this.label10.Location = new System.Drawing.Point(68, 139);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 13);
-            this.label10.TabIndex = 37;
+            this.label10.TabIndex = 0;
             this.label10.Text = "Irányítószám:";
             // 
             // labelHeadquarterAddress
@@ -408,7 +408,7 @@
             this.labelHeadquarterAddress.Location = new System.Drawing.Point(109, 192);
             this.labelHeadquarterAddress.Name = "labelHeadquarterAddress";
             this.labelHeadquarterAddress.Size = new System.Drawing.Size(29, 13);
-            this.labelHeadquarterAddress.TabIndex = 41;
+            this.labelHeadquarterAddress.TabIndex = 0;
             this.labelHeadquarterAddress.Text = "Cím:";
             // 
             // comboBoxHeadquarterCountry
@@ -432,7 +432,7 @@
             this.label8.Location = new System.Drawing.Point(95, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 35;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Ország:";
             // 
             // textBoxHeadquarterAddress
@@ -448,7 +448,7 @@
             this.labelBillingName.Location = new System.Drawing.Point(55, 60);
             this.labelBillingName.Name = "labelBillingName";
             this.labelBillingName.Size = new System.Drawing.Size(83, 13);
-            this.labelBillingName.TabIndex = 27;
+            this.labelBillingName.TabIndex = 0;
             this.labelBillingName.Text = "Számlázási név:";
             // 
             // textBox6
@@ -471,7 +471,7 @@
             this.labelCompanyEmailAddress.Location = new System.Drawing.Point(100, 244);
             this.labelCompanyEmailAddress.Name = "labelCompanyEmailAddress";
             this.labelCompanyEmailAddress.Size = new System.Drawing.Size(38, 13);
-            this.labelCompanyEmailAddress.TabIndex = 45;
+            this.labelCompanyEmailAddress.TabIndex = 0;
             this.labelCompanyEmailAddress.Text = "E-mail:";
             // 
             // textBoxCompanyEmailAddress
@@ -487,7 +487,7 @@
             this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(69, 218);
             this.labelCompanyPhoneNumber.Name = "labelCompanyPhoneNumber";
             this.labelCompanyPhoneNumber.Size = new System.Drawing.Size(70, 13);
-            this.labelCompanyPhoneNumber.TabIndex = 43;
+            this.labelCompanyPhoneNumber.TabIndex = 0;
             this.labelCompanyPhoneNumber.Text = "Telefonszám:";
             // 
             // textBox1
@@ -519,7 +519,7 @@
             this.groupBoxBillingData.Location = new System.Drawing.Point(499, 12);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
             this.groupBoxBillingData.Size = new System.Drawing.Size(481, 290);
-            this.groupBoxBillingData.TabIndex = 29;
+            this.groupBoxBillingData.TabIndex = 0;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
             // 
@@ -539,7 +539,7 @@
             this.labelVATNumber.Location = new System.Drawing.Point(85, 86);
             this.labelVATNumber.Name = "labelVATNumber";
             this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
-            this.labelVATNumber.TabIndex = 48;
+            this.labelVATNumber.TabIndex = 0;
             this.labelVATNumber.Text = "Adószám:";
             // 
             // textBoxCompanyVATNumber
