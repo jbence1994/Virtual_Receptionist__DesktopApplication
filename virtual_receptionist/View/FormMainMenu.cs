@@ -53,7 +53,7 @@ namespace virtual_receptionist.View
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
         {
-            presenter.OpenRoomEditor();
+            presenter.OpenBooking();
         }
 
         private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace virtual_receptionist.View
 
         private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
         {
-            presenter.OpenRoomEditor();
+            presenter.OpenBooking();
         }
 
         private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)

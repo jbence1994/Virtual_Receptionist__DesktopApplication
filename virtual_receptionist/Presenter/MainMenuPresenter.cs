@@ -133,12 +133,12 @@ namespace virtual_receptionist.Presenter
         }
 
         /// <summary>
-        /// Metódus, amely megnyitja a szobakezelő modult
+        /// Metódus, amely megnyitja a foglalási napló modult
         /// </summary>
-        public void OpenRoomEditor()
+        public void OpenBooking()
         {
-            FormBooking formRoomEditor = new FormBooking();
-            formRoomEditor.ShowDialog();
+            FormBooking formBooking = new FormBooking();
+            formBooking.ShowDialog();
         }
 
         /// <summary>
