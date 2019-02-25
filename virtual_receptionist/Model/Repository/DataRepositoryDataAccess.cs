@@ -258,7 +258,7 @@ namespace virtual_receptionist.Model.Repository
         private static void UploadBookingsList()
         {
             string sql =
-                "SELECT booking.ID, guest.Name, company.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, company, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.CompanyID = company.ID";
+                "SELECT booking.ID, guest.Name, company.CompanyName, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, company, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.CompanyID = company.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -272,7 +272,7 @@ namespace virtual_receptionist.Model.Repository
 
                 Company company = new Company()
                 {
-                    Name = row["Name"].ToString()
+                    Name = row["CompanyName"].ToString()
                 };
 
                 Room room = new Room()
