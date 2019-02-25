@@ -18,7 +18,7 @@ namespace virtual_receptionist.Presenter
         /// <returns>A cégek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetCompanies()
         {
-            List<Company> companies = dataRepository.CorporateGuests;
+            List<Company> companies = dataRepository.Companies;
 
             DataTable companyDataTable = new DataTable();
             companyDataTable.Columns.Add("ID", typeof(int));

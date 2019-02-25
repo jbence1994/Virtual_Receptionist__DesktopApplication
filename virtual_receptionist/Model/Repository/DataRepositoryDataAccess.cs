@@ -134,15 +134,15 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Vállalati vendégeket tartalmazó lista
+        /// Cégeket tartalmazó lista
         /// </summary>
-        public List<Company> CorporateGuests
+        public List<Company> Companies
         {
             get
             {
                 if (companies.Count == 0)
                 {
-                    UploadCorporateGuestList();
+                    UploadCompaniesList();
                 }
 
                 return companies;
@@ -166,7 +166,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Magánvendégeket tartalmazó lista
+        /// Vendégeket tartalmazó lista
         /// </summary>
         public List<Guest> Guests
         {
@@ -174,7 +174,7 @@ namespace virtual_receptionist.Model.Repository
             {
                 if (guests.Count == 0)
                 {
-                    UploadPrivateGuestsList();
+                    UploadGuestsList();
                 }
 
                 return guests;
@@ -285,9 +285,9 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti a céges vendégek adatait tartalmazó listát
+        /// Metódus, amely adatbázisból feltölti a cégek adatait tartalmazó listát
         /// </summary>
-        private static void UploadCorporateGuestList()
+        private static void UploadCompaniesList()
         {
             string sql =
                 "SELECT company.ID, company.CompanyName, company.VATNumber, country.CountryName, company.ZipCode, company.City, company.Address, company.PhoneNumber, company.EmailAddress FROM company, country WHERE company.Country = country.ID";
@@ -305,10 +305,10 @@ namespace virtual_receptionist.Model.Repository
                 string phoneNumber = row["PhoneNumber"].ToString();
                 string emailAddress = row["EmailAddress"].ToString();
 
-                Company corporateGuestInstance = new Company(id, name, vatNumber, country, zipCode, city,
-                    address, phoneNumber, emailAddress);
+                Company companyInstance = new Company(id, name, vatNumber, country, zipCode, city, address, phoneNumber,
+                    emailAddress);
 
-                companies.Add(corporateGuestInstance);
+                companies.Add(companyInstance);
             }
         }
 
@@ -332,7 +332,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a vendégek adatait tartalmazó listát
         /// </summary>
-        private static void UploadPrivateGuestsList()
+        private static void UploadGuestsList()
         {
             string sql =
                 "SELECT guest.ID, guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
