@@ -69,7 +69,7 @@
             this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPageCompanies = new System.Windows.Forms.TabPage();
+            this.tabPageCompany = new System.Windows.Forms.TabPage();
             this.groupBoxCompany = new System.Windows.Forms.GroupBox();
             this.labelCompanyID = new System.Windows.Forms.Label();
             this.buttonAddCompany = new System.Windows.Forms.Button();
@@ -105,7 +105,7 @@
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPageGuest.SuspendLayout();
             this.groupBoxGuest.SuspendLayout();
-            this.tabPageCompanies.SuspendLayout();
+            this.tabPageCompany.SuspendLayout();
             this.groupBoxCompany.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlGuestDatabase.Controls.Add(this.tabPageGuest);
-            this.tabControlGuestDatabase.Controls.Add(this.tabPageCompanies);
+            this.tabControlGuestDatabase.Controls.Add(this.tabPageCompany);
             this.tabControlGuestDatabase.Location = new System.Drawing.Point(12, 12);
             this.tabControlGuestDatabase.Name = "tabControlGuestDatabase";
             this.tabControlGuestDatabase.SelectedIndex = 0;
@@ -474,17 +474,17 @@
             this.columnHeaderEmailAddress.Text = "E-mail cím";
             this.columnHeaderEmailAddress.Width = 150;
             // 
-            // tabPageCompanies
+            // tabPageCompany
             // 
-            this.tabPageCompanies.Controls.Add(this.groupBoxCompany);
-            this.tabPageCompanies.Controls.Add(this.listViewCompany);
-            this.tabPageCompanies.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCompanies.Name = "tabPageCompanies";
-            this.tabPageCompanies.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCompanies.Size = new System.Drawing.Size(1084, 608);
-            this.tabPageCompanies.TabIndex = 1;
-            this.tabPageCompanies.Text = "Cégek";
-            this.tabPageCompanies.UseVisualStyleBackColor = true;
+            this.tabPageCompany.Controls.Add(this.groupBoxCompany);
+            this.tabPageCompany.Controls.Add(this.listViewCompany);
+            this.tabPageCompany.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCompany.Name = "tabPageCompany";
+            this.tabPageCompany.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCompany.Size = new System.Drawing.Size(1084, 608);
+            this.tabPageCompany.TabIndex = 1;
+            this.tabPageCompany.Text = "Cégek";
+            this.tabPageCompany.UseVisualStyleBackColor = true;
             // 
             // groupBoxCompany
             // 
@@ -795,7 +795,7 @@
             this.tabPageGuest.ResumeLayout(false);
             this.groupBoxGuest.ResumeLayout(false);
             this.groupBoxGuest.PerformLayout();
-            this.tabPageCompanies.ResumeLayout(false);
+            this.tabPageCompany.ResumeLayout(false);
             this.groupBoxCompany.ResumeLayout(false);
             this.groupBoxCompany.PerformLayout();
             this.ResumeLayout(false);
@@ -816,7 +816,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderPhoneNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderEmailAddress;
-        private System.Windows.Forms.TabPage tabPageCompanies;
+        private System.Windows.Forms.TabPage tabPageCompany;
         private System.Windows.Forms.ListView listViewCompany;
         private System.Windows.Forms.ColumnHeader columnHeaderCompanyName;
         private System.Windows.Forms.ColumnHeader columnHeaderVATNumber;
