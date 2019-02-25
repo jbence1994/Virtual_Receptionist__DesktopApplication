@@ -20,7 +20,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Meglévő céges vendég törlése adatbázisból
         /// </summary>
-        /// <param name="compnay">Company objektum</param>
+        /// <param name="company">Company objektum</param>
         public void Delete(Company company)
         {
             string sql = $"DELETE FROM company WHERE company.ID LIKE \"{company.ID}\"";
@@ -41,11 +41,11 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Meglévő vendég módosítása adatbázisban
         /// </summary>
-        /// <param name="corporateGuest">CorporateGuest objektum</param>
-        public void Update(Company corporateGuest)
+        /// <param name="company">Company objektum</param>
+        public void Update(Company company)
         {
             string sql =
-                $"UPDATE company SET company.CompanyName=\"{corporateGuest.Name}\", company.VATNumber=\"{corporateGuest.VatNumber}\", company.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), company.ZipCode=\"{corporateGuest.ZipCode}\", company.City=\"{corporateGuest.City}\", company.Address=\"{corporateGuest.Address}\", company.PhoneNumber=\"{corporateGuest.PhoneNumber}\", company.EmailAddress=\"{corporateGuest.EmailAddress}\" WHERE company.ID LIKE \"{corporateGuest.ID}\"";
+                $"UPDATE company SET company.CompanyName=\"{company.Name}\", company.VATNumber=\"{company.VatNumber}\", company.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{company.Country}\"), company.ZipCode=\"{company.ZipCode}\", company.City=\"{company.City}\", company.Address=\"{company.Address}\", company.PhoneNumber=\"{company.PhoneNumber}\", company.EmailAddress=\"{company.EmailAddress}\" WHERE company.ID LIKE \"{company.ID}\"";
             database.DML(sql);
         }
 
@@ -63,11 +63,11 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Meglévő vendég módosítása adatbázisban
         /// </summary>
-        /// <param name="corporateGuest">CorporateGuest objektum</param>
-        public void Create(Company corporateGuest)
+        /// <param name="company">Company objektum</param>
+        public void Create(Company company)
         {
             string sql =
-                $"INSERT INTO company(CompanyName, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{corporateGuest.Name}\", \"{corporateGuest.VatNumber}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), \"{corporateGuest.ZipCode}\", \"{corporateGuest.City}\", \"{corporateGuest.Address}\", \"{corporateGuest.PhoneNumber}\", \"{corporateGuest.EmailAddress}\")";
+                $"INSERT INTO company(CompanyName, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{company.Name}\", \"{company.VatNumber}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{company.Country}\"), \"{company.ZipCode}\", \"{company.City}\", \"{company.Address}\", \"{company.PhoneNumber}\", \"{company.EmailAddress}\")";
             database.DML(sql);
         }
 
