@@ -36,7 +36,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Vállalati vendégeket tartalmazó lista
         /// </summary>
-        private static List<CorporateGuest> corporateGuests;
+        private static List<Company> companies;
 
         /// <summary>
         /// Orszgáokat tartalmazó lista
@@ -46,7 +46,7 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Magánvendégeket tartalmazó lista
         /// </summary>
-        private static List<PrivateGuest> privateGuests;
+        private static List<Guest> guests;
 
         /// <summary>
         /// Szobákat tartalmazó lista
@@ -67,9 +67,9 @@ namespace virtual_receptionist.Model.Repository
             accomodations = new List<Accomodation>();
             billingItems = new List<BillingItem>();
             bookings = new List<Booking>();
-            corporateGuests = new List<CorporateGuest>();
+            companies = new List<Company>();
             countries = new List<Country>();
-            privateGuests = new List<PrivateGuest>();
+            guests = new List<Guest>();
             rooms = new List<Room>();
         }
 
@@ -136,16 +136,16 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Vállalati vendégeket tartalmazó lista
         /// </summary>
-        public List<CorporateGuest> CorporateGuests
+        public List<Company> CorporateGuests
         {
             get
             {
-                if (corporateGuests.Count == 0)
+                if (companies.Count == 0)
                 {
                     UploadCorporateGuestList();
                 }
 
-                return corporateGuests;
+                return companies;
             }
         }
 
@@ -168,16 +168,16 @@ namespace virtual_receptionist.Model.Repository
         /// <summary>
         /// Magánvendégeket tartalmazó lista
         /// </summary>
-        public List<PrivateGuest> PrivateGuests
+        public List<Guest> Guests
         {
             get
             {
-                if (privateGuests.Count == 0)
+                if (guests.Count == 0)
                 {
                     UploadPrivateGuestsList();
                 }
 
-                return privateGuests;
+                return guests;
             }
         }
 
@@ -265,7 +265,7 @@ namespace virtual_receptionist.Model.Repository
             {
                 int id = Convert.ToInt32(row["ID"]);
 
-                Guest guest = new PrivateGuest()
+                Guest guest = new Guest()
                 {
                     Name = row["Name"].ToString()
                 };
@@ -305,10 +305,10 @@ namespace virtual_receptionist.Model.Repository
                 string phoneNumber = row["PhoneNumber"].ToString();
                 string emailAddress = row["EmailAddress"].ToString();
 
-                CorporateGuest corporateGuestInstance = new CorporateGuest(id, name, vatNumber, country, zipCode, city,
+                Company corporateGuestInstance = new Company(id, name, vatNumber, country, zipCode, city,
                     address, phoneNumber, emailAddress);
 
-                corporateGuests.Add(corporateGuestInstance);
+                companies.Add(corporateGuestInstance);
             }
         }
 
@@ -352,10 +352,10 @@ namespace virtual_receptionist.Model.Repository
                 string phoneNumber = row["PhoneNumber"].ToString();
                 string emailAddress = row["EmailAddress"].ToString();
 
-                PrivateGuest privateGuestInstance = new PrivateGuest(id, name, documentNumber, citizenship, birthDate,
+                Guest privateGuestInstance = new Guest(id, name, documentNumber, citizenship, birthDate,
                     country, zipCode, city, address, phoneNumber, emailAddress);
 
-                privateGuests.Add(privateGuestInstance);
+                guests.Add(privateGuestInstance);
             }
         }
 

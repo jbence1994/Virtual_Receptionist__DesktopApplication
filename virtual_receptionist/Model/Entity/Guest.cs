@@ -1,51 +1,66 @@
 ﻿namespace virtual_receptionist.Model.Entity
 {
     /// <summary>
-    /// Vendég egyed absztrakt modell osztálya
+    /// Vendég egyed modell osztálya
     /// </summary>
-    public abstract class Guest
+    public class Guest
     {
         #region Adattagok
 
         /// <summary>
         /// Vendég azonosítója
         /// </summary>
-        protected int id;
+        private int id;
 
         /// <summary>
         /// Vendég neve
         /// </summary>
-        protected string name;
+        private string name;
+
+        /// <summary>
+        /// Vendég útlevél vagy személyi igazolvány száma
+        /// </summary>
+        private string documentNumber;
+
+        /// <summary>
+        /// Vendég állampolgársága
+        /// </summary>
+        private string citizenship;
+
+        /// <summary>
+        /// Vendég születési ideje
+        /// </summary>
+        private string birthDate;
 
         /// <summary>
         /// Vendég száramázási országának neve
         /// </summary>
-        protected string country;
+        private string country;
 
         /// <summary>
         /// Vendég lakhelyének irányítószáma
         /// </summary>
-        protected string zipCode;
+        private string zipCode;
 
         /// <summary>
         /// Vendég lakhelyének települése
         /// </summary>
-        protected string city;
+        private string city;
 
         /// <summary>
         /// Vendég lakhelyének címe (utca, házszám)
         /// </summary>
-        protected string address;
+        private string address;
 
         /// <summary>
         /// Vendég telefonszáma
         /// </summary>
-        protected string phoneNumber;
+        private string phoneNumber;
 
         /// <summary>
         /// Vendég e-mail címe
         /// </summary>
-        protected string emailAddress;
+        private string emailAddress;
 
         #endregion
 
@@ -56,18 +71,25 @@
         /// </summary>
         /// <param name="id">Vendég azonosítója</param>
         /// <param name="name">Vendég neve</param>
+        /// <param name="documentNumber"></param>
+        /// <param name="citizenship"></param>
+        /// <param name="birthDate"></param>
         /// <param name="country">Vendég száramázási országának neve</param>
         /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
         /// <param name="city">Vendég lakhelyének települése</param>
         /// <param name="address">Vendég lakhelyének címe (utca, házszám)</param>
         /// <param name="phoneNumber">Vendég telefonszáma</param>
         /// <param name="emailAddress">Vendég e-mail címe</param>
-        public Guest(int id, string name, string country, string zipCode, string city, string address,
+        public Guest(int id, string name, string documentNumber, string citizenship, string birthDate, string country,
+            string zipCode, string city, string address,
             string phoneNumber,
             string emailAddress)
         {
             this.id = id;
             this.name = name;
+            this.documentNumber = documentNumber;
+            this.citizenship = citizenship;
+            this.birthDate = birthDate;
             this.country = country;
             this.zipCode = zipCode;
             this.city = city;
@@ -103,6 +125,33 @@
         {
             get { return name; }
             set { name = value; }
+        }
+
+        /// <summary>
+        /// Vendég útlevél vagy személyi igazolvány száma
+        /// </summary>
+        public string DocumentNumber
+        {
+            get { return documentNumber; }
+            set { documentNumber = value; }
+        }
+
+        /// <summary>
+        /// Vendég állampolgársága
+        /// </summary>
+        public string Citizenship
+        {
+            get { return citizenship; }
+            set { citizenship = value; }
+        }
+
+        /// <summary>
+        /// Vendég születési ideje
+        /// </summary>
+        public string BirthDate
+        {
+            get { return birthDate; }
+            set { birthDate = value; }
         }
 
         /// <summary>
@@ -157,6 +206,20 @@
         {
             get { return emailAddress; }
             set { emailAddress = value; }
+        }
+
+        #endregion
+
+        #region Metódusok
+
+        /// <summary>
+        /// Guest osztályból készült objektum string típusúvá alakítása
+        /// </summary>
+        /// <returns>Visszaadja a Guest típusú objektumot string típusúra alakítva</returns>
+        public override string ToString()
+        {
+            return
+                $"{id} {name} {documentNumber} {citizenship} {birthDate} {country} {zipCode} {city} {address} {phoneNumber} {emailAddress}";
         }
 
         #endregion

@@ -122,7 +122,7 @@ namespace virtual_receptionist.Presenter
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
-            Guest guest = new CorporateGuest()
+            Guest guest = new Guest()
             {
                 Name = bookingParameters[1].ToString()
             };
@@ -151,7 +151,7 @@ namespace virtual_receptionist.Presenter
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
-            Guest guest = new CorporateGuest()
+            Guest guest = new Guest()
             {
                 Name = bookingParameters[1].ToString()
             };
@@ -180,7 +180,7 @@ namespace virtual_receptionist.Presenter
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
-            Guest guest = new CorporateGuest()
+            Guest guest = new Guest()
             {
                 Name = bookingParameters[1].ToString()
             };

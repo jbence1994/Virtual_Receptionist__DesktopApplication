@@ -56,14 +56,13 @@
     <Compile Include="Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Model\Entity\BillingItemCategory.cs" />
-    <Compile Include="Model\Entity\CorporateGuest.cs" />
+    <Compile Include="Model\Entity\Company.cs" />
     <Compile Include="Model\Entity\RoomCategory.cs" />
     <Compile Include="Model\Interface\IManipulable.cs" />
     <Compile Include="Model\Repository\DataRepositoryDatabaseConfiguration.cs" />
     <Compile Include="Model\Repository\DataRepositoryUserManagement.cs" />
     <Compile Include="Presenter\RegistrationCardPresenter.cs" />
     <Compile Include="Presenter\BookingPresenter.cs" />
-    <Compile Include="Model\Entity\PrivateGuest.cs" />
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>

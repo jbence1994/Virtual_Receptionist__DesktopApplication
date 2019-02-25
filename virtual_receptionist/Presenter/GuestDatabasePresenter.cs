@@ -13,63 +13,63 @@ namespace virtual_receptionist.Presenter
         #region Vendégadatbázis-kezelő nézetfrissítései
 
         /// <summary>
-        /// Metódus, amely lekéri a céges vendégek adatait az adattárból és visszaadja őket egy adattáblában
+        /// Metódus, amely lekéri a cégek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
-        /// <returns>A céges vendégek adataival feltöltött adattáblát adja vissza a függvény</returns>
-        public DataTable GetCorporateGuests()
+        /// <returns>A cégek adataival feltöltött adattáblát adja vissza a függvény</returns>
+        public DataTable GetCompanies()
         {
-            List<CorporateGuest> corporateGuests = dataRepository.CorporateGuests;
+            List<Company> companies = dataRepository.CorporateGuests;
 
-            DataTable corporateGuestDataTable = new DataTable();
-            corporateGuestDataTable.Columns.Add("ID", typeof(int));
-            corporateGuestDataTable.Columns.Add("Name", typeof(string));
-            corporateGuestDataTable.Columns.Add("VATNumber", typeof(string));
-            corporateGuestDataTable.Columns.Add("Country", typeof(string));
-            corporateGuestDataTable.Columns.Add("ZipCode", typeof(string));
-            corporateGuestDataTable.Columns.Add("City", typeof(string));
-            corporateGuestDataTable.Columns.Add("Address", typeof(string));
-            corporateGuestDataTable.Columns.Add("PhoneNumber", typeof(string));
-            corporateGuestDataTable.Columns.Add("EmailAddress", typeof(string));
+            DataTable companyDataTable = new DataTable();
+            companyDataTable.Columns.Add("ID", typeof(int));
+            companyDataTable.Columns.Add("Name", typeof(string));
+            companyDataTable.Columns.Add("VATNumber", typeof(string));
+            companyDataTable.Columns.Add("Country", typeof(string));
+            companyDataTable.Columns.Add("ZipCode", typeof(string));
+            companyDataTable.Columns.Add("City", typeof(string));
+            companyDataTable.Columns.Add("Address", typeof(string));
+            companyDataTable.Columns.Add("PhoneNumber", typeof(string));
+            companyDataTable.Columns.Add("EmailAddress", typeof(string));
 
-            foreach (CorporateGuest corporateGuest in corporateGuests)
+            foreach (Company company in companies)
             {
-                corporateGuestDataTable.Rows.Add(corporateGuest.ID, corporateGuest.Name, corporateGuest.VatNumber,
-                    corporateGuest.Country, corporateGuest.ZipCode, corporateGuest.City, corporateGuest.Address,
-                    corporateGuest.PhoneNumber, corporateGuest.EmailAddress);
+                companyDataTable.Rows.Add(company.ID, company.Name, company.VatNumber,
+                    company.Country, company.ZipCode, company.City, company.Address,
+                    company.PhoneNumber, company.EmailAddress);
             }
 
-            return corporateGuestDataTable;
+            return companyDataTable;
         }
 
         /// <summary>
         /// Metódus, amely lekéri a vendégek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <returns>A vendégek adataival feltöltött adattáblát adja vissza a függvény</returns>
-        public DataTable GetPrivateGuests()
+        public DataTable GetGuests()
         {
-            List<PrivateGuest> privateGuests = dataRepository.PrivateGuests;
+            List<Guest> guests = dataRepository.Guests;
 
-            DataTable privateGuestsDataTable = new DataTable();
-            privateGuestsDataTable.Columns.Add("ID", typeof(int));
-            privateGuestsDataTable.Columns.Add("Name", typeof(string));
-            privateGuestsDataTable.Columns.Add("DocumentNumber", typeof(string));
-            privateGuestsDataTable.Columns.Add("Citizenship", typeof(string));
-            privateGuestsDataTable.Columns.Add("BirthDate", typeof(string));
-            privateGuestsDataTable.Columns.Add("Country", typeof(string));
-            privateGuestsDataTable.Columns.Add("ZipCode", typeof(string));
-            privateGuestsDataTable.Columns.Add("City", typeof(string));
-            privateGuestsDataTable.Columns.Add("Address", typeof(string));
-            privateGuestsDataTable.Columns.Add("PhoneNumber", typeof(string));
-            privateGuestsDataTable.Columns.Add("EmailAddress", typeof(string));
+            DataTable guestDataTable = new DataTable();
+            guestDataTable.Columns.Add("ID", typeof(int));
+            guestDataTable.Columns.Add("Name", typeof(string));
+            guestDataTable.Columns.Add("DocumentNumber", typeof(string));
+            guestDataTable.Columns.Add("Citizenship", typeof(string));
+            guestDataTable.Columns.Add("BirthDate", typeof(string));
+            guestDataTable.Columns.Add("Country", typeof(string));
+            guestDataTable.Columns.Add("ZipCode", typeof(string));
+            guestDataTable.Columns.Add("City", typeof(string));
+            guestDataTable.Columns.Add("Address", typeof(string));
+            guestDataTable.Columns.Add("PhoneNumber", typeof(string));
+            guestDataTable.Columns.Add("EmailAddress", typeof(string));
 
-            foreach (PrivateGuest privateGuest in privateGuests)
+            foreach (Guest guest in guests)
             {
-                privateGuestsDataTable.Rows.Add(privateGuest.ID, privateGuest.Name, privateGuest.DocumentNumber,
-                    privateGuest.Citizenship, privateGuest.BirthDate, privateGuest.Country, privateGuest.ZipCode,
-                    privateGuest.City, privateGuest.Address, privateGuest.PhoneNumber, privateGuest.EmailAddress);
+                guestDataTable.Rows.Add(guest.ID, guest.Name, guest.DocumentNumber,
+                    guest.Citizenship, guest.BirthDate, guest.Country, guest.ZipCode,
+                    guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress);
             }
 
-            return privateGuestsDataTable;
+            return guestDataTable;
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace virtual_receptionist.Presenter
         /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        public void AddNewRecordToPrivateGuestTable(params object[] guestParameters)
+        public void AddNewRecordToGuestTable(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
@@ -127,40 +127,36 @@ namespace virtual_receptionist.Presenter
             string phoneNumber = guestParameters[9].ToString();
             string email = guestParameters[10].ToString();
 
-            PrivateGuest privateGuest =
-                new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
-                    phoneNumber, email);
-
-            dataRepository.Create(privateGuest);
+            Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
+                phoneNumber, email);
+            dataRepository.Create(guest);
         }
 
         /// <summary>
         /// Céges vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
-        /// <param name="guestParameters">Céges vendég paraméterei</param>
-        public void AddNewRecordToCorporateGuestTable(params object[] guestParameters)
+        /// <param name="companyParameters">Cég paraméterei</param>
+        public void AddNewRecordToCompanyTable(params object[] companyParameters)
         {
-            int id = int.Parse(guestParameters[0].ToString());
-            string name = guestParameters[1].ToString();
-            string vatNumber = guestParameters[2].ToString();
-            string country = guestParameters[3].ToString();
-            string zipCode = guestParameters[4].ToString();
-            string city = guestParameters[5].ToString();
-            string address = guestParameters[6].ToString();
-            string phoneNumber = guestParameters[7].ToString();
-            string email = guestParameters[8].ToString();
+            int id = int.Parse(companyParameters[0].ToString());
+            string name = companyParameters[1].ToString();
+            string vatNumber = companyParameters[2].ToString();
+            string country = companyParameters[3].ToString();
+            string zipCode = companyParameters[4].ToString();
+            string city = companyParameters[5].ToString();
+            string address = companyParameters[6].ToString();
+            string phoneNumber = companyParameters[7].ToString();
+            string email = companyParameters[8].ToString();
 
-            CorporateGuest corporateGuest =
-                new CorporateGuest(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
-
-            dataRepository.Create(corporateGuest);
+            Company company = new Company(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+            dataRepository.Create(company);
         }
 
         /// <summary>
         /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        public void UpdateRecordInPrivateGuestTable(params object[] guestParameters)
+        public void UpdateRecordInGuestTable(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
@@ -174,41 +170,36 @@ namespace virtual_receptionist.Presenter
             string phoneNumber = guestParameters[9].ToString();
             string email = guestParameters[10].ToString();
 
-            PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate, country,
-                zipCode,
-                city, address, phoneNumber, email);
-
-            dataRepository.Update(privateGuest);
+            Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
+                phoneNumber, email);
+            dataRepository.Update(guest);
         }
 
         /// <summary>
         /// Céges vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
-        /// <param name="guestParameters">Céges vendég paraméterei</param>
-        public void UpdateRecordInCorporateGuestTable(params object[] guestParameters)
+        /// <param name="companyParameters">Cég paraméterei</param>
+        public void UpdateRecordInCompanyTable(params object[] companyParameters)
         {
-            int id = int.Parse(guestParameters[0].ToString());
-            string name = guestParameters[1].ToString();
-            string vatNumber = guestParameters[2].ToString();
-            string country = guestParameters[3].ToString();
-            string zipCode = guestParameters[4].ToString();
-            string city = guestParameters[5].ToString();
-            string address = guestParameters[6].ToString();
-            string phoneNumber = guestParameters[7].ToString();
-            string email = guestParameters[8].ToString();
+            int id = int.Parse(companyParameters[0].ToString());
+            string name = companyParameters[1].ToString();
+            string vatNumber = companyParameters[2].ToString();
+            string country = companyParameters[3].ToString();
+            string zipCode = companyParameters[4].ToString();
+            string city = companyParameters[5].ToString();
+            string address = companyParameters[6].ToString();
+            string phoneNumber = companyParameters[7].ToString();
+            string email = companyParameters[8].ToString();
 
-            CorporateGuest corporateGuest =
-                new CorporateGuest(id, name,
-                    vatNumber, country, zipCode, city, address, phoneNumber, email);
-
-            dataRepository.Update(corporateGuest);
+            Company company = new Company(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
+            dataRepository.Update(company);
         }
 
         /// <summary>
         /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        public void DeleteRecordFromPrivateGuestTable(params object[] guestParameters)
+        public void DeleteRecordFromGuestTable(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
@@ -222,33 +213,29 @@ namespace virtual_receptionist.Presenter
             string phoneNumber = guestParameters[9].ToString();
             string email = guestParameters[10].ToString();
 
-            PrivateGuest privateGuest = new PrivateGuest(id, name, documentNumber, citizenship, birthDate,
-                country,
-                zipCode, city, address, phoneNumber, email);
-
-            dataRepository.Delete(privateGuest);
+            Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
+                phoneNumber, email);
+            dataRepository.Delete(guest);
         }
 
         /// <summary>
         /// Céges vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
-        /// <param name="guestParameters">Céges vendég paraméterei</param>
-        public void DeleteRecordFromCorporateGuestTable(params object[] guestParameters)
+        /// <param name="companyParameters">Cég paraméterei</param>
+        public void DeleteRecordFromCompanyTable(params object[] companyParameters)
         {
-            int id = int.Parse(guestParameters[0].ToString());
-            string name = guestParameters[1].ToString();
-            string vatNumber = guestParameters[2].ToString();
-            string country = guestParameters[3].ToString();
-            string zipCode = guestParameters[4].ToString();
-            string city = guestParameters[5].ToString();
-            string address = guestParameters[6].ToString();
-            string phoneNumber = guestParameters[7].ToString();
-            string email = guestParameters[8].ToString();
+            int id = int.Parse(companyParameters[0].ToString());
+            string name = companyParameters[1].ToString();
+            string vatNumber = companyParameters[2].ToString();
+            string country = companyParameters[3].ToString();
+            string zipCode = companyParameters[4].ToString();
+            string city = companyParameters[5].ToString();
+            string address = companyParameters[6].ToString();
+            string phoneNumber = companyParameters[7].ToString();
+            string email = companyParameters[8].ToString();
 
-            CorporateGuest corporateGuest = new CorporateGuest(id, name, vatNumber, country, zipCode, city,
-                address,
-                phoneNumber, email);
-
+            Company corporateGuest =
+                new Company(id, name, vatNumber, country, zipCode, city, address, phoneNumber, email);
             dataRepository.Delete(corporateGuest);
         }
 

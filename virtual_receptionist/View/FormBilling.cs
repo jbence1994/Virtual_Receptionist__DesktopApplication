@@ -33,6 +33,11 @@ namespace virtual_receptionist.View
 
         #region UI események
 
+        private void FormBilling_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
 
