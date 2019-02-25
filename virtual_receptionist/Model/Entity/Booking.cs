@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace virtual_receptionist.Model.Entity
 {
@@ -19,6 +18,11 @@ namespace virtual_receptionist.Model.Entity
         /// Guest modell osztály egy példánya
         /// </summary>
         private Guest guest;
+
+        /// <summary>
+        /// Company modell osztály egy példánya
+        /// </summary>
+        private Company company;
 
         /// <summary>
         /// Room modell osztály egy példánya
@@ -49,14 +53,17 @@ namespace virtual_receptionist.Model.Entity
         /// </summary>
         /// <param name="id">Foglalás azonosító</param>
         /// <param name="guest">Guest egyed</param>
+        /// <param name="company">Company egyed</param>
         /// <param name="room">Room egyed</param>
         /// <param name="numberOfGuests">Vendégek száma</param>
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
-        public Booking(int id, Guest guest, Room room, int numberOfGuests, DateTime arrivalDate, DateTime departureDate)
+        public Booking(int id, Guest guest, Company company, Room room, int numberOfGuests, DateTime arrivalDate,
+            DateTime departureDate)
         {
             this.id = id;
             this.guest = guest;
+            this.company = company;
             this.room = room;
             this.numberOfGuests = numberOfGuests;
             this.arrivalDate = arrivalDate;
@@ -83,6 +90,15 @@ namespace virtual_receptionist.Model.Entity
         {
             get { return guest; }
             set { guest = value; }
+        }
+
+        /// <summary>
+        /// Company modell osztály egy példánya
+        /// </summary>
+        public Company Company
+        {
+            get { return company; }
+            set { company = value; }
         }
 
         /// <summary>
@@ -131,7 +147,7 @@ namespace virtual_receptionist.Model.Entity
         /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{id} {guest} {room} {numberOfGuests} {arrivalDate} {departureDate}";
+            return $"{id} {guest} {company} {room} {numberOfGuests} {arrivalDate} {departureDate}";
         }
 
         #endregion

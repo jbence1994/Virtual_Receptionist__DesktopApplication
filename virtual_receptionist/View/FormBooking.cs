@@ -57,12 +57,14 @@ namespace virtual_receptionist.View
             {
                 int id = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[1].Value);
                 object guest = dataGridViewBookings.SelectedRows[0].Cells[2].Value;
-                object room = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
-                int numberOfGuests = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[4].Value);
-                DateTime arrivalDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[5].Value);
-                DateTime departureDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[6].Value);
+                object company = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
+                object room = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
+                int numberOfGuests = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[5].Value);
+                DateTime arrivalDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[6].Value);
+                DateTime departureDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[7].Value);
 
-                presenter.AddNewRecordToBookingTable(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+                presenter.AddNewRecordToBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
+                    departureDate);
             }
         }
 
@@ -72,12 +74,14 @@ namespace virtual_receptionist.View
             {
                 int id = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[1].Value);
                 object guest = dataGridViewBookings.SelectedRows[0].Cells[2].Value;
-                object room = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
-                int numberOfGuests = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[4].Value);
-                DateTime arrivalDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[5].Value);
-                DateTime departureDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[6].Value);
+                object company = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
+                object room = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
+                int numberOfGuests = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[5].Value);
+                DateTime arrivalDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[6].Value);
+                DateTime departureDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[7].Value);
 
-                presenter.UpdateRecordInBookingTable(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+                presenter.UpdateRecordInBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
+                    departureDate);
             }
         }
 
@@ -87,12 +91,14 @@ namespace virtual_receptionist.View
             {
                 int id = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[1].Value);
                 object guest = dataGridViewBookings.SelectedRows[0].Cells[2].Value;
-                object room = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
-                int numberOfGuests = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[4].Value);
-                DateTime arrivalDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[5].Value);
-                DateTime departureDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[6].Value);
+                object company = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
+                object room = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
+                int numberOfGuests = Convert.ToInt32(dataGridViewBookings.SelectedRows[0].Cells[5].Value);
+                DateTime arrivalDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[6].Value);
+                DateTime departureDate = Convert.ToDateTime(dataGridViewBookings.SelectedRows[0].Cells[7].Value);
 
-                presenter.DeleteRecordFromBookingTable(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+                presenter.DeleteRecordFromBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
+                    departureDate);
             }
         }
 
