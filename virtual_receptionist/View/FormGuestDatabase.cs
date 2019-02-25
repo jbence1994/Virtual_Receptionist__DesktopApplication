@@ -63,8 +63,8 @@ namespace virtual_receptionist.View
                 listViewCorporateGuests.Items.Add(corporateGuests);
             }
 
-            textBoxID.Text = presenter.GetNextID().ToString();
-            textBoxCompanyID.Text = presenter.GetNextID().ToString();
+            textBoxID.Text = presenter.GetNextGuestID().ToString();
+            textBoxCompanyID.Text = presenter.GetNextCompanyID().ToString();
 
             comboBoxCountry.DataSource = presenter.GetCountries();
             comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
@@ -347,7 +347,7 @@ namespace virtual_receptionist.View
                 buttonAddPrivateGuest.Enabled = true;
 
                 textBoxID.Clear();
-                textBoxID.Text = presenter.GetNextID().ToString();
+                textBoxID.Text = presenter.GetNextGuestID().ToString();
                 textBoxName.Clear();
                 textBoxDocumentID.Clear();
                 textBoxCitizenship.Clear();
@@ -387,7 +387,7 @@ namespace virtual_receptionist.View
                 buttonAddCorporateGuest.Enabled = true;
 
                 textBoxCompanyID.Clear();
-                textBoxCompanyID.Text = presenter.GetNextID().ToString();
+                textBoxCompanyID.Text = presenter.GetNextCompanyID().ToString();
                 textBoxCompanyName.Clear();
                 textBoxVATNumber.Clear();
                 comboBoxCountry.DataSource = null;

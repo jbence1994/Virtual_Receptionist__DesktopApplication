@@ -23,7 +23,7 @@ namespace virtual_receptionist.Model.Repository
         /// <param name="corporateGuest">CorporateGuest objektum</param>
         public void Delete(CorporateGuest corporateGuest)
         {
-            string sql = $"DELETE FROM guest WHERE guest.ID LIKE \"{corporateGuest.ID}\"";
+            string sql = $"DELETE FROM company WHERE guest.ID LIKE \"{corporateGuest.ID}\"";
             database.DML(sql);
         }
 
@@ -45,7 +45,7 @@ namespace virtual_receptionist.Model.Repository
         public void Update(CorporateGuest corporateGuest)
         {
             string sql =
-                $"UPDATE guest SET guest.Name=\"{corporateGuest.Name}\", guest.VATNumber=\"{corporateGuest.VatNumber}\", guest.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), guest.ZipCode=\"{corporateGuest.ZipCode}\", guest.City=\"{corporateGuest.City}\", guest.Address=\"{corporateGuest.Address}\", guest.PhoneNumber=\"{corporateGuest.PhoneNumber}\", guest.EmailAddress=\"{corporateGuest.EmailAddress}\" WHERE guest.ID LIKE \"{corporateGuest.ID}\"";
+                $"UPDATE guest SET company.CompanyName=\"{corporateGuest.Name}\", company.VATNumber=\"{corporateGuest.VatNumber}\", company.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), company.ZipCode=\"{corporateGuest.ZipCode}\", company.City=\"{corporateGuest.City}\", guest.Address=\"{corporateGuest.Address}\", company.PhoneNumber=\"{corporateGuest.PhoneNumber}\", guest.EmailAddress=\"{corporateGuest.EmailAddress}\" WHERE company.ID LIKE \"{corporateGuest.ID}\"";
             database.DML(sql);
         }
 
@@ -67,7 +67,7 @@ namespace virtual_receptionist.Model.Repository
         public void Create(CorporateGuest corporateGuest)
         {
             string sql =
-                $"INSERT INTO guest(Name, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{corporateGuest.Name}\", \"{corporateGuest.VatNumber}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), \"{corporateGuest.ZipCode}\", \"{corporateGuest.City}\", \"{corporateGuest.Address}\", \"{corporateGuest.PhoneNumber}\", \"{corporateGuest.EmailAddress}\")";
+                $"INSERT INTO company(CompanyName, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{corporateGuest.Name}\", \"{corporateGuest.VatNumber}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), \"{corporateGuest.ZipCode}\", \"{corporateGuest.City}\", \"{corporateGuest.Address}\", \"{corporateGuest.PhoneNumber}\", \"{corporateGuest.EmailAddress}\")";
             database.DML(sql);
         }
 
@@ -80,6 +80,22 @@ namespace virtual_receptionist.Model.Repository
             int nextID;
 
             string sql = "SELECT MAX(guest.ID) FROM guest";
+            string maxID = database.DQLScalar(sql);
+
+            int.TryParse(maxID, out nextID);
+
+            return nextID + 1;
+        }
+
+        /// <summary>
+        /// Metódus, amely visszaadja a soron következő cégazonosítót adatbázisból
+        /// </summary>
+        /// <returns>Az adatbázisban soron következő cégazonosítót adja vissza a függvény</returns>
+        public int GetNextCompanyID()
+        {
+            int nextID;
+
+            string sql = "SELECT MAX(company.ID) FROM comapny";
             string maxID = database.DQLScalar(sql);
 
             int.TryParse(maxID, out nextID);
