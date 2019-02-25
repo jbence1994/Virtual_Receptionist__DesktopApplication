@@ -486,7 +486,6 @@
             // 
             // textBoxCompanyPhoneNumber
             // 
-            this.textBoxCompanyPhoneNumber.Enabled = false;
             this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(144, 215);
             this.textBoxCompanyPhoneNumber.Name = "textBoxCompanyPhoneNumber";
             this.textBoxCompanyPhoneNumber.Size = new System.Drawing.Size(276, 20);
@@ -505,7 +504,6 @@
             // 
             // textBoxCompanyEmailAddress
             // 
-            this.textBoxCompanyEmailAddress.Enabled = false;
             this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(144, 241);
             this.textBoxCompanyEmailAddress.Name = "textBoxCompanyEmailAddress";
             this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(276, 20);
@@ -561,7 +559,6 @@
             // 
             // textBoxCompanyVATNumber
             // 
-            this.textBoxCompanyVATNumber.Enabled = false;
             this.textBoxCompanyVATNumber.Location = new System.Drawing.Point(144, 189);
             this.textBoxCompanyVATNumber.Name = "textBoxCompanyVATNumber";
             this.textBoxCompanyVATNumber.Size = new System.Drawing.Size(276, 20);
