@@ -43,7 +43,7 @@
             this.textBoxGuestZipCode = new System.Windows.Forms.TextBox();
             this.textBoxGuestName = new System.Windows.Forms.TextBox();
             this.labelGuestCitizenship = new System.Windows.Forms.Label();
-            this.textBoxCitizenship = new System.Windows.Forms.TextBox();
+            this.textBoxGuestCitizenship = new System.Windows.Forms.TextBox();
             this.groupBoxGuestData = new System.Windows.Forms.GroupBox();
             this.labelGuestDocumentNumber = new System.Windows.Forms.Label();
             this.labelGuestBirthDate = new System.Windows.Forms.Label();
@@ -70,12 +70,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxHeadquarterAddress = new System.Windows.Forms.TextBox();
             this.labelBillingName = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxHeadquarterCity = new System.Windows.Forms.TextBox();
+            this.textBoxHeadquarterZipCode = new System.Windows.Forms.TextBox();
             this.labelCompanyEmailAddress = new System.Windows.Forms.Label();
-            this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
+            this.textBoxCompanyPhoneNumber = new System.Windows.Forms.TextBox();
             this.labelCompanyPhoneNumber = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
             this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
             this.checkBoxIsCompany = new System.Windows.Forms.CheckBox();
             this.labelVATNumber = new System.Windows.Forms.Label();
@@ -161,6 +161,7 @@
             this.textBoxGuestAddress.Name = "textBoxGuestAddress";
             this.textBoxGuestAddress.Size = new System.Drawing.Size(276, 20);
             this.textBoxGuestAddress.TabIndex = 7;
+            this.textBoxGuestAddress.TextChanged += new System.EventHandler(this.textBoxGuestAddress_TextChanged);
             // 
             // textBoxGuestCity
             // 
@@ -168,6 +169,7 @@
             this.textBoxGuestCity.Name = "textBoxGuestCity";
             this.textBoxGuestCity.Size = new System.Drawing.Size(276, 20);
             this.textBoxGuestCity.TabIndex = 6;
+            this.textBoxGuestCity.TextChanged += new System.EventHandler(this.textBoxGuestCity_TextChanged);
             // 
             // textBoxGuestZipCode
             // 
@@ -175,6 +177,7 @@
             this.textBoxGuestZipCode.Name = "textBoxGuestZipCode";
             this.textBoxGuestZipCode.Size = new System.Drawing.Size(276, 20);
             this.textBoxGuestZipCode.TabIndex = 5;
+            this.textBoxGuestZipCode.TextChanged += new System.EventHandler(this.textBoxGuestZipCode_TextChanged);
             // 
             // textBoxGuestName
             // 
@@ -182,6 +185,7 @@
             this.textBoxGuestName.Name = "textBoxGuestName";
             this.textBoxGuestName.Size = new System.Drawing.Size(276, 20);
             this.textBoxGuestName.TabIndex = 0;
+            this.textBoxGuestName.TextChanged += new System.EventHandler(this.textBoxGuestName_TextChanged);
             // 
             // labelGuestCitizenship
             // 
@@ -192,12 +196,12 @@
             this.labelGuestCitizenship.TabIndex = 0;
             this.labelGuestCitizenship.Text = "Állampolgárság:";
             // 
-            // textBoxCitizenship
+            // textBoxGuestCitizenship
             // 
-            this.textBoxCitizenship.Location = new System.Drawing.Point(164, 45);
-            this.textBoxCitizenship.Name = "textBoxCitizenship";
-            this.textBoxCitizenship.Size = new System.Drawing.Size(276, 20);
-            this.textBoxCitizenship.TabIndex = 1;
+            this.textBoxGuestCitizenship.Location = new System.Drawing.Point(164, 45);
+            this.textBoxGuestCitizenship.Name = "textBoxGuestCitizenship";
+            this.textBoxGuestCitizenship.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestCitizenship.TabIndex = 1;
             // 
             // groupBoxGuestData
             // 
@@ -216,7 +220,7 @@
             this.groupBoxGuestData.Controls.Add(this.textBoxGuestAddress);
             this.groupBoxGuestData.Controls.Add(this.labelGuestCountry);
             this.groupBoxGuestData.Controls.Add(this.textBoxGuestName);
-            this.groupBoxGuestData.Controls.Add(this.textBoxCitizenship);
+            this.groupBoxGuestData.Controls.Add(this.textBoxGuestCitizenship);
             this.groupBoxGuestData.Controls.Add(this.comboBoxGuestCountry);
             this.groupBoxGuestData.Controls.Add(this.labelGuestAddress);
             this.groupBoxGuestData.Controls.Add(this.labelGuestZipCode);
@@ -387,7 +391,7 @@
             // labelHeadquarterCity
             // 
             this.labelHeadquarterCity.AutoSize = true;
-            this.labelHeadquarterCity.Location = new System.Drawing.Point(82, 167);
+            this.labelHeadquarterCity.Location = new System.Drawing.Point(82, 141);
             this.labelHeadquarterCity.Name = "labelHeadquarterCity";
             this.labelHeadquarterCity.Size = new System.Drawing.Size(56, 13);
             this.labelHeadquarterCity.TabIndex = 0;
@@ -396,7 +400,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(68, 139);
+            this.label10.Location = new System.Drawing.Point(68, 113);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 13);
             this.label10.TabIndex = 0;
@@ -405,7 +409,7 @@
             // labelHeadquarterAddress
             // 
             this.labelHeadquarterAddress.AutoSize = true;
-            this.labelHeadquarterAddress.Location = new System.Drawing.Point(109, 192);
+            this.labelHeadquarterAddress.Location = new System.Drawing.Point(109, 166);
             this.labelHeadquarterAddress.Name = "labelHeadquarterAddress";
             this.labelHeadquarterAddress.Size = new System.Drawing.Size(29, 13);
             this.labelHeadquarterAddress.TabIndex = 0;
@@ -413,14 +417,16 @@
             // 
             // comboBoxHeadquarterCountry
             // 
+            this.comboBoxHeadquarterCountry.Enabled = false;
             this.comboBoxHeadquarterCountry.FormattingEnabled = true;
-            this.comboBoxHeadquarterCountry.Location = new System.Drawing.Point(144, 109);
+            this.comboBoxHeadquarterCountry.Location = new System.Drawing.Point(144, 83);
             this.comboBoxHeadquarterCountry.Name = "comboBoxHeadquarterCountry";
             this.comboBoxHeadquarterCountry.Size = new System.Drawing.Size(276, 21);
             this.comboBoxHeadquarterCountry.TabIndex = 13;
             // 
             // textBoxBillingName
             // 
+            this.textBoxBillingName.Enabled = false;
             this.textBoxBillingName.Location = new System.Drawing.Point(144, 57);
             this.textBoxBillingName.Name = "textBoxBillingName";
             this.textBoxBillingName.Size = new System.Drawing.Size(276, 20);
@@ -429,7 +435,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(95, 112);
+            this.label8.Location = new System.Drawing.Point(95, 86);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 0;
@@ -437,7 +443,8 @@
             // 
             // textBoxHeadquarterAddress
             // 
-            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(144, 189);
+            this.textBoxHeadquarterAddress.Enabled = false;
+            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(144, 163);
             this.textBoxHeadquarterAddress.Name = "textBoxHeadquarterAddress";
             this.textBoxHeadquarterAddress.Size = new System.Drawing.Size(276, 20);
             this.textBoxHeadquarterAddress.TabIndex = 16;
@@ -451,19 +458,21 @@
             this.labelBillingName.TabIndex = 0;
             this.labelBillingName.Text = "Számlázási név:";
             // 
-            // textBox6
+            // textBoxHeadquarterCity
             // 
-            this.textBox6.Location = new System.Drawing.Point(144, 162);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(276, 20);
-            this.textBox6.TabIndex = 15;
+            this.textBoxHeadquarterCity.Enabled = false;
+            this.textBoxHeadquarterCity.Location = new System.Drawing.Point(144, 136);
+            this.textBoxHeadquarterCity.Name = "textBoxHeadquarterCity";
+            this.textBoxHeadquarterCity.Size = new System.Drawing.Size(276, 20);
+            this.textBoxHeadquarterCity.TabIndex = 15;
             // 
-            // textBox5
+            // textBoxHeadquarterZipCode
             // 
-            this.textBox5.Location = new System.Drawing.Point(144, 136);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(276, 20);
-            this.textBox5.TabIndex = 14;
+            this.textBoxHeadquarterZipCode.Enabled = false;
+            this.textBoxHeadquarterZipCode.Location = new System.Drawing.Point(144, 110);
+            this.textBoxHeadquarterZipCode.Name = "textBoxHeadquarterZipCode";
+            this.textBoxHeadquarterZipCode.Size = new System.Drawing.Size(276, 20);
+            this.textBoxHeadquarterZipCode.TabIndex = 14;
             // 
             // labelCompanyEmailAddress
             // 
@@ -473,13 +482,16 @@
             this.labelCompanyEmailAddress.Size = new System.Drawing.Size(38, 13);
             this.labelCompanyEmailAddress.TabIndex = 0;
             this.labelCompanyEmailAddress.Text = "E-mail:";
+            this.labelCompanyEmailAddress.Visible = false;
             // 
-            // textBoxCompanyEmailAddress
+            // textBoxCompanyPhoneNumber
             // 
-            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(144, 215);
-            this.textBoxCompanyEmailAddress.Name = "textBoxCompanyEmailAddress";
-            this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(276, 20);
-            this.textBoxCompanyEmailAddress.TabIndex = 17;
+            this.textBoxCompanyPhoneNumber.Enabled = false;
+            this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(144, 215);
+            this.textBoxCompanyPhoneNumber.Name = "textBoxCompanyPhoneNumber";
+            this.textBoxCompanyPhoneNumber.Size = new System.Drawing.Size(276, 20);
+            this.textBoxCompanyPhoneNumber.TabIndex = 17;
+            this.textBoxCompanyPhoneNumber.Visible = false;
             // 
             // labelCompanyPhoneNumber
             // 
@@ -489,25 +501,28 @@
             this.labelCompanyPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelCompanyPhoneNumber.TabIndex = 0;
             this.labelCompanyPhoneNumber.Text = "Telefonszám:";
+            this.labelCompanyPhoneNumber.Visible = false;
             // 
-            // textBox1
+            // textBoxCompanyEmailAddress
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 241);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 20);
-            this.textBox1.TabIndex = 18;
+            this.textBoxCompanyEmailAddress.Enabled = false;
+            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(144, 241);
+            this.textBoxCompanyEmailAddress.Name = "textBoxCompanyEmailAddress";
+            this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(276, 20);
+            this.textBoxCompanyEmailAddress.TabIndex = 18;
+            this.textBoxCompanyEmailAddress.Visible = false;
             // 
             // groupBoxBillingData
             // 
             this.groupBoxBillingData.Controls.Add(this.checkBoxIsCompany);
             this.groupBoxBillingData.Controls.Add(this.labelVATNumber);
             this.groupBoxBillingData.Controls.Add(this.textBoxCompanyVATNumber);
-            this.groupBoxBillingData.Controls.Add(this.textBox1);
-            this.groupBoxBillingData.Controls.Add(this.labelCompanyPhoneNumber);
             this.groupBoxBillingData.Controls.Add(this.textBoxCompanyEmailAddress);
+            this.groupBoxBillingData.Controls.Add(this.labelCompanyPhoneNumber);
+            this.groupBoxBillingData.Controls.Add(this.textBoxCompanyPhoneNumber);
             this.groupBoxBillingData.Controls.Add(this.labelCompanyEmailAddress);
-            this.groupBoxBillingData.Controls.Add(this.textBox5);
-            this.groupBoxBillingData.Controls.Add(this.textBox6);
+            this.groupBoxBillingData.Controls.Add(this.textBoxHeadquarterZipCode);
+            this.groupBoxBillingData.Controls.Add(this.textBoxHeadquarterCity);
             this.groupBoxBillingData.Controls.Add(this.labelBillingName);
             this.groupBoxBillingData.Controls.Add(this.textBoxHeadquarterAddress);
             this.groupBoxBillingData.Controls.Add(this.label8);
@@ -532,22 +547,26 @@
             this.checkBoxIsCompany.TabIndex = 10;
             this.checkBoxIsCompany.Text = "A vendég céges számlát kér";
             this.checkBoxIsCompany.UseVisualStyleBackColor = true;
+            this.checkBoxIsCompany.CheckedChanged += new System.EventHandler(this.checkBoxIsCompany_CheckedChanged);
             // 
             // labelVATNumber
             // 
             this.labelVATNumber.AutoSize = true;
-            this.labelVATNumber.Location = new System.Drawing.Point(85, 86);
+            this.labelVATNumber.Location = new System.Drawing.Point(82, 192);
             this.labelVATNumber.Name = "labelVATNumber";
             this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVATNumber.TabIndex = 0;
             this.labelVATNumber.Text = "Adószám:";
+            this.labelVATNumber.Visible = false;
             // 
             // textBoxCompanyVATNumber
             // 
-            this.textBoxCompanyVATNumber.Location = new System.Drawing.Point(144, 83);
+            this.textBoxCompanyVATNumber.Enabled = false;
+            this.textBoxCompanyVATNumber.Location = new System.Drawing.Point(144, 189);
             this.textBoxCompanyVATNumber.Name = "textBoxCompanyVATNumber";
             this.textBoxCompanyVATNumber.Size = new System.Drawing.Size(276, 20);
             this.textBoxCompanyVATNumber.TabIndex = 12;
+            this.textBoxCompanyVATNumber.Visible = false;
             // 
             // FormGuestRegistrationCard
             // 
@@ -591,7 +610,7 @@
         private System.Windows.Forms.TextBox textBoxGuestZipCode;
         private System.Windows.Forms.TextBox textBoxGuestName;
         private System.Windows.Forms.Label labelGuestCitizenship;
-        private System.Windows.Forms.TextBox textBoxCitizenship;
+        private System.Windows.Forms.TextBox textBoxGuestCitizenship;
         private System.Windows.Forms.GroupBox groupBoxGuestData;
         private System.Windows.Forms.GroupBox groupBoxBookingData;
         private System.Windows.Forms.TextBox textBoxGuestDocumentNumber;
@@ -613,12 +632,12 @@
         private System.Windows.Forms.GroupBox groupBoxBillingData;
         private System.Windows.Forms.Label labelVATNumber;
         private System.Windows.Forms.TextBox textBoxCompanyVATNumber;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label labelCompanyPhoneNumber;
         private System.Windows.Forms.TextBox textBoxCompanyEmailAddress;
+        private System.Windows.Forms.Label labelCompanyPhoneNumber;
+        private System.Windows.Forms.TextBox textBoxCompanyPhoneNumber;
         private System.Windows.Forms.Label labelCompanyEmailAddress;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxHeadquarterZipCode;
+        private System.Windows.Forms.TextBox textBoxHeadquarterCity;
         private System.Windows.Forms.Label labelBillingName;
         private System.Windows.Forms.TextBox textBoxHeadquarterAddress;
         private System.Windows.Forms.Label label8;

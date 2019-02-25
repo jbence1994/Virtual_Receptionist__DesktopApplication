@@ -45,5 +45,53 @@ namespace virtual_receptionist.View
         }
 
         #endregion
+
+        private void textBoxGuestName_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxIsCompany.Checked)
+            {
+                textBoxBillingName.Text = textBoxGuestName.Text;
+            }
+        }
+
+        private void textBoxGuestZipCode_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxIsCompany.Checked)
+            {
+                textBoxGuestZipCode.Text = textBoxHeadquarterZipCode.Text;
+            }
+        }
+
+        private void textBoxGuestCity_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxIsCompany.Checked)
+            {
+                textBoxGuestCity.Text = textBoxHeadquarterCity.Text;
+            }
+        }
+
+        private void textBoxGuestAddress_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxIsCompany.Checked)
+            {
+                textBoxGuestAddress.Text = labelHeadquarterAddress.Text;
+            }
+        }
+
+        private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxIsCompany.Checked)
+            {
+                textBoxBillingName.Clear();
+                comboBoxHeadquarterCountry.DataSource = null;
+                comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
+                textBoxHeadquarterZipCode.Clear();
+                textBoxHeadquarterCity.Clear();
+                textBoxHeadquarterAddress.Clear();
+                textBoxCompanyPhoneNumber.Visible = true;
+                textBoxCompanyEmailAddress.Visible = true;
+                textBoxCompanyVATNumber.Visible = true;
+            }
+        }
     }
 }
