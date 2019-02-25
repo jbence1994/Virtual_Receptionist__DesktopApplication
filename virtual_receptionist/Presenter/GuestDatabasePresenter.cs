@@ -142,8 +142,8 @@ namespace virtual_receptionist.Presenter
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
-            string country = guestParameters[2].ToString();
-            string vatNumber = guestParameters[3].ToString();
+            string vatNumber = guestParameters[2].ToString();
+            string country = guestParameters[3].ToString();
             string zipCode = guestParameters[4].ToString();
             string city = guestParameters[5].ToString();
             string address = guestParameters[6].ToString();
@@ -189,8 +189,8 @@ namespace virtual_receptionist.Presenter
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
-            string country = guestParameters[2].ToString();
-            string vatNumber = guestParameters[3].ToString();
+            string vatNumber = guestParameters[2].ToString();
+            string country = guestParameters[3].ToString();
             string zipCode = guestParameters[4].ToString();
             string city = guestParameters[5].ToString();
             string address = guestParameters[6].ToString();
@@ -237,8 +237,8 @@ namespace virtual_receptionist.Presenter
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
-            string country = guestParameters[2].ToString();
-            string vatNumber = guestParameters[3].ToString();
+            string vatNumber = guestParameters[2].ToString();
+            string country = guestParameters[3].ToString();
             string zipCode = guestParameters[4].ToString();
             string city = guestParameters[5].ToString();
             string address = guestParameters[6].ToString();

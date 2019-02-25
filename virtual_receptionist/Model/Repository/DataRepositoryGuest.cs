@@ -23,7 +23,7 @@ namespace virtual_receptionist.Model.Repository
         /// <param name="corporateGuest">CorporateGuest objektum</param>
         public void Delete(CorporateGuest corporateGuest)
         {
-            string sql = $"DELETE FROM company WHERE guest.ID LIKE \"{corporateGuest.ID}\"";
+            string sql = $"DELETE FROM company WHERE company.ID LIKE \"{corporateGuest.ID}\"";
             database.DML(sql);
         }
 
@@ -45,7 +45,7 @@ namespace virtual_receptionist.Model.Repository
         public void Update(CorporateGuest corporateGuest)
         {
             string sql =
-                $"UPDATE guest SET company.CompanyName=\"{corporateGuest.Name}\", company.VATNumber=\"{corporateGuest.VatNumber}\", company.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), company.ZipCode=\"{corporateGuest.ZipCode}\", company.City=\"{corporateGuest.City}\", guest.Address=\"{corporateGuest.Address}\", company.PhoneNumber=\"{corporateGuest.PhoneNumber}\", guest.EmailAddress=\"{corporateGuest.EmailAddress}\" WHERE company.ID LIKE \"{corporateGuest.ID}\"";
+                $"UPDATE company SET company.CompanyName=\"{corporateGuest.Name}\", company.VATNumber=\"{corporateGuest.VatNumber}\", company.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{corporateGuest.Country}\"), company.ZipCode=\"{corporateGuest.ZipCode}\", company.City=\"{corporateGuest.City}\", company.Address=\"{corporateGuest.Address}\", company.PhoneNumber=\"{corporateGuest.PhoneNumber}\", company.EmailAddress=\"{corporateGuest.EmailAddress}\" WHERE company.ID LIKE \"{corporateGuest.ID}\"";
             database.DML(sql);
         }
 
