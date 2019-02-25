@@ -19,7 +19,7 @@ namespace virtual_receptionist.Model.Repository
         private static Database database;
 
         /// <summary>
-        /// Szálláshelyek adatait tároló lista
+        /// Szálláshelyeket tartalmazó lista
         /// </summary>
         private static List<Accomodation> accomodations;
 
@@ -34,7 +34,7 @@ namespace virtual_receptionist.Model.Repository
         private static List<Booking> bookings;
 
         /// <summary>
-        /// Vállalati vendégeket tartalmazó lista
+        /// Cégeket tartalmazó lista
         /// </summary>
         private static List<Company> companies;
 
@@ -86,7 +86,7 @@ namespace virtual_receptionist.Model.Repository
         }
 
         /// <summary>
-        /// Szálláshelyek adatait tároló lista
+        /// Szálláshelyeket tartalmazó lista
         /// </summary>
         public List<Accomodation> Accomodations
         {
@@ -307,7 +307,6 @@ namespace virtual_receptionist.Model.Repository
 
                 Company companyInstance = new Company(id, name, vatNumber, country, zipCode, city, address, phoneNumber,
                     emailAddress);
-
                 companies.Add(companyInstance);
             }
         }
@@ -354,7 +353,6 @@ namespace virtual_receptionist.Model.Repository
 
                 Guest privateGuestInstance = new Guest(id, name, documentNumber, citizenship, birthDate,
                     country, zipCode, city, address, phoneNumber, emailAddress);
-
                 guests.Add(privateGuestInstance);
             }
         }

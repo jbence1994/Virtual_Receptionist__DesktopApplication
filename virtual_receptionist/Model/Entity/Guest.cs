@@ -71,9 +71,9 @@
         /// </summary>
         /// <param name="id">Vendég azonosítója</param>
         /// <param name="name">Vendég neve</param>
-        /// <param name="documentNumber"></param>
-        /// <param name="citizenship"></param>
-        /// <param name="birthDate"></param>
+        /// <param name="documentNumber">Vendég útlevél vagy személyi igazolvány száma</param>
+        /// <param name="citizenship">Vendég állampolgársága</param>
+        /// <param name="birthDate">Vendég születési ideje</param>
         /// <param name="country">Vendég száramázási országának neve</param>
         /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
         /// <param name="city">Vendég lakhelyének települése</param>
