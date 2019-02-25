@@ -38,11 +38,6 @@ namespace virtual_receptionist.View
 
         }
 
-        private void buttonPrintInvoice_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
             FormBillingItems billingItems = new FormBillingItems();
@@ -94,6 +89,11 @@ namespace virtual_receptionist.View
         {
             int rows = dataGridViewItems.Rows.Count;
             buttonPrintInvoice.Enabled = !presenter.IsEmptyBillingTable(rows);
+        }
+
+        private void buttonPrintInvoice_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
