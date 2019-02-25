@@ -95,7 +95,7 @@ namespace virtual_receptionist.Model.Repository
         {
             int nextID;
 
-            string sql = "SELECT MAX(company.ID) FROM comapny";
+            string sql = "SELECT MAX(company.ID) FROM company";
             string maxID = database.DQLScalar(sql);
 
             int.TryParse(maxID, out nextID);

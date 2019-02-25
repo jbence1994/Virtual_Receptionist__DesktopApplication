@@ -290,13 +290,13 @@ namespace virtual_receptionist.Model.Repository
         private static void UploadCorporateGuestList()
         {
             string sql =
-                "SELECT guest.ID, guest.Name, guest.VATNumber, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.VATNumber != \"\"";
+                "SELECT company.ID, company.CompanyName, company.VATNumber, country.CountryName, company.ZipCode, company.City, company.Address, company.PhoneNumber, company.EmailAddress FROM company, country WHERE company.Country = country.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
                 int id = int.Parse(row["ID"].ToString());
-                string name = row["Name"].ToString();
+                string name = row["CompanyName"].ToString();
                 string vatNumber = row["VATNumber"].ToString();
                 string country = row["CountryName"].ToString();
                 string zipCode = row["ZipCode"].ToString();
@@ -335,7 +335,7 @@ namespace virtual_receptionist.Model.Repository
         private static void UploadPrivateGuestsList()
         {
             string sql =
-                "SELECT guest.ID, guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.VATNumber, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID AND guest.DocumentNumber != \"\"";
+                "SELECT guest.ID, guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
