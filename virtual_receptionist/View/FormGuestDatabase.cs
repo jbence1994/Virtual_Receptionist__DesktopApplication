@@ -66,23 +66,23 @@ namespace virtual_receptionist.View
             textBoxGuestID.Text = presenter.GetNextGuestID().ToString();
             textBoxCompanyID.Text = presenter.GetNextCompanyID().ToString();
 
-            comboBoxCountry.DataSource = presenter.GetCountries();
+            comboBoxGuestCountry.DataSource = presenter.GetCountries();
             comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
             int id = int.Parse(textBoxGuestID.Text);
-            string name = textBoxName.Text;
-            string documentNumber = textBoxDocumentID.Text;
-            string citizenship = textBoxCitizenship.Text;
-            string birthDate = textBoxBirthDate.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
-            string zipCode = textBoxZipCode.Text;
-            string city = textBoxCity.Text;
-            string address = textBoxAddress.Text;
-            string phoneNumber = textBoxPhoneNumber.Text;
-            string email = textBoxEmailAddress.Text;
+            string name = textBoxGuestName.Text;
+            string documentNumber = textBoxGuestDocumentNumber.Text;
+            string citizenship = textBoxGuestCitizenship.Text;
+            string birthDate = textBoxGuestBirthDate.Text;
+            string country = comboBoxGuestCountry.SelectedItem.ToString();
+            string zipCode = textBoxGuestZipCode.Text;
+            string city = textBoxGuestCity.Text;
+            string address = textBoxGuestAddress.Text;
+            string phoneNumber = textBoxGuestPhoneNumber.Text;
+            string email = textBoxGuestEmailAddress.Text;
 
             // ListView rekord hozzáadás (GUI)
             textBoxGuestID.Text = id.ToString();
@@ -110,7 +110,7 @@ namespace virtual_receptionist.View
             int id = int.Parse(textBoxCompanyID.Text);
             string name = textBoxCompanyName.Text;
             string vatNumber = textBoxVATNumber.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
+            string country = comboBoxGuestCountry.SelectedItem.ToString();
             string zipCode = textBoxHeadquarterZipCode.Text;
             string city = textBoxHeadquarterCity.Text;
             string address = textBoxHeadquarterAddress.Text;
@@ -141,16 +141,16 @@ namespace virtual_receptionist.View
             if (listViewGuest.SelectedItems.Count > 0)
             {
                 int id = int.Parse(textBoxGuestID.Text);
-                string name = textBoxName.Text;
-                string documentNumber = textBoxDocumentID.Text;
-                string citizenship = textBoxCitizenship.Text;
-                string birthDate = textBoxBirthDate.Text;
-                string country = comboBoxCountry.SelectedItem.ToString();
-                string zipCode = textBoxZipCode.Text;
-                string city = textBoxCity.Text;
-                string address = textBoxAddress.Text;
-                string phoneNumber = textBoxPhoneNumber.Text;
-                string email = textBoxEmailAddress.Text;
+                string name = textBoxGuestName.Text;
+                string documentNumber = textBoxGuestDocumentNumber.Text;
+                string citizenship = textBoxGuestCitizenship.Text;
+                string birthDate = textBoxGuestBirthDate.Text;
+                string country = comboBoxGuestCountry.SelectedItem.ToString();
+                string zipCode = textBoxGuestZipCode.Text;
+                string city = textBoxGuestCity.Text;
+                string address = textBoxGuestAddress.Text;
+                string phoneNumber = textBoxGuestPhoneNumber.Text;
+                string email = textBoxGuestEmailAddress.Text;
 
                 // ListView rekord módosítása (GUI)
                 textBoxGuestID.Text = id.ToString();
@@ -189,7 +189,7 @@ namespace virtual_receptionist.View
                 int id = int.Parse(textBoxCompanyID.Text);
                 string name = textBoxCompanyName.Text;
                 string vatNumber = textBoxVATNumber.Text;
-                string country = comboBoxCountry.SelectedItem.ToString();
+                string country = comboBoxGuestCountry.SelectedItem.ToString();
                 string zipCode = textBoxHeadquarterZipCode.Text;
                 string city = textBoxHeadquarterCity.Text;
                 string address = textBoxHeadquarterAddress.Text;
@@ -237,7 +237,7 @@ namespace virtual_receptionist.View
                     string documentNumber = listViewGuest.SelectedItems[0].SubItems[2].Text;
                     string citizenship = listViewGuest.SelectedItems[0].SubItems[3].Text;
                     string birthDate = listViewGuest.SelectedItems[0].SubItems[4].Text;
-                    string country = comboBoxCountry.SelectedItem.ToString();
+                    string country = comboBoxGuestCountry.SelectedItem.ToString();
                     string zipCode = listViewGuest.SelectedItems[0].SubItems[6].Text;
                     string city = listViewGuest.SelectedItems[0].SubItems[7].Text;
                     string address = listViewGuest.SelectedItems[0].SubItems[8].Text;
@@ -250,18 +250,18 @@ namespace virtual_receptionist.View
 
                     //GUI vezérlők alaphelyzetbe állítása
                     textBoxGuestID.Clear();
-                    textBoxName.Clear();
-                    textBoxDocumentID.Clear();
-                    textBoxCitizenship.Clear();
-                    textBoxBirthDate.Clear();
-                    comboBoxCountry.DataSource = null;
-                    comboBoxCountry.DataSource = presenter.GetCountries();
-                    comboBoxCountry.SelectedItem = presenter.GetCountries()[0];
-                    textBoxZipCode.Clear();
-                    textBoxCity.Clear();
-                    textBoxAddress.Clear();
-                    textBoxPhoneNumber.Clear();
-                    textBoxEmailAddress.Clear();
+                    textBoxGuestName.Clear();
+                    textBoxGuestDocumentNumber.Clear();
+                    textBoxGuestCitizenship.Clear();
+                    textBoxGuestBirthDate.Clear();
+                    comboBoxGuestCountry.DataSource = null;
+                    comboBoxGuestCountry.DataSource = presenter.GetCountries();
+                    comboBoxGuestCountry.SelectedItem = presenter.GetCountries()[0];
+                    textBoxGuestZipCode.Clear();
+                    textBoxGuestCity.Clear();
+                    textBoxGuestAddress.Clear();
+                    textBoxGuestPhoneNumber.Clear();
+                    textBoxGuestEmailAddress.Clear();
 
                     //Adatbázis rekord törlése
                     presenter.DeleteRecordFromGuestTable(id, name, documentNumber, citizenship, birthDate,
@@ -328,19 +328,19 @@ namespace virtual_receptionist.View
                 buttonAddGuest.Enabled = false;
 
                 textBoxGuestID.Text = listViewGuest.SelectedItems[0].Text;
-                textBoxName.Text = listViewGuest.SelectedItems[0].SubItems[1].Text;
-                textBoxDocumentID.Text = listViewGuest.SelectedItems[0].SubItems[2].Text;
-                textBoxCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
-                textBoxBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text.Replace(". ", "-")
+                textBoxGuestName.Text = listViewGuest.SelectedItems[0].SubItems[1].Text;
+                textBoxGuestDocumentNumber.Text = listViewGuest.SelectedItems[0].SubItems[2].Text;
+                textBoxGuestCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
+                textBoxGuestBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text.Replace(". ", "-")
                     .Replace(".", "");
                 string selectedCountryInTable = listViewGuest.SelectedItems[0].SubItems[5].Text;
-                comboBoxCountry.SelectedItem = presenter.SetSelectedCountry(selectedCountryInTable);
+                comboBoxGuestCountry.SelectedItem = presenter.SetSelectedCountry(selectedCountryInTable);
 
-                textBoxZipCode.Text = listViewGuest.SelectedItems[0].SubItems[6].Text;
-                textBoxCity.Text = listViewGuest.SelectedItems[0].SubItems[7].Text;
-                textBoxAddress.Text = listViewGuest.SelectedItems[0].SubItems[8].Text;
-                textBoxPhoneNumber.Text = listViewGuest.SelectedItems[0].SubItems[9].Text;
-                textBoxEmailAddress.Text = listViewGuest.SelectedItems[0].SubItems[10].Text;
+                textBoxGuestZipCode.Text = listViewGuest.SelectedItems[0].SubItems[6].Text;
+                textBoxGuestCity.Text = listViewGuest.SelectedItems[0].SubItems[7].Text;
+                textBoxGuestAddress.Text = listViewGuest.SelectedItems[0].SubItems[8].Text;
+                textBoxGuestPhoneNumber.Text = listViewGuest.SelectedItems[0].SubItems[9].Text;
+                textBoxGuestEmailAddress.Text = listViewGuest.SelectedItems[0].SubItems[10].Text;
             }
             else
             {
@@ -348,18 +348,18 @@ namespace virtual_receptionist.View
 
                 textBoxGuestID.Clear();
                 textBoxGuestID.Text = presenter.GetNextGuestID().ToString();
-                textBoxName.Clear();
-                textBoxDocumentID.Clear();
-                textBoxCitizenship.Clear();
-                textBoxBirthDate.Clear();
-                comboBoxCountry.DataSource = null;
-                comboBoxCountry.DataSource = presenter.GetCountries();
-                comboBoxCountry.SelectedItem = presenter.GetCountries()[0];
-                textBoxZipCode.Clear();
-                textBoxCity.Clear();
-                textBoxAddress.Clear();
-                textBoxPhoneNumber.Clear();
-                textBoxEmailAddress.Clear();
+                textBoxGuestName.Clear();
+                textBoxGuestDocumentNumber.Clear();
+                textBoxGuestCitizenship.Clear();
+                textBoxGuestBirthDate.Clear();
+                comboBoxGuestCountry.DataSource = null;
+                comboBoxGuestCountry.DataSource = presenter.GetCountries();
+                comboBoxGuestCountry.SelectedItem = presenter.GetCountries()[0];
+                textBoxGuestZipCode.Clear();
+                textBoxGuestCity.Clear();
+                textBoxGuestAddress.Clear();
+                textBoxGuestPhoneNumber.Clear();
+                textBoxGuestEmailAddress.Clear();
             }
         }
 
@@ -390,9 +390,9 @@ namespace virtual_receptionist.View
                 textBoxCompanyID.Text = presenter.GetNextCompanyID().ToString();
                 textBoxCompanyName.Clear();
                 textBoxVATNumber.Clear();
-                comboBoxCountry.DataSource = null;
-                comboBoxCountry.DataSource = presenter.GetCountries();
-                comboBoxCountry.SelectedItem = presenter.GetCountries()[0];
+                comboBoxGuestCountry.DataSource = null;
+                comboBoxGuestCountry.DataSource = presenter.GetCountries();
+                comboBoxGuestCountry.SelectedItem = presenter.GetCountries()[0];
                 textBoxHeadquarterZipCode.Clear();
                 textBoxHeadquarterCity.Clear();
                 textBoxHeadquarterAddress.Clear();
