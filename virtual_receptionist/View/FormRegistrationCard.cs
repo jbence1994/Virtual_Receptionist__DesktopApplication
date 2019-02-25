@@ -63,7 +63,7 @@ namespace virtual_receptionist.View
                 return;
             }
 
-            textBoxGuestZipCode.Text = textBoxHeadquarterZipCode.Text;
+            textBoxHeadquarterZipCode.Text = textBoxGuestZipCode.Text;
         }
 
         private void textBoxGuestCity_TextChanged(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace virtual_receptionist.View
                 return;
             }
 
-            textBoxGuestCity.Text = textBoxHeadquarterCity.Text;
+            textBoxHeadquarterCity.Text = textBoxGuestCity.Text;
         }
 
         private void textBoxGuestAddress_TextChanged(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace virtual_receptionist.View
                 return;
             }
 
-            textBoxGuestAddress.Text = labelHeadquarterAddress.Text;
+            textBoxHeadquarterAddress.Text = textBoxGuestAddress.Text;
         }
 
         private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
