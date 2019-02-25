@@ -43,16 +43,6 @@ namespace virtual_receptionist.View
 
         }
 
-        private void checkBoxCorporateGuest_CheckedChanged(object sender, EventArgs e)
-        {
-            textBoxVatNumber.ReadOnly = !checkBoxCorporateGuest.Checked;
-
-            if (textBoxVatNumber.ReadOnly)
-            {
-                textBoxVatNumber.Clear();
-            }
-        }
-
         #endregion
     }
 }
