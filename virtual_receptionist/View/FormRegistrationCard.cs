@@ -35,10 +35,11 @@ namespace virtual_receptionist.View
 
         private void FormGuestRegistrationCard_Load(object sender, EventArgs e)
         {
-            comboBoxCountry.DataSource = presenter.GetCountries();
+            comboBoxGuestCountry.DataSource = presenter.GetCountries();
+            comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void buttonSaveData_Click(object sender, EventArgs e)
         {
 
         }
