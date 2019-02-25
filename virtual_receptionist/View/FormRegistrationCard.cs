@@ -39,13 +39,6 @@ namespace virtual_receptionist.View
             comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
         }
 
-        private void buttonSaveData_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion
-
         private void textBoxGuestName_TextChanged(object sender, EventArgs e)
         {
             if (checkBoxIsCompany.Checked)
@@ -113,5 +106,12 @@ namespace virtual_receptionist.View
             labelVATNumber.Visible = checkBoxIsCompany.Checked;
             textBoxCompanyVATNumber.Visible = checkBoxIsCompany.Checked;
         }
+
+        private void buttonSaveData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }
