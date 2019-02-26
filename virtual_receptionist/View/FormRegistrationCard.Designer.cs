@@ -280,6 +280,7 @@
             this.comboBoxGuestCountry.Name = "comboBoxGuestCountry";
             this.comboBoxGuestCountry.Size = new System.Drawing.Size(276, 21);
             this.comboBoxGuestCountry.TabIndex = 4;
+            this.comboBoxGuestCountry.SelectedIndexChanged += new System.EventHandler(this.comboBoxGuestCountry_SelectedIndexChanged);
             // 
             // comboBoxRoom
             // 

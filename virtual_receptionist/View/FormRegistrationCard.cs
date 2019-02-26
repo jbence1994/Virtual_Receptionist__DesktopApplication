@@ -35,6 +35,7 @@ namespace virtual_receptionist.View
 
         private void FormGuestRegistrationCard_Load(object sender, EventArgs e)
         {
+            textBoxGuestName.Select();
             comboBoxGuestCountry.DataSource = presenter.GetCountries();
             comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
         }
@@ -47,6 +48,16 @@ namespace virtual_receptionist.View
             }
 
             textBoxBillingName.Text = textBoxGuestName.Text;
+        }
+
+        private void comboBoxGuestCountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checkBoxIsCompany.Checked)
+            {
+                return;
+            }
+
+            comboBoxHeadquarterCountry.SelectedItem = comboBoxGuestCountry.SelectedItem;
         }
 
         private void textBoxGuestZipCode_TextChanged(object sender, EventArgs e)
