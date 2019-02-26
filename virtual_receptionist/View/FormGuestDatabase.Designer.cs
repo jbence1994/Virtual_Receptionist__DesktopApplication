@@ -213,14 +213,14 @@
             this.textBoxGuestID.Location = new System.Drawing.Point(108, 19);
             this.textBoxGuestID.Name = "textBoxGuestID";
             this.textBoxGuestID.ReadOnly = true;
-            this.textBoxGuestID.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestID.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestID.TabIndex = 37;
             // 
             // textBoxGuestEmailAddress
             // 
-            this.textBoxGuestEmailAddress.Location = new System.Drawing.Point(315, 124);
+            this.textBoxGuestEmailAddress.Location = new System.Drawing.Point(382, 124);
             this.textBoxGuestEmailAddress.Name = "textBoxGuestEmailAddress";
-            this.textBoxGuestEmailAddress.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestEmailAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestEmailAddress.TabIndex = 14;
             // 
             // buttonAddGuest
@@ -249,9 +249,9 @@
             // 
             // textBoxGuestPhoneNumber
             // 
-            this.textBoxGuestPhoneNumber.Location = new System.Drawing.Point(315, 98);
+            this.textBoxGuestPhoneNumber.Location = new System.Drawing.Point(382, 98);
             this.textBoxGuestPhoneNumber.Name = "textBoxGuestPhoneNumber";
-            this.textBoxGuestPhoneNumber.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestPhoneNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestPhoneNumber.TabIndex = 13;
             // 
             // labelDocumentID
@@ -265,9 +265,9 @@
             // 
             // textBoxGuestAddress
             // 
-            this.textBoxGuestAddress.Location = new System.Drawing.Point(315, 72);
+            this.textBoxGuestAddress.Location = new System.Drawing.Point(382, 72);
             this.textBoxGuestAddress.Name = "textBoxGuestAddress";
-            this.textBoxGuestAddress.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestAddress.TabIndex = 12;
             // 
             // labelCitizenship
@@ -281,9 +281,9 @@
             // 
             // textBoxGuestCity
             // 
-            this.textBoxGuestCity.Location = new System.Drawing.Point(315, 45);
+            this.textBoxGuestCity.Location = new System.Drawing.Point(382, 45);
             this.textBoxGuestCity.Name = "textBoxGuestCity";
-            this.textBoxGuestCity.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestCity.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestCity.TabIndex = 11;
             // 
             // labelBirthDate
@@ -297,9 +297,9 @@
             // 
             // textBoxGuestZipCode
             // 
-            this.textBoxGuestZipCode.Location = new System.Drawing.Point(315, 19);
+            this.textBoxGuestZipCode.Location = new System.Drawing.Point(382, 19);
             this.textBoxGuestZipCode.Name = "textBoxGuestZipCode";
-            this.textBoxGuestZipCode.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestZipCode.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestZipCode.TabIndex = 10;
             // 
             // labelCountry
@@ -316,13 +316,13 @@
             this.comboBoxGuestCountry.FormattingEnabled = true;
             this.comboBoxGuestCountry.Location = new System.Drawing.Point(108, 151);
             this.comboBoxGuestCountry.Name = "comboBoxGuestCountry";
-            this.comboBoxGuestCountry.Size = new System.Drawing.Size(125, 21);
+            this.comboBoxGuestCountry.Size = new System.Drawing.Size(185, 21);
             this.comboBoxGuestCountry.TabIndex = 9;
             // 
             // labelZipCode
             // 
             this.labelZipCode.AutoSize = true;
-            this.labelZipCode.Location = new System.Drawing.Point(239, 22);
+            this.labelZipCode.Location = new System.Drawing.Point(306, 22);
             this.labelZipCode.Name = "labelZipCode";
             this.labelZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelZipCode.TabIndex = 32;
@@ -332,13 +332,13 @@
             // 
             this.textBoxGuestBirthDate.Location = new System.Drawing.Point(108, 124);
             this.textBoxGuestBirthDate.Name = "textBoxGuestBirthDate";
-            this.textBoxGuestBirthDate.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestBirthDate.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestBirthDate.TabIndex = 8;
             // 
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(253, 48);
+            this.labelCity.Location = new System.Drawing.Point(320, 48);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(56, 13);
             this.labelCity.TabIndex = 33;
@@ -348,13 +348,13 @@
             // 
             this.textBoxGuestCitizenship.Location = new System.Drawing.Point(108, 97);
             this.textBoxGuestCitizenship.Name = "textBoxGuestCitizenship";
-            this.textBoxGuestCitizenship.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestCitizenship.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestCitizenship.TabIndex = 7;
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(280, 75);
+            this.labelAddress.Location = new System.Drawing.Point(347, 75);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(29, 13);
             this.labelAddress.TabIndex = 34;
@@ -364,13 +364,13 @@
             // 
             this.textBoxGuestDocumentNumber.Location = new System.Drawing.Point(108, 71);
             this.textBoxGuestDocumentNumber.Name = "textBoxGuestDocumentNumber";
-            this.textBoxGuestDocumentNumber.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestDocumentNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestDocumentNumber.TabIndex = 6;
             // 
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(239, 100);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(306, 100);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelPhoneNumber.TabIndex = 35;
@@ -380,13 +380,13 @@
             // 
             this.textBoxGuestName.Location = new System.Drawing.Point(108, 45);
             this.textBoxGuestName.Name = "textBoxGuestName";
-            this.textBoxGuestName.Size = new System.Drawing.Size(125, 20);
+            this.textBoxGuestName.Size = new System.Drawing.Size(185, 20);
             this.textBoxGuestName.TabIndex = 5;
             // 
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSize = true;
-            this.labelEmailAddress.Location = new System.Drawing.Point(250, 127);
+            this.labelEmailAddress.Location = new System.Drawing.Point(317, 127);
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(59, 13);
             this.labelEmailAddress.TabIndex = 36;
@@ -561,7 +561,7 @@
             this.textBoxCompanyID.Location = new System.Drawing.Point(108, 19);
             this.textBoxCompanyID.Name = "textBoxCompanyID";
             this.textBoxCompanyID.ReadOnly = true;
-            this.textBoxCompanyID.Size = new System.Drawing.Size(125, 20);
+            this.textBoxCompanyID.Size = new System.Drawing.Size(185, 20);
             this.textBoxCompanyID.TabIndex = 40;
             // 
             // buttonDeleteCompany
@@ -581,9 +581,9 @@
             // 
             // textBoxCompanyEmailAddress
             // 
-            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(315, 71);
+            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(381, 74);
             this.textBoxCompanyEmailAddress.Name = "textBoxCompanyEmailAddress";
-            this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(125, 20);
+            this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxCompanyEmailAddress.TabIndex = 29;
             // 
             // labelCompanyName
@@ -597,9 +597,9 @@
             // 
             // textBoxCompanyPhoneNumber
             // 
-            this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(315, 45);
+            this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(381, 48);
             this.textBoxCompanyPhoneNumber.Name = "textBoxCompanyPhoneNumber";
-            this.textBoxCompanyPhoneNumber.Size = new System.Drawing.Size(125, 20);
+            this.textBoxCompanyPhoneNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxCompanyPhoneNumber.TabIndex = 28;
             // 
             // labelVATNumber
@@ -615,21 +615,21 @@
             // 
             this.textBoxHeadquarterCity.Location = new System.Drawing.Point(108, 150);
             this.textBoxHeadquarterCity.Name = "textBoxHeadquarterCity";
-            this.textBoxHeadquarterCity.Size = new System.Drawing.Size(125, 20);
+            this.textBoxHeadquarterCity.Size = new System.Drawing.Size(185, 20);
             this.textBoxHeadquarterCity.TabIndex = 26;
             // 
             // textBoxHeadquarterAddress
             // 
-            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(315, 19);
+            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(381, 22);
             this.textBoxHeadquarterAddress.Name = "textBoxHeadquarterAddress";
-            this.textBoxHeadquarterAddress.Size = new System.Drawing.Size(125, 20);
+            this.textBoxHeadquarterAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxHeadquarterAddress.TabIndex = 27;
             // 
             // textBoxHeadquarterZipCode
             // 
             this.textBoxHeadquarterZipCode.Location = new System.Drawing.Point(108, 124);
             this.textBoxHeadquarterZipCode.Name = "textBoxHeadquarterZipCode";
-            this.textBoxHeadquarterZipCode.Size = new System.Drawing.Size(125, 20);
+            this.textBoxHeadquarterZipCode.Size = new System.Drawing.Size(185, 20);
             this.textBoxHeadquarterZipCode.TabIndex = 25;
             // 
             // labelHeadquarterCountry
@@ -646,7 +646,7 @@
             this.comboBoxHeadquarterCountry.FormattingEnabled = true;
             this.comboBoxHeadquarterCountry.Location = new System.Drawing.Point(108, 97);
             this.comboBoxHeadquarterCountry.Name = "comboBoxHeadquarterCountry";
-            this.comboBoxHeadquarterCountry.Size = new System.Drawing.Size(125, 21);
+            this.comboBoxHeadquarterCountry.Size = new System.Drawing.Size(185, 21);
             this.comboBoxHeadquarterCountry.TabIndex = 24;
             // 
             // labelHeadquarterZipCode
@@ -670,7 +670,7 @@
             // labelHeadquarterAddress
             // 
             this.labelHeadquarterAddress.AutoSize = true;
-            this.labelHeadquarterAddress.Location = new System.Drawing.Point(280, 22);
+            this.labelHeadquarterAddress.Location = new System.Drawing.Point(346, 25);
             this.labelHeadquarterAddress.Name = "labelHeadquarterAddress";
             this.labelHeadquarterAddress.Size = new System.Drawing.Size(29, 13);
             this.labelHeadquarterAddress.TabIndex = 37;
@@ -680,13 +680,13 @@
             // 
             this.textBoxVATNumber.Location = new System.Drawing.Point(108, 71);
             this.textBoxVATNumber.Name = "textBoxVATNumber";
-            this.textBoxVATNumber.Size = new System.Drawing.Size(125, 20);
+            this.textBoxVATNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxVATNumber.TabIndex = 23;
             // 
             // labelCompanyPhoneNumber
             // 
             this.labelCompanyPhoneNumber.AutoSize = true;
-            this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(239, 48);
+            this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(305, 51);
             this.labelCompanyPhoneNumber.Name = "labelCompanyPhoneNumber";
             this.labelCompanyPhoneNumber.Size = new System.Drawing.Size(70, 13);
             this.labelCompanyPhoneNumber.TabIndex = 38;
@@ -696,13 +696,13 @@
             // 
             this.textBoxCompanyName.Location = new System.Drawing.Point(108, 45);
             this.textBoxCompanyName.Name = "textBoxCompanyName";
-            this.textBoxCompanyName.Size = new System.Drawing.Size(125, 20);
+            this.textBoxCompanyName.Size = new System.Drawing.Size(185, 20);
             this.textBoxCompanyName.TabIndex = 22;
             // 
             // labelCompanyEmailAddress
             // 
             this.labelCompanyEmailAddress.AutoSize = true;
-            this.labelCompanyEmailAddress.Location = new System.Drawing.Point(250, 74);
+            this.labelCompanyEmailAddress.Location = new System.Drawing.Point(316, 77);
             this.labelCompanyEmailAddress.Name = "labelCompanyEmailAddress";
             this.labelCompanyEmailAddress.Size = new System.Drawing.Size(59, 13);
             this.labelCompanyEmailAddress.TabIndex = 39;
