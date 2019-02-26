@@ -108,17 +108,27 @@ namespace virtual_receptionist.View
             textBoxHeadquarterAddress.Clear();
             textBoxHeadquarterAddress.Enabled = checkBoxIsCompany.Checked;
 
-            labelCompanyPhoneNumber.Visible = checkBoxIsCompany.Checked;
-            textBoxCompanyPhoneNumber.Visible = checkBoxIsCompany.Checked;
-
-            labelCompanyEmailAddress.Visible = checkBoxIsCompany.Checked;
-            textBoxCompanyEmailAddress.Visible = checkBoxIsCompany.Checked;
-
+            textBoxCompanyVATNumber.Clear();
             labelVATNumber.Visible = checkBoxIsCompany.Checked;
             textBoxCompanyVATNumber.Visible = checkBoxIsCompany.Checked;
+
+            textBoxCompanyEmailAddress.Clear();
+            textBoxCompanyPhoneNumber.Clear();
+            groupBoxAdditionalCompanyInfo.Visible = checkBoxIsCompany.Checked;
+            buttonImportCompanyData.Visible = checkBoxIsCompany.Checked;
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonImportGuestData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonImportCompanyData_Click(object sender, EventArgs e)
         {
 
         }
