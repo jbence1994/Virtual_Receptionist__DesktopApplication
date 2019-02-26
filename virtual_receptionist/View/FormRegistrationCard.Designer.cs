@@ -33,34 +33,6 @@
             this.errorProviderInput = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControlGuestRegistrationCard = new System.Windows.Forms.TabControl();
             this.tabPageGuestData = new System.Windows.Forms.TabPage();
-            this.tabPageBillingData = new System.Windows.Forms.TabPage();
-            this.tabPageBookingData = new System.Windows.Forms.TabPage();
-            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
-            this.buttonSaveData = new System.Windows.Forms.Button();
-            this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
-            this.labelRoom = new System.Windows.Forms.Label();
-            this.labelDepartureDate = new System.Windows.Forms.Label();
-            this.labelArrivalDate = new System.Windows.Forms.Label();
-            this.labelNumberOfGuests = new System.Windows.Forms.Label();
-            this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
-            this.checkBoxIsCompany = new System.Windows.Forms.CheckBox();
-            this.labelVATNumber = new System.Windows.Forms.Label();
-            this.textBoxCompanyVATNumber = new System.Windows.Forms.TextBox();
-            this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
-            this.labelCompanyPhoneNumber = new System.Windows.Forms.Label();
-            this.textBoxCompanyPhoneNumber = new System.Windows.Forms.TextBox();
-            this.labelCompanyEmailAddress = new System.Windows.Forms.Label();
-            this.textBoxHeadquarterZipCode = new System.Windows.Forms.TextBox();
-            this.textBoxHeadquarterCity = new System.Windows.Forms.TextBox();
-            this.labelBillingName = new System.Windows.Forms.Label();
-            this.textBoxHeadquarterAddress = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxBillingName = new System.Windows.Forms.TextBox();
-            this.comboBoxHeadquarterCountry = new System.Windows.Forms.ComboBox();
-            this.labelHeadquarterAddress = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.labelHeadquarterCity = new System.Windows.Forms.Label();
             this.textBoxGuestEmailAddress = new System.Windows.Forms.TextBox();
             this.labelGuestPhoneNumber = new System.Windows.Forms.Label();
             this.labelGuestDocumentNumber = new System.Windows.Forms.Label();
@@ -81,6 +53,34 @@
             this.labelGuestAddress = new System.Windows.Forms.Label();
             this.labelGuestZipCode = new System.Windows.Forms.Label();
             this.labelGuestCity = new System.Windows.Forms.Label();
+            this.tabPageBillingData = new System.Windows.Forms.TabPage();
+            this.checkBoxIsCompany = new System.Windows.Forms.CheckBox();
+            this.labelVATNumber = new System.Windows.Forms.Label();
+            this.textBoxCompanyVATNumber = new System.Windows.Forms.TextBox();
+            this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
+            this.labelCompanyPhoneNumber = new System.Windows.Forms.Label();
+            this.textBoxCompanyPhoneNumber = new System.Windows.Forms.TextBox();
+            this.labelCompanyEmailAddress = new System.Windows.Forms.Label();
+            this.textBoxHeadquarterZipCode = new System.Windows.Forms.TextBox();
+            this.textBoxHeadquarterCity = new System.Windows.Forms.TextBox();
+            this.labelBillingName = new System.Windows.Forms.Label();
+            this.textBoxHeadquarterAddress = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxBillingName = new System.Windows.Forms.TextBox();
+            this.comboBoxHeadquarterCountry = new System.Windows.Forms.ComboBox();
+            this.labelHeadquarterAddress = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelHeadquarterCity = new System.Windows.Forms.Label();
+            this.tabPageBookingData = new System.Windows.Forms.TabPage();
+            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
+            this.buttonSaveData = new System.Windows.Forms.Button();
+            this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
+            this.labelRoom = new System.Windows.Forms.Label();
+            this.labelDepartureDate = new System.Windows.Forms.Label();
+            this.labelArrivalDate = new System.Windows.Forms.Label();
+            this.labelNumberOfGuests = new System.Windows.Forms.Label();
+            this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderInput)).BeginInit();
             this.tabControlGuestRegistrationCard.SuspendLayout();
             this.tabPageGuestData.SuspendLayout();
@@ -135,6 +135,172 @@
             this.tabPageGuestData.Text = "Vendég adatok";
             this.tabPageGuestData.UseVisualStyleBackColor = true;
             // 
+            // textBoxGuestEmailAddress
+            // 
+            this.textBoxGuestEmailAddress.Location = new System.Drawing.Point(151, 255);
+            this.textBoxGuestEmailAddress.Name = "textBoxGuestEmailAddress";
+            this.textBoxGuestEmailAddress.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestEmailAddress.TabIndex = 29;
+            // 
+            // labelGuestPhoneNumber
+            // 
+            this.labelGuestPhoneNumber.AutoSize = true;
+            this.labelGuestPhoneNumber.Location = new System.Drawing.Point(76, 232);
+            this.labelGuestPhoneNumber.Name = "labelGuestPhoneNumber";
+            this.labelGuestPhoneNumber.Size = new System.Drawing.Size(70, 13);
+            this.labelGuestPhoneNumber.TabIndex = 11;
+            this.labelGuestPhoneNumber.Text = "Telefonszám:";
+            // 
+            // labelGuestDocumentNumber
+            // 
+            this.labelGuestDocumentNumber.AutoSize = true;
+            this.labelGuestDocumentNumber.Location = new System.Drawing.Point(49, 100);
+            this.labelGuestDocumentNumber.Name = "labelGuestDocumentNumber";
+            this.labelGuestDocumentNumber.Size = new System.Drawing.Size(96, 13);
+            this.labelGuestDocumentNumber.TabIndex = 12;
+            this.labelGuestDocumentNumber.Text = "Okmányazonosító:";
+            // 
+            // textBoxGuestPhoneNumber
+            // 
+            this.textBoxGuestPhoneNumber.Location = new System.Drawing.Point(151, 229);
+            this.textBoxGuestPhoneNumber.Name = "textBoxGuestPhoneNumber";
+            this.textBoxGuestPhoneNumber.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestPhoneNumber.TabIndex = 28;
+            // 
+            // labelGuestBirthDate
+            // 
+            this.labelGuestBirthDate.AutoSize = true;
+            this.labelGuestBirthDate.Location = new System.Drawing.Point(76, 74);
+            this.labelGuestBirthDate.Name = "labelGuestBirthDate";
+            this.labelGuestBirthDate.Size = new System.Drawing.Size(69, 13);
+            this.labelGuestBirthDate.TabIndex = 14;
+            this.labelGuestBirthDate.Text = "Születési idő:";
+            // 
+            // labelGuestEmailAddress
+            // 
+            this.labelGuestEmailAddress.AutoSize = true;
+            this.labelGuestEmailAddress.Location = new System.Drawing.Point(107, 258);
+            this.labelGuestEmailAddress.Name = "labelGuestEmailAddress";
+            this.labelGuestEmailAddress.Size = new System.Drawing.Size(38, 13);
+            this.labelGuestEmailAddress.TabIndex = 15;
+            this.labelGuestEmailAddress.Text = "E-mail:";
+            // 
+            // textBoxGuestBirthDate
+            // 
+            this.textBoxGuestBirthDate.Location = new System.Drawing.Point(151, 71);
+            this.textBoxGuestBirthDate.Name = "textBoxGuestBirthDate";
+            this.textBoxGuestBirthDate.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestBirthDate.TabIndex = 22;
+            // 
+            // labelGuestCitizenship
+            // 
+            this.labelGuestCitizenship.AutoSize = true;
+            this.labelGuestCitizenship.Location = new System.Drawing.Point(64, 48);
+            this.labelGuestCitizenship.Name = "labelGuestCitizenship";
+            this.labelGuestCitizenship.Size = new System.Drawing.Size(81, 13);
+            this.labelGuestCitizenship.TabIndex = 16;
+            this.labelGuestCitizenship.Text = "Állampolgárság:";
+            // 
+            // textBoxGuestDocumentNumber
+            // 
+            this.textBoxGuestDocumentNumber.Location = new System.Drawing.Point(151, 97);
+            this.textBoxGuestDocumentNumber.Name = "textBoxGuestDocumentNumber";
+            this.textBoxGuestDocumentNumber.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestDocumentNumber.TabIndex = 23;
+            // 
+            // textBoxGuestZipCode
+            // 
+            this.textBoxGuestZipCode.Location = new System.Drawing.Point(151, 150);
+            this.textBoxGuestZipCode.Name = "textBoxGuestZipCode";
+            this.textBoxGuestZipCode.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestZipCode.TabIndex = 25;
+            this.textBoxGuestZipCode.TextChanged += new System.EventHandler(this.textBoxGuestZipCode_TextChanged);
+            // 
+            // textBoxGuestCity
+            // 
+            this.textBoxGuestCity.Location = new System.Drawing.Point(151, 176);
+            this.textBoxGuestCity.Name = "textBoxGuestCity";
+            this.textBoxGuestCity.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestCity.TabIndex = 26;
+            this.textBoxGuestCity.TextChanged += new System.EventHandler(this.textBoxGuestCity_TextChanged);
+            // 
+            // labelGuestName
+            // 
+            this.labelGuestName.AutoSize = true;
+            this.labelGuestName.Location = new System.Drawing.Point(71, 22);
+            this.labelGuestName.Name = "labelGuestName";
+            this.labelGuestName.Size = new System.Drawing.Size(74, 13);
+            this.labelGuestName.TabIndex = 18;
+            this.labelGuestName.Text = "Vendég neve:";
+            // 
+            // textBoxGuestAddress
+            // 
+            this.textBoxGuestAddress.Location = new System.Drawing.Point(151, 203);
+            this.textBoxGuestAddress.Name = "textBoxGuestAddress";
+            this.textBoxGuestAddress.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestAddress.TabIndex = 27;
+            this.textBoxGuestAddress.TextChanged += new System.EventHandler(this.textBoxGuestAddress_TextChanged);
+            // 
+            // labelGuestCountry
+            // 
+            this.labelGuestCountry.AutoSize = true;
+            this.labelGuestCountry.Location = new System.Drawing.Point(102, 126);
+            this.labelGuestCountry.Name = "labelGuestCountry";
+            this.labelGuestCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelGuestCountry.TabIndex = 19;
+            this.labelGuestCountry.Text = "Ország:";
+            // 
+            // textBoxGuestName
+            // 
+            this.textBoxGuestName.Location = new System.Drawing.Point(151, 19);
+            this.textBoxGuestName.Name = "textBoxGuestName";
+            this.textBoxGuestName.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestName.TabIndex = 20;
+            this.textBoxGuestName.TextChanged += new System.EventHandler(this.textBoxGuestName_TextChanged);
+            // 
+            // textBoxGuestCitizenship
+            // 
+            this.textBoxGuestCitizenship.Location = new System.Drawing.Point(151, 45);
+            this.textBoxGuestCitizenship.Name = "textBoxGuestCitizenship";
+            this.textBoxGuestCitizenship.Size = new System.Drawing.Size(276, 20);
+            this.textBoxGuestCitizenship.TabIndex = 21;
+            // 
+            // comboBoxGuestCountry
+            // 
+            this.comboBoxGuestCountry.FormattingEnabled = true;
+            this.comboBoxGuestCountry.Location = new System.Drawing.Point(151, 123);
+            this.comboBoxGuestCountry.Name = "comboBoxGuestCountry";
+            this.comboBoxGuestCountry.Size = new System.Drawing.Size(276, 21);
+            this.comboBoxGuestCountry.TabIndex = 24;
+            this.comboBoxGuestCountry.SelectedIndexChanged += new System.EventHandler(this.comboBoxGuestCountry_SelectedIndexChanged);
+            // 
+            // labelGuestAddress
+            // 
+            this.labelGuestAddress.AutoSize = true;
+            this.labelGuestAddress.Location = new System.Drawing.Point(116, 206);
+            this.labelGuestAddress.Name = "labelGuestAddress";
+            this.labelGuestAddress.Size = new System.Drawing.Size(29, 13);
+            this.labelGuestAddress.TabIndex = 13;
+            this.labelGuestAddress.Text = "Cím:";
+            // 
+            // labelGuestZipCode
+            // 
+            this.labelGuestZipCode.AutoSize = true;
+            this.labelGuestZipCode.Location = new System.Drawing.Point(75, 153);
+            this.labelGuestZipCode.Name = "labelGuestZipCode";
+            this.labelGuestZipCode.Size = new System.Drawing.Size(70, 13);
+            this.labelGuestZipCode.TabIndex = 17;
+            this.labelGuestZipCode.Text = "Irányítószám:";
+            // 
+            // labelGuestCity
+            // 
+            this.labelGuestCity.AutoSize = true;
+            this.labelGuestCity.Location = new System.Drawing.Point(89, 181);
+            this.labelGuestCity.Name = "labelGuestCity";
+            this.labelGuestCity.Size = new System.Drawing.Size(56, 13);
+            this.labelGuestCity.TabIndex = 10;
+            this.labelGuestCity.Text = "Település:";
+            // 
             // tabPageBillingData
             // 
             this.tabPageBillingData.Controls.Add(this.checkBoxIsCompany);
@@ -162,109 +328,6 @@
             this.tabPageBillingData.Text = "Számlázási adatok";
             this.tabPageBillingData.UseVisualStyleBackColor = true;
             // 
-            // tabPageBookingData
-            // 
-            this.tabPageBookingData.Controls.Add(this.comboBoxRoom);
-            this.tabPageBookingData.Controls.Add(this.buttonSaveData);
-            this.tabPageBookingData.Controls.Add(this.numericUpDownNumberOfGuests);
-            this.tabPageBookingData.Controls.Add(this.labelRoom);
-            this.tabPageBookingData.Controls.Add(this.labelDepartureDate);
-            this.tabPageBookingData.Controls.Add(this.labelArrivalDate);
-            this.tabPageBookingData.Controls.Add(this.labelNumberOfGuests);
-            this.tabPageBookingData.Controls.Add(this.dateTimePickerArrivalDate);
-            this.tabPageBookingData.Controls.Add(this.dateTimePickerDepartureDate);
-            this.tabPageBookingData.Location = new System.Drawing.Point(4, 22);
-            this.tabPageBookingData.Name = "tabPageBookingData";
-            this.tabPageBookingData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBookingData.Size = new System.Drawing.Size(492, 299);
-            this.tabPageBookingData.TabIndex = 2;
-            this.tabPageBookingData.Text = "Foglalás adatok";
-            this.tabPageBookingData.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxRoom
-            // 
-            this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Location = new System.Drawing.Point(140, 67);
-            this.comboBoxRoom.Name = "comboBoxRoom";
-            this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
-            this.comboBoxRoom.TabIndex = 28;
-            // 
-            // buttonSaveData
-            // 
-            this.buttonSaveData.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSaveData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSaveData.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveData.Image")));
-            this.buttonSaveData.Location = new System.Drawing.Point(6, 236);
-            this.buttonSaveData.Name = "buttonSaveData";
-            this.buttonSaveData.Size = new System.Drawing.Size(480, 57);
-            this.buttonSaveData.TabIndex = 32;
-            this.buttonSaveData.Text = "Adatok mentése";
-            this.buttonSaveData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonSaveData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonSaveData.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownNumberOfGuests
-            // 
-            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(140, 94);
-            this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
-            this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
-            this.numericUpDownNumberOfGuests.TabIndex = 29;
-            this.numericUpDownNumberOfGuests.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // labelRoom
-            // 
-            this.labelRoom.AutoSize = true;
-            this.labelRoom.Location = new System.Drawing.Point(94, 70);
-            this.labelRoom.Name = "labelRoom";
-            this.labelRoom.Size = new System.Drawing.Size(40, 13);
-            this.labelRoom.TabIndex = 24;
-            this.labelRoom.Text = "Szoba:";
-            // 
-            // labelDepartureDate
-            // 
-            this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Location = new System.Drawing.Point(83, 152);
-            this.labelDepartureDate.Name = "labelDepartureDate";
-            this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
-            this.labelDepartureDate.TabIndex = 25;
-            this.labelDepartureDate.Text = "Távozás:";
-            // 
-            // labelArrivalDate
-            // 
-            this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Location = new System.Drawing.Point(87, 126);
-            this.labelArrivalDate.Name = "labelArrivalDate";
-            this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
-            this.labelArrivalDate.TabIndex = 26;
-            this.labelArrivalDate.Text = "Érkezés:";
-            // 
-            // labelNumberOfGuests
-            // 
-            this.labelNumberOfGuests.AutoSize = true;
-            this.labelNumberOfGuests.Location = new System.Drawing.Point(42, 96);
-            this.labelNumberOfGuests.Name = "labelNumberOfGuests";
-            this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
-            this.labelNumberOfGuests.TabIndex = 27;
-            this.labelNumberOfGuests.Text = "Vendégek száma:";
-            // 
-            // dateTimePickerArrivalDate
-            // 
-            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(140, 120);
-            this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
-            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePickerArrivalDate.TabIndex = 30;
-            // 
-            // dateTimePickerDepartureDate
-            // 
-            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(140, 146);
-            this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
-            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePickerDepartureDate.TabIndex = 31;
-            // 
             // checkBoxIsCompany
             // 
             this.checkBoxIsCompany.AutoSize = true;
@@ -274,6 +337,7 @@
             this.checkBoxIsCompany.TabIndex = 27;
             this.checkBoxIsCompany.Text = "A vendég céges számlát kér";
             this.checkBoxIsCompany.UseVisualStyleBackColor = true;
+            this.checkBoxIsCompany.CheckedChanged += new System.EventHandler(this.checkBoxIsCompany_CheckedChanged);
             // 
             // labelVATNumber
             // 
@@ -415,166 +479,109 @@
             this.labelHeadquarterCity.TabIndex = 19;
             this.labelHeadquarterCity.Text = "Település:";
             // 
-            // textBoxGuestEmailAddress
+            // tabPageBookingData
             // 
-            this.textBoxGuestEmailAddress.Location = new System.Drawing.Point(151, 255);
-            this.textBoxGuestEmailAddress.Name = "textBoxGuestEmailAddress";
-            this.textBoxGuestEmailAddress.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestEmailAddress.TabIndex = 29;
+            this.tabPageBookingData.Controls.Add(this.comboBoxRoom);
+            this.tabPageBookingData.Controls.Add(this.buttonSaveData);
+            this.tabPageBookingData.Controls.Add(this.numericUpDownNumberOfGuests);
+            this.tabPageBookingData.Controls.Add(this.labelRoom);
+            this.tabPageBookingData.Controls.Add(this.labelDepartureDate);
+            this.tabPageBookingData.Controls.Add(this.labelArrivalDate);
+            this.tabPageBookingData.Controls.Add(this.labelNumberOfGuests);
+            this.tabPageBookingData.Controls.Add(this.dateTimePickerArrivalDate);
+            this.tabPageBookingData.Controls.Add(this.dateTimePickerDepartureDate);
+            this.tabPageBookingData.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBookingData.Name = "tabPageBookingData";
+            this.tabPageBookingData.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBookingData.Size = new System.Drawing.Size(492, 299);
+            this.tabPageBookingData.TabIndex = 2;
+            this.tabPageBookingData.Text = "Foglalás adatok";
+            this.tabPageBookingData.UseVisualStyleBackColor = true;
             // 
-            // labelGuestPhoneNumber
+            // comboBoxRoom
             // 
-            this.labelGuestPhoneNumber.AutoSize = true;
-            this.labelGuestPhoneNumber.Location = new System.Drawing.Point(76, 232);
-            this.labelGuestPhoneNumber.Name = "labelGuestPhoneNumber";
-            this.labelGuestPhoneNumber.Size = new System.Drawing.Size(70, 13);
-            this.labelGuestPhoneNumber.TabIndex = 11;
-            this.labelGuestPhoneNumber.Text = "Telefonszám:";
+            this.comboBoxRoom.FormattingEnabled = true;
+            this.comboBoxRoom.Location = new System.Drawing.Point(140, 67);
+            this.comboBoxRoom.Name = "comboBoxRoom";
+            this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
+            this.comboBoxRoom.TabIndex = 28;
             // 
-            // labelGuestDocumentNumber
+            // buttonSaveData
             // 
-            this.labelGuestDocumentNumber.AutoSize = true;
-            this.labelGuestDocumentNumber.Location = new System.Drawing.Point(49, 100);
-            this.labelGuestDocumentNumber.Name = "labelGuestDocumentNumber";
-            this.labelGuestDocumentNumber.Size = new System.Drawing.Size(96, 13);
-            this.labelGuestDocumentNumber.TabIndex = 12;
-            this.labelGuestDocumentNumber.Text = "Okmányazonosító:";
+            this.buttonSaveData.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonSaveData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSaveData.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveData.Image")));
+            this.buttonSaveData.Location = new System.Drawing.Point(6, 236);
+            this.buttonSaveData.Name = "buttonSaveData";
+            this.buttonSaveData.Size = new System.Drawing.Size(480, 57);
+            this.buttonSaveData.TabIndex = 32;
+            this.buttonSaveData.Text = "Adatok mentése";
+            this.buttonSaveData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonSaveData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonSaveData.UseVisualStyleBackColor = true;
+            this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
             // 
-            // textBoxGuestPhoneNumber
+            // numericUpDownNumberOfGuests
             // 
-            this.textBoxGuestPhoneNumber.Location = new System.Drawing.Point(151, 229);
-            this.textBoxGuestPhoneNumber.Name = "textBoxGuestPhoneNumber";
-            this.textBoxGuestPhoneNumber.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestPhoneNumber.TabIndex = 28;
+            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(140, 94);
+            this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
+            this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
+            this.numericUpDownNumberOfGuests.TabIndex = 29;
+            this.numericUpDownNumberOfGuests.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // labelGuestBirthDate
+            // labelRoom
             // 
-            this.labelGuestBirthDate.AutoSize = true;
-            this.labelGuestBirthDate.Location = new System.Drawing.Point(76, 74);
-            this.labelGuestBirthDate.Name = "labelGuestBirthDate";
-            this.labelGuestBirthDate.Size = new System.Drawing.Size(69, 13);
-            this.labelGuestBirthDate.TabIndex = 14;
-            this.labelGuestBirthDate.Text = "Születési idő:";
+            this.labelRoom.AutoSize = true;
+            this.labelRoom.Location = new System.Drawing.Point(94, 70);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(40, 13);
+            this.labelRoom.TabIndex = 24;
+            this.labelRoom.Text = "Szoba:";
             // 
-            // labelGuestEmailAddress
+            // labelDepartureDate
             // 
-            this.labelGuestEmailAddress.AutoSize = true;
-            this.labelGuestEmailAddress.Location = new System.Drawing.Point(107, 258);
-            this.labelGuestEmailAddress.Name = "labelGuestEmailAddress";
-            this.labelGuestEmailAddress.Size = new System.Drawing.Size(38, 13);
-            this.labelGuestEmailAddress.TabIndex = 15;
-            this.labelGuestEmailAddress.Text = "E-mail:";
+            this.labelDepartureDate.AutoSize = true;
+            this.labelDepartureDate.Location = new System.Drawing.Point(83, 152);
+            this.labelDepartureDate.Name = "labelDepartureDate";
+            this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
+            this.labelDepartureDate.TabIndex = 25;
+            this.labelDepartureDate.Text = "Távozás:";
             // 
-            // textBoxGuestBirthDate
+            // labelArrivalDate
             // 
-            this.textBoxGuestBirthDate.Location = new System.Drawing.Point(151, 71);
-            this.textBoxGuestBirthDate.Name = "textBoxGuestBirthDate";
-            this.textBoxGuestBirthDate.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestBirthDate.TabIndex = 22;
+            this.labelArrivalDate.AutoSize = true;
+            this.labelArrivalDate.Location = new System.Drawing.Point(87, 126);
+            this.labelArrivalDate.Name = "labelArrivalDate";
+            this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
+            this.labelArrivalDate.TabIndex = 26;
+            this.labelArrivalDate.Text = "Érkezés:";
             // 
-            // labelGuestCitizenship
+            // labelNumberOfGuests
             // 
-            this.labelGuestCitizenship.AutoSize = true;
-            this.labelGuestCitizenship.Location = new System.Drawing.Point(64, 48);
-            this.labelGuestCitizenship.Name = "labelGuestCitizenship";
-            this.labelGuestCitizenship.Size = new System.Drawing.Size(81, 13);
-            this.labelGuestCitizenship.TabIndex = 16;
-            this.labelGuestCitizenship.Text = "Állampolgárság:";
+            this.labelNumberOfGuests.AutoSize = true;
+            this.labelNumberOfGuests.Location = new System.Drawing.Point(42, 96);
+            this.labelNumberOfGuests.Name = "labelNumberOfGuests";
+            this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
+            this.labelNumberOfGuests.TabIndex = 27;
+            this.labelNumberOfGuests.Text = "Vendégek száma:";
             // 
-            // textBoxGuestDocumentNumber
+            // dateTimePickerArrivalDate
             // 
-            this.textBoxGuestDocumentNumber.Location = new System.Drawing.Point(151, 97);
-            this.textBoxGuestDocumentNumber.Name = "textBoxGuestDocumentNumber";
-            this.textBoxGuestDocumentNumber.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestDocumentNumber.TabIndex = 23;
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(140, 120);
+            this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
+            this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
+            this.dateTimePickerArrivalDate.TabIndex = 30;
             // 
-            // textBoxGuestZipCode
+            // dateTimePickerDepartureDate
             // 
-            this.textBoxGuestZipCode.Location = new System.Drawing.Point(151, 150);
-            this.textBoxGuestZipCode.Name = "textBoxGuestZipCode";
-            this.textBoxGuestZipCode.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestZipCode.TabIndex = 25;
-            // 
-            // textBoxGuestCity
-            // 
-            this.textBoxGuestCity.Location = new System.Drawing.Point(151, 176);
-            this.textBoxGuestCity.Name = "textBoxGuestCity";
-            this.textBoxGuestCity.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestCity.TabIndex = 26;
-            // 
-            // labelGuestName
-            // 
-            this.labelGuestName.AutoSize = true;
-            this.labelGuestName.Location = new System.Drawing.Point(71, 22);
-            this.labelGuestName.Name = "labelGuestName";
-            this.labelGuestName.Size = new System.Drawing.Size(74, 13);
-            this.labelGuestName.TabIndex = 18;
-            this.labelGuestName.Text = "Vendég neve:";
-            // 
-            // textBoxGuestAddress
-            // 
-            this.textBoxGuestAddress.Location = new System.Drawing.Point(151, 203);
-            this.textBoxGuestAddress.Name = "textBoxGuestAddress";
-            this.textBoxGuestAddress.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestAddress.TabIndex = 27;
-            // 
-            // labelGuestCountry
-            // 
-            this.labelGuestCountry.AutoSize = true;
-            this.labelGuestCountry.Location = new System.Drawing.Point(102, 126);
-            this.labelGuestCountry.Name = "labelGuestCountry";
-            this.labelGuestCountry.Size = new System.Drawing.Size(43, 13);
-            this.labelGuestCountry.TabIndex = 19;
-            this.labelGuestCountry.Text = "Ország:";
-            // 
-            // textBoxGuestName
-            // 
-            this.textBoxGuestName.Location = new System.Drawing.Point(151, 19);
-            this.textBoxGuestName.Name = "textBoxGuestName";
-            this.textBoxGuestName.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestName.TabIndex = 20;
-            // 
-            // textBoxGuestCitizenship
-            // 
-            this.textBoxGuestCitizenship.Location = new System.Drawing.Point(151, 45);
-            this.textBoxGuestCitizenship.Name = "textBoxGuestCitizenship";
-            this.textBoxGuestCitizenship.Size = new System.Drawing.Size(276, 20);
-            this.textBoxGuestCitizenship.TabIndex = 21;
-            // 
-            // comboBoxGuestCountry
-            // 
-            this.comboBoxGuestCountry.FormattingEnabled = true;
-            this.comboBoxGuestCountry.Location = new System.Drawing.Point(151, 123);
-            this.comboBoxGuestCountry.Name = "comboBoxGuestCountry";
-            this.comboBoxGuestCountry.Size = new System.Drawing.Size(276, 21);
-            this.comboBoxGuestCountry.TabIndex = 24;
-            // 
-            // labelGuestAddress
-            // 
-            this.labelGuestAddress.AutoSize = true;
-            this.labelGuestAddress.Location = new System.Drawing.Point(116, 206);
-            this.labelGuestAddress.Name = "labelGuestAddress";
-            this.labelGuestAddress.Size = new System.Drawing.Size(29, 13);
-            this.labelGuestAddress.TabIndex = 13;
-            this.labelGuestAddress.Text = "Cím:";
-            // 
-            // labelGuestZipCode
-            // 
-            this.labelGuestZipCode.AutoSize = true;
-            this.labelGuestZipCode.Location = new System.Drawing.Point(75, 153);
-            this.labelGuestZipCode.Name = "labelGuestZipCode";
-            this.labelGuestZipCode.Size = new System.Drawing.Size(70, 13);
-            this.labelGuestZipCode.TabIndex = 17;
-            this.labelGuestZipCode.Text = "Irányítószám:";
-            // 
-            // labelGuestCity
-            // 
-            this.labelGuestCity.AutoSize = true;
-            this.labelGuestCity.Location = new System.Drawing.Point(89, 181);
-            this.labelGuestCity.Name = "labelGuestCity";
-            this.labelGuestCity.Size = new System.Drawing.Size(56, 13);
-            this.labelGuestCity.TabIndex = 10;
-            this.labelGuestCity.Text = "Település:";
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(140, 146);
+            this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
+            this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
+            this.dateTimePickerDepartureDate.TabIndex = 31;
             // 
             // FormGuestRegistrationCard
             // 
