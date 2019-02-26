@@ -118,17 +118,17 @@ namespace virtual_receptionist.View
             buttonImportCompanyData.Visible = checkBoxIsCompany.Checked;
         }
 
-        private void buttonSaveData_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonImportGuestData_Click(object sender, EventArgs e)
         {
 
         }
 
         private void buttonImportCompanyData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSaveData_Click(object sender, EventArgs e)
         {
 
         }

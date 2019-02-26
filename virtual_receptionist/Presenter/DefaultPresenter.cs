@@ -40,6 +40,7 @@ namespace virtual_receptionist.Presenter
         public List<string> GetCountries()
         {
             List<string> countries = new List<string>();
+            countries.Add("Válasszon országot a legördülő listából!");
 
             foreach (Country country in dataRepository.Countries)
             {
