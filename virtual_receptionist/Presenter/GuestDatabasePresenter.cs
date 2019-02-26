@@ -76,13 +76,13 @@ namespace virtual_receptionist.Presenter
         /// Metódus, amely beállítja a vendégtáblázat alapján ComboBoxban a kijelölt rekord országát
         /// </summary>
         /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
-        public Country SetSelectedCountry(string selectedCountryInTable)
+        public string SetSelectedCountry(string selectedCountryInTable)
         {
-            Country selectedCountry = null;
+            string selectedCountry = null;
 
-            foreach (Country country in GetCountries())
+            foreach (string country in GetCountries())
             {
-                if (selectedCountryInTable.Contains(country.Name))
+                if (selectedCountryInTable.Contains(country))
                 {
                     selectedCountry = country;
                 }
