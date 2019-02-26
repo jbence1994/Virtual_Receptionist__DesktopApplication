@@ -21,8 +21,9 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetCompanyData()
+        public DataTable GetCompanyData() //Szétbontás elemi aattípusra az objektum mezőit
         {
+            dataRepository.GetSpecifiedCompanyData();
             return new DataTable();
         }
 
@@ -30,8 +31,9 @@ namespace virtual_receptionist.Presenter
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetGuestData()
+        public DataTable GetGuestData() //Szétbontás elemi aattípusra az objektum mezőit
         {
+            dataRepository.GetSpecifiedGuestData();
             return new DataTable();
         }
 
