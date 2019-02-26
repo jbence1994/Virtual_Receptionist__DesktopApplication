@@ -120,17 +120,22 @@ namespace virtual_receptionist.View
 
         private void buttonImportGuestData_Click(object sender, EventArgs e)
         {
-
+            presenter.GetGuestData();
         }
 
         private void buttonImportCompanyData_Click(object sender, EventArgs e)
         {
-
+            presenter.GetCompanyData();
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
+            if (checkBoxIsCompany.Checked)
+            {
+                presenter.SaveData(true);
+            }
 
+            presenter.SaveData(false);
         }
 
         #endregion
