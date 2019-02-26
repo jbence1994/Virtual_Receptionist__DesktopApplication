@@ -390,9 +390,9 @@ namespace virtual_receptionist.View
                 textBoxCompanyID.Text = presenter.GetNextCompanyID().ToString();
                 textBoxCompanyName.Clear();
                 textBoxVATNumber.Clear();
-                comboBoxGuestCountry.DataSource = null;
-                comboBoxGuestCountry.DataSource = presenter.GetCountries();
-                comboBoxGuestCountry.SelectedItem = presenter.GetCountries()[0];
+                comboBoxHeadquarterCountry.DataSource = null;
+                comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
+                comboBoxHeadquarterCountry.SelectedItem = presenter.GetCountries()[0];
                 textBoxHeadquarterZipCode.Clear();
                 textBoxHeadquarterCity.Clear();
                 textBoxHeadquarterAddress.Clear();
