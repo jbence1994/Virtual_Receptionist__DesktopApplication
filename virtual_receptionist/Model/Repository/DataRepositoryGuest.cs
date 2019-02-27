@@ -99,6 +99,16 @@ namespace virtual_receptionist.Model.Repository
             return nextID + 1;
         }
 
+        public void GetSpecifiedGuestData()
+        {
+
+        }
+
+        public void GetSpecifiedCompanyData()
+        {
+
+        }
+
         #endregion
     }
 }
