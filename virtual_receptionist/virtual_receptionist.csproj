@@ -182,6 +182,11 @@
       <Name>MySQL_Interface</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Application layer\" />
+    <Folder Include="Business logic layer\" />
+    <Folder Include="Data Access Layer\" />
+    <Folder Include="Presentation layer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
