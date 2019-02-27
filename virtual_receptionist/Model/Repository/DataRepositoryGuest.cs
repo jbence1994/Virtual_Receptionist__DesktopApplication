@@ -77,12 +77,10 @@ namespace virtual_receptionist.Model.Repository
         /// <returns>Az adatbázisban soron következő vendégazonosítót adja vissza a függvény</returns>
         public int GetNextGuestID()
         {
-            int nextID;
-
             string sql = "SELECT MAX(guest.ID) FROM guest";
             string maxID = database.ScalarDQL(sql);
 
-            int.TryParse(maxID, out nextID);
+            int.TryParse(maxID, out int nextID);
 
             return nextID + 1;
         }
@@ -93,12 +91,10 @@ namespace virtual_receptionist.Model.Repository
         /// <returns>Az adatbázisban soron következő cégazonosítót adja vissza a függvény</returns>
         public int GetNextCompanyID()
         {
-            int nextID;
-
             string sql = "SELECT MAX(company.ID) FROM company";
             string maxID = database.ScalarDQL(sql);
 
-            int.TryParse(maxID, out nextID);
+            int.TryParse(maxID, out int nextID);
 
             return nextID + 1;
         }
