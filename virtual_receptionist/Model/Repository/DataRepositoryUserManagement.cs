@@ -14,7 +14,7 @@ namespace virtual_receptionist.Model.Repository
             get
             {
                 string sql = "SELECT log.LogoutDate FROM log WHERE log.ID = (SELECT MAX(log.ID) FROM log)";
-                return database.DQLScalar(sql);
+                return database.ScalarDQL(sql);
             }
         }
 

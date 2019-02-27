@@ -61,7 +61,7 @@ namespace MySQL_Interface
 
         #endregion
 
-        #region Getter és setter tulajdonságok
+        #region Getter tulajdonságok
 
         /// <summary>
         /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály példánya
@@ -165,11 +165,11 @@ namespace MySQL_Interface
         }
 
         /// <summary>
-        /// SELECT utasítást végrehajtó metódus
+        /// SELECT SQL utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL utasítás</param>
+        /// <param name="query">SQL utasítás</param>
         /// <returns>Adatokkal feltöltött DataTable adatszerkezettel tér vissza a metódus</returns>
-        public DataTable DQL(string sql)
+        public DataTable DQL(string query)
         {
             OpenConnection();
 
@@ -179,7 +179,7 @@ namespace MySQL_Interface
             {
                 mySqlCommand = new MySqlCommand()
                 {
-                    CommandText = sql,
+                    CommandText = query,
                     Connection = mySqlConnection
                 };
 
@@ -210,10 +210,10 @@ namespace MySQL_Interface
         }
 
         /// <summary>
-        /// INSERT, UPDATE, DELETE utasítást végrehajtó metódus
+        /// INSERT, UPDATE, DELETE SQL utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL utasítás</param>
-        public void DML(string sql)
+        /// <param name="query">SQL utasítás</param>
+        public void DML(string query)
         {
             OpenConnection();
 
@@ -221,7 +221,7 @@ namespace MySQL_Interface
             {
                 mySqlCommand = new MySqlCommand()
                 {
-                    CommandText = sql,
+                    CommandText = query,
                     Connection = mySqlConnection
                 };
 
@@ -241,11 +241,11 @@ namespace MySQL_Interface
         }
 
         /// <summary>
-        /// Skaláris SELECT utasítást végrehajtó metódus
+        /// Aggregált SELECT SQL utasítást végrehajtó metódus
         /// </summary>
-        /// <param name="sql">SQL utasítás</param>
+        /// <param name="query">SQL utasítás</param>
         /// <returns>SQL utasítás eredményét adja vissza karakterláncban</returns>
-        public string DQLScalar(string sql)
+        public string ScalarDQL(string query)
         {
             string scalarQuery = string.Empty;
 
@@ -256,7 +256,7 @@ namespace MySQL_Interface
                 mySqlCommand = new MySqlCommand()
                 {
 
-                    CommandText = sql,
+                    CommandText = query,
                     Connection = mySqlConnection
                 };
 

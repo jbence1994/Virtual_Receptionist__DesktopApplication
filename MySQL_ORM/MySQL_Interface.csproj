@@ -7,8 +7,8 @@
     <ProjectGuid>{C4687368-A6CF-4580-9DC0-6E2124C2E8C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MySQL_ORM</RootNamespace>
-    <AssemblyName>MySQL_ORM</AssemblyName>
+    <RootNamespace>MySQL_Interface</RootNamespace>
+    <AssemblyName>MySQL_Interface</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

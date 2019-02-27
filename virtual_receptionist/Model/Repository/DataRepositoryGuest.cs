@@ -80,7 +80,7 @@ namespace virtual_receptionist.Model.Repository
             int nextID;
 
             string sql = "SELECT MAX(guest.ID) FROM guest";
-            string maxID = database.DQLScalar(sql);
+            string maxID = database.ScalarDQL(sql);
 
             int.TryParse(maxID, out nextID);
 
@@ -96,7 +96,7 @@ namespace virtual_receptionist.Model.Repository
             int nextID;
 
             string sql = "SELECT MAX(company.ID) FROM company";
-            string maxID = database.DQLScalar(sql);
+            string maxID = database.ScalarDQL(sql);
 
             int.TryParse(maxID, out nextID);
 
