@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.PresentationLayer;
+﻿using virtual_receptionist.BusinessLogicLayer;
+using virtual_receptionist.PresentationLayer;
 using virtual_receptionist.DataAccessLayer.Connection;
 
 namespace virtual_receptionist.ApplicationLayer
@@ -9,6 +10,11 @@ namespace virtual_receptionist.ApplicationLayer
     public class LoginController : DefaultController
     {
         #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private LoginBLL loginLogic;
 
         /// <summary>
         /// Bejelentkező ablak egy példánya
@@ -25,6 +31,7 @@ namespace virtual_receptionist.ApplicationLayer
         public LoginController(FormLogin formLogin)
         {
             this.formLogin = formLogin;
+            loginLogic = new LoginBLL();
         }
 
         #endregion
@@ -43,12 +50,11 @@ namespace virtual_receptionist.ApplicationLayer
         {
             try
             {
-                if (repository.Authentication(accomodationID, password, connectionType))
+                if (loginLogic.Authentication(accomodationID, password, connectionType))
                 {
                     formLogin.Hide();
                     FormMainMenu formMainMenu = new FormMainMenu(formLogin);
                     formMainMenu.Show();
-                    repository.Login();
                 }
             }
             catch (FailedLoginException)

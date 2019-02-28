@@ -41,9 +41,8 @@ namespace virtual_receptionist.PresentationLayer
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelClient.Text += controller.GetClient();
+            toolStripStatusLabelClient.Text += Environment.MachineName;
             Text += controller.SetMainMenuHeader();
-            toolStripStatusLabelLastTimeLoggedIn.Text += controller.GetLastTimeLoggedIn();
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)

@@ -88,7 +88,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Szálláshelyeket tartalmazó lista
         /// </summary>
-        public List<Accomodation> Accomodations
+        public static List<Accomodation> Accomodations
         {
             get
             {
@@ -104,7 +104,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
-        public List<BillingItem> BillingItems
+        public static List<BillingItem> BillingItems
         {
             get
             {
@@ -120,7 +120,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Foglalásokat tartalmazó lista
         /// </summary>
-        public List<Booking> Bookings
+        public static List<Booking> Bookings
         {
             get
             {
@@ -136,7 +136,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Cégeket tartalmazó lista
         /// </summary>
-        public List<Company> Companies
+        public static List<Company> Companies
         {
             get
             {
@@ -152,7 +152,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Orszgáokat tartalmazó lista
         /// </summary>
-        public List<Country> Countries
+        public static List<Country> Countries
         {
             get
             {
@@ -168,7 +168,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Vendégeket tartalmazó lista
         /// </summary>
-        public List<Guest> Guests
+        public static List<Guest> Guests
         {
             get
             {
@@ -184,7 +184,7 @@ namespace virtual_receptionist.DataAccessLayer
         /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
-        public List<Room> Rooms
+        public static List<Room> Rooms
         {
             get
             {

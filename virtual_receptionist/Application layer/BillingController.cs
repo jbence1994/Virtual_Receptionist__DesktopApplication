@@ -1,6 +1,8 @@
 ﻿using System.Data;
 using System.Collections.Generic;
+using virtual_receptionist.BusinessLogicLayer;
 using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.DataAccessLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
@@ -10,6 +12,11 @@ namespace virtual_receptionist.ApplicationLayer
     public class BillingController : DefaultController
     {
         #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private BillingBLL billingLogic;
 
         /// <summary>
         /// Számlázási tételek adattábla
@@ -35,6 +42,8 @@ namespace virtual_receptionist.ApplicationLayer
         /// </summary>
         public BillingController()
         {
+            billingLogic = new BillingBLL();
+
             billingDataTable = new DataTable();
             billingDataTable.Columns.Add("Tétel", typeof(string));
             billingDataTable.Columns.Add("Ár", typeof(double));
@@ -118,7 +127,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A számlázási tételek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetBillingItems()
         {
-            List<BillingItem> billingItems = repository.BillingItems;
+            List<BillingItem> billingItems = Repository.BillingItems;
 
             DataTable billingItemsDataTable = new DataTable();
             billingItemsDataTable.Columns.Add("Name", typeof(string));
@@ -143,7 +152,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
         public double GetTotalPrice(params double[] prices)
         {
-            double total = repository.CountTotalPrice(prices);
+            double total = billingLogic.CountTotalPrice(prices);
             return total;
         }
 

@@ -56,7 +56,6 @@
     <Compile Include="Business Logic layer\BookingBLL.cs" />
     <Compile Include="Business Logic layer\GuestBLL.cs" />
     <Compile Include="Business Logic layer\LoginBLL.cs" />
-    <Compile Include="Business Logic layer\UserManagementServicesBLL.cs" />
     <Compile Include="Data Access Layer\Connection\FailedLoginException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidVATNumberException.cs" />

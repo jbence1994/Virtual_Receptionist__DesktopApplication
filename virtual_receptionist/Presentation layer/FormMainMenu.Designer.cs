@@ -45,7 +45,6 @@
             this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelLastTimeLoggedIn = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
@@ -212,7 +211,6 @@
             // 
             this.statusStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelClient,
-            this.toolStripStatusLabelLastTimeLoggedIn,
             this.toolStripStatusLabelMenuName});
             this.statusStripMainMenu.Location = new System.Drawing.Point(0, 692);
             this.statusStripMainMenu.Name = "statusStripMainMenu";
@@ -226,12 +224,6 @@
             this.toolStripStatusLabelClient.Name = "toolStripStatusLabelClient";
             this.toolStripStatusLabelClient.Size = new System.Drawing.Size(123, 32);
             this.toolStripStatusLabelClient.Text = "Munkaállomás: ";
-            // 
-            // toolStripStatusLabelLastTimeLoggedIn
-            // 
-            this.toolStripStatusLabelLastTimeLoggedIn.Name = "toolStripStatusLabelLastTimeLoggedIn";
-            this.toolStripStatusLabelLastTimeLoggedIn.Size = new System.Drawing.Size(170, 32);
-            this.toolStripStatusLabelLastTimeLoggedIn.Text = "Legutóbb bejelentkezve ekkor: ";
             // 
             // toolStripStatusLabelMenuName
             // 
@@ -424,7 +416,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Panel panelMainMenu;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLastTimeLoggedIn;
         private System.Windows.Forms.Panel panelWelcome;
         private System.Windows.Forms.Label labelWelcomeTitle;
     }

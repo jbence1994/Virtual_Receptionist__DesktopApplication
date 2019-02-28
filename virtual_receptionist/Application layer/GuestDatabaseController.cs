@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.DataAccessLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
@@ -17,7 +18,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A cégek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetCompanies()
         {
-            List<Company> companies = repository.Companies;
+            List<Company> companies = Repository.Companies;
 
             DataTable companyDataTable = new DataTable();
             companyDataTable.Columns.Add("ID", typeof(int));
@@ -46,7 +47,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A vendégek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetGuests()
         {
-            List<Guest> guests = repository.Guests;
+            List<Guest> guests = Repository.Guests;
 
             DataTable guestDataTable = new DataTable();
             guestDataTable.Columns.Add("ID", typeof(int));

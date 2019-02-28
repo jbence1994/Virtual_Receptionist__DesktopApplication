@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
@@ -7,6 +8,13 @@ namespace virtual_receptionist.ApplicationLayer
     /// </summary>
     public class RegistrationCardPresenter : DefaultController
     {
+        private GuestBLL guestLogic;
+
+        public RegistrationCardPresenter()
+        {
+            guestLogic = new GuestBLL();
+        }
+
         #region Metódusok
 
         /// <summary>
@@ -21,9 +29,9 @@ namespace virtual_receptionist.ApplicationLayer
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetCompanyData() //Szétbontás elemi aattípusra az objektum mezőit
+        public DataTable GetCompanyData() //Szétbontás elemi adattípusra az objektum mezőit
         {
-            repository.GetSpecifiedCompanyData();
+            guestLogic.GetSpecifiedCompanyData();
             return new DataTable();
         }
 
@@ -31,9 +39,9 @@ namespace virtual_receptionist.ApplicationLayer
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetGuestData() //Szétbontás elemi aattípusra az objektum mezőit
+        public DataTable GetGuestData() //Szétbontás elemi adattípusra az objektum mezőit
         {
-            repository.GetSpecifiedGuestData();
+            guestLogic.GetSpecifiedGuestData();
             return new DataTable();
         }
 

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
+using virtual_receptionist.BusinessLogicLayer;
 using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.DataAccessLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
@@ -10,6 +12,19 @@ namespace virtual_receptionist.ApplicationLayer
     /// </summary>
     public class BookingController : DefaultController
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        private BookingBLL bookingLogic;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public BookingController()
+        {
+            bookingLogic = new BookingBLL();
+        }
+
         #region Metódusok
 
         /// <summary>
@@ -18,7 +33,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A foglalások adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetBookings()
         {
-            List<Booking> bookings = repository.Bookings;
+            List<Booking> bookings = Repository.Bookings;
 
             DataTable bookingsDataTable = new DataTable();
             bookingsDataTable.Columns.Add("ID", typeof(int));
@@ -47,7 +62,7 @@ namespace virtual_receptionist.ApplicationLayer
         public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
         {
             string arrival = arrivalDate.ToString("yyyy-MM-dd");
-            List<Booking> bookingsByArrival = repository.GetBookingsByArrivalDate(arrival);
+            List<Booking> bookingsByArrival = bookingLogic.GetBookingsByArrivalDate(arrival);
 
             DataTable bookingsDataTableByArrival = new DataTable();
             bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
@@ -74,7 +89,7 @@ namespace virtual_receptionist.ApplicationLayer
         public DataTable GetBookingsByDepartureDate(DateTime departureDate)
         {
             string departure = departureDate.ToString("yyyy-MM-dd");
-            List<Booking> bookingsByDeparture = repository.GetBookingsByDepartureDate(departure);
+            List<Booking> bookingsByDeparture = bookingLogic.GetBookingsByDepartureDate(departure);
 
             DataTable bookingsDataTableByDeparture = new DataTable();
             bookingsDataTableByDeparture.Columns.Add("ID", typeof(int));
@@ -100,7 +115,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A szobák adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetRooms()
         {
-            List<Room> rooms = repository.Rooms;
+            List<Room> rooms = Repository.Rooms;
 
             DataTable roomsDataTable = new DataTable();
             roomsDataTable.Columns.Add("Number", typeof(int));

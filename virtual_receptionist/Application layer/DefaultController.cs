@@ -41,7 +41,7 @@ namespace virtual_receptionist.ApplicationLayer
             List<string> countries = new List<string>();
             countries.Add("Válasszon!");
 
-            foreach (Country country in repository.Countries)
+            foreach (Country country in Repository.Countries)
             {
                 countries.Add(country.Name);
             }

@@ -53,7 +53,6 @@ namespace virtual_receptionist.ApplicationLayer
             {
                 formMainMenu.Close();
                 formLogin.Show();
-                repository.Logout();
             }
         }
 
@@ -64,23 +63,6 @@ namespace virtual_receptionist.ApplicationLayer
         {
             Accomodation accomodation = repository.Accomodation;
             return $"{accomodation.Name} ({accomodation.VatNumber})";
-        }
-
-        /// <summary>
-        /// Metódus, amely megadja, mikor volt legutóbb felhasználó bejelentkezve az alkalmazásba
-        /// </summary>
-        /// <returns>A legutóbbi bejelentkezés idejét adja vissza karakterláncként a függvény</returns>
-        public string GetLastTimeLoggedIn()
-        {
-            return repository.LastTimeLoggedIn;
-        }
-
-        /// <summary>
-        /// Metódus, amely visszaadja az alkalmazást futtató számítógép NetBIOS nevét
-        /// </summary>Alkalmazást futtató számítógép NetBIOS nevével tér vissza a függvény<returns></returns>
-        public string GetClient()
-        {
-            return Repository.Client;
         }
 
         /// <summary>

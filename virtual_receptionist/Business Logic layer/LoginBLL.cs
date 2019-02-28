@@ -1,5 +1,7 @@
-﻿using virtual_receptionist.DataAccessLayer.Model;
+﻿using System.Collections.Generic;
+using virtual_receptionist.DataAccessLayer.Model;
 using virtual_receptionist.DataAccessLayer.Connection;
+using virtual_receptionist.DataAccessLayer;
 
 namespace virtual_receptionist.BusinessLogicLayer
 {
@@ -21,9 +23,11 @@ namespace virtual_receptionist.BusinessLogicLayer
             try
             {
                 bool entry = false;
+
+                Database database = Database.DatabaseInstance;
                 database.SetConnection(connectionType);
 
-                UploadAccomodationList();
+                List<Accomodation> accomodations = Repository.Accomodations;
 
                 foreach (Accomodation account in accomodations)
                 {
