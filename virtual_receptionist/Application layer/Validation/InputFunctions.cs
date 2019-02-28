@@ -1,10 +1,10 @@
 using System.Text.RegularExpressions;
 
-namespace virtual_receptionist.Validation
+namespace virtual_receptionist.ApplicationLayer.Validation
 {
     public partial class Input
     {
-        #region Helper függvények
+        #region Validáló részfüggvények
 
         /// <summary>
         /// Metódus, amely ellenőrzi az input üres karakterlánc-e

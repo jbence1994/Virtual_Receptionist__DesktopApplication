@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace virtual_receptionist.Exceptions
+namespace virtual_receptionist.ApplicationLayer.Exceptions
 {
     /// <summary>
     /// Település kivétel

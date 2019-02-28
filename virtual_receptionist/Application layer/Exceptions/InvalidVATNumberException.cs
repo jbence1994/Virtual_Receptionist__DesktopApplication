@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace virtual_receptionist.Exceptions
+namespace virtual_receptionist.ApplicationLayer.Exceptions
 {
-    /// <summary>
     /// Adószám kivétel
     /// </summary>
     public class InvalidVATNumberException : Exception

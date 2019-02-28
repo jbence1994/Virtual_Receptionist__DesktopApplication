@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using virtual_receptionist.View;
+using virtual_receptionist.PresentationLayer;
 
 namespace virtual_receptionist
 {

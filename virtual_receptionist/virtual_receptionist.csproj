@@ -47,111 +47,113 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application layer\DefaultController.cs" />
     <Compile Include="Application layer\Exceptions\InvalidAddressException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidCityException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidEmailAddressException.cs" />
-    <Compile Include="Application layer\Exceptions\FailedLoginException.cs" />
+    <Compile Include="Data Access Layer\Connection\FailedLoginException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidZipCodeException.cs" />
-    <Compile Include="Model\Entity\BillingItemCategory.cs" />
-    <Compile Include="Model\Entity\Company.cs" />
-    <Compile Include="Model\Entity\RoomCategory.cs" />
-    <Compile Include="Model\Interface\IManipulable.cs" />
-    <Compile Include="Model\Repository\DataRepositoryDatabaseConfiguration.cs" />
-    <Compile Include="Model\Repository\DataRepositoryUserManagement.cs" />
-    <Compile Include="Presenter\RegistrationCardPresenter.cs" />
-    <Compile Include="Presenter\BookingPresenter.cs" />
-    <Compile Include="View\FormLogin.cs">
+    <Compile Include="Data Access Layer\Connection\Database.cs" />
+    <Compile Include="Data Access Layer\Connection\InvalidConnectionTypeException.cs" />
+    <Compile Include="Data Access Layer\Model\BillingItemCategory.cs" />
+    <Compile Include="Data Access Layer\Model\Company.cs" />
+    <Compile Include="Data Access Layer\Model\RoomCategory.cs" />
+    <Compile Include="Data Access Layer\IManipulable.cs" />
+    <Compile Include="Data Access Layer\RepositoryDatabaseConfiguration.cs" />
+    <Compile Include="Data Access Layer\RepositoryUserManagement.cs" />
+    <Compile Include="Application layer\RegistrationCardPresenter.cs" />
+    <Compile Include="Application layer\BookingController.cs" />
+    <Compile Include="Presentation layer\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormLogin.Designer.cs">
+    <Compile Include="Presentation layer\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\BillingPresenter.cs" />
-    <Compile Include="Presenter\LoginPresenter.cs" />
-    <Compile Include="Presenter\MainMenuPresenter.cs" />
-    <Compile Include="View\AboutBox.cs">
+    <Compile Include="Application layer\BillingController.cs" />
+    <Compile Include="Application layer\LoginController.cs" />
+    <Compile Include="Application layer\MainMenuController.cs" />
+    <Compile Include="Presentation layer\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AboutBox.Designer.cs">
+    <Compile Include="Presentation layer\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Entity\Accomodation.cs" />
-    <Compile Include="Model\Entity\BillingItem.cs" />
-    <Compile Include="Model\Entity\Country.cs" />
-    <Compile Include="Model\Repository\DataRepositoryGuest.cs" />
-    <Compile Include="Model\Repository\DataRepositoryBilling.cs" />
-    <Compile Include="Model\Repository\DataRepositoryDataAccess.cs" />
-    <Compile Include="Model\Repository\DataRepositoryBooking.cs" />
-    <Compile Include="View\FormBilling.cs">
+    <Compile Include="Data Access Layer\Model\Accomodation.cs" />
+    <Compile Include="Data Access Layer\Model\BillingItem.cs" />
+    <Compile Include="Data Access Layer\Model\Country.cs" />
+    <Compile Include="Data Access Layer\RepositoryGuest.cs" />
+    <Compile Include="Data Access Layer\RepositoryBilling.cs" />
+    <Compile Include="Data Access Layer\RepositoryDataAccess.cs" />
+    <Compile Include="Data Access Layer\RepositoryBooking.cs" />
+    <Compile Include="Presentation layer\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBilling.Designer.cs">
+    <Compile Include="Presentation layer\FormBilling.Designer.cs">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormGuestDatabase.cs">
+    <Compile Include="Presentation layer\FormGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormGuestDatabase.Designer.cs">
+    <Compile Include="Presentation layer\FormGuestDatabase.Designer.cs">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormMainMenu.cs">
+    <Compile Include="Presentation layer\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormMainMenu.Designer.cs">
+    <Compile Include="Presentation layer\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormBillingItems.cs">
+    <Compile Include="Presentation layer\FormBillingItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBillingItems.Designer.cs">
+    <Compile Include="Presentation layer\FormBillingItems.Designer.cs">
       <DependentUpon>FormBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormRegistrationCard.cs">
+    <Compile Include="Presentation layer\FormRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormRegistrationCard.Designer.cs">
+    <Compile Include="Presentation layer\FormRegistrationCard.Designer.cs">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormBooking.cs">
+    <Compile Include="Presentation layer\FormBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBooking.Designer.cs">
+    <Compile Include="Presentation layer\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Entity\Guest.cs" />
-    <Compile Include="Presenter\GuestDatabasePresenter.cs" />
+    <Compile Include="Data Access Layer\Model\Guest.cs" />
+    <Compile Include="Application layer\GuestDatabaseController.cs" />
     <Compile Include="Application layer\Validation\InputFunctions.cs" />
     <Compile Include="Application layer\Validation\InputAutomatizedFunctions.cs" />
-    <Compile Include="Presenter\DefaultPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Entity\Booking.cs" />
-    <Compile Include="Model\Entity\Room.cs" />
-    <EmbeddedResource Include="View\FormLogin.resx">
+    <Compile Include="Data Access Layer\Model\Booking.cs" />
+    <Compile Include="Data Access Layer\Model\Room.cs" />
+    <EmbeddedResource Include="Presentation layer\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AboutBox.resx">
+    <EmbeddedResource Include="Presentation layer\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBilling.resx">
+    <EmbeddedResource Include="Presentation layer\FormBilling.resx">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormGuestDatabase.resx">
+    <EmbeddedResource Include="Presentation layer\FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormMainmenu.resx">
+    <EmbeddedResource Include="Presentation layer\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBillingItems.resx">
+    <EmbeddedResource Include="Presentation layer\FormBillingItems.resx">
       <DependentUpon>FormBillingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormRegistrationCard.resx">
+    <EmbeddedResource Include="Presentation layer\FormRegistrationCard.resx">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBooking.resx">
+    <EmbeddedResource Include="Presentation layer\FormBooking.resx">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -177,15 +179,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MySQL_ORM\MySQL_Interface.csproj">
-      <Project>{c4687368-a6cf-4580-9dc0-6e2124c2e8c2}</Project>
-      <Name>MySQL_Interface</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business logic layer\" />
-    <Folder Include="Data Access Layer\" />
-    <Folder Include="Presentation layer\" />
+    <Folder Include="Business Logic layer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

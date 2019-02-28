@@ -1,6 +1,6 @@
-﻿using virtual_receptionist.Exceptions;
+﻿using virtual_receptionist.ApplicationLayer.Exceptions;
 
-namespace virtual_receptionist.Validation
+namespace virtual_receptionist.ApplicationLayer.Validation
 {
     /// <summary>
     /// Felhasználó által bevitt adatokat ellenőrző osztály
