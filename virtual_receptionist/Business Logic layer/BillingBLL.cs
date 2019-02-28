@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 
-namespace virtual_receptionist.DataAccessLayer
+namespace virtual_receptionist.BusinessLogicLayer
 {
-    public partial class Repository
+    public class BillingBLL
     {
-        #region Számlázó modul üzleti logika
+        #region Számlázó üzleti logika metódusok
 
         /// <summary>
         /// Metódus, amely tétel kedvezményt számít

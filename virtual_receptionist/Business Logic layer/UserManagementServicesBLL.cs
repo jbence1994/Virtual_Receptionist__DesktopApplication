@@ -1,10 +1,13 @@
 ﻿using System;
 
-namespace virtual_receptionist.DataAccessLayer
+namespace virtual_receptionist.BusinessLogicLayer
 {
-    public partial class Repository
+    /// <summary>
+    /// 
+    /// </summary>
+    public class UserManagementServicesBLL
     {
-        #region Getter tulajdonságok
+        #region Felhasználói üzleti logika
 
         /// <summary>
         /// A legutóbbi bejelentkezés ideje
@@ -45,7 +48,5 @@ namespace virtual_receptionist.DataAccessLayer
         {
             // FÁJLKEZELÉS
         }
-
-        #endregion
     }
 }

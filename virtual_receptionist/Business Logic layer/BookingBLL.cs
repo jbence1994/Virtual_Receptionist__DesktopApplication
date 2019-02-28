@@ -1,44 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using virtual_receptionist.DataAccessLayer.Model;
 
-namespace virtual_receptionist.DataAccessLayer
+namespace virtual_receptionist.BusinessLogicLayer
 {
-    public partial class Repository : IManipulable<Booking>
+    public class BookingBLL
     {
-        #region Foglalási napló modul üzleti logika
-
-        /// <summary>
-        /// Új foglalás felvétele adatbázisba
-        /// </summary>
-        /// <param name="booking">Booking objektum</param>
-        public void Create(Booking booking)
-        {
-            string sql =
-                $"INSERT INTO booking(GuestID, RoomID, NumberOfGuests, ArrivalDate, DepartureDate) VALUES ((SELECT guest.ID FROM guest WHERE guest.Name LIKE \"{booking.Guest.Name}\"), (SELECT room.ID FROM room WHERE room.Number LIKE \"{booking.Room.Number}\"), {booking.NumberOfGuests}, {booking.ArrivalDate}, {booking.DepartureDate});";
-            database.DML(sql);
-        }
-
-        /// <summary>
-        /// Meglévő foglalás törlése adatbázisból
-        /// </summary>
-        /// <param name="booking">Booking objektum</param>>
-        public void Delete(Booking booking)
-        {
-            string sql = $"DELETE FROM booking WHERE ";
-            database.DML(sql);
-        }
-
-        /// <summary>
-        /// Meglévő foglalás módosítása adatbázisban
-        /// </summary>
-        /// <param name="booking">Booking objektum</param>
-        public void Update(Booking booking)
-        {
-            string sql = $"UPDATE room SET WHERE";
-            database.DML(sql);
-        }
-
         /// <summary>
         /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek a paraméterben megadott dátum szerint érkeznek és egy új listába menti őket
         /// </summary>
@@ -88,7 +56,5 @@ namespace virtual_receptionist.DataAccessLayer
 
             return bookingsByDepartureDate;
         }
-
-        #endregion
     }
 }

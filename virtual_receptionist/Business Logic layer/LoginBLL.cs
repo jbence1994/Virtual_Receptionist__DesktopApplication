@@ -1,9 +1,9 @@
-﻿using virtual_receptionist.DataAccessLayer.Connection;
-using virtual_receptionist.DataAccessLayer.Model;
+﻿using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.DataAccessLayer.Connection;
 
-namespace virtual_receptionist.DataAccessLayer
+namespace virtual_receptionist.BusinessLogicLayer
 {
-    public partial class Repository
+    public class LoginBLL
     {
         #region Metódusok
 

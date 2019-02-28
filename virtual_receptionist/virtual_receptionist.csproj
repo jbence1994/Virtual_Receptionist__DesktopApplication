@@ -52,6 +52,11 @@
     <Compile Include="Application layer\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidCityException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidEmailAddressException.cs" />
+    <Compile Include="Business Logic layer\BillingBLL.cs" />
+    <Compile Include="Business Logic layer\BookingBLL.cs" />
+    <Compile Include="Business Logic layer\GuestBLL.cs" />
+    <Compile Include="Business Logic layer\LoginBLL.cs" />
+    <Compile Include="Business Logic layer\UserManagementServicesBLL.cs" />
     <Compile Include="Data Access Layer\Connection\FailedLoginException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application layer\Exceptions\InvalidVATNumberException.cs" />
@@ -62,8 +67,6 @@
     <Compile Include="Data Access Layer\Model\Company.cs" />
     <Compile Include="Data Access Layer\Model\RoomCategory.cs" />
     <Compile Include="Data Access Layer\IManipulable.cs" />
-    <Compile Include="Data Access Layer\RepositoryDatabaseConfiguration.cs" />
-    <Compile Include="Data Access Layer\RepositoryUserManagement.cs" />
     <Compile Include="Application layer\RegistrationCardPresenter.cs" />
     <Compile Include="Application layer\BookingController.cs" />
     <Compile Include="Presentation layer\FormLogin.cs">
@@ -84,10 +87,7 @@
     <Compile Include="Data Access Layer\Model\Accomodation.cs" />
     <Compile Include="Data Access Layer\Model\BillingItem.cs" />
     <Compile Include="Data Access Layer\Model\Country.cs" />
-    <Compile Include="Data Access Layer\RepositoryGuest.cs" />
-    <Compile Include="Data Access Layer\RepositoryBilling.cs" />
-    <Compile Include="Data Access Layer\RepositoryDataAccess.cs" />
-    <Compile Include="Data Access Layer\RepositoryBooking.cs" />
+    <Compile Include="Data Access Layer\Repository.cs" />
     <Compile Include="Presentation layer\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,8 +178,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business Logic layer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
