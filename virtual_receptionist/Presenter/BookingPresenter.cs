@@ -110,7 +110,7 @@ namespace virtual_receptionist.Presenter
 
             foreach (Room room in rooms)
             {
-                roomsDataTable.Rows.Add(room.Name, room.Number, room.Category, room.Capacity);
+                roomsDataTable.Rows.Add(room.Number, room.Name, room.Category, room.Capacity);
             }
 
             return roomsDataTable;
