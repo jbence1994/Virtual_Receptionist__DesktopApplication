@@ -103,8 +103,8 @@ namespace virtual_receptionist.Presenter
             List<Room> rooms = dataRepository.Rooms;
 
             DataTable roomsDataTable = new DataTable();
-            roomsDataTable.Columns.Add("Name", typeof(string));
             roomsDataTable.Columns.Add("Number", typeof(int));
+            roomsDataTable.Columns.Add("Name", typeof(string));
             roomsDataTable.Columns.Add("CategoryName", typeof(string));
             roomsDataTable.Columns.Add("Capacity", typeof(int));
 
