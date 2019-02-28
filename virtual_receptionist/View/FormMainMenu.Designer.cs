@@ -45,8 +45,8 @@
             this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLastTimeLoggedIn = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonGuestRegistrationCard = new System.Windows.Forms.ToolStripButton();
@@ -55,11 +55,14 @@
             this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.panelWelcome = new System.Windows.Forms.Panel();
+            this.labelWelcomeTitle = new System.Windows.Forms.Label();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
             this.toolStripMainMenu.SuspendLayout();
             this.panelMainMenu.SuspendLayout();
+            this.panelWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -110,7 +113,7 @@
             // 
             this.toolStripMenuItemGuestRegistrationCard.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestRegistrationCard.Image")));
             this.toolStripMenuItemGuestRegistrationCard.Name = "toolStripMenuItemGuestRegistrationCard";
-            this.toolStripMenuItemGuestRegistrationCard.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemGuestRegistrationCard.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemGuestRegistrationCard.Text = "Vendég bejelentkező lap kitöltése";
             this.toolStripMenuItemGuestRegistrationCard.Click += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_Click);
             this.toolStripMenuItemGuestRegistrationCard.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_MouseLeave);
@@ -120,7 +123,7 @@
             // 
             this.toolStripMenuItemBooking.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBooking.Image")));
             this.toolStripMenuItemBooking.Name = "toolStripMenuItemBooking";
-            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemBooking.Text = "Foglalási napló";
             this.toolStripMenuItemBooking.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemBooking.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
@@ -130,7 +133,7 @@
             // 
             this.toolStripMenuItemGuestDatabase.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestDatabase.Image")));
             this.toolStripMenuItemGuestDatabase.Name = "toolStripMenuItemGuestDatabase";
-            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
             this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
@@ -140,7 +143,7 @@
             // 
             this.toolStripMenuItemBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBilling.Image")));
             this.toolStripMenuItemBilling.Name = "toolStripMenuItemBilling";
-            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(248, 22);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
             this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
@@ -224,16 +227,16 @@
             this.toolStripStatusLabelClient.Size = new System.Drawing.Size(123, 32);
             this.toolStripStatusLabelClient.Text = "Munkaállomás: ";
             // 
-            // toolStripStatusLabelMenuName
-            // 
-            this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
-            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(176, 32);
-            // 
             // toolStripStatusLabelLastTimeLoggedIn
             // 
             this.toolStripStatusLabelLastTimeLoggedIn.Name = "toolStripStatusLabelLastTimeLoggedIn";
             this.toolStripStatusLabelLastTimeLoggedIn.Size = new System.Drawing.Size(170, 32);
             this.toolStripStatusLabelLastTimeLoggedIn.Text = "Legutóbb bejelentkezve ekkor: ";
+            // 
+            // toolStripStatusLabelMenuName
+            // 
+            this.toolStripStatusLabelMenuName.Name = "toolStripStatusLabelMenuName";
+            this.toolStripStatusLabelMenuName.Size = new System.Drawing.Size(0, 32);
             // 
             // pictureBoxVRLogo
             // 
@@ -318,7 +321,7 @@
             this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
-            this.buttonLogout.Location = new System.Drawing.Point(846, 562);
+            this.buttonLogout.Location = new System.Drawing.Point(567, 556);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(159, 64);
             this.buttonLogout.TabIndex = 29;
@@ -331,13 +334,36 @@
             // 
             // panelMainMenu
             // 
-            this.panelMainMenu.Controls.Add(this.buttonLogout);
             this.panelMainMenu.Controls.Add(this.pictureBoxVRLogo);
+            this.panelMainMenu.Controls.Add(this.panelWelcome);
             this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenu.Location = new System.Drawing.Point(0, 63);
             this.panelMainMenu.Name = "panelMainMenu";
             this.panelMainMenu.Size = new System.Drawing.Size(1008, 629);
             this.panelMainMenu.TabIndex = 30;
+            // 
+            // panelWelcome
+            // 
+            this.panelWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelWelcome.Controls.Add(this.labelWelcomeTitle);
+            this.panelWelcome.Controls.Add(this.buttonLogout);
+            this.panelWelcome.Location = new System.Drawing.Point(267, 3);
+            this.panelWelcome.Name = "panelWelcome";
+            this.panelWelcome.Size = new System.Drawing.Size(729, 623);
+            this.panelWelcome.TabIndex = 30;
+            // 
+            // labelWelcomeTitle
+            // 
+            this.labelWelcomeTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelWelcomeTitle.AutoSize = true;
+            this.labelWelcomeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelWelcomeTitle.Location = new System.Drawing.Point(41, 61);
+            this.labelWelcomeTitle.Name = "labelWelcomeTitle";
+            this.labelWelcomeTitle.Size = new System.Drawing.Size(637, 25);
+            this.labelWelcomeTitle.TabIndex = 0;
+            this.labelWelcomeTitle.Text = "Üdvözöljük a Virtual Receptionist adminisztrációs felületén!";
             // 
             // FormMainMenu
             // 
@@ -364,6 +390,8 @@
             this.toolStripMainMenu.ResumeLayout(false);
             this.toolStripMainMenu.PerformLayout();
             this.panelMainMenu.ResumeLayout(false);
+            this.panelWelcome.ResumeLayout(false);
+            this.panelWelcome.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +425,7 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Panel panelMainMenu;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLastTimeLoggedIn;
+        private System.Windows.Forms.Panel panelWelcome;
+        private System.Windows.Forms.Label labelWelcomeTitle;
     }
 }

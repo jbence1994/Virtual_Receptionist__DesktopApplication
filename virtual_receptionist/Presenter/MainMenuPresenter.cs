@@ -116,7 +116,7 @@ namespace virtual_receptionist.Presenter
         /// </summary>
         public void OpenCHM()
         {
-            Help.ShowHelp(formMainMenu, ""); // CHM útvonal
+            // Help.ShowHelp(formMainMenu, "CHMPath");
         }
 
         /// <summary>
