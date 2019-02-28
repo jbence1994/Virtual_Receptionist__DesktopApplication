@@ -368,14 +368,14 @@ namespace virtual_receptionist.Model.Repository
         private static void UploadRoomsList()
         {
             string sql =
-                "SELECT room.Name, room.Number, room_category.RoomCategoryName, room.Capacity FROM room, room_category WHERE room.Category = room_category.ID ORDER BY room.Number ASC";
+                "SELECT room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
                 string name = row["Name"].ToString();
                 int number = int.Parse(row["Number"].ToString());
-                string category = row["RoomCategoryName"].ToString();
+                string category = row["BillingItemName"].ToString();
                 int capacity = int.Parse(row["Capacity"].ToString());
 
                 RoomCategory roomCategoryInstance = new RoomCategory(category);
