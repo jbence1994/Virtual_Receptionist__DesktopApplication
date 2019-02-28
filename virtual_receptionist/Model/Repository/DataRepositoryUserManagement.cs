@@ -35,9 +35,7 @@ namespace virtual_receptionist.Model.Repository
         /// </summary>
         public void Login()
         {
-            string sql =
-                $"INSERT INTO log(Client, OS_Version, LoginDate, LogoutDate) VALUES (\"{Client}\", \"{Environment.OSVersion}\", \"{DateTime.Now}\", \"Logged in\")";
-            database.DML(sql);
+            // FÁJLKEZELÉS
         }
 
         /// <summary>
@@ -45,9 +43,7 @@ namespace virtual_receptionist.Model.Repository
         /// </summary>
         public void Logout()
         {
-            string sql =
-                $"UPDATE log SET LogoutDate = \"{DateTime.Now}\" WHERE LogoutDate LIKE \"Logged in\"";
-            database.DML(sql);
+            // FÁJLKEZELÉS
         }
 
         #endregion
