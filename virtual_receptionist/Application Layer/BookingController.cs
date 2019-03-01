@@ -8,7 +8,7 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Foglalási napló modul vezérlője
     /// </summary>
-    public class BookingController : DefaultController
+    public class BookingController : Controller
     {
         /// <summary>
         /// 

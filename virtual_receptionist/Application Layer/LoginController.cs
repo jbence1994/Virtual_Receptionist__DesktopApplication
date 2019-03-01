@@ -8,7 +8,7 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Bejelentkező ablak vezérlője
     /// </summary>
-    public class LoginController : DefaultController
+    public class LoginController : Controller
     {
         #region Adattagok
 

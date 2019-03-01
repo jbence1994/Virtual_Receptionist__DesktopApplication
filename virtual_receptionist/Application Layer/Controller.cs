@@ -6,7 +6,7 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Az alkalmazás vezérlője, amely a nézetek megfelelő előállításáért és az inputok ellenőrzéséért
     /// </summary>
-    public class DefaultController
+    public class Controller
     {
         #region Adattagok
 
@@ -22,7 +22,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <summary>
         /// Alkalmazás vezérlő konstruktora
         /// </summary>
-        public DefaultController()
+        public Controller()
         {
             repository = new Repository();
         }

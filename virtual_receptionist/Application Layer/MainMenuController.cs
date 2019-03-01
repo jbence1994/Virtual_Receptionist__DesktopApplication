@@ -6,7 +6,7 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Főmenü ablak vezérlője
     /// </summary>
-    public class MainMenuController : DefaultController
+    public class MainMenuController : Controller
     {
         #region Adattagok
 

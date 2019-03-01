@@ -7,7 +7,7 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Számlázó ablak és számlázási tételek modális ablak vezérlője
     /// </summary>
-    public class BillingController : DefaultController
+    public class BillingController : Controller
     {
         #region Adattagok
 

@@ -7,7 +7,7 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Vendégadatbázis-kezelő vezérlője
     /// </summary>
-    public class GuestDatabaseController : DefaultController
+    public class GuestDatabaseController : Controller
     {
         #region Metódusok
 

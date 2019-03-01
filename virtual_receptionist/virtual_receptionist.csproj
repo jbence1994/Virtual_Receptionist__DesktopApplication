@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application Layer\DefaultController.cs" />
+    <Compile Include="Application Layer\Controller.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidAddressException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidCityException.cs" />
