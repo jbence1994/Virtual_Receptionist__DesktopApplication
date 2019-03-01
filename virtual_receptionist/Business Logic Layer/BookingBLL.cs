@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using virtual_receptionist.DataAccessLayer;
 using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.DataAccessLayer.PersistentDataRepository;
 
 namespace virtual_receptionist.BusinessLogicLayer
 {
@@ -16,7 +16,7 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsByArrivalDate(string arrivalDate)
         {
-            List<Booking> bookings = Repository.Bookings;
+            List<Booking> bookings = BookingRepository.Bookings;
 
             List<Booking> bookingsByArrivalDate = new List<Booking>();
 
@@ -38,7 +38,7 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsByDepartureDate(string departureDate)
         {
-            List<Booking> bookings = Repository.Bookings;
+            List<Booking> bookings = BookingRepository.Bookings;
 
             List<Booking> bookingsByDepartureDate = new List<Booking>();
 
