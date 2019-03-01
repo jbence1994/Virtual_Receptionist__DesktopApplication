@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace virtual_receptionist.DataAccessLayer.Connection
+namespace virtual_receptionist.ApplicationLayer.Exceptions
 {
     /// <summary>
     /// Bejelentkezés kivétel
