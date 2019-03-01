@@ -237,7 +237,7 @@
             this.pictureBoxVRLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVRLogo.Image")));
             this.pictureBoxVRLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxVRLogo.Name = "pictureBoxVRLogo";
-            this.pictureBoxVRLogo.Size = new System.Drawing.Size(261, 629);
+            this.pictureBoxVRLogo.Size = new System.Drawing.Size(267, 629);
             this.pictureBoxVRLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVRLogo.TabIndex = 5;
             this.pictureBoxVRLogo.TabStop = false;
@@ -313,7 +313,7 @@
             this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
-            this.buttonLogout.Location = new System.Drawing.Point(567, 556);
+            this.buttonLogout.Location = new System.Drawing.Point(561, 556);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(159, 64);
             this.buttonLogout.TabIndex = 29;
@@ -341,9 +341,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelWelcome.Controls.Add(this.labelWelcomeTitle);
             this.panelWelcome.Controls.Add(this.buttonLogout);
-            this.panelWelcome.Location = new System.Drawing.Point(267, 3);
+            this.panelWelcome.Location = new System.Drawing.Point(273, 3);
             this.panelWelcome.Name = "panelWelcome";
-            this.panelWelcome.Size = new System.Drawing.Size(729, 623);
+            this.panelWelcome.Size = new System.Drawing.Size(723, 623);
             this.panelWelcome.TabIndex = 30;
             // 
             // labelWelcomeTitle
@@ -351,7 +351,7 @@
             this.labelWelcomeTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelWelcomeTitle.AutoSize = true;
             this.labelWelcomeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelWelcomeTitle.Location = new System.Drawing.Point(41, 61);
+            this.labelWelcomeTitle.Location = new System.Drawing.Point(38, 61);
             this.labelWelcomeTitle.Name = "labelWelcomeTitle";
             this.labelWelcomeTitle.Size = new System.Drawing.Size(637, 25);
             this.labelWelcomeTitle.TabIndex = 0;
