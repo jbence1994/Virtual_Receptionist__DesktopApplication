@@ -1,5 +1,6 @@
 ﻿using virtual_receptionist.BusinessLogicLayer;
 using virtual_receptionist.PresentationLayer;
+using virtual_receptionist.ApplicationLayer.Exceptions;
 
 namespace virtual_receptionist.ApplicationLayer
 {
