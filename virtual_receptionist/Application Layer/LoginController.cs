@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.BusinessLogicLayer;
+﻿using System;
+using virtual_receptionist.BusinessLogicLayer;
 using virtual_receptionist.PresentationLayer;
 using virtual_receptionist.ApplicationLayer.Exceptions;
 
@@ -45,7 +46,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="FailedLoginException"></exception>
-        /// <exception cref="InvalidConnectionTypeException"></exception>
+        /// <exception cref="Exception"></exception>
         public void EnterApplication(string accomodationID, string password, string connectionType)
         {
             try
@@ -61,9 +62,9 @@ namespace virtual_receptionist.ApplicationLayer
             {
                 throw new FailedLoginException();
             }
-            catch (InvalidConnectionTypeException)
+            catch (Exception)
             {
-                throw new InvalidConnectionTypeException();
+                throw new Exception();
             }
         }
 
