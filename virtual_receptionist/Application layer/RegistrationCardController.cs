@@ -6,11 +6,14 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Vendég bejelentkező lap vezérlője
     /// </summary>
-    public class RegistrationCardPresenter : DefaultController
+    public class RegistrationCardController : DefaultController
     {
         private GuestBLL guestLogic;
 
-        public RegistrationCardPresenter()
+        /// <summary>
+        /// Vendég bejelentkező lap vezérlő konstruktora
+        /// </summary>
+        public RegistrationCardController()
         {
             guestLogic = new GuestBLL();
         }

@@ -14,7 +14,7 @@ namespace virtual_receptionist.PresentationLayer
         /// <summary>
         /// Vendég bejelentkező lap prezenter egy példánya
         /// </summary>
-        private RegistrationCardPresenter presenter;
+        private RegistrationCardController controller;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace virtual_receptionist.PresentationLayer
         public FormGuestRegistrationCard()
         {
             InitializeComponent();
-            presenter = new RegistrationCardPresenter();
+            controller = new RegistrationCardController();
         }
 
         #endregion
@@ -36,8 +36,8 @@ namespace virtual_receptionist.PresentationLayer
         private void FormGuestRegistrationCard_Load(object sender, EventArgs e)
         {
             textBoxGuestName.Select();
-            comboBoxGuestCountry.DataSource = presenter.GetCountries();
-            comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
+            comboBoxGuestCountry.DataSource = controller.GetCountries();
+            comboBoxHeadquarterCountry.DataSource = controller.GetCountries();
         }
 
         private void textBoxGuestName_TextChanged(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace virtual_receptionist.PresentationLayer
 
             comboBoxHeadquarterCountry.Enabled = checkBoxIsCompany.Checked;
             comboBoxHeadquarterCountry.DataSource = null;
-            comboBoxHeadquarterCountry.DataSource = presenter.GetCountries();
+            comboBoxHeadquarterCountry.DataSource = controller.GetCountries();
 
             textBoxHeadquarterZipCode.Clear();
             textBoxHeadquarterZipCode.Enabled = checkBoxIsCompany.Checked;
@@ -120,22 +120,22 @@ namespace virtual_receptionist.PresentationLayer
 
         private void buttonImportGuestData_Click(object sender, EventArgs e)
         {
-            presenter.GetGuestData();
+            controller.GetGuestData();
         }
 
         private void buttonImportCompanyData_Click(object sender, EventArgs e)
         {
-            presenter.GetCompanyData();
+            controller.GetCompanyData();
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
             if (checkBoxIsCompany.Checked)
             {
-                presenter.SaveData(true);
+                controller.SaveData(true);
             }
 
-            presenter.SaveData(false);
+            controller.SaveData(false);
         }
 
         #endregion
