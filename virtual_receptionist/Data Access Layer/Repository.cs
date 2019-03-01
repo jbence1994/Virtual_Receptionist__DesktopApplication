@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
-using virtual_receptionist.DataAccessLayer.Connection;
 using System.Collections.Generic;
 using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.DataAccessLayer.DatabaseConnection;
 
 namespace virtual_receptionist.DataAccessLayer
 {

@@ -3,8 +3,9 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
+using virtual_receptionist.DataAccessLayer.DatabaseConnection.Exceptions;
 
-namespace virtual_receptionist.DataAccessLayer.Connection
+namespace virtual_receptionist.DataAccessLayer.DatabaseConnection
 {
     /// <summary>
     /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály
@@ -117,7 +118,7 @@ namespace virtual_receptionist.DataAccessLayer.Connection
         /// Adatbázis kapcsolatot megnyitó metódus
         /// </summary>
         /// <returns>Amennyiben sikeres az adatbázis elérés logikai igazzal, ellenkező esetben logikai hamissal tér vissza a függvény</returns>
-        public bool OpenConnection()
+        private bool OpenConnection()
         {
             try
             {

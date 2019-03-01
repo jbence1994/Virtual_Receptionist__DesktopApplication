@@ -60,8 +60,8 @@
     <Compile Include="Application Layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidZipCodeException.cs" />
-    <Compile Include="Data Access Layer\Database.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidConnectionTypeException.cs" />
+    <Compile Include="Data Access Layer\DatabaseConnection\Database.cs" />
+    <Compile Include="Data Access Layer\DatabaseConnection\Exceptions\InvalidConnectionTypeException.cs" />
     <Compile Include="Data Access Layer\Model\BillingItemCategory.cs" />
     <Compile Include="Data Access Layer\Model\Company.cs" />
     <Compile Include="Data Access Layer\Model\RoomCategory.cs" />
