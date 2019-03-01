@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.DataAccessLayer
 {
     /// <summary>
-    /// Adatmanipulációt objektumokon leíró interfész
+    /// Adatmanipulációt objektumokon leíró generikus interfész
     /// </summary>
     /// <typeparam name="T">Típus</typeparam>
     public interface IManipulable<T> where T : class

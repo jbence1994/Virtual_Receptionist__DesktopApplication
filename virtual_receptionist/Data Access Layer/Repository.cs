@@ -7,7 +7,7 @@ using virtual_receptionist.DataAccessLayer.DatabaseConnection;
 namespace virtual_receptionist.DataAccessLayer
 {
     /// <summary>
-    /// Az alkalmazás adatbázisából adatokat perzisztensen tároló adattár osztály
+    /// Az alkalmazáshoz szükséges adatbázis adatokat perzisztensen tároló adattár osztály
     /// </summary>
     public class Repository : IManipulable<Booking>, IManipulable<Guest>, IManipulable<Company>
     {
