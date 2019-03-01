@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using virtual_receptionist.DataAccessLayer;
 using virtual_receptionist.DataAccessLayer.Model;
 
@@ -8,6 +7,8 @@ namespace virtual_receptionist.BusinessLogicLayer
 {
     public class BookingBLL
     {
+        #region Foglalási napló üzleti logika metódusok
+
         /// <summary>
         /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek a paraméterben megadott dátum szerint érkeznek és egy új listába menti őket
         /// </summary>
@@ -51,5 +52,7 @@ namespace virtual_receptionist.BusinessLogicLayer
 
             return bookingsByDepartureDate;
         }
+
+        #endregion
     }
 }

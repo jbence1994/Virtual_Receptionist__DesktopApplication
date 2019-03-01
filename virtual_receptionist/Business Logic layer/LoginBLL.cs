@@ -7,7 +7,7 @@ namespace virtual_receptionist.BusinessLogicLayer
 {
     public class LoginBLL
     {
-        #region Metódusok
+        #region Autentikáció üzleti logika
 
         /// <summary>
         /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor
