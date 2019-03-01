@@ -56,12 +56,12 @@
     <Compile Include="Business Logic Layer\BookingBLL.cs" />
     <Compile Include="Business Logic Layer\GuestBLL.cs" />
     <Compile Include="Business Logic Layer\LoginBLL.cs" />
-    <Compile Include="Application Layer\Exceptions\FailedLoginException.cs" />
+    <Compile Include="Application Layer\FailedLoginException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidZipCodeException.cs" />
-    <Compile Include="Data Access Layer\Connection\Database.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidConnectionTypeException.cs" />
+    <Compile Include="Data Access Layer\Database.cs" />
+    <Compile Include="Application Layer\InvalidConnectionTypeException.cs" />
     <Compile Include="Data Access Layer\Model\BillingItemCategory.cs" />
     <Compile Include="Data Access Layer\Model\Company.cs" />
     <Compile Include="Data Access Layer\Model\RoomCategory.cs" />
