@@ -64,7 +64,6 @@
     <Compile Include="Data Access Layer\DatabaseConnection\Exceptions\InvalidConnectionTypeException.cs" />
     <Compile Include="Data Access Layer\Model\BillingItemCategory.cs" />
     <Compile Include="Data Access Layer\Model\Company.cs" />
-    <Compile Include="Data Access Layer\Model\RoomCategory.cs" />
     <Compile Include="Data Access Layer\IManipulable.cs" />
     <Compile Include="Application Layer\RegistrationCardController.cs" />
     <Compile Include="Application Layer\BookingController.cs" />
