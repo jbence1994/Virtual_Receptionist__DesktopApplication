@@ -1,6 +1,5 @@
 ﻿using System.Windows.Forms;
 using virtual_receptionist.PresentationLayer;
-using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {

@@ -12,7 +12,7 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Foglalási napló modul prezenter egy példánya
+        /// Foglalási napló modul vezérlő egy példánya
         /// </summary>
         private BookingController controller;
 

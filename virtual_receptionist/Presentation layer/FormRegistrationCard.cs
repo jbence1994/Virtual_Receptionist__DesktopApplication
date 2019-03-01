@@ -12,7 +12,7 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Vendég bejelentkező lap prezenter egy példánya
+        /// Vendég bejelentkező lap vezérlő egy példánya
         /// </summary>
         private RegistrationCardController controller;
 

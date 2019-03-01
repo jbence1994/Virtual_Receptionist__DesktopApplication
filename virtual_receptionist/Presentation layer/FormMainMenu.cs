@@ -12,7 +12,7 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Főmenü ablak prezenter egy példánya
+        /// Főmenü ablak vezérlő egy példánya
         /// </summary>
         private MainMenuController controller;
 

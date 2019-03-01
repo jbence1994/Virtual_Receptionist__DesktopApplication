@@ -13,7 +13,7 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Vendégadatbázis-kezelő prezenter egy példánya
+        /// Vendégadatbázis-kezelő vezérlő egy példánya
         /// </summary>
         private GuestDatabaseController controller;
 

@@ -13,7 +13,7 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Számlázó ablak és számlázási tételek modális ablak prezenter egy példánya
+        /// Számlázó ablak és számlázási tételek modális ablak vezérlő egy példánya
         /// </summary>
         private BillingController controller;
 
