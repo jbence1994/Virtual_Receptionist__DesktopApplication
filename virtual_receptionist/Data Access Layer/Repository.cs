@@ -378,8 +378,7 @@ namespace virtual_receptionist.DataAccessLayer
                 string category = row["BillingItemName"].ToString();
                 int capacity = int.Parse(row["Capacity"].ToString());
 
-                RoomCategory roomCategoryInstance = new RoomCategory(category);
-                Room roomInstance = new Room(name, number, roomCategoryInstance, capacity);
+                Room roomInstance = new Room(name, number, category, capacity);
                 rooms.Add(roomInstance);
             }
         }
