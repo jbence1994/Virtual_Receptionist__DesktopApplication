@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using virtual_receptionist.DataAccessLayer;
-using virtual_receptionist.DataAccessLayer.Model;
+using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {

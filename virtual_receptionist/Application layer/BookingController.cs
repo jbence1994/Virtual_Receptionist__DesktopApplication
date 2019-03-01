@@ -2,8 +2,6 @@
 using System.Data;
 using System.Collections.Generic;
 using virtual_receptionist.BusinessLogicLayer;
-using virtual_receptionist.DataAccessLayer.Model;
-using virtual_receptionist.DataAccessLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
