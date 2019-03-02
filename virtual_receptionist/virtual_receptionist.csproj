@@ -64,12 +64,12 @@
     <Compile Include="Data Access Layer\DatabaseConnection\Exceptions\InvalidConnectionTypeException.cs" />
     <Compile Include="Data Access Layer\Model\BillingItemCategory.cs" />
     <Compile Include="Data Access Layer\Model\Company.cs" />
-    <Compile Include="Data Access Layer\PersistentDataRepository\IManipulable.cs" />
+    <Compile Include="Data Access Layer\Data\IManipulable.cs" />
     <Compile Include="Application Layer\RegistrationCardController.cs" />
     <Compile Include="Application Layer\BookingController.cs" />
-    <Compile Include="Data Access Layer\PersistentDataRepository\BillingRepository.cs" />
-    <Compile Include="Data Access Layer\PersistentDataRepository\BookingRepository.cs" />
-    <Compile Include="Data Access Layer\PersistentDataRepository\GuestRepository.cs" />
+    <Compile Include="Data Access Layer\Data\BillingRepository.cs" />
+    <Compile Include="Data Access Layer\Data\BookingRepository.cs" />
+    <Compile Include="Data Access Layer\Data\GuestRepository.cs" />
     <Compile Include="Presentation Layer\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,7 +88,7 @@
     <Compile Include="Data Access Layer\Model\Accomodation.cs" />
     <Compile Include="Data Access Layer\Model\BillingItem.cs" />
     <Compile Include="Data Access Layer\Model\Country.cs" />
-    <Compile Include="Data Access Layer\PersistentDataRepository\Repository.cs" />
+    <Compile Include="Data Access Layer\Data\Repository.cs" />
     <Compile Include="Presentation Layer\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
