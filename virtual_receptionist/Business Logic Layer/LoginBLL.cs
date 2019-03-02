@@ -24,32 +24,34 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// <exception cref="InvalidConnectionTypeException"></exception>
         public bool Authentication(string accomodationID, string password, string connectionType)
         {
-            try
-            {
-                bool entry = false;
+            //try
+            //{
+            //    bool entry = false;
 
-                Database database = Database.DatabaseInstance;
-                database.SetConnection(connectionType);
+            //    Database database = Database.DatabaseInstance;
+            //    database.SetConnection(connectionType);
 
-                List<Accomodation> accomodations = Repository.Accomodations;
+            //    List<Accomodation> accomodations = Repository.Accomodations;
 
-                foreach (Accomodation account in accomodations)
-                {
-                    if (account.AccomodationID == accomodationID && account.Password == password)
-                    {
-                        entry = true;
-                        break;
-                    }
+            //    foreach (Accomodation account in accomodations)
+            //    {
+            //        if (account.AccomodationID == accomodationID && account.Password == password)
+            //        {
+            //            entry = true;
+            //            break;
+            //        }
 
-                    throw new FailedLoginException();
-                }
+            //        throw new FailedLoginException();
+            //    }
 
-                return entry;
-            }
-            catch (InvalidConnectionTypeException)
-            {
-                throw new InvalidConnectionTypeException();
-            }
+            //    return entry;
+            //}
+            //catch (InvalidConnectionTypeException)
+            //{
+            //    throw new InvalidConnectionTypeException();
+            //}
+
+            return false;
         }
 
         #endregion
