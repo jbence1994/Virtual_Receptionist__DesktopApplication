@@ -5,9 +5,33 @@ using virtual_receptionist.DataAccessLayer.Data;
 
 namespace virtual_receptionist.BusinessLogicLayer
 {
+    /// <summary>
+    /// Foglalás üzleti logika osztálya
+    /// </summary>
     public class BookingBLL
     {
-        #region Foglalási napló üzleti logika metódusok
+        #region Adattagok
+
+        /// <summary>
+        /// Foglalások adattár egy példánya
+        /// </summary>
+        private BookingRepository repository;
+
+        #endregion
+
+        #region Konstuktor
+
+        /// <summary>
+        /// Foglalás üzleti logika osztály konstruktora
+        /// </summary>
+        public BookingBLL()
+        {
+            repository = new BookingRepository();
+        }
+
+        #endregion
+
+        #region Metódusok
 
         /// <summary>
         /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek a paraméterben megadott dátum szerint érkeznek és egy új listába menti őket
@@ -16,7 +40,7 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsByArrivalDate(string arrivalDate)
         {
-            List<Booking> bookings = BookingRepository.Bookings;
+            List<Booking> bookings = repository.Bookings;
 
             List<Booking> bookingsByArrivalDate = new List<Booking>();
 
@@ -38,7 +62,7 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsByDepartureDate(string departureDate)
         {
-            List<Booking> bookings = BookingRepository.Bookings;
+            List<Booking> bookings = repository.Bookings;
 
             List<Booking> bookingsByDepartureDate = new List<Booking>();
 

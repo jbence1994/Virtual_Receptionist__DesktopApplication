@@ -10,13 +10,27 @@ namespace virtual_receptionist.BusinessLogicLayer
     /// </summary>
     public class GuestBLL
     {
-        private GuestRepository guestRepository;
+        #region Adattagok
 
+        /// <summary>
+        /// Vendég adattár egy példánya
+        /// </summary>
+        private GuestRepository repository;
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Vendégadatbázis-kezelő üzleti logika osztály konstruktora
+        /// </summary>
         public GuestBLL()
         {
-            guestRepository = new GuestRepository();
+            repository = new GuestRepository();
         }
-        
+
+        #endregion
+
         #region Metódusok
 
         /// <summary>
@@ -41,7 +55,7 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// <returns></returns>
         public DataTable GetCompanies()
         {
-            List<Company> companies = GuestRepository.Companies;
+            List<Company> companies = repository.Companies;
 
             DataTable companyDataTable = new DataTable();
             companyDataTable.Columns.Add("ID", typeof(int));
