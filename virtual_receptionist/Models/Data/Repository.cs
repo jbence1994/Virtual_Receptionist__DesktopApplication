@@ -89,7 +89,7 @@ namespace virtual_receptionist.Models.Data
                 database.SetConnection(connectionType);
 
                 List<Accomodation> accomodations = new List<Accomodation>();
-                
+
                 foreach (Accomodation account in accomodations)
                 {
                     if (account.AccomodationID == accomodationID && account.Password == password)
@@ -107,8 +107,6 @@ namespace virtual_receptionist.Models.Data
             {
                 throw new InvalidConnectionTypeException();
             }
-
-            return false;
         }
 
         #endregion
