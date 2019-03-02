@@ -10,9 +10,24 @@ namespace virtual_receptionist.ApplicationLayer
     {
         #region Adattagok
 
+        /// <summary>
+        /// Számlázó modul üzleti logika osztály egy példánya
+        /// </summary>
         private BillingBLL billingBLL;
+
+        /// <summary>
+        /// Vendégadatbázis modul üzleti logika osztály egy példánya
+        /// </summary>
         private GuestBLL guestBLL;
+
+        /// <summary>
+        /// Foglalás modul üzleti logika osztály egy példánya
+        /// </summary>
         private BookingBLL bookingBLL;
+
+        /// <summary>
+        /// Autentikáció üzleti logika osztály egy példánya
+        /// </summary>
         private LoginBLL loginBLL;
 
         #endregion

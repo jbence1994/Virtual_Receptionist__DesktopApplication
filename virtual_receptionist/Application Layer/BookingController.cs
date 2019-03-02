@@ -71,7 +71,7 @@ namespace virtual_receptionist.ApplicationLayer
         public DataTable GetBookingsByDepartureDate(DateTime departureDate)
         {
             string departure = departureDate.ToString("yyyy-MM-dd");
-            List<Booking> bookingsByDeparture = bookingLogic.GetBookingsByDepartureDate(departure);
+            List<Booking> bookingsByDeparture = bookingBLL.GetBookingsByDepartureDate(departure);
 
             DataTable bookingsDataTableByDeparture = new DataTable();
             bookingsDataTableByDeparture.Columns.Add("ID", typeof(int));
