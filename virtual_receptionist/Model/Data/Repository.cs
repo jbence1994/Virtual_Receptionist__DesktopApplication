@@ -37,26 +37,6 @@ namespace virtual_receptionist.Model.Data
 
         #endregion
 
-        #region Getter tulajdonságok
-
-        /// <summary>
-        /// Orszgáokat tartalmazó lista
-        /// </summary>
-        public List<Country> Countries
-        {
-            get
-            {
-                if (countries.Count == 0)
-                {
-                    UploadCountriesList();
-                }
-
-                return countries;
-            }
-        }
-
-        #endregion
-
         #region Adatelérési és adatfeltöltő metódusok
 
         /// <summary>
@@ -74,6 +54,20 @@ namespace virtual_receptionist.Model.Data
                 Country countryInstance = new Country(name);
                 countries.Add(countryInstance);
             }
+        }
+
+        /// <summary>
+        /// Metódus, amely feltölti az országokat tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<Country> Countries()
+        {
+            if (countries.Count == 0)
+            {
+                UploadCountriesList();
+            }
+
+            return countries;
         }
 
         #endregion

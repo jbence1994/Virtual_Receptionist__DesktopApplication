@@ -37,42 +37,6 @@ namespace virtual_receptionist.Model.Data
 
         #endregion
 
-        #region Getter tulajdonságok
-
-        /// <summary>
-        /// Vendégeket tartalmazó lista
-        /// </summary>
-        public List<Guest> Guests
-        {
-            get
-            {
-                if (guests.Count == 0)
-                {
-                    UploadGuestsList();
-                }
-
-                return guests;
-            }
-        }
-
-        /// <summary>
-        /// Cégeket tartalmazó lista
-        /// </summary>
-        public List<Company> Companies
-        {
-            get
-            {
-                if (companies.Count == 0)
-                {
-                    UploadCompaniesList();
-                }
-
-                return companies;
-            }
-        }
-
-        #endregion
-
         #region Adatfeltöltő és adatmanipulúciós metódusok
 
         /// <summary>
@@ -129,6 +93,34 @@ namespace virtual_receptionist.Model.Data
                     emailAddress);
                 companies.Add(companyInstance);
             }
+        }
+
+        /// <summary>
+        /// Metódus, amely feltölti a vendégeket tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<Guest> Guests()
+        {
+            if (guests.Count == 0)
+            {
+                UploadGuestsList();
+            }
+
+            return guests;
+        }
+
+        /// <summary>
+        /// Metódus, amely feltölti a cégeket tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<Company> Companies()
+        {
+            if (companies.Count == 0)
+            {
+                UploadCompaniesList();
+            }
+
+            return companies;
         }
 
         /// <summary>

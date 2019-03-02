@@ -30,26 +30,6 @@ namespace virtual_receptionist.Model.Data
 
         #endregion
 
-        #region Getter tulajdonságok
-
-        /// <summary>
-        /// Számlázási tételeket tartalmazó lista
-        /// </summary>
-        public List<BillingItem> BillingItems
-        {
-            get
-            {
-                if (billingItems.Count == 0)
-                {
-                    UploadBillingItemsList();
-                }
-
-                return billingItems;
-            }
-        }
-
-        #endregion
-
         #region Adatfeltöltő és adatelérési metódusok
 
         /// <summary>
@@ -73,6 +53,20 @@ namespace virtual_receptionist.Model.Data
                 BillingItem billingItemInstance = new BillingItem(name, billingItemCategoryInstance, price);
                 billingItems.Add(billingItemInstance);
             }
+        }
+
+        /// <summary>
+        /// Metódus, amely feltölti a számlázási tételeket tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<BillingItem> GetBillingItems()
+        {
+            if (billingItems.Count == 0)
+            {
+                UploadBillingItemsList();
+            }
+
+            return billingItems;
         }
 
         #endregion

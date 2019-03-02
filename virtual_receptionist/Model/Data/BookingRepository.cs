@@ -37,42 +37,6 @@ namespace virtual_receptionist.Model.Data
 
         #endregion
 
-        #region Getter tulajdonságok
-
-        /// <summary>
-        /// Szobákat tartalmazó lista
-        /// </summary>
-        public List<Room> Rooms
-        {
-            get
-            {
-                if (rooms.Count == 0)
-                {
-                    UploadRoomsList();
-                }
-
-                return rooms;
-            }
-        }
-
-        /// <summary>
-        /// Foglalásokat tartalmazó lista
-        /// </summary>
-        public List<Booking> Bookings
-        {
-            get
-            {
-                if (bookings.Count == 0)
-                {
-                    UploadBookingsList();
-                }
-
-                return bookings;
-            }
-        }
-
-        #endregion
-
         #region Adatfeltöltő és adatmanipulációs metódusok
 
         /// <summary>
@@ -131,6 +95,34 @@ namespace virtual_receptionist.Model.Data
                 Booking bookingInstance = new Booking(id, guest, company, room, numberOfGuests, arrival, departure);
                 bookings.Add(bookingInstance);
             }
+        }
+
+        /// <summary>
+        /// Metódus, amely feltölti a szobákat tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<Room> GetRooms()
+        {
+            if (rooms.Count == 0)
+            {
+                UploadRoomsList();
+            }
+
+            return rooms;
+        }
+
+        /// <summary>
+        /// Metódus, amely feltölti a foglalásokat tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<Booking> GetBookings()
+        {
+            if (bookings.Count == 0)
+            {
+                UploadBookingsList();
+            }
+
+            return bookings;
         }
 
         /// <summary>

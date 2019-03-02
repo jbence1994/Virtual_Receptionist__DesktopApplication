@@ -47,26 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application Layer\Controller.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidAddressException.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidBirthDateException.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidCityException.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidEmailAddressException.cs" />
-    <Compile Include="Application Layer\BillingBLL.cs" />
-    <Compile Include="Application Layer\BookingBLL.cs" />
-    <Compile Include="Application Layer\GuestBLL.cs" />
-    <Compile Include="Application Layer\LoginBLL.cs" />
-    <Compile Include="Application Layer\Exceptions\FailedLoginException.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidNameException.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidVATNumberException.cs" />
-    <Compile Include="Application Layer\Exceptions\InvalidZipCodeException.cs" />
+    <Compile Include="Presenter\Controller.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidAddressException.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidBirthDateException.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidCityException.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidEmailAddressException.cs" />
+    <Compile Include="Presenter\BillingBLL.cs" />
+    <Compile Include="Presenter\BookingBLL.cs" />
+    <Compile Include="Presenter\GuestBLL.cs" />
+    <Compile Include="Presenter\LoginBLL.cs" />
+    <Compile Include="Presenter\Exceptions\FailedLoginException.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidNameException.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidVATNumberException.cs" />
+    <Compile Include="Presenter\Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Model\DatabaseConnection\Database.cs" />
     <Compile Include="Model\DatabaseConnection\InvalidConnectionTypeException.cs" />
     <Compile Include="Model\ORM\BillingItemCategory.cs" />
     <Compile Include="Model\ORM\Company.cs" />
     <Compile Include="Model\Data\IManipulable.cs" />
-    <Compile Include="Application Layer\RegistrationCardController.cs" />
-    <Compile Include="Application Layer\BookingController.cs" />
+    <Compile Include="Presenter\RegistrationCardController.cs" />
+    <Compile Include="Presenter\BookingController.cs" />
     <Compile Include="Model\Data\BillingRepository.cs" />
     <Compile Include="Model\Data\BookingRepository.cs" />
     <Compile Include="Model\Data\GuestRepository.cs" />
@@ -76,9 +76,9 @@
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Application Layer\BillingController.cs" />
-    <Compile Include="Application Layer\LoginController.cs" />
-    <Compile Include="Application Layer\MainMenuController.cs" />
+    <Compile Include="Presenter\BillingController.cs" />
+    <Compile Include="Presenter\LoginController.cs" />
+    <Compile Include="Presenter\MainMenuController.cs" />
     <Compile Include="View\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +125,9 @@
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ORM\Guest.cs" />
-    <Compile Include="Application Layer\GuestDatabaseController.cs" />
-    <Compile Include="Application Layer\Validation\InputFunctions.cs" />
-    <Compile Include="Application Layer\Validation\InputAutomatizedFunctions.cs" />
+    <Compile Include="Presenter\GuestDatabaseController.cs" />
+    <Compile Include="Presenter\Validation\InputFunctions.cs" />
+    <Compile Include="Presenter\Validation\InputAutomatizedFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\ORM\Booking.cs" />
@@ -178,8 +178,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business Logic Layer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
