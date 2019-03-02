@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using virtual_receptionist.BusinessLogicLayer;
+﻿using System.Data;
 
 namespace virtual_receptionist.ApplicationLayer
 {
@@ -14,8 +12,25 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A cégek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetCompanies()
         {
-            DataTable companies = guestBLL.GetCompanies();
-            return companies;
+            DataTable companyDataTable = new DataTable();
+            companyDataTable.Columns.Add("ID", typeof(int));
+            companyDataTable.Columns.Add("Name", typeof(string));
+            companyDataTable.Columns.Add("VATNumber", typeof(string));
+            companyDataTable.Columns.Add("Country", typeof(string));
+            companyDataTable.Columns.Add("ZipCode", typeof(string));
+            companyDataTable.Columns.Add("City", typeof(string));
+            companyDataTable.Columns.Add("Address", typeof(string));
+            companyDataTable.Columns.Add("PhoneNumber", typeof(string));
+            companyDataTable.Columns.Add("EmailAddress", typeof(string));
+
+            foreach (var company in guestBLL.GetCompanies())
+            {
+                companyDataTable.Rows.Add(company.ID, company.Name, company.VatNumber,
+                    company.Country, company.ZipCode, company.City, company.Address,
+                    company.PhoneNumber, company.EmailAddress);
+            }
+
+            return companyDataTable;
         }
 
         /// <summary>
@@ -24,8 +39,6 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A vendégek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetGuests()
         {
-            List<Guest> guests = Repository.Guests;
-
             DataTable guestDataTable = new DataTable();
             guestDataTable.Columns.Add("ID", typeof(int));
             guestDataTable.Columns.Add("Name", typeof(string));
@@ -39,7 +52,7 @@ namespace virtual_receptionist.ApplicationLayer
             guestDataTable.Columns.Add("PhoneNumber", typeof(string));
             guestDataTable.Columns.Add("EmailAddress", typeof(string));
 
-            foreach (Guest guest in guests)
+            foreach (var guest in guestBLL.GetGuests())
             {
                 guestDataTable.Rows.Add(guest.ID, guest.Name, guest.DocumentNumber,
                     guest.Citizenship, guest.BirthDate, guest.Country, guest.ZipCode,

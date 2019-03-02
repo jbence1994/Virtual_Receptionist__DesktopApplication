@@ -53,29 +53,18 @@ namespace virtual_receptionist.BusinessLogicLayer
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetCompanies()
+        public List<Company> GetCompanies()
         {
-            List<Company> companies = repository.Companies;
+            return repository.Companies;
+        }
 
-            DataTable companyDataTable = new DataTable();
-            companyDataTable.Columns.Add("ID", typeof(int));
-            companyDataTable.Columns.Add("Name", typeof(string));
-            companyDataTable.Columns.Add("VATNumber", typeof(string));
-            companyDataTable.Columns.Add("Country", typeof(string));
-            companyDataTable.Columns.Add("ZipCode", typeof(string));
-            companyDataTable.Columns.Add("City", typeof(string));
-            companyDataTable.Columns.Add("Address", typeof(string));
-            companyDataTable.Columns.Add("PhoneNumber", typeof(string));
-            companyDataTable.Columns.Add("EmailAddress", typeof(string));
-
-            foreach (Company company in companies)
-            {
-                companyDataTable.Rows.Add(company.ID, company.Name, company.VatNumber,
-                    company.Country, company.ZipCode, company.City, company.Address,
-                    company.PhoneNumber, company.EmailAddress);
-            }
-
-            return companyDataTable;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<Guest> GetGuests()
+        {
+            return repository.Guests;
         }
 
         /// <summary>
