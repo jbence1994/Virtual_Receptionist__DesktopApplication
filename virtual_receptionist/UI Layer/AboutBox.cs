@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace virtual_receptionist.PresentationLayer
+namespace virtual_receptionist.UILayer
 {
     partial class AboutBox : Form
     {

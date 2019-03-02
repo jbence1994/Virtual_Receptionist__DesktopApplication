@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.PresentationLayer
+﻿namespace virtual_receptionist.UILayer
 {
     partial class AboutBox
     {

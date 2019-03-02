@@ -1,18 +1,10 @@
-﻿using virtual_receptionist.PresentationLayer;
+﻿using virtual_receptionist.UILayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
     public partial class Controller
     {
         #region Metódusok
-
-        /// <summary>
-        /// Metódus, amely kijelentkezik az alkalmazásból
-        /// </summary>
-        public void Logout()
-        {
-
-        }
 
         /// <summary>
         /// Metódus, amely beállítja az ablakot betöltődéskor

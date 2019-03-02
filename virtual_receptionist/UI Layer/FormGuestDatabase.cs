@@ -3,7 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.ApplicationLayer;
 
-namespace virtual_receptionist.PresentationLayer
+namespace virtual_receptionist.UILayer
 {
     /// <summary>
     /// Vendégadatbázis-kezelő ablak

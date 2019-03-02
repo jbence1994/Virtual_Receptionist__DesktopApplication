@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using virtual_receptionist.ApplicationLayer;
 
-namespace virtual_receptionist.PresentationLayer
+namespace virtual_receptionist.UILayer
 {
     /// <summary>
     /// Főmenü ablak
@@ -47,7 +47,7 @@ namespace virtual_receptionist.PresentationLayer
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
         {
-            controller.Logout();
+
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)

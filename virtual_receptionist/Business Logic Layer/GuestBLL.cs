@@ -87,7 +87,7 @@ namespace virtual_receptionist.BusinessLogicLayer
             List<string> countries = new List<string>();
             countries.Add("Válasszon!");
 
-            foreach (var country in repository.Countries)
+            foreach (Country country in repository.Countries)
             {
                 countries.Add(country.Name);
             }
