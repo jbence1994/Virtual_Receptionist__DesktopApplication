@@ -12,9 +12,9 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Foglalási napló modul vezérlő egy példánya
+        /// Alkalmazás vezérlő egy példánya
         /// </summary>
-        private BookingController controller;
+        private Controller controller;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace virtual_receptionist.PresentationLayer
         public FormBooking()
         {
             InitializeComponent();
-            controller = new BookingController();
+            controller = new Controller();
         }
 
         #endregion

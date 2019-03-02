@@ -15,12 +15,12 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Magánvendégeket tartalmazó lista
         /// </summary>
-        private static List<Guest> guests;
+        private List<Guest> guests;
 
         /// <summary>
         /// Cégeket tartalmazó lista
         /// </summary>
-        private static List<Company> companies;
+        private List<Company> companies;
 
         #endregion
 
@@ -42,7 +42,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Vendégeket tartalmazó lista
         /// </summary>
-        public static List<Guest> Guests
+        public List<Guest> Guests
         {
             get
             {
@@ -58,7 +58,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Cégeket tartalmazó lista
         /// </summary>
-        public static List<Company> Companies
+        public List<Company> Companies
         {
             get
             {
@@ -78,7 +78,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a vendégek adatait tartalmazó listát
         /// </summary>
-        private static void UploadGuestsList()
+        private void UploadGuestsList()
         {
             string sql =
                 "SELECT guest.ID, guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
@@ -107,7 +107,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a cégek adatait tartalmazó listát
         /// </summary>
-        private static void UploadCompaniesList()
+        private void UploadCompaniesList()
         {
             string sql =
                 "SELECT company.ID, company.CompanyName, company.VATNumber, country.CountryName, company.ZipCode, company.City, company.Address, company.PhoneNumber, company.EmailAddress FROM company, country WHERE company.Country = country.ID";

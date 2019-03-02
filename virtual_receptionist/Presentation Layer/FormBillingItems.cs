@@ -13,9 +13,9 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Számlázó ablak és számlázási tételek modális ablak vezérlő egy példánya
+        /// Alkalmazás vezérlő egy példánya
         /// </summary>
-        private BillingController controller;
+        private Controller controller;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace virtual_receptionist.PresentationLayer
         public FormBillingItems()
         {
             InitializeComponent();
-            controller = new BillingController();
+            controller = new Controller();
         }
 
         #endregion

@@ -9,34 +9,17 @@ namespace virtual_receptionist.ApplicationLayer
         #region Adattagok
 
         /// <summary>
-        /// 
-        /// </summary>
-        private BillingBLL billingLogic;
-
-        /// <summary>
         /// Számlázási tételek adattábla
         /// </summary>
         private DataTable billingDataTable;
 
         #endregion
 
-        #region Konstruktor
-
-        /// <summary>
-        /// Számlázó ablak és számlázási tételek modális ablak vezérlő konstruktora
-        /// </summary>
-        public BillingController()
-        {
-            billingLogic = new BillingBLL();
-
-            billingDataTable = new DataTable();
-            billingDataTable.Columns.Add("Tétel", typeof(string));
-            billingDataTable.Columns.Add("Ár", typeof(double));
-            billingDataTable.Columns.Add("Egység", typeof(string));
-            billingDataTable.Columns.Add("Mennyiség", typeof(int));
-        }
-
-        #endregion
+        //billingDataTable = new DataTable();
+        //billingDataTable.Columns.Add("Tétel", typeof(string));
+        //    billingDataTable.Columns.Add("Ár", typeof(double));
+        //    billingDataTable.Columns.Add("Egység", typeof(string));
+        //    billingDataTable.Columns.Add("Mennyiség", typeof(int));
 
         #region Metódusok
 
@@ -132,7 +115,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
         public double GetTotalPrice(params double[] prices)
         {
-            double total = billingLogic.CountTotalPrice(prices);
+            double total = billingBLL.CountTotalPrice(prices);
             return total;
         }
 

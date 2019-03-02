@@ -12,9 +12,9 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Vendég bejelentkező lap vezérlő egy példánya
+        /// Alkalmazás vezérlő egy példánya
         /// </summary>
-        private RegistrationCardController controller;
+        private Controller controller;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace virtual_receptionist.PresentationLayer
         public FormGuestRegistrationCard()
         {
             InitializeComponent();
-            controller = new RegistrationCardController();
+            controller = new Controller();
         }
 
         #endregion

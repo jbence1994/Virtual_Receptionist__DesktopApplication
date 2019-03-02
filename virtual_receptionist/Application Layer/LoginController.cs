@@ -26,7 +26,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <summary>Bejelentkező ablak vezérlő konstruktora
         /// </summary>
         /// <param name="formLogin">Bejelentkező ablak</param>
-        public LoginController(FormLogin formLogin)
+        public Controller(FormLogin formLogin)
         {
             this.formLogin = formLogin;
             loginLogic = new LoginBLL();

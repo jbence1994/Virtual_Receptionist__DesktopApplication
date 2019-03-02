@@ -12,9 +12,9 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Főmenü ablak vezérlő egy példánya
+        /// Alkalmazás vezérlő egy példánya
         /// </summary>
-        private MainMenuController controller;
+        private Controller controller;
 
         /// <summary>
         /// Bejelentkező ablak egy példánya
@@ -32,7 +32,7 @@ namespace virtual_receptionist.PresentationLayer
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            controller = new MainMenuController(this, formLogin);
+            controller = new Controller(this, formLogin);
         }
 
         #endregion

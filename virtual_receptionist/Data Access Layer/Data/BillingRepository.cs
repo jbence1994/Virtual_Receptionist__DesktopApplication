@@ -14,7 +14,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
-        private static List<BillingItem> billingItems;
+        private List<BillingItem> billingItems;
 
         #endregion
 
@@ -35,7 +35,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Számlázási tételeket tartalmazó lista
         /// </summary>
-        public static List<BillingItem> BillingItems
+        public List<BillingItem> BillingItems
         {
             get
             {
@@ -55,7 +55,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a számlázási tételek adatait tartalmazó listát
         /// </summary>
-        private static void UploadBillingItemsList()
+        private void UploadBillingItemsList()
         {
             string sql =
                 "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";

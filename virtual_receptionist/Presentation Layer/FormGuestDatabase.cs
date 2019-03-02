@@ -13,9 +13,9 @@ namespace virtual_receptionist.PresentationLayer
         #region Adattagok
 
         /// <summary>
-        /// Vendégadatbázis-kezelő vezérlő egy példánya
+        /// Alkalmazás vezérlő egy példánya
         /// </summary>
-        private GuestDatabaseController controller;
+        private Controller controller;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace virtual_receptionist.PresentationLayer
         public FormGuestDatabase()
         {
             InitializeComponent();
-            controller = new GuestDatabaseController();
+            controller = new Controller();
         }
 
         #endregion

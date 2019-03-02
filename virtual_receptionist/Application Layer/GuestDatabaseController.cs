@@ -4,29 +4,8 @@ using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
-    public partial class GuestDatabaseController
+    public partial class Controller
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Vendégadatbázis-kezelő modul üzleti logika osztály egy példánya
-        /// </summary>
-        private GuestBLL guestBLL;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Vendégadatbázis-kezelő modul üzleti logika osztály konstruktora
-        /// </summary>
-        public GuestDatabaseController()
-        {
-            guestBLL = new GuestBLL();
-        }
-
-        #endregion
-
         #region Metódusok
 
         /// <summary>

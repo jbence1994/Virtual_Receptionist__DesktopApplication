@@ -15,12 +15,12 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
-        private static List<Room> rooms;
+        private List<Room> rooms;
 
         /// <summary>
         /// Foglalásokat tartalmazó lista
         /// </summary>
-        private static List<Booking> bookings;
+        private List<Booking> bookings;
 
         #endregion
 
@@ -42,7 +42,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Szobákat tartalmazó lista
         /// </summary>
-        public static List<Room> Rooms
+        public List<Room> Rooms
         {
             get
             {
@@ -58,7 +58,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Foglalásokat tartalmazó lista
         /// </summary>
-        public static List<Booking> Bookings
+        public List<Booking> Bookings
         {
             get
             {
@@ -78,7 +78,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobák adatait tartalmazó listát
         /// </summary>
-        private static void UploadRoomsList()
+        private void UploadRoomsList()
         {
             string sql =
                 "SELECT room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
@@ -99,7 +99,7 @@ namespace virtual_receptionist.DataAccessLayer.Data
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a foglalások adatait tartalmazó listát
         /// </summary>
-        private static void UploadBookingsList()
+        private void UploadBookingsList()
         {
             string sql =
                 "SELECT booking.ID, guest.Name, company.CompanyName, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, company, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID AND booking.CompanyID = company.ID";

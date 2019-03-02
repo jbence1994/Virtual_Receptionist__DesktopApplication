@@ -7,19 +7,6 @@ namespace virtual_receptionist.ApplicationLayer
 {
     public partial class Controller
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        private BookingBLL bookingLogic;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public BookingController()
-        {
-            bookingLogic = new BookingBLL();
-        }
-
         #region Metódusok
 
         /// <summary>
