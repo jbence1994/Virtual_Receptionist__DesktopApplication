@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Cég egyed modell osztálya
+    /// Cég egyed
     /// </summary>
     public class Company
     {

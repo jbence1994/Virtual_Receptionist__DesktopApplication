@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Számlázási tételek kateógria modell osztálya
+    /// Számlázási tételek kateógria egyed
     /// </summary>
     public class BillingItemCategory
     {

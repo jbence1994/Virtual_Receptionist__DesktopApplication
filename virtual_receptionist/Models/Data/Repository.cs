@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using virtual_receptionist.Models.ORM;
 using virtual_receptionist.Models.DatabaseConnection;
+using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Models.Data
 {
@@ -81,32 +82,31 @@ namespace virtual_receptionist.Models.Data
         /// <exception cref="InvalidConnectionTypeException"></exception>
         public bool Authentication(string accomodationID, string password, string connectionType)
         {
-            //try
-            //{
-            //    bool entry = false;
+            try
+            {
+                bool entry = false;
 
-            //    Database database = Database.DatabaseInstance;
-            //    database.SetConnection(connectionType);
+                database.SetConnection(connectionType);
 
-            //    List<Accomodation> accomodations = Repository.Accomodations;
+                List<Accomodation> accomodations = new List<Accomodation>();
+                
+                foreach (Accomodation account in accomodations)
+                {
+                    if (account.AccomodationID == accomodationID && account.Password == password)
+                    {
+                        entry = true;
+                        break;
+                    }
 
-            //    foreach (Accomodation account in accomodations)
-            //    {
-            //        if (account.AccomodationID == accomodationID && account.Password == password)
-            //        {
-            //            entry = true;
-            //            break;
-            //        }
+                    throw new FailedLoginException();
+                }
 
-            //        throw new FailedLoginException();
-            //    }
-
-            //    return entry;
-            //}
-            //catch (InvalidConnectionTypeException)
-            //{
-            //    throw new InvalidConnectionTypeException();
-            //}
+                return entry;
+            }
+            catch (InvalidConnectionTypeException)
+            {
+                throw new InvalidConnectionTypeException();
+            }
 
             return false;
         }

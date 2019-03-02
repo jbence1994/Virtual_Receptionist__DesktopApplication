@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Vendég egyed modell osztálya
+    /// Vendég egyed
     /// </summary>
     public class Guest
     {

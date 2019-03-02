@@ -3,7 +3,7 @@
 namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Foglalások modell osztálya
+    /// Foglalások egyed
     /// </summary>
     public class Booking
     {

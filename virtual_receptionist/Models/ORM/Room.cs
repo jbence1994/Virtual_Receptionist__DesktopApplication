@@ -1,7 +1,7 @@
 ﻿namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Szoba egyed modell osztálya
+    /// Szoba egyed
     /// </summary>
     public class Room
     {
