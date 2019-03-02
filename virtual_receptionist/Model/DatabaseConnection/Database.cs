@@ -3,9 +3,8 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
-using virtual_receptionist.DataAccessLayer.DatabaseConnection.Exceptions;
 
-namespace virtual_receptionist.DataAccessLayer.DatabaseConnection
+namespace virtual_receptionist.Model.DatabaseConnection
 {
     /// <summary>
     /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály

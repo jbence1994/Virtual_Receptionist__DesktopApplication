@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace virtual_receptionist.DataAccessLayer.Model
+namespace virtual_receptionist.Model.ORM
 {
     /// <summary>
     /// Foglalások modell osztálya

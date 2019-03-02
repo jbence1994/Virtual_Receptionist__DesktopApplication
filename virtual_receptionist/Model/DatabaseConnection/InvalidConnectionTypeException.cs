@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace virtual_receptionist.DataAccessLayer.DatabaseConnection.Exceptions
+namespace virtual_receptionist.Model.DatabaseConnection
 {
     /// <summary>
     /// Adatbázis kapcsolódás típus kivétel

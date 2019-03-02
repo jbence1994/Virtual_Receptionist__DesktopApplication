@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.DataAccessLayer.Data
+﻿namespace virtual_receptionist.Model.Data
 {
     /// <summary>
     /// Adatmanipulációt objektumokon leíró generikus interfész

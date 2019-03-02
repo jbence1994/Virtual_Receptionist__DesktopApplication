@@ -1,8 +1,8 @@
-﻿using virtual_receptionist.DataAccessLayer.Model;
+﻿using virtual_receptionist.Model.ORM;
 using System.Collections.Generic;
 using System.Data;
 
-namespace virtual_receptionist.DataAccessLayer.Data
+namespace virtual_receptionist.Model.Data
 {
     /// <summary>
     /// Számlázás adattár

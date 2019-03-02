@@ -60,16 +60,16 @@
     <Compile Include="Application Layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidZipCodeException.cs" />
-    <Compile Include="Data Access Layer\DatabaseConnection\Database.cs" />
-    <Compile Include="Data Access Layer\DatabaseConnection\InvalidConnectionTypeException.cs" />
-    <Compile Include="Data Access Layer\Model\BillingItemCategory.cs" />
-    <Compile Include="Data Access Layer\Model\Company.cs" />
-    <Compile Include="Data Access Layer\Data\IManipulable.cs" />
+    <Compile Include="Model\DatabaseConnection\Database.cs" />
+    <Compile Include="Model\DatabaseConnection\InvalidConnectionTypeException.cs" />
+    <Compile Include="Model\ORM\BillingItemCategory.cs" />
+    <Compile Include="Model\ORM\Company.cs" />
+    <Compile Include="Model\Data\IManipulable.cs" />
     <Compile Include="Application Layer\RegistrationCardController.cs" />
     <Compile Include="Application Layer\BookingController.cs" />
-    <Compile Include="Data Access Layer\Data\BillingRepository.cs" />
-    <Compile Include="Data Access Layer\Data\BookingRepository.cs" />
-    <Compile Include="Data Access Layer\Data\GuestRepository.cs" />
+    <Compile Include="Model\Data\BillingRepository.cs" />
+    <Compile Include="Model\Data\BookingRepository.cs" />
+    <Compile Include="Model\Data\GuestRepository.cs" />
     <Compile Include="UI Layer\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,9 +85,9 @@
     <Compile Include="UI Layer\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Access Layer\Model\BillingItem.cs" />
-    <Compile Include="Data Access Layer\Model\Country.cs" />
-    <Compile Include="Data Access Layer\Data\Repository.cs" />
+    <Compile Include="Model\ORM\BillingItem.cs" />
+    <Compile Include="Model\ORM\Country.cs" />
+    <Compile Include="Model\Data\Repository.cs" />
     <Compile Include="UI Layer\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,14 +124,14 @@
     <Compile Include="UI Layer\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Access Layer\Model\Guest.cs" />
+    <Compile Include="Model\ORM\Guest.cs" />
     <Compile Include="Application Layer\GuestDatabaseController.cs" />
     <Compile Include="Application Layer\Validation\InputFunctions.cs" />
     <Compile Include="Application Layer\Validation\InputAutomatizedFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Data Access Layer\Model\Booking.cs" />
-    <Compile Include="Data Access Layer\Model\Room.cs" />
+    <Compile Include="Model\ORM\Booking.cs" />
+    <Compile Include="Model\ORM\Room.cs" />
     <EmbeddedResource Include="UI Layer\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

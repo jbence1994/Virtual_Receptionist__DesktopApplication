@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.DataAccessLayer.Model
+﻿namespace virtual_receptionist.Model.ORM
 {
     /// <summary>
     /// Vendég egyed modell osztálya

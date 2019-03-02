@@ -1,9 +1,9 @@
 ﻿using System.Data;
 using System.Collections.Generic;
-using virtual_receptionist.DataAccessLayer.Model;
-using virtual_receptionist.DataAccessLayer.DatabaseConnection;
+using virtual_receptionist.Model.ORM;
+using virtual_receptionist.Model.DatabaseConnection;
 
-namespace virtual_receptionist.DataAccessLayer.Data
+namespace virtual_receptionist.Model.Data
 {
     /// <summary>
     /// Az alkalmazáshoz szükséges adatbázis adatokat perzisztensen tároló adattár osztály
