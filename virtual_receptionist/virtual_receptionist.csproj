@@ -52,10 +52,10 @@
     <Compile Include="Application Layer\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidCityException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidEmailAddressException.cs" />
-    <Compile Include="Business Logic Layer\BillingBLL.cs" />
-    <Compile Include="Business Logic Layer\BookingBLL.cs" />
-    <Compile Include="Business Logic Layer\GuestBLL.cs" />
-    <Compile Include="Business Logic Layer\LoginBLL.cs" />
+    <Compile Include="Application Layer\BillingBLL.cs" />
+    <Compile Include="Application Layer\BookingBLL.cs" />
+    <Compile Include="Application Layer\GuestBLL.cs" />
+    <Compile Include="Application Layer\LoginBLL.cs" />
     <Compile Include="Application Layer\Exceptions\FailedLoginException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidNameException.cs" />
     <Compile Include="Application Layer\Exceptions\InvalidVATNumberException.cs" />
@@ -70,58 +70,58 @@
     <Compile Include="Model\Data\BillingRepository.cs" />
     <Compile Include="Model\Data\BookingRepository.cs" />
     <Compile Include="Model\Data\GuestRepository.cs" />
-    <Compile Include="UI Layer\FormLogin.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormLogin.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Application Layer\BillingController.cs" />
     <Compile Include="Application Layer\LoginController.cs" />
     <Compile Include="Application Layer\MainMenuController.cs" />
-    <Compile Include="UI Layer\AboutBox.cs">
+    <Compile Include="View\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\AboutBox.Designer.cs">
+    <Compile Include="View\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ORM\BillingItem.cs" />
     <Compile Include="Model\ORM\Country.cs" />
     <Compile Include="Model\Data\Repository.cs" />
-    <Compile Include="UI Layer\FormBilling.cs">
+    <Compile Include="View\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormBilling.Designer.cs">
+    <Compile Include="View\FormBilling.Designer.cs">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Layer\FormGuestDatabase.cs">
+    <Compile Include="View\FormGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormGuestDatabase.Designer.cs">
+    <Compile Include="View\FormGuestDatabase.Designer.cs">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Layer\FormMainMenu.cs">
+    <Compile Include="View\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormMainMenu.Designer.cs">
+    <Compile Include="View\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Layer\FormBillingItems.cs">
+    <Compile Include="View\FormBillingItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormBillingItems.Designer.cs">
+    <Compile Include="View\FormBillingItems.Designer.cs">
       <DependentUpon>FormBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Layer\FormRegistrationCard.cs">
+    <Compile Include="View\FormRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormRegistrationCard.Designer.cs">
+    <Compile Include="View\FormRegistrationCard.Designer.cs">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Layer\FormBooking.cs">
+    <Compile Include="View\FormBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI Layer\FormBooking.Designer.cs">
+    <Compile Include="View\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ORM\Guest.cs" />
@@ -132,28 +132,28 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\ORM\Booking.cs" />
     <Compile Include="Model\ORM\Room.cs" />
-    <EmbeddedResource Include="UI Layer\FormLogin.resx">
+    <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\AboutBox.resx">
+    <EmbeddedResource Include="View\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\FormBilling.resx">
+    <EmbeddedResource Include="View\FormBilling.resx">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\FormGuestDatabase.resx">
+    <EmbeddedResource Include="View\FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\FormMainmenu.resx">
+    <EmbeddedResource Include="View\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\FormBillingItems.resx">
+    <EmbeddedResource Include="View\FormBillingItems.resx">
       <DependentUpon>FormBillingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\FormRegistrationCard.resx">
+    <EmbeddedResource Include="View\FormRegistrationCard.resx">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Layer\FormBooking.resx">
+    <EmbeddedResource Include="View\FormBooking.resx">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -178,6 +178,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Business Logic Layer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

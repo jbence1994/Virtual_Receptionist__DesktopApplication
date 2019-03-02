@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using virtual_receptionist.ApplicationLayer;
 
-namespace virtual_receptionist.UILayer
+namespace virtual_receptionist.View
 {
     /// <summary>
     /// Alkalmazás bejelentkező ablaka

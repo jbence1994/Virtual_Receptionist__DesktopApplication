@@ -43,7 +43,7 @@
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
             this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewItems
@@ -53,7 +53,7 @@
             this.dataGridViewItems.AllowUserToResizeColumns = false;
             this.dataGridViewItems.AllowUserToResizeRows = false;
             this.dataGridViewItems.Anchor =
-                ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top |
+                ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top |
                                                          System.Windows.Forms.AnchorStyles.Bottom)
                                                         | System.Windows.Forms.AnchorStyles.Left)
                                                        | System.Windows.Forms.AnchorStyles.Right)));
@@ -110,11 +110,11 @@
             // buttonPrintInvoice
             // 
             this.buttonPrintInvoice.Anchor =
-                ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top |
+                ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top |
                                                        System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonPrintInvoice.Image = ((System.Drawing.Image) (resources.GetObject("buttonPrintInvoice.Image")));
+            this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
             this.buttonPrintInvoice.Location = new System.Drawing.Point(615, 222);
             this.buttonPrintInvoice.Name = "buttonPrintInvoice";
             this.buttonPrintInvoice.Size = new System.Drawing.Size(157, 64);
@@ -128,10 +128,10 @@
             // buttonAddItem
             // 
             this.buttonAddItem.Anchor =
-                ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top |
+                ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top |
                                                        System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAddItem.Image = ((System.Drawing.Image) (resources.GetObject("buttonAddItem.Image")));
+            this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
             this.buttonAddItem.Location = new System.Drawing.Point(615, 12);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 64);
@@ -145,10 +145,10 @@
             // buttonUpdateItem
             // 
             this.buttonUpdateItem.Anchor =
-                ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top |
+                ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top |
                                                        System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonUpdateItem.Image = ((System.Drawing.Image) (resources.GetObject("buttonUpdateItem.Image")));
+            this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
             this.buttonUpdateItem.Location = new System.Drawing.Point(615, 82);
             this.buttonUpdateItem.Name = "buttonUpdateItem";
             this.buttonUpdateItem.Size = new System.Drawing.Size(157, 64);
@@ -162,10 +162,10 @@
             // buttonDeleteItem
             // 
             this.buttonDeleteItem.Anchor =
-                ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top |
+                ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top |
                                                        System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeleteItem.Image = ((System.Drawing.Image) (resources.GetObject("buttonDeleteItem.Image")));
+            this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
             this.buttonDeleteItem.Location = new System.Drawing.Point(615, 152);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(157, 64);
@@ -183,7 +183,7 @@
             // groupBoxBillingData
             // 
             this.groupBoxBillingData.Anchor =
-                ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Bottom |
+                ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom |
                                                         System.Windows.Forms.AnchorStyles.Left)
                                                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxBillingData.Location = new System.Drawing.Point(12, 292);
@@ -205,13 +205,13 @@
             this.Controls.Add(this.buttonPrintInvoice);
             this.Controls.Add(this.dataGridViewItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Számla kiállítása | Virtual Receptionist";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormBilling_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.ResumeLayout(false);
 
         }

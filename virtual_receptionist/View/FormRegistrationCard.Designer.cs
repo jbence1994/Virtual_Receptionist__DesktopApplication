@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.UILayer
+﻿namespace virtual_receptionist.View
 {
     partial class FormGuestRegistrationCard
     {
