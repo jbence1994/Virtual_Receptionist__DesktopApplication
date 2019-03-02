@@ -79,20 +79,12 @@ namespace virtual_receptionist.BusinessLogicLayer
         }
 
         /// <summary>
-        /// Országokat lista adatszerkezetben visszaadó metódus
+        /// Adattárból országok neveit listában tárolva visszaadó metódusat
         /// </summary>
         /// <returns>Országlistával tér vissza a függvény</returns>
-        public List<string> GetCountries()
+        public List<Country> GetCountries()
         {
-            List<string> countries = new List<string>();
-            countries.Add("Válasszon!");
-
-            foreach (Country country in repository.Countries)
-            {
-                countries.Add(country.Name);
-            }
-
-            return countries;
+            return repository.Countries;
         }
 
         #endregion
