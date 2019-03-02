@@ -47,113 +47,109 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presenter\Controller.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidAddressException.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidBirthDateException.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidCityException.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidEmailAddressException.cs" />
-    <Compile Include="Presenter\BillingBLL.cs" />
-    <Compile Include="Presenter\BookingBLL.cs" />
-    <Compile Include="Presenter\GuestBLL.cs" />
-    <Compile Include="Presenter\LoginBLL.cs" />
-    <Compile Include="Presenter\Exceptions\FailedLoginException.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidNameException.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidVATNumberException.cs" />
-    <Compile Include="Presenter\Exceptions\InvalidZipCodeException.cs" />
-    <Compile Include="Model\DatabaseConnection\Database.cs" />
-    <Compile Include="Model\DatabaseConnection\InvalidConnectionTypeException.cs" />
-    <Compile Include="Model\ORM\BillingItemCategory.cs" />
-    <Compile Include="Model\ORM\Company.cs" />
-    <Compile Include="Model\Data\IManipulable.cs" />
-    <Compile Include="Presenter\RegistrationCardController.cs" />
-    <Compile Include="Presenter\BookingController.cs" />
-    <Compile Include="Model\Data\BillingRepository.cs" />
-    <Compile Include="Model\Data\BookingRepository.cs" />
-    <Compile Include="Model\Data\GuestRepository.cs" />
-    <Compile Include="View\FormLogin.cs">
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidAddressException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidEmailAddressException.cs" />
+    <Compile Include="Controllers\Exceptions\FailedLoginException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidNameException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidVATNumberException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidZipCodeException.cs" />
+    <Compile Include="Models\DatabaseConnection\Database.cs" />
+    <Compile Include="Models\DatabaseConnection\InvalidConnectionTypeException.cs" />
+    <Compile Include="Models\ORM\BillingItemCategory.cs" />
+    <Compile Include="Models\ORM\Company.cs" />
+    <Compile Include="Models\Data\IManipulable.cs" />
+    <Compile Include="Controllers\RegistrationCardController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
+    <Compile Include="Models\Data\BillingRepository.cs" />
+    <Compile Include="Models\Data\BookingRepository.cs" />
+    <Compile Include="Models\Data\GuestRepository.cs" />
+    <Compile Include="Views\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormLogin.Designer.cs">
+    <Compile Include="Views\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\BillingController.cs" />
-    <Compile Include="Presenter\LoginController.cs" />
-    <Compile Include="Presenter\MainMenuController.cs" />
-    <Compile Include="View\AboutBox.cs">
+    <Compile Include="Controllers\BillingController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainMenuController.cs" />
+    <Compile Include="Views\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AboutBox.Designer.cs">
+    <Compile Include="Views\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ORM\BillingItem.cs" />
-    <Compile Include="Model\ORM\Country.cs" />
-    <Compile Include="Model\Data\Repository.cs" />
-    <Compile Include="View\FormBilling.cs">
+    <Compile Include="Models\ORM\BillingItem.cs" />
+    <Compile Include="Models\ORM\Country.cs" />
+    <Compile Include="Models\Data\Repository.cs" />
+    <Compile Include="Views\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBilling.Designer.cs">
+    <Compile Include="Views\FormBilling.Designer.cs">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormGuestDatabase.cs">
+    <Compile Include="Views\FormGuestDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormGuestDatabase.Designer.cs">
+    <Compile Include="Views\FormGuestDatabase.Designer.cs">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormMainMenu.cs">
+    <Compile Include="Views\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormMainMenu.Designer.cs">
+    <Compile Include="Views\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormBillingItems.cs">
+    <Compile Include="Views\FormBillingItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBillingItems.Designer.cs">
+    <Compile Include="Views\FormBillingItems.Designer.cs">
       <DependentUpon>FormBillingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormRegistrationCard.cs">
+    <Compile Include="Views\FormRegistrationCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormRegistrationCard.Designer.cs">
+    <Compile Include="Views\FormRegistrationCard.Designer.cs">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormBooking.cs">
+    <Compile Include="Views\FormBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBooking.Designer.cs">
+    <Compile Include="Views\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ORM\Guest.cs" />
-    <Compile Include="Presenter\GuestDatabaseController.cs" />
-    <Compile Include="Presenter\Validation\InputFunctions.cs" />
-    <Compile Include="Presenter\Validation\InputAutomatizedFunctions.cs" />
+    <Compile Include="Models\ORM\Guest.cs" />
+    <Compile Include="Controllers\GuestDatabaseController.cs" />
+    <Compile Include="Controllers\Validation\InputFunctions.cs" />
+    <Compile Include="Controllers\Validation\InputAutomatizedFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\ORM\Booking.cs" />
-    <Compile Include="Model\ORM\Room.cs" />
-    <EmbeddedResource Include="View\FormLogin.resx">
+    <Compile Include="Models\ORM\Booking.cs" />
+    <Compile Include="Models\ORM\Room.cs" />
+    <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AboutBox.resx">
+    <EmbeddedResource Include="Views\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBilling.resx">
+    <EmbeddedResource Include="Views\FormBilling.resx">
       <DependentUpon>FormBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormGuestDatabase.resx">
+    <EmbeddedResource Include="Views\FormGuestDatabase.resx">
       <DependentUpon>FormGuestDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormMainmenu.resx">
+    <EmbeddedResource Include="Views\FormMainmenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBillingItems.resx">
+    <EmbeddedResource Include="Views\FormBillingItems.resx">
       <DependentUpon>FormBillingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormRegistrationCard.resx">
+    <EmbeddedResource Include="Views\FormRegistrationCard.resx">
       <DependentUpon>FormRegistrationCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBooking.resx">
+    <EmbeddedResource Include="Views\FormBooking.resx">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
