@@ -85,7 +85,6 @@
     <Compile Include="Presentation Layer\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Access Layer\Model\Accomodation.cs" />
     <Compile Include="Data Access Layer\Model\BillingItem.cs" />
     <Compile Include="Data Access Layer\Model\Country.cs" />
     <Compile Include="Data Access Layer\Data\Repository.cs" />

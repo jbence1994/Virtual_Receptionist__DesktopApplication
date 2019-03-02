@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using virtual_receptionist.PresentationLayer;
+﻿using virtual_receptionist.PresentationLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
@@ -12,14 +11,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// </summary>
         public void Logout()
         {
-            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
 
-            if (logout == DialogResult.Yes)
-            {
-                formMainMenu.Close();
-                formLogin.Show();
-            }
         }
 
         /// <summary>
@@ -27,8 +19,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// </summary>
         public string SetMainMenuHeader()
         {
-            Accomodation accomodation = repository.Accomodation;
-            return $"{accomodation.Name} ({accomodation.VatNumber})";
+            return null;
         }
 
         /// <summary>
@@ -53,11 +44,9 @@ namespace virtual_receptionist.ApplicationLayer
         /// </summary>
         public void SetAccomodationInfo()
         {
-            Accomodation accomodation = repository.Accomodation;
-
-            MessageBox.Show(
-                $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",
-                "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show(
+            //    $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",
+            //    "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>

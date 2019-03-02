@@ -32,7 +32,7 @@ namespace virtual_receptionist.PresentationLayer
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            controller = new Controller(this, formLogin);
+            controller = new Controller();
         }
 
         #endregion
@@ -272,7 +272,14 @@ namespace virtual_receptionist.PresentationLayer
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            controller.Logout();
+            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (logout == DialogResult.Yes)
+            {
+                Close();
+                formLogin.Show();
+            }
         }
 
         private void buttonLogout_MouseHover(object sender, EventArgs e)
