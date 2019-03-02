@@ -44,7 +44,7 @@ namespace virtual_receptionist.ApplicationLayer
         public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
         {
             string arrival = arrivalDate.ToString("yyyy-MM-dd");
-            List<Booking> bookingsByArrival = bookingLogic.GetBookingsByArrivalDate(arrival);
+            List<Booking> bookingsByArrival = bookingBLL.GetBookingsByArrivalDate(arrival);
 
             DataTable bookingsDataTableByArrival = new DataTable();
             bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
