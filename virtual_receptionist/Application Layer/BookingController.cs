@@ -10,33 +10,6 @@ namespace virtual_receptionist.ApplicationLayer
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely lekéri a foglalások adatait az adattárból és visszaadja őket egy adattáblában
-        /// </summary>
-        /// <returns>A foglalások adataival feltöltött adattáblát adja vissza a függvény</returns>
-        public DataTable GetBookings()
-        {
-            List<Booking> bookings = Repository.Bookings;
-
-            DataTable bookingsDataTable = new DataTable();
-            bookingsDataTable.Columns.Add("ID", typeof(int));
-            bookingsDataTable.Columns.Add("GuestName", typeof(string));
-            bookingsDataTable.Columns.Add("CompanyName", typeof(string));
-            bookingsDataTable.Columns.Add("RoomNumber", typeof(int));
-            bookingsDataTable.Columns.Add("NumberOfGuests", typeof(int));
-            bookingsDataTable.Columns.Add("ArrivalDate", typeof(DateTime));
-            bookingsDataTable.Columns.Add("DepartureDate", typeof(DateTime));
-
-            foreach (Booking booking in bookings)
-            {
-                bookingsDataTable.Rows.Add(booking.ID, booking.Guest.Name, booking.Company.Name, booking.Room.Number,
-                    booking.NumberOfGuests,
-                    booking.ArrivalDate, booking.DepartureDate);
-            }
-
-            return bookingsDataTable;
-        }
-
-        /// <summary>
         /// Metódus, amely lekéri a foglalások adatait érkezés dátuma alapján az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <param name="arrivalDate">Érkezés dátuma</param>

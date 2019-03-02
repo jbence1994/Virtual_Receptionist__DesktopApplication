@@ -35,7 +35,6 @@ namespace virtual_receptionist.UILayer
 
         private void FormBooking_Load(object sender, EventArgs e)
         {
-            dataGridViewBookings.DataSource = controller.GetBookings();
             dataGridViewRooms.DataSource = controller.GetRooms();
         }
 
