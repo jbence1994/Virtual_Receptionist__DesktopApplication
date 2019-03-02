@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using virtual_receptionist.DataAccessLayer.Model;
-using virtual_receptionist.DataAccessLayer;
+using virtual_receptionist.DataAccessLayer.Data;
 using virtual_receptionist.DataAccessLayer.DatabaseConnection.Exceptions;
 using virtual_receptionist.DataAccessLayer.DatabaseConnection;
 using virtual_receptionist.ApplicationLayer.Exceptions;

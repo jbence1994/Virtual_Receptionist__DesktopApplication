@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.DataAccessLayer.PersistentDataRepository
+﻿namespace virtual_receptionist.DataAccessLayer.Data
 {
     /// <summary>
     /// Adatmanipulációt objektumokon leíró generikus interfész

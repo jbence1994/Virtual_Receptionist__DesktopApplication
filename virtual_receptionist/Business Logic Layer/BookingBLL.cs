@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using virtual_receptionist.DataAccessLayer.Model;
-using virtual_receptionist.DataAccessLayer.PersistentDataRepository;
+using virtual_receptionist.DataAccessLayer.Data;
 
 namespace virtual_receptionist.BusinessLogicLayer
 {

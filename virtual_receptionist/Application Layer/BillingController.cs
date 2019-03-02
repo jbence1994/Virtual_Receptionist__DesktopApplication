@@ -21,16 +21,6 @@ namespace virtual_receptionist.ApplicationLayer
         /// </summary>
         private DataTable billingDataTable;
 
-        /// <summary>
-        /// Számlázási tétel modell osztály egy példánya
-        /// </summary>
-        private static BillingItem billingItem;
-
-        /// <summary>
-        /// Számlázási tétel katgória osztály egy példánya
-        /// </summary>
-        private static BillingItemCategory billingItemCategory;
-
         #endregion
 
         #region Konstruktor
@@ -64,9 +54,6 @@ namespace virtual_receptionist.ApplicationLayer
             string unit = itemParameters[1].ToString();
             double price = double.Parse(itemParameters[2].ToString());
             int quantity = int.Parse(itemParameters[3].ToString());
-
-            billingItemCategory = new BillingItemCategory("", vat, unit);
-            billingItem = new BillingItem(item, billingItemCategory, price, quantity);
         }
 
         /// <summary>
@@ -90,8 +77,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable AddNewRow()
         {
-            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItemCategory.Unit,
-                billingItem.Quantity);
+            billingDataTable.Rows.Add();
             return billingDataTable;
         }
 
@@ -114,8 +100,7 @@ namespace virtual_receptionist.ApplicationLayer
         public DataTable UpdateRow(int index)
         {
             billingDataTable.Rows.RemoveAt(index);
-            billingDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItemCategory.Unit,
-                billingItem.Quantity);
+            billingDataTable.Rows.Add();
             return billingDataTable;
         }
 

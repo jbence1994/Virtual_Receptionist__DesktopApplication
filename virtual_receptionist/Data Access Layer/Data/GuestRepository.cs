@@ -1,8 +1,9 @@
 ﻿using virtual_receptionist.DataAccessLayer.Model;
 using System.Collections.Generic;
 using System.Data;
+using System;
 
-namespace virtual_receptionist.DataAccessLayer.PersistentDataRepository
+namespace virtual_receptionist.DataAccessLayer.Data
 {
     /// <summary>
     /// Vendég adattár

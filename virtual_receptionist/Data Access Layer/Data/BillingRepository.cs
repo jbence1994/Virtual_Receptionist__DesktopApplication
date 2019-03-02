@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 
-namespace virtual_receptionist.DataAccessLayer.PersistentDataRepository
+namespace virtual_receptionist.DataAccessLayer.Data
 {
     /// <summary>
     /// Számlázás adattár

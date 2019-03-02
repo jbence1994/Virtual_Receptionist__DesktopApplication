@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Data;
 
-namespace virtual_receptionist.DataAccessLayer.PersistentDataRepository
+namespace virtual_receptionist.DataAccessLayer.Data
 {
     /// <summary>
     /// Foglalások adattár

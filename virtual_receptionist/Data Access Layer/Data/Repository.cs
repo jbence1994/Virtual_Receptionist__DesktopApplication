@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using virtual_receptionist.DataAccessLayer.Model;
 using virtual_receptionist.DataAccessLayer.DatabaseConnection;
 
-namespace virtual_receptionist.DataAccessLayer.PersistentDataRepository
+namespace virtual_receptionist.DataAccessLayer.Data
 {
     /// <summary>
     /// Az alkalmazáshoz szükséges adatbázis adatokat perzisztensen tároló adattár osztály
