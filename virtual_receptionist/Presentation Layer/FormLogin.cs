@@ -26,7 +26,7 @@ namespace virtual_receptionist.PresentationLayer
         public FormLogin()
         {
             InitializeComponent();
-            controller = new Controller(this);
+            controller = new Controller();
         }
 
         #endregion
@@ -46,7 +46,14 @@ namespace virtual_receptionist.PresentationLayer
 
             try
             {
-                controller.EnterApplication(accomodationID, password, connectionType);
+                bool login = controller.EnterApplication(accomodationID, password, connectionType);
+
+                if (login)
+                {
+                    Hide();
+                    FormMainMenu formMainMenu = new FormMainMenu(this);
+                    formMainMenu.Show();
+                }
             }
             catch (Exception exception)
             {

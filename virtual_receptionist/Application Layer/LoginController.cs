@@ -7,33 +7,6 @@ namespace virtual_receptionist.ApplicationLayer
 {
     public partial class Controller
     {
-        #region Adattagok
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private LoginBLL loginLogic;
-
-        /// <summary>
-        /// Bejelentkező ablak egy példánya
-        /// </summary>
-        private FormLogin formLogin;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>Bejelentkező ablak vezérlő konstruktora
-        /// </summary>
-        /// <param name="formLogin">Bejelentkező ablak</param>
-        public Controller(FormLogin formLogin)
-        {
-            this.formLogin = formLogin;
-            loginLogic = new LoginBLL();
-        }
-
-        #endregion
-
         #region Metódusok
 
         /// <summary>
@@ -44,16 +17,16 @@ namespace virtual_receptionist.ApplicationLayer
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="FailedLoginException"></exception>
         /// <exception cref="Exception"></exception>
-        public void EnterApplication(string accomodationID, string password, string connectionType)
+        public bool EnterApplication(string accomodationID, string password, string connectionType)
         {
             try
             {
-                if (loginLogic.Authentication(accomodationID, password, connectionType))
+                if (loginBLL.Authentication(accomodationID, password, connectionType))
                 {
-                    formLogin.Hide();
-                    FormMainMenu formMainMenu = new FormMainMenu(formLogin);
-                    formMainMenu.Show();
+                    return true;
                 }
+
+                return false;
             }
             catch (FailedLoginException)
             {
