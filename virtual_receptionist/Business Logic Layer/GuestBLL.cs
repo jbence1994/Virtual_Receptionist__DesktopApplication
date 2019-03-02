@@ -78,6 +78,23 @@ namespace virtual_receptionist.BusinessLogicLayer
             return companyDataTable;
         }
 
+        /// <summary>
+        /// Országokat lista adatszerkezetben visszaadó metódus
+        /// </summary>
+        /// <returns>Országlistával tér vissza a függvény</returns>
+        public List<string> GetCountries()
+        {
+            List<string> countries = new List<string>();
+            countries.Add("Válasszon!");
+
+            foreach (var country in repository.Countries)
+            {
+                countries.Add(country.Name);
+            }
+
+            return countries;
+        }
+
         #endregion
     }
 }

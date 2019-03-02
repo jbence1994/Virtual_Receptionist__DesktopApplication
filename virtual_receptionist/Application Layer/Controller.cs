@@ -49,21 +49,9 @@ namespace virtual_receptionist.ApplicationLayer
 
         #region Metódusok
 
-        /// <summary>
-        /// Országokat lista adatszerkezetben visszaadó metódus
-        /// </summary>
-        /// <returns>Országlistával tér vissza a függvény</returns>
         public List<string> GetCountries()
         {
-            List<string> countries = new List<string>();
-            countries.Add("Válasszon!");
-
-            foreach (Country country in Repository.Countries)
-            {
-                countries.Add(country.Name);
-            }
-
-            return countries;
+            return guestBLL.GetCountries();
         }
 
         #endregion
