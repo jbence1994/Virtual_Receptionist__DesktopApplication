@@ -59,6 +59,16 @@ namespace virtual_receptionist.Models.ORM
         /// <summary>
         /// 
         /// </summary>
+        private string accomodationID;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string password;
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="id"></param>
         /// <param name="accomodationName"></param>
         /// <param name="companyName"></param>
@@ -162,6 +172,26 @@ namespace virtual_receptionist.Models.ORM
         {
             get { return emailAddress; }
             set { emailAddress = value; }
+        }
+
+        ///
+        public string AccomodationID
+        {
+            get { return accomodationID; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Password
+        {
+            get { return password; }
+        }
+
+        public override string ToString()
+        {
+            return
+                $"{id} {accomodationName} {companyName} {contact} {vatNumber} {headquarters} {site} {phoneNumber} {emailAddress}";
         }
     }
 }
