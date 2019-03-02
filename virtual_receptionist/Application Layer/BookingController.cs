@@ -5,10 +5,7 @@ using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
-    /// <summary>
-    /// Foglalási napló modul vezérlője
-    /// </summary>
-    public class BookingController : Controller
+    public partial class Controller
     {
         /// <summary>
         /// 

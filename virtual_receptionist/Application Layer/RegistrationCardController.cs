@@ -3,21 +3,8 @@ using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
-    /// <summary>
-    /// Vendég bejelentkező lap vezérlője
-    /// </summary>
-    public class RegistrationCardController : Controller
+    public partial class Controller
     {
-        private GuestBLL guestLogic;
-
-        /// <summary>
-        /// Vendég bejelentkező lap vezérlő konstruktora
-        /// </summary>
-        public RegistrationCardController()
-        {
-            guestLogic = new GuestBLL();
-        }
-
         #region Metódusok
 
         /// <summary>
@@ -34,7 +21,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns></returns>
         public DataTable GetCompanyData() //Szétbontás elemi adattípusra az objektum mezőit
         {
-            guestLogic.GetSpecifiedCompanyData();
+            guestBLL.GetSpecifiedCompanyData();
             return new DataTable();
         }
 
@@ -44,7 +31,7 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns></returns>
         public DataTable GetGuestData() //Szétbontás elemi adattípusra az objektum mezőit
         {
-            guestLogic.GetSpecifiedGuestData();
+            guestBLL.GetSpecifiedGuestData();
             return new DataTable();
         }
 

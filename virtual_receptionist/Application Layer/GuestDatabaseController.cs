@@ -4,11 +4,29 @@ using virtual_receptionist.BusinessLogicLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
-    /// <summary>
-    /// Vendégadatbázis-kezelő vezérlője
-    /// </summary>
-    public class GuestDatabaseController : Controller
+    public partial class GuestDatabaseController
     {
+        #region Adattagok
+
+        /// <summary>
+        /// Vendégadatbázis-kezelő modul üzleti logika osztály egy példánya
+        /// </summary>
+        private GuestBLL guestBLL;
+
+        #endregion
+
+        #region Konstruktor
+
+        /// <summary>
+        /// Vendégadatbázis-kezelő modul üzleti logika osztály konstruktora
+        /// </summary>
+        public GuestDatabaseController()
+        {
+            guestBLL = new GuestBLL();
+        }
+
+        #endregion
+
         #region Metódusok
 
         /// <summary>
@@ -17,27 +35,8 @@ namespace virtual_receptionist.ApplicationLayer
         /// <returns>A cégek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetCompanies()
         {
-            List<Company> companies = Repository.Companies;
-
-            DataTable companyDataTable = new DataTable();
-            companyDataTable.Columns.Add("ID", typeof(int));
-            companyDataTable.Columns.Add("Name", typeof(string));
-            companyDataTable.Columns.Add("VATNumber", typeof(string));
-            companyDataTable.Columns.Add("Country", typeof(string));
-            companyDataTable.Columns.Add("ZipCode", typeof(string));
-            companyDataTable.Columns.Add("City", typeof(string));
-            companyDataTable.Columns.Add("Address", typeof(string));
-            companyDataTable.Columns.Add("PhoneNumber", typeof(string));
-            companyDataTable.Columns.Add("EmailAddress", typeof(string));
-
-            foreach (Company company in companies)
-            {
-                companyDataTable.Rows.Add(company.ID, company.Name, company.VatNumber,
-                    company.Country, company.ZipCode, company.City, company.Address,
-                    company.PhoneNumber, company.EmailAddress);
-            }
-
-            return companyDataTable;
+            DataTable companies = guestBLL.GetCompanies();
+            return companies;
         }
 
         /// <summary>

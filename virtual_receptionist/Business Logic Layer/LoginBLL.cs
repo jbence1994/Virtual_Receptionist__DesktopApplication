@@ -7,9 +7,12 @@ using virtual_receptionist.ApplicationLayer.Exceptions;
 
 namespace virtual_receptionist.BusinessLogicLayer
 {
+    /// <summary>
+    /// Autentikáció üzleti logika osztály
+    /// </summary>
     public class LoginBLL
     {
-        #region Autentikáció üzleti logika
+        #region Metódusok
 
         /// <summary>
         /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor

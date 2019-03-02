@@ -5,10 +5,7 @@ using virtual_receptionist.ApplicationLayer.Exceptions;
 
 namespace virtual_receptionist.ApplicationLayer
 {
-    /// <summary>
-    /// Bejelentkező ablak vezérlője
-    /// </summary>
-    public class LoginController : Controller
+    public partial class Controller
     {
         #region Adattagok
 

@@ -3,40 +3,8 @@ using virtual_receptionist.PresentationLayer;
 
 namespace virtual_receptionist.ApplicationLayer
 {
-    /// <summary>
-    /// Főmenü ablak vezérlője
-    /// </summary>
-    public class MainMenuController : Controller
+    public partial class Controller
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Alkalmazás bejelentkező ablakának egy példánya
-        /// </summary>
-        private FormLogin formLogin;
-
-        /// <summary>
-        /// Főmenü ablak
-        /// </summary>
-        private FormMainMenu formMainMenu;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Főmenü ablak vezérlő konstruktora
-        /// </summary>
-        /// <param name="formMainMenu">Főmenü ablak</param>
-        /// <param name="formLogin">Bejelentkező ablak</param>
-        public MainMenuController(FormMainMenu formMainMenu, FormLogin formLogin)
-        {
-            this.formMainMenu = formMainMenu;
-            this.formLogin = formLogin;
-        }
-
-        #endregion
-
         #region Metódusok
 
         /// <summary>

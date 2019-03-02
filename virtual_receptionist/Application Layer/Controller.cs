@@ -6,14 +6,14 @@ namespace virtual_receptionist.ApplicationLayer
     /// <summary>
     /// Az alkalmazás vezérlője, amely a nézetek megfelelő előállításáért és az inputok ellenőrzéséért
     /// </summary>
-    public class Controller
+    public partial class Controller
     {
         #region Adattagok
 
-        /// <summary>
-        /// Adattár osztály egy példánya
-        /// </summary>
-        protected Repository repository;
+        private BillingBLL billingBLL;
+        private GuestBLL guestBLL;
+        private BookingBLL bookingBLL;
+        private LoginBLL loginBLL;
 
         #endregion
 
@@ -24,7 +24,10 @@ namespace virtual_receptionist.ApplicationLayer
         /// </summary>
         public Controller()
         {
-            repository = new Repository();
+            billingBLL = new BillingBLL();
+            guestBLL = new GuestBLL();
+            bookingBLL = new BookingBLL();
+            loginBLL = new LoginBLL();
         }
 
         #endregion
