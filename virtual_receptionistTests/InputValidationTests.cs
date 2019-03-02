@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using virtual_receptionist.ApplicationLayer.Exceptions;
+using virtual_receptionist.Controllers.Exceptions;
 
-namespace virtual_receptionist.ApplicationLayer.Validation.ValidationTests
+namespace virtual_receptionist.Controllers.Validation.ValidationTests
 {
     [TestClass()]
     public class InputValidationTests
