@@ -89,8 +89,7 @@ namespace virtual_receptionist.Models.Data
             {
                 database.SetConnection(connectionType);
 
-                GetAccomodation();
-                Accomodation accomodation = Accomodation.GetAccomodation();
+                Accomodation accomodation = GetAccomodation();
 
                 if (accomodation.AccomodationID == accomodationID && accomodation.Password == password)
                 {

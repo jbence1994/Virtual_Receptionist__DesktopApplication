@@ -47,7 +47,7 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
         {
-
+            Logout();
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
@@ -82,7 +82,18 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemAccomodationInfo_Click(object sender, EventArgs e)
         {
+            string name = controller.GetAccomodationInfo()[0];
+            string company = controller.GetAccomodationInfo()[1];
+            string contact = controller.GetAccomodationInfo()[2];
+            string vat = controller.GetAccomodationInfo()[3];
+            string headquarters = controller.GetAccomodationInfo()[4];
+            string site = controller.GetAccomodationInfo()[5];
+            string phone = controller.GetAccomodationInfo()[6];
+            string email = controller.GetAccomodationInfo()[7];
 
+            MessageBox.Show(
+                $"Szálláshelyneve: {name}\n\nCég neve: {company}\n\nKontakt: {contact}\n\nAdószám:{vat}\n\nSzékhely: {headquarters}\n\nTelephely: {site}\n\nTelefonszám: {phone}\n\nE-mail cím: {email}",
+                "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
@@ -272,14 +283,7 @@ namespace virtual_receptionist.Views
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (logout == DialogResult.Yes)
-            {
-                Close();
-                formLogin.Show();
-            }
+            Logout();
         }
 
         private void buttonLogout_MouseHover(object sender, EventArgs e)
@@ -290,6 +294,18 @@ namespace virtual_receptionist.Views
         private void buttonLogout_MouseLeave(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = "";
+        }
+
+        private void Logout()
+        {
+            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (logout == DialogResult.Yes)
+            {
+                Close();
+                formLogin.Show();
+            }
         }
 
         #endregion

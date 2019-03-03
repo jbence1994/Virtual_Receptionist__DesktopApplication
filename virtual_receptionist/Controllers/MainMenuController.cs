@@ -56,13 +56,24 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// Metódus, amely beállítja az alkalmazást használó szálláshely adatait egy MessageBoxba
+        /// Metódus, amely visszaadja a szálláshely adatait az adattárból egy tömbben
         /// </summary>
-        public void GetAccomodationInfo()
+        /// <returns>A feltöltött sztring tömböt adja vissza a függvény</returns>
+        public string[] GetAccomodationInfo()
         {
-            //MessageBox.Show(
-            //    $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",
-            //    "Szálláshely információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Accomodation accomodation = repository.GetAccomodation();
+
+            string[] accomodationData = new string[8];
+            accomodationData[0] = accomodation.AccomodationName;
+            accomodationData[1] = accomodation.CompanyName;
+            accomodationData[2] = accomodation.Contact;
+            accomodationData[3] = accomodation.VATNumber;
+            accomodationData[4] = accomodation.Headquarters;
+            accomodationData[5] = accomodation.Site;
+            accomodationData[6] = accomodation.PhoneNumber;
+            accomodationData[7] = accomodation.EmailAddress;
+
+            return accomodationData;
         }
 
         /// <summary>
