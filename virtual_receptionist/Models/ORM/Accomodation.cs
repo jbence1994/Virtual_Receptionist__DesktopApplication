@@ -14,6 +14,11 @@ namespace virtual_receptionist.Models.ORM
         #region Adattagok
 
         /// <summary>
+        /// Ezen osztály egyke példánya
+        /// </summary>
+        private static Accomodation accomodationInstance;
+
+        /// <summary>
         /// Szálláshely azonosítója
         /// </summary>
         private int id;
@@ -70,43 +75,12 @@ namespace virtual_receptionist.Models.ORM
 
         #endregion
 
-        #region Konstruktorok
+        #region Konstruktor
 
         /// <summary>
         /// Accomodation osztály konstruktora
         /// </summary>
-        /// <param name="id">Szálláshely azonosítója</param>
-        /// <param name="accomodationName">Szálláshely neve</param>
-        /// <param name="companyName">Szálláshely cégneve</param>
-        /// <param name="contact">Szálláshely képviselője</param>
-        /// <param name="vatNumber">Szálláshely adószáma</param>
-        /// <param name="headquarters">Szálláshely székhelye</param>
-        /// <param name="site">Szálláshely telephelye</param>
-        /// <param name="phoneNumber">Szálláshely telefonszáma</param>
-        /// <param name="emailAddress">Szálláshely e-mail címe</param>
-        /// <param name="accomodationID">Szálláshely egyedi szállásazonosítója</param>
-        /// <param name="password">Szálláshely regisztrációjához tartozó jelszó</param>
-        public Accomodation(int id, string accomodationName, string companyName, string contact, string vatNumber,
-            string headquarters, string site,
-            string phoneNumber, string emailAddress, string accomodationID, string password)
-        {
-            this.id = id;
-            this.accomodationName = accomodationName;
-            this.companyName = companyName;
-            this.contact = contact;
-            this.vatNumber = vatNumber;
-            this.headquarters = headquarters;
-            this.site = site;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
-            this.accomodationID = accomodationID;
-            this.password = password;
-        }
-
-        /// <summary>
-        /// Accomodation osztály üres konstruktora
-        /// </summary>
-        public Accomodation()
+        private Accomodation()
         {
         }
 
@@ -201,6 +175,7 @@ namespace virtual_receptionist.Models.ORM
         public string AccomodationID
         {
             get { return accomodationID; }
+            set { accomodationID = value; }
         }
 
         /// <summary>
@@ -209,11 +184,26 @@ namespace virtual_receptionist.Models.ORM
         public string Password
         {
             get { return password; }
+            set { password = value; }
         }
 
         #endregion
 
         #region Metódusok
+
+        /// <summary>
+        /// Az egyke Accomodation osztályt példányosító (getter) metódus
+        /// </summary>
+        /// <returns>Az egyke példánnyal tér vissza a metódus</returns>
+        public static Accomodation GetAccomodation()
+        {
+            if (accomodationInstance == null)
+            {
+                return accomodationInstance = new Accomodation();
+            }
+
+            return accomodationInstance;
+        }
 
         /// <summary>
         /// Accomodation osztályból készült objektum string típusúvá alakítása
@@ -222,7 +212,7 @@ namespace virtual_receptionist.Models.ORM
         public override string ToString()
         {
             return
-                $"{id} {accomodationName} {companyName} {contact} {vatNumber} {headquarters} {site} {phoneNumber} {emailAddress}";
+                $"{accomodationName} {companyName} {contact} {vatNumber} {headquarters} {site} {phoneNumber} {emailAddress}";
         }
 
         #endregion

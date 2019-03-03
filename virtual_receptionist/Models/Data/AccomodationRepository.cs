@@ -1,6 +1,5 @@
 ﻿using System;
 using virtual_receptionist.Models.ORM;
-using System.Collections.Generic;
 using System.Data;
 using virtual_receptionist.Models.DatabaseConnection;
 using virtual_receptionist.Controllers.Exceptions;
@@ -14,31 +13,18 @@ namespace virtual_receptionist.Models.Data
     {
         #region Adattagok
 
-        /// <summary>
-        /// Szálláshely adatait tartalmazó lista
-        /// </summary>
-        private List<Accomodation> accomodations;
-
         #endregion
 
         #region Konstruktor
-
-        /// <summary>
-        /// Szálláshely adattár konstruktora
-        /// </summary>
-        public AccomodationRepository()
-        {
-            accomodations = new List<Accomodation>();
-        }
 
         #endregion
 
         #region Adatelérési és adatfeltöltő metódusok
 
         /// <summary>
-        /// 
+        /// Metódus, amely beállítja a szálláshely adatait, amyel az adatábzisban van regisztrálva
         /// </summary>
-        private void UploadAccomodationList()
+        private void SetAccomodation()
         {
             string sql =
                 "SELECT accomodation.ID, accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation, accomodation_profile WHERE accomodation.ID = accomodation_profile.Accomodation";
@@ -46,7 +32,6 @@ namespace virtual_receptionist.Models.Data
 
             foreach (DataRow row in dt.Rows)
             {
-                int id = Convert.ToInt32(row["ID"].ToString());
                 string name = row["AccomodationName"].ToString();
                 string company = row["CompanyName"].ToString();
                 string contact = row["Contact"].ToString();
@@ -59,29 +44,35 @@ namespace virtual_receptionist.Models.Data
                 string accomodationID = row["AccomodationID"].ToString();
                 string password = row["Password"].ToString();
 
-                Accomodation accomodationInstance = new Accomodation(id, name, company, contact, vatNumber,
-                    headquarters, site, phoneNumber, email, accomodationID, password);
-                accomodations.Add(accomodationInstance);
+                Accomodation accomodationInstance = Accomodation.GetAccomodation();
+                accomodationInstance.AccomodationName = name;
+                accomodationInstance.CompanyName = company;
+                accomodationInstance.Contact = contact;
+                accomodationInstance.VATNumber = vatNumber;
+                accomodationInstance.Headquarters = headquarters;
+                accomodationInstance.Site = site;
+                accomodationInstance.PhoneNumber = phoneNumber;
+                accomodationInstance.EmailAddress = email;
+                accomodationInstance.AccomodationID = accomodationID;
+                accomodationInstance.Password = password;
             }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public List<Accomodation> GetAccomodations()
-        {
-            if (accomodations.Count == 0)
-            {
-                UploadAccomodationList();
-            }
-
-            return accomodations;
         }
 
         #endregion
 
         #region Üzleti logika
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public Accomodation GetAccomodation()
+        {
+            Accomodation accomodation = Accomodation.GetAccomodation();
+            SetAccomodation();
+
+            return accomodation;
+        }
 
         /// <summary>
         /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor
@@ -96,22 +87,17 @@ namespace virtual_receptionist.Models.Data
         {
             try
             {
-                bool entry = false;
-
                 database.SetConnection(connectionType);
 
-                foreach (Accomodation account in GetAccomodations())
-                {
-                    if (account.AccomodationID == accomodationID && account.Password == password)
-                    {
-                        entry = true;
-                        break;
-                    }
+                GetAccomodation();
+                Accomodation accomodation = Accomodation.GetAccomodation();
 
-                    throw new FailedLoginException();
+                if (accomodation.AccomodationID == accomodationID && accomodation.Password == password)
+                {
+                    return true;
                 }
 
-                return entry;
+                throw new FailedLoginException();
             }
             catch (InvalidConnectionTypeException)
             {

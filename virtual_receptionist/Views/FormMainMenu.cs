@@ -82,7 +82,7 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemAccomodationInfo_Click(object sender, EventArgs e)
         {
-            controller.SetAccomodationInfo();
+
         }
 
         private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)

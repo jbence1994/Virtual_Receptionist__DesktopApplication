@@ -53,7 +53,7 @@ namespace virtual_receptionist.Models.DatabaseConnection
         #region Konstruktor
 
         /// <summary>
-        /// Privát konstruktor
+        /// Database osztály konstruktora
         /// </summary>
         private Database()
         {
@@ -64,7 +64,7 @@ namespace virtual_receptionist.Models.DatabaseConnection
         #region Metódusok
 
         /// <summary>
-        /// Az egyke adatbázis kapcsolódásért felelős osztály példányosító (getter) metódus
+        /// Az egyke adatbázis kapcsolódásért felelős osztályt példányosító (getter) metódus
         /// </summary>
         /// <returns>Az egyke példánnyal tér vissza a metódus</returns>
         public static Database GetDatabaseInstance()
