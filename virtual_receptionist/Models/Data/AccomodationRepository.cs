@@ -11,14 +11,6 @@ namespace virtual_receptionist.Models.Data
     /// </summary>
     public class AccomodationRepository : Repository
     {
-        #region Adattagok
-
-        #endregion
-
-        #region Konstruktor
-
-        #endregion
-
         #region Adatelérési és adatfeltöltő metódusok
 
         /// <summary>
@@ -44,17 +36,17 @@ namespace virtual_receptionist.Models.Data
                 string accomodationID = row["AccomodationID"].ToString();
                 string password = row["Password"].ToString();
 
-                Accomodation accomodationInstance = Accomodation.GetAccomodation();
-                accomodationInstance.AccomodationName = name;
-                accomodationInstance.CompanyName = company;
-                accomodationInstance.Contact = contact;
-                accomodationInstance.VATNumber = vatNumber;
-                accomodationInstance.Headquarters = headquarters;
-                accomodationInstance.Site = site;
-                accomodationInstance.PhoneNumber = phoneNumber;
-                accomodationInstance.EmailAddress = email;
-                accomodationInstance.AccomodationID = accomodationID;
-                accomodationInstance.Password = password;
+                Accomodation accomodation = Accomodation.GetAccomodation();
+                accomodation.AccomodationName = name;
+                accomodation.CompanyName = company;
+                accomodation.Contact = contact;
+                accomodation.VATNumber = vatNumber;
+                accomodation.Headquarters = headquarters;
+                accomodation.Site = site;
+                accomodation.PhoneNumber = phoneNumber;
+                accomodation.EmailAddress = email;
+                accomodation.AccomodationID = accomodationID;
+                accomodation.Password = password;
             }
         }
 
@@ -70,7 +62,6 @@ namespace virtual_receptionist.Models.Data
         {
             Accomodation accomodation = Accomodation.GetAccomodation();
             SetAccomodation();
-
             return accomodation;
         }
 
