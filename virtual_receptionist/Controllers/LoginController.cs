@@ -1,6 +1,7 @@
 ﻿using System;
 using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models.Data;
+using virtual_receptionist.Models.DatabaseConnection;
 
 namespace virtual_receptionist.Controllers
 {
@@ -12,9 +13,9 @@ namespace virtual_receptionist.Controllers
         #region Adattagok
 
         /// <summary>
-        /// Adattár osztály egy példánya
+        /// Szálláshely adattár osztály egy példánya
         /// </summary>
-        private Repository repository;
+        private AccomodationRepository repository;
 
         #endregion
 
@@ -25,7 +26,7 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public LoginController()
         {
-            repository = new Repository();
+            repository = new AccomodationRepository();
         }
 
         #endregion
@@ -39,7 +40,7 @@ namespace virtual_receptionist.Controllers
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="FailedLoginException"></exception>
-        /// <exception cref="Exception"></exception>
+        /// <exception cref="InvalidConnectionTypeException"></exception>
         public bool EnterApplication(string accomodationID, string password, string connectionType)
         {
             try
@@ -55,9 +56,9 @@ namespace virtual_receptionist.Controllers
             {
                 throw new FailedLoginException();
             }
-            catch (Exception)
+            catch (InvalidConnectionTypeException)
             {
-                throw new Exception();
+                throw new InvalidConnectionTypeException();
             }
         }
 

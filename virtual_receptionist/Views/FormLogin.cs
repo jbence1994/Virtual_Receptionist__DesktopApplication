@@ -63,7 +63,7 @@ namespace virtual_receptionist.Views
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Close();
         }
 
         #endregion

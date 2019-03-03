@@ -65,6 +65,7 @@
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
     <Compile Include="Models\DatabaseConnection\Database.cs" />
     <Compile Include="Models\DatabaseConnection\InvalidConnectionTypeException.cs" />
+    <Compile Include="Models\Data\AccomodationRepository.cs" />
     <Compile Include="Models\ORM\Accomodation.cs" />
     <Compile Include="Models\ORM\BillingItemCategory.cs" />
     <Compile Include="Models\ORM\Company.cs" />

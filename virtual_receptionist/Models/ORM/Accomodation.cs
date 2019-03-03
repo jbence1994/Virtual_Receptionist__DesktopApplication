@@ -80,7 +80,7 @@ namespace virtual_receptionist.Models.ORM
         /// <param name="emailAddress"></param>
         public Accomodation(int id, string accomodationName, string companyName, string contact, string vatNumber,
             string headquarters, string site,
-            string phoneNumber, string emailAddress)
+            string phoneNumber, string emailAddress, string accomodationID, string password)
         {
             this.id = id;
             this.accomodationName = accomodationName;
@@ -91,6 +91,8 @@ namespace virtual_receptionist.Models.ORM
             this.site = site;
             this.phoneNumber = phoneNumber;
             this.emailAddress = emailAddress;
+            this.accomodationID = accomodationID;
+            this.password = password;
         }
 
         /// <summary>
@@ -174,7 +176,9 @@ namespace virtual_receptionist.Models.ORM
             set { emailAddress = value; }
         }
 
-        ///
+        /// <summary>
+        /// 
+        /// </summary>
         public string AccomodationID
         {
             get { return accomodationID; }
