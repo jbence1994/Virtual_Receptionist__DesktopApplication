@@ -56,6 +56,13 @@
     <Compile Include="Controllers\Exceptions\InvalidNameException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidVATNumberException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidZipCodeException.cs" />
+    <Compile Include="Controllers\Validation\AddressValidation.cs" />
+    <Compile Include="Controllers\Validation\BirthDateValidation.cs" />
+    <Compile Include="Controllers\Validation\CityValidation.cs" />
+    <Compile Include="Controllers\Validation\EmailValidation.cs" />
+    <Compile Include="Controllers\Validation\NameValidation.cs" />
+    <Compile Include="Controllers\Validation\VATNumberValidation.cs" />
+    <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
     <Compile Include="Models\DatabaseConnection\Database.cs" />
     <Compile Include="Models\DatabaseConnection\InvalidConnectionTypeException.cs" />
     <Compile Include="Models\ORM\Accomodation.cs" />
@@ -123,8 +130,7 @@
     </Compile>
     <Compile Include="Models\ORM\Guest.cs" />
     <Compile Include="Controllers\GuestDatabaseController.cs" />
-    <Compile Include="Controllers\Validation\InputFunctions.cs" />
-    <Compile Include="Controllers\Validation\InputAutomatizedFunctions.cs" />
+    <Compile Include="Controllers\Validation\InputValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ORM\Booking.cs" />

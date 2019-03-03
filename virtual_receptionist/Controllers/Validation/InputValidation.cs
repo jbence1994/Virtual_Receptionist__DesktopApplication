@@ -2,15 +2,18 @@ using System.Text.RegularExpressions;
 
 namespace virtual_receptionist.Controllers.Validation
 {
-    public partial class Input
+    /// <summary>
+    /// Inputot ellenőrző függvénygyűjtemény osztálya
+    /// </summary>
+    public static class InputValidation
     {
-        #region Validáló részfüggvények
+        #region Metódusok
 
         /// <summary>
         /// Metódus, amely ellenőrzi az input üres karakterlánc-e
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool IsEmpty()
+        public static bool IsEmpty(string input)
         {
             return string.IsNullOrWhiteSpace(input);
         }
@@ -19,7 +22,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e vezérlőbillentyű karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool ContainsControlCharacters()
+        public static bool ContainsControlCharacters(string input)
         {
             bool criticalIndex = false;
 
@@ -38,7 +41,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e számot
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool ContainsDigitCharacters()
+        public static bool ContainsDigitCharacters(string input)
         {
             bool criticalIndex = false;
 
@@ -57,7 +60,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e betűt
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool ContainsLetterCharacters()
+        public static bool ContainsLetterCharacters(string input)
         {
             bool criticalIndex = false;
 
@@ -76,7 +79,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e nagybetűs karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool ContainsUppercaseCharacters()
+        public static bool ContainsUppercaseCharacters(string input)
         {
             bool criticalIndex = false;
 
@@ -95,7 +98,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e kisebtűs karaktert
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool ContainsLowercaseCharacter()
+        public static bool ContainsLowercaseCharacter(string input)
         {
             bool criticalIndex = false;
 
@@ -114,7 +117,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi, hogy az input első karaktere nagybetű-e
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool FirstLetterIsUppercaseCharacter()
+        public static bool FirstLetterIsUppercaseCharacter(string input)
         {
             if (char.IsUpper(input[0]))
             {
@@ -128,7 +131,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi, hogy az input első karaktere kisbetű-e
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool FirstLetterIsLowercaseCharacter()
+        public static bool FirstLetterIsLowercaseCharacter(string input)
         {
             if (char.IsLower(input[0]))
             {
@@ -142,7 +145,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool IsValidEmailAddress()
+        public static bool IsValidEmailAddress(string input)
         {
             bool valid = false;
 
@@ -160,7 +163,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt születési dátum
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        private bool IsValidBirthDate()
+        public static bool IsValidBirthDate(string input)
         {
             bool valid = false;
 
