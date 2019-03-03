@@ -1,4 +1,6 @@
-﻿using virtual_receptionist.Views;
+﻿using virtual_receptionist.Models.Data;
+using virtual_receptionist.Views;
+using virtual_receptionist.Models.ORM;
 
 namespace virtual_receptionist.Controllers
 {
@@ -7,6 +9,25 @@ namespace virtual_receptionist.Controllers
     /// </summary>
     public class MainMenuController : Controller
     {
+        #region Adattagok
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private AccomodationRepository repository;
+
+        #endregion
+
+        #region Konsturktor
+
+        public MainMenuController()
+        {
+            repository = new AccomodationRepository();
+        }
+
+        #endregion
+
+
         #region Metódusok
 
         /// <summary>
@@ -31,13 +52,13 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public void OpenCHM()
         {
-            // Help.ShowHelp(formMainMenu, "CHMPath");
+            // Help.ShowHelp(formMainMenu, "CHM_path");
         }
 
         /// <summary>
         /// Metódus, amely beállítja az alkalmazást használó szálláshely adatait egy MessageBoxba
         /// </summary>
-        public void SetAccomodationInfo()
+        public void GetAccomodationInfo()
         {
             //MessageBox.Show(
             //    $"Szálláshely neve: {accomodation.Name}\n\nCég neve: {accomodation.Company}\n\nKépviselő: {accomodation.Contact}\n\nAdószám: {accomodation.VatNumber}\n\nSzékhely: {accomodation.Headquarters}\n\nTelephely: {accomodation.Site}\n\nTelefonszám: {accomodation.PhoneNumber}\n\nE-mail cím: {accomodation.EmailAddress}",

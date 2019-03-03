@@ -32,7 +32,7 @@
         #region Konstruktorok
 
         /// <summary>
-        /// Billingitem osztály konstrukora
+        /// BillingItem osztály konstrukora
         /// </summary>
         /// <param name="name">Számlázási tétel neve</param>
         /// <param name="category">Számlázási tétel kategóriája</param>
