@@ -61,27 +61,21 @@ namespace virtual_receptionist.Models.DatabaseConnection
 
         #endregion
 
-        #region Getter tulajdonságok
+        #region Metódusok
 
         /// <summary>
-        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály példánya
+        /// Az egyke adatbázis kapcsolódásért felelős osztály példányosító (getter) metódus
         /// </summary>
-        public static Database DatabaseInstance
+        /// <returns>Az egyke példánnyal tér vissza a metódus</returns>
+        public static Database GetDatabaseInstance()
         {
-            get
+            if (databaseInstance == null)
             {
-                if (databaseInstance == null)
-                {
-                    return databaseInstance = new Database();
-                }
-
-                return databaseInstance;
+                return databaseInstance = new Database();
             }
+
+            return databaseInstance;
         }
-
-        #endregion
-
-        #region Metódusok
 
         /// <summary>
         /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát

@@ -32,7 +32,7 @@ namespace virtual_receptionist.Models.Data
         /// </summary>
         public Repository()
         {
-            database = Database.DatabaseInstance;
+            database = Database.GetDatabaseInstance();
             countries = new List<Country>();
         }
 
