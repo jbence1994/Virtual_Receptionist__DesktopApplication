@@ -35,7 +35,8 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public string SetMainMenuHeader()
         {
-            return null;
+            Accomodation accomodation = repository.GetAccomodation();
+            return $"{accomodation.AccomodationName} ({accomodation.VATNumber})";
         }
 
         /// <summary>
