@@ -186,6 +186,11 @@ namespace virtual_receptionist.Views
             }
         }
 
+        private void buttonRefreshDatabase_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void listViewGuest_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewGuest.SelectedItems.Count > 0)
