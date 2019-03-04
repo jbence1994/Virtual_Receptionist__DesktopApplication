@@ -31,31 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPageGuest = new System.Windows.Forms.TabPage();
-            this.groupBoxGuest = new System.Windows.Forms.GroupBox();
+            this.groupBoxCRUD = new System.Windows.Forms.GroupBox();
             this.labelGuestID = new System.Windows.Forms.Label();
             this.buttonDeleteGuest = new System.Windows.Forms.Button();
             this.buttonUpdateGuest = new System.Windows.Forms.Button();
-            this.textBoxGuestID = new System.Windows.Forms.TextBox();
-            this.textBoxGuestEmailAddress = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxEmailAddress = new System.Windows.Forms.TextBox();
             this.buttonAddGuest = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
-            this.textBoxGuestPhoneNumber = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.labelDocumentID = new System.Windows.Forms.Label();
-            this.textBoxGuestAddress = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.labelCitizenship = new System.Windows.Forms.Label();
-            this.textBoxGuestCity = new System.Windows.Forms.TextBox();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
             this.labelBirthDate = new System.Windows.Forms.Label();
-            this.textBoxGuestZipCode = new System.Windows.Forms.TextBox();
+            this.textBoxZipCode = new System.Windows.Forms.TextBox();
             this.labelCountry = new System.Windows.Forms.Label();
-            this.comboBoxGuestCountry = new System.Windows.Forms.ComboBox();
+            this.comboBoxCountry = new System.Windows.Forms.ComboBox();
             this.labelZipCode = new System.Windows.Forms.Label();
-            this.textBoxGuestBirthDate = new System.Windows.Forms.TextBox();
+            this.textBoxBirthDate = new System.Windows.Forms.TextBox();
             this.labelCity = new System.Windows.Forms.Label();
-            this.textBoxGuestCitizenship = new System.Windows.Forms.TextBox();
+            this.textBoxCitizenship = new System.Windows.Forms.TextBox();
             this.labelAddress = new System.Windows.Forms.Label();
-            this.textBoxGuestDocumentNumber = new System.Windows.Forms.TextBox();
+            this.textBoxDocumentNumber = new System.Windows.Forms.TextBox();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
-            this.textBoxGuestName = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelEmailAddress = new System.Windows.Forms.Label();
             this.listViewGuest = new System.Windows.Forms.ListView();
             this.columnHeaderGuestID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,7 +71,7 @@
             this.columnHeaderGuestEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPageGuest.SuspendLayout();
-            this.groupBoxGuest.SuspendLayout();
+            this.groupBoxCRUD.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlGuestDatabase
@@ -88,7 +88,7 @@
             // 
             // tabPageGuest
             // 
-            this.tabPageGuest.Controls.Add(this.groupBoxGuest);
+            this.tabPageGuest.Controls.Add(this.groupBoxCRUD);
             this.tabPageGuest.Controls.Add(this.listViewGuest);
             this.tabPageGuest.Location = new System.Drawing.Point(4, 22);
             this.tabPageGuest.Name = "tabPageGuest";
@@ -98,40 +98,40 @@
             this.tabPageGuest.Text = "Vendégek";
             this.tabPageGuest.UseVisualStyleBackColor = true;
             // 
-            // groupBoxGuest
+            // groupBoxCRUD
             // 
-            this.groupBoxGuest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxCRUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxGuest.Controls.Add(this.labelGuestID);
-            this.groupBoxGuest.Controls.Add(this.buttonDeleteGuest);
-            this.groupBoxGuest.Controls.Add(this.buttonUpdateGuest);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestID);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestEmailAddress);
-            this.groupBoxGuest.Controls.Add(this.buttonAddGuest);
-            this.groupBoxGuest.Controls.Add(this.labelName);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestPhoneNumber);
-            this.groupBoxGuest.Controls.Add(this.labelDocumentID);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestAddress);
-            this.groupBoxGuest.Controls.Add(this.labelCitizenship);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestCity);
-            this.groupBoxGuest.Controls.Add(this.labelBirthDate);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestZipCode);
-            this.groupBoxGuest.Controls.Add(this.labelCountry);
-            this.groupBoxGuest.Controls.Add(this.comboBoxGuestCountry);
-            this.groupBoxGuest.Controls.Add(this.labelZipCode);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestBirthDate);
-            this.groupBoxGuest.Controls.Add(this.labelCity);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestCitizenship);
-            this.groupBoxGuest.Controls.Add(this.labelAddress);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestDocumentNumber);
-            this.groupBoxGuest.Controls.Add(this.labelPhoneNumber);
-            this.groupBoxGuest.Controls.Add(this.textBoxGuestName);
-            this.groupBoxGuest.Controls.Add(this.labelEmailAddress);
-            this.groupBoxGuest.Location = new System.Drawing.Point(6, 419);
-            this.groupBoxGuest.Name = "groupBoxGuest";
-            this.groupBoxGuest.Size = new System.Drawing.Size(1072, 183);
-            this.groupBoxGuest.TabIndex = 0;
-            this.groupBoxGuest.TabStop = false;
+            this.groupBoxCRUD.Controls.Add(this.labelGuestID);
+            this.groupBoxCRUD.Controls.Add(this.buttonDeleteGuest);
+            this.groupBoxCRUD.Controls.Add(this.buttonUpdateGuest);
+            this.groupBoxCRUD.Controls.Add(this.textBoxID);
+            this.groupBoxCRUD.Controls.Add(this.textBoxEmailAddress);
+            this.groupBoxCRUD.Controls.Add(this.buttonAddGuest);
+            this.groupBoxCRUD.Controls.Add(this.labelName);
+            this.groupBoxCRUD.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBoxCRUD.Controls.Add(this.labelDocumentID);
+            this.groupBoxCRUD.Controls.Add(this.textBoxAddress);
+            this.groupBoxCRUD.Controls.Add(this.labelCitizenship);
+            this.groupBoxCRUD.Controls.Add(this.textBoxCity);
+            this.groupBoxCRUD.Controls.Add(this.labelBirthDate);
+            this.groupBoxCRUD.Controls.Add(this.textBoxZipCode);
+            this.groupBoxCRUD.Controls.Add(this.labelCountry);
+            this.groupBoxCRUD.Controls.Add(this.comboBoxCountry);
+            this.groupBoxCRUD.Controls.Add(this.labelZipCode);
+            this.groupBoxCRUD.Controls.Add(this.textBoxBirthDate);
+            this.groupBoxCRUD.Controls.Add(this.labelCity);
+            this.groupBoxCRUD.Controls.Add(this.textBoxCitizenship);
+            this.groupBoxCRUD.Controls.Add(this.labelAddress);
+            this.groupBoxCRUD.Controls.Add(this.textBoxDocumentNumber);
+            this.groupBoxCRUD.Controls.Add(this.labelPhoneNumber);
+            this.groupBoxCRUD.Controls.Add(this.textBoxName);
+            this.groupBoxCRUD.Controls.Add(this.labelEmailAddress);
+            this.groupBoxCRUD.Location = new System.Drawing.Point(6, 419);
+            this.groupBoxCRUD.Name = "groupBoxCRUD";
+            this.groupBoxCRUD.Size = new System.Drawing.Size(1072, 183);
+            this.groupBoxCRUD.TabIndex = 0;
+            this.groupBoxCRUD.TabStop = false;
             // 
             // labelGuestID
             // 
@@ -172,20 +172,20 @@
             this.buttonUpdateGuest.UseVisualStyleBackColor = true;
             this.buttonUpdateGuest.Click += new System.EventHandler(this.buttonUpdateGuest_Click);
             // 
-            // textBoxGuestID
+            // textBoxID
             // 
-            this.textBoxGuestID.Location = new System.Drawing.Point(108, 19);
-            this.textBoxGuestID.Name = "textBoxGuestID";
-            this.textBoxGuestID.ReadOnly = true;
-            this.textBoxGuestID.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestID.TabIndex = 37;
+            this.textBoxID.Location = new System.Drawing.Point(108, 19);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
+            this.textBoxID.Size = new System.Drawing.Size(185, 20);
+            this.textBoxID.TabIndex = 37;
             // 
-            // textBoxGuestEmailAddress
+            // textBoxEmailAddress
             // 
-            this.textBoxGuestEmailAddress.Location = new System.Drawing.Point(382, 124);
-            this.textBoxGuestEmailAddress.Name = "textBoxGuestEmailAddress";
-            this.textBoxGuestEmailAddress.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestEmailAddress.TabIndex = 14;
+            this.textBoxEmailAddress.Location = new System.Drawing.Point(382, 124);
+            this.textBoxEmailAddress.Name = "textBoxEmailAddress";
+            this.textBoxEmailAddress.Size = new System.Drawing.Size(185, 20);
+            this.textBoxEmailAddress.TabIndex = 14;
             // 
             // buttonAddGuest
             // 
@@ -211,12 +211,12 @@
             this.labelName.TabIndex = 27;
             this.labelName.Text = "Név:";
             // 
-            // textBoxGuestPhoneNumber
+            // textBoxPhoneNumber
             // 
-            this.textBoxGuestPhoneNumber.Location = new System.Drawing.Point(382, 98);
-            this.textBoxGuestPhoneNumber.Name = "textBoxGuestPhoneNumber";
-            this.textBoxGuestPhoneNumber.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestPhoneNumber.TabIndex = 13;
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(382, 98);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(185, 20);
+            this.textBoxPhoneNumber.TabIndex = 13;
             // 
             // labelDocumentID
             // 
@@ -227,12 +227,12 @@
             this.labelDocumentID.TabIndex = 28;
             this.labelDocumentID.Text = "Okmányazonosító:";
             // 
-            // textBoxGuestAddress
+            // textBoxAddress
             // 
-            this.textBoxGuestAddress.Location = new System.Drawing.Point(382, 72);
-            this.textBoxGuestAddress.Name = "textBoxGuestAddress";
-            this.textBoxGuestAddress.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestAddress.TabIndex = 12;
+            this.textBoxAddress.Location = new System.Drawing.Point(382, 72);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(185, 20);
+            this.textBoxAddress.TabIndex = 12;
             // 
             // labelCitizenship
             // 
@@ -243,12 +243,12 @@
             this.labelCitizenship.TabIndex = 29;
             this.labelCitizenship.Text = "Állampolgárság:";
             // 
-            // textBoxGuestCity
+            // textBoxCity
             // 
-            this.textBoxGuestCity.Location = new System.Drawing.Point(382, 45);
-            this.textBoxGuestCity.Name = "textBoxGuestCity";
-            this.textBoxGuestCity.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestCity.TabIndex = 11;
+            this.textBoxCity.Location = new System.Drawing.Point(382, 45);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCity.TabIndex = 11;
             // 
             // labelBirthDate
             // 
@@ -259,12 +259,12 @@
             this.labelBirthDate.TabIndex = 30;
             this.labelBirthDate.Text = "Születési idő:";
             // 
-            // textBoxGuestZipCode
+            // textBoxZipCode
             // 
-            this.textBoxGuestZipCode.Location = new System.Drawing.Point(382, 19);
-            this.textBoxGuestZipCode.Name = "textBoxGuestZipCode";
-            this.textBoxGuestZipCode.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestZipCode.TabIndex = 10;
+            this.textBoxZipCode.Location = new System.Drawing.Point(382, 19);
+            this.textBoxZipCode.Name = "textBoxZipCode";
+            this.textBoxZipCode.Size = new System.Drawing.Size(185, 20);
+            this.textBoxZipCode.TabIndex = 10;
             // 
             // labelCountry
             // 
@@ -275,13 +275,13 @@
             this.labelCountry.TabIndex = 31;
             this.labelCountry.Text = "Ország:";
             // 
-            // comboBoxGuestCountry
+            // comboBoxCountry
             // 
-            this.comboBoxGuestCountry.FormattingEnabled = true;
-            this.comboBoxGuestCountry.Location = new System.Drawing.Point(108, 151);
-            this.comboBoxGuestCountry.Name = "comboBoxGuestCountry";
-            this.comboBoxGuestCountry.Size = new System.Drawing.Size(185, 21);
-            this.comboBoxGuestCountry.TabIndex = 9;
+            this.comboBoxCountry.FormattingEnabled = true;
+            this.comboBoxCountry.Location = new System.Drawing.Point(108, 151);
+            this.comboBoxCountry.Name = "comboBoxCountry";
+            this.comboBoxCountry.Size = new System.Drawing.Size(185, 21);
+            this.comboBoxCountry.TabIndex = 9;
             // 
             // labelZipCode
             // 
@@ -292,12 +292,12 @@
             this.labelZipCode.TabIndex = 32;
             this.labelZipCode.Text = "Irányítószám:";
             // 
-            // textBoxGuestBirthDate
+            // textBoxBirthDate
             // 
-            this.textBoxGuestBirthDate.Location = new System.Drawing.Point(108, 124);
-            this.textBoxGuestBirthDate.Name = "textBoxGuestBirthDate";
-            this.textBoxGuestBirthDate.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestBirthDate.TabIndex = 8;
+            this.textBoxBirthDate.Location = new System.Drawing.Point(108, 124);
+            this.textBoxBirthDate.Name = "textBoxBirthDate";
+            this.textBoxBirthDate.Size = new System.Drawing.Size(185, 20);
+            this.textBoxBirthDate.TabIndex = 8;
             // 
             // labelCity
             // 
@@ -308,12 +308,12 @@
             this.labelCity.TabIndex = 33;
             this.labelCity.Text = "Település:";
             // 
-            // textBoxGuestCitizenship
+            // textBoxCitizenship
             // 
-            this.textBoxGuestCitizenship.Location = new System.Drawing.Point(108, 97);
-            this.textBoxGuestCitizenship.Name = "textBoxGuestCitizenship";
-            this.textBoxGuestCitizenship.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestCitizenship.TabIndex = 7;
+            this.textBoxCitizenship.Location = new System.Drawing.Point(108, 97);
+            this.textBoxCitizenship.Name = "textBoxCitizenship";
+            this.textBoxCitizenship.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCitizenship.TabIndex = 7;
             // 
             // labelAddress
             // 
@@ -324,12 +324,12 @@
             this.labelAddress.TabIndex = 34;
             this.labelAddress.Text = "Cím:";
             // 
-            // textBoxGuestDocumentNumber
+            // textBoxDocumentNumber
             // 
-            this.textBoxGuestDocumentNumber.Location = new System.Drawing.Point(108, 71);
-            this.textBoxGuestDocumentNumber.Name = "textBoxGuestDocumentNumber";
-            this.textBoxGuestDocumentNumber.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestDocumentNumber.TabIndex = 6;
+            this.textBoxDocumentNumber.Location = new System.Drawing.Point(108, 71);
+            this.textBoxDocumentNumber.Name = "textBoxDocumentNumber";
+            this.textBoxDocumentNumber.Size = new System.Drawing.Size(185, 20);
+            this.textBoxDocumentNumber.TabIndex = 6;
             // 
             // labelPhoneNumber
             // 
@@ -340,12 +340,12 @@
             this.labelPhoneNumber.TabIndex = 35;
             this.labelPhoneNumber.Text = "Telefonszám:";
             // 
-            // textBoxGuestName
+            // textBoxName
             // 
-            this.textBoxGuestName.Location = new System.Drawing.Point(108, 45);
-            this.textBoxGuestName.Name = "textBoxGuestName";
-            this.textBoxGuestName.Size = new System.Drawing.Size(185, 20);
-            this.textBoxGuestName.TabIndex = 5;
+            this.textBoxName.Location = new System.Drawing.Point(108, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(185, 20);
+            this.textBoxName.TabIndex = 5;
             // 
             // labelEmailAddress
             // 
@@ -453,8 +453,8 @@
             this.Load += new System.EventHandler(this.FormGuestDatabase_Load);
             this.tabControlGuestDatabase.ResumeLayout(false);
             this.tabPageGuest.ResumeLayout(false);
-            this.groupBoxGuest.ResumeLayout(false);
-            this.groupBoxGuest.PerformLayout();
+            this.groupBoxCRUD.ResumeLayout(false);
+            this.groupBoxCRUD.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -476,29 +476,29 @@
         private System.Windows.Forms.Button buttonUpdateGuest;
         private System.Windows.Forms.Button buttonDeleteGuest;
         private System.Windows.Forms.Button buttonAddGuest;
-        private System.Windows.Forms.GroupBox groupBoxGuest;
-        private System.Windows.Forms.TextBox textBoxGuestEmailAddress;
+        private System.Windows.Forms.GroupBox groupBoxCRUD;
+        private System.Windows.Forms.TextBox textBoxEmailAddress;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.TextBox textBoxGuestPhoneNumber;
+        private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label labelDocumentID;
-        private System.Windows.Forms.TextBox textBoxGuestAddress;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label labelCitizenship;
-        private System.Windows.Forms.TextBox textBoxGuestCity;
+        private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.Label labelBirthDate;
-        private System.Windows.Forms.TextBox textBoxGuestZipCode;
+        private System.Windows.Forms.TextBox textBoxZipCode;
         private System.Windows.Forms.Label labelCountry;
-        private System.Windows.Forms.ComboBox comboBoxGuestCountry;
+        private System.Windows.Forms.ComboBox comboBoxCountry;
         private System.Windows.Forms.Label labelZipCode;
-        private System.Windows.Forms.TextBox textBoxGuestBirthDate;
+        private System.Windows.Forms.TextBox textBoxBirthDate;
         private System.Windows.Forms.Label labelCity;
-        private System.Windows.Forms.TextBox textBoxGuestCitizenship;
+        private System.Windows.Forms.TextBox textBoxCitizenship;
         private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.TextBox textBoxGuestDocumentNumber;
+        private System.Windows.Forms.TextBox textBoxDocumentNumber;
         private System.Windows.Forms.Label labelPhoneNumber;
-        private System.Windows.Forms.TextBox textBoxGuestName;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelEmailAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderGuestID;
-        private System.Windows.Forms.TextBox textBoxGuestID;
+        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelGuestID;
     }
 }

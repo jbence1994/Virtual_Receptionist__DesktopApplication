@@ -50,26 +50,26 @@ namespace virtual_receptionist.Views
                 listViewGuest.Items.Add(privateGuests);
             }
 
-            textBoxGuestID.Text = controller.GetNextGuestID();
-            comboBoxGuestCountry.DataSource = controller.GetCountries();
+            textBoxID.Text = controller.GetNextGuestID();
+            comboBoxCountry.DataSource = controller.GetCountries();
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBoxGuestID.Text);
-            string name = textBoxGuestName.Text;
-            string documentNumber = textBoxGuestDocumentNumber.Text;
-            string citizenship = textBoxGuestCitizenship.Text;
-            string birthDate = textBoxGuestBirthDate.Text;
-            string country = comboBoxGuestCountry.SelectedItem.ToString();
-            string zipCode = textBoxGuestZipCode.Text;
-            string city = textBoxGuestCity.Text;
-            string address = textBoxGuestAddress.Text;
-            string phoneNumber = textBoxGuestPhoneNumber.Text;
-            string email = textBoxGuestEmailAddress.Text;
+            int id = int.Parse(textBoxID.Text);
+            string name = textBoxName.Text;
+            string documentNumber = textBoxDocumentNumber.Text;
+            string citizenship = textBoxCitizenship.Text;
+            string birthDate = textBoxBirthDate.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
+            string zipCode = textBoxZipCode.Text;
+            string city = textBoxCity.Text;
+            string address = textBoxAddress.Text;
+            string phoneNumber = textBoxPhoneNumber.Text;
+            string email = textBoxEmailAddress.Text;
 
             // ListView rekord hozzáadás (GUI)
-            textBoxGuestID.Text = id.ToString();
+            textBoxID.Text = id.ToString();
             ListViewItem newRecord = new ListViewItem();
             newRecord.Text = id.ToString();
             newRecord.SubItems.Add(name);
@@ -93,20 +93,20 @@ namespace virtual_receptionist.Views
         {
             if (listViewGuest.SelectedItems.Count > 0)
             {
-                int id = int.Parse(textBoxGuestID.Text);
-                string name = textBoxGuestName.Text;
-                string documentNumber = textBoxGuestDocumentNumber.Text;
-                string citizenship = textBoxGuestCitizenship.Text;
-                string birthDate = textBoxGuestBirthDate.Text;
-                string country = comboBoxGuestCountry.SelectedItem.ToString();
-                string zipCode = textBoxGuestZipCode.Text;
-                string city = textBoxGuestCity.Text;
-                string address = textBoxGuestAddress.Text;
-                string phoneNumber = textBoxGuestPhoneNumber.Text;
-                string email = textBoxGuestEmailAddress.Text;
+                int id = int.Parse(textBoxID.Text);
+                string name = textBoxName.Text;
+                string documentNumber = textBoxDocumentNumber.Text;
+                string citizenship = textBoxCitizenship.Text;
+                string birthDate = textBoxBirthDate.Text;
+                string country = comboBoxCountry.SelectedItem.ToString();
+                string zipCode = textBoxZipCode.Text;
+                string city = textBoxCity.Text;
+                string address = textBoxAddress.Text;
+                string phoneNumber = textBoxPhoneNumber.Text;
+                string email = textBoxEmailAddress.Text;
 
                 // ListView rekord módosítása (GUI)
-                textBoxGuestID.Text = id.ToString();
+                textBoxID.Text = id.ToString();
                 ListViewItem updatedRecord = new ListViewItem();
                 updatedRecord.Text = id.ToString();
                 updatedRecord.SubItems.Add(name);
@@ -149,7 +149,7 @@ namespace virtual_receptionist.Views
                     string documentNumber = listViewGuest.SelectedItems[0].SubItems[2].Text;
                     string citizenship = listViewGuest.SelectedItems[0].SubItems[3].Text;
                     string birthDate = listViewGuest.SelectedItems[0].SubItems[4].Text;
-                    string country = comboBoxGuestCountry.SelectedItem.ToString();
+                    string country = comboBoxCountry.SelectedItem.ToString();
                     string zipCode = listViewGuest.SelectedItems[0].SubItems[6].Text;
                     string city = listViewGuest.SelectedItems[0].SubItems[7].Text;
                     string address = listViewGuest.SelectedItems[0].SubItems[8].Text;
@@ -161,19 +161,19 @@ namespace virtual_receptionist.Views
                     listViewGuest.Items.RemoveAt(index);
 
                     //GUI vezérlők alaphelyzetbe állítása
-                    textBoxGuestID.Clear();
-                    textBoxGuestName.Clear();
-                    textBoxGuestDocumentNumber.Clear();
-                    textBoxGuestCitizenship.Clear();
-                    textBoxGuestBirthDate.Clear();
-                    comboBoxGuestCountry.DataSource = null;
-                    comboBoxGuestCountry.DataSource = controller.GetCountries();
-                    comboBoxGuestCountry.SelectedItem = controller.GetCountries()[0];
-                    textBoxGuestZipCode.Clear();
-                    textBoxGuestCity.Clear();
-                    textBoxGuestAddress.Clear();
-                    textBoxGuestPhoneNumber.Clear();
-                    textBoxGuestEmailAddress.Clear();
+                    textBoxID.Clear();
+                    textBoxName.Clear();
+                    textBoxDocumentNumber.Clear();
+                    textBoxCitizenship.Clear();
+                    textBoxBirthDate.Clear();
+                    comboBoxCountry.DataSource = null;
+                    comboBoxCountry.DataSource = controller.GetCountries();
+                    comboBoxCountry.SelectedItem = controller.GetCountries()[0];
+                    textBoxZipCode.Clear();
+                    textBoxCity.Clear();
+                    textBoxAddress.Clear();
+                    textBoxPhoneNumber.Clear();
+                    textBoxEmailAddress.Clear();
 
                     //Adatbázis rekord törlése
                     controller.DeleteRecordFromGuestTable(id, name, documentNumber, citizenship, birthDate,
@@ -192,39 +192,39 @@ namespace virtual_receptionist.Views
             {
                 buttonAddGuest.Enabled = false;
 
-                textBoxGuestID.Text = listViewGuest.SelectedItems[0].Text;
-                textBoxGuestName.Text = listViewGuest.SelectedItems[0].SubItems[1].Text;
-                textBoxGuestDocumentNumber.Text = listViewGuest.SelectedItems[0].SubItems[2].Text;
-                textBoxGuestCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
-                textBoxGuestBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text.Replace(". ", "-")
+                textBoxID.Text = listViewGuest.SelectedItems[0].Text;
+                textBoxName.Text = listViewGuest.SelectedItems[0].SubItems[1].Text;
+                textBoxDocumentNumber.Text = listViewGuest.SelectedItems[0].SubItems[2].Text;
+                textBoxCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
+                textBoxBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text.Replace(". ", "-")
                     .Replace(".", "");
                 string selectedCountryInTable = listViewGuest.SelectedItems[0].SubItems[5].Text;
-                comboBoxGuestCountry.SelectedItem = controller.SetSelectedCountry(selectedCountryInTable);
+                comboBoxCountry.SelectedItem = controller.SetSelectedCountry(selectedCountryInTable);
 
-                textBoxGuestZipCode.Text = listViewGuest.SelectedItems[0].SubItems[6].Text;
-                textBoxGuestCity.Text = listViewGuest.SelectedItems[0].SubItems[7].Text;
-                textBoxGuestAddress.Text = listViewGuest.SelectedItems[0].SubItems[8].Text;
-                textBoxGuestPhoneNumber.Text = listViewGuest.SelectedItems[0].SubItems[9].Text;
-                textBoxGuestEmailAddress.Text = listViewGuest.SelectedItems[0].SubItems[10].Text;
+                textBoxZipCode.Text = listViewGuest.SelectedItems[0].SubItems[6].Text;
+                textBoxCity.Text = listViewGuest.SelectedItems[0].SubItems[7].Text;
+                textBoxAddress.Text = listViewGuest.SelectedItems[0].SubItems[8].Text;
+                textBoxPhoneNumber.Text = listViewGuest.SelectedItems[0].SubItems[9].Text;
+                textBoxEmailAddress.Text = listViewGuest.SelectedItems[0].SubItems[10].Text;
             }
             else
             {
                 buttonAddGuest.Enabled = true;
 
-                textBoxGuestID.Clear();
-                textBoxGuestID.Text = controller.GetNextGuestID().ToString();
-                textBoxGuestName.Clear();
-                textBoxGuestDocumentNumber.Clear();
-                textBoxGuestCitizenship.Clear();
-                textBoxGuestBirthDate.Clear();
-                comboBoxGuestCountry.DataSource = null;
-                comboBoxGuestCountry.DataSource = controller.GetCountries();
-                comboBoxGuestCountry.SelectedItem = controller.GetCountries()[0];
-                textBoxGuestZipCode.Clear();
-                textBoxGuestCity.Clear();
-                textBoxGuestAddress.Clear();
-                textBoxGuestPhoneNumber.Clear();
-                textBoxGuestEmailAddress.Clear();
+                textBoxID.Clear();
+                textBoxID.Text = controller.GetNextGuestID().ToString();
+                textBoxName.Clear();
+                textBoxDocumentNumber.Clear();
+                textBoxCitizenship.Clear();
+                textBoxBirthDate.Clear();
+                comboBoxCountry.DataSource = null;
+                comboBoxCountry.DataSource = controller.GetCountries();
+                comboBoxCountry.SelectedItem = controller.GetCountries()[0];
+                textBoxZipCode.Clear();
+                textBoxCity.Clear();
+                textBoxAddress.Clear();
+                textBoxPhoneNumber.Clear();
+                textBoxEmailAddress.Clear();
             }
         }
 
