@@ -1,5 +1,4 @@
-﻿using System;
-using virtual_receptionist.Controllers.Exceptions;
+﻿using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.DatabaseConnection;
 
