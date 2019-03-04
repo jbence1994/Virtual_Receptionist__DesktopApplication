@@ -37,17 +37,16 @@
             this.labelArrivalDate = new System.Windows.Forms.Label();
             this.labelDepartureDate = new System.Windows.Forms.Label();
             this.tabPageBookings = new System.Windows.Forms.TabPage();
-            this.dataGridViewGuestBookings = new System.Windows.Forms.DataGridView();
+            this.dataGridViewBookings = new System.Windows.Forms.DataGridView();
+            this.tabControlBooking = new System.Windows.Forms.TabControl();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControlBooking = new System.Windows.Forms.TabControl();
             this.tabPageBookings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGuestBookings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).BeginInit();
             this.tabControlBooking.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,7 +135,7 @@
             // 
             // tabPageBookings
             // 
-            this.tabPageBookings.Controls.Add(this.dataGridViewGuestBookings);
+            this.tabPageBookings.Controls.Add(this.dataGridViewBookings);
             this.tabPageBookings.Location = new System.Drawing.Point(4, 22);
             this.tabPageBookings.Name = "tabPageBookings";
             this.tabPageBookings.Padding = new System.Windows.Forms.Padding(3);
@@ -145,32 +144,43 @@
             this.tabPageBookings.Text = "Foglalások";
             this.tabPageBookings.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewGuestBookings
+            // dataGridViewBookings
             // 
-            this.dataGridViewGuestBookings.AllowUserToAddRows = false;
-            this.dataGridViewGuestBookings.AllowUserToDeleteRows = false;
-            this.dataGridViewGuestBookings.AllowUserToResizeColumns = false;
-            this.dataGridViewGuestBookings.AllowUserToResizeRows = false;
-            this.dataGridViewGuestBookings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewBookings.AllowUserToAddRows = false;
+            this.dataGridViewBookings.AllowUserToDeleteRows = false;
+            this.dataGridViewBookings.AllowUserToResizeColumns = false;
+            this.dataGridViewBookings.AllowUserToResizeRows = false;
+            this.dataGridViewBookings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewGuestBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewGuestBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGuestBookings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBookings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridViewGuestBookings.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewGuestBookings.MultiSelect = false;
-            this.dataGridViewGuestBookings.Name = "dataGridViewGuestBookings";
-            this.dataGridViewGuestBookings.ReadOnly = true;
-            this.dataGridViewGuestBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewGuestBookings.Size = new System.Drawing.Size(1079, 532);
-            this.dataGridViewGuestBookings.TabIndex = 8;
+            this.dataGridViewBookings.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewBookings.MultiSelect = false;
+            this.dataGridViewBookings.Name = "dataGridViewBookings";
+            this.dataGridViewBookings.ReadOnly = true;
+            this.dataGridViewBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBookings.Size = new System.Drawing.Size(1079, 532);
+            this.dataGridViewBookings.TabIndex = 8;
+            // 
+            // tabControlBooking
+            // 
+            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlBooking.Controls.Add(this.tabPageBookings);
+            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
+            this.tabControlBooking.Name = "tabControlBooking";
+            this.tabControlBooking.SelectedIndex = 0;
+            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
+            this.tabControlBooking.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -185,13 +195,6 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Vendég neve";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CompanyName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cégnév";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -221,18 +224,6 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // tabControlBooking
-            // 
-            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlBooking.Controls.Add(this.tabPageBookings);
-            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
-            this.tabControlBooking.Name = "tabControlBooking";
-            this.tabControlBooking.SelectedIndex = 0;
-            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
-            this.tabControlBooking.TabIndex = 8;
-            // 
             // FormBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,7 +244,7 @@
             this.Text = "Foglalási napló | Virtual Receptionist";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabPageBookings.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGuestBookings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).EndInit();
             this.tabControlBooking.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,10 +261,9 @@
         private System.Windows.Forms.Label labelDepartureDate;
         private System.Windows.Forms.TabPage tabPageBookings;
         private System.Windows.Forms.TabControl tabControlBooking;
-        private System.Windows.Forms.DataGridView dataGridViewGuestBookings;
+        private System.Windows.Forms.DataGridView dataGridViewBookings;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
