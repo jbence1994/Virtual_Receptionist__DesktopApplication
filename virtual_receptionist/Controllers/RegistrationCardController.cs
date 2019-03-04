@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using virtual_receptionist.Models;
 using virtual_receptionist.Models.Data;
 
 namespace virtual_receptionist.Controllers
