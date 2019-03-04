@@ -9,7 +9,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Foglalási napló modul vezérlője
     /// </summary>
-    public class BookingController : Controller
+    public class BookingController
     {
         #region Adattagok
 

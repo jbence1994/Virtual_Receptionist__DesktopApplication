@@ -8,7 +8,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Autentikáció vezérlője
     /// </summary>
-    public class LoginController : Controller
+    public class LoginController
     {
         #region Adattagok
 

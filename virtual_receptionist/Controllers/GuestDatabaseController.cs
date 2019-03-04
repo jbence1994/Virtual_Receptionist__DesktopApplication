@@ -8,7 +8,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Vendégadatbázis-kezelő modul vezérlője
     /// </summary>
-    public class GuestDatabaseController : Controller
+    public class GuestDatabaseController
     {
         #region Adattagok
 
@@ -60,22 +60,6 @@ namespace virtual_receptionist.Controllers
             }
 
             return guestDataTable;
-        }
-
-        /// <summary>
-        /// Országok neveit listában visszaadó metódus
-        /// </summary>
-        /// <returns>Országlistával tér vissza a függvény</returns>
-        public List<string> GetCountries()
-        {
-            List<string> countries = new List<string>();
-
-            foreach (Country country in repository.Countries())
-            {
-                countries.Add(country.Name);
-            }
-
-            return countries;
         }
 
         /// <summary>

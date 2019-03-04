@@ -7,7 +7,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Vendég bejelentkező lap vezérlője
     /// </summary>
-    public class RegistrationCardController : Controller
+    public class RegistrationCardController
     {
         #region Adattagok
 

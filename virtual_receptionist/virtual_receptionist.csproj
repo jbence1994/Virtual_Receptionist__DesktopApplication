@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\Exceptions\InvalidAddressException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
@@ -66,6 +65,7 @@
     <Compile Include="Models\DatabaseConnection\Database.cs" />
     <Compile Include="Models\DatabaseConnection\InvalidConnectionTypeException.cs" />
     <Compile Include="Models\Data\AccomodationRepository.cs" />
+    <Compile Include="Models\Data\CountryRepository.cs" />
     <Compile Include="Models\ORM\Accomodation.cs" />
     <Compile Include="Models\ORM\BillingItemCategory.cs" />
     <Compile Include="Models\Data\IManipulable.cs" />

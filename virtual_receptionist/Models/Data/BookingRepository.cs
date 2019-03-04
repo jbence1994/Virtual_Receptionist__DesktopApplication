@@ -103,6 +103,11 @@ namespace virtual_receptionist.Models.Data
         /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
         public List<Room> GetRooms()
         {
+            if (rooms.Count == 0)
+            {
+                UploadRoomsList();
+            }
+
             return rooms;
         }
 
@@ -112,6 +117,11 @@ namespace virtual_receptionist.Models.Data
         /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
         public List<Booking> GetBookings()
         {
+            if (bookings.Count == 0)
+            {
+                UploadBookingsList();
+            }
+
             return bookings;
         }
 
