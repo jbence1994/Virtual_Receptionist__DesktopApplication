@@ -31,7 +31,7 @@ namespace virtual_receptionist.Models.Data
 
         #endregion
 
-        #region Adatfeltöltő és adatelérési metódusok
+        #region Adatfeltöltő metódusok
 
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a számlázási tételek adatait tartalmazó listát
@@ -55,6 +55,10 @@ namespace virtual_receptionist.Models.Data
                 billingItems.Add(billingItemInstance);
             }
         }
+
+        #endregion
+
+        #region Adatelérési metódusok
 
         /// <summary>
         /// Metódus, amely feltölti a számlázási tételeket tartalmazó listát adatbázisból
