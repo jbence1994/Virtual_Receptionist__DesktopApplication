@@ -36,13 +36,13 @@ namespace virtual_receptionist.Views
         private void dateTimePickerArrivalDate_ValueChanged(object sender, EventArgs e)
         {
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
-            dataGridViewCompanyBookings.DataSource = controller.GetCompanyBookingsByArrivalDate(arrivalDate);
+            dataGridViewCompanyBookings.DataSource = controller.GetBookingsByArrivalDate(arrivalDate);
         }
 
         private void dateTimePickerDepartureDate_ValueChanged(object sender, EventArgs e)
         {
             DateTime departureDate = dateTimePickerDepartureDate.Value;
-            dataGridViewCompanyBookings.DataSource = controller.GetCompanyBookingsByDepartureDate(departureDate);
+            dataGridViewCompanyBookings.DataSource = controller.GetBookingsByDepartureDate(departureDate);
         }
 
         private void buttonNewBooking_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace virtual_receptionist.Views
                 DateTime arrivalDate = Convert.ToDateTime(dataGridViewCompanyBookings.SelectedRows[0].Cells[6].Value);
                 DateTime departureDate = Convert.ToDateTime(dataGridViewCompanyBookings.SelectedRows[0].Cells[7].Value);
 
-                controller.UpdateRecordInCompanyBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
+                controller.UpdateRecordInBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
                     departureDate);
             }
         }
@@ -91,7 +91,7 @@ namespace virtual_receptionist.Views
                 DateTime arrivalDate = Convert.ToDateTime(dataGridViewCompanyBookings.SelectedRows[0].Cells[6].Value);
                 DateTime departureDate = Convert.ToDateTime(dataGridViewCompanyBookings.SelectedRows[0].Cells[7].Value);
 
-                controller.DeleteRecordFromCompanyBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
+                controller.DeleteRecordFromBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
                     departureDate);
             }
         }

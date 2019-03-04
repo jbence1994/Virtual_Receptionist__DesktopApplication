@@ -69,53 +69,17 @@
             this.columnHeaderGuestAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPageCompany = new System.Windows.Forms.TabPage();
-            this.groupBoxCompany = new System.Windows.Forms.GroupBox();
-            this.labelCompanyID = new System.Windows.Forms.Label();
-            this.buttonAddCompany = new System.Windows.Forms.Button();
-            this.buttonUpdateCompany = new System.Windows.Forms.Button();
-            this.textBoxCompanyID = new System.Windows.Forms.TextBox();
-            this.buttonDeleteCompany = new System.Windows.Forms.Button();
-            this.textBoxCompanyEmailAddress = new System.Windows.Forms.TextBox();
-            this.labelCompanyName = new System.Windows.Forms.Label();
-            this.textBoxCompanyPhoneNumber = new System.Windows.Forms.TextBox();
-            this.labelVATNumber = new System.Windows.Forms.Label();
-            this.textBoxHeadquarterCity = new System.Windows.Forms.TextBox();
-            this.textBoxHeadquarterAddress = new System.Windows.Forms.TextBox();
-            this.textBoxHeadquarterZipCode = new System.Windows.Forms.TextBox();
-            this.labelHeadquarterCountry = new System.Windows.Forms.Label();
-            this.comboBoxHeadquarterCountry = new System.Windows.Forms.ComboBox();
-            this.labelHeadquarterZipCode = new System.Windows.Forms.Label();
-            this.labelHeadquarterCity = new System.Windows.Forms.Label();
-            this.labelHeadquarterAddress = new System.Windows.Forms.Label();
-            this.textBoxVATNumber = new System.Windows.Forms.TextBox();
-            this.labelCompanyPhoneNumber = new System.Windows.Forms.Label();
-            this.textBoxCompanyName = new System.Windows.Forms.TextBox();
-            this.labelCompanyEmailAddress = new System.Windows.Forms.Label();
-            this.listViewCompany = new System.Windows.Forms.ListView();
-            this.columnHeaderCompanyID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderVATNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterCountry = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterZipCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderHeadqurterAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCompanyPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCompanyEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPageGuest.SuspendLayout();
             this.groupBoxGuest.SuspendLayout();
-            this.tabPageCompany.SuspendLayout();
-            this.groupBoxCompany.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlGuestDatabase
             // 
-            this.tabControlGuestDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControlGuestDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlGuestDatabase.Controls.Add(this.tabPageGuest);
-            this.tabControlGuestDatabase.Controls.Add(this.tabPageCompany);
             this.tabControlGuestDatabase.Location = new System.Drawing.Point(12, 12);
             this.tabControlGuestDatabase.Name = "tabControlGuestDatabase";
             this.tabControlGuestDatabase.SelectedIndex = 0;
@@ -136,7 +100,7 @@
             // 
             // groupBoxGuest
             // 
-            this.groupBoxGuest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBoxGuest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxGuest.Controls.Add(this.labelGuestID);
             this.groupBoxGuest.Controls.Add(this.buttonDeleteGuest);
@@ -394,8 +358,8 @@
             // 
             // listViewGuest
             // 
-            this.listViewGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.listViewGuest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewGuest.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderGuestID,
@@ -474,310 +438,6 @@
             this.columnHeaderGuestEmailAddress.Text = "E-mail cím";
             this.columnHeaderGuestEmailAddress.Width = 150;
             // 
-            // tabPageCompany
-            // 
-            this.tabPageCompany.Controls.Add(this.groupBoxCompany);
-            this.tabPageCompany.Controls.Add(this.listViewCompany);
-            this.tabPageCompany.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCompany.Name = "tabPageCompany";
-            this.tabPageCompany.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCompany.Size = new System.Drawing.Size(1084, 608);
-            this.tabPageCompany.TabIndex = 1;
-            this.tabPageCompany.Text = "Cégek";
-            this.tabPageCompany.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxCompany
-            // 
-            this.groupBoxCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxCompany.Controls.Add(this.labelCompanyID);
-            this.groupBoxCompany.Controls.Add(this.buttonAddCompany);
-            this.groupBoxCompany.Controls.Add(this.buttonUpdateCompany);
-            this.groupBoxCompany.Controls.Add(this.textBoxCompanyID);
-            this.groupBoxCompany.Controls.Add(this.buttonDeleteCompany);
-            this.groupBoxCompany.Controls.Add(this.textBoxCompanyEmailAddress);
-            this.groupBoxCompany.Controls.Add(this.labelCompanyName);
-            this.groupBoxCompany.Controls.Add(this.textBoxCompanyPhoneNumber);
-            this.groupBoxCompany.Controls.Add(this.labelVATNumber);
-            this.groupBoxCompany.Controls.Add(this.textBoxHeadquarterCity);
-            this.groupBoxCompany.Controls.Add(this.textBoxHeadquarterAddress);
-            this.groupBoxCompany.Controls.Add(this.textBoxHeadquarterZipCode);
-            this.groupBoxCompany.Controls.Add(this.labelHeadquarterCountry);
-            this.groupBoxCompany.Controls.Add(this.comboBoxHeadquarterCountry);
-            this.groupBoxCompany.Controls.Add(this.labelHeadquarterZipCode);
-            this.groupBoxCompany.Controls.Add(this.labelHeadquarterCity);
-            this.groupBoxCompany.Controls.Add(this.labelHeadquarterAddress);
-            this.groupBoxCompany.Controls.Add(this.textBoxVATNumber);
-            this.groupBoxCompany.Controls.Add(this.labelCompanyPhoneNumber);
-            this.groupBoxCompany.Controls.Add(this.textBoxCompanyName);
-            this.groupBoxCompany.Controls.Add(this.labelCompanyEmailAddress);
-            this.groupBoxCompany.Location = new System.Drawing.Point(6, 419);
-            this.groupBoxCompany.Name = "groupBoxCompany";
-            this.groupBoxCompany.Size = new System.Drawing.Size(1072, 183);
-            this.groupBoxCompany.TabIndex = 28;
-            this.groupBoxCompany.TabStop = false;
-            // 
-            // labelCompanyID
-            // 
-            this.labelCompanyID.AutoSize = true;
-            this.labelCompanyID.Location = new System.Drawing.Point(8, 22);
-            this.labelCompanyID.Name = "labelCompanyID";
-            this.labelCompanyID.Size = new System.Drawing.Size(94, 13);
-            this.labelCompanyID.TabIndex = 41;
-            this.labelCompanyID.Text = "Vendégazonosító:";
-            // 
-            // buttonAddCompany
-            // 
-            this.buttonAddCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAddCompany.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddCompany.Image")));
-            this.buttonAddCompany.Location = new System.Drawing.Point(583, 113);
-            this.buttonAddCompany.Name = "buttonAddCompany";
-            this.buttonAddCompany.Size = new System.Drawing.Size(157, 64);
-            this.buttonAddCompany.TabIndex = 19;
-            this.buttonAddCompany.Text = "Új vendég hozzáadása";
-            this.buttonAddCompany.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonAddCompany.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonAddCompany.UseVisualStyleBackColor = true;
-            this.buttonAddCompany.Click += new System.EventHandler(this.buttonAddCompany_Click);
-            // 
-            // buttonUpdateCompany
-            // 
-            this.buttonUpdateCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonUpdateCompany.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateCompany.Image")));
-            this.buttonUpdateCompany.Location = new System.Drawing.Point(746, 113);
-            this.buttonUpdateCompany.Name = "buttonUpdateCompany";
-            this.buttonUpdateCompany.Size = new System.Drawing.Size(157, 64);
-            this.buttonUpdateCompany.TabIndex = 20;
-            this.buttonUpdateCompany.Text = "Vendég módosítása";
-            this.buttonUpdateCompany.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonUpdateCompany.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonUpdateCompany.UseVisualStyleBackColor = true;
-            this.buttonUpdateCompany.Click += new System.EventHandler(this.buttonUpdateCompany_Click);
-            // 
-            // textBoxCompanyID
-            // 
-            this.textBoxCompanyID.Location = new System.Drawing.Point(108, 19);
-            this.textBoxCompanyID.Name = "textBoxCompanyID";
-            this.textBoxCompanyID.ReadOnly = true;
-            this.textBoxCompanyID.Size = new System.Drawing.Size(185, 20);
-            this.textBoxCompanyID.TabIndex = 40;
-            // 
-            // buttonDeleteCompany
-            // 
-            this.buttonDeleteCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDeleteCompany.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteCompany.Image")));
-            this.buttonDeleteCompany.Location = new System.Drawing.Point(909, 113);
-            this.buttonDeleteCompany.Name = "buttonDeleteCompany";
-            this.buttonDeleteCompany.Size = new System.Drawing.Size(157, 64);
-            this.buttonDeleteCompany.TabIndex = 21;
-            this.buttonDeleteCompany.Text = "Vendég törlése";
-            this.buttonDeleteCompany.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDeleteCompany.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDeleteCompany.UseVisualStyleBackColor = true;
-            this.buttonDeleteCompany.Click += new System.EventHandler(this.buttonDeleteCompany_Click);
-            // 
-            // textBoxCompanyEmailAddress
-            // 
-            this.textBoxCompanyEmailAddress.Location = new System.Drawing.Point(381, 74);
-            this.textBoxCompanyEmailAddress.Name = "textBoxCompanyEmailAddress";
-            this.textBoxCompanyEmailAddress.Size = new System.Drawing.Size(185, 20);
-            this.textBoxCompanyEmailAddress.TabIndex = 29;
-            // 
-            // labelCompanyName
-            // 
-            this.labelCompanyName.AutoSize = true;
-            this.labelCompanyName.Location = new System.Drawing.Point(55, 48);
-            this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(47, 13);
-            this.labelCompanyName.TabIndex = 32;
-            this.labelCompanyName.Text = "Cégnév:";
-            // 
-            // textBoxCompanyPhoneNumber
-            // 
-            this.textBoxCompanyPhoneNumber.Location = new System.Drawing.Point(381, 48);
-            this.textBoxCompanyPhoneNumber.Name = "textBoxCompanyPhoneNumber";
-            this.textBoxCompanyPhoneNumber.Size = new System.Drawing.Size(185, 20);
-            this.textBoxCompanyPhoneNumber.TabIndex = 28;
-            // 
-            // labelVATNumber
-            // 
-            this.labelVATNumber.AutoSize = true;
-            this.labelVATNumber.Location = new System.Drawing.Point(49, 74);
-            this.labelVATNumber.Name = "labelVATNumber";
-            this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
-            this.labelVATNumber.TabIndex = 33;
-            this.labelVATNumber.Text = "Adószám:";
-            // 
-            // textBoxHeadquarterCity
-            // 
-            this.textBoxHeadquarterCity.Location = new System.Drawing.Point(108, 150);
-            this.textBoxHeadquarterCity.Name = "textBoxHeadquarterCity";
-            this.textBoxHeadquarterCity.Size = new System.Drawing.Size(185, 20);
-            this.textBoxHeadquarterCity.TabIndex = 26;
-            // 
-            // textBoxHeadquarterAddress
-            // 
-            this.textBoxHeadquarterAddress.Location = new System.Drawing.Point(381, 22);
-            this.textBoxHeadquarterAddress.Name = "textBoxHeadquarterAddress";
-            this.textBoxHeadquarterAddress.Size = new System.Drawing.Size(185, 20);
-            this.textBoxHeadquarterAddress.TabIndex = 27;
-            // 
-            // textBoxHeadquarterZipCode
-            // 
-            this.textBoxHeadquarterZipCode.Location = new System.Drawing.Point(108, 124);
-            this.textBoxHeadquarterZipCode.Name = "textBoxHeadquarterZipCode";
-            this.textBoxHeadquarterZipCode.Size = new System.Drawing.Size(185, 20);
-            this.textBoxHeadquarterZipCode.TabIndex = 25;
-            // 
-            // labelHeadquarterCountry
-            // 
-            this.labelHeadquarterCountry.AutoSize = true;
-            this.labelHeadquarterCountry.Location = new System.Drawing.Point(59, 100);
-            this.labelHeadquarterCountry.Name = "labelHeadquarterCountry";
-            this.labelHeadquarterCountry.Size = new System.Drawing.Size(43, 13);
-            this.labelHeadquarterCountry.TabIndex = 34;
-            this.labelHeadquarterCountry.Text = "Ország:";
-            // 
-            // comboBoxHeadquarterCountry
-            // 
-            this.comboBoxHeadquarterCountry.FormattingEnabled = true;
-            this.comboBoxHeadquarterCountry.Location = new System.Drawing.Point(108, 97);
-            this.comboBoxHeadquarterCountry.Name = "comboBoxHeadquarterCountry";
-            this.comboBoxHeadquarterCountry.Size = new System.Drawing.Size(185, 21);
-            this.comboBoxHeadquarterCountry.TabIndex = 24;
-            // 
-            // labelHeadquarterZipCode
-            // 
-            this.labelHeadquarterZipCode.AutoSize = true;
-            this.labelHeadquarterZipCode.Location = new System.Drawing.Point(32, 127);
-            this.labelHeadquarterZipCode.Name = "labelHeadquarterZipCode";
-            this.labelHeadquarterZipCode.Size = new System.Drawing.Size(70, 13);
-            this.labelHeadquarterZipCode.TabIndex = 35;
-            this.labelHeadquarterZipCode.Text = "Irányítószám:";
-            // 
-            // labelHeadquarterCity
-            // 
-            this.labelHeadquarterCity.AutoSize = true;
-            this.labelHeadquarterCity.Location = new System.Drawing.Point(46, 153);
-            this.labelHeadquarterCity.Name = "labelHeadquarterCity";
-            this.labelHeadquarterCity.Size = new System.Drawing.Size(56, 13);
-            this.labelHeadquarterCity.TabIndex = 36;
-            this.labelHeadquarterCity.Text = "Település:";
-            // 
-            // labelHeadquarterAddress
-            // 
-            this.labelHeadquarterAddress.AutoSize = true;
-            this.labelHeadquarterAddress.Location = new System.Drawing.Point(346, 25);
-            this.labelHeadquarterAddress.Name = "labelHeadquarterAddress";
-            this.labelHeadquarterAddress.Size = new System.Drawing.Size(29, 13);
-            this.labelHeadquarterAddress.TabIndex = 37;
-            this.labelHeadquarterAddress.Text = "Cím:";
-            // 
-            // textBoxVATNumber
-            // 
-            this.textBoxVATNumber.Location = new System.Drawing.Point(108, 71);
-            this.textBoxVATNumber.Name = "textBoxVATNumber";
-            this.textBoxVATNumber.Size = new System.Drawing.Size(185, 20);
-            this.textBoxVATNumber.TabIndex = 23;
-            // 
-            // labelCompanyPhoneNumber
-            // 
-            this.labelCompanyPhoneNumber.AutoSize = true;
-            this.labelCompanyPhoneNumber.Location = new System.Drawing.Point(305, 51);
-            this.labelCompanyPhoneNumber.Name = "labelCompanyPhoneNumber";
-            this.labelCompanyPhoneNumber.Size = new System.Drawing.Size(70, 13);
-            this.labelCompanyPhoneNumber.TabIndex = 38;
-            this.labelCompanyPhoneNumber.Text = "Telefonszám:";
-            // 
-            // textBoxCompanyName
-            // 
-            this.textBoxCompanyName.Location = new System.Drawing.Point(108, 45);
-            this.textBoxCompanyName.Name = "textBoxCompanyName";
-            this.textBoxCompanyName.Size = new System.Drawing.Size(185, 20);
-            this.textBoxCompanyName.TabIndex = 22;
-            // 
-            // labelCompanyEmailAddress
-            // 
-            this.labelCompanyEmailAddress.AutoSize = true;
-            this.labelCompanyEmailAddress.Location = new System.Drawing.Point(316, 77);
-            this.labelCompanyEmailAddress.Name = "labelCompanyEmailAddress";
-            this.labelCompanyEmailAddress.Size = new System.Drawing.Size(59, 13);
-            this.labelCompanyEmailAddress.TabIndex = 39;
-            this.labelCompanyEmailAddress.Text = "E-mail cím:";
-            // 
-            // listViewCompany
-            // 
-            this.listViewCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewCompany.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderCompanyID,
-            this.columnHeaderCompanyName,
-            this.columnHeaderVATNumber,
-            this.columnHeaderHeadqurterCountry,
-            this.columnHeaderHeadqurterZipCode,
-            this.columnHeaderHeadqurterCity,
-            this.columnHeaderHeadqurterAddress,
-            this.columnHeaderCompanyPhoneNumber,
-            this.columnHeaderCompanyEmailAddress});
-            this.listViewCompany.FullRowSelect = true;
-            this.listViewCompany.GridLines = true;
-            this.listViewCompany.Location = new System.Drawing.Point(3, 3);
-            this.listViewCompany.Name = "listViewCompany";
-            this.listViewCompany.Size = new System.Drawing.Size(1075, 410);
-            this.listViewCompany.TabIndex = 18;
-            this.listViewCompany.UseCompatibleStateImageBehavior = false;
-            this.listViewCompany.View = System.Windows.Forms.View.Details;
-            this.listViewCompany.SelectedIndexChanged += new System.EventHandler(this.listViewCompany_SelectedIndexChanged);
-            // 
-            // columnHeaderCompanyID
-            // 
-            this.columnHeaderCompanyID.Text = "Cégazonosító";
-            this.columnHeaderCompanyID.Width = 150;
-            // 
-            // columnHeaderCompanyName
-            // 
-            this.columnHeaderCompanyName.Text = "Cégnév";
-            this.columnHeaderCompanyName.Width = 150;
-            // 
-            // columnHeaderVATNumber
-            // 
-            this.columnHeaderVATNumber.Text = "Adószám";
-            this.columnHeaderVATNumber.Width = 150;
-            // 
-            // columnHeaderHeadqurterCountry
-            // 
-            this.columnHeaderHeadqurterCountry.Text = "Ország";
-            this.columnHeaderHeadqurterCountry.Width = 150;
-            // 
-            // columnHeaderHeadqurterZipCode
-            // 
-            this.columnHeaderHeadqurterZipCode.Text = "Irányítószám";
-            this.columnHeaderHeadqurterZipCode.Width = 150;
-            // 
-            // columnHeaderHeadqurterCity
-            // 
-            this.columnHeaderHeadqurterCity.Text = "Település";
-            this.columnHeaderHeadqurterCity.Width = 150;
-            // 
-            // columnHeaderHeadqurterAddress
-            // 
-            this.columnHeaderHeadqurterAddress.Text = "Cím";
-            this.columnHeaderHeadqurterAddress.Width = 150;
-            // 
-            // columnHeaderCompanyPhoneNumber
-            // 
-            this.columnHeaderCompanyPhoneNumber.Text = "Telefonszám";
-            this.columnHeaderCompanyPhoneNumber.Width = 150;
-            // 
-            // columnHeaderCompanyEmailAddress
-            // 
-            this.columnHeaderCompanyEmailAddress.Text = "E-mail cím";
-            this.columnHeaderCompanyEmailAddress.Width = 150;
-            // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -795,9 +455,6 @@
             this.tabPageGuest.ResumeLayout(false);
             this.groupBoxGuest.ResumeLayout(false);
             this.groupBoxGuest.PerformLayout();
-            this.tabPageCompany.ResumeLayout(false);
-            this.groupBoxCompany.ResumeLayout(false);
-            this.groupBoxCompany.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -816,22 +473,9 @@
         private System.Windows.Forms.ColumnHeader columnHeaderGuestAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderGuestPhoneNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderGuestEmailAddress;
-        private System.Windows.Forms.TabPage tabPageCompany;
-        private System.Windows.Forms.ListView listViewCompany;
-        private System.Windows.Forms.ColumnHeader columnHeaderCompanyName;
-        private System.Windows.Forms.ColumnHeader columnHeaderVATNumber;
-        private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterCountry;
-        private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterZipCode;
         private System.Windows.Forms.Button buttonUpdateGuest;
         private System.Windows.Forms.Button buttonDeleteGuest;
         private System.Windows.Forms.Button buttonAddGuest;
-        private System.Windows.Forms.Button buttonUpdateCompany;
-        private System.Windows.Forms.Button buttonDeleteCompany;
-        private System.Windows.Forms.Button buttonAddCompany;
-        private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterCity;
-        private System.Windows.Forms.ColumnHeader columnHeaderHeadqurterAddress;
-        private System.Windows.Forms.ColumnHeader columnHeaderCompanyPhoneNumber;
-        private System.Windows.Forms.ColumnHeader columnHeaderCompanyEmailAddress;
         private System.Windows.Forms.GroupBox groupBoxGuest;
         private System.Windows.Forms.TextBox textBoxGuestEmailAddress;
         private System.Windows.Forms.Label labelName;
@@ -853,28 +497,8 @@
         private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.TextBox textBoxGuestName;
         private System.Windows.Forms.Label labelEmailAddress;
-        private System.Windows.Forms.GroupBox groupBoxCompany;
-        private System.Windows.Forms.TextBox textBoxCompanyEmailAddress;
-        private System.Windows.Forms.Label labelCompanyName;
-        private System.Windows.Forms.TextBox textBoxCompanyPhoneNumber;
-        private System.Windows.Forms.Label labelVATNumber;
-        private System.Windows.Forms.TextBox textBoxHeadquarterCity;
-        private System.Windows.Forms.TextBox textBoxHeadquarterAddress;
-        private System.Windows.Forms.TextBox textBoxHeadquarterZipCode;
-        private System.Windows.Forms.Label labelHeadquarterCountry;
-        private System.Windows.Forms.ComboBox comboBoxHeadquarterCountry;
-        private System.Windows.Forms.Label labelHeadquarterZipCode;
-        private System.Windows.Forms.Label labelHeadquarterCity;
-        private System.Windows.Forms.Label labelHeadquarterAddress;
-        private System.Windows.Forms.TextBox textBoxVATNumber;
-        private System.Windows.Forms.Label labelCompanyPhoneNumber;
-        private System.Windows.Forms.TextBox textBoxCompanyName;
-        private System.Windows.Forms.Label labelCompanyEmailAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderGuestID;
-        private System.Windows.Forms.ColumnHeader columnHeaderCompanyID;
         private System.Windows.Forms.TextBox textBoxGuestID;
         private System.Windows.Forms.Label labelGuestID;
-        private System.Windows.Forms.TextBox textBoxCompanyID;
-        private System.Windows.Forms.Label labelCompanyID;
     }
 }

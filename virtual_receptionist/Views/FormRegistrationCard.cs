@@ -123,11 +123,6 @@ namespace virtual_receptionist.Views
             controller.GetGuestData();
         }
 
-        private void buttonImportCompanyData_Click(object sender, EventArgs e)
-        {
-            controller.GetCompanyData();
-        }
-
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
             if (checkBoxIsCompany.Checked)

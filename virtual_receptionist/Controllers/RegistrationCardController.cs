@@ -44,16 +44,6 @@ namespace virtual_receptionist.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataTable GetCompanyData() //Szétbontás elemi adattípusra az objektum mezőit
-        {
-            repository.GetSpecifiedCompanyData();
-            return new DataTable();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public DataTable GetGuestData() //Szétbontás elemi adattípusra az objektum mezőit
         {
             repository.GetSpecifiedGuestData();

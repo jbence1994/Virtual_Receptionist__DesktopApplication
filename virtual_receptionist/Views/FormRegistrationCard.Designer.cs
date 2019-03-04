@@ -376,7 +376,6 @@
             this.buttonImportCompanyData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonImportCompanyData.UseVisualStyleBackColor = true;
             this.buttonImportCompanyData.Visible = false;
-            this.buttonImportCompanyData.Click += new System.EventHandler(this.buttonImportCompanyData_Click);
             // 
             // groupBoxBillingData
             // 
