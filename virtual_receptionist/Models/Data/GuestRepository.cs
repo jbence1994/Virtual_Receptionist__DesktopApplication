@@ -79,7 +79,7 @@ namespace virtual_receptionist.Models.Data
 
             foreach (DataRow row in dt.Rows)
             {
-                int id = int.Parse(row["ID"].ToString());
+                int id = Convert.ToInt32(row["ID"]);
                 string name = row["CompanyName"].ToString();
                 string vatNumber = row["VATNumber"].ToString();
                 string country = row["CountryName"].ToString();
@@ -187,6 +187,10 @@ namespace virtual_receptionist.Models.Data
             database.DML(sql);
         }
 
+        #endregion
+
+        #region Üzleti logika
+
         /// <summary>
         /// Metódus, amely visszaadja a soron következő vendégazonosítót adatbázisból
         /// </summary>
@@ -214,10 +218,6 @@ namespace virtual_receptionist.Models.Data
 
             return nextID + 1;
         }
-
-        #endregion
-
-        #region Üzleti logika
 
         /// <summary>
         /// 

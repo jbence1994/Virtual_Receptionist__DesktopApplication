@@ -8,6 +8,11 @@
         #region Adattagok
 
         /// <summary>
+        /// Szoba azonosítója
+        /// </summary>
+        private int id;
+
+        /// <summary>
         /// Szoba elnevezése
         /// </summary>
         private string name;
@@ -34,12 +39,14 @@
         /// <summary>
         /// Room osztály konstruktora
         /// </summary>
+        /// <param name="id">Szoba azonosítója</param>
         /// <param name="name">Szoba elnevezése</param>
         /// <param name="number">Szobaszám</param>
         /// <param name="category">Szobakategória</param>
         /// <param name="capacity">Szoba férőhelye</param>
-        public Room(string name, int number, string category, int capacity)
+        public Room(int id, string name, int number, string category, int capacity)
         {
+            this.id = id;
             this.name = name;
             this.number = number;
             this.category = category;
@@ -56,6 +63,15 @@
         #endregion
 
         #region Getter és setter tulajdonságok
+
+        /// <summary>
+        /// Szoba azonosítója
+        /// </summary>
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         /// <summary>
         /// Szoba elnevezése
@@ -103,7 +119,7 @@
         /// <returns>Visszaadja a Room típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{name} {number} {category} {capacity}";
+            return $"{id} {name} {number} {category} {capacity}";
         }
 
         #endregion

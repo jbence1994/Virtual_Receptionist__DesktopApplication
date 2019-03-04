@@ -45,17 +45,18 @@ namespace virtual_receptionist.Models.Data
         private void UploadRoomsList()
         {
             string sql =
-                "SELECT room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
+                "SELECT room.ID, room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
+                int id = Convert.ToInt32(row["ID"]);
                 string name = row["Name"].ToString();
                 int number = int.Parse(row["Number"].ToString());
                 string category = row["BillingItemName"].ToString();
                 int capacity = int.Parse(row["Capacity"].ToString());
 
-                Room roomInstance = new Room(name, number, category, capacity);
+                Room roomInstance = new Room(id, name, number, category, capacity);
                 rooms.Add(roomInstance);
             }
         }
