@@ -1,7 +1,4 @@
-﻿using System.Data;
-using System.Collections.Generic;
-using virtual_receptionist.Models.ORM;
-using virtual_receptionist.Models.DatabaseConnection;
+﻿using virtual_receptionist.Models.DatabaseConnection;
 
 namespace virtual_receptionist.Models.Data
 {
