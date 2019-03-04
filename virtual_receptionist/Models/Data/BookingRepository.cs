@@ -44,8 +44,6 @@ namespace virtual_receptionist.Models.Data
         /// </summary>
         private void UploadRoomsList()
         {
-            List<Room> rooms = new List<Room>();
-
             string sql =
                 "SELECT room.ID, room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
             DataTable dt = database.DQL(sql);
@@ -61,8 +59,6 @@ namespace virtual_receptionist.Models.Data
                 Room roomInstance = new Room(id, name, number, category, capacity);
                 rooms.Add(roomInstance);
             }
-
-            return rooms;
         }
 
         /// <summary>
@@ -70,8 +66,6 @@ namespace virtual_receptionist.Models.Data
         /// </summary>
         private void UploadBookingsList()
         {
-            List<Booking> guestBookings = new List<Booking>();
-
             string sql =
                 "SELECT guest_booking.ID, guest.Name, room.Number, guest_booking.NumberOfGuests, guest_booking.ArrivalDate, guest_booking.DepartureDate FROM guest_booking, guest, room WHERE guest_booking.GuestID = guest.ID AND guest_booking.RoomID = room.ID";
             DataTable dt = database.DQL(sql);
@@ -94,12 +88,9 @@ namespace virtual_receptionist.Models.Data
                 DateTime arrival = (DateTime) row["ArrivalDate"];
                 DateTime departure = (DateTime) row["DepartureDate"];
 
-                Booking bookingInstance =
-                    new GuestBooking(id, guest, room, numberOfGuests, arrival, departure);
-                guestBookings.Add(bookingInstance);
+                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
+                bookings.Add(bookingInstance);
             }
-
-            return guestBookings;
         }
 
         #endregion
@@ -121,7 +112,7 @@ namespace virtual_receptionist.Models.Data
         /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
         public List<Booking> GetBookings()
         {
-            return guestBookings;
+            return bookings;
         }
 
         #endregion
