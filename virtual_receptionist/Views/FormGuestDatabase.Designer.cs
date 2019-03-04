@@ -69,6 +69,7 @@
             this.columnHeaderGuestAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonRefreshDatabase = new System.Windows.Forms.Button();
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPageGuest.SuspendLayout();
             this.groupBoxCRUD.SuspendLayout();
@@ -102,6 +103,7 @@
             // 
             this.groupBoxCRUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxCRUD.Controls.Add(this.buttonRefreshDatabase);
             this.groupBoxCRUD.Controls.Add(this.labelGuestID);
             this.groupBoxCRUD.Controls.Add(this.buttonDeleteGuest);
             this.groupBoxCRUD.Controls.Add(this.buttonUpdateGuest);
@@ -438,6 +440,20 @@
             this.columnHeaderGuestEmailAddress.Text = "E-mail cím";
             this.columnHeaderGuestEmailAddress.Width = 150;
             // 
+            // buttonRefreshDatabase
+            // 
+            this.buttonRefreshDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefreshDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRefreshDatabase.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefreshDatabase.Image")));
+            this.buttonRefreshDatabase.Location = new System.Drawing.Point(909, 43);
+            this.buttonRefreshDatabase.Name = "buttonRefreshDatabase";
+            this.buttonRefreshDatabase.Size = new System.Drawing.Size(157, 64);
+            this.buttonRefreshDatabase.TabIndex = 39;
+            this.buttonRefreshDatabase.Text = "Vendégadatbázis frissítése";
+            this.buttonRefreshDatabase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonRefreshDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonRefreshDatabase.UseVisualStyleBackColor = true;
+            // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,5 +516,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderGuestID;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelGuestID;
+        private System.Windows.Forms.Button buttonRefreshDatabase;
     }
 }
