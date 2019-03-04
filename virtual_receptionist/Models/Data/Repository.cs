@@ -17,11 +17,6 @@ namespace virtual_receptionist.Models.Data
         /// </summary>
         protected Database database;
 
-        /// <summary>
-        /// Országokat tartalmazó lista
-        /// </summary>
-        private List<Country> countries;
-
         #endregion
 
         #region Konstruktor
@@ -32,42 +27,6 @@ namespace virtual_receptionist.Models.Data
         public Repository()
         {
             database = Database.GetDatabaseInstance();
-            countries = new List<Country>();
-        }
-
-        #endregion
-
-        #region Adatelérési és adatfeltöltő metódusok
-
-        /// <summary>
-        /// Metódus, amely adatbázisból feltölti az országok adatait tartalmazó listát
-        /// </summary>
-        private void UploadCountriesList()
-        {
-            string sql = "SELECT * FROM country";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                string name = row["CountryName"].ToString();
-
-                Country countryInstance = new Country(name);
-                countries.Add(countryInstance);
-            }
-        }
-
-        /// <summary>
-        /// Metódus, amely feltölti az országokat tartalmazó listát adatbázisból
-        /// </summary>
-        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
-        public List<Country> Countries()
-        {
-            if (countries.Count == 0)
-            {
-                UploadCountriesList();
-            }
-
-            return countries;
         }
 
         #endregion

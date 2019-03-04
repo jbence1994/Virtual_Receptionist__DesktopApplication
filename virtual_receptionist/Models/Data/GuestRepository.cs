@@ -17,6 +17,11 @@ namespace virtual_receptionist.Models.Data
         /// </summary>
         private List<Guest> guests;
 
+        /// <summary>
+        /// Országokat tartalmazó lista
+        /// </summary>
+        private List<Country> countries;
+
         #endregion
 
         #region Konstruktor
@@ -27,11 +32,12 @@ namespace virtual_receptionist.Models.Data
         public GuestRepository()
         {
             guests = new List<Guest>();
+            countries = new List<Country>();
         }
 
         #endregion
 
-        #region Adatfeltöltő és adatmanipulúciós metódusok
+        #region Adatfeltöltő metódusok
 
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a vendégek adatait tartalmazó listát
@@ -63,6 +69,27 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
+        /// Metódus, amely adatbázisból feltölti az országok adatait tartalmazó listát
+        /// </summary>
+        private void UploadCountriesList()
+        {
+            string sql = "SELECT * FROM country";
+            DataTable dt = database.DQL(sql);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string name = row["CountryName"].ToString();
+
+                Country countryInstance = new Country(name);
+                countries.Add(countryInstance);
+            }
+        }
+
+        #endregion
+
+        #region Adatelérési metódusok
+
+        /// <summary>
         /// Metódus, amely feltölti a vendégeket tartalmazó listát adatbázisból
         /// </summary>
         /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
@@ -75,6 +102,24 @@ namespace virtual_receptionist.Models.Data
 
             return guests;
         }
+
+        /// <summary>
+        /// Metódus, amely feltölti az országokat tartalmazó listát adatbázisból
+        /// </summary>
+        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
+        public List<Country> Countries()
+        {
+            if (countries.Count == 0)
+            {
+                UploadCountriesList();
+            }
+
+            return countries;
+        }
+
+        #endregion
+
+        #region Adatmanipulációs metódusok
 
         /// <summary>
         /// Meglévő vendég törlése adatbázisból
