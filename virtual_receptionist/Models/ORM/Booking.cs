@@ -3,41 +3,41 @@
 namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Foglalások egyed (absztrakt)
+    /// Foglalások egyed
     /// </summary>
-    public abstract class Booking
+    public class Booking
     {
         #region Adattagok
 
         /// <summary>
         /// Foglalás azonosító
         /// </summary>
-        protected int id;
+        private int id;
 
         /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
-        protected Guest guest;
+        private Guest guest;
 
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
-        protected Room room;
+        private Room room;
 
         /// <summary>
         /// Vendégek száma
         /// </summary>
-        protected int numberOfGuests;
+        private int numberOfGuests;
 
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
-        protected DateTime arrivalDate;
+        private DateTime arrivalDate;
 
         /// <summary>
         /// Távozás dátuma
         /// </summary>
-        protected DateTime departureDate;
+        private DateTime departureDate;
 
         #endregion
 
