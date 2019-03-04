@@ -178,7 +178,7 @@ namespace virtual_receptionist.Models.Data
 
             List<Booking> bookingsByArrivalDate = new List<Booking>();
 
-            foreach (Booking booking in bookingsByArrivalDate)
+            foreach (Booking booking in bookings)
             {
                 if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
                 {
