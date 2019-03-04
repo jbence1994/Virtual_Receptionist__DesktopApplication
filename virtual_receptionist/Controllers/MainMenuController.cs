@@ -7,7 +7,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Főmenü vezérlője
     /// </summary>
-    public class MainMenuController
+    public class MainMenuController : Controller
     {
         #region Adattagok
 

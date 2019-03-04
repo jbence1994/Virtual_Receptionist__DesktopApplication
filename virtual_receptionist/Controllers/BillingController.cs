@@ -8,7 +8,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Számlázás modul vezérlője
     /// </summary>
-    public class BillingController
+    public class BillingController : Controller
     {
         #region Adattagok
 

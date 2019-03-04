@@ -8,7 +8,7 @@ namespace virtual_receptionist.Controllers
     /// <summary>
     /// Vendégadatbázis-kezelő modul vezérlője
     /// </summary>
-    public class GuestDatabaseController
+    public class GuestDatabaseController : Controller
     {
         #region Adattagok
 
@@ -52,7 +52,7 @@ namespace virtual_receptionist.Controllers
             guestDataTable.Columns.Add("PhoneNumber", typeof(string));
             guestDataTable.Columns.Add("EmailAddress", typeof(string));
 
-            foreach (var guest in repository.GetGuests())
+            foreach (Guest guest in repository.GetGuests())
             {
                 guestDataTable.Rows.Add(guest.ID, guest.Name, guest.DocumentNumber,
                     guest.Citizenship, guest.BirthDate, guest.Country, guest.ZipCode,
@@ -68,7 +68,7 @@ namespace virtual_receptionist.Controllers
         /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
         public string SetSelectedCountry(string selectedCountryInTable)
         {
-            List<string> countries = GetCountries();
+            List<string> countries = null;
 
             string selectedCountry = null;
 
