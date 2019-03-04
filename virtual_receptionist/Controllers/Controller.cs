@@ -39,7 +39,6 @@ namespace virtual_receptionist.Controllers
         public List<string> GetCountries()
         {
             List<string> countries = new List<string>();
-            countries.Add("Válasszon!");
 
             foreach (Country country in repository.Countries())
             {
