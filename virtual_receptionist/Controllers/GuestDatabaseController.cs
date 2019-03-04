@@ -68,7 +68,7 @@ namespace virtual_receptionist.Controllers
         /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
         public string SetSelectedCountry(string selectedCountryInTable)
         {
-            List<string> countries = null;
+            List<string> countries = GetCountries();
 
             string selectedCountry = null;
 
