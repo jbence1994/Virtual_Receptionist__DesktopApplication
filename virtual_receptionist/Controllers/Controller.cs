@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using virtual_receptionist.Models.Data;
-using virtual_receptionist.Models.ORM;
+﻿using virtual_receptionist.Models.Data;
 
 namespace virtual_receptionist.Controllers
 {
@@ -26,26 +24,6 @@ namespace virtual_receptionist.Controllers
         public Controller()
         {
             repository = new Repository();
-        }
-
-        #endregion
-
-        #region Metódusok
-
-        /// <summary>
-        /// Országok neveit listában visszaadó metódus
-        /// </summary>
-        /// <returns>Országlistával tér vissza a függvény</returns>
-        public List<string> GetCountries()
-        {
-            List<string> countries = new List<string>();
-
-            foreach (Country country in repository.Countries())
-            {
-                countries.Add(country.Name);
-            }
-
-            return countries;
         }
 
         #endregion

@@ -1,6 +1,5 @@
 ﻿using System.Data;
-using virtual_receptionist.Controllers.Exceptions;
-using virtual_receptionist.Controllers.Validation;
+using System.Collections.Generic;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
 
@@ -64,14 +63,32 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
+        /// Országok neveit listában visszaadó metódus
+        /// </summary>
+        /// <returns>Országlistával tér vissza a függvény</returns>
+        public List<string> GetCountries()
+        {
+            List<string> countries = new List<string>();
+
+            foreach (Country country in repository.Countries())
+            {
+                countries.Add(country.Name);
+            }
+
+            return countries;
+        }
+
+        /// <summary>
         /// Metódus, amely beállítja a vendégtáblázat alapján ComboBoxban a kijelölt rekord országát
         /// </summary>
         /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
         public string SetSelectedCountry(string selectedCountryInTable)
         {
+            List<string> countries = GetCountries();
+
             string selectedCountry = null;
 
-            foreach (string country in GetCountries())
+            foreach (string country in countries)
             {
                 if (selectedCountryInTable.Contains(country))
                 {
