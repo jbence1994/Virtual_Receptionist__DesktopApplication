@@ -56,6 +56,7 @@
             this.panelMainMenu = new System.Windows.Forms.Panel();
             this.panelWelcome = new System.Windows.Forms.Panel();
             this.labelWelcomeTitle = new System.Windows.Forms.Label();
+            this.labelIntroduction = new System.Windows.Forms.Label();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -336,9 +337,10 @@
             // 
             // panelWelcome
             // 
-            this.panelWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panelWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelWelcome.Controls.Add(this.labelIntroduction);
             this.panelWelcome.Controls.Add(this.labelWelcomeTitle);
             this.panelWelcome.Controls.Add(this.buttonLogout);
             this.panelWelcome.Location = new System.Drawing.Point(273, 3);
@@ -356,6 +358,16 @@
             this.labelWelcomeTitle.Size = new System.Drawing.Size(637, 25);
             this.labelWelcomeTitle.TabIndex = 0;
             this.labelWelcomeTitle.Text = "Üdvözöljük a Virtual Receptionist adminisztrációs felületén!";
+            // 
+            // labelIntroduction
+            // 
+            this.labelIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelIntroduction.AutoSize = true;
+            this.labelIntroduction.Location = new System.Drawing.Point(40, 122);
+            this.labelIntroduction.Name = "labelIntroduction";
+            this.labelIntroduction.Size = new System.Drawing.Size(604, 39);
+            this.labelIntroduction.TabIndex = 30;
+            this.labelIntroduction.Text = resources.GetString("labelIntroduction.Text");
             // 
             // FormMainMenu
             // 
@@ -418,5 +430,6 @@
         private System.Windows.Forms.Panel panelMainMenu;
         private System.Windows.Forms.Panel panelWelcome;
         private System.Windows.Forms.Label labelWelcomeTitle;
+        private System.Windows.Forms.Label labelIntroduction;
     }
 }
