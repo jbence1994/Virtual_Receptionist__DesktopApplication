@@ -40,14 +40,14 @@ namespace virtual_receptionist.Views
 
             foreach (DataRow row in guests.Rows)
             {
-                ListViewItem privateGuests = new ListViewItem(row[0].ToString());
+                ListViewItem listViewItemGuests = new ListViewItem(row[0].ToString());
 
                 for (int i = 1; i < guests.Columns.Count; i++)
                 {
-                    privateGuests.SubItems.Add(row[i].ToString());
+                    listViewItemGuests.SubItems.Add(row[i].ToString());
                 }
 
-                listViewGuest.Items.Add(privateGuests);
+                listViewGuest.Items.Add(listViewItemGuests);
             }
 
             textBoxID.Text = controller.GetNextGuestID();
