@@ -171,19 +171,22 @@ namespace virtual_receptionist.Models.Data
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetGuestBookingsByArrivalDate(string arrivalDate)
         {
+            if (bookings.Count == 0)
             {
-                List<Booking> bookingsByArrivalDate = new List<Booking>();
-
-                foreach (Booking booking in bookingsByArrivalDate)
-                {
-                    if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
-                    {
-                        bookingsByArrivalDate.Add(booking);
-                    }
-                }
-
-                return bookingsByArrivalDate;
+                UploadBookingsList();
             }
+
+            List<Booking> bookingsByArrivalDate = new List<Booking>();
+
+            foreach (Booking booking in bookingsByArrivalDate)
+            {
+                if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
+                {
+                    bookingsByArrivalDate.Add(booking);
+                }
+            }
+
+            return bookingsByArrivalDate;
         }
 
         /// <summary>
@@ -193,6 +196,11 @@ namespace virtual_receptionist.Models.Data
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetGuestBookingsByDepartureDate(string departureDate)
         {
+            if (bookings.Count == 0)
+            {
+                UploadBookingsList();
+            }
+
             List<Booking> bookingsByDepartureDate = new List<Booking>();
 
             foreach (Booking booking in bookings)

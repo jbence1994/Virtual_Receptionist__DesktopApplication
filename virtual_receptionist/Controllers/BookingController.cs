@@ -69,7 +69,6 @@ namespace virtual_receptionist.Controllers
             DataTable bookingsDataTableByArrival = new DataTable();
             bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
             bookingsDataTableByArrival.Columns.Add("GuestName", typeof(string));
-            bookingsDataTableByArrival.Columns.Add("CompanyName", typeof(string));
             bookingsDataTableByArrival.Columns.Add("RoomNumber", typeof(int));
             bookingsDataTableByArrival.Columns.Add("NumberOfGuests", typeof(int));
             bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(DateTime));
@@ -105,8 +104,7 @@ namespace virtual_receptionist.Controllers
             foreach (Booking booking in bookingsByDeparture)
             {
                 bookingsDataTableByDeparture.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests,
-                    booking.ArrivalDate, booking.DepartureDate);
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate);
             }
 
             return bookingsDataTableByDeparture;
