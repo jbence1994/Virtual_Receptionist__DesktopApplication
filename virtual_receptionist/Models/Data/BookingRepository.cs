@@ -18,14 +18,9 @@ namespace virtual_receptionist.Models.Data
         private List<Room> rooms;
 
         /// <summary>
-        /// Céges foglalásokat tartalmazó lista
+        /// Foglalásokat tartalmazó lista
         /// </summary>
-        private List<Booking> companyBookings;
-
-        /// <summary>
-        /// Vednégfoglalásokat tartalmazó lista
-        /// </summary>
-        private List<Booking> guestBookings;
+        private List<Booking> bookings;
 
         #endregion
 
@@ -36,9 +31,8 @@ namespace virtual_receptionist.Models.Data
         /// </summary>
         public BookingRepository()
         {
-            rooms = UploadRoomsList();
-            companyBookings = UploadCompanyBookingsList();
-            guestBookings = UploadGuestBookingsList();
+            rooms = new List<Room>();
+            bookings = new List<Booking>();
         }
 
         #endregion
@@ -48,8 +42,7 @@ namespace virtual_receptionist.Models.Data
         /// <summary>
         /// Metódus, amely adatbázisból feltölti a szobák adatait tartalmazó listát
         /// </summary>
-        /// <returns>Feltöltött listát ad vissza a metódus</returns>
-        private List<Room> UploadRoomsList()
+        private void UploadRoomsList()
         {
             List<Room> rooms = new List<Room>();
 
@@ -73,53 +66,9 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti a céges foglalások adatait tartalmazó listát
-        /// </summary>
-        /// <returns>Feltöltött listát ad vissza a metódus</returns>
-        private List<Booking> UploadCompanyBookingsList()
-        {
-            List<Booking> companyBookings = new List<Booking>();
-
-            string sql =
-                "SELECT company_booking.ID, guest.Name, company.CompanyName, room.Number, company_booking.NumberOfGuests, company_booking.ArrivalDate, company_booking.DepartureDate FROM company_booking, guest, company, room WHERE company_booking.GuestID = guest.ID AND company_booking.RoomID = room.ID AND booking.CompanyID = company.ID";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int id = Convert.ToInt32(row["ID"]);
-
-                Guest guest = new Guest()
-                {
-                    Name = row["Name"].ToString()
-                };
-
-                Company company = new Company()
-                {
-                    Name = row["CompanyName"].ToString()
-                };
-
-                Room room = new Room()
-                {
-                    Number = int.Parse(row["Number"].ToString())
-                };
-
-                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
-                DateTime arrival = (DateTime) row["ArrivalDate"];
-                DateTime departure = (DateTime) row["DepartureDate"];
-
-                Booking bookingInstance =
-                    new CompanyBooking(id, guest, company, room, numberOfGuests, arrival, departure);
-                companyBookings.Add(bookingInstance);
-            }
-
-            return companyBookings;
-        }
-
-        /// <summary>
         /// Metódus, amely adatbázisból feltölti a foglalások adatait tartalmazó listát
         /// </summary>
-        /// <returns>Feltöltött listát ad vissza a metódus</returns>
-        private List<Booking> UploadGuestBookingsList()
+        private void UploadBookingsList()
         {
             List<Booking> guestBookings = new List<Booking>();
 
@@ -167,19 +116,10 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Metódus, amely feltölti a céges foglalásokat tartalmazó listát adatbázisból
-        /// </summary>
-        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
-        public List<Booking> GetCompanyBookings()
-        {
-            return companyBookings;
-        }
-
-        /// <summary>
         /// Metódus, amely feltölti a foglalásokat tartalmazó listát adatbázisból
         /// </summary>
         /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
-        public List<Booking> GetGuestBookings()
+        public List<Booking> GetBookings()
         {
             return guestBookings;
         }
@@ -224,46 +164,6 @@ namespace virtual_receptionist.Models.Data
         #region Üzleti logika
 
         /// <summary>
-        /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a céges foglalásokat, amelyek a paraméterben megadott dátum szerint érkeznek és egy új listába menti őket
-        /// </summary>
-        /// <param name="arrivalDate">Érkezés dátuma</param>
-        /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
-        public List<Booking> GetCompanyBookingsByArrivalDate(string arrivalDate)
-        {
-            List<Booking> bookingsByArrivalDate = new List<Booking>();
-
-            foreach (Booking booking in companyBookings)
-            {
-                if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
-                {
-                    bookingsByArrivalDate.Add(booking);
-                }
-            }
-
-            return bookingsByArrivalDate;
-        }
-
-        /// <summary>
-        /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a céges foglalásokat, amelyek a paraméterben megadott dátum szerint távoznak és egy új listába menti őket
-        /// </summary>
-        /// <param name="departureDate"></param>
-        /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
-        public List<Booking> GetCompanyBookingsByDepartureDate(string departureDate)
-        {
-            List<Booking> bookingsByDepartureDate = new List<Booking>();
-
-            foreach (Booking booking in companyBookings)
-            {
-                if (booking.DepartureDate == DateTime.Parse(departureDate))
-                {
-                    bookingsByDepartureDate.Add(booking);
-                }
-            }
-
-            return bookingsByDepartureDate;
-        }
-
-        /// <summary>
         /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek a paraméterben megadott dátum szerint érkeznek és egy új listába menti őket
         /// </summary>
         /// <param name="arrivalDate">Érkezés dátuma</param>
@@ -273,7 +173,7 @@ namespace virtual_receptionist.Models.Data
             {
                 List<Booking> bookingsByArrivalDate = new List<Booking>();
 
-                foreach (Booking booking in guestBookings)
+                foreach (Booking booking in bookingsByArrivalDate)
                 {
                     if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
                     {
@@ -294,7 +194,7 @@ namespace virtual_receptionist.Models.Data
         {
             List<Booking> bookingsByDepartureDate = new List<Booking>();
 
-            foreach (Booking booking in guestBookings)
+            foreach (Booking booking in bookings)
             {
                 if (booking.DepartureDate == DateTime.Parse(departureDate))
                 {

@@ -68,7 +68,6 @@
     <Compile Include="Models\Data\AccomodationRepository.cs" />
     <Compile Include="Models\ORM\Accomodation.cs" />
     <Compile Include="Models\ORM\BillingItemCategory.cs" />
-    <Compile Include="Models\ORM\Company.cs" />
     <Compile Include="Models\Data\IManipulable.cs" />
     <Compile Include="Controllers\RegistrationCardController.cs" />
     <Compile Include="Controllers\BookingController.cs" />

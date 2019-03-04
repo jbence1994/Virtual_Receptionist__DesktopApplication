@@ -8,19 +8,14 @@ namespace virtual_receptionist.Models.Data
     /// <summary>
     /// Vendég adattár
     /// </summary>
-    public class GuestRepository : Repository, IManipulable<Guest>, IManipulable<Company>
+    public class GuestRepository : Repository, IManipulable<Guest>
     {
         #region Adattagok
 
         /// <summary>
-        /// Magánvendégeket tartalmazó lista
+        /// Vendégeket tartalmazó lista
         /// </summary>
         private List<Guest> guests;
-
-        /// <summary>
-        /// Cégeket tartalmazó lista
-        /// </summary>
-        private List<Company> companies;
 
         #endregion
 
@@ -32,7 +27,6 @@ namespace virtual_receptionist.Models.Data
         public GuestRepository()
         {
             guests = new List<Guest>();
-            companies = new List<Company>();
         }
 
         #endregion
@@ -69,33 +63,6 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Metódus, amely adatbázisból feltölti a cégek adatait tartalmazó listát
-        /// </summary>
-        private void UploadCompaniesList()
-        {
-            string sql =
-                "SELECT company.ID, company.CompanyName, company.VATNumber, country.CountryName, company.ZipCode, company.City, company.Address, company.PhoneNumber, company.EmailAddress FROM company, country WHERE company.Country = country.ID";
-            DataTable dt = database.DQL(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                int id = Convert.ToInt32(row["ID"]);
-                string name = row["CompanyName"].ToString();
-                string vatNumber = row["VATNumber"].ToString();
-                string country = row["CountryName"].ToString();
-                string zipCode = row["ZipCode"].ToString();
-                string city = row["City"].ToString();
-                string address = row["Address"].ToString();
-                string phoneNumber = row["PhoneNumber"].ToString();
-                string emailAddress = row["EmailAddress"].ToString();
-
-                Company companyInstance = new Company(id, name, vatNumber, country, zipCode, city, address, phoneNumber,
-                    emailAddress);
-                companies.Add(companyInstance);
-            }
-        }
-
-        /// <summary>
         /// Metódus, amely feltölti a vendégeket tartalmazó listát adatbázisból
         /// </summary>
         /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
@@ -110,36 +77,12 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Metódus, amely feltölti a cégeket tartalmazó listát adatbázisból
-        /// </summary>
-        /// <returns>Az adatokkal feltöltött listával tér vissza a metódus</returns>
-        public List<Company> GetCompanies()
-        {
-            if (companies.Count == 0)
-            {
-                UploadCompaniesList();
-            }
-
-            return companies;
-        }
-
-        /// <summary>
         /// Meglévő vendég törlése adatbázisból
         /// </summary>
         /// <param name="guest">Guest objektum</param>
         public void Delete(Guest guest)
         {
             string sql = $"DELETE FROM guest WHERE guest.ID LIKE \"{guest.ID}\"";
-            database.DML(sql);
-        }
-
-        /// <summary>
-        /// Meglévő céges vendég törlése adatbázisból
-        /// </summary>
-        /// <param name="company">Company objektum</param>
-        public void Delete(Company company)
-        {
-            string sql = $"DELETE FROM company WHERE company.ID LIKE \"{company.ID}\"";
             database.DML(sql);
         }
 
@@ -155,17 +98,6 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Meglévő vendég módosítása adatbázisban
-        /// </summary>
-        /// <param name="company">Company objektum</param>
-        public void Update(Company company)
-        {
-            string sql =
-                $"UPDATE company SET company.CompanyName=\"{company.Name}\", company.VATNumber=\"{company.VatNumber}\", company.Country=(SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{company.Country}\"), company.ZipCode=\"{company.ZipCode}\", company.City=\"{company.City}\", company.Address=\"{company.Address}\", company.PhoneNumber=\"{company.PhoneNumber}\", company.EmailAddress=\"{company.EmailAddress}\" WHERE company.ID LIKE \"{company.ID}\"";
-            database.DML(sql);
-        }
-
-        /// <summary>
         /// Új vendég létrehozása adatbázisban
         /// </summary>
         /// <param name="guest">Guest objektum</param>
@@ -173,17 +105,6 @@ namespace virtual_receptionist.Models.Data
         {
             string sql =
                 $"INSERT INTO guest(Name, DocumentNumber, Citizenship, BirthDate, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{guest.DocumentNumber}\", \"{guest.Citizenship}\", \"{guest.BirthDate}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{guest.Country}\"), \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\")";
-            database.DML(sql);
-        }
-
-        /// <summary>
-        /// Meglévő vendég módosítása adatbázisban
-        /// </summary>
-        /// <param name="company">Company objektum</param>
-        public void Create(Company company)
-        {
-            string sql =
-                $"INSERT INTO company(CompanyName, VATNumber, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{company.Name}\", \"{company.VatNumber}\", (SELECT Country.ID FROM Country WHERE Country.CountryName LIKE \"{company.Country}\"), \"{company.ZipCode}\", \"{company.City}\", \"{company.Address}\", \"{company.PhoneNumber}\", \"{company.EmailAddress}\")";
             database.DML(sql);
         }
 
@@ -206,31 +127,9 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja a soron következő cégazonosítót adatbázisból
-        /// </summary>
-        /// <returns>Az adatbázisban soron következő cégazonosítót adja vissza a függvény</returns>
-        public int GetNextCompanyID()
-        {
-            string sql = "SELECT MAX(company.ID) FROM company";
-            string maxID = database.ScalarDQL(sql);
-
-            int.TryParse(maxID, out int nextID);
-
-            return nextID + 1;
-        }
-
-        /// <summary>
         /// 
         /// </summary>
         public void GetSpecifiedGuestData()
-        {
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void GetSpecifiedCompanyData()
         {
 
         }
