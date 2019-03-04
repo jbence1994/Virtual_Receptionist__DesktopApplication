@@ -67,7 +67,7 @@ namespace virtual_receptionist.Models.Data
         private void UploadBookingsList()
         {
             string sql =
-                "SELECT guest_booking.ID, guest.Name, room.Number, guest_booking.NumberOfGuests, guest_booking.ArrivalDate, guest_booking.DepartureDate FROM guest_booking, guest, room WHERE guest_booking.GuestID = guest.ID AND guest_booking.RoomID = room.ID";
+                "SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
