@@ -3,46 +3,41 @@
 namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
-    /// Foglalások egyed
+    /// Foglalások egyed (absztrakt)
     /// </summary>
-    public class Booking
+    public abstract class Booking
     {
         #region Adattagok
 
         /// <summary>
         /// Foglalás azonosító
         /// </summary>
-        private int id;
+        protected int id;
 
         /// <summary>
         /// Guest modell osztály egy példánya
         /// </summary>
-        private Guest guest;
-
-        /// <summary>
-        /// Company modell osztály egy példánya
-        /// </summary>
-        private Company company;
+        protected Guest guest;
 
         /// <summary>
         /// Room modell osztály egy példánya
         /// </summary>
-        private Room room;
+        protected Room room;
 
         /// <summary>
         /// Vendégek száma
         /// </summary>
-        private int numberOfGuests;
+        protected int numberOfGuests;
 
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
-        private DateTime arrivalDate;
+        protected DateTime arrivalDate;
 
         /// <summary>
         /// Távozás dátuma
         /// </summary>
-        private DateTime departureDate;
+        protected DateTime departureDate;
 
         #endregion
 
@@ -53,21 +48,26 @@ namespace virtual_receptionist.Models.ORM
         /// </summary>
         /// <param name="id">Foglalás azonosító</param>
         /// <param name="guest">Guest egyed</param>
-        /// <param name="company">Company egyed</param>
         /// <param name="room">Room egyed</param>
         /// <param name="numberOfGuests">Vendégek száma</param>
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
-        public Booking(int id, Guest guest, Company company, Room room, int numberOfGuests, DateTime arrivalDate,
+        public Booking(int id, Guest guest, Room room, int numberOfGuests, DateTime arrivalDate,
             DateTime departureDate)
         {
             this.id = id;
             this.guest = guest;
-            this.company = company;
             this.room = room;
             this.numberOfGuests = numberOfGuests;
             this.arrivalDate = arrivalDate;
             this.departureDate = departureDate;
+        }
+
+        /// <summary>
+        /// Booking osztály üres konstruktora
+        /// </summary>
+        public Booking()
+        {
         }
 
         #endregion
@@ -90,15 +90,6 @@ namespace virtual_receptionist.Models.ORM
         {
             get { return guest; }
             set { guest = value; }
-        }
-
-        /// <summary>
-        /// Company modell osztály egy példánya
-        /// </summary>
-        public Company Company
-        {
-            get { return company; }
-            set { company = value; }
         }
 
         /// <summary>
@@ -142,12 +133,12 @@ namespace virtual_receptionist.Models.ORM
         #region Metódusok
 
         /// <summary>
-        /// Reservation osztályból készült objektum string típusúvá alakítása
+        /// Booking osztályból készült objektum string típusúvá alakítása
         /// </summary>
-        /// <returns>Visszaadja a Reservation típusú objektumot string típusúra alakítva</returns>
+        /// <returns>Visszaadja a Booking típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{id} {guest} {company} {room} {numberOfGuests} {arrivalDate} {departureDate}";
+            return $"{id} {guest} {room} {numberOfGuests} {arrivalDate} {departureDate}";
         }
 
         #endregion
