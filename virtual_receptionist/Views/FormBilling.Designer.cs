@@ -50,7 +50,7 @@
             this.columnHeaderArrivalDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDepartureDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxBookingToBill = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBillingName = new System.Windows.Forms.TextBox();
             this.textBoxVATNumber = new System.Windows.Forms.TextBox();
             this.textBoxBillingZipCode = new System.Windows.Forms.TextBox();
             this.labelBillingName = new System.Windows.Forms.Label();
@@ -205,7 +205,7 @@
             this.groupBoxBillingData.Controls.Add(this.labelBillingName);
             this.groupBoxBillingData.Controls.Add(this.textBoxBillingZipCode);
             this.groupBoxBillingData.Controls.Add(this.textBoxVATNumber);
-            this.groupBoxBillingData.Controls.Add(this.textBox1);
+            this.groupBoxBillingData.Controls.Add(this.textBoxBillingName);
             this.groupBoxBillingData.Location = new System.Drawing.Point(12, 469);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
             this.groupBoxBillingData.Size = new System.Drawing.Size(1037, 155);
@@ -277,15 +277,16 @@
             this.groupBoxBookingToBill.TabStop = false;
             this.groupBoxBookingToBill.Text = "Számlázandó foglalások";
             // 
-            // textBox1
+            // textBoxBillingName
             // 
-            this.textBox1.Location = new System.Drawing.Point(247, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxBillingName.Location = new System.Drawing.Point(247, 42);
+            this.textBoxBillingName.Name = "textBoxBillingName";
+            this.textBoxBillingName.Size = new System.Drawing.Size(225, 20);
+            this.textBoxBillingName.TabIndex = 0;
             // 
             // textBoxVATNumber
             // 
+            this.textBoxVATNumber.Enabled = false;
             this.textBoxVATNumber.Location = new System.Drawing.Point(567, 42);
             this.textBoxVATNumber.Name = "textBoxVATNumber";
             this.textBoxVATNumber.Size = new System.Drawing.Size(225, 20);
@@ -358,6 +359,7 @@
             this.checkBoxIsCompany.TabIndex = 10;
             this.checkBoxIsCompany.Text = "Céges számla";
             this.checkBoxIsCompany.UseVisualStyleBackColor = true;
+            this.checkBoxIsCompany.CheckedChanged += new System.EventHandler(this.checkBoxIsCompany_CheckedChanged);
             // 
             // labelBillingZipCode
             // 
@@ -459,7 +461,7 @@
         private System.Windows.Forms.GroupBox groupBoxBookingToBill;
         private System.Windows.Forms.TextBox textBoxBillingZipCode;
         private System.Windows.Forms.TextBox textBoxVATNumber;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBillingName;
         private System.Windows.Forms.Label labelBillingName;
         private System.Windows.Forms.ComboBox comboBoxBIllingCountry;
         private System.Windows.Forms.Label labelBillingAddress;

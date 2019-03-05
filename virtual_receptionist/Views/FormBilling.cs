@@ -51,6 +51,11 @@ namespace virtual_receptionist.Views
             }
         }
 
+        private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxVATNumber.Enabled = checkBoxIsCompany.Checked;
+        }
+
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
             FormBillingItems billingItems = new FormBillingItems();
