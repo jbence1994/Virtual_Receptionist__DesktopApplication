@@ -13,7 +13,12 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Vendég adattár osztály egy példánya
         /// </summary>
-        private GuestRepository repository;
+        private GuestRepository guestRepository;
+
+        /// <summary>
+        /// Foglalások adattár egy példánya
+        /// </summary>
+        private BookingRepository bookingRepository;
 
         #endregion
 
@@ -24,7 +29,8 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public RegistrationCardController()
         {
-            repository = new GuestRepository();
+            guestRepository = new GuestRepository();
+            bookingRepository = new BookingRepository();
         }
 
         #endregion
@@ -45,7 +51,7 @@ namespace virtual_receptionist.Controllers
         /// <returns></returns>
         public DataTable GetGuestData() //Szétbontás elemi adattípusra az objektum mezőit
         {
-            repository.GetSpecifiedGuestData();
+            guestRepository.GetSpecifiedGuestData();
             return new DataTable();
         }
 
