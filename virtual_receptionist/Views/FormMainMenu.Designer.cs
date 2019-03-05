@@ -55,8 +55,8 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.panelMainMenu = new System.Windows.Forms.Panel();
             this.panelWelcome = new System.Windows.Forms.Panel();
-            this.labelWelcomeTitle = new System.Windows.Forms.Label();
             this.labelIntroduction = new System.Windows.Forms.Label();
+            this.labelWelcomeTitle = new System.Windows.Forms.Label();
             this.menuStripMainMenu.SuspendLayout();
             this.statusStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVRLogo)).BeginInit();
@@ -314,7 +314,7 @@
             this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
-            this.buttonLogout.Location = new System.Drawing.Point(561, 556);
+            this.buttonLogout.Location = new System.Drawing.Point(580, 562);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(159, 64);
             this.buttonLogout.TabIndex = 29;
@@ -343,31 +343,31 @@
             this.panelWelcome.Controls.Add(this.labelIntroduction);
             this.panelWelcome.Controls.Add(this.labelWelcomeTitle);
             this.panelWelcome.Controls.Add(this.buttonLogout);
-            this.panelWelcome.Location = new System.Drawing.Point(273, 3);
+            this.panelWelcome.Location = new System.Drawing.Point(266, 0);
             this.panelWelcome.Name = "panelWelcome";
-            this.panelWelcome.Size = new System.Drawing.Size(723, 623);
+            this.panelWelcome.Size = new System.Drawing.Size(742, 629);
             this.panelWelcome.TabIndex = 30;
+            // 
+            // labelIntroduction
+            // 
+            this.labelIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelIntroduction.AutoSize = true;
+            this.labelIntroduction.Location = new System.Drawing.Point(50, 122);
+            this.labelIntroduction.Name = "labelIntroduction";
+            this.labelIntroduction.Size = new System.Drawing.Size(604, 39);
+            this.labelIntroduction.TabIndex = 30;
+            this.labelIntroduction.Text = resources.GetString("labelIntroduction.Text");
             // 
             // labelWelcomeTitle
             // 
             this.labelWelcomeTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelWelcomeTitle.AutoSize = true;
             this.labelWelcomeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelWelcomeTitle.Location = new System.Drawing.Point(38, 61);
+            this.labelWelcomeTitle.Location = new System.Drawing.Point(48, 61);
             this.labelWelcomeTitle.Name = "labelWelcomeTitle";
             this.labelWelcomeTitle.Size = new System.Drawing.Size(637, 25);
             this.labelWelcomeTitle.TabIndex = 0;
             this.labelWelcomeTitle.Text = "Üdvözöljük a Virtual Receptionist adminisztrációs felületén!";
-            // 
-            // labelIntroduction
-            // 
-            this.labelIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.labelIntroduction.AutoSize = true;
-            this.labelIntroduction.Location = new System.Drawing.Point(40, 122);
-            this.labelIntroduction.Name = "labelIntroduction";
-            this.labelIntroduction.Size = new System.Drawing.Size(604, 39);
-            this.labelIntroduction.TabIndex = 30;
-            this.labelIntroduction.Text = resources.GetString("labelIntroduction.Text");
             // 
             // FormMainMenu
             // 
