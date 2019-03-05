@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace virtual_receptionist.Models.ORM
+﻿namespace virtual_receptionist.Models.ORM
 {
     /// <summary>
     /// Foglalások egyed
@@ -39,6 +37,11 @@ namespace virtual_receptionist.Models.ORM
         /// </summary>
         private string departureDate;
 
+        /// <summary>
+        /// Foglalás fizetve van-e
+        /// </summary>
+        private bool paid;
+
         #endregion
 
         #region Konstruktorok
@@ -71,14 +74,16 @@ namespace virtual_receptionist.Models.ORM
         /// <param name="numberOfGuests">Vendégek száma</param>
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
+        /// <param name="paid">Foglalás fizetve van-e</param>
         public Booking(Guest guest, Room room, int numberOfGuests, string arrivalDate,
-            string departureDate)
+            string departureDate, bool paid)
         {
             this.guest = guest;
             this.room = room;
             this.numberOfGuests = numberOfGuests;
             this.arrivalDate = arrivalDate;
             this.departureDate = departureDate;
+            this.paid = paid;
         }
 
         /// <summary>
@@ -146,6 +151,15 @@ namespace virtual_receptionist.Models.ORM
             set { departureDate = value; }
         }
 
+        /// <summary>
+        /// Foglalás fizetve van-e
+        /// </summary>
+        public bool Paid
+        {
+            get { return paid; }
+            set { paid = value; }
+        }
+
         #endregion
 
         #region Metódusok
@@ -156,7 +170,7 @@ namespace virtual_receptionist.Models.ORM
         /// <returns>Visszaadja a Booking típusú objektumot string típusúra alakítva</returns>
         public override string ToString()
         {
-            return $"{id} {guest} {room} {numberOfGuests} {arrivalDate} {departureDate}";
+            return $"{id} {guest} {room} {numberOfGuests} {arrivalDate} {departureDate} {paid}";
         }
 
         #endregion

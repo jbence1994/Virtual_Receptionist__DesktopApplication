@@ -80,7 +80,8 @@ namespace virtual_receptionist.Controllers
                 Number = room
             };
 
-            Booking bookingInstance = new Booking(guestInstance, roomInstance, numberOfGuests, arrival, departure);
+            Booking bookingInstance =
+                new Booking(guestInstance, roomInstance, numberOfGuests, arrival, departure, false);
 
             guestRepository.Create(guestInstance);
             bookingRepository.Create(bookingInstance);
