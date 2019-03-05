@@ -49,8 +49,8 @@ namespace virtual_receptionist.Controllers
             bookingsDataTableByArrival.Columns.Add("GuestName", typeof(string));
             bookingsDataTableByArrival.Columns.Add("RoomNumber", typeof(int));
             bookingsDataTableByArrival.Columns.Add("NumberOfGuests", typeof(int));
-            bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(DateTime));
-            bookingsDataTableByArrival.Columns.Add("DepartureDate", typeof(DateTime));
+            bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(string));
+            bookingsDataTableByArrival.Columns.Add("DepartureDate", typeof(string));
 
             foreach (Booking booking in bookingsByArrival)
             {
@@ -76,8 +76,8 @@ namespace virtual_receptionist.Controllers
             bookingsDataTableByDeparture.Columns.Add("GuestName", typeof(string));
             bookingsDataTableByDeparture.Columns.Add("RoomNumber", typeof(int));
             bookingsDataTableByDeparture.Columns.Add("NumberOfGuests", typeof(int));
-            bookingsDataTableByDeparture.Columns.Add("ArrivalDate", typeof(DateTime));
-            bookingsDataTableByDeparture.Columns.Add("DepartureDate", typeof(DateTime));
+            bookingsDataTableByDeparture.Columns.Add("ArrivalDate", typeof(string));
+            bookingsDataTableByDeparture.Columns.Add("DepartureDate", typeof(string));
 
             foreach (Booking booking in bookingsByDeparture)
             {
