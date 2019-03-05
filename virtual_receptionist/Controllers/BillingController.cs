@@ -81,7 +81,7 @@ namespace virtual_receptionist.Controllers
             double vat = Convert.ToDouble(itemParameters[1].ToString());
             string unit = itemParameters[1].ToString();
             double price = double.Parse(itemParameters[2].ToString());
-            int quantity = int.Parse(itemParameters[3].ToString());
+            int quantity = Convert.ToInt32(itemParameters[3].ToString());
         }
 
         /// <summary>
