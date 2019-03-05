@@ -52,9 +52,9 @@ namespace virtual_receptionist.Models.Data
             {
                 int id = Convert.ToInt32(row["ID"]);
                 string name = row["Name"].ToString();
-                int number = int.Parse(row["Number"].ToString());
+                int number = Convert.ToInt32(row["Number"]);
                 string category = row["BillingItemName"].ToString();
-                int capacity = int.Parse(row["Capacity"].ToString());
+                int capacity = Convert.ToInt32(row["Capacity"]);
 
                 Room roomInstance = new Room(id, name, number, category, capacity);
                 rooms.Add(roomInstance);
@@ -81,12 +81,12 @@ namespace virtual_receptionist.Models.Data
 
                 Room room = new Room()
                 {
-                    Number = int.Parse(row["Number"].ToString())
+                    Number = Convert.ToInt32(row["Number"])
                 };
 
-                int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
-                string arrival = row["ArrivalDate"].ToString();
-                string departure = row["DepartureDate"].ToString();
+                int numberOfGuests = Convert.ToInt32(row["NumberOfGuests"]);
+                string arrival = Convert.ToDateTime(row["ArrivalDate"]).ToString("yyyy-MM-dd").ToString();
+                string departure = Convert.ToDateTime(row["DepartureDate"]).ToString("yyyy-MM-dd").ToString();
 
                 Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
                 bookings.Add(bookingInstance);
