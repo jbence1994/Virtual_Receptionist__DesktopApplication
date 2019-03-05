@@ -91,7 +91,7 @@
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
             this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewItems.Size = new System.Drawing.Size(874, 243);
+            this.dataGridViewItems.Size = new System.Drawing.Size(874, 204);
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
@@ -126,11 +126,11 @@
             // 
             // buttonPrintInvoice
             // 
-            this.buttonPrintInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrintInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
-            this.buttonPrintInvoice.Location = new System.Drawing.Point(892, 222);
+            this.buttonPrintInvoice.Location = new System.Drawing.Point(892, 498);
             this.buttonPrintInvoice.Name = "buttonPrintInvoice";
             this.buttonPrintInvoice.Size = new System.Drawing.Size(157, 64);
             this.buttonPrintInvoice.TabIndex = 5;
@@ -206,16 +206,16 @@
             this.groupBoxBillingData.Controls.Add(this.textBoxBillingZipCode);
             this.groupBoxBillingData.Controls.Add(this.textBoxVATNumber);
             this.groupBoxBillingData.Controls.Add(this.textBoxBillingName);
-            this.groupBoxBillingData.Location = new System.Drawing.Point(12, 469);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(12, 430);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
-            this.groupBoxBillingData.Size = new System.Drawing.Size(1037, 155);
+            this.groupBoxBillingData.Size = new System.Drawing.Size(874, 132);
             this.groupBoxBillingData.TabIndex = 9;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
             // 
             // textBoxBillingCity
             // 
-            this.textBoxBillingCity.Location = new System.Drawing.Point(247, 95);
+            this.textBoxBillingCity.Location = new System.Drawing.Point(207, 84);
             this.textBoxBillingCity.Name = "textBoxBillingCity";
             this.textBoxBillingCity.Size = new System.Drawing.Size(225, 20);
             this.textBoxBillingCity.TabIndex = 13;
@@ -223,7 +223,7 @@
             // labelBillingCity
             // 
             this.labelBillingCity.AutoSize = true;
-            this.labelBillingCity.Location = new System.Drawing.Point(185, 98);
+            this.labelBillingCity.Location = new System.Drawing.Point(145, 87);
             this.labelBillingCity.Name = "labelBillingCity";
             this.labelBillingCity.Size = new System.Drawing.Size(56, 13);
             this.labelBillingCity.TabIndex = 12;
@@ -232,7 +232,7 @@
             // labelBillingZipCode
             // 
             this.labelBillingZipCode.AutoSize = true;
-            this.labelBillingZipCode.Location = new System.Drawing.Point(491, 71);
+            this.labelBillingZipCode.Location = new System.Drawing.Point(451, 60);
             this.labelBillingZipCode.Name = "labelBillingZipCode";
             this.labelBillingZipCode.Size = new System.Drawing.Size(70, 13);
             this.labelBillingZipCode.TabIndex = 11;
@@ -241,7 +241,7 @@
             // checkBoxIsCompany
             // 
             this.checkBoxIsCompany.AutoSize = true;
-            this.checkBoxIsCompany.Location = new System.Drawing.Point(798, 44);
+            this.checkBoxIsCompany.Location = new System.Drawing.Point(758, 33);
             this.checkBoxIsCompany.Name = "checkBoxIsCompany";
             this.checkBoxIsCompany.Size = new System.Drawing.Size(91, 17);
             this.checkBoxIsCompany.TabIndex = 10;
@@ -252,7 +252,7 @@
             // labelVATNumber
             // 
             this.labelVATNumber.AutoSize = true;
-            this.labelVATNumber.Location = new System.Drawing.Point(508, 45);
+            this.labelVATNumber.Location = new System.Drawing.Point(468, 34);
             this.labelVATNumber.Name = "labelVATNumber";
             this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
             this.labelVATNumber.TabIndex = 9;
@@ -261,7 +261,7 @@
             // labelBillingCountry
             // 
             this.labelBillingCountry.AutoSize = true;
-            this.labelBillingCountry.Location = new System.Drawing.Point(198, 72);
+            this.labelBillingCountry.Location = new System.Drawing.Point(158, 61);
             this.labelBillingCountry.Name = "labelBillingCountry";
             this.labelBillingCountry.Size = new System.Drawing.Size(43, 13);
             this.labelBillingCountry.TabIndex = 8;
@@ -269,7 +269,7 @@
             // 
             // textBoxBillingAddress
             // 
-            this.textBoxBillingAddress.Location = new System.Drawing.Point(567, 94);
+            this.textBoxBillingAddress.Location = new System.Drawing.Point(527, 83);
             this.textBoxBillingAddress.Name = "textBoxBillingAddress";
             this.textBoxBillingAddress.Size = new System.Drawing.Size(225, 20);
             this.textBoxBillingAddress.TabIndex = 7;
@@ -277,7 +277,7 @@
             // comboBoxBillingCountry
             // 
             this.comboBoxBillingCountry.FormattingEnabled = true;
-            this.comboBoxBillingCountry.Location = new System.Drawing.Point(247, 68);
+            this.comboBoxBillingCountry.Location = new System.Drawing.Point(207, 57);
             this.comboBoxBillingCountry.Name = "comboBoxBillingCountry";
             this.comboBoxBillingCountry.Size = new System.Drawing.Size(225, 21);
             this.comboBoxBillingCountry.TabIndex = 6;
@@ -285,7 +285,7 @@
             // labelBillingAddress
             // 
             this.labelBillingAddress.AutoSize = true;
-            this.labelBillingAddress.Location = new System.Drawing.Point(532, 97);
+            this.labelBillingAddress.Location = new System.Drawing.Point(492, 86);
             this.labelBillingAddress.Name = "labelBillingAddress";
             this.labelBillingAddress.Size = new System.Drawing.Size(29, 13);
             this.labelBillingAddress.TabIndex = 5;
@@ -294,7 +294,7 @@
             // labelBillingName
             // 
             this.labelBillingName.AutoSize = true;
-            this.labelBillingName.Location = new System.Drawing.Point(158, 45);
+            this.labelBillingName.Location = new System.Drawing.Point(118, 34);
             this.labelBillingName.Name = "labelBillingName";
             this.labelBillingName.Size = new System.Drawing.Size(83, 13);
             this.labelBillingName.TabIndex = 4;
@@ -302,7 +302,7 @@
             // 
             // textBoxBillingZipCode
             // 
-            this.textBoxBillingZipCode.Location = new System.Drawing.Point(567, 68);
+            this.textBoxBillingZipCode.Location = new System.Drawing.Point(527, 57);
             this.textBoxBillingZipCode.Name = "textBoxBillingZipCode";
             this.textBoxBillingZipCode.Size = new System.Drawing.Size(225, 20);
             this.textBoxBillingZipCode.TabIndex = 3;
@@ -310,14 +310,14 @@
             // textBoxVATNumber
             // 
             this.textBoxVATNumber.Enabled = false;
-            this.textBoxVATNumber.Location = new System.Drawing.Point(567, 42);
+            this.textBoxVATNumber.Location = new System.Drawing.Point(527, 31);
             this.textBoxVATNumber.Name = "textBoxVATNumber";
             this.textBoxVATNumber.Size = new System.Drawing.Size(225, 20);
             this.textBoxVATNumber.TabIndex = 2;
             // 
             // textBoxBillingName
             // 
-            this.textBoxBillingName.Location = new System.Drawing.Point(247, 42);
+            this.textBoxBillingName.Location = new System.Drawing.Point(207, 31);
             this.textBoxBillingName.Name = "textBoxBillingName";
             this.textBoxBillingName.Size = new System.Drawing.Size(225, 20);
             this.textBoxBillingName.TabIndex = 0;
@@ -339,7 +339,7 @@
             this.listViewToBill.Location = new System.Drawing.Point(6, 19);
             this.listViewToBill.MultiSelect = false;
             this.listViewToBill.Name = "listViewToBill";
-            this.listViewToBill.Size = new System.Drawing.Size(1025, 146);
+            this.listViewToBill.Size = new System.Drawing.Size(862, 146);
             this.listViewToBill.TabIndex = 10;
             this.listViewToBill.UseCompatibleStateImageBehavior = false;
             this.listViewToBill.View = System.Windows.Forms.View.Details;
@@ -380,9 +380,9 @@
             this.groupBoxBookingToBill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxBookingToBill.Controls.Add(this.listViewToBill);
-            this.groupBoxBookingToBill.Location = new System.Drawing.Point(12, 292);
+            this.groupBoxBookingToBill.Location = new System.Drawing.Point(12, 253);
             this.groupBoxBookingToBill.Name = "groupBoxBookingToBill";
-            this.groupBoxBookingToBill.Size = new System.Drawing.Size(1037, 171);
+            this.groupBoxBookingToBill.Size = new System.Drawing.Size(874, 171);
             this.groupBoxBookingToBill.TabIndex = 11;
             this.groupBoxBookingToBill.TabStop = false;
             this.groupBoxBookingToBill.Text = "Számlázandó foglalások";
@@ -390,7 +390,7 @@
             // textBoxTotalPrice
             // 
             this.textBoxTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTotalPrice.Location = new System.Drawing.Point(506, 261);
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(506, 222);
             this.textBoxTotalPrice.Multiline = true;
             this.textBoxTotalPrice.Name = "textBoxTotalPrice";
             this.textBoxTotalPrice.ReadOnly = true;
@@ -402,7 +402,7 @@
             this.labelTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTotalPrice.AutoSize = true;
             this.labelTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTotalPrice.Location = new System.Drawing.Point(305, 261);
+            this.labelTotalPrice.Location = new System.Drawing.Point(305, 223);
             this.labelTotalPrice.Name = "labelTotalPrice";
             this.labelTotalPrice.Size = new System.Drawing.Size(195, 24);
             this.labelTotalPrice.TabIndex = 13;
@@ -412,7 +412,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 636);
+            this.ClientSize = new System.Drawing.Size(1061, 574);
             this.Controls.Add(this.labelTotalPrice);
             this.Controls.Add(this.textBoxTotalPrice);
             this.Controls.Add(this.groupBoxBookingToBill);

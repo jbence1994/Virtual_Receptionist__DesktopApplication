@@ -71,6 +71,17 @@ namespace virtual_receptionist.Views
                 textBoxBillingZipCode.Text = data[3];
                 textBoxBillingAddress.Text = data[4];
             }
+            else
+            {
+                textBoxBillingName.Clear();
+                comboBoxBillingCountry.DataSource = null;
+                comboBoxBillingCountry.DataSource = controller.GetCountries();
+                comboBoxBillingCountry.SelectedItem = controller.GetCountries()[0];
+                textBoxBillingCity.Clear();
+                textBoxBillingZipCode.Clear();
+                textBoxBillingAddress.Clear();
+                textBoxVATNumber.Clear();
+            }
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
