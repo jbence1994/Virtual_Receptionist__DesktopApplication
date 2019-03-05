@@ -65,9 +65,9 @@ namespace virtual_receptionist.Views
                     phone,
                     email, room, numberOfGuests, arrival, departure);
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                MessageBox.Show("Az érkezési dátum nem egyezhet meg a távozás dátumával!");
+                MessageBox.Show(exception.Message);
             }
 
             #endregion

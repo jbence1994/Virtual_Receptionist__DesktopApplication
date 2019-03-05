@@ -45,9 +45,6 @@ namespace virtual_receptionist.Controllers
         /// <exception cref="Exception"></exception>
         public void SaveData(params object[] dataParameters)
         {
-            /*
-             * VALIDÁLNI !!!
-             */
             string name = dataParameters[0].ToString();
             string citizenship = dataParameters[1].ToString();
             string birthDate = dataParameters[2].ToString();
@@ -65,9 +62,13 @@ namespace virtual_receptionist.Controllers
             string arrival = Convert.ToDateTime(dataParameters[12].ToString()).ToString("yyyy-MM-dd");
             string departure = Convert.ToDateTime(dataParameters[13].ToString()).ToString("yyyy-MM-dd");
 
-            if (arrival==departure)
+            /*
+             * VALIDÁLNI !!!
+             */
+
+            if (arrival == departure)
             {
-                throw new Exception("");
+                throw new Exception("Az érkezési dátum nem egyezhet meg a távozás dátumával!");
             }
 
             Guest guestInstance = new Guest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
