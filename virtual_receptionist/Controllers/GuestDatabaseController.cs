@@ -68,11 +68,9 @@ namespace virtual_receptionist.Controllers
         /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
         public string SetSelectedCountry(string selectedCountryInTable)
         {
-            List<string> countries = GetCountries();
-
             string selectedCountry = null;
 
-            foreach (string country in countries)
+            foreach (string country in GetCountries())
             {
                 if (selectedCountryInTable.Contains(country))
                 {
