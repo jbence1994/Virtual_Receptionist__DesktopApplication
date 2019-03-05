@@ -82,7 +82,7 @@
             this.buttonSaveData.Location = new System.Drawing.Point(715, 446);
             this.buttonSaveData.Name = "buttonSaveData";
             this.buttonSaveData.Size = new System.Drawing.Size(147, 57);
-            this.buttonSaveData.TabIndex = 32;
+            this.buttonSaveData.TabIndex = 35;
             this.buttonSaveData.Text = "Adatok mentése";
             this.buttonSaveData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSaveData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -112,7 +112,7 @@
             this.comboBoxRoom.Location = new System.Drawing.Point(122, 55);
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
-            this.comboBoxRoom.TabIndex = 28;
+            this.comboBoxRoom.TabIndex = 30;
             // 
             // labelDepartureDate
             // 
@@ -146,7 +146,7 @@
             this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(122, 82);
             this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
             this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
-            this.numericUpDownNumberOfGuests.TabIndex = 29;
+            this.numericUpDownNumberOfGuests.TabIndex = 31;
             this.numericUpDownNumberOfGuests.Value = new decimal(new int[] {
             1,
             0,
@@ -168,7 +168,7 @@
             this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(122, 108);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePickerArrivalDate.TabIndex = 30;
+            this.dateTimePickerArrivalDate.TabIndex = 32;
             // 
             // dateTimePickerDepartureDate
             // 
@@ -176,7 +176,7 @@
             this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(122, 134);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePickerDepartureDate.TabIndex = 31;
+            this.dateTimePickerDepartureDate.TabIndex = 33;
             // 
             // buttonImportGuestData
             // 
@@ -186,7 +186,7 @@
             this.buttonImportGuestData.Location = new System.Drawing.Point(562, 446);
             this.buttonImportGuestData.Name = "buttonImportGuestData";
             this.buttonImportGuestData.Size = new System.Drawing.Size(147, 57);
-            this.buttonImportGuestData.TabIndex = 33;
+            this.buttonImportGuestData.TabIndex = 34;
             this.buttonImportGuestData.Text = "Vendégadatok importálása";
             this.buttonImportGuestData.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImportGuestData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
