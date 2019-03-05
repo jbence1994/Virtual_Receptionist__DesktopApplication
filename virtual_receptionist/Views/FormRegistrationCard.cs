@@ -59,10 +59,18 @@ namespace virtual_receptionist.Views
             DateTime arrival = dateTimePickerArrivalDate.Value;
             DateTime departure = dateTimePickerDepartureDate.Value;
 
-            controller.SaveData(name, citizenship, birthDate, documentNumber, country, zipCode, city, address, phone,
-                email, room, numberOfGuests, arrival, departure);
-        }
+            try
+            {
+                controller.SaveData(name, citizenship, birthDate, documentNumber, country, zipCode, city, address,
+                    phone,
+                    email, room, numberOfGuests, arrival, departure);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("");
+            }
 
-        #endregion
+            #endregion
+        }
     }
 }

@@ -40,8 +40,9 @@ namespace virtual_receptionist.Controllers
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely elmenti a vendég, cég és foglalás adatait adatbázisba
+        /// Metódus, amely elmenti a vendég és foglalás adatait adatbázisba
         /// </summary>
+        /// <exception cref="Exception"></exception>
         public void SaveData(params object[] dataParameters)
         {
             /*
@@ -63,6 +64,11 @@ namespace virtual_receptionist.Controllers
             int numberOfGuests = Convert.ToInt32(dataParameters[11]);
             string arrival = Convert.ToDateTime(dataParameters[12].ToString()).ToString("yyyy-MM-dd");
             string departure = Convert.ToDateTime(dataParameters[13].ToString()).ToString("yyyy-MM-dd");
+
+            if (arrival==departure)
+            {
+                throw new Exception("");
+            }
 
             Guest guestInstance = new Guest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
                 address,
