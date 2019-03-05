@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Models.DatabaseConnection;
+﻿using MySQL_Interface;
 
 namespace virtual_receptionist.Models.Data
 {
