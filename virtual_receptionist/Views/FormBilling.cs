@@ -58,6 +58,12 @@ namespace virtual_receptionist.Views
             textBoxVATNumber.Enabled = checkBoxIsCompany.Checked;
         }
 
+        private void listViewToBill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string name = listViewToBill.SelectedItems[0].SubItems[1].Text;
+            string[] data = controller.GetBillingData(name);
+        }
+
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
             FormBillingItems billingItems = new FormBillingItems();

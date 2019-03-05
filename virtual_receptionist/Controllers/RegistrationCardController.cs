@@ -93,7 +93,7 @@ namespace virtual_receptionist.Controllers
         /// <returns></returns>
         public DataTable GetGuestData() //Szétbontás elemi adattípusra az objektum mezőit
         {
-            guestRepository.GetSpecifiedGuestData();
+
             return new DataTable();
         }
 

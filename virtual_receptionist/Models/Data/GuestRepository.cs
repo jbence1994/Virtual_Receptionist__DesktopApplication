@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System;
+using System.Windows.Forms;
 
 namespace virtual_receptionist.Models.Data
 {
@@ -143,9 +144,28 @@ namespace virtual_receptionist.Models.Data
         /// <summary>
         /// 
         /// </summary>
-        public void GetSpecifiedGuestData()
+        public string[] GetGuestDataForBilling(string name)
         {
+            string[] data = new string[5];
 
+            if (guests.Count == 0)
+            {
+                UploadGuestsList();
+            }
+
+            foreach (Guest guest in guests)
+            {
+                if (guest.Name == name)
+                {
+                    data[0] = guest.Name;
+                    data[1] = guest.Country;
+                    data[2] = guest.City;
+                    data[3] = guest.ZipCode;
+                    data[4] = guest.Address;
+                }
+            }
+
+            return data;
         }
 
         #endregion

@@ -343,6 +343,7 @@
             this.listViewToBill.TabIndex = 10;
             this.listViewToBill.UseCompatibleStateImageBehavior = false;
             this.listViewToBill.View = System.Windows.Forms.View.Details;
+            this.listViewToBill.SelectedIndexChanged += new System.EventHandler(this.listViewToBill_SelectedIndexChanged);
             // 
             // columnHeaderBookingID
             // 

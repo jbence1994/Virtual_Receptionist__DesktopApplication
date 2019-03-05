@@ -23,6 +23,11 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         private BookingRepository bookingRepository;
 
+        /// <summary>
+        /// Vendég adattár egy példánya
+        /// </summary>
+        private GuestRepository guestRepository;
+
         #endregion
 
         #region Konstruktor
@@ -34,6 +39,7 @@ namespace virtual_receptionist.Controllers
         {
             billingRepository = new BillingRepository();
             bookingRepository = new BookingRepository();
+            guestRepository = new GuestRepository();
         }
 
         #endregion
@@ -63,6 +69,16 @@ namespace virtual_receptionist.Controllers
             }
 
             return bookingsToBill;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public string[] GetBillingData(string name)
+        {
+            string[] data = guestRepository.GetGuestDataForBilling(name);
+            return data;
         }
 
         /// <summary>
