@@ -49,6 +49,8 @@ namespace virtual_receptionist.Views
 
                 listViewToBill.Items.Add(bookingsToBill);
             }
+
+            comboBoxBillingCountry.DataSource = controller.GetCountries();
         }
 
         private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
