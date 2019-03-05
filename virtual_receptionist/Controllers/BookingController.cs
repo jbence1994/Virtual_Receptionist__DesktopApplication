@@ -79,11 +79,12 @@ namespace virtual_receptionist.Controllers
             bookingsDataTableByDeparture.Columns.Add("NumberOfGuests", typeof(int));
             bookingsDataTableByDeparture.Columns.Add("ArrivalDate", typeof(string));
             bookingsDataTableByDeparture.Columns.Add("DepartureDate", typeof(string));
+            bookingsDataTableByDeparture.Columns.Add("Paid", typeof(bool));
 
             foreach (Booking booking in bookingsByDeparture)
             {
                 bookingsDataTableByDeparture.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate);
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid);
             }
 
             return bookingsDataTableByDeparture;
