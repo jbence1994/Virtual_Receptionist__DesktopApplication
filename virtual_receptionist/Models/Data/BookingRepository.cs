@@ -85,8 +85,8 @@ namespace virtual_receptionist.Models.Data
                 };
 
                 int numberOfGuests = int.Parse(row["NumberOfGuests"].ToString());
-                DateTime arrival = (DateTime) row["ArrivalDate"];
-                DateTime departure = (DateTime) row["DepartureDate"];
+                string arrival = row["ArrivalDate"].ToString();
+                string departure = row["DepartureDate"].ToString();
 
                 Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
                 bookings.Add(bookingInstance);
@@ -181,7 +181,7 @@ namespace virtual_receptionist.Models.Data
 
             foreach (Booking booking in bookings)
             {
-                if (booking.ArrivalDate == DateTime.Parse(arrivalDate))
+                if (booking.ArrivalDate == arrivalDate)
                 {
                     bookingsByArrivalDate.Add(booking);
                 }
@@ -206,7 +206,7 @@ namespace virtual_receptionist.Models.Data
 
             foreach (Booking booking in bookings)
             {
-                if (booking.DepartureDate == DateTime.Parse(departureDate))
+                if (booking.DepartureDate == departureDate)
                 {
                     bookingsByDepartureDate.Add(booking);
                 }

@@ -35,28 +35,6 @@ namespace virtual_receptionist.Controllers
         #region Metódusok
 
         /// <summary>
-        /// Metódus, amely lekéri a szobák adatait az adattárból és visszaadja őket egy adattáblában
-        /// </summary>
-        /// <returns>A szobák adataival feltöltött adattáblát adja vissza a függvény</returns>
-        public DataTable GetRooms()
-        {
-            List<Room> rooms = repository.GetRooms();
-
-            DataTable roomsDataTable = new DataTable();
-            roomsDataTable.Columns.Add("Number", typeof(int));
-            roomsDataTable.Columns.Add("Name", typeof(string));
-            roomsDataTable.Columns.Add("CategoryName", typeof(string));
-            roomsDataTable.Columns.Add("Capacity", typeof(int));
-
-            foreach (Room room in rooms)
-            {
-                roomsDataTable.Rows.Add(room.Number, room.Name, room.Category, room.Capacity);
-            }
-
-            return roomsDataTable;
-        }
-
-        /// <summary>
         /// Metódus, amely lekéri a foglalások adatait érkezés dátuma alapján az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <param name="arrivalDate">Érkezés dátuma</param>
@@ -130,9 +108,9 @@ namespace virtual_receptionist.Controllers
 
             int numberOfGuests = Convert.ToInt32(bookingParameters[4]);
 
-            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[5]);
+            string arrivalDate = Convert.ToDateTime(bookingParameters[5]).ToString("yyyy-MM-dd");
 
-            DateTime departureDate = Convert.ToDateTime(bookingParameters[6]);
+            string departureDate = Convert.ToDateTime(bookingParameters[6]).ToString("yyyy-MM-dd");
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
@@ -159,9 +137,9 @@ namespace virtual_receptionist.Controllers
 
             int numberOfGuests = Convert.ToInt32(bookingParameters[4]);
 
-            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[5]);
+            string arrivalDate = Convert.ToDateTime(bookingParameters[5].ToString()).ToString("yyyy-MM-dd");
 
-            DateTime departureDate = Convert.ToDateTime(bookingParameters[6]);
+            string departureDate = Convert.ToDateTime(bookingParameters[6].ToString()).ToString("yyyy-MM-dd");
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
@@ -188,9 +166,9 @@ namespace virtual_receptionist.Controllers
 
             int numberOfGuests = Convert.ToInt32(bookingParameters[4]);
 
-            DateTime arrivalDate = Convert.ToDateTime(bookingParameters[5]);
+            string arrivalDate = Convert.ToDateTime(bookingParameters[5]).ToString("yyyy-MM-dd");
 
-            DateTime departureDate = Convert.ToDateTime(bookingParameters[6]);
+            string departureDate = Convert.ToDateTime(bookingParameters[6]).ToString("yyyy-MM-dd");
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 

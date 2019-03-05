@@ -32,12 +32,12 @@ namespace virtual_receptionist.Models.ORM
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
-        private DateTime arrivalDate;
+        private string arrivalDate;
 
         /// <summary>
         /// Távozás dátuma
         /// </summary>
-        private DateTime departureDate;
+        private string departureDate;
 
         #endregion
 
@@ -52,8 +52,8 @@ namespace virtual_receptionist.Models.ORM
         /// <param name="numberOfGuests">Vendégek száma</param>
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
-        public Booking(int id, Guest guest, Room room, int numberOfGuests, DateTime arrivalDate,
-            DateTime departureDate)
+        public Booking(int id, Guest guest, Room room, int numberOfGuests, string arrivalDate,
+            string departureDate)
         {
             this.id = id;
             this.guest = guest;
@@ -71,8 +71,8 @@ namespace virtual_receptionist.Models.ORM
         /// <param name="numberOfGuests">Vendégek száma</param>
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
-        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrivalDate,
-            DateTime departureDate)
+        public Booking(Guest guest, Room room, int numberOfGuests, string arrivalDate,
+            string departureDate)
         {
             this.guest = guest;
             this.room = room;
@@ -131,7 +131,7 @@ namespace virtual_receptionist.Models.ORM
         /// <summary>
         /// Érkezés dátuma
         /// </summary>
-        public DateTime ArrivalDate
+        public string ArrivalDate
         {
             get { return arrivalDate; }
             set { arrivalDate = value; }
@@ -140,7 +140,7 @@ namespace virtual_receptionist.Models.ORM
         /// <summary>
         /// Távozás dátuma
         /// </summary>
-        public DateTime DepartureDate
+        public string DepartureDate
         {
             get { return departureDate; }
             set { departureDate = value; }

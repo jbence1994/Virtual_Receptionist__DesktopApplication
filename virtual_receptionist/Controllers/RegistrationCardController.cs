@@ -61,8 +61,8 @@ namespace virtual_receptionist.Controllers
 
             int room = Convert.ToInt32(dataParameters[10]);
             int numberOfGuests = Convert.ToInt32(dataParameters[11]);
-            string arrival = DateTime.Parse(dataParameters[12].ToString()).ToString();
-            string departure = DateTime.Parse(dataParameters[13].ToString()).ToString();
+            string arrival = Convert.ToDateTime(dataParameters[12].ToString()).ToString("yyyy-MM-dd");
+            string departure = Convert.ToDateTime(dataParameters[13].ToString()).ToString("yyyy-MM-dd");
 
             Guest guestInstance = new Guest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
                 address,
@@ -73,8 +73,7 @@ namespace virtual_receptionist.Controllers
                 Number = room
             };
 
-            Booking bookingInstance = new Booking(guestInstance, roomInstance, numberOfGuests, DateTime.Parse(arrival),
-                DateTime.Parse(departure));
+            Booking bookingInstance = new Booking(guestInstance, roomInstance, numberOfGuests, arrival, departure);
 
             guestRepository.Create(guestInstance);
             bookingRepository.Create(bookingInstance);
