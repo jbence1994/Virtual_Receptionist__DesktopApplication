@@ -67,7 +67,7 @@ namespace virtual_receptionist.Views
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show(exception.Message, "", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
 
             #endregion
