@@ -68,9 +68,9 @@ namespace virtual_receptionist.Views
         private void buttonOK_Click(object sender, EventArgs e)
         {
             string item = textBoxItem.Text;
-            double price = double.Parse(textBoxPrice.Text);
+            double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
-            int quantity = int.Parse(textBoxQuantity.Text);
+            int quantity = Convert.ToInt32(textBoxQuantity.Text);
 
             controller.SetBillingItemParameters(item, unit, price, quantity);
         }
