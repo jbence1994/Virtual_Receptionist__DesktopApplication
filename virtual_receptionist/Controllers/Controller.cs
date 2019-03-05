@@ -14,12 +14,19 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Ország adattár egy példánya
         /// </summary>
-        private CountryRepository repository;
+        private CountryRepository countryRepository;
+
+        /// <summary>
+        /// Foglalások adattár egy példánya
+        /// </summary>
+        private BookingRepository bookingRepository;
 
         /// <summary>
         /// Országokat tartalmazó lista
         /// </summary>
         private List<Country> countries;
+
+        private List<Room> rooms;
 
         #endregion
 
@@ -30,8 +37,11 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public Controller()
         {
-            repository = new CountryRepository();
-            countries = repository.GetCountries();
+            countryRepository = new CountryRepository();
+            bookingRepository = new BookingRepository();
+
+            countries = countryRepository.GetCountries();
+            rooms = bookingRepository.GetRooms();
         }
 
         #endregion
@@ -52,6 +62,22 @@ namespace virtual_receptionist.Controllers
             }
 
             return countryNames;
+        }
+
+        /// <summary>
+        /// Metódus, amely visszaadja a szobaszámokat adattárból
+        /// </summary>
+        /// <returns></returns>
+        public List<int> GetRooms()
+        {
+            List<int> roomNumbers = new List<int>();
+
+            foreach (Room room in rooms)
+            {
+                roomNumbers.Add(room.Number);
+            }
+
+            return roomNumbers;
         }
 
         #endregion

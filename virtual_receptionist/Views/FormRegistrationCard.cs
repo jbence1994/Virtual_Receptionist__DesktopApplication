@@ -37,6 +37,7 @@ namespace virtual_receptionist.Views
         {
             textBoxName.Select();
             comboBoxCountry.DataSource = controller.GetCountries();
+            comboBoxRoom.DataSource = controller.GetRooms();
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
