@@ -60,8 +60,17 @@ namespace virtual_receptionist.Views
 
         private void listViewToBill_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string name = listViewToBill.SelectedItems[0].SubItems[1].Text;
-            string[] data = controller.GetBillingData(name);
+            if (listViewToBill.SelectedItems.Count > 0)
+            {
+                string name = listViewToBill.SelectedItems[0].SubItems[1].Text;
+                string[] data = controller.GetBillingData(name);
+
+                textBoxBillingName.Text = data[0];
+                comboBoxBillingCountry.SelectedItem = data[1];
+                textBoxBillingCity.Text = data[2];
+                textBoxBillingZipCode.Text = data[3];
+                textBoxBillingAddress.Text = data[4];
+            }
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
