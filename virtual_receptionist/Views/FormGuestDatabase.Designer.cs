@@ -32,7 +32,6 @@
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPageGuest = new System.Windows.Forms.TabPage();
             this.groupBoxCRUD = new System.Windows.Forms.GroupBox();
-            this.buttonRefreshDatabase = new System.Windows.Forms.Button();
             this.labelGuestID = new System.Windows.Forms.Label();
             this.buttonDeleteGuest = new System.Windows.Forms.Button();
             this.buttonUpdateGuest = new System.Windows.Forms.Button();
@@ -103,7 +102,6 @@
             // 
             this.groupBoxCRUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxCRUD.Controls.Add(this.buttonRefreshDatabase);
             this.groupBoxCRUD.Controls.Add(this.labelGuestID);
             this.groupBoxCRUD.Controls.Add(this.buttonDeleteGuest);
             this.groupBoxCRUD.Controls.Add(this.buttonUpdateGuest);
@@ -134,21 +132,6 @@
             this.groupBoxCRUD.Size = new System.Drawing.Size(1072, 183);
             this.groupBoxCRUD.TabIndex = 0;
             this.groupBoxCRUD.TabStop = false;
-            // 
-            // buttonRefreshDatabase
-            // 
-            this.buttonRefreshDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefreshDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRefreshDatabase.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefreshDatabase.Image")));
-            this.buttonRefreshDatabase.Location = new System.Drawing.Point(909, 43);
-            this.buttonRefreshDatabase.Name = "buttonRefreshDatabase";
-            this.buttonRefreshDatabase.Size = new System.Drawing.Size(157, 64);
-            this.buttonRefreshDatabase.TabIndex = 39;
-            this.buttonRefreshDatabase.Text = "Vendégadatbázis frissítése";
-            this.buttonRefreshDatabase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonRefreshDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonRefreshDatabase.UseVisualStyleBackColor = true;
-            this.buttonRefreshDatabase.Click += new System.EventHandler(this.buttonRefreshDatabase_Click);
             // 
             // labelGuestID
             // 
@@ -517,6 +500,5 @@
         private System.Windows.Forms.ColumnHeader columnHeaderGuestID;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelGuestID;
-        private System.Windows.Forms.Button buttonRefreshDatabase;
     }
 }
