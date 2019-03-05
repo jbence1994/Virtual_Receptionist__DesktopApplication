@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
 
@@ -32,6 +33,23 @@ namespace virtual_receptionist.Views
         #endregion
 
         #region UI események
+
+        private void FormBilling_Load(object sender, EventArgs e)
+        {
+            DataTable bookingsToBillDataTable = controller.GetBookingsToBill();
+
+            foreach (DataRow row in bookingsToBillDataTable.Rows)
+            {
+                ListViewItem bookingsToBill = new ListViewItem(row[0].ToString());
+
+                for (int i = 1; i < bookingsToBillDataTable.Columns.Count; i++)
+                {
+                    bookingsToBill.SubItems.Add(row[i].ToString());
+                }
+
+                listViewToBill.Items.Add(bookingsToBill);
+            }
+        }
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {

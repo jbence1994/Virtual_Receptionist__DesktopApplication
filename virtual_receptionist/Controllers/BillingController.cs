@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
+using System;
 
 namespace virtual_receptionist.Controllers
 {
@@ -15,7 +16,12 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Számlázás adattár osztály egy példánya
         /// </summary>
-        private BillingRepository repository;
+        private BillingRepository billingRepository;
+
+        /// <summary>
+        /// Foglalások adattár egy példánya
+        /// </summary>
+        private BookingRepository bookingRepository;
 
         #endregion
 
@@ -26,12 +32,38 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public BillingController()
         {
-            repository = new BillingRepository();
+            billingRepository = new BillingRepository();
+            bookingRepository = new BookingRepository();
         }
 
         #endregion
 
         #region Metódusok
+
+        /// <summary>
+        /// Metódus, amely visszaadja egy adattáblában adattárból azokat a foglalásokat, amelyek még nem kerültek kiszámlázásra
+        /// </summary>
+        /// <returns>A foglalások adattáblájával tér vissza a metódus</returns>
+        public DataTable GetBookingsToBill()
+        {
+            List<Booking> bookingNotPaid = bookingRepository.GetBookingsNotPaid();
+
+            DataTable bookingsToBill = new DataTable();
+            bookingsToBill.Columns.Add("ID", typeof(int));
+            bookingsToBill.Columns.Add("Guest", typeof(string));
+            bookingsToBill.Columns.Add("Room", typeof(int));
+            bookingsToBill.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsToBill.Columns.Add("ArrivalDate", typeof(string));
+            bookingsToBill.Columns.Add("DepartureDate", typeof(string));
+
+            foreach (Booking booking in bookingNotPaid)
+            {
+                bookingsToBill.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
+                    booking.ArrivalDate, booking.DepartureDate);
+            }
+
+            return bookingsToBill;
+        }
 
         /// <summary>
         /// Metódus, amely beállítja a számlázási tétel adatait
@@ -87,7 +119,7 @@ namespace virtual_receptionist.Controllers
         /// <returns>A számlázási tételek adataival feltöltött adattáblát adja vissza a függvény</returns>
         public DataTable GetBillingItems()
         {
-            List<BillingItem> billingItems = repository.GetBillingItems();
+            List<BillingItem> billingItems = billingRepository.GetBillingItems();
 
             DataTable billingItemsDataTable = new DataTable();
             billingItemsDataTable.Columns.Add("Name", typeof(string));
@@ -112,7 +144,7 @@ namespace virtual_receptionist.Controllers
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
         public double GetTotalPrice(params double[] prices)
         {
-            double total = repository.CountTotalPrice(prices);
+            double total = billingRepository.CountTotalPrice(prices);
             return total;
         }
 

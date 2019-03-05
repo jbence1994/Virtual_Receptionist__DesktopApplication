@@ -216,6 +216,30 @@ namespace virtual_receptionist.Models.Data
             return bookingsByDepartureDate;
         }
 
+        /// <summary>
+        /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek nem fizettek még és egy új listába menti őket
+        /// </summary>
+        /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
+        public List<Booking> GetBookingsNotPaid()
+        {
+            if (bookings.Count == 0)
+            {
+                UploadBookingsList();
+            }
+
+            List<Booking> bookingsNotPaid = new List<Booking>();
+
+            foreach (Booking booking in bookings)
+            {
+                if (!booking.Paid)
+                {
+                    bookingsNotPaid.Add(booking);
+                }
+            }
+
+            return bookingsNotPaid;
+        }
+
         #endregion
     }
 }
