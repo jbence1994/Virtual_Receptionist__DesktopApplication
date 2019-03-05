@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
 
@@ -16,11 +17,6 @@ namespace virtual_receptionist.Controllers
         /// Számlázás adattár osztály egy példánya
         /// </summary>
         private BillingRepository repository;
-
-        /// <summary>
-        /// Számlázási tételek adattábla
-        /// </summary>
-        private DataTable billingDataTable;
 
         #endregion
 
@@ -44,7 +40,7 @@ namespace virtual_receptionist.Controllers
         /// <param name="itemParameters">Számlázási tétel paraméterei</param>
         public void SetBillingItemParameters(params object[] itemParameters)
         {
-            billingDataTable = new DataTable();
+            DataTable billingDataTable = new DataTable();
             billingDataTable.Columns.Add("Tétel", typeof(string));
             billingDataTable.Columns.Add("Ár", typeof(double));
             billingDataTable.Columns.Add("Egység", typeof(string));
@@ -63,8 +59,7 @@ namespace virtual_receptionist.Controllers
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable AddNewRow()
         {
-            billingDataTable.Rows.Add();
-            return billingDataTable;
+            return new DataTable();
         }
 
         /// <summary>
@@ -74,8 +69,7 @@ namespace virtual_receptionist.Controllers
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable DeleteRow(int index)
         {
-            billingDataTable.Rows.RemoveAt(index);
-            return billingDataTable;
+            return new DataTable();
         }
 
         /// <summary>
@@ -85,9 +79,7 @@ namespace virtual_receptionist.Controllers
         /// <returns>Módosított adattáblát adja vissza a függvény</returns>
         public DataTable UpdateRow(int index)
         {
-            billingDataTable.Rows.RemoveAt(index);
-            billingDataTable.Rows.Add();
-            return billingDataTable;
+            return new DataTable();
         }
 
         /// <summary>
