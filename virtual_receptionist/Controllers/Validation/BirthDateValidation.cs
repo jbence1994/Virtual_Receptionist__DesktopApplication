@@ -36,7 +36,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Születési idő ellenőrző metódus
         /// </summary>
         /// <exception cref="InvalidBirthDateException"></exception>
-        public void ProvideBirthDate()
+        public void ValidateBirthDate()
         {
             if (IsEmpty(birthDate))
             {

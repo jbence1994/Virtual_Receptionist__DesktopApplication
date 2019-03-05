@@ -12,12 +12,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti név
         /// </summary>
         [TestMethod()]
-        public void ProvideNameTest_InCaseInputNameIsEmpty()
+        public void ValidateNameTest_InCaseInputNameIsEmpty()
         {
             try
             {
-                Input inputName = new Input("");
-                inputName.ProvideName();
+                NameValidation validation = new NameValidation("");
+                validation.ValidateName();
                 Assert.Fail("Nem dobott kivételt üres névre!");
             }
             catch (InvalidNameException)
@@ -29,12 +29,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, kisbetűvel kezdődik-e bemeneti név
         /// </summary>
         [TestMethod()]
-        public void ProvideNameTest_InCaseInputNamesFirstLetterIsLowercase()
+        public void ValidateNameTest_InCaseInputNamesFirstLetterIsLowercase()
         {
             try
             {
-                Input inputName = new Input("juhász");
-                inputName.ProvideName();
+                NameValidation validation = new NameValidation("juhász");
+                validation.ValidateName();
                 Assert.Fail("Nem dobott kivételt kisbetűs névre!");
             }
             catch (InvalidNameException)
@@ -46,12 +46,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, tartalmaz-e számot a bemeneti név
         /// </summary>
         [TestMethod()]
-        public void ProvideNameTest_InCaseContainsDigitCharacters()
+        public void ValidateNameTest_InCaseContainsDigitCharacters()
         {
             try
             {
-                Input inputName = new Input("Juhász1");
-                inputName.ProvideName();
+                NameValidation validation = new NameValidation("Juhász1");
+                validation.ValidateName();
                 Assert.Fail("Nem dobott kivételt számot tartalmazó bemeneti névre");
             }
             catch (InvalidNameException)
@@ -67,12 +67,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti e-mail cím
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseInputNameIsEmpty()
+        public void ValidateEmailTest_InCaseInputNameIsEmpty()
         {
             try
             {
-                Input inputEmail = new Input("");
-                inputEmail.ProvideEmail();
+                EmailValidation validation = new EmailValidation("");
+                validation.ValidateEmail();
                 Assert.Fail("Nem dob kivételt üres e-mail címre!");
             }
             catch (InvalidEmailAddressException)
@@ -84,12 +84,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat1()
+        public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat1()
         {
             try
             {
-                Input inputEmail = new Input("teszt.teszt.com");
-                inputEmail.ProvideEmail();
+                EmailValidation validation = new EmailValidation("teszt.teszt.com");
+                validation.ValidateEmail();
                 Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
             }
             catch (InvalidEmailAddressException)
@@ -101,12 +101,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat2()
+        public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat2()
         {
             try
             {
-                Input inputEmail = new Input("teszt.@teszt.com");
-                inputEmail.ProvideEmail();
+                EmailValidation validation = new EmailValidation("teszt.@teszt.com");
+                validation.ValidateEmail();
                 Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
             }
             catch (InvalidEmailAddressException)
@@ -118,12 +118,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat3()
+        public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat3()
         {
             try
             {
-                Input inputEmail = new Input("teszt.teszt@teszt.com.hu");
-                inputEmail.ProvideEmail();
+                EmailValidation validation = new EmailValidation("teszt.teszt@teszt.com.hu");
+                validation.ValidateEmail();
                 Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
             }
             catch (InvalidEmailAddressException)
@@ -135,12 +135,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseEmailIsNotValidEmailFormat4()
+        public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat4()
         {
             try
             {
-                Input inputEmail = new Input("teszt...................@teszt.com");
-                inputEmail.ProvideEmail();
+                EmailValidation validation = new EmailValidation("teszt...................@teszt.com");
+                validation.ValidateEmail();
                 Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
             }
             catch (InvalidEmailAddressException)
@@ -156,12 +156,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti születési dátum
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseInputBirthDateIsEmpty()
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsEmpty()
         {
             try
             {
-                Input inputBirthDate = new Input("");
-                inputBirthDate.ProvideBirthDate();
+                BirthDateValidation validation = new BirthDateValidation("");
+                validation.ValidateBirthDate();
                 Assert.Fail("Nem dob kivételt üres születési dátumra!");
             }
             catch (InvalidBirthDateException)
@@ -173,12 +173,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat1()
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsNotValidBirthDateFormat1()
         {
             try
             {
-                Input inputBirthDate = new Input("");
-                inputBirthDate.ProvideBirthDate();
+                BirthDateValidation validation = new BirthDateValidation("1994-03-24");
+                validation.ValidateBirthDate();
                 Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
             }
             catch (InvalidBirthDateException)
@@ -190,46 +190,12 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
         /// </summary>
         [TestMethod()]
-        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat2()
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsNotValidBirthDateFormat2()
         {
             try
             {
-                Input inputBirthDate = new Input("");
-                inputBirthDate.ProvideBirthDate();
-                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
-            }
-            catch (InvalidBirthDateException)
-            {
-            }
-        }
-
-        /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
-        /// </summary>
-        [TestMethod()]
-        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat3()
-        {
-            try
-            {
-                Input inputBirthDate = new Input("");
-                inputBirthDate.ProvideBirthDate();
-                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
-            }
-            catch (InvalidBirthDateException)
-            {
-            }
-        }
-
-        /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
-        /// </summary>
-        [TestMethod()]
-        public void ProvideEmailTest_InCaseInputBirthDateIsNotValidBirthDateFormat4()
-        {
-            try
-            {
-                Input inputBirthDate = new Input("");
-                inputBirthDate.ProvideBirthDate();
+                BirthDateValidation validation = new BirthDateValidation("1994.03.24.");
+                validation.ValidateBirthDate();
                 Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
             }
             catch (InvalidBirthDateException)
