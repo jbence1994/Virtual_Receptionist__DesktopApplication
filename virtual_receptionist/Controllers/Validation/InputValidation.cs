@@ -167,7 +167,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             bool valid = false;
 
-            Regex validBirthDate = new Regex("([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))");
+            Regex validBirthDate = new Regex("^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$");
 
             if (validBirthDate.IsMatch(input))
             {
