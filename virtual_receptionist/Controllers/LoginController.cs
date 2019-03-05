@@ -1,6 +1,6 @@
 ﻿using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models.Data;
-using MySQL_Interface;
+using System;
 
 namespace virtual_receptionist.Controllers
 {
@@ -39,7 +39,7 @@ namespace virtual_receptionist.Controllers
         /// <param name="password">Regisztrációhoz tartozó jelszó</param>
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="FailedLoginException"></exception>
-        /// <exception cref="InvalidConnectionTypeException"></exception>
+        /// <exception cref="Exception"></exception>
         public bool EnterApplication(string accomodationID, string password, string connectionType)
         {
             try
@@ -55,9 +55,9 @@ namespace virtual_receptionist.Controllers
             {
                 throw new FailedLoginException();
             }
-            catch (InvalidConnectionTypeException)
+            catch (Exception)
             {
-                throw new InvalidConnectionTypeException();
+                throw new Exception();
             }
         }
 
