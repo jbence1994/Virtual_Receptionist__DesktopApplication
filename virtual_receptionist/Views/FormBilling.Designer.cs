@@ -42,7 +42,10 @@
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
             this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
+            this.labelBillingName = new System.Windows.Forms.Label();
+            this.textBoxBillingName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
+            this.groupBoxBillingData.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewItems
@@ -168,12 +171,30 @@
             // 
             this.groupBoxBillingData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBillingData.Controls.Add(this.textBoxBillingName);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingName);
             this.groupBoxBillingData.Location = new System.Drawing.Point(12, 292);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
             this.groupBoxBillingData.Size = new System.Drawing.Size(760, 258);
             this.groupBoxBillingData.TabIndex = 9;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
+            // 
+            // labelBillingName
+            // 
+            this.labelBillingName.AutoSize = true;
+            this.labelBillingName.Location = new System.Drawing.Point(43, 58);
+            this.labelBillingName.Name = "labelBillingName";
+            this.labelBillingName.Size = new System.Drawing.Size(83, 13);
+            this.labelBillingName.TabIndex = 0;
+            this.labelBillingName.Text = "Számlázási név:";
+            // 
+            // textBoxBillingName
+            // 
+            this.textBoxBillingName.Location = new System.Drawing.Point(132, 55);
+            this.textBoxBillingName.Name = "textBoxBillingName";
+            this.textBoxBillingName.Size = new System.Drawing.Size(283, 20);
+            this.textBoxBillingName.TabIndex = 9;
             // 
             // FormBilling
             // 
@@ -193,6 +214,8 @@
             this.Text = "Számla kiállítása | Virtual Receptionist";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
+            this.groupBoxBillingData.ResumeLayout(false);
+            this.groupBoxBillingData.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +234,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.GroupBox groupBoxBillingData;
+        private System.Windows.Forms.TextBox textBoxBillingName;
+        private System.Windows.Forms.Label labelBillingName;
     }
 }

@@ -76,14 +76,12 @@ namespace virtual_receptionist.Views
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            int rows = dataGridViewItems.Rows.Count;
-            buttonPrintInvoice.Enabled = !controller.IsEmptyBillingTable(rows);
+
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            int rows = dataGridViewItems.Rows.Count;
-            buttonPrintInvoice.Enabled = !controller.IsEmptyBillingTable(rows);
+
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)

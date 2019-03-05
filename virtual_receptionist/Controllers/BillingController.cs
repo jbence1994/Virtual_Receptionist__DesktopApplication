@@ -32,12 +32,6 @@ namespace virtual_receptionist.Controllers
         public BillingController()
         {
             repository = new BillingRepository();
-
-            billingDataTable = new DataTable();
-            billingDataTable.Columns.Add("Tétel", typeof(string));
-            billingDataTable.Columns.Add("Ár", typeof(double));
-            billingDataTable.Columns.Add("Egység", typeof(string));
-            billingDataTable.Columns.Add("Mennyiség", typeof(int));
         }
 
         #endregion
@@ -50,26 +44,17 @@ namespace virtual_receptionist.Controllers
         /// <param name="itemParameters">Számlázási tétel paraméterei</param>
         public void SetBillingItemParameters(params object[] itemParameters)
         {
+            billingDataTable = new DataTable();
+            billingDataTable.Columns.Add("Tétel", typeof(string));
+            billingDataTable.Columns.Add("Ár", typeof(double));
+            billingDataTable.Columns.Add("Egység", typeof(string));
+            billingDataTable.Columns.Add("Mennyiség", typeof(int));
+
             string item = itemParameters[0].ToString();
             int vat = int.Parse(itemParameters[1].ToString());
             string unit = itemParameters[1].ToString();
             double price = double.Parse(itemParameters[2].ToString());
             int quantity = int.Parse(itemParameters[3].ToString());
-        }
-
-        /// <summary>
-        /// Metódus, amely ellenőrzi üres-e a számlázási tételek adattáblát tartalmazó GUI vezárlő
-        /// </summary>
-        /// <param name="rows">Rekordok száma</param>
-        /// <returns>Ha üres a GUI vezérlő logikai igazzal tér vissza a metódus, ellenkező esetben logikai hamissal tér vissza a függvény</returns>
-        public bool IsEmptyBillingTable(int rows)
-        {
-            if (rows != 0)
-            {
-                return false;
-            }
-
-            return true;
         }
 
         /// <summary>
