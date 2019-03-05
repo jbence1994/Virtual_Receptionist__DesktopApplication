@@ -33,6 +33,12 @@ namespace virtual_receptionist.Views
 
         #region UI események
 
+        private void FormBooking_Load(object sender, EventArgs e)
+        {
+            DateTime actualDate = dateTimePickerArrivalDate.Value;
+            dataGridViewBookings.DataSource = controller.GetBookingsByArrivalDate(actualDate);
+        }
+
         private void dateTimePickerArrivalDate_ValueChanged(object sender, EventArgs e)
         {
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
