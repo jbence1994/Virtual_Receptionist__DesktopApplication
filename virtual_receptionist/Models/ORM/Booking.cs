@@ -56,7 +56,7 @@
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
         public Booking(int id, Guest guest, Room room, int numberOfGuests, string arrivalDate,
-            string departureDate)
+            string departureDate, bool paid)
         {
             this.id = id;
             this.guest = guest;
@@ -64,6 +64,7 @@
             this.numberOfGuests = numberOfGuests;
             this.arrivalDate = arrivalDate;
             this.departureDate = departureDate;
+            this.paid = paid;
         }
 
         /// <summary>

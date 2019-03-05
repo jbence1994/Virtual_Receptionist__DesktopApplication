@@ -67,7 +67,7 @@ namespace virtual_receptionist.Models.Data
         private void UploadBookingsList()
         {
             string sql =
-                "SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID";
+                "SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID";
             DataTable dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
@@ -87,8 +87,9 @@ namespace virtual_receptionist.Models.Data
                 int numberOfGuests = Convert.ToInt32(row["NumberOfGuests"]);
                 string arrival = Convert.ToDateTime(row["ArrivalDate"]).ToString("yyyy-MM-dd").ToString();
                 string departure = Convert.ToDateTime(row["DepartureDate"]).ToString("yyyy-MM-dd").ToString();
+                bool paid = Convert.ToBoolean(row["Paid"]);
 
-                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure);
+                Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure, paid);
                 bookings.Add(bookingInstance);
             }
         }
@@ -136,7 +137,7 @@ namespace virtual_receptionist.Models.Data
         public void Create(Booking booking)
         {
             string sql =
-                $"INSERT INTO booking(GuestID, RoomID, NumberOfGuests, ArrivalDate, DepartureDate) VALUES ((SELECT guest.ID FROM guest WHERE guest.Name LIKE \"{booking.Guest.Name}\"), (SELECT room.ID FROM room WHERE room.Number = \"{booking.Room.Number}\"), \"{booking.NumberOfGuests}\", \"{booking.ArrivalDate}\", \"{booking.DepartureDate}\");";
+                $"INSERT INTO booking(GuestID, RoomID, NumberOfGuests, ArrivalDate, DepartureDate, Paid) VALUES ((SELECT guest.ID FROM guest WHERE guest.Name LIKE \"{booking.Guest.Name}\"), (SELECT room.ID FROM room WHERE room.Number = \"{booking.Room.Number}\"), \"{booking.NumberOfGuests}\", \"{booking.ArrivalDate}\", \"{booking.DepartureDate}\", \"{booking.Paid}\");";
             database.DML(sql);
         }
 
@@ -157,7 +158,7 @@ namespace virtual_receptionist.Models.Data
         public void Update(Booking booking)
         {
             string sql =
-                $"UPDATE room SET booking.GuestID = (SELECT guest.Name FROM guest WHERE guest.Name = \"{booking.Guest.Name}\"), booking.RoomID = (SELECT room.Name FROM room WHERE room.ID = \"{booking.Room.Name}\"), NumberOfGuests = \"{booking.NumberOfGuests}\", ArrivalDate = \"{booking.ArrivalDate}\", DepartureDate = \"{booking.DepartureDate}\" WHERE booking.ID = \"{booking.ID}\"";
+                $"UPDATE room SET booking.GuestID = (SELECT guest.Name FROM guest WHERE guest.Name = \"{booking.Guest.Name}\"), booking.RoomID = (SELECT room.Name FROM room WHERE room.ID = \"{booking.Room.Name}\"), NumberOfGuests = \"{booking.NumberOfGuests}\", ArrivalDate = \"{booking.ArrivalDate}\", DepartureDate = \"{booking.DepartureDate}\", \"{booking.Paid}\" WHERE booking.ID = \"{booking.ID}\"";
             database.DML(sql);
         }
 

@@ -62,9 +62,10 @@ namespace virtual_receptionist.Views
                 object numberOfGuests = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
                 object arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[7].Value;
+                object paid = dataGridViewBookings.SelectedRows[0].Cells[8].Value;
 
                 controller.AddNewRecordToBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
-                    departureDate);
+                    departureDate, paid);
             }
         }
 
@@ -79,9 +80,10 @@ namespace virtual_receptionist.Views
                 object numberOfGuests = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
                 object arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[7].Value;
+                object paid = dataGridViewBookings.SelectedRows[0].Cells[8].Value;
 
                 controller.UpdateRecordInBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
-                    departureDate);
+                    departureDate, paid);
             }
         }
 
@@ -96,9 +98,10 @@ namespace virtual_receptionist.Views
                 object numberOfGuests = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
                 object arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[7].Value;
+                object paid = dataGridViewBookings.SelectedRows[0].Cells[8].Value;
 
                 controller.DeleteRecordFromBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
-                    departureDate);
+                    departureDate, paid);
             }
         }
 

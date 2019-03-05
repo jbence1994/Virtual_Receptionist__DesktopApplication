@@ -38,13 +38,14 @@
             this.labelDepartureDate = new System.Windows.Forms.Label();
             this.tabPageBookings = new System.Windows.Forms.TabPage();
             this.dataGridViewBookings = new System.Windows.Forms.DataGridView();
+            this.tabControlBooking = new System.Windows.Forms.TabControl();
             this.columnBookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnGuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnsRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnArrivalDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnsDepartureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControlBooking = new System.Windows.Forms.TabControl();
+            this.ColumnPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageBookings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).BeginInit();
             this.tabControlBooking.SuspendLayout();
@@ -163,7 +164,8 @@
             this.columnsRoomNumber,
             this.columnNumberOfGuests,
             this.columnArrivalDate,
-            this.columnsDepartureDate});
+            this.columnsDepartureDate,
+            this.ColumnPaid});
             this.dataGridViewBookings.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewBookings.MultiSelect = false;
             this.dataGridViewBookings.Name = "dataGridViewBookings";
@@ -171,6 +173,18 @@
             this.dataGridViewBookings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewBookings.Size = new System.Drawing.Size(1079, 532);
             this.dataGridViewBookings.TabIndex = 8;
+            // 
+            // tabControlBooking
+            // 
+            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlBooking.Controls.Add(this.tabPageBookings);
+            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
+            this.tabControlBooking.Name = "tabControlBooking";
+            this.tabControlBooking.SelectedIndex = 0;
+            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
+            this.tabControlBooking.TabIndex = 8;
             // 
             // columnBookingID
             // 
@@ -214,17 +228,12 @@
             this.columnsDepartureDate.Name = "columnsDepartureDate";
             this.columnsDepartureDate.ReadOnly = true;
             // 
-            // tabControlBooking
+            // ColumnPaid
             // 
-            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlBooking.Controls.Add(this.tabPageBookings);
-            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
-            this.tabControlBooking.Name = "tabControlBooking";
-            this.tabControlBooking.SelectedIndex = 0;
-            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
-            this.tabControlBooking.TabIndex = 8;
+            this.ColumnPaid.DataPropertyName = "Paid";
+            this.ColumnPaid.HeaderText = "Számlázott?";
+            this.ColumnPaid.Name = "ColumnPaid";
+            this.ColumnPaid.ReadOnly = true;
             // 
             // FormBooking
             // 
@@ -271,5 +280,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnNumberOfGuests;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnArrivalDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnsDepartureDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPaid;
     }
 }

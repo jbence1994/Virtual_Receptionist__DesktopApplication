@@ -51,11 +51,12 @@ namespace virtual_receptionist.Controllers
             bookingsDataTableByArrival.Columns.Add("NumberOfGuests", typeof(int));
             bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(string));
             bookingsDataTableByArrival.Columns.Add("DepartureDate", typeof(string));
+            bookingsDataTableByArrival.Columns.Add("Paid", typeof(bool));
 
             foreach (Booking booking in bookingsByArrival)
             {
                 bookingsDataTableByArrival.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate);
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid);
             }
 
             return bookingsDataTableByArrival;
@@ -112,7 +113,9 @@ namespace virtual_receptionist.Controllers
 
             string departureDate = Convert.ToDateTime(bookingParameters[6]).ToString("yyyy-MM-dd");
 
-            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+            bool paid = Convert.ToBoolean(bookingParameters[7]);
+
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
             repository.Create(booking);
         }
@@ -141,7 +144,9 @@ namespace virtual_receptionist.Controllers
 
             string departureDate = Convert.ToDateTime(bookingParameters[6].ToString()).ToString("yyyy-MM-dd");
 
-            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+            bool paid = Convert.ToBoolean(bookingParameters[7]);
+
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
             repository.Delete(booking);
         }
@@ -170,7 +175,9 @@ namespace virtual_receptionist.Controllers
 
             string departureDate = Convert.ToDateTime(bookingParameters[6]).ToString("yyyy-MM-dd");
 
-            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+            bool paid = Convert.ToBoolean(bookingParameters[7]);
+
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
             repository.Update(booking);
         }
