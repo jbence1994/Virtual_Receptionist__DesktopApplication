@@ -184,6 +184,7 @@
             // 
             // dateTimePickerArrivalDate
             // 
+            this.dateTimePickerArrivalDate.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(152, 72);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
@@ -191,6 +192,7 @@
             // 
             // dateTimePickerDepartureDate
             // 
+            this.dateTimePickerDepartureDate.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(152, 98);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
