@@ -78,7 +78,7 @@ namespace virtual_receptionist.Controllers
             billingDataTable.Columns.Add("Mennyiség", typeof(int));
 
             string item = itemParameters[0].ToString();
-            int vat = int.Parse(itemParameters[1].ToString());
+            double vat = Convert.ToDouble(itemParameters[1].ToString());
             string unit = itemParameters[1].ToString();
             double price = double.Parse(itemParameters[2].ToString());
             int quantity = int.Parse(itemParameters[3].ToString());
