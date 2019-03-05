@@ -35,8 +35,34 @@ namespace virtual_receptionist.Views
 
         private void FormGuestRegistrationCard_Load(object sender, EventArgs e)
         {
-            textBoxGuestName.Select();
-            comboBoxGuestCountry.DataSource = controller.GetCountries();
+            textBoxName.Select();
+            comboBoxCountry.DataSource = controller.GetCountries();
+        }
+
+        private void buttonSaveData_Click(object sender, EventArgs e)
+        {
+            /*
+             * Validálás Controllerben!!!
+             */
+            string name = textBoxName.Text;
+            string citizenship = textBoxCitizenship.Text;
+            string birthDate = textBoxBirthDate.Text;
+            string documentNumber = textBoxDocumentNumber.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
+            string zipCode = textBoxZipCode.Text;
+            string city = textBoxCity.Text;
+            string address = textBoxAddress.Text;
+
+            string phone = textBoxPhoneNumber.Text;
+            string email = textBoxEmailAddress.Text;
+
+            string room = comboBoxRoom.SelectedItem.ToString();
+            int numberOfGuests = Convert.ToInt32(numericUpDownNumberOfGuests.Value);
+            DateTime arrival = dateTimePickerArrivalDate.Value;
+            DateTime departure = dateTimePickerDepartureDate.Value;
+
+            controller.SaveData(name, citizenship, birthDate, documentNumber, country, zipCode, city, address, phone,
+                email, room, numberOfGuests, arrival, departure);
         }
 
         #endregion
