@@ -55,7 +55,7 @@ namespace virtual_receptionist.Views
             string email = textBoxEmailAddress.Text;
 
             string room = comboBoxRoom.SelectedItem.ToString();
-            int numberOfGuests = Convert.ToInt32(numericUpDownNumberOfGuests.Value);
+            decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
             DateTime arrival = dateTimePickerArrivalDate.Value;
             DateTime departure = dateTimePickerDepartureDate.Value;
 
@@ -67,7 +67,7 @@ namespace virtual_receptionist.Views
             }
             catch (Exception)
             {
-                MessageBox.Show("");
+                MessageBox.Show("Az érkezési dátum nem egyezhet meg a távozás dát");
             }
 
             #endregion
