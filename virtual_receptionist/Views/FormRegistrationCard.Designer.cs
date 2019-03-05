@@ -109,7 +109,7 @@
             // comboBoxRoom
             // 
             this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Location = new System.Drawing.Point(140, 57);
+            this.comboBoxRoom.Location = new System.Drawing.Point(122, 57);
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(276, 21);
             this.comboBoxRoom.TabIndex = 30;
@@ -117,7 +117,7 @@
             // labelDepartureDate
             // 
             this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Location = new System.Drawing.Point(83, 142);
+            this.labelDepartureDate.Location = new System.Drawing.Point(65, 142);
             this.labelDepartureDate.Name = "labelDepartureDate";
             this.labelDepartureDate.Size = new System.Drawing.Size(51, 13);
             this.labelDepartureDate.TabIndex = 25;
@@ -126,7 +126,7 @@
             // labelRoom
             // 
             this.labelRoom.AutoSize = true;
-            this.labelRoom.Location = new System.Drawing.Point(94, 60);
+            this.labelRoom.Location = new System.Drawing.Point(76, 60);
             this.labelRoom.Name = "labelRoom";
             this.labelRoom.Size = new System.Drawing.Size(40, 13);
             this.labelRoom.TabIndex = 24;
@@ -135,7 +135,7 @@
             // labelArrivalDate
             // 
             this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Location = new System.Drawing.Point(86, 116);
+            this.labelArrivalDate.Location = new System.Drawing.Point(68, 116);
             this.labelArrivalDate.Name = "labelArrivalDate";
             this.labelArrivalDate.Size = new System.Drawing.Size(48, 13);
             this.labelArrivalDate.TabIndex = 26;
@@ -143,7 +143,7 @@
             // 
             // numericUpDownNumberOfGuests
             // 
-            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(140, 84);
+            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(122, 84);
             this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
             this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(276, 20);
             this.numericUpDownNumberOfGuests.TabIndex = 31;
@@ -156,7 +156,7 @@
             // labelNumberOfGuests
             // 
             this.labelNumberOfGuests.AutoSize = true;
-            this.labelNumberOfGuests.Location = new System.Drawing.Point(42, 86);
+            this.labelNumberOfGuests.Location = new System.Drawing.Point(24, 86);
             this.labelNumberOfGuests.Name = "labelNumberOfGuests";
             this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
             this.labelNumberOfGuests.TabIndex = 27;
@@ -165,7 +165,7 @@
             // dateTimePickerArrivalDate
             // 
             this.dateTimePickerArrivalDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(140, 110);
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(122, 110);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(276, 20);
             this.dateTimePickerArrivalDate.TabIndex = 32;
@@ -173,7 +173,7 @@
             // dateTimePickerDepartureDate
             // 
             this.dateTimePickerDepartureDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(140, 136);
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(122, 136);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(276, 20);
             this.dateTimePickerDepartureDate.TabIndex = 33;
