@@ -99,6 +99,36 @@
         }
 
         /// <summary>
+        /// Guest osztály konstruktora
+        /// </summary>
+        /// <param name="name">Vendég neve</param>
+        /// <param name="documentNumber">Vendég útlevél vagy személyi igazolvány száma</param>
+        /// <param name="citizenship">Vendég állampolgársága</param>
+        /// <param name="birthDate">Vendég születési ideje</param>
+        /// <param name="country">Vendég száramázási országának neve</param>
+        /// <param name="zipCode">Vendég lakhelyének irányítószáma</param>
+        /// <param name="city">Vendég lakhelyének települése</param>
+        /// <param name="address">Vendég lakhelyének címe (utca, házszám)</param>
+        /// <param name="phoneNumber">Vendég telefonszáma</param>
+        /// <param name="emailAddress">Vendég e-mail címe</param>
+        public Guest(string name, string documentNumber, string citizenship, string birthDate, string country,
+            string zipCode, string city, string address,
+            string phoneNumber,
+            string emailAddress)
+        {
+            this.name = name;
+            this.documentNumber = documentNumber;
+            this.citizenship = citizenship;
+            this.birthDate = birthDate;
+            this.country = country;
+            this.zipCode = zipCode;
+            this.city = city;
+            this.address = address;
+            this.phoneNumber = phoneNumber;
+            this.emailAddress = emailAddress;
+        }
+
+        /// <summary>
         /// Guest osztály üres konstruktora
         /// </summary>
         public Guest()

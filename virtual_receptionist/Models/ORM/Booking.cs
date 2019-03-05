@@ -64,6 +64,24 @@ namespace virtual_receptionist.Models.ORM
         }
 
         /// <summary>
+        /// Booking osztály konstruktora
+        /// </summary>
+        /// <param name="guest">Guest egyed</param>
+        /// <param name="room">Room egyed</param>
+        /// <param name="numberOfGuests">Vendégek száma</param>
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <param name="departureDate">Távozás dátuma</param>
+        public Booking(Guest guest, Room room, int numberOfGuests, DateTime arrivalDate,
+            DateTime departureDate)
+        {
+            this.guest = guest;
+            this.room = room;
+            this.numberOfGuests = numberOfGuests;
+            this.arrivalDate = arrivalDate;
+            this.departureDate = departureDate;
+        }
+
+        /// <summary>
         /// Booking osztály üres konstruktora
         /// </summary>
         public Booking()

@@ -41,9 +41,6 @@ namespace virtual_receptionist.Views
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
-            /*
-             * Validálás Controllerben!!!
-             */
             string name = textBoxName.Text;
             string citizenship = textBoxCitizenship.Text;
             string birthDate = textBoxBirthDate.Text;

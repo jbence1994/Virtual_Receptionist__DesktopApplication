@@ -54,6 +54,21 @@
         }
 
         /// <summary>
+        /// Room osztály konstruktora
+        /// </summary>
+        /// <param name="name">Szoba elnevezése</param>
+        /// <param name="number">Szobaszám</param>
+        /// <param name="category">Szobakategória</param>
+        /// <param name="capacity">Szoba férőhelye</param>
+        public Room(string name, int number, string category, int capacity)
+        {
+            this.name = name;
+            this.number = number;
+            this.category = category;
+            this.capacity = capacity;
+        }
+
+        /// <summary>
         /// Room osztály üres konstruktora
         /// </summary>
         public Room()
