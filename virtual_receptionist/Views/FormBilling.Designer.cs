@@ -50,7 +50,23 @@
             this.columnHeaderArrivalDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDepartureDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxBookingToBill = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxVATNumber = new System.Windows.Forms.TextBox();
+            this.textBoxBillingZipCode = new System.Windows.Forms.TextBox();
+            this.labelBillingName = new System.Windows.Forms.Label();
+            this.labelBillingAddress = new System.Windows.Forms.Label();
+            this.comboBoxBIllingCountry = new System.Windows.Forms.ComboBox();
+            this.textBoxBillingAddress = new System.Windows.Forms.TextBox();
+            this.labelBillingCountry = new System.Windows.Forms.Label();
+            this.labelVATNumber = new System.Windows.Forms.Label();
+            this.checkBoxIsCompany = new System.Windows.Forms.CheckBox();
+            this.labelBillingZipCode = new System.Windows.Forms.Label();
+            this.labelBillingCity = new System.Windows.Forms.Label();
+            this.textBoxBillingCity = new System.Windows.Forms.TextBox();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.labelTotalPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
+            this.groupBoxBillingData.SuspendLayout();
             this.groupBoxBookingToBill.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +76,8 @@
             this.dataGridViewItems.AllowUserToDeleteRows = false;
             this.dataGridViewItems.AllowUserToResizeColumns = false;
             this.dataGridViewItems.AllowUserToResizeRows = false;
-            this.dataGridViewItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridViewItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -74,7 +91,7 @@
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
             this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewItems.Size = new System.Drawing.Size(874, 274);
+            this.dataGridViewItems.Size = new System.Drawing.Size(874, 243);
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
@@ -176,6 +193,19 @@
             // 
             this.groupBoxBillingData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBillingData.Controls.Add(this.textBoxBillingCity);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingCity);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingZipCode);
+            this.groupBoxBillingData.Controls.Add(this.checkBoxIsCompany);
+            this.groupBoxBillingData.Controls.Add(this.labelVATNumber);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingCountry);
+            this.groupBoxBillingData.Controls.Add(this.textBoxBillingAddress);
+            this.groupBoxBillingData.Controls.Add(this.comboBoxBIllingCountry);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingAddress);
+            this.groupBoxBillingData.Controls.Add(this.labelBillingName);
+            this.groupBoxBillingData.Controls.Add(this.textBoxBillingZipCode);
+            this.groupBoxBillingData.Controls.Add(this.textBoxVATNumber);
+            this.groupBoxBillingData.Controls.Add(this.textBox1);
             this.groupBoxBillingData.Location = new System.Drawing.Point(12, 469);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
             this.groupBoxBillingData.Size = new System.Drawing.Size(1037, 155);
@@ -237,8 +267,7 @@
             // 
             // groupBoxBookingToBill
             // 
-            this.groupBoxBookingToBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxBookingToBill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxBookingToBill.Controls.Add(this.listViewToBill);
             this.groupBoxBookingToBill.Location = new System.Drawing.Point(12, 292);
@@ -248,11 +277,141 @@
             this.groupBoxBookingToBill.TabStop = false;
             this.groupBoxBookingToBill.Text = "Számlázandó foglalások";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(247, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBoxVATNumber
+            // 
+            this.textBoxVATNumber.Location = new System.Drawing.Point(567, 42);
+            this.textBoxVATNumber.Name = "textBoxVATNumber";
+            this.textBoxVATNumber.Size = new System.Drawing.Size(225, 20);
+            this.textBoxVATNumber.TabIndex = 2;
+            // 
+            // textBoxBillingZipCode
+            // 
+            this.textBoxBillingZipCode.Location = new System.Drawing.Point(567, 68);
+            this.textBoxBillingZipCode.Name = "textBoxBillingZipCode";
+            this.textBoxBillingZipCode.Size = new System.Drawing.Size(225, 20);
+            this.textBoxBillingZipCode.TabIndex = 3;
+            // 
+            // labelBillingName
+            // 
+            this.labelBillingName.AutoSize = true;
+            this.labelBillingName.Location = new System.Drawing.Point(158, 45);
+            this.labelBillingName.Name = "labelBillingName";
+            this.labelBillingName.Size = new System.Drawing.Size(83, 13);
+            this.labelBillingName.TabIndex = 4;
+            this.labelBillingName.Text = "Számlázási név:";
+            // 
+            // labelBillingAddress
+            // 
+            this.labelBillingAddress.AutoSize = true;
+            this.labelBillingAddress.Location = new System.Drawing.Point(532, 97);
+            this.labelBillingAddress.Name = "labelBillingAddress";
+            this.labelBillingAddress.Size = new System.Drawing.Size(29, 13);
+            this.labelBillingAddress.TabIndex = 5;
+            this.labelBillingAddress.Text = "Cím:";
+            // 
+            // comboBoxBIllingCountry
+            // 
+            this.comboBoxBIllingCountry.FormattingEnabled = true;
+            this.comboBoxBIllingCountry.Location = new System.Drawing.Point(247, 68);
+            this.comboBoxBIllingCountry.Name = "comboBoxBIllingCountry";
+            this.comboBoxBIllingCountry.Size = new System.Drawing.Size(225, 21);
+            this.comboBoxBIllingCountry.TabIndex = 6;
+            // 
+            // textBoxBillingAddress
+            // 
+            this.textBoxBillingAddress.Location = new System.Drawing.Point(567, 94);
+            this.textBoxBillingAddress.Name = "textBoxBillingAddress";
+            this.textBoxBillingAddress.Size = new System.Drawing.Size(225, 20);
+            this.textBoxBillingAddress.TabIndex = 7;
+            // 
+            // labelBillingCountry
+            // 
+            this.labelBillingCountry.AutoSize = true;
+            this.labelBillingCountry.Location = new System.Drawing.Point(198, 72);
+            this.labelBillingCountry.Name = "labelBillingCountry";
+            this.labelBillingCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelBillingCountry.TabIndex = 8;
+            this.labelBillingCountry.Text = "Ország:";
+            // 
+            // labelVATNumber
+            // 
+            this.labelVATNumber.AutoSize = true;
+            this.labelVATNumber.Location = new System.Drawing.Point(508, 45);
+            this.labelVATNumber.Name = "labelVATNumber";
+            this.labelVATNumber.Size = new System.Drawing.Size(53, 13);
+            this.labelVATNumber.TabIndex = 9;
+            this.labelVATNumber.Text = "Adószám:";
+            // 
+            // checkBoxIsCompany
+            // 
+            this.checkBoxIsCompany.AutoSize = true;
+            this.checkBoxIsCompany.Location = new System.Drawing.Point(798, 44);
+            this.checkBoxIsCompany.Name = "checkBoxIsCompany";
+            this.checkBoxIsCompany.Size = new System.Drawing.Size(91, 17);
+            this.checkBoxIsCompany.TabIndex = 10;
+            this.checkBoxIsCompany.Text = "Céges számla";
+            this.checkBoxIsCompany.UseVisualStyleBackColor = true;
+            // 
+            // labelBillingZipCode
+            // 
+            this.labelBillingZipCode.AutoSize = true;
+            this.labelBillingZipCode.Location = new System.Drawing.Point(491, 71);
+            this.labelBillingZipCode.Name = "labelBillingZipCode";
+            this.labelBillingZipCode.Size = new System.Drawing.Size(70, 13);
+            this.labelBillingZipCode.TabIndex = 11;
+            this.labelBillingZipCode.Text = "Irányítószám:";
+            // 
+            // labelBillingCity
+            // 
+            this.labelBillingCity.AutoSize = true;
+            this.labelBillingCity.Location = new System.Drawing.Point(185, 98);
+            this.labelBillingCity.Name = "labelBillingCity";
+            this.labelBillingCity.Size = new System.Drawing.Size(56, 13);
+            this.labelBillingCity.TabIndex = 12;
+            this.labelBillingCity.Text = "Település:";
+            // 
+            // textBoxBillingCity
+            // 
+            this.textBoxBillingCity.Location = new System.Drawing.Point(247, 95);
+            this.textBoxBillingCity.Name = "textBoxBillingCity";
+            this.textBoxBillingCity.Size = new System.Drawing.Size(225, 20);
+            this.textBoxBillingCity.TabIndex = 13;
+            // 
+            // textBoxTotalPrice
+            // 
+            this.textBoxTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(506, 261);
+            this.textBoxTotalPrice.Multiline = true;
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.ReadOnly = true;
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(380, 25);
+            this.textBoxTotalPrice.TabIndex = 12;
+            // 
+            // labelTotalPrice
+            // 
+            this.labelTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTotalPrice.AutoSize = true;
+            this.labelTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTotalPrice.Location = new System.Drawing.Point(305, 261);
+            this.labelTotalPrice.Name = "labelTotalPrice";
+            this.labelTotalPrice.Size = new System.Drawing.Size(195, 24);
+            this.labelTotalPrice.TabIndex = 13;
+            this.labelTotalPrice.Text = "Fizetendő végösszeg:";
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 636);
+            this.Controls.Add(this.labelTotalPrice);
+            this.Controls.Add(this.textBoxTotalPrice);
             this.Controls.Add(this.groupBoxBookingToBill);
             this.Controls.Add(this.groupBoxBillingData);
             this.Controls.Add(this.buttonDeleteItem);
@@ -268,8 +427,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormBilling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
+            this.groupBoxBillingData.ResumeLayout(false);
+            this.groupBoxBillingData.PerformLayout();
             this.groupBoxBookingToBill.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -295,5 +457,20 @@
         private System.Windows.Forms.ColumnHeader columnHeaderArrivalDate;
         private System.Windows.Forms.ColumnHeader columnHeaderDepartureDate;
         private System.Windows.Forms.GroupBox groupBoxBookingToBill;
+        private System.Windows.Forms.TextBox textBoxBillingZipCode;
+        private System.Windows.Forms.TextBox textBoxVATNumber;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelBillingName;
+        private System.Windows.Forms.ComboBox comboBoxBIllingCountry;
+        private System.Windows.Forms.Label labelBillingAddress;
+        private System.Windows.Forms.TextBox textBoxBillingAddress;
+        private System.Windows.Forms.Label labelBillingCountry;
+        private System.Windows.Forms.CheckBox checkBoxIsCompany;
+        private System.Windows.Forms.Label labelVATNumber;
+        private System.Windows.Forms.Label labelBillingZipCode;
+        private System.Windows.Forms.TextBox textBoxBillingCity;
+        private System.Windows.Forms.Label labelBillingCity;
+        private System.Windows.Forms.TextBox textBoxTotalPrice;
+        private System.Windows.Forms.Label labelTotalPrice;
     }
 }
