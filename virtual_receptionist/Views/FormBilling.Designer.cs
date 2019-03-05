@@ -177,9 +177,9 @@
             // 
             this.groupBoxBillingData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxBillingData.Location = new System.Drawing.Point(577, 292);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(584, 292);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
-            this.groupBoxBillingData.Size = new System.Drawing.Size(472, 265);
+            this.groupBoxBillingData.Size = new System.Drawing.Size(465, 265);
             this.groupBoxBillingData.TabIndex = 9;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
@@ -200,7 +200,7 @@
             this.listViewToBill.Location = new System.Drawing.Point(6, 19);
             this.listViewToBill.MultiSelect = false;
             this.listViewToBill.Name = "listViewToBill";
-            this.listViewToBill.Size = new System.Drawing.Size(547, 240);
+            this.listViewToBill.Size = new System.Drawing.Size(554, 240);
             this.listViewToBill.TabIndex = 10;
             this.listViewToBill.UseCompatibleStateImageBehavior = false;
             this.listViewToBill.View = System.Windows.Forms.View.Details;
@@ -237,13 +237,11 @@
             // 
             // groupBoxBookingToBill
             // 
-            this.groupBoxBookingToBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBookingToBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBoxBookingToBill.Controls.Add(this.listViewToBill);
             this.groupBoxBookingToBill.Location = new System.Drawing.Point(12, 292);
             this.groupBoxBookingToBill.Name = "groupBoxBookingToBill";
-            this.groupBoxBookingToBill.Size = new System.Drawing.Size(559, 265);
+            this.groupBoxBookingToBill.Size = new System.Drawing.Size(566, 265);
             this.groupBoxBookingToBill.TabIndex = 11;
             this.groupBoxBookingToBill.TabStop = false;
             this.groupBoxBookingToBill.Text = "Számlázandó foglalás";
