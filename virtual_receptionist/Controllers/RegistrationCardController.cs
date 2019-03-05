@@ -34,7 +34,7 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Metódus, amely elmenti a vendég, cég és foglalás adatait adatbázisba
         /// </summary>
-        public void SaveData(bool isCompany, params object[] dataParameters)
+        public void SaveData(params object[] dataParameters)
         {
 
         }
