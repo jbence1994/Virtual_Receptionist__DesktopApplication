@@ -42,10 +42,16 @@
             this.printDialogPrinter = new System.Windows.Forms.PrintDialog();
             this.printDocumentInvoice = new System.Drawing.Printing.PrintDocument();
             this.groupBoxBillingData = new System.Windows.Forms.GroupBox();
-            this.labelBillingName = new System.Windows.Forms.Label();
-            this.textBoxBillingName = new System.Windows.Forms.TextBox();
+            this.listViewToBill = new System.Windows.Forms.ListView();
+            this.columnHeaderBookingID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnGuest = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderRoom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderNumberOfGuests = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderArrivalDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDepartureDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBoxBookingToBill = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
-            this.groupBoxBillingData.SuspendLayout();
+            this.groupBoxBookingToBill.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewItems
@@ -69,7 +75,7 @@
             this.dataGridViewItems.Name = "dataGridViewItems";
             this.dataGridViewItems.ReadOnly = true;
             this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewItems.Size = new System.Drawing.Size(597, 274);
+            this.dataGridViewItems.Size = new System.Drawing.Size(874, 274);
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
@@ -108,7 +114,7 @@
             this.buttonPrintInvoice.Enabled = false;
             this.buttonPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPrintInvoice.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintInvoice.Image")));
-            this.buttonPrintInvoice.Location = new System.Drawing.Point(615, 222);
+            this.buttonPrintInvoice.Location = new System.Drawing.Point(892, 222);
             this.buttonPrintInvoice.Name = "buttonPrintInvoice";
             this.buttonPrintInvoice.Size = new System.Drawing.Size(157, 64);
             this.buttonPrintInvoice.TabIndex = 5;
@@ -123,7 +129,7 @@
             this.buttonAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
-            this.buttonAddItem.Location = new System.Drawing.Point(615, 12);
+            this.buttonAddItem.Location = new System.Drawing.Point(892, 12);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(157, 64);
             this.buttonAddItem.TabIndex = 2;
@@ -138,7 +144,7 @@
             this.buttonUpdateItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
-            this.buttonUpdateItem.Location = new System.Drawing.Point(615, 82);
+            this.buttonUpdateItem.Location = new System.Drawing.Point(892, 82);
             this.buttonUpdateItem.Name = "buttonUpdateItem";
             this.buttonUpdateItem.Size = new System.Drawing.Size(157, 64);
             this.buttonUpdateItem.TabIndex = 3;
@@ -153,7 +159,7 @@
             this.buttonDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
-            this.buttonDeleteItem.Location = new System.Drawing.Point(615, 152);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(892, 152);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(157, 64);
             this.buttonDeleteItem.TabIndex = 4;
@@ -171,36 +177,83 @@
             // 
             this.groupBoxBillingData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxBillingData.Controls.Add(this.textBoxBillingName);
-            this.groupBoxBillingData.Controls.Add(this.labelBillingName);
-            this.groupBoxBillingData.Location = new System.Drawing.Point(12, 292);
+            this.groupBoxBillingData.Location = new System.Drawing.Point(577, 292);
             this.groupBoxBillingData.Name = "groupBoxBillingData";
-            this.groupBoxBillingData.Size = new System.Drawing.Size(760, 258);
+            this.groupBoxBillingData.Size = new System.Drawing.Size(472, 265);
             this.groupBoxBillingData.TabIndex = 9;
             this.groupBoxBillingData.TabStop = false;
             this.groupBoxBillingData.Text = "Számlázási adatok";
             // 
-            // labelBillingName
+            // listViewToBill
             // 
-            this.labelBillingName.AutoSize = true;
-            this.labelBillingName.Location = new System.Drawing.Point(43, 58);
-            this.labelBillingName.Name = "labelBillingName";
-            this.labelBillingName.Size = new System.Drawing.Size(83, 13);
-            this.labelBillingName.TabIndex = 0;
-            this.labelBillingName.Text = "Számlázási név:";
+            this.listViewToBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewToBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderBookingID,
+            this.columnGuest,
+            this.columnHeaderRoom,
+            this.columnHeaderNumberOfGuests,
+            this.columnHeaderArrivalDate,
+            this.columnHeaderDepartureDate});
+            this.listViewToBill.GridLines = true;
+            this.listViewToBill.Location = new System.Drawing.Point(6, 19);
+            this.listViewToBill.MultiSelect = false;
+            this.listViewToBill.Name = "listViewToBill";
+            this.listViewToBill.Size = new System.Drawing.Size(547, 240);
+            this.listViewToBill.TabIndex = 10;
+            this.listViewToBill.UseCompatibleStateImageBehavior = false;
+            this.listViewToBill.View = System.Windows.Forms.View.Details;
             // 
-            // textBoxBillingName
+            // columnHeaderBookingID
             // 
-            this.textBoxBillingName.Location = new System.Drawing.Point(132, 55);
-            this.textBoxBillingName.Name = "textBoxBillingName";
-            this.textBoxBillingName.Size = new System.Drawing.Size(283, 20);
-            this.textBoxBillingName.TabIndex = 9;
+            this.columnHeaderBookingID.Text = "Foglalás azonosító";
+            this.columnHeaderBookingID.Width = 150;
+            // 
+            // columnGuest
+            // 
+            this.columnGuest.Text = "Vendég neve";
+            this.columnGuest.Width = 150;
+            // 
+            // columnHeaderRoom
+            // 
+            this.columnHeaderRoom.Text = "Szoba";
+            this.columnHeaderRoom.Width = 150;
+            // 
+            // columnHeaderNumberOfGuests
+            // 
+            this.columnHeaderNumberOfGuests.Text = "Vendégszám";
+            this.columnHeaderNumberOfGuests.Width = 150;
+            // 
+            // columnHeaderArrivalDate
+            // 
+            this.columnHeaderArrivalDate.Text = "Érkezés";
+            this.columnHeaderArrivalDate.Width = 150;
+            // 
+            // columnHeaderDepartureDate
+            // 
+            this.columnHeaderDepartureDate.Text = "Távozás";
+            this.columnHeaderDepartureDate.Width = 150;
+            // 
+            // groupBoxBookingToBill
+            // 
+            this.groupBoxBookingToBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxBookingToBill.Controls.Add(this.listViewToBill);
+            this.groupBoxBookingToBill.Location = new System.Drawing.Point(12, 292);
+            this.groupBoxBookingToBill.Name = "groupBoxBookingToBill";
+            this.groupBoxBookingToBill.Size = new System.Drawing.Size(559, 265);
+            this.groupBoxBookingToBill.TabIndex = 11;
+            this.groupBoxBookingToBill.TabStop = false;
+            this.groupBoxBookingToBill.Text = "Számlázandó foglalás";
             // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(1061, 569);
+            this.Controls.Add(this.groupBoxBookingToBill);
             this.Controls.Add(this.groupBoxBillingData);
             this.Controls.Add(this.buttonDeleteItem);
             this.Controls.Add(this.buttonUpdateItem);
@@ -214,8 +267,7 @@
             this.Text = "Számla kiállítása | Virtual Receptionist";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
-            this.groupBoxBillingData.ResumeLayout(false);
-            this.groupBoxBillingData.PerformLayout();
+            this.groupBoxBookingToBill.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -234,7 +286,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.GroupBox groupBoxBillingData;
-        private System.Windows.Forms.TextBox textBoxBillingName;
-        private System.Windows.Forms.Label labelBillingName;
+        private System.Windows.Forms.ListView listViewToBill;
+        private System.Windows.Forms.ColumnHeader columnHeaderBookingID;
+        private System.Windows.Forms.ColumnHeader columnGuest;
+        private System.Windows.Forms.ColumnHeader columnHeaderRoom;
+        private System.Windows.Forms.ColumnHeader columnHeaderNumberOfGuests;
+        private System.Windows.Forms.ColumnHeader columnHeaderArrivalDate;
+        private System.Windows.Forms.ColumnHeader columnHeaderDepartureDate;
+        private System.Windows.Forms.GroupBox groupBoxBookingToBill;
     }
 }
