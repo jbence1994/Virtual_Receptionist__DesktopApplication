@@ -67,7 +67,7 @@ namespace virtual_receptionist.Views
             }
             catch (Exception)
             {
-                MessageBox.Show("Az érkezési dátum nem egyezhet meg a távozás dát");
+                MessageBox.Show("Az érkezési dátum nem egyezhet meg a távozás dátumával!");
             }
 
             #endregion
