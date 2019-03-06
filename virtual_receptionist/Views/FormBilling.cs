@@ -55,6 +55,7 @@ namespace virtual_receptionist.Views
 
         private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
         {
+            textBoxVATNumber.Clear();
             textBoxVATNumber.Enabled = checkBoxIsCompany.Checked;
         }
 
@@ -137,7 +138,7 @@ namespace virtual_receptionist.Views
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
-
+            controller.PrintInvoice();
         }
 
         #endregion

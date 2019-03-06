@@ -348,32 +348,32 @@
             // columnHeaderBookingID
             // 
             this.columnHeaderBookingID.Text = "Foglalás azonosító";
-            this.columnHeaderBookingID.Width = 150;
+            this.columnHeaderBookingID.Width = 200;
             // 
             // columnGuest
             // 
             this.columnGuest.Text = "Vendég neve";
-            this.columnGuest.Width = 150;
+            this.columnGuest.Width = 200;
             // 
             // columnHeaderRoom
             // 
             this.columnHeaderRoom.Text = "Szoba";
-            this.columnHeaderRoom.Width = 150;
+            this.columnHeaderRoom.Width = 200;
             // 
             // columnHeaderNumberOfGuests
             // 
             this.columnHeaderNumberOfGuests.Text = "Vendégszám";
-            this.columnHeaderNumberOfGuests.Width = 150;
+            this.columnHeaderNumberOfGuests.Width = 200;
             // 
             // columnHeaderArrivalDate
             // 
             this.columnHeaderArrivalDate.Text = "Érkezés";
-            this.columnHeaderArrivalDate.Width = 150;
+            this.columnHeaderArrivalDate.Width = 200;
             // 
             // columnHeaderDepartureDate
             // 
             this.columnHeaderDepartureDate.Text = "Távozás";
-            this.columnHeaderDepartureDate.Width = 150;
+            this.columnHeaderDepartureDate.Width = 200;
             // 
             // groupBoxBookingToBill
             // 

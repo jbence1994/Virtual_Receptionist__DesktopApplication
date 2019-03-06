@@ -130,6 +130,14 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public void PrintInvoice()
+        {
+            bookingRepository.SetBookingPaid();
+        }
+
+        /// <summary>
         /// Metódus, amely lekéri a számlázási tételek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <returns>A számlázási tételek adataival feltöltött adattáblát adja vissza a függvény</returns>
