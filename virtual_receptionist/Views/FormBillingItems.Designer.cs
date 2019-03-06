@@ -205,7 +205,7 @@
             // maskedTextBoxVAT
             // 
             this.maskedTextBoxVAT.Location = new System.Drawing.Point(114, 45);
-            this.maskedTextBoxVAT.Mask = "00.0 %";
+            this.maskedTextBoxVAT.Mask = "00 %";
             this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
             this.maskedTextBoxVAT.ReadOnly = true;
             this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
