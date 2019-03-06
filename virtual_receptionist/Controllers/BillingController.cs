@@ -94,10 +94,10 @@ namespace virtual_receptionist.Controllers
             billingDataTable.Columns.Add("Mennyiség", typeof(int));
 
             string item = itemParameters[0].ToString();
-            double vat = Convert.ToDouble(itemParameters[1].ToString());
+            double vat = Convert.ToDouble(itemParameters[1]);
             string unit = itemParameters[1].ToString();
-            double price = double.Parse(itemParameters[2].ToString());
-            int quantity = Convert.ToInt32(itemParameters[3].ToString());
+            double price = Convert.ToDouble(itemParameters[2]);
+            int quantity = Convert.ToInt32(itemParameters[3]);
         }
 
         /// <summary>
