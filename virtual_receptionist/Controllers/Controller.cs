@@ -26,6 +26,9 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         private List<Country> countries;
 
+        /// <summary>
+        /// Szobákat tároló lista
+        /// </summary>
         private List<Room> rooms;
 
         #endregion
