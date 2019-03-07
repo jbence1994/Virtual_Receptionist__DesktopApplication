@@ -158,10 +158,10 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         /// <param name="prices">Bementi paraméter tétel árak</param>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
-        public double GetTotalPrice(params double[] prices)
+        public string GetTotalPrice(params double[] prices)
         {
             double total = billingRepository.CountTotalPrice(prices);
-            return total;
+            return total.ToString();
         }
 
         /// <summary>
