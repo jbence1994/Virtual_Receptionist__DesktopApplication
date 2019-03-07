@@ -138,8 +138,8 @@ namespace virtual_receptionist.Views
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
-            object id = listViewToBill.SelectedItems[0].Index;
-            controller.PrintInvoice(id);
+            int bookingID = listViewToBill.SelectedItems[0].Index;
+            controller.PrintInvoice(bookingID);
         }
 
         #endregion

@@ -167,7 +167,8 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Számla nyomtatás folyamatának elindítása
         /// </summary>
-        public void PrintInvoice(object bookingID)
+        /// <param name="bookingID">Foglalás azonosítója</param>
+        public void PrintInvoice(int bookingID)
         {
             Booking booking = new Booking()
             {
