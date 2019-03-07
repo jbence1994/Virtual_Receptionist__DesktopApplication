@@ -167,9 +167,14 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Számla nyomtatás folyamatának elindítása
         /// </summary>
-        public void PrintInvoice()
+        public void PrintInvoice(object bookingID)
         {
-            billingRepository.SetBookingAsPaid();
+            Booking booking = new Booking()
+            {
+                ID = Convert.ToInt32(bookingID)
+            };
+
+            billingRepository.SetBookingAsPaid(booking);
         }
 
         #endregion
