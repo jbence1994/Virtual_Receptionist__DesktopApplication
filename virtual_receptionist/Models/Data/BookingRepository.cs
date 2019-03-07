@@ -240,15 +240,6 @@ namespace virtual_receptionist.Models.Data
             return bookingsNotPaid;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void SetBookingPaid()
-        {
-            string sql = "";
-            database.DML(sql);
-        }
-
         #endregion
     }
 }

@@ -130,14 +130,6 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public void PrintInvoice()
-        {
-            bookingRepository.SetBookingPaid();
-        }
-
-        /// <summary>
         /// Metódus, amely lekéri a számlázási tételek adatait az adattárból és visszaadja őket egy adattáblában
         /// </summary>
         /// <returns>A számlázási tételek adataival feltöltött adattáblát adja vissza a függvény</returns>
@@ -170,6 +162,14 @@ namespace virtual_receptionist.Controllers
         {
             double total = billingRepository.CountTotalPrice(prices);
             return total;
+        }
+
+        /// <summary>
+        /// Számla nyomtatás folyamatának elindítása
+        /// </summary>
+        public void PrintInvoice()
+        {
+            billingRepository.SetBookingAsPaid();
         }
 
         #endregion
