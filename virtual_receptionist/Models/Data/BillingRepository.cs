@@ -103,9 +103,10 @@ namespace virtual_receptionist.Models.Data
         /// <summary>
         /// Metódus, amely számla nyomtatás esetén beállítja az adatbázisban fizetettre az adott foglalást
         /// </summary>
-        public void SetBookingAsPaid()
+        /// <param name="booking">Számlázott foglalás</param>
+        public void SetBookingAsPaid(Booking booking)
         {
-            string sql = "";
+            string sql = $"UPDATE booking SET Paid = 1 WHERE booking.ID = \"{booking.ID}\";
             database.DML(sql);
         }
 
