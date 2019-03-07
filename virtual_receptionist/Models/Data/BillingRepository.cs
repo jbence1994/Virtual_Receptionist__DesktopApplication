@@ -100,6 +100,15 @@ namespace virtual_receptionist.Models.Data
             return prices.Sum();
         }
 
+        /// <summary>
+        /// Metódus, amely számla nyomtatás esetén beállítja az adatbázisban fizetettre az adott foglalást
+        /// </summary>
+        public void SetBookingAsPaid()
+        {
+            string sql = "";
+            database.DML(sql);
+        }
+
         #endregion
     }
 }
