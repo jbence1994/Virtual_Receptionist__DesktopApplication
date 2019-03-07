@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Irányítószám kivétel
     /// </summary>
-    public class InvalidZipCodeException : Exception
+    public sealed class InvalidZipCodeException : Exception
     {
         #region Konstruktor
 

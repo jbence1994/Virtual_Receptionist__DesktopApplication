@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Cím kivétel
     /// </summary>
-    public class InvalidAddressException : Exception
+    public sealed class InvalidAddressException : Exception
     {
         #region Konstruktor
 

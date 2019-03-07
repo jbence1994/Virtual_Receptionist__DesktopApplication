@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// E-mail cím kivétel
     /// </summary>
-    public class InvalidEmailAddressException : Exception
+    public sealed class InvalidEmailAddressException : Exception
     {
         #region Konstruktor
 

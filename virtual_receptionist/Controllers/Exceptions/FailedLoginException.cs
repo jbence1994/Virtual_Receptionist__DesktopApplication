@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Bejelentkezés kivétel
     /// </summary>
-    public class FailedLoginException : Exception
+    public sealed class FailedLoginException : Exception
     {
         #region Konstruktor
 

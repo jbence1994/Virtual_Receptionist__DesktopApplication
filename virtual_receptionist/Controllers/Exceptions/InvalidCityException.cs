@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Település kivétel
     /// </summary>
-    public class InvalidCityException : Exception
+    public sealed class InvalidCityException : Exception
     {
         #region Konstruktor
 

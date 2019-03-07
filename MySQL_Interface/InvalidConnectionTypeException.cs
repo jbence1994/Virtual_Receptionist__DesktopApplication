@@ -5,7 +5,7 @@ namespace MySQL_Interface
     /// <summary>
     /// Adatbázis kapcsolódás típus kivétel
     /// </summary>
-    public class InvalidConnectionTypeException : Exception
+    public sealed class InvalidConnectionTypeException : Exception
     {
         #region Konstruktor
 

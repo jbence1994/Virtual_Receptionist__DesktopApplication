@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Születési dátum kivétel
     /// </summary>
-    public class InvalidBirthDateException : Exception
+    public sealed class InvalidBirthDateException : Exception
     {
         #region Konstuktor
 

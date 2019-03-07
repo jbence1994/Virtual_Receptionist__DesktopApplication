@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Név kivétel
     /// </summary>
-    public class InvalidNameException : Exception
+    public sealed class InvalidNameException : Exception
     {
         #region Konstruktor
 

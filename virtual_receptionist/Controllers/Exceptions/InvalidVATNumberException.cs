@@ -4,7 +4,7 @@ namespace virtual_receptionist.Controllers.Exceptions
 {
     /// Adószám kivétel
     /// </summary>
-    public class InvalidVATNumberException : Exception
+    public sealed class InvalidVATNumberException : Exception
     {
         #region Konstruktor
 
