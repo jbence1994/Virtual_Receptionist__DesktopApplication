@@ -14,6 +14,11 @@ namespace virtual_receptionist.Controllers
         #region Adattagok
 
         /// <summary>
+        /// Adattábla, amely tárolja a felvitt, módosított vagy töröl számlázási tételeket
+        /// </summary>
+        private DataTable billingItemsDataTable;
+
+        /// <summary>
         /// Számlázás adattár osztály egy példánya
         /// </summary>
         private BillingRepository billingRepository;
@@ -37,6 +42,8 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public BillingController()
         {
+            billingItemsDataTable = new DataTable();
+
             billingRepository = new BillingRepository();
             bookingRepository = new BookingRepository();
             guestRepository = new GuestRepository();
