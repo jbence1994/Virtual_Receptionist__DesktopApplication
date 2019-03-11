@@ -71,6 +71,10 @@ namespace virtual_receptionist.Views
                 textBoxBillingCity.Text = data[2];
                 textBoxBillingZipCode.Text = data[3];
                 textBoxBillingAddress.Text = data[4];
+
+                buttonAddItem.Enabled = true;
+                buttonUpdateItem.Enabled = true;
+                buttonDeleteItem.Enabled = true;
             }
             else
             {
@@ -82,6 +86,10 @@ namespace virtual_receptionist.Views
                 textBoxBillingZipCode.Clear();
                 textBoxBillingAddress.Clear();
                 textBoxVATNumber.Clear();
+
+                buttonAddItem.Enabled = false;
+                buttonUpdateItem.Enabled = false;
+                buttonDeleteItem.Enabled = false;
             }
         }
 
@@ -91,7 +99,7 @@ namespace virtual_receptionist.Views
 
             if (billingItems.ShowDialog() == DialogResult.OK)
             {
-                dataGridViewItems.DataSource = controller.AddNewRow();
+
             }
         }
 
@@ -103,8 +111,7 @@ namespace virtual_receptionist.Views
 
                 if (billingItems.ShowDialog() == DialogResult.OK)
                 {
-                    int rowToUpdate = dataGridViewItems.SelectedRows[0].Index;
-                    dataGridViewItems.DataSource = controller.UpdateRow(rowToUpdate);
+
                 }
             }
             else
@@ -117,8 +124,7 @@ namespace virtual_receptionist.Views
         {
             if (dataGridViewItems.SelectedRows.Count > 0)
             {
-                int rowToDelete = dataGridViewItems.SelectedRows[0].Index;
-                dataGridViewItems.DataSource = controller.DeleteRow(rowToDelete);
+
             }
             else
             {

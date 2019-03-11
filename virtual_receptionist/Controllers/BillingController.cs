@@ -13,6 +13,8 @@ namespace virtual_receptionist.Controllers
     {
         #region Adattagok
 
+        private DataTable billingDataTable;
+
         /// <summary>
         /// Számlázás adattár osztály egy példánya
         /// </summary>
@@ -40,6 +42,12 @@ namespace virtual_receptionist.Controllers
             billingRepository = new BillingRepository();
             bookingRepository = new BookingRepository();
             guestRepository = new GuestRepository();
+
+            billingDataTable = new DataTable();
+            billingDataTable.Columns.Add("Tétel", typeof(string));
+            billingDataTable.Columns.Add("Ár", typeof(double));
+            billingDataTable.Columns.Add("Egység", typeof(string));
+            billingDataTable.Columns.Add("Mennyiség", typeof(int));
         }
 
         #endregion
@@ -87,12 +95,6 @@ namespace virtual_receptionist.Controllers
         /// <param name="itemParameters">Számlázási tétel paraméterei</param>
         public void SetBillingItemParameters(params object[] itemParameters)
         {
-            DataTable billingDataTable = new DataTable();
-            billingDataTable.Columns.Add("Tétel", typeof(string));
-            billingDataTable.Columns.Add("Ár", typeof(double));
-            billingDataTable.Columns.Add("Egység", typeof(string));
-            billingDataTable.Columns.Add("Mennyiség", typeof(int));
-
             string item = itemParameters[0].ToString();
             double price = Convert.ToDouble(itemParameters[1]);
             string unit = itemParameters[2].ToString();

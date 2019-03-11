@@ -143,6 +143,7 @@
             // buttonAddItem
             // 
             this.buttonAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddItem.Enabled = false;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAddItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddItem.Image")));
             this.buttonAddItem.Location = new System.Drawing.Point(892, 12);
@@ -158,6 +159,7 @@
             // buttonUpdateItem
             // 
             this.buttonUpdateItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonUpdateItem.Enabled = false;
             this.buttonUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdateItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateItem.Image")));
             this.buttonUpdateItem.Location = new System.Drawing.Point(892, 82);
@@ -173,6 +175,7 @@
             // buttonDeleteItem
             // 
             this.buttonDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDeleteItem.Enabled = false;
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteItem.Image")));
             this.buttonDeleteItem.Location = new System.Drawing.Point(892, 152);
