@@ -106,7 +106,7 @@ namespace virtual_receptionist.Models.Data
         /// <param name="booking">Számlázott foglalás</param>
         public void SetBookingAsPaid(Booking booking)
         {
-            string sql = $"UPDATE booking SET Paid = 1 WHERE booking.ID = \"{booking.ID}\"";
+            string sql = $"UPDATE booking SET booking.Paid = 1 WHERE booking.ID = \"{booking.ID}\"";
             database.DML(sql);
         }
 

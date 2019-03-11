@@ -10,7 +10,7 @@ namespace virtual_receptionist.Models.Data
     /// </summary>
     public class AccomodationRepository : Repository
     {
-        #region Adatelérési és adatfeltöltő metódusok
+        #region Adatfeltöltő metódusok
 
         /// <summary>
         /// Metódus, amely beállítja a szálláshely adatait, amyel az adatábzisban van regisztrálva
