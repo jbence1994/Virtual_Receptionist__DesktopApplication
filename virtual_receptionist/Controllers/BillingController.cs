@@ -114,6 +114,18 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="price"></param>
+        /// <param name="unit"></param>
+        /// <param name="quantity"></param>
+        public void SetBillingItemParameters(string item, double price, string unit, int quantity)
+        {
+            billingItemsDataTable.Rows.Add(item, price, unit, quantity);
+        }
+
+        /// <summary>
         /// Metódus, amely visszaadja a fizetendő végösszeget
         /// </summary>
         /// <param name="prices">Bementi paraméter tétel árak</param>
@@ -139,10 +151,5 @@ namespace virtual_receptionist.Controllers
         }
 
         #endregion
-
-        public void SetBillingItemParameters(string item, double price, string unit, int quantity)
-        {
-
-        }
     }
 }
