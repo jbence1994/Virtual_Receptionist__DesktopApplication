@@ -79,9 +79,10 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely lekéri adattárból a paraméterben átadott név alapján a vendég adatait számlázáshoz
         /// </summary>
-        /// <returns></returns>
+        /// <param name="name">Vendég neve</param>
+        /// <returns>A vendég adatait tároló sztringtömbbel tér vissza a függvény</returns>
         public string[] GetBillingData(string name)
         {
             string[] data = guestRepository.GetGuestDataForBilling(name);
@@ -138,5 +139,10 @@ namespace virtual_receptionist.Controllers
         }
 
         #endregion
+
+        public void SetBillingItemParameters(string item, double price, string unit, int quantity)
+        {
+
+        }
     }
 }

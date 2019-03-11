@@ -141,8 +141,10 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// 
+        /// Metódus, amely kiszűri név alapján a vendéglistából a vendég adatait számlázáshoz
         /// </summary>
+        /// <param name="name">Vendég neve</param>
+        /// <returns>A vendég adatait tároló sztringtömbbel tér vissza a függvény</returns>
         public string[] GetGuestDataForBilling(string name)
         {
             string[] data = new string[5];
