@@ -177,9 +177,9 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         {
             try
             {
-                BirthDateValidation validation = new BirthDateValidation("1994-03-24");
+                BirthDateValidation validation = new BirthDateValidation("1994.03.27");
                 validation.ValidateBirthDate();
-                Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
+                Assert.Fail("Nem dob kivételt rossz születési dátum formátumra!");
             }
             catch (InvalidBirthDateException)
             {
@@ -194,9 +194,93 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         {
             try
             {
-                BirthDateValidation validation = new BirthDateValidation("1994.03.24.");
+                BirthDateValidation validation = new BirthDateValidation("1994/03/27");
+                validation.ValidateBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dátum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsNotValidBirthDateFormat3()
+        {
+            try
+            {
+                BirthDateValidation validation = new BirthDateValidation("1994.13.32.");
                 validation.ValidateBirthDate();
                 Assert.Fail("Nem dob kivételt rossz születési dtáum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsNotValidBirthDateFormat4()
+        {
+            try
+            {
+                BirthDateValidation validation = new BirthDateValidation("1994/13/32");
+                validation.ValidateBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dátum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsNotValidBirthDateFormat5()
+        {
+            try
+            {
+                BirthDateValidation validation = new BirthDateValidation("1994/13.32");
+                validation.ValidateBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dátum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsNotValidBirthDateFormat6()
+        {
+            try
+            {
+                BirthDateValidation validation = new BirthDateValidation("j994-03-27");
+                validation.ValidateBirthDate();
+                Assert.Fail("Nem dob kivételt rossz születési dátum formátumra!");
+            }
+            catch (InvalidBirthDateException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes születési dátum formátum-e bemeneti születési dátum /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateBirthDateTest_InCaseInputBirthDateIsValidBirthDateFormat()
+        {
+            try
+            {
+                BirthDateValidation validation = new BirthDateValidation("1994-03-27");
+                validation.ValidateBirthDate();
             }
             catch (InvalidBirthDateException)
             {
