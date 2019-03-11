@@ -54,7 +54,7 @@ namespace virtual_receptionist.Models.Data
                 string name = row["Name"].ToString();
                 string documentNumber = row["DocumentNumber"].ToString();
                 string citizenship = row["Citizenship"].ToString();
-                string birthDate = DateTime.Parse(row["BirthDate"].ToString()).ToShortDateString();
+                string birthDate = Convert.ToDateTime(row["BirthDate"]).ToString("yyyy-MM-dd");
                 string country = row["CountryName"].ToString();
                 string zipCode = row["ZipCode"].ToString();
                 string city = row["City"].ToString();

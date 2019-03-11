@@ -85,8 +85,8 @@ namespace virtual_receptionist.Models.Data
                 };
 
                 int numberOfGuests = Convert.ToInt32(row["NumberOfGuests"]);
-                string arrival = Convert.ToDateTime(row["ArrivalDate"]).ToString("yyyy-MM-dd").ToString();
-                string departure = Convert.ToDateTime(row["DepartureDate"]).ToString("yyyy-MM-dd").ToString();
+                string arrival = Convert.ToDateTime(row["ArrivalDate"]).ToString("yyyy-MM-dd");
+                string departure = Convert.ToDateTime(row["DepartureDate"]).ToString("yyyy-MM-dd");
                 bool paid = Convert.ToBoolean(row["Paid"]);
 
                 Booking bookingInstance = new Booking(id, guest, room, numberOfGuests, arrival, departure, paid);

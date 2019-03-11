@@ -112,7 +112,7 @@ namespace virtual_receptionist.Views
                 updatedRecord.SubItems.Add(name);
                 updatedRecord.SubItems.Add(documentNumber);
                 updatedRecord.SubItems.Add(citizenship);
-                updatedRecord.SubItems.Add(birthDate.Replace('-', ' ').Replace(" ", ". ") + ".");
+                updatedRecord.SubItems.Add(birthDate);
                 updatedRecord.SubItems.Add(country);
                 updatedRecord.SubItems.Add(zipCode);
                 updatedRecord.SubItems.Add(city);
@@ -196,8 +196,7 @@ namespace virtual_receptionist.Views
                 textBoxName.Text = listViewGuest.SelectedItems[0].SubItems[1].Text;
                 textBoxDocumentNumber.Text = listViewGuest.SelectedItems[0].SubItems[2].Text;
                 textBoxCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
-                textBoxBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text.Replace(". ", "-")
-                    .Replace(".", "");
+                textBoxBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text;
                 string selectedCountryInTable = listViewGuest.SelectedItems[0].SubItems[5].Text;
                 comboBoxCountry.SelectedItem = controller.SetSelectedCountry(selectedCountryInTable);
 
