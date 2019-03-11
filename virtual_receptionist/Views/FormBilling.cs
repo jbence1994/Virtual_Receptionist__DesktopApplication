@@ -99,7 +99,6 @@ namespace virtual_receptionist.Views
 
             if (billingItems.ShowDialog() == DialogResult.OK)
             {
-
             }
         }
 
@@ -111,7 +110,6 @@ namespace virtual_receptionist.Views
 
                 if (billingItems.ShowDialog() == DialogResult.OK)
                 {
-
                 }
             }
             else
@@ -124,7 +122,6 @@ namespace virtual_receptionist.Views
         {
             if (dataGridViewItems.SelectedRows.Count > 0)
             {
-
             }
             else
             {

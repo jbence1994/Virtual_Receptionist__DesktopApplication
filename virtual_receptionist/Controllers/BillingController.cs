@@ -13,8 +13,6 @@ namespace virtual_receptionist.Controllers
     {
         #region Adattagok
 
-        private DataTable billingDataTable;
-
         /// <summary>
         /// Számlázás adattár osztály egy példánya
         /// </summary>
@@ -42,12 +40,6 @@ namespace virtual_receptionist.Controllers
             billingRepository = new BillingRepository();
             bookingRepository = new BookingRepository();
             guestRepository = new GuestRepository();
-
-            billingDataTable = new DataTable();
-            billingDataTable.Columns.Add("Tétel", typeof(string));
-            billingDataTable.Columns.Add("Ár", typeof(double));
-            billingDataTable.Columns.Add("Egység", typeof(string));
-            billingDataTable.Columns.Add("Mennyiség", typeof(int));
         }
 
         #endregion
@@ -87,47 +79,6 @@ namespace virtual_receptionist.Controllers
         {
             string[] data = guestRepository.GetGuestDataForBilling(name);
             return data;
-        }
-
-        /// <summary>
-        /// Metódus, amely beállítja a számlázási tétel adatait
-        /// </summary>
-        /// <param name="itemParameters">Számlázási tétel paraméterei</param>
-        public void SetBillingItemParameters(params object[] itemParameters)
-        {
-            string item = itemParameters[0].ToString();
-            double price = Convert.ToDouble(itemParameters[1]);
-            string unit = itemParameters[2].ToString();
-            int quantity = Convert.ToInt32(itemParameters[3]);
-        }
-
-        /// <summary>
-        /// Új rekord hozzáadása
-        /// </summary>
-        /// <returns>Módosított adattáblát adja vissza a függvény</returns>
-        public DataTable AddNewRow()
-        {
-            return new DataTable();
-        }
-
-        /// <summary>
-        /// Rekord törlése
-        /// </summary>
-        /// <param name="index">Törlendő rekord</param>
-        /// <returns>Módosított adattáblát adja vissza a függvény</returns>
-        public DataTable DeleteRow(int index)
-        {
-            return new DataTable();
-        }
-
-        /// <summary>
-        /// Rekord módosítása
-        /// </summary>
-        /// <param name="index">Módosítandó rekord</param>
-        /// <returns>Módosított adattáblát adja vissza a függvény</returns>
-        public DataTable UpdateRow(int index)
-        {
-            return new DataTable();
         }
 
         /// <summary>
