@@ -72,7 +72,7 @@ namespace virtual_receptionist.Views
             string unit = textBoxUnit.Text;
             int quantity = Convert.ToInt32(textBoxQuantity.Text);
 
-            controller.SetBillingItemParameters(item, unit, price, quantity);
+            controller.SetBillingItemParameters(item, price, unit, quantity);
         }
 
         #endregion
