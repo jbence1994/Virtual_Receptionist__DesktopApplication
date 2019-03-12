@@ -40,7 +40,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(zipCode))
             {
-                throw new InvalidZipCodeException("Üres bemenet!");
+                throw new InvalidZipCodeException("Üres mező!");
             }
 
             if (ContainsControlCharacters(zipCode))

@@ -40,7 +40,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(email))
             {
-                throw new InvalidEmailAddressException("Üres bemenet!");
+                throw new InvalidEmailAddressException("Üres mező!");
             }
 
             if (!IsValidEmailAddress(email))

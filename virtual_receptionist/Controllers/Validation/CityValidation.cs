@@ -40,7 +40,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(city))
             {
-                throw new InvalidCityException("Üres bemenet!");
+                throw new InvalidCityException("Üres mező!");
             }
 
             if (ContainsControlCharacters(city))

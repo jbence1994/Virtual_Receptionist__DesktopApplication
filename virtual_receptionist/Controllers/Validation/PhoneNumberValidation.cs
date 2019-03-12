@@ -35,22 +35,22 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// Telefonszám ellenőrző metódus
         /// </summary>
-        /// <exception cref="InvalidAddressException"></exception>
+        /// <exception cref="InvalidPhoneNumberException"></exception>
         public void ValidatePhoneNumber()
         {
             if (IsEmpty(phoneNumber))
             {
-                throw new InvalidPhoneNumberException("Üres bemenet!");
+                throw new InvalidPhoneNumberException("Üres mező!");
             }
 
             if (ContainsControlCharacters(phoneNumber))
             {
-                throw new InvalidAddressException("Telefonszám nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new InvalidPhoneNumberException("Telefonszám nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLetterCharacters(phoneNumber))
             {
-                throw new InvalidAddressException("Cím nem kezdődhet kisbetűvel!");
+                throw new InvalidPhoneNumberException("Telefonszám nem tartalmazhat betűt!");
             }
         }
 

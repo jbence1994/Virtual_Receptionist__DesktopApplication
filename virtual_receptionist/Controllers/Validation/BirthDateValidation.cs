@@ -40,7 +40,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(birthDate))
             {
-                throw new InvalidBirthDateException("Üres bemenet!");
+                throw new InvalidBirthDateException("Üres mező!");
             }
 
             if (ContainsControlCharacters(birthDate))

@@ -40,7 +40,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(name))
             {
-                throw new InvalidNameException("Üres bemenet");
+                throw new InvalidNameException("Üres mező");
             }
 
             if (FirstLetterIsLowercaseCharacter(name))

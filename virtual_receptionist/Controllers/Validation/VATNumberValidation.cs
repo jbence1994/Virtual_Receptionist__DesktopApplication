@@ -40,7 +40,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(vatNumber))
             {
-                throw new InvalidVATNumberException("Üres bemenet!");
+                throw new InvalidVATNumberException("Üres mező!");
             }
 
             if (ContainsControlCharacters(vatNumber))

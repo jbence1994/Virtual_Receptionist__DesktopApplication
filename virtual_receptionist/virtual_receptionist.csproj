@@ -32,23 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -66,8 +49,10 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\Exceptions\InvalidAddressException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidCitizenshipException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCountryException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidDocumentNumberException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidEmailAddressException.cs" />
     <Compile Include="Controllers\Exceptions\FailedLoginException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidNameException.cs" />
@@ -76,8 +61,10 @@
     <Compile Include="Controllers\Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Controllers\Validation\AddressValidation.cs" />
     <Compile Include="Controllers\Validation\BirthDateValidation.cs" />
+    <Compile Include="Controllers\Validation\CitizenshipValidation.cs" />
     <Compile Include="Controllers\Validation\CityValidation.cs" />
     <Compile Include="Controllers\Validation\CountryValidation.cs" />
+    <Compile Include="Controllers\Validation\DocumentNumberValidation.cs" />
     <Compile Include="Controllers\Validation\EmailValidation.cs" />
     <Compile Include="Controllers\Validation\NameValidation.cs" />
     <Compile Include="Controllers\Validation\PhoneNumberValidation.cs" />

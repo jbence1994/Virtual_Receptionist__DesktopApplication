@@ -40,17 +40,17 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(address))
             {
-                throw new InvalidAddressException("Üres bemenet!");
+                throw new InvalidAddressException("Üres mező!");
             }
 
             if (ContainsControlCharacters(address))
             {
-                throw new InvalidAddressException("Cím nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new InvalidAddressException("Lakcím nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (FirstLetterIsLowercaseCharacter(address))
             {
-                throw new InvalidAddressException("Cím nem kezdődhet kisbetűvel!");
+                throw new InvalidAddressException("Lakcím nem kezdődhet kisbetűvel!");
             }
         }
 
