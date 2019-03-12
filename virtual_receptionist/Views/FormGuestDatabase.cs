@@ -2,8 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
-using virtual_receptionist.Controllers.Exceptions;
-using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Views
 {
@@ -70,25 +68,34 @@ namespace virtual_receptionist.Views
             string phoneNumber = textBoxPhoneNumber.Text;
             string email = textBoxEmailAddress.Text;
 
-            // ListView rekord hozzáadás (GUI)
-            textBoxID.Text = id.ToString();
-            ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = id.ToString();
-            newRecord.SubItems.Add(name);
-            newRecord.SubItems.Add(documentNumber);
-            newRecord.SubItems.Add(citizenship);
-            newRecord.SubItems.Add(birthDate);
-            newRecord.SubItems.Add(country);
-            newRecord.SubItems.Add(zipCode);
-            newRecord.SubItems.Add(city);
-            newRecord.SubItems.Add(address);
-            newRecord.SubItems.Add(phoneNumber);
-            newRecord.SubItems.Add(email);
-            listViewGuest.Items.Add(newRecord);
+            try
+            {
+                // Adatbázis rekord hozzáadása
+                controller.AddNewRecordToGuestTable(id, name, documentNumber, citizenship, birthDate, country,
+                    zipCode, city, address, phoneNumber, email);
 
-            // Adatbázis rekord hozzáadása
-            controller.AddNewRecordToGuestTable(id, name, documentNumber, citizenship, birthDate, country,
-                zipCode, city, address, phoneNumber, email);
+                // ListView rekord hozzáadás (GUI)
+                textBoxID.Text = id.ToString();
+                ListViewItem newRecord = new ListViewItem();
+                newRecord.Text = id.ToString();
+                newRecord.SubItems.Add(name);
+                newRecord.SubItems.Add(documentNumber);
+                newRecord.SubItems.Add(citizenship);
+                newRecord.SubItems.Add(birthDate);
+                newRecord.SubItems.Add(country);
+                newRecord.SubItems.Add(zipCode);
+                newRecord.SubItems.Add(city);
+                newRecord.SubItems.Add(address);
+                newRecord.SubItems.Add(phoneNumber);
+                newRecord.SubItems.Add(email);
+                listViewGuest.Items.Add(newRecord);
+
+            }
+            catch (Exception exception)
+            {
+                DialogResult = DialogResult.None;
+                errorProviderInputError.SetError(textBoxID, exception.Message);
+            }
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
@@ -107,29 +114,37 @@ namespace virtual_receptionist.Views
                 string phoneNumber = textBoxPhoneNumber.Text;
                 string email = textBoxEmailAddress.Text;
 
-                // ListView rekord módosítása (GUI)
-                textBoxID.Text = id.ToString();
-                ListViewItem updatedRecord = new ListViewItem();
-                updatedRecord.Text = id.ToString();
-                updatedRecord.SubItems.Add(name);
-                updatedRecord.SubItems.Add(documentNumber);
-                updatedRecord.SubItems.Add(citizenship);
-                updatedRecord.SubItems.Add(birthDate);
-                updatedRecord.SubItems.Add(country);
-                updatedRecord.SubItems.Add(zipCode);
-                updatedRecord.SubItems.Add(city);
-                updatedRecord.SubItems.Add(address);
-                updatedRecord.SubItems.Add(phoneNumber);
-                updatedRecord.SubItems.Add(email);
+                try
+                {
+                    // Adatbázis rekord módosítása
+                    controller.UpdateRecordInGuestTable(id, name, documentNumber, citizenship, birthDate, country,
+                        zipCode,
+                        city, address, phoneNumber, email);
 
-                int index = listViewGuest.FocusedItem.Index;
-                listViewGuest.Items.RemoveAt(index);
-                listViewGuest.Items.Insert(index, updatedRecord);
+                    // ListView rekord módosítása (GUI)
+                    textBoxID.Text = id.ToString();
+                    ListViewItem updatedRecord = new ListViewItem();
+                    updatedRecord.Text = id.ToString();
+                    updatedRecord.SubItems.Add(name);
+                    updatedRecord.SubItems.Add(documentNumber);
+                    updatedRecord.SubItems.Add(citizenship);
+                    updatedRecord.SubItems.Add(birthDate);
+                    updatedRecord.SubItems.Add(country);
+                    updatedRecord.SubItems.Add(zipCode);
+                    updatedRecord.SubItems.Add(city);
+                    updatedRecord.SubItems.Add(address);
+                    updatedRecord.SubItems.Add(phoneNumber);
+                    updatedRecord.SubItems.Add(email);
 
-                // Adatbázis rekord módosítása
-                controller.UpdateRecordInGuestTable(id, name, documentNumber, citizenship, birthDate, country,
-                    zipCode,
-                    city, address, phoneNumber, email);
+                    int index = listViewGuest.FocusedItem.Index;
+                    listViewGuest.Items.RemoveAt(index);
+                    listViewGuest.Items.Insert(index, updatedRecord);
+                }
+                catch (Exception exception)
+                {
+                    DialogResult = DialogResult.None;
+                    errorProviderInputError.SetError(textBoxID, exception.Message);
+                }
             }
             else
             {

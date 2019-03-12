@@ -99,7 +99,6 @@ namespace virtual_receptionist.Controllers
         /// <exception cref="InvalidCitizenshipException"></exception>
         /// <exception cref="InvalidCitizenshipException"></exception>
         /// <exception cref="InvalidBirthDateException"></exception>
-        /// <exception cref="InvalidCountryException"></exception>
         /// <exception cref="InvalidZipCodeException"></exception>
         /// <exception cref="InvalidCityException"></exception>
         /// <exception cref="InvalidAddressException"></exception>
@@ -232,7 +231,6 @@ namespace virtual_receptionist.Controllers
         /// <exception cref="InvalidCitizenshipException"></exception>
         /// <exception cref="InvalidCitizenshipException"></exception>
         /// <exception cref="InvalidBirthDateException"></exception>
-        /// <exception cref="InvalidCountryException"></exception>
         /// <exception cref="InvalidZipCodeException"></exception>
         /// <exception cref="InvalidCityException"></exception>
         /// <exception cref="InvalidAddressException"></exception>
