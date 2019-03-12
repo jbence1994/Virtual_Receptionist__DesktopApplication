@@ -205,6 +205,7 @@
             this.textBoxEmailAddress.Name = "textBoxEmailAddress";
             this.textBoxEmailAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxEmailAddress.TabIndex = 14;
+            this.textBoxEmailAddress.TextChanged += new System.EventHandler(this.textBoxEmailAddress_TextChanged);
             // 
             // buttonAddGuest
             // 
@@ -236,6 +237,7 @@
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxPhoneNumber.TabIndex = 13;
+            this.textBoxPhoneNumber.TextChanged += new System.EventHandler(this.textBoxPhoneNumber_TextChanged);
             // 
             // labelDocumentID
             // 
@@ -252,6 +254,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(185, 20);
             this.textBoxAddress.TabIndex = 12;
+            this.textBoxAddress.TextChanged += new System.EventHandler(this.textBoxAddress_TextChanged);
             // 
             // labelCitizenship
             // 
@@ -268,6 +271,7 @@
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(185, 20);
             this.textBoxCity.TabIndex = 11;
+            this.textBoxCity.TextChanged += new System.EventHandler(this.textBoxCity_TextChanged);
             // 
             // labelBirthDate
             // 
@@ -284,6 +288,7 @@
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(185, 20);
             this.textBoxZipCode.TabIndex = 10;
+            this.textBoxZipCode.TextChanged += new System.EventHandler(this.textBoxZipCode_TextChanged);
             // 
             // labelCountry
             // 
@@ -317,6 +322,7 @@
             this.textBoxBirthDate.Name = "textBoxBirthDate";
             this.textBoxBirthDate.Size = new System.Drawing.Size(185, 20);
             this.textBoxBirthDate.TabIndex = 8;
+            this.textBoxBirthDate.TextChanged += new System.EventHandler(this.textBoxBirthDate_TextChanged);
             // 
             // labelCity
             // 
@@ -333,6 +339,7 @@
             this.textBoxCitizenship.Name = "textBoxCitizenship";
             this.textBoxCitizenship.Size = new System.Drawing.Size(185, 20);
             this.textBoxCitizenship.TabIndex = 7;
+            this.textBoxCitizenship.TextChanged += new System.EventHandler(this.textBoxCitizenship_TextChanged);
             // 
             // labelAddress
             // 
@@ -349,6 +356,7 @@
             this.textBoxDocumentNumber.Name = "textBoxDocumentNumber";
             this.textBoxDocumentNumber.Size = new System.Drawing.Size(185, 20);
             this.textBoxDocumentNumber.TabIndex = 6;
+            this.textBoxDocumentNumber.TextChanged += new System.EventHandler(this.textBoxDocumentNumber_TextChanged);
             // 
             // labelPhoneNumber
             // 
@@ -365,6 +373,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(185, 20);
             this.textBoxName.TabIndex = 5;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelEmailAddress
             // 
@@ -459,47 +468,38 @@
             // 
             // errorProviderName
             // 
-            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderName.ContainerControl = this;
             // 
             // errorProviderDocumentNumber
             // 
-            this.errorProviderDocumentNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderDocumentNumber.ContainerControl = this;
             // 
             // errorProviderCitizenship
             // 
-            this.errorProviderCitizenship.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCitizenship.ContainerControl = this;
             // 
             // errorProviderBirthDate
             // 
-            this.errorProviderBirthDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderBirthDate.ContainerControl = this;
             // 
             // errorProviderZipCode
             // 
-            this.errorProviderZipCode.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderZipCode.ContainerControl = this;
             // 
             // errorProviderCity
             // 
-            this.errorProviderCity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCity.ContainerControl = this;
             // 
             // errorProviderAddress
             // 
-            this.errorProviderAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderAddress.ContainerControl = this;
             // 
             // errorProviderPhoneNumber
             // 
-            this.errorProviderPhoneNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderPhoneNumber.ContainerControl = this;
             // 
             // errorProviderEmailAddress
             // 
-            this.errorProviderEmailAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderEmailAddress.ContainerControl = this;
             // 
             // FormGuestDatabase

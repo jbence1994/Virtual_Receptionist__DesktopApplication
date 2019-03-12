@@ -315,6 +315,51 @@ namespace virtual_receptionist.Views
             }
         }
 
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderName.Clear();
+        }
+
+        private void textBoxDocumentNumber_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderDocumentNumber.Clear();
+        }
+
+        private void textBoxCitizenship_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderCitizenship.Clear();
+        }
+
+        private void textBoxBirthDate_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderBirthDate.Clear();
+        }
+
+        private void textBoxZipCode_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderZipCode.Clear();
+        }
+
+        private void textBoxCity_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderCity.Clear();
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderEmailAddress.Clear();
+        }
+
+        private void textBoxPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderPhoneNumber.Clear();
+        }
+
+        private void textBoxEmailAddress_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderEmailAddress.Clear();
+        }
+
         #endregion
     }
 }
