@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -91,10 +92,45 @@ namespace virtual_receptionist.Views
                 listViewGuest.Items.Add(newRecord);
 
             }
-            catch (Exception exception)
+            catch (InvalidNameException exception)
             {
-                DialogResult = DialogResult.None;
-                errorProviderInputError.SetError(textBoxID, exception.Message);
+                errorProviderName.SetError(textBoxName, exception.Message);
+            }
+            catch (InvalidDocumentNumberException exception)
+            {
+                errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
+            }
+            catch (InvalidCitizenshipException exception)
+            {
+                errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
+            }
+            catch (InvalidBirthDateException exception)
+            {
+                errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
+            }
+            catch (InvalidZipCodeException exception)
+            {
+                errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
+            }
+            catch (InvalidCityException exception)
+            {
+                errorProviderCity.SetError(textBoxCity, exception.Message);
+            }
+            catch (InvalidAddressException exception)
+            {
+                errorProviderAddress.SetError(textBoxAddress, exception.Message);
+            }
+            catch (InvalidPhoneNumberException exception)
+            {
+                errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
+            }
+            catch (InvalidEmailAddressException exception)
+            {
+                errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ismeretlen hiba történt!");
             }
         }
 
@@ -140,10 +176,45 @@ namespace virtual_receptionist.Views
                     listViewGuest.Items.RemoveAt(index);
                     listViewGuest.Items.Insert(index, updatedRecord);
                 }
-                catch (Exception exception)
+                catch (InvalidNameException exception)
                 {
-                    DialogResult = DialogResult.None;
-                    errorProviderInputError.SetError(textBoxID, exception.Message);
+                    errorProviderName.SetError(textBoxName, exception.Message);
+                }
+                catch (InvalidDocumentNumberException exception)
+                {
+                    errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
+                }
+                catch (InvalidCitizenshipException exception)
+                {
+                    errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
+                }
+                catch (InvalidBirthDateException exception)
+                {
+                    errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
+                }
+                catch (InvalidZipCodeException exception)
+                {
+                    errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
+                }
+                catch (InvalidCityException exception)
+                {
+                    errorProviderCity.SetError(textBoxCity, exception.Message);
+                }
+                catch (InvalidAddressException exception)
+                {
+                    errorProviderAddress.SetError(textBoxAddress, exception.Message);
+                }
+                catch (InvalidPhoneNumberException exception)
+                {
+                    errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
+                }
+                catch (InvalidEmailAddressException exception)
+                {
+                    errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ismeretlen hiba történt!");
                 }
             }
             else

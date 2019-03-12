@@ -70,11 +70,27 @@
             this.columnHeaderGuestAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.errorProviderInputError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDocumentNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCitizenship = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderBirthDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderZipCode = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCity = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAddress = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPhoneNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderEmailAddress = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPageGuest.SuspendLayout();
             this.groupBoxCRUD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInputError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDocumentNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCitizenship)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderBirthDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlGuestDatabase
@@ -441,9 +457,50 @@
             this.columnHeaderGuestEmailAddress.Text = "E-mail cím";
             this.columnHeaderGuestEmailAddress.Width = 150;
             // 
-            // errorProviderInputError
+            // errorProviderName
             // 
-            this.errorProviderInputError.ContainerControl = this;
+            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderName.ContainerControl = this;
+            // 
+            // errorProviderDocumentNumber
+            // 
+            this.errorProviderDocumentNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderDocumentNumber.ContainerControl = this;
+            // 
+            // errorProviderCitizenship
+            // 
+            this.errorProviderCitizenship.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderCitizenship.ContainerControl = this;
+            // 
+            // errorProviderBirthDate
+            // 
+            this.errorProviderBirthDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderBirthDate.ContainerControl = this;
+            // 
+            // errorProviderZipCode
+            // 
+            this.errorProviderZipCode.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderZipCode.ContainerControl = this;
+            // 
+            // errorProviderCity
+            // 
+            this.errorProviderCity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderCity.ContainerControl = this;
+            // 
+            // errorProviderAddress
+            // 
+            this.errorProviderAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderAddress.ContainerControl = this;
+            // 
+            // errorProviderPhoneNumber
+            // 
+            this.errorProviderPhoneNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderPhoneNumber.ContainerControl = this;
+            // 
+            // errorProviderEmailAddress
+            // 
+            this.errorProviderEmailAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderEmailAddress.ContainerControl = this;
             // 
             // FormGuestDatabase
             // 
@@ -462,7 +519,15 @@
             this.tabPageGuest.ResumeLayout(false);
             this.groupBoxCRUD.ResumeLayout(false);
             this.groupBoxCRUD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInputError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDocumentNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCitizenship)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailAddress)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -508,6 +573,14 @@
         private System.Windows.Forms.ColumnHeader columnHeaderGuestID;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelGuestID;
-        private System.Windows.Forms.ErrorProvider errorProviderInputError;
+        private System.Windows.Forms.ErrorProvider errorProviderName;
+        private System.Windows.Forms.ErrorProvider errorProviderDocumentNumber;
+        private System.Windows.Forms.ErrorProvider errorProviderCitizenship;
+        private System.Windows.Forms.ErrorProvider errorProviderBirthDate;
+        private System.Windows.Forms.ErrorProvider errorProviderZipCode;
+        private System.Windows.Forms.ErrorProvider errorProviderCity;
+        private System.Windows.Forms.ErrorProvider errorProviderAddress;
+        private System.Windows.Forms.ErrorProvider errorProviderPhoneNumber;
+        private System.Windows.Forms.ErrorProvider errorProviderEmailAddress;
     }
 }
