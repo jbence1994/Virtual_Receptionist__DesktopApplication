@@ -56,7 +56,7 @@ namespace virtual_receptionist.Controllers.Validation
             if (!IsValidBirthDate(birthDate))
             {
                 throw new InvalidBirthDateException(
-                    "Nem megfelelő a születési dátum formátuma!\nHelyes formátum: YYYY-MM-DD");
+                    "Nem megfelelő a születési dátum formátuma vagy Nem megfelelő évszám, hónap vagy nap lett megadva!\nHelyes formátum: YYYY-MM-DD");
             }
         }
 

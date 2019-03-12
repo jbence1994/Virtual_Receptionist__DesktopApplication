@@ -158,17 +158,7 @@ namespace virtual_receptionist.Controllers
             }
 
             string country = guestParameters[5].ToString();
-
-            try
-            {
-                CountryValidation countryValidation = new CountryValidation(country);
-                countryValidation.ValidateCountry();
-            }
-            catch (InvalidCountryException e)
-            {
-                throw e;
-            }
-
+            
             string zipCode = guestParameters[6].ToString();
 
             try
@@ -301,16 +291,6 @@ namespace virtual_receptionist.Controllers
             }
 
             string country = guestParameters[5].ToString();
-
-            try
-            {
-                CountryValidation countryValidation = new CountryValidation(country);
-                countryValidation.ValidateCountry();
-            }
-            catch (InvalidCountryException e)
-            {
-                throw e;
-            }
 
             string zipCode = guestParameters[6].ToString();
 

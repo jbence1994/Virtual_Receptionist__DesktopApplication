@@ -51,7 +51,6 @@
     <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCitizenshipException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidCountryException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidDocumentNumberException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidEmailAddressException.cs" />
     <Compile Include="Controllers\Exceptions\FailedLoginException.cs" />
@@ -63,7 +62,6 @@
     <Compile Include="Controllers\Validation\BirthDateValidation.cs" />
     <Compile Include="Controllers\Validation\CitizenshipValidation.cs" />
     <Compile Include="Controllers\Validation\CityValidation.cs" />
-    <Compile Include="Controllers\Validation\CountryValidation.cs" />
     <Compile Include="Controllers\Validation\DocumentNumberValidation.cs" />
     <Compile Include="Controllers\Validation\EmailValidation.cs" />
     <Compile Include="Controllers\Validation\NameValidation.cs" />
