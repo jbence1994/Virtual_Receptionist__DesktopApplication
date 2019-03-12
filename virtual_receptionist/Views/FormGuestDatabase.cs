@@ -2,6 +2,8 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Exceptions;
+using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Views
 {
@@ -59,8 +61,8 @@ namespace virtual_receptionist.Views
             int id = int.Parse(textBoxID.Text);
             string name = textBoxName.Text;
             string documentNumber = textBoxDocumentNumber.Text;
-            string citizenship = textBoxCitizenship.Text;
             string birthDate = textBoxBirthDate.Text;
+            string citizenship = textBoxCitizenship.Text;
             string country = comboBoxCountry.SelectedItem.ToString();
             string zipCode = textBoxZipCode.Text;
             string city = textBoxCity.Text;

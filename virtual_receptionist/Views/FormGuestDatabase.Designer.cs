@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGuestDatabase));
             this.tabControlGuestDatabase = new System.Windows.Forms.TabControl();
             this.tabPageGuest = new System.Windows.Forms.TabPage();
@@ -69,9 +70,11 @@
             this.columnHeaderGuestAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderGuestEmailAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.errorProviderInputError = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControlGuestDatabase.SuspendLayout();
             this.tabPageGuest.SuspendLayout();
             this.groupBoxCRUD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInputError)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlGuestDatabase
@@ -438,6 +441,10 @@
             this.columnHeaderGuestEmailAddress.Text = "E-mail cím";
             this.columnHeaderGuestEmailAddress.Width = 150;
             // 
+            // errorProviderInputError
+            // 
+            this.errorProviderInputError.ContainerControl = this;
+            // 
             // FormGuestDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,6 +462,7 @@
             this.tabPageGuest.ResumeLayout(false);
             this.groupBoxCRUD.ResumeLayout(false);
             this.groupBoxCRUD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInputError)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -500,5 +508,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderGuestID;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelGuestID;
+        private System.Windows.Forms.ErrorProvider errorProviderInputError;
     }
 }
