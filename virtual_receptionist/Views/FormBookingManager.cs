@@ -220,7 +220,7 @@ namespace virtual_receptionist.Views
 
         private void textBoxAddress_TextChanged(object sender, EventArgs e)
         {
-            errorProviderEmailAddress.Clear();
+            errorProviderAddress.Clear();
         }
 
         private void textBoxPhoneNumber_TextChanged(object sender, EventArgs e)
