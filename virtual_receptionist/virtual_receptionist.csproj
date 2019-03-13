@@ -61,6 +61,7 @@
     <Compile Include="Controllers\Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Controllers\Validation\AddressValidation.cs" />
     <Compile Include="Controllers\Validation\BirthDateValidation.cs" />
+    <Compile Include="Controllers\Validation\BookingValidation.cs" />
     <Compile Include="Controllers\Validation\CitizenshipValidation.cs" />
     <Compile Include="Controllers\Validation\CityValidation.cs" />
     <Compile Include="Controllers\Validation\DocumentNumberValidation.cs" />
