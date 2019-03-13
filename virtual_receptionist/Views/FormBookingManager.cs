@@ -184,7 +184,7 @@ namespace virtual_receptionist.Views
             if (validData)
             {
                 guestController.AddGuest(name);
-                bookingController.AddNewBooking(name, room, numberOfGuests, arrivalDate, departureDate);
+                bookingController.AddBooking(name, room, numberOfGuests, arrivalDate, departureDate);
             }
         }
 

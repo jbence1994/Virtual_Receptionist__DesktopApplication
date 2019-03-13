@@ -108,7 +108,7 @@ namespace virtual_receptionist.Controllers
         /// Új foglalás felvétele
         /// </summary>
         /// <param name="bookingParameters">Foglalás paraméterei</param>
-        public void AddNewBooking(params object[] bookingParameters)
+        public void AddBooking(params object[] bookingParameters)
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
