@@ -59,6 +59,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidNameException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderName.SetError(textBoxGuestName, exception.Message);
                 validData = false;
             }
@@ -71,6 +72,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidDocumentNumberException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
                 validData = false;
             }
@@ -83,6 +85,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidCitizenshipException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
                 validData = false;
             }
@@ -95,6 +98,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidBirthDateException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
                 validData = false;
             }
@@ -107,6 +111,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidZipCodeException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
                 validData = false;
             }
@@ -119,7 +124,21 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidCityException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderCity.SetError(textBoxCity, exception.Message);
+                validData = false;
+            }
+
+            string address = textBoxAddress.Text;
+
+            try
+            {
+                bookingController.AddressValidator(address);
+            }
+            catch (InvalidAddressException exception)
+            {
+                DialogResult = DialogResult.None;
+                errorProviderAddress.SetError(textBoxAddress, exception.Message);
                 validData = false;
             }
 
@@ -131,6 +150,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidPhoneNumberException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
                 validData = false;
             }
@@ -143,6 +163,7 @@ namespace virtual_receptionist.Views
             }
             catch (InvalidEmailAddressException exception)
             {
+                DialogResult = DialogResult.None;
                 errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
                 validData = false;
             }
