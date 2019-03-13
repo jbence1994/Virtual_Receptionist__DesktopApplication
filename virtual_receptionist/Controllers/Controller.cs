@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
+using virtual_receptionist.Controllers.Exceptions;
+using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Controllers
 {
@@ -81,6 +83,168 @@ namespace virtual_receptionist.Controllers
             }
 
             return roomNumbers;
+        }
+
+        /// <summary>
+        /// Név validátor
+        /// </summary>
+        /// <param name="name">Név</param>
+        /// <exception cref="InvalidNameException"></exception>
+        public void NameValidator(string name)
+        {
+            try
+            {
+                NameValidation nameValidation = new NameValidation(name);
+                nameValidation.ValidateName();
+            }
+            catch (InvalidNameException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Okmányazonosító validátor
+        /// </summary>
+        /// <param name="documentNumber"></param>
+        /// <exception cref="InvalidDocumentNumberException"></exception>
+        public void DocumentNumberValidator(string documentNumber)
+        {
+            try
+            {
+                DocumentNumberValidation documentNumberValidation = new DocumentNumberValidation(documentNumber);
+                documentNumberValidation.ValidateDocumentNumber();
+            }
+            catch (InvalidDocumentNumberException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Állampolgárság validátor
+        /// </summary>
+        /// <param name="citizenship">Állampolgárság</param>
+        /// <exception cref="InvalidCitizenshipException"></exception>
+        public void CitizenShipValidator(string citizenship)
+        {
+            try
+            {
+                CitizenshipValidation citizenshipValidation = new CitizenshipValidation(citizenship);
+                citizenshipValidation.ValidateDocumentNumber();
+            }
+            catch (InvalidCitizenshipException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Születési dátum validátor
+        /// </summary>
+        /// <param name="birthDate">Születési dátum</param>
+        /// <exception cref="InvalidBirthDateException"></exception>
+        public void BirthDateValidator(string birthDate)
+        {
+            try
+            {
+                BirthDateValidation birthDateValidation = new BirthDateValidation(birthDate);
+                birthDateValidation.ValidateBirthDate();
+            }
+            catch (InvalidBirthDateException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Irányítószám vlaidátor
+        /// </summary>
+        /// <param name="zipCode">Irányítószám</param>
+        /// <exception cref="InvalidZipCodeException"></exception>
+        public void ZipCodeValidator(string zipCode)
+        {
+            try
+            {
+                ZipCodeValidation zipCodeValidation = new ZipCodeValidation(zipCode);
+                zipCodeValidation.ValidateZipCode();
+            }
+            catch (InvalidZipCodeException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Település validátor
+        /// </summary>
+        /// <param name="city">Település</param>
+        /// <exception cref="InvalidCityException"></exception>
+        public void CityValidator(string city)
+        {
+            try
+            {
+                CityValidation cityValidation = new CityValidation(city);
+                cityValidation.ValidateCity();
+            }
+            catch (InvalidCityException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Lakcím validátor
+        /// </summary>
+        /// <param name="address"></param>
+        /// <exception cref="InvalidAddressException"></exception>
+        public void AddressValidator(string address)
+        {
+            try
+            {
+                AddressValidation addressValidation = new AddressValidation(address);
+                addressValidation.ValidateAddress();
+            }
+            catch (InvalidAddressException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Telefonszám validátor
+        /// </summary>
+        /// <param name="phoneNumber">Telefonszám</param>
+        /// <exception cref="InvalidPhoneNumberException"></exception>
+        public void PhoneNumberValidator(string phoneNumber)
+        {
+            try
+            {
+                PhoneNumberValidation phoneNumberValidation = new PhoneNumberValidation(phoneNumber);
+                phoneNumberValidation.ValidatePhoneNumber();
+            }
+            catch (InvalidPhoneNumberException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// E-mail cím validátor
+        /// </summary>
+        /// <param name="email">E-mail cím</param>
+        /// <exception cref="InvalidEmailAddressException"></exception>
+        public void EmailAddressValidator(string email)
+        {
+            try
+            {
+                EmailValidation emailValidation = new EmailValidation(email);
+                emailValidation.ValidateEmail();
+            }
+            catch (InvalidEmailAddressException e)
+            {
+                throw e;
+            }
         }
 
         #endregion

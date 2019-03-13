@@ -95,128 +95,19 @@ namespace virtual_receptionist.Controllers
         /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        /// <exception cref="InvalidNameException"></exception>
-        /// <exception cref="InvalidCitizenshipException"></exception>
-        /// <exception cref="InvalidCitizenshipException"></exception>
-        /// <exception cref="InvalidBirthDateException"></exception>
-        /// <exception cref="InvalidZipCodeException"></exception>
-        /// <exception cref="InvalidCityException"></exception>
-        /// <exception cref="InvalidAddressException"></exception>
-        /// <exception cref="InvalidPhoneNumberException"></exception>
-        /// <exception cref="InvalidEmailAddressException"></exception>
         public void AddNewRecordToGuestTable(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
-
             string name = guestParameters[1].ToString();
-
-            try
-            {
-                NameValidation nameValidation = new NameValidation(name);
-                nameValidation.ValidateName();
-            }
-            catch (InvalidNameException e)
-            {
-                throw e;
-            }
-
             string documentNumber = guestParameters[2].ToString();
-
-            try
-            {
-                DocumentNumberValidation documentNumberValidation = new DocumentNumberValidation(documentNumber);
-                documentNumberValidation.ValidateDocumentNumber();
-            }
-            catch (InvalidDocumentNumberException e)
-            {
-                throw e;
-            }
-
             string citizenship = guestParameters[3].ToString();
-
-            try
-            {
-                CitizenshipValidation citizenshipValidation = new CitizenshipValidation(citizenship);
-                citizenshipValidation.ValidateDocumentNumber();
-            }
-            catch (InvalidCitizenshipException e)
-            {
-                throw e;
-            }
-
             string birthDate = guestParameters[4].ToString();
-
-            try
-            {
-                BirthDateValidation birthDateValidation = new BirthDateValidation(birthDate);
-                birthDateValidation.ValidateBirthDate();
-            }
-            catch (InvalidBirthDateException e)
-            {
-                throw e;
-            }
-
             string country = guestParameters[5].ToString();
-            
             string zipCode = guestParameters[6].ToString();
-
-            try
-            {
-                ZipCodeValidation zipCodeValidation = new ZipCodeValidation(zipCode);
-                zipCodeValidation.ValidateZipCode();
-            }
-            catch (InvalidZipCodeException e)
-            {
-                throw e;
-            }
-
             string city = guestParameters[7].ToString();
-
-            try
-            {
-                CityValidation cityValidation = new CityValidation(city);
-                cityValidation.ValidateCity();
-            }
-            catch (InvalidCityException e)
-            {
-                throw e;
-            }
-
             string address = guestParameters[8].ToString();
-
-            try
-            {
-                AddressValidation addressValidation = new AddressValidation(address);
-                addressValidation.ValidateAddress();
-            }
-            catch (InvalidAddressException e)
-            {
-                throw e;
-            }
-
             string phoneNumber = guestParameters[9].ToString();
-
-            try
-            {
-                PhoneNumberValidation phoneNumberValidation = new PhoneNumberValidation(phoneNumber);
-                phoneNumberValidation.ValidatePhoneNumber();
-            }
-            catch (InvalidPhoneNumberException e)
-            {
-                throw e;
-            }
-
             string email = guestParameters[10].ToString();
-
-            try
-            {
-                EmailValidation emailValidation = new EmailValidation(email);
-                emailValidation.ValidateEmail();
-            }
-            catch (InvalidEmailAddressException e)
-            {
-                throw e;
-            }
 
             Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
                 phoneNumber, email);
@@ -227,128 +118,19 @@ namespace virtual_receptionist.Controllers
         /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        /// <exception cref="InvalidNameException"></exception>
-        /// <exception cref="InvalidCitizenshipException"></exception>
-        /// <exception cref="InvalidCitizenshipException"></exception>
-        /// <exception cref="InvalidBirthDateException"></exception>
-        /// <exception cref="InvalidZipCodeException"></exception>
-        /// <exception cref="InvalidCityException"></exception>
-        /// <exception cref="InvalidAddressException"></exception>
-        /// <exception cref="InvalidPhoneNumberException"></exception>
-        /// <exception cref="InvalidEmailAddressException"></exception>
         public void UpdateRecordInGuestTable(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
-
             string name = guestParameters[1].ToString();
-
-            try
-            {
-                NameValidation nameValidation = new NameValidation(name);
-                nameValidation.ValidateName();
-            }
-            catch (InvalidNameException e)
-            {
-                throw e;
-            }
-
             string documentNumber = guestParameters[2].ToString();
-
-            try
-            {
-                DocumentNumberValidation documentNumberValidation = new DocumentNumberValidation(documentNumber);
-                documentNumberValidation.ValidateDocumentNumber();
-            }
-            catch (InvalidDocumentNumberException e)
-            {
-                throw e;
-            }
-
             string citizenship = guestParameters[3].ToString();
-
-            try
-            {
-                CitizenshipValidation citizenshipValidation = new CitizenshipValidation(citizenship);
-                citizenshipValidation.ValidateDocumentNumber();
-            }
-            catch (InvalidCitizenshipException e)
-            {
-                throw e;
-            }
-
             string birthDate = guestParameters[4].ToString();
-
-            try
-            {
-                BirthDateValidation birthDateValidation = new BirthDateValidation(birthDate);
-                birthDateValidation.ValidateBirthDate();
-            }
-            catch (InvalidBirthDateException e)
-            {
-                throw e;
-            }
-
             string country = guestParameters[5].ToString();
-
             string zipCode = guestParameters[6].ToString();
-
-            try
-            {
-                ZipCodeValidation zipCodeValidation = new ZipCodeValidation(zipCode);
-                zipCodeValidation.ValidateZipCode();
-            }
-            catch (InvalidZipCodeException e)
-            {
-                throw e;
-            }
-
             string city = guestParameters[7].ToString();
-
-            try
-            {
-                CityValidation cityValidation = new CityValidation(city);
-                cityValidation.ValidateCity();
-            }
-            catch (InvalidCityException e)
-            {
-                throw e;
-            }
-
             string address = guestParameters[8].ToString();
-
-            try
-            {
-                AddressValidation addressValidation = new AddressValidation(address);
-                addressValidation.ValidateAddress();
-            }
-            catch (InvalidAddressException e)
-            {
-                throw e;
-            }
-
             string phoneNumber = guestParameters[9].ToString();
-
-            try
-            {
-                PhoneNumberValidation phoneNumberValidation = new PhoneNumberValidation(phoneNumber);
-                phoneNumberValidation.ValidatePhoneNumber();
-            }
-            catch (InvalidPhoneNumberException e)
-            {
-                throw e;
-            }
-
             string email = guestParameters[10].ToString();
-
-            try
-            {
-                EmailValidation emailValidation = new EmailValidation(email);
-                emailValidation.ValidateEmail();
-            }
-            catch (InvalidEmailAddressException e)
-            {
-                throw e;
-            }
 
             Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
                 phoneNumber, email);

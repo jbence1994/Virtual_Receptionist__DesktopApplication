@@ -71,67 +71,104 @@ namespace virtual_receptionist.Views
 
             try
             {
-                // Adatbázis rekord hozzáadása
-                controller.AddNewRecordToGuestTable(id, name, documentNumber, citizenship, birthDate, country,
-                    zipCode, city, address, phoneNumber, email);
-
-                // ListView rekord hozzáadás (GUI)
-                textBoxID.Text = id.ToString();
-                ListViewItem newRecord = new ListViewItem();
-                newRecord.Text = id.ToString();
-                newRecord.SubItems.Add(name);
-                newRecord.SubItems.Add(documentNumber);
-                newRecord.SubItems.Add(citizenship);
-                newRecord.SubItems.Add(birthDate);
-                newRecord.SubItems.Add(country);
-                newRecord.SubItems.Add(zipCode);
-                newRecord.SubItems.Add(city);
-                newRecord.SubItems.Add(address);
-                newRecord.SubItems.Add(phoneNumber);
-                newRecord.SubItems.Add(email);
-                listViewGuest.Items.Add(newRecord);
-
+                controller.NameValidator(name);
             }
             catch (InvalidNameException exception)
             {
                 errorProviderName.SetError(textBoxName, exception.Message);
             }
+
+            try
+            {
+                controller.DocumentNumberValidator(documentNumber);
+            }
             catch (InvalidDocumentNumberException exception)
             {
                 errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
+            }
+
+            try
+            {
+                controller.CitizenShipValidator(citizenship);
             }
             catch (InvalidCitizenshipException exception)
             {
                 errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
             }
+
+            try
+            {
+                controller.BirthDateValidator(birthDate);
+            }
             catch (InvalidBirthDateException exception)
             {
                 errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
+            }
+
+            try
+            {
+                controller.ZipCodeValidator(zipCode);
             }
             catch (InvalidZipCodeException exception)
             {
                 errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
             }
+
+            try
+            {
+                controller.CityValidator(city);
+            }
             catch (InvalidCityException exception)
             {
                 errorProviderCity.SetError(textBoxCity, exception.Message);
+            }
+
+            try
+            {
+                controller.AddressValidator(address);
             }
             catch (InvalidAddressException exception)
             {
                 errorProviderAddress.SetError(textBoxAddress, exception.Message);
             }
+
+            try
+            {
+                controller.PhoneNumberValidator(phoneNumber);
+            }
             catch (InvalidPhoneNumberException exception)
             {
                 errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
+            }
+
+            try
+            {
+                controller.EmailAddressValidator(email);
             }
             catch (InvalidEmailAddressException exception)
             {
                 errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Ismeretlen hiba történt!");
-            }
+
+            // Adatbázis rekord hozzáadása
+            controller.AddNewRecordToGuestTable(id, name, documentNumber, citizenship, birthDate, country,
+                zipCode, city, address, phoneNumber, email);
+
+            // ListView rekord hozzáadás (GUI)
+            textBoxID.Text = id.ToString();
+            ListViewItem newRecord = new ListViewItem();
+            newRecord.Text = id.ToString();
+            newRecord.SubItems.Add(name);
+            newRecord.SubItems.Add(documentNumber);
+            newRecord.SubItems.Add(citizenship);
+            newRecord.SubItems.Add(birthDate);
+            newRecord.SubItems.Add(country);
+            newRecord.SubItems.Add(zipCode);
+            newRecord.SubItems.Add(city);
+            newRecord.SubItems.Add(address);
+            newRecord.SubItems.Add(phoneNumber);
+            newRecord.SubItems.Add(email);
+            listViewGuest.Items.Add(newRecord);
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
