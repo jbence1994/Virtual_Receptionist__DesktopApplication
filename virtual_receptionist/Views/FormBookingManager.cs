@@ -15,7 +15,12 @@ namespace virtual_receptionist.Views
         /// <summary>
         /// Foglalási napló vezérlő egy példánya
         /// </summary>
-        private BookingController controller;
+        private BookingController bookingController;
+
+        /// <summary>
+        /// Vendégadatbázis-kezelő vezérlő egy példánya
+        /// </summary>
+        private GuestDatabaseController guestController;
 
         #endregion
 
@@ -27,7 +32,8 @@ namespace virtual_receptionist.Views
         public FormBookingManager()
         {
             InitializeComponent();
-            controller = new BookingController();
+            bookingController = new BookingController();
+            guestController = new GuestDatabaseController();
         }
 
         #endregion
@@ -37,29 +43,71 @@ namespace virtual_receptionist.Views
         private void FormBookingManager_Load(object sender, EventArgs e)
         {
             textBoxGuestName.Select();
-            comboBoxCountry.DataSource = controller.GetCountries();
+            comboBoxCountry.DataSource = bookingController.GetCountries();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            string guest = textBoxGuestName.Text;
+            bool validData = true;
+
+            string name = textBoxGuestName.Text;
 
             try
             {
-                controller.NameValidator(guest);
+                bookingController.NameValidator(name);
             }
             catch (InvalidNameException exception)
             {
-                MessageBox.Show(exception.Message);
+                errorProviderName.SetError(textBoxGuestName, exception.Message);
+                validData = false;
             }
+
+            string documentNumber = textBoxDocumentNumber.Text;
 
             try
             {
-
+                bookingController.DocumentNumberValidator(documentNumber);
             }
-            catch (InvalidNameException exception)
+            catch (InvalidDocumentNumberException exception)
             {
-                Console.WriteLine(exception.Message);
+                errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
+                validData = false;
+            }
+
+            string citizenship = textBoxCitizenship.Text;
+
+            try
+            {
+                bookingController.CitizenShipValidator(citizenship);
+            }
+            catch (InvalidCitizenshipException exception)
+            {
+                errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
+                validData = false;
+            }
+
+            string birthDate = textBoxBirthDate.Text;
+
+            try
+            {
+                bookingController.BirthDateValidator(birthDate);
+            }
+            catch (InvalidBirthDateException exception)
+            {
+                errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
+                validData = false;
+            }
+
+            string zipCode = textBoxZipCode.Text;
+
+            try
+            {
+                bookingController.ZipCodeValidator(zipCode);
+            }
+            catch (InvalidZipCodeException exception)
+            {
+                errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
+                validData = false;
             }
 
             string room = comboBoxRoom.SelectedItem.ToString();
@@ -78,7 +126,11 @@ namespace virtual_receptionist.Views
 
             DateTime departureDate = dateTimePickerDepartureDate.Value;
 
-            controller.AddNewBooking(guest, room, numberOfGuests, arrivalDate, departureDate);
+            if (validData)
+            {
+                guestController.AddGuest(name);
+                bookingController.AddNewBooking(name, room, numberOfGuests, arrivalDate, departureDate);
+            }
         }
 
         #endregion

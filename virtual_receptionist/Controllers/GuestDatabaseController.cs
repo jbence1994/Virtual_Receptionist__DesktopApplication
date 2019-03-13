@@ -95,7 +95,7 @@ namespace virtual_receptionist.Controllers
         /// Vendégtáblázatba és adatbázisba új rekord félvetélére szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        public void AddNewRecordToGuestTable(params object[] guestParameters)
+        public void AddGuest(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
@@ -118,7 +118,7 @@ namespace virtual_receptionist.Controllers
         /// Vendégtáblázatban és adatbázisban meglévő rekord módosítására szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        public void UpdateRecordInGuestTable(params object[] guestParameters)
+        public void UpdateGuest(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();
@@ -141,7 +141,7 @@ namespace virtual_receptionist.Controllers
         /// Vendégtáblázatból és adatbázisból meglévő rekord törlésére szolgáló metódus
         /// </summary>
         /// <param name="guestParameters">Vendég paraméterei</param>
-        public void DeleteRecordFromGuestTable(params object[] guestParameters)
+        public void DeleteGuest(params object[] guestParameters)
         {
             int id = int.Parse(guestParameters[0].ToString());
             string name = guestParameters[1].ToString();

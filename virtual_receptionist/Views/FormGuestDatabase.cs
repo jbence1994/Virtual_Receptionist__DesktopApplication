@@ -180,7 +180,7 @@ namespace virtual_receptionist.Views
                 listViewGuest.Items.Add(newRecord);
 
                 // Adatbázis rekord hozzáadása
-                controller.AddNewRecordToGuestTable(id, name, documentNumber, citizenship, birthDate, country,
+                controller.AddGuest(id, name, documentNumber, citizenship, birthDate, country,
                     zipCode, city, address, phoneNumber, email);
             }
         }
@@ -315,7 +315,7 @@ namespace virtual_receptionist.Views
                     listViewGuest.Items.Insert(index, updatedRecord);
 
                     // Adatbázis rekord módosítása
-                    controller.UpdateRecordInGuestTable(id, name, documentNumber, citizenship, birthDate, country,
+                    controller.UpdateGuest(id, name, documentNumber, citizenship, birthDate, country,
                         zipCode,
                         city, address, phoneNumber, email);
                 }
@@ -367,7 +367,7 @@ namespace virtual_receptionist.Views
                     textBoxEmailAddress.Clear();
 
                     //Adatbázis rekord törlése
-                    controller.DeleteRecordFromGuestTable(id, name, documentNumber, citizenship, birthDate,
+                    controller.DeleteGuest(id, name, documentNumber, citizenship, birthDate,
                         country, zipCode, city, address, phoneNumber, email);
                 }
             }
