@@ -468,38 +468,47 @@
             // 
             // errorProviderName
             // 
+            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderName.ContainerControl = this;
             // 
             // errorProviderDocumentNumber
             // 
+            this.errorProviderDocumentNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderDocumentNumber.ContainerControl = this;
             // 
             // errorProviderCitizenship
             // 
+            this.errorProviderCitizenship.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCitizenship.ContainerControl = this;
             // 
             // errorProviderBirthDate
             // 
+            this.errorProviderBirthDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderBirthDate.ContainerControl = this;
             // 
             // errorProviderZipCode
             // 
+            this.errorProviderZipCode.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderZipCode.ContainerControl = this;
             // 
             // errorProviderCity
             // 
+            this.errorProviderCity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCity.ContainerControl = this;
             // 
             // errorProviderAddress
             // 
+            this.errorProviderAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderAddress.ContainerControl = this;
             // 
             // errorProviderPhoneNumber
             // 
+            this.errorProviderPhoneNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderPhoneNumber.ContainerControl = this;
             // 
             // errorProviderEmailAddress
             // 
+            this.errorProviderEmailAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderEmailAddress.ContainerControl = this;
             // 
             // FormGuestDatabase
