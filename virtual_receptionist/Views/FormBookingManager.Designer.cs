@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBookingManager));
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -61,9 +62,33 @@
             this.labelArrivalDate = new System.Windows.Forms.Label();
             this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
+            this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDocumentNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCitizenship = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderBirthDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCity = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPhoneNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderEmailAddress = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderArrivalDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderNumberOfGuests = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDepartureDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderZipCode = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAddress = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxGuestData.SuspendLayout();
             this.groupBoxBookingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDocumentNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCitizenship)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderBirthDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderArrivalDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -361,6 +386,66 @@
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(237, 20);
             this.dateTimePickerArrivalDate.TabIndex = 0;
             // 
+            // errorProviderName
+            // 
+            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderName.ContainerControl = this;
+            // 
+            // errorProviderDocumentNumber
+            // 
+            this.errorProviderDocumentNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderDocumentNumber.ContainerControl = this;
+            // 
+            // errorProviderCitizenship
+            // 
+            this.errorProviderCitizenship.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderCitizenship.ContainerControl = this;
+            // 
+            // errorProviderBirthDate
+            // 
+            this.errorProviderBirthDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderBirthDate.ContainerControl = this;
+            // 
+            // errorProviderCity
+            // 
+            this.errorProviderCity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderCity.ContainerControl = this;
+            // 
+            // errorProviderPhoneNumber
+            // 
+            this.errorProviderPhoneNumber.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderPhoneNumber.ContainerControl = this;
+            // 
+            // errorProviderEmailAddress
+            // 
+            this.errorProviderEmailAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderEmailAddress.ContainerControl = this;
+            // 
+            // errorProviderArrivalDate
+            // 
+            this.errorProviderArrivalDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderArrivalDate.ContainerControl = this;
+            // 
+            // errorProviderNumberOfGuests
+            // 
+            this.errorProviderNumberOfGuests.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderNumberOfGuests.ContainerControl = this;
+            // 
+            // errorProviderDepartureDate
+            // 
+            this.errorProviderDepartureDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderDepartureDate.ContainerControl = this;
+            // 
+            // errorProviderZipCode
+            // 
+            this.errorProviderZipCode.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderZipCode.ContainerControl = this;
+            // 
+            // errorProviderAddress
+            // 
+            this.errorProviderAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderAddress.ContainerControl = this;
+            // 
             // FormBookingManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,6 +467,18 @@
             this.groupBoxBookingData.ResumeLayout(false);
             this.groupBoxBookingData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDocumentNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCitizenship)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderArrivalDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +516,17 @@
         private System.Windows.Forms.Label labelRoom;
         private System.Windows.Forms.NumericUpDown numericUpDownNumberOfGuests;
         private System.Windows.Forms.Label labelNumberOfGuests;
+        private System.Windows.Forms.ErrorProvider errorProviderName;
+        private System.Windows.Forms.ErrorProvider errorProviderDocumentNumber;
+        private System.Windows.Forms.ErrorProvider errorProviderCitizenship;
+        private System.Windows.Forms.ErrorProvider errorProviderBirthDate;
+        private System.Windows.Forms.ErrorProvider errorProviderCity;
+        private System.Windows.Forms.ErrorProvider errorProviderPhoneNumber;
+        private System.Windows.Forms.ErrorProvider errorProviderEmailAddress;
+        private System.Windows.Forms.ErrorProvider errorProviderArrivalDate;
+        private System.Windows.Forms.ErrorProvider errorProviderNumberOfGuests;
+        private System.Windows.Forms.ErrorProvider errorProviderDepartureDate;
+        private System.Windows.Forms.ErrorProvider errorProviderZipCode;
+        private System.Windows.Forms.ErrorProvider errorProviderAddress;
     }
 }

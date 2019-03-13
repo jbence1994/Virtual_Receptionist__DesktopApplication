@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -42,12 +43,42 @@ namespace virtual_receptionist.Views
         private void buttonOK_Click(object sender, EventArgs e)
         {
             string guest = textBoxGuestName.Text;
+
+            try
+            {
+                controller.NameValidator(guest);
+            }
+            catch (InvalidNameException exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+            try
+            {
+
+            }
+            catch (InvalidNameException exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+
             string room = comboBoxRoom.SelectedItem.ToString();
+
+
+
             decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
+
+
+
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
+
+
+
+
+
             DateTime departureDate = dateTimePickerDepartureDate.Value;
 
-            controller.AddNewRecordToBookingTable(guest, room, numberOfGuests, arrivalDate, departureDate);
+            controller.AddNewBooking(guest, room, numberOfGuests, arrivalDate, departureDate);
         }
 
         #endregion
