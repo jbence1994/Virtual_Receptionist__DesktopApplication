@@ -93,7 +93,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.CitizenShipValidator(citizenship);
+                controller.CitizenshipValidator(citizenship);
             }
             catch (InvalidCitizenshipException exception)
             {
@@ -225,7 +225,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.CitizenShipValidator(citizenship);
+                    controller.CitizenshipValidator(citizenship);
                 }
                 catch (InvalidCitizenshipException exception)
                 {

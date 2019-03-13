@@ -126,7 +126,7 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         /// <param name="citizenship">Állampolgárság</param>
         /// <exception cref="InvalidCitizenshipException"></exception>
-        public void CitizenShipValidator(string citizenship)
+        public void CitizenshipValidator(string citizenship)
         {
             try
             {

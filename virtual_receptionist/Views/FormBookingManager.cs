@@ -44,6 +44,7 @@ namespace virtual_receptionist.Views
         {
             textBoxGuestName.Select();
             comboBoxCountry.DataSource = bookingController.GetCountries();
+            comboBoxRoom.DataSource = bookingController.GetRooms();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -78,7 +79,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                bookingController.CitizenShipValidator(citizenship);
+                bookingController.CitizenshipValidator(citizenship);
             }
             catch (InvalidCitizenshipException exception)
             {
@@ -109,6 +110,43 @@ namespace virtual_receptionist.Views
                 errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
                 validData = false;
             }
+
+            string city = textBoxCity.Text;
+
+            try
+            {
+                bookingController.CityValidator(city);
+            }
+            catch (InvalidCityException exception)
+            {
+                errorProviderCity.SetError(textBoxCity, exception.Message);
+                validData = false;
+            }
+
+            string phoneNumber = textBoxPhoneNumber.Text;
+
+            try
+            {
+                bookingController.PhoneNumberValidator(phoneNumber);
+            }
+            catch (InvalidPhoneNumberException exception)
+            {
+                errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
+                validData = false;
+            }
+
+            string email = textBoxEmailAddress.Text;
+
+            try
+            {
+                bookingController.EmailAddressValidator(email);
+            }
+            catch (InvalidEmailAddressException exception)
+            {
+                errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
+                validData = false;
+            }
+
 
             string room = comboBoxRoom.SelectedItem.ToString();
 
