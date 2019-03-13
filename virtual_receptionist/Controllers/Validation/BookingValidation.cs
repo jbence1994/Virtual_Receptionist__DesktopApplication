@@ -1,5 +1,6 @@
 ﻿using System;
 using virtual_receptionist.Controllers.Exceptions;
+using virtual_receptionist.Models.ORM;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -11,13 +12,18 @@ namespace virtual_receptionist.Controllers.Validation
     {
         #region Adattagok
 
+        /// <summary>
+        /// Fogolalás egyed egy példánya
+        /// </summary>
+        private Booking booking;
+
         #endregion
 
         #region Konstruktor
 
-        public BookingValidation()
+        public BookingValidation(Booking booking)
         {
-
+            this.booking = booking;
         }
 
         #endregion
@@ -30,7 +36,10 @@ namespace virtual_receptionist.Controllers.Validation
         /// <exception cref="InvalidBookingException"></exception>
         public void ValidateBooking()
         {
+            if (true)
+            {
 
+            }
         }
 
         #endregion
