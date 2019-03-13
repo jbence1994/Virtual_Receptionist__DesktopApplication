@@ -108,7 +108,7 @@ namespace virtual_receptionist.Controllers
         /// Új foglalás felvétele
         /// </summary>
         /// <param name="bookingParameters">Foglalás paraméterei</param>
-        public void AddNewRecordToBookingTable(params object[] bookingParameters)
+        public void AddNewBooking(params object[] bookingParameters)
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
@@ -139,7 +139,7 @@ namespace virtual_receptionist.Controllers
         /// Foglalás törlése
         /// </summary>
         /// <param name="bookingParameters">Foglalás paraméterei</param>
-        public void DeleteRecordFromBookingTable(params object[] bookingParameters)
+        public void DeleteBooking(params object[] bookingParameters)
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
@@ -167,10 +167,10 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Foglalás módosítása
         /// </summary>
         /// <param name="bookingParameters">Foglalás paraméterei</param>
-        public void UpdateRecordInBookingTable(params object[] bookingParameters)
+        public void UpdateBooking(params object[] bookingParameters)
         {
             int id = Convert.ToInt32(bookingParameters[0]);
 
