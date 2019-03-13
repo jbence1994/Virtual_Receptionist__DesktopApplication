@@ -77,6 +77,12 @@
     <Compile Include="Models\Data\BillingRepository.cs" />
     <Compile Include="Models\Data\BookingRepository.cs" />
     <Compile Include="Models\Data\GuestRepository.cs" />
+    <Compile Include="Views\FormBookingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormBookingManager.Designer.cs">
+      <DependentUpon>FormBookingManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ORM\Booking.cs" />
     <Compile Include="Models\ORM\Room.cs" />
+    <EmbeddedResource Include="Views\FormBookingManager.resx">
+      <DependentUpon>FormBookingManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

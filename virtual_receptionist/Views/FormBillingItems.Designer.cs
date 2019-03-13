@@ -44,11 +44,12 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
-            this.buttonOK = new System.Windows.Forms.Button();
             this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
+            this.buttonOK = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -164,6 +165,7 @@
             // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.buttonCancel);
             this.groupBoxItemParameters.Controls.Add(this.buttonOK);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxVAT);
@@ -182,17 +184,6 @@
             this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 130);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
-            // 
-            // buttonOK
-            // 
-            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(483, 93);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(274, 23);
-            this.buttonOK.TabIndex = 16;
-            this.buttonOK.Text = "OK";
-            this.buttonOK.UseVisualStyleBackColor = true;
-            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // maskedTextBoxItemDiscount
             // 
@@ -229,6 +220,27 @@
             this.labelVAT.Size = new System.Drawing.Size(30, 13);
             this.labelVAT.TabIndex = 10;
             this.labelVAT.Text = "ÁFA:";
+            // 
+            // buttonOK
+            // 
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOK.Location = new System.Drawing.Point(641, 101);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.TabIndex = 16;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(722, 101);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 17;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // FormBillingItems
             // 
@@ -271,6 +283,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
         private System.Windows.Forms.ColumnHeader columnHeaderVAT;
         private System.Windows.Forms.ColumnHeader columnHeaderCategory;
+        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOK;
     }
 }
