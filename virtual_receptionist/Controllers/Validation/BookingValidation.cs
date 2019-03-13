@@ -33,12 +33,12 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// Foglalás ellenőrző metódus
         /// </summary>
-        /// <exception cref="InvalidBookingException"></exception>
+        /// <exception cref="InvalidBookingParameterException"></exception>
         public void ValidateBooking()
         {
-            if (true)
+            if (booking.ArrivalDate == booking.DepartureDate)
             {
-
+                throw new InvalidBookingParameterException("A távozás dátuma megegyezik az érkezés dátumával!");
             }
         }
 

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
+using virtual_receptionist.Controllers.Exceptions;
+using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
 
@@ -195,6 +197,25 @@ namespace virtual_receptionist.Controllers
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
             repository.Update(booking);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arrivalDate"></param>
+        /// <param name="departureDate"></param>
+        ///<exception cref="InvalidBookingParameterException"></exception>
+        public void BookingDateValidator(DateTime arrivalDate, DateTime departureDate)
+        {
+            try
+            {
+                BookingValidation bookingValidation = new BookingValidation();
+                bookingValidation.ValidateBooking();
+            }
+            catch (InvalidBookingParameterException e)
+            {
+                throw e;
+            }
         }
 
         #endregion

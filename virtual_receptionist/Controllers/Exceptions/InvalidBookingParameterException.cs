@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Foglalás kivétel
     /// </summary>
-    public sealed class InvalidBookingException : Exception
+    public sealed class InvalidBookingParameterException : Exception
     {
         #region Konstruktor
 
@@ -13,7 +13,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         /// Foglalás kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
-        public InvalidBookingException(string message) : base(message)
+        public InvalidBookingParameterException(string message) : base(message)
         {
         }
 

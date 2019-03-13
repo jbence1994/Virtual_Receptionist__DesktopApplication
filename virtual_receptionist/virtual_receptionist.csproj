@@ -49,7 +49,7 @@
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\Exceptions\InvalidAddressException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidBookingException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidBookingParameterException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCitizenshipException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidDocumentNumberException.cs" />
