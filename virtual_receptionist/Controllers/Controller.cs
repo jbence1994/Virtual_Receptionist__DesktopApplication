@@ -247,6 +247,24 @@ namespace virtual_receptionist.Controllers
             }
         }
 
+        /// <summary>
+        /// Adószám validátor
+        /// </summary>
+        /// <param name="vatNumber">Adószám</param>
+        ///<exception cref="InvalidVATNumberException"></exception>
+        public void VATNumberValidator(string vatNumber)
+        {
+            try
+            {
+                VATNumberValidation vatNumberValidation = new VATNumberValidation(vatNumber);
+                vatNumberValidation.ValidateVATNumber();
+            }
+            catch (InvalidVATNumberException e)
+            {
+                throw e;
+            }
+        }
+
         #endregion
     }
 }
