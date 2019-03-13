@@ -85,6 +85,10 @@ namespace virtual_receptionist.Views
                 controller.UpdateRecordInBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
                     departureDate, paid);
             }
+            else
+            {
+                MessageBox.Show("Nincs kijelölt foglalás!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonDeleteBooking_Click(object sender, EventArgs e)
@@ -102,6 +106,10 @@ namespace virtual_receptionist.Views
 
                 controller.DeleteRecordFromBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
                     departureDate, paid);
+            }
+            else
+            {
+                MessageBox.Show("Nincs kijelölt foglalás!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
