@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Foglalás kivétel
     /// </summary>
-    public class InvalidBookingException : Exception
+    public sealed class InvalidBookingException : Exception
     {
         #region Konstruktor
 
