@@ -251,36 +251,6 @@ namespace virtual_receptionist.Views
             toolStripStatusLabelMenuName.Text = "";
         }
 
-        private void toolStripButtonGuestRegistrationCard_Click(object sender, EventArgs e)
-        {
-            controller.OpenGuestRegistrationCard();
-        }
-
-        private void toolStripMenuItemGuestRegistrationCard_Click(object sender, EventArgs e)
-        {
-            controller.OpenGuestRegistrationCard();
-        }
-
-        private void toolStripButtonGuestRegistrationCard_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Vendég bejelentkező lap kitöltése";
-        }
-
-        private void toolStripButtonGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemGuestRegistrationCard_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Vendég bejelentkező lap kitöltése";
-        }
-
-        private void toolStripMenuItemGuestRegistrationCard_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             Logout();

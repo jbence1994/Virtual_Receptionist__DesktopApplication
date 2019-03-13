@@ -33,7 +33,6 @@
             this.toolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemTools = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemGuestRegistrationCard = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemBooking = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemGuestDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemBilling = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +47,6 @@
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBoxVRLogo = new System.Windows.Forms.PictureBox();
             this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonGuestRegistrationCard = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonBooking = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonGuestDatabase = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonBilling = new System.Windows.Forms.ToolStripButton();
@@ -90,7 +88,7 @@
             // 
             this.toolStripMenuItemLogout.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemLogout.Image")));
             this.toolStripMenuItemLogout.Name = "toolStripMenuItemLogout";
-            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(141, 22);
+            this.toolStripMenuItemLogout.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemLogout.Text = "Kijelentkezés";
             this.toolStripMenuItemLogout.Click += new System.EventHandler(this.toolStripMenuItemLogout_Click);
             this.toolStripMenuItemLogout.MouseLeave += new System.EventHandler(this.toolStripMenuItemLogout_MouseLeave);
@@ -99,7 +97,6 @@
             // toolStripMenuItemTools
             // 
             this.toolStripMenuItemTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemGuestRegistrationCard,
             this.toolStripMenuItemBooking,
             this.toolStripMenuItemGuestDatabase,
             this.toolStripMenuItemBilling});
@@ -109,21 +106,11 @@
             this.toolStripMenuItemTools.MouseLeave += new System.EventHandler(this.toolStripMenuItemTools_MouseLeave);
             this.toolStripMenuItemTools.MouseHover += new System.EventHandler(this.toolStripMenuItemTools_MouseHover);
             // 
-            // toolStripMenuItemGuestRegistrationCard
-            // 
-            this.toolStripMenuItemGuestRegistrationCard.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestRegistrationCard.Image")));
-            this.toolStripMenuItemGuestRegistrationCard.Name = "toolStripMenuItemGuestRegistrationCard";
-            this.toolStripMenuItemGuestRegistrationCard.Size = new System.Drawing.Size(249, 22);
-            this.toolStripMenuItemGuestRegistrationCard.Text = "Vendég bejelentkező lap kitöltése";
-            this.toolStripMenuItemGuestRegistrationCard.Click += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_Click);
-            this.toolStripMenuItemGuestRegistrationCard.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_MouseLeave);
-            this.toolStripMenuItemGuestRegistrationCard.MouseHover += new System.EventHandler(this.toolStripMenuItemGuestRegistrationCard_MouseHover);
-            // 
             // toolStripMenuItemBooking
             // 
             this.toolStripMenuItemBooking.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBooking.Image")));
             this.toolStripMenuItemBooking.Name = "toolStripMenuItemBooking";
-            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemBooking.Text = "Foglalási napló";
             this.toolStripMenuItemBooking.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemBooking.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
@@ -133,7 +120,7 @@
             // 
             this.toolStripMenuItemGuestDatabase.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestDatabase.Image")));
             this.toolStripMenuItemGuestDatabase.Name = "toolStripMenuItemGuestDatabase";
-            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
             this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
@@ -143,7 +130,7 @@
             // 
             this.toolStripMenuItemBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBilling.Image")));
             this.toolStripMenuItemBilling.Name = "toolStripMenuItemBilling";
-            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(249, 22);
+            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
             this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
@@ -246,7 +233,6 @@
             // toolStripMainMenu
             // 
             this.toolStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonGuestRegistrationCard,
             this.toolStripButtonBooking,
             this.toolStripButtonGuestDatabase,
             this.toolStripButtonBilling});
@@ -254,19 +240,6 @@
             this.toolStripMainMenu.Name = "toolStripMainMenu";
             this.toolStripMainMenu.Size = new System.Drawing.Size(1008, 39);
             this.toolStripMainMenu.TabIndex = 6;
-            // 
-            // toolStripButtonGuestRegistrationCard
-            // 
-            this.toolStripButtonGuestRegistrationCard.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonGuestRegistrationCard.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonGuestRegistrationCard.Image")));
-            this.toolStripButtonGuestRegistrationCard.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonGuestRegistrationCard.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonGuestRegistrationCard.Name = "toolStripButtonGuestRegistrationCard";
-            this.toolStripButtonGuestRegistrationCard.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButtonGuestRegistrationCard.Text = "Vendég bejelentkező lap kitöltése";
-            this.toolStripButtonGuestRegistrationCard.Click += new System.EventHandler(this.toolStripButtonGuestRegistrationCard_Click);
-            this.toolStripButtonGuestRegistrationCard.MouseLeave += new System.EventHandler(this.toolStripButtonGuestRegistrationCard_MouseLeave);
-            this.toolStripButtonGuestRegistrationCard.MouseHover += new System.EventHandler(this.toolStripButtonGuestRegistrationCard_MouseHover);
             // 
             // toolStripButtonBooking
             // 
@@ -423,8 +396,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBooking;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuestDatabase;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBilling;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemGuestRegistrationCard;
-        private System.Windows.Forms.ToolStripButton toolStripButtonGuestRegistrationCard;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelMenuName;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Panel panelMainMenu;
