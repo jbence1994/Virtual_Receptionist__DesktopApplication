@@ -118,6 +118,7 @@
             this.textBoxGuestName.Name = "textBoxGuestName";
             this.textBoxGuestName.Size = new System.Drawing.Size(237, 20);
             this.textBoxGuestName.TabIndex = 3;
+            this.textBoxGuestName.TextChanged += new System.EventHandler(this.textBoxGuestName_TextChanged);
             // 
             // textBoxDocumentNumber
             // 
@@ -125,6 +126,7 @@
             this.textBoxDocumentNumber.Name = "textBoxDocumentNumber";
             this.textBoxDocumentNumber.Size = new System.Drawing.Size(237, 20);
             this.textBoxDocumentNumber.TabIndex = 4;
+            this.textBoxDocumentNumber.TextChanged += new System.EventHandler(this.textBoxDocumentNumber_TextChanged);
             // 
             // labelName
             // 
@@ -141,6 +143,7 @@
             this.textBoxCitizenship.Name = "textBoxCitizenship";
             this.textBoxCitizenship.Size = new System.Drawing.Size(237, 20);
             this.textBoxCitizenship.TabIndex = 6;
+            this.textBoxCitizenship.TextChanged += new System.EventHandler(this.textBoxCitizenship_TextChanged);
             // 
             // textBoxBirthDate
             // 
@@ -148,6 +151,7 @@
             this.textBoxBirthDate.Name = "textBoxBirthDate";
             this.textBoxBirthDate.Size = new System.Drawing.Size(237, 20);
             this.textBoxBirthDate.TabIndex = 7;
+            this.textBoxBirthDate.TextChanged += new System.EventHandler(this.textBoxBirthDate_TextChanged);
             // 
             // textBoxZipCode
             // 
@@ -155,6 +159,7 @@
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(237, 20);
             this.textBoxZipCode.TabIndex = 8;
+            this.textBoxZipCode.TextChanged += new System.EventHandler(this.textBoxZipCode_TextChanged);
             // 
             // comboBoxCountry
             // 
@@ -218,6 +223,7 @@
             this.textBoxEmailAddress.Name = "textBoxEmailAddress";
             this.textBoxEmailAddress.Size = new System.Drawing.Size(237, 20);
             this.textBoxEmailAddress.TabIndex = 21;
+            this.textBoxEmailAddress.TextChanged += new System.EventHandler(this.textBoxEmailAddress_TextChanged);
             // 
             // labelPhoneNumber
             // 
@@ -234,6 +240,7 @@
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(237, 20);
             this.textBoxPhoneNumber.TabIndex = 19;
+            this.textBoxPhoneNumber.TextChanged += new System.EventHandler(this.textBoxPhoneNumber_TextChanged);
             // 
             // labelAddress
             // 
@@ -250,6 +257,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(237, 20);
             this.textBoxAddress.TabIndex = 17;
+            this.textBoxAddress.TextChanged += new System.EventHandler(this.textBoxAddress_TextChanged);
             // 
             // labelCity
             // 
@@ -266,6 +274,7 @@
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(237, 20);
             this.textBoxCity.TabIndex = 15;
+            this.textBoxCity.TextChanged += new System.EventHandler(this.textBoxCity_TextChanged);
             // 
             // labelZipCode
             // 

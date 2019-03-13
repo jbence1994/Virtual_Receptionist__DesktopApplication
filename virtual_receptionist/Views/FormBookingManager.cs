@@ -49,6 +49,10 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            /*
+             * Vendégadatok validálása
+             */
+
             bool validData = true;
 
             string name = textBoxGuestName.Text;
@@ -168,21 +172,13 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
+            /*
+             * Foglalásadatok validálása
+             */
 
             string room = comboBoxRoom.SelectedItem.ToString();
-
-
-
             decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
-
-
-
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
-
-
-
-
-
             DateTime departureDate = dateTimePickerDepartureDate.Value;
 
             if (validData)
@@ -190,6 +186,51 @@ namespace virtual_receptionist.Views
                 guestController.AddGuest(name);
                 bookingController.AddNewBooking(name, room, numberOfGuests, arrivalDate, departureDate);
             }
+        }
+
+        private void textBoxGuestName_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderName.Clear();
+        }
+
+        private void textBoxDocumentNumber_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderDocumentNumber.Clear();
+        }
+
+        private void textBoxEmailAddress_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderEmailAddress.Clear();
+        }
+
+        private void textBoxBirthDate_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderBirthDate.Clear();
+        }
+
+        private void textBoxZipCode_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderZipCode.Clear();
+        }
+
+        private void textBoxCity_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderCity.Clear();
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderEmailAddress.Clear();
+        }
+
+        private void textBoxPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderPhoneNumber.Clear();
+        }
+
+        private void textBoxCitizenship_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderCitizenship.Clear();
         }
 
         #endregion
