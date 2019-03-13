@@ -279,6 +279,7 @@
             // 
             // comboBoxBillingCountry
             // 
+            this.comboBoxBillingCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBillingCountry.FormattingEnabled = true;
             this.comboBoxBillingCountry.Location = new System.Drawing.Point(207, 57);
             this.comboBoxBillingCountry.Name = "comboBoxBillingCountry";

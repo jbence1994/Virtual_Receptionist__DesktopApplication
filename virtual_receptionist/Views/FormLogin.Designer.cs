@@ -126,6 +126,7 @@
             // 
             // comboBoxConnectionType
             // 
+            this.comboBoxConnectionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxConnectionType.FormattingEnabled = true;
             this.comboBoxConnectionType.Items.AddRange(new object[] {
             "otthoni",

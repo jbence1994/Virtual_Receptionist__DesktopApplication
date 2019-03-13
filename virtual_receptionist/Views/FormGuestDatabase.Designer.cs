@@ -301,6 +301,7 @@
             // 
             // comboBoxCountry
             // 
+            this.comboBoxCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCountry.FormattingEnabled = true;
             this.comboBoxCountry.Location = new System.Drawing.Point(108, 151);
             this.comboBoxCountry.Name = "comboBoxCountry";
