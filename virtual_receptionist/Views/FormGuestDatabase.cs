@@ -187,135 +187,138 @@ namespace virtual_receptionist.Views
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
         {
-            bool validData = true;
+            if (listViewGuest.SelectedItems.Count > 0)
+            {
+                bool validData = true;
 
-            int id = int.Parse(textBoxID.Text);
-            string name = textBoxName.Text;
-            string documentNumber = textBoxDocumentNumber.Text;
-            string birthDate = textBoxBirthDate.Text;
-            string citizenship = textBoxCitizenship.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
-            string zipCode = textBoxZipCode.Text;
-            string city = textBoxCity.Text;
-            string address = textBoxAddress.Text;
-            string phoneNumber = textBoxPhoneNumber.Text;
-            string email = textBoxEmailAddress.Text;
+                int id = int.Parse(textBoxID.Text);
+                string name = textBoxName.Text;
+                string documentNumber = textBoxDocumentNumber.Text;
+                string birthDate = textBoxBirthDate.Text;
+                string citizenship = textBoxCitizenship.Text;
+                string country = comboBoxCountry.SelectedItem.ToString();
+                string zipCode = textBoxZipCode.Text;
+                string city = textBoxCity.Text;
+                string address = textBoxAddress.Text;
+                string phoneNumber = textBoxPhoneNumber.Text;
+                string email = textBoxEmailAddress.Text;
 
-            try
-            {
-                controller.NameValidator(name);
-            }
-            catch (InvalidNameException exception)
-            {
-                errorProviderName.SetError(textBoxName, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.NameValidator(name);
+                }
+                catch (InvalidNameException exception)
+                {
+                    errorProviderName.SetError(textBoxName, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.DocumentNumberValidator(documentNumber);
-            }
-            catch (InvalidDocumentNumberException exception)
-            {
-                errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.DocumentNumberValidator(documentNumber);
+                }
+                catch (InvalidDocumentNumberException exception)
+                {
+                    errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.CitizenShipValidator(citizenship);
-            }
-            catch (InvalidCitizenshipException exception)
-            {
-                errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.CitizenShipValidator(citizenship);
+                }
+                catch (InvalidCitizenshipException exception)
+                {
+                    errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.BirthDateValidator(birthDate);
-            }
-            catch (InvalidBirthDateException exception)
-            {
-                errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.BirthDateValidator(birthDate);
+                }
+                catch (InvalidBirthDateException exception)
+                {
+                    errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.ZipCodeValidator(zipCode);
-            }
-            catch (InvalidZipCodeException exception)
-            {
-                errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.ZipCodeValidator(zipCode);
+                }
+                catch (InvalidZipCodeException exception)
+                {
+                    errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.CityValidator(city);
-            }
-            catch (InvalidCityException exception)
-            {
-                errorProviderCity.SetError(textBoxCity, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.CityValidator(city);
+                }
+                catch (InvalidCityException exception)
+                {
+                    errorProviderCity.SetError(textBoxCity, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.AddressValidator(address);
-            }
-            catch (InvalidAddressException exception)
-            {
-                errorProviderAddress.SetError(textBoxAddress, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.AddressValidator(address);
+                }
+                catch (InvalidAddressException exception)
+                {
+                    errorProviderAddress.SetError(textBoxAddress, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.PhoneNumberValidator(phoneNumber);
-            }
-            catch (InvalidPhoneNumberException exception)
-            {
-                errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.PhoneNumberValidator(phoneNumber);
+                }
+                catch (InvalidPhoneNumberException exception)
+                {
+                    errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
+                    validData = false;
+                }
 
-            try
-            {
-                controller.EmailAddressValidator(email);
-            }
-            catch (InvalidEmailAddressException exception)
-            {
-                errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
-                validData = false;
-            }
+                try
+                {
+                    controller.EmailAddressValidator(email);
+                }
+                catch (InvalidEmailAddressException exception)
+                {
+                    errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
+                    validData = false;
+                }
 
-            if (validData)
-            {
-                // ListView rekord módosítása (GUI)
-                textBoxID.Text = id.ToString();
-                ListViewItem updatedRecord = new ListViewItem();
-                updatedRecord.Text = id.ToString();
-                updatedRecord.SubItems.Add(name);
-                updatedRecord.SubItems.Add(documentNumber);
-                updatedRecord.SubItems.Add(citizenship);
-                updatedRecord.SubItems.Add(birthDate);
-                updatedRecord.SubItems.Add(country);
-                updatedRecord.SubItems.Add(zipCode);
-                updatedRecord.SubItems.Add(city);
-                updatedRecord.SubItems.Add(address);
-                updatedRecord.SubItems.Add(phoneNumber);
-                updatedRecord.SubItems.Add(email);
+                if (validData)
+                {
+                    // ListView rekord módosítása (GUI)
+                    textBoxID.Text = id.ToString();
+                    ListViewItem updatedRecord = new ListViewItem();
+                    updatedRecord.Text = id.ToString();
+                    updatedRecord.SubItems.Add(name);
+                    updatedRecord.SubItems.Add(documentNumber);
+                    updatedRecord.SubItems.Add(citizenship);
+                    updatedRecord.SubItems.Add(birthDate);
+                    updatedRecord.SubItems.Add(country);
+                    updatedRecord.SubItems.Add(zipCode);
+                    updatedRecord.SubItems.Add(city);
+                    updatedRecord.SubItems.Add(address);
+                    updatedRecord.SubItems.Add(phoneNumber);
+                    updatedRecord.SubItems.Add(email);
 
-                int index = listViewGuest.FocusedItem.Index;
-                listViewGuest.Items.RemoveAt(index);
-                listViewGuest.Items.Insert(index, updatedRecord);
+                    int index = listViewGuest.FocusedItem.Index;
+                    listViewGuest.Items.RemoveAt(index);
+                    listViewGuest.Items.Insert(index, updatedRecord);
 
-                // Adatbázis rekord módosítása
-                controller.UpdateRecordInGuestTable(id, name, documentNumber, citizenship, birthDate, country,
-                    zipCode,
-                    city, address, phoneNumber, email);
+                    // Adatbázis rekord módosítása
+                    controller.UpdateRecordInGuestTable(id, name, documentNumber, citizenship, birthDate, country,
+                        zipCode,
+                        city, address, phoneNumber, email);
+                }
             }
             else
             {
