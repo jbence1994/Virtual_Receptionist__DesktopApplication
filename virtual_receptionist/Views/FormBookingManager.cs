@@ -35,29 +35,21 @@ namespace virtual_receptionist.Views
 
         private void FormBookingManager_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = controller.GetCountries();
+            textBoxGuestName.Select();
+            comboBoxCountry.DataSource = controller.GetCountries();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            //object id = dataGridViewBookings.SelectedRows[0].Cells[1].Value;
-            //object guest = dataGridViewBookings.SelectedRows[0].Cells[2].Value;
-            //object company = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
-            //object room = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
-            //object numberOfGuests = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
-            //object arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
-            //object departureDate = dataGridViewBookings.SelectedRows[0].Cells[7].Value;
-            ////object paid = dataGridViewBookings.SelectedRows[0].Cells[8].Value;
+            string guest = textBoxGuestName.Text;
+            string room = comboBoxRoom.SelectedItem.ToString();
+            decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
+            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
+            DateTime departureDate = dateTimePickerDepartureDate.Value;
 
-            //controller.AddNewRecordToBookingTable(id, guest, company, room, numberOfGuests, arrivalDate,
-            //    departureDate, paid);
+            controller.AddNewRecordToBookingTable(guest, room, numberOfGuests, arrivalDate, departureDate);
         }
 
         #endregion
-
-        private void groupBoxBookingData_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }
