@@ -240,6 +240,29 @@ namespace virtual_receptionist.Models.Data
             return bookingsNotPaid;
         }
 
+        /// <summary>
+        /// Metódus, amely visszaadja egy adott szoba maximálkis férőhelyét
+        /// </summary>
+        /// <param name="room">Szoba objektum</param>
+        /// <returns>A maximális szoba férőhellyel tér vissza a függvény</returns>
+        public int GetEachRoomCapacity(Room room)
+        {
+            if (rooms.Count == 0)
+            {
+                UploadRoomsList();
+            }
+
+            foreach (Room r in rooms)
+            {
+                if (r.Number == room.Number)
+                {
+                    return r.Capacity;
+                }
+            }
+
+            return 0;
+        }
+
         #endregion
     }
 }
