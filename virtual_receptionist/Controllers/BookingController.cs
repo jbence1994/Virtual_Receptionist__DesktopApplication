@@ -215,8 +215,8 @@ namespace virtual_receptionist.Controllers
 
             try
             {
-                BookingValidation bookingValidation = new BookingValidation(booking);
-                bookingValidation.ValidateBooking();
+                BookingDateValidation bookingDateValidation = new BookingDateValidation(booking);
+                bookingDateValidation.ValidateBookingDate();
             }
             catch (InvalidBookingParameterException e)
             {
@@ -228,20 +228,25 @@ namespace virtual_receptionist.Controllers
         /// Foglalás kapacitását ellenőrző metódus
         /// </summary>
         /// <param name="numberOfGuests">Vendégek száma</param>
-        /// <param name="roomCapacity">Szoba maximális kapacitása</param>
+        /// <param name="roomNumber">Szobaszám</param>
         /// <exception cref="InvalidBookingParameterException"></exception>
-        public void BookingCapacityValidator(decimal numberOfGuests, int roomCapacity)
+        public void BookingCapacityValidator(decimal numberOfGuests, int roomNumber)
         {
+            Room room = new Room()
+            {
+                Capacity = repository.GetRoomCapacity(roomNumber)
+            };
+
             Booking booking = new Booking()
             {
                 NumberOfGuests = Convert.ToInt32(numberOfGuests),
-                Room = {Capacity = roomCapacity}
+                Room = room
             };
 
             try
             {
-                BookingValidation bookingValidation = new BookingValidation(booking);
-                bookingValidation.ValidateBooking();
+                BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(booking, room);
+                bookingCapacityValidation.ValidateBookingCapacity();
             }
             catch (InvalidBookingParameterException e)
             {

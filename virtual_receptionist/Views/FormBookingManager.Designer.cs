@@ -333,6 +333,7 @@
             this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
             this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(237, 20);
             this.numericUpDownNumberOfGuests.TabIndex = 25;
+            this.numericUpDownNumberOfGuests.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfGuests_ValueChanged);
             // 
             // labelNumberOfGuests
             // 

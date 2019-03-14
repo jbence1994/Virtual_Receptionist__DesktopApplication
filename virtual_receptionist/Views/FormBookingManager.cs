@@ -176,13 +176,14 @@ namespace virtual_receptionist.Views
              * Foglalásadatok validálása
              */
 
-            string room = comboBoxRoom.SelectedItem.ToString();
+            int roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
             decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
             DateTime departureDate = dateTimePickerDepartureDate.Value;
 
             try
             {
+                errorProviderDepartureDate.Clear();
                 bookingController.BookingDateValidator(arrivalDate, departureDate);
             }
             catch (InvalidBookingParameterException exception)
@@ -194,7 +195,8 @@ namespace virtual_receptionist.Views
 
             try
             {
-                bookingController.BookingCapacityValidator(numberOfGuests,  ?);
+                errorProviderNumberOfGuests.Clear();
+                bookingController.BookingCapacityValidator(numberOfGuests, roomNumber);
             }
             catch (InvalidBookingParameterException exception)
             {
@@ -206,7 +208,7 @@ namespace virtual_receptionist.Views
             if (validData)
             {
                 guestController.AddGuest(name);
-                bookingController.AddBooking(name, room, numberOfGuests, arrivalDate, departureDate);
+                bookingController.AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
             }
         }
 
@@ -258,6 +260,11 @@ namespace virtual_receptionist.Views
         private void dateTimePickerDepartureDate_ValueChanged(object sender, EventArgs e)
         {
             errorProviderDepartureDate.Clear();
+        }
+
+        private void numericUpDownNumberOfGuests_ValueChanged(object sender, EventArgs e)
+        {
+            errorProviderNumberOfGuests.Clear();
         }
 
         #endregion

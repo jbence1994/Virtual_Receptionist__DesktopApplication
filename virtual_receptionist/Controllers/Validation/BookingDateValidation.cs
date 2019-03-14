@@ -4,9 +4,9 @@ using virtual_receptionist.Models.ORM;
 namespace virtual_receptionist.Controllers.Validation
 {
     /// <summary>
-    /// Foglalás adatait ellenőrző osztály
+    /// Foglalás érkezési és tábozási idejét ellenőrző osztály
     /// </summary>
-    public class BookingValidation
+    public class BookingDateValidation
     {
         #region Adattagok
 
@@ -14,16 +14,16 @@ namespace virtual_receptionist.Controllers.Validation
         /// Fogolalás egyed egy példánya
         /// </summary>
         private readonly Booking booking;
-
+        
         #endregion
 
         #region Konstruktor
 
         /// <summary>
-        /// Foglalás adatait ellenőrző osztály konstruktora
+        /// Foglalás érkezési és tábozási idejét ellenőrző osztály konstruktora
         /// </summary>
         /// <param name="booking">Foglalás egyed</param>
-        public BookingValidation(Booking booking)
+        public BookingDateValidation(Booking booking)
         {
             this.booking = booking;
         }
@@ -33,20 +33,14 @@ namespace virtual_receptionist.Controllers.Validation
         #region Metódusok
 
         /// <summary>
-        /// Foglalás adatait ellenőrző metódus
+        /// Foglalás érkezési és tábozási idejét ellenőrző metódus
         /// </summary>
         /// <exception cref="InvalidBookingParameterException"></exception>
-        public void ValidateBooking()
+        public void ValidateBookingDate()
         {
             if (booking.ArrivalDate == booking.DepartureDate)
             {
                 throw new InvalidBookingParameterException("A távozás dátuma megegyezik az érkezés dátumával!");
-            }
-
-            if (booking.NumberOfGuests > booking.Room.Capacity)
-            {
-                throw new InvalidBookingParameterException(
-                    "A vendégek száma nem lehet nagyobb, mint a kiválasztott szoba maximális férőhelye!");
             }
         }
 

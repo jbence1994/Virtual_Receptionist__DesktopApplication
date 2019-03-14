@@ -241,22 +241,22 @@ namespace virtual_receptionist.Models.Data
         }
 
         /// <summary>
-        /// Metódus, amely visszaadja egy adott szoba maximálkis férőhelyét
+        /// Metódus, amely visszaadja egy adott szoba maximális férőhelyét (kapacitását)
         /// </summary>
-        /// <param name="room">Szoba objektum</param>
+        /// <param name="roomNumber">Szoba kapacitása</param>
         /// <returns>A maximális szoba férőhellyel tér vissza a függvény</returns>
-        public int GetEachRoomCapacity(Room room)
+        public int GetRoomCapacity(int roomNumber)
         {
             if (rooms.Count == 0)
             {
                 UploadRoomsList();
             }
 
-            foreach (Room r in rooms)
+            foreach (Room room in rooms)
             {
-                if (r.Number == room.Number)
+                if (room.Number == roomNumber)
                 {
-                    return r.Capacity;
+                    return room.Capacity;
                 }
             }
 
