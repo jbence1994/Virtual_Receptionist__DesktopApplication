@@ -330,9 +330,19 @@
             // numericUpDownNumberOfGuests
             // 
             this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(170, 116);
+            this.numericUpDownNumberOfGuests.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownNumberOfGuests.Name = "numericUpDownNumberOfGuests";
             this.numericUpDownNumberOfGuests.Size = new System.Drawing.Size(237, 20);
             this.numericUpDownNumberOfGuests.TabIndex = 25;
+            this.numericUpDownNumberOfGuests.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownNumberOfGuests.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfGuests_ValueChanged);
             // 
             // labelNumberOfGuests

@@ -44,11 +44,6 @@ namespace virtual_receptionist.Controllers.Validation
         /// <exception cref="InvalidBookingParameterException"></exception>
         public void ValidateBookingCapacity()
         {
-            if (booking.NumberOfGuests == 0)
-            {
-                throw new InvalidBookingParameterException("Vendég száma nem lehet nulla!");
-            }
-
             if (booking.NumberOfGuests > booking.Room.Capacity)
             {
                 throw new InvalidBookingParameterException(
