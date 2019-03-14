@@ -145,13 +145,13 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
         /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
-        public static bool IsValidEmailAddress(string input)
+        public static bool IsNotValidEmailAddress(string input)
         {
             bool valid = false;
 
             Regex validEmail = new Regex(@"");
 
-            if (validEmail.IsMatch(input))
+            if (!validEmail.IsMatch(input))
             {
                 valid = true;
             }

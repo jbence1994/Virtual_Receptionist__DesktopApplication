@@ -43,7 +43,7 @@ namespace virtual_receptionist.Controllers.Validation
                 throw new InvalidEmailAddressException("Üres mező!");
             }
 
-            if (!IsValidEmailAddress(email))
+            if (IsNotValidEmailAddress(email))
             {
                 throw new InvalidEmailAddressException("Nem érvényes e-mail cím formátum!");
             }
