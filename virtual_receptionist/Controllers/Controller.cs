@@ -131,7 +131,7 @@ namespace virtual_receptionist.Controllers
             try
             {
                 CitizenshipValidation citizenshipValidation = new CitizenshipValidation(citizenship);
-                citizenshipValidation.ValidateDocumentNumber();
+                citizenshipValidation.ValidateCitizenship();
             }
             catch (InvalidCitizenshipException e)
             {

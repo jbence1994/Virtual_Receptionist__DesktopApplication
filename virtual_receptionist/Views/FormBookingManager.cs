@@ -194,7 +194,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                bookingController.BookingCapacityValidator(numberOfGuests,  ?);
+                //bookingController.BookingCapacityValidator(numberOfGuests,  ?);
             }
             catch (InvalidBookingParameterException exception)
             {

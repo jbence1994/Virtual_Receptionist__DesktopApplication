@@ -35,8 +35,8 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// Állampolgárság ellenőrző metódus
         /// </summary>
-        /// <exception cref="InvalidDocumentNumberException"></exception>
-        public void ValidateDocumentNumber()
+        /// <exception cref="InvalidCitizenshipException"></exception>
+        public void ValidateCitizenship()
         {
             if (IsEmpty(citizenship))
             {

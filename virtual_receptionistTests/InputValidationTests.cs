@@ -6,7 +6,7 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
     [TestClass()]
     public class InputValidationTests
     {
-        #region Névellenőrző tesztek
+        #region Név ellenőrző tesztek
 
         /// <summary>
         /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti név
@@ -46,13 +46,29 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         /// Tesztmetódus, amely ellenőrzi, tartalmaz-e számot a bemeneti név
         /// </summary>
         [TestMethod()]
-        public void ValidateNameTest_InCaseContainsDigitCharacters()
+        public void ValidateNameTest_InCaseInputNameContainsDigitCharacters()
         {
             try
             {
                 NameValidation validation = new NameValidation("Juhász1");
                 validation.ValidateName();
                 Assert.Fail("Nem dobott kivételt számot tartalmazó bemeneti névre");
+            }
+            catch (InvalidNameException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, tartalmaz-e számot a bemeneti név
+        /// </summary>
+        [TestMethod()]
+        public void ValidateNameTest_InCaseInputNameIsValid()
+        {
+            try
+            {
+                NameValidation validation = new NameValidation("Juhász Bence");
+                validation.ValidateName();
             }
             catch (InvalidNameException)
             {
@@ -150,7 +166,7 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
 
         #endregion
 
-        #region Születési dátum tesztek
+        #region Születési dátum ellenőrző tesztek
 
         /// <summary>
         /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti születési dátum
@@ -287,6 +303,94 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
             }
         }
 
+        #endregion
+
+        #region Állampolgárság ellenőrző tesztek
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, üres-e a bemeneti állampolgárság
+        /// </summary>
+        [TestMethod()]
+        public void ValidateCitizenshipTest_InCaseInputCitizenshipIsEmpty()
+        {
+            try
+            {
+                CitizenshipValidation validation = new CitizenshipValidation("");
+                validation.ValidateCitizenship();
+                Assert.Fail("Nem dob kivételt üres állampolgárságra!");
+            }
+            catch (InvalidCitizenshipException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, helyes-e a bemeneti állampolgárság
+        /// </summary>
+        [TestMethod()]
+        public void ValidateCitizenshipTest_InCaseInputCitizenshipIsNotValid1()
+        {
+            try
+            {
+                CitizenshipValidation validation = new CitizenshipValidation("Magyar");
+                validation.ValidateCitizenship();
+                Assert.Fail("Nem dob kivételt rossz állampolgárságra!");
+            }
+            catch (InvalidCitizenshipException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, helyes-e a bemeneti állampolgárság
+        /// </summary>
+        [TestMethod()]
+        public void ValidateCitizenshipTest_InCaseInputCitizenshipIsNotValid2()
+        {
+            try
+            {
+                CitizenshipValidation validation = new CitizenshipValidation("magyar1");
+                validation.ValidateCitizenship();
+                Assert.Fail("Nem dob kivételt rossz állampolgárságra!");
+            }
+            catch (InvalidCitizenshipException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, helyes-e a bemeneti állampolgárság
+        /// </summary>
+        [TestMethod()]
+        public void ValidateCitizenshipTest_InCaseInputCitizenshipIsNotValid3()
+        {
+            try
+            {
+                CitizenshipValidation validation = new CitizenshipValidation("mAgyar");
+                validation.ValidateCitizenship();
+                Assert.Fail("Nem dob kivételt rossz állampolgárságra!");
+            }
+            catch (InvalidCitizenshipException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, helyes-e a bemeneti állampolgárság
+        /// </summary>
+        [TestMethod()]
+        public void ValidateCitizenshipTest_InCaseInputCitizenshipIsValid()
+        {
+            try
+            {
+                CitizenshipValidation validation = new CitizenshipValidation("magyar");
+                validation.ValidateCitizenship();
+            }
+            catch (InvalidCitizenshipException)
+            {
+            }
+        }
+        
         #endregion
     }
 }
