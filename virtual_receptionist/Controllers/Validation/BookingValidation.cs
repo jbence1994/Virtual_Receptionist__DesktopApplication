@@ -19,6 +19,10 @@ namespace virtual_receptionist.Controllers.Validation
 
         #region Konstruktor
 
+        /// <summary>
+        /// Foglalás adatait ellenőrző osztály konstruktora
+        /// </summary>
+        /// <param name="booking">Foglalás egyed</param>
         public BookingValidation(Booking booking)
         {
             this.booking = booking;
@@ -29,7 +33,7 @@ namespace virtual_receptionist.Controllers.Validation
         #region Metódusok
 
         /// <summary>
-        /// Foglalás ellenőrző metódus
+        /// Foglalás adatait ellenőrző metódus
         /// </summary>
         /// <exception cref="InvalidBookingParameterException"></exception>
         public void ValidateBooking()
@@ -42,7 +46,7 @@ namespace virtual_receptionist.Controllers.Validation
             if (booking.NumberOfGuests > booking.Room.Capacity)
             {
                 throw new InvalidBookingParameterException(
-                    "A vendégszám nem lehet nagyobb, mint a kiválasztott szoba maximális férőhelye!");
+                    "A vendégek száma nem lehet nagyobb, mint a kiválasztott szoba maximális férőhelye!");
             }
         }
 

@@ -192,6 +192,17 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
+            try
+            {
+                bookingController.BookingCapacityValidator(numberOfGuests,  ?);
+            }
+            catch (InvalidBookingParameterException exception)
+            {
+                errorProviderNumberOfGuests.SetError(numericUpDownNumberOfGuests, exception.Message);
+                DialogResult = DialogResult.None;
+                validData = false;
+            }
+
             if (validData)
             {
                 guestController.AddGuest(name);

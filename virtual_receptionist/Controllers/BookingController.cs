@@ -200,10 +200,10 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Foglalás dátumát ellenőrző metódus
         /// </summary>
-        /// <param name="arrivalDate"></param>
-        /// <param name="departureDate"></param>
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <param name="departureDate">Távozás dátuma</param>
         ///<exception cref="InvalidBookingParameterException"></exception>
         public void BookingDateValidator(DateTime arrivalDate, DateTime departureDate)
         {
@@ -211,6 +211,31 @@ namespace virtual_receptionist.Controllers
             {
                 ArrivalDate = arrivalDate.ToString(),
                 DepartureDate = departureDate.ToString()
+            };
+
+            try
+            {
+                BookingValidation bookingValidation = new BookingValidation(booking);
+                bookingValidation.ValidateBooking();
+            }
+            catch (InvalidBookingParameterException e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Foglalás kapacitását ellenőrző metódus
+        /// </summary>
+        /// <param name="numberOfGuests">Vendégek száma</param>
+        /// <param name="roomCapacity">Szoba maximális kapacitása</param>
+        /// <exception cref="InvalidBookingParameterException"></exception>
+        public void BookingCapacityValidator(decimal numberOfGuests, int roomCapacity)
+        {
+            Booking booking = new Booking()
+            {
+                NumberOfGuests = Convert.ToInt32(numberOfGuests),
+                Room = {Capacity = roomCapacity}
             };
 
             try
