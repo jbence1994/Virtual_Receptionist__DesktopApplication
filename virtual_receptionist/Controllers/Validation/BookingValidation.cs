@@ -1,7 +1,5 @@
-﻿using System;
-using virtual_receptionist.Controllers.Exceptions;
+﻿using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models.ORM;
-using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
 {
@@ -15,7 +13,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// Fogolalás egyed egy példánya
         /// </summary>
-        private Booking booking;
+        private readonly Booking booking;
 
         #endregion
 
@@ -39,6 +37,12 @@ namespace virtual_receptionist.Controllers.Validation
             if (booking.ArrivalDate == booking.DepartureDate)
             {
                 throw new InvalidBookingParameterException("A távozás dátuma megegyezik az érkezés dátumával!");
+            }
+
+            if (booking.NumberOfGuests > booking.Room.Capacity)
+            {
+                throw new InvalidBookingParameterException(
+                    "A vendégszám nem lehet nagyobb, mint a kiválasztott szoba maximális férőhelye!");
             }
         }
 
