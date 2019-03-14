@@ -97,7 +97,7 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         }
 
         /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
         public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat1()
@@ -114,7 +114,7 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         }
 
         /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
         public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat2()
@@ -131,7 +131,7 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         }
 
         /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
         public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat3()
@@ -148,7 +148,7 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
         }
 
         /// <summary>
-        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e bemeneti e-mail cím /Regulax Expression/
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
         /// </summary>
         [TestMethod()]
         public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat4()
@@ -158,6 +158,57 @@ namespace virtual_receptionist.Controllers.Validation.ValidationTests
                 EmailValidation validation = new EmailValidation("teszt...................@teszt.com");
                 validation.ValidateEmail();
                 Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat5()
+        {
+            try
+            {
+                EmailValidation validation = new EmailValidation("juhasz_bence_zsolt:@teszt.hu.com");
+                validation.ValidateEmail();
+                Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateEmailTest_InCaseEmailIsNotValidEmailFormat6()
+        {
+            try
+            {
+                EmailValidation validation = new EmailValidation("juhasz:bence:zsolt@gmail.com");
+                validation.ValidateEmail();
+                Assert.Fail("Nem dob kivételt rossz e-mail cím formátumra");
+            }
+            catch (InvalidEmailAddressException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, érvényes e-mail cím formátum-e a bemeneti e-mail cím /Regulax Expression/
+        /// </summary>
+        [TestMethod()]
+        public void ValidateEmailTest_InCaseEmailIsValidEmailFormat()
+        {
+            try
+            {
+                EmailValidation validation = new EmailValidation("juhasz.bence.zsolt@gmail.com");
+                validation.ValidateEmail();
+                Assert.Fail("Kivételt dob amikor nem kéne!");
             }
             catch (InvalidEmailAddressException)
             {

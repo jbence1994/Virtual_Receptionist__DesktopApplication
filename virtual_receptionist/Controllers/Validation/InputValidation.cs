@@ -149,7 +149,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             bool valid = false;
 
-            Regex validEmail = new Regex(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$");
+            Regex validEmail = new Regex(@"");
 
             if (validEmail.IsMatch(input))
             {
