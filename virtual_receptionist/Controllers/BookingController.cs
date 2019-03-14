@@ -130,7 +130,7 @@ namespace virtual_receptionist.Controllers
 
             bool paid = Convert.ToBoolean(bookingParameters[7]);
 
-            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
+            Booking booking = new Booking(guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
             repository.Create(booking);
         }
