@@ -69,7 +69,6 @@
             this.errorProviderCity = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPhoneNumber = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderEmailAddress = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderArrivalDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderNumberOfGuests = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDepartureDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderZipCode = new System.Windows.Forms.ErrorProvider(this.components);
@@ -84,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderArrivalDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).BeginInit();
@@ -387,6 +385,7 @@
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(237, 20);
             this.dateTimePickerDepartureDate.TabIndex = 1;
+            this.dateTimePickerDepartureDate.ValueChanged += new System.EventHandler(this.dateTimePickerDepartureDate_ValueChanged);
             // 
             // dateTimePickerArrivalDate
             // 
@@ -429,11 +428,6 @@
             // 
             this.errorProviderEmailAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderEmailAddress.ContainerControl = this;
-            // 
-            // errorProviderArrivalDate
-            // 
-            this.errorProviderArrivalDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProviderArrivalDate.ContainerControl = this;
             // 
             // errorProviderNumberOfGuests
             // 
@@ -483,7 +477,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhoneNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderArrivalDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).EndInit();
@@ -532,7 +525,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderCity;
         private System.Windows.Forms.ErrorProvider errorProviderPhoneNumber;
         private System.Windows.Forms.ErrorProvider errorProviderEmailAddress;
-        private System.Windows.Forms.ErrorProvider errorProviderArrivalDate;
         private System.Windows.Forms.ErrorProvider errorProviderNumberOfGuests;
         private System.Windows.Forms.ErrorProvider errorProviderDepartureDate;
         private System.Windows.Forms.ErrorProvider errorProviderZipCode;

@@ -181,6 +181,17 @@ namespace virtual_receptionist.Views
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
             DateTime departureDate = dateTimePickerDepartureDate.Value;
 
+            try
+            {
+                bookingController.BookingDateValidator(arrivalDate, departureDate);
+            }
+            catch (InvalidBookingParameterException exception)
+            {
+                errorProviderDepartureDate.SetError(dateTimePickerDepartureDate, exception.Message);
+                DialogResult = DialogResult.None;
+                validData = false;
+            }
+
             if (validData)
             {
                 guestController.AddGuest(name);
@@ -231,6 +242,11 @@ namespace virtual_receptionist.Views
         private void textBoxCitizenship_TextChanged(object sender, EventArgs e)
         {
             errorProviderCitizenship.Clear();
+        }
+
+        private void dateTimePickerDepartureDate_ValueChanged(object sender, EventArgs e)
+        {
+            errorProviderDepartureDate.Clear();
         }
 
         #endregion

@@ -207,9 +207,15 @@ namespace virtual_receptionist.Controllers
         ///<exception cref="InvalidBookingParameterException"></exception>
         public void BookingDateValidator(DateTime arrivalDate, DateTime departureDate)
         {
+            Booking booking = new Booking()
+            {
+                ArrivalDate = arrivalDate.ToString(),
+                DepartureDate = departureDate.ToString()
+            };
+
             try
             {
-                BookingValidation bookingValidation = new BookingValidation();
+                BookingValidation bookingValidation = new BookingValidation(booking);
                 bookingValidation.ValidateBooking();
             }
             catch (InvalidBookingParameterException e)
