@@ -49,13 +49,21 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            bool validData = true;
+
             /*
              * Vendégadatok validálása
              */
 
-            bool validData = true;
-
             string name = textBoxGuestName.Text;
+            string documentNumber = textBoxDocumentNumber.Text;
+            string citizenship = textBoxCitizenship.Text;
+            string birthDate = textBoxBirthDate.Text;
+            string zipCode = textBoxZipCode.Text;
+            string city = textBoxCity.Text;
+            string address = textBoxAddress.Text;
+            string phoneNumber = textBoxPhoneNumber.Text;
+            string email = textBoxEmailAddress.Text;
 
             try
             {
@@ -68,8 +76,6 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            string documentNumber = textBoxDocumentNumber.Text;
-
             try
             {
                 bookingController.DocumentNumberValidator(documentNumber);
@@ -80,8 +86,6 @@ namespace virtual_receptionist.Views
                 errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
                 validData = false;
             }
-
-            string citizenship = textBoxCitizenship.Text;
 
             try
             {
@@ -94,8 +98,6 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            string birthDate = textBoxBirthDate.Text;
-
             try
             {
                 bookingController.BirthDateValidator(birthDate);
@@ -106,8 +108,6 @@ namespace virtual_receptionist.Views
                 errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
                 validData = false;
             }
-
-            string zipCode = textBoxZipCode.Text;
 
             try
             {
@@ -120,8 +120,6 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            string city = textBoxCity.Text;
-
             try
             {
                 bookingController.CityValidator(city);
@@ -132,8 +130,6 @@ namespace virtual_receptionist.Views
                 errorProviderCity.SetError(textBoxCity, exception.Message);
                 validData = false;
             }
-
-            string address = textBoxAddress.Text;
 
             try
             {
@@ -146,8 +142,6 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            string phoneNumber = textBoxPhoneNumber.Text;
-
             try
             {
                 bookingController.PhoneNumberValidator(phoneNumber);
@@ -158,8 +152,6 @@ namespace virtual_receptionist.Views
                 errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
                 validData = false;
             }
-
-            string email = textBoxEmailAddress.Text;
 
             try
             {
@@ -207,7 +199,8 @@ namespace virtual_receptionist.Views
 
             if (validData)
             {
-                guestController.AddGuest(name);
+                guestController.AddGuest(name, documentNumber, documentNumber, citizenship, birthDate, zipCode, city,
+                    address, phoneNumber, email);
                 bookingController.AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
             }
         }

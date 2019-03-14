@@ -112,8 +112,6 @@ namespace virtual_receptionist.Controllers
         /// <param name="bookingParameters">Foglalás paraméterei</param>
         public void AddBooking(params object[] bookingParameters)
         {
-            int id = Convert.ToInt32(bookingParameters[0]);
-
             Guest guest = new Guest()
             {
                 Name = bookingParameters[1].ToString()

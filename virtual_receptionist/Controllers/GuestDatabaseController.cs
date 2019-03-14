@@ -97,19 +97,18 @@ namespace virtual_receptionist.Controllers
         /// <param name="guestParameters">Vendég paraméterei</param>
         public void AddGuest(params object[] guestParameters)
         {
-            int id = int.Parse(guestParameters[0].ToString());
-            string name = guestParameters[1].ToString();
-            string documentNumber = guestParameters[2].ToString();
-            string citizenship = guestParameters[3].ToString();
-            string birthDate = guestParameters[4].ToString();
-            string country = guestParameters[5].ToString();
-            string zipCode = guestParameters[6].ToString();
-            string city = guestParameters[7].ToString();
-            string address = guestParameters[8].ToString();
-            string phoneNumber = guestParameters[9].ToString();
-            string email = guestParameters[10].ToString();
+            string name = guestParameters[0].ToString();
+            string documentNumber = guestParameters[1].ToString();
+            string citizenship = guestParameters[2].ToString();
+            string birthDate = guestParameters[3].ToString();
+            string country = guestParameters[4].ToString();
+            string zipCode = guestParameters[5].ToString();
+            string city = guestParameters[6].ToString();
+            string address = guestParameters[7].ToString();
+            string phoneNumber = guestParameters[8].ToString();
+            string email = guestParameters[9].ToString();
 
-            Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
+            Guest guest = new Guest(name, documentNumber, citizenship, birthDate, country, zipCode, city, address,
                 phoneNumber, email);
             repository.Create(guest);
         }
