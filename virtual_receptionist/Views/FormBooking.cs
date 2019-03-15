@@ -96,6 +96,9 @@ namespace virtual_receptionist.Views
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
                 object paid = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
 
+                int row = dataGridViewBookings.SelectedRows[0].Index;
+                dataGridViewBookings.Rows.RemoveAt(row);
+
                 controller.DeleteBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
                 MessageBox.Show("A foglalás sikeresen törlésre került!", "", MessageBoxButtons.OK,
