@@ -59,6 +59,7 @@ namespace virtual_receptionist.Views
             string documentNumber = textBoxDocumentNumber.Text;
             string citizenship = textBoxCitizenship.Text;
             string birthDate = textBoxBirthDate.Text;
+            string country = comboBoxCountry.SelectedItem.ToString();
             string zipCode = textBoxZipCode.Text;
             string city = textBoxCity.Text;
             string address = textBoxAddress.Text;
@@ -199,7 +200,7 @@ namespace virtual_receptionist.Views
 
             if (validData)
             {
-                guestController.AddGuest(name, documentNumber, documentNumber, citizenship, birthDate, zipCode, city,
+                guestController.AddGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
                     address, phoneNumber, email);
                 bookingController.AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
             }
