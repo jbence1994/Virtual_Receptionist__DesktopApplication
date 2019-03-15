@@ -175,7 +175,7 @@ namespace virtual_receptionist.Models.Data
         {
             bookings.Clear();
             UploadBookingsList();
-            
+
             List<Booking> bookingsByArrivalDate = new List<Booking>();
 
             foreach (Booking booking in bookings)
