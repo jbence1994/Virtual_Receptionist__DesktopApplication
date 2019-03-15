@@ -186,16 +186,16 @@ namespace virtual_receptionist.Controllers
 
             Room room = new Room()
             {
-                Number = Convert.ToInt32(bookingParameters[3])
+                Number = Convert.ToInt32(bookingParameters[2])
             };
 
-            int numberOfGuests = Convert.ToInt32(bookingParameters[4]);
+            int numberOfGuests = Convert.ToInt32(bookingParameters[3]);
 
-            string arrivalDate = Convert.ToDateTime(bookingParameters[5]).ToString("yyyy-MM-dd");
+            string arrivalDate = Convert.ToDateTime(bookingParameters[4]).ToString("yyyy-MM-dd");
 
-            string departureDate = Convert.ToDateTime(bookingParameters[6]).ToString("yyyy-MM-dd");
+            string departureDate = Convert.ToDateTime(bookingParameters[5]).ToString("yyyy-MM-dd");
 
-            bool paid = Convert.ToBoolean(bookingParameters[7]);
+            bool paid = Convert.ToBoolean(bookingParameters[6]);
 
             Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
 
