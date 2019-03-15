@@ -70,6 +70,26 @@
         /// <summary>
         /// Booking osztály konstruktora
         /// </summary>
+        /// <param name="id">Foglalás azonosító</param>
+        /// <param name="guest">Guest egyed</param>
+        /// <param name="room">Room egyed</param>
+        /// <param name="numberOfGuests">Vendégek száma</param>
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <param name="departureDate">Távozás dátuma</param>
+        public Booking(int id, Guest guest, Room room, int numberOfGuests, string arrivalDate,
+            string departureDate)
+        {
+            this.id = id;
+            this.guest = guest;
+            this.room = room;
+            this.numberOfGuests = numberOfGuests;
+            this.arrivalDate = arrivalDate;
+            this.departureDate = departureDate;
+        }
+
+        /// <summary>
+        /// Booking osztály konstruktora
+        /// </summary>
         /// <param name="guest">Guest egyed</param>
         /// <param name="room">Room egyed</param>
         /// <param name="numberOfGuests">Vendégek száma</param>

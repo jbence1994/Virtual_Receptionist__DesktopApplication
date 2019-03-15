@@ -159,14 +159,7 @@ namespace virtual_receptionist.Controllers
 
             string departureDate = Convert.ToDateTime(bookingParameters[5].ToString()).ToString("yyyy-MM-dd");
 
-            bool paid = false;
-
-            if (bookingParameters[6].ToString() == "Igen")
-            {
-                paid = true;
-            }
-
-            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
             repository.Delete(booking);
         }
@@ -195,9 +188,7 @@ namespace virtual_receptionist.Controllers
 
             string departureDate = Convert.ToDateTime(bookingParameters[5]).ToString("yyyy-MM-dd");
 
-            bool paid = Convert.ToBoolean(bookingParameters[6]);
-
-            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
+            Booking booking = new Booking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
             repository.Update(booking);
         }

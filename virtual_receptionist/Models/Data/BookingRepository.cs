@@ -158,7 +158,7 @@ namespace virtual_receptionist.Models.Data
         public void Update(Booking booking)
         {
             string sql =
-                $"UPDATE room SET booking.GuestID = (SELECT guest.Name FROM guest WHERE guest.Name = \"{booking.Guest.Name}\"), booking.RoomID = (SELECT room.Name FROM room WHERE room.ID = \"{booking.Room.Name}\"), NumberOfGuests = \"{booking.NumberOfGuests}\", ArrivalDate = \"{booking.ArrivalDate}\", DepartureDate = \"{booking.DepartureDate}\", \"{booking.Paid}\" WHERE booking.ID = \"{booking.ID}\"";
+                $"UPDATE booking SET booking.GuestID = (SELECT guest.Name FROM guest WHERE guest.Name = \"{booking.Guest.Name}\"), booking.RoomID = (SELECT room.Name FROM room WHERE room.ID = \"{booking.Room.Name}\"), NumberOfGuests = \"{booking.NumberOfGuests}\", ArrivalDate = \"{booking.ArrivalDate}\", DepartureDate = \"{booking.DepartureDate}\" WHERE booking.ID = \"{booking.ID}\"";
             database.DML(sql);
         }
 
