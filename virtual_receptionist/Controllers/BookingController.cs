@@ -242,9 +242,9 @@ namespace virtual_receptionist.Controllers
                 BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(booking, room);
                 bookingCapacityValidation.ValidateBookingCapacity();
             }
-            catch (InvalidBookingParameterException e)
+            catch (InvalidBookingParameterException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 

@@ -51,13 +51,13 @@ namespace virtual_receptionist.Controllers
 
                 return false;
             }
-            catch (FailedLoginException)
+            catch (FailedLoginException exception)
             {
-                throw new FailedLoginException();
+                throw exception;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                throw new Exception();
+                throw exception;
             }
         }
 

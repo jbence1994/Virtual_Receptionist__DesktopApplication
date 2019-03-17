@@ -88,9 +88,9 @@ namespace virtual_receptionist.Models.Data
 
                 throw new FailedLoginException();
             }
-            catch (InvalidConnectionTypeException)
+            catch (InvalidConnectionTypeException exception)
             {
-                throw new InvalidConnectionTypeException();
+                throw exception;
             }
         }
 

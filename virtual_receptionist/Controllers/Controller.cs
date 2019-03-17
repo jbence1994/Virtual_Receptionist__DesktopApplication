@@ -97,9 +97,9 @@ namespace virtual_receptionist.Controllers
                 NameValidation nameValidation = new NameValidation(name);
                 nameValidation.ValidateName();
             }
-            catch (InvalidNameException e)
+            catch (InvalidNameException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -115,9 +115,9 @@ namespace virtual_receptionist.Controllers
                 DocumentNumberValidation documentNumberValidation = new DocumentNumberValidation(documentNumber);
                 documentNumberValidation.ValidateDocumentNumber();
             }
-            catch (InvalidDocumentNumberException e)
+            catch (InvalidDocumentNumberException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -133,9 +133,9 @@ namespace virtual_receptionist.Controllers
                 CitizenshipValidation citizenshipValidation = new CitizenshipValidation(citizenship);
                 citizenshipValidation.ValidateCitizenship();
             }
-            catch (InvalidCitizenshipException e)
+            catch (InvalidCitizenshipException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -151,9 +151,9 @@ namespace virtual_receptionist.Controllers
                 BirthDateValidation birthDateValidation = new BirthDateValidation(birthDate);
                 birthDateValidation.ValidateBirthDate();
             }
-            catch (InvalidBirthDateException e)
+            catch (InvalidBirthDateException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -169,9 +169,9 @@ namespace virtual_receptionist.Controllers
                 ZipCodeValidation zipCodeValidation = new ZipCodeValidation(zipCode);
                 zipCodeValidation.ValidateZipCode();
             }
-            catch (InvalidZipCodeException e)
+            catch (InvalidZipCodeException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -187,9 +187,9 @@ namespace virtual_receptionist.Controllers
                 CityValidation cityValidation = new CityValidation(city);
                 cityValidation.ValidateCity();
             }
-            catch (InvalidCityException e)
+            catch (InvalidCityException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -205,9 +205,9 @@ namespace virtual_receptionist.Controllers
                 AddressValidation addressValidation = new AddressValidation(address);
                 addressValidation.ValidateAddress();
             }
-            catch (InvalidAddressException e)
+            catch (InvalidAddressException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -223,9 +223,9 @@ namespace virtual_receptionist.Controllers
                 PhoneNumberValidation phoneNumberValidation = new PhoneNumberValidation(phoneNumber);
                 phoneNumberValidation.ValidatePhoneNumber();
             }
-            catch (InvalidPhoneNumberException e)
+            catch (InvalidPhoneNumberException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -241,9 +241,9 @@ namespace virtual_receptionist.Controllers
                 EmailValidation emailValidation = new EmailValidation(email);
                 emailValidation.ValidateEmail();
             }
-            catch (InvalidEmailAddressException e)
+            catch (InvalidEmailAddressException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 
@@ -259,9 +259,9 @@ namespace virtual_receptionist.Controllers
                 VATNumberValidation vatNumberValidation = new VATNumberValidation(vatNumber);
                 vatNumberValidation.ValidateVATNumber();
             }
-            catch (InvalidVATNumberException e)
+            catch (InvalidVATNumberException exception)
             {
-                throw e;
+                throw exception;
             }
         }
 

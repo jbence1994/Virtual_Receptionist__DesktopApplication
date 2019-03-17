@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -80,6 +81,8 @@
     <Compile Include="Models\Data\BillingRepository.cs" />
     <Compile Include="Models\Data\BookingRepository.cs" />
     <Compile Include="Models\Data\GuestRepository.cs" />
+    <Compile Include="MySQL_Interface\Database.cs" />
+    <Compile Include="MySQL_Interface\InvalidConnectionTypeException.cs" />
     <Compile Include="Views\FormBookingManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MySQL_Interface\MySQL_Interface.csproj">
-      <Project>{b0c07358-6f11-42e0-ae02-196ca3687de0}</Project>
-      <Name>MySQL_Interface</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

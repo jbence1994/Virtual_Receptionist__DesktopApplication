@@ -46,9 +46,9 @@ namespace virtual_receptionist.Views
 
             try
             {
-                bool login = controller.EnterApplication(accomodationID, password, connectionType);
+                bool validLogin = controller.EnterApplication(accomodationID, password, connectionType);
 
-                if (login)
+                if (validLogin)
                 {
                     Hide();
                     FormMainMenu formMainMenu = new FormMainMenu(this);
