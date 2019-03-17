@@ -10,7 +10,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konstuktor
 
         /// <summary>
-        /// Születési dátum kivétel
+        /// Születési dátum kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
         public InvalidBirthDateException(string message) : base(message)

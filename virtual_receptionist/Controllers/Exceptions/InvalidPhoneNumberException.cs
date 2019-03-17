@@ -10,7 +10,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konstruktor
 
         /// <summary>
-        /// Telefonszám kivétel konstruktor
+        /// Telefonszám kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
         public InvalidPhoneNumberException(string message) : base(message)

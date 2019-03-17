@@ -10,7 +10,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konstruktor
 
         /// <summary>
-        /// Település kivétel
+        /// Település kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
         public InvalidCityException(string message) : base(message)

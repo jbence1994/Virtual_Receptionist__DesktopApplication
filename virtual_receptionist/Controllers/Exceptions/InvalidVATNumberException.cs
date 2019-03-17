@@ -9,7 +9,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konstruktor
 
         /// <summary>
-        /// Adószám kivétel
+        /// Adószám kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
         public InvalidVATNumberException(string message) : base(message)

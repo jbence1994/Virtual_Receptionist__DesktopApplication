@@ -10,7 +10,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konstruktor
 
         /// <summary>
-        /// Okmányazonosító kivétel konstruktor
+        /// Okmányazonosító kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
         public InvalidDocumentNumberException(string message) : base(message)

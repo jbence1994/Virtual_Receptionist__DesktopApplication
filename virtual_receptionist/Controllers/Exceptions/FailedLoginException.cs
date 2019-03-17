@@ -10,7 +10,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konstruktor
 
         /// <summary>
-        /// Bejelentkezés kivétel
+        /// Bejelentkezés kivétel konstruktora
         /// </summary>
         public FailedLoginException() : base("Sikertelen bejelentkezés!\nHibás szálláshely azonosító vagy jelszó!")
         {

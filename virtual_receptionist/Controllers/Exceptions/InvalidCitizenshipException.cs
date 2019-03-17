@@ -10,7 +10,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         #region Konsturktor
 
         /// <summary>
-        /// Állampolgárság kivétel konstruktor
+        /// Állampolgárság kivétel konstruktora
         /// </summary>
         /// <param name="message">Kivétel szövege</param>
         public InvalidCitizenshipException(string message) : base(message)
