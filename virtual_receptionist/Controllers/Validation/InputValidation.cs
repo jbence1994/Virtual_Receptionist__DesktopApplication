@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 namespace virtual_receptionist.Controllers.Validation
 {
     /// <summary>
-    /// Inputot ellenőrző függvénygyűjtemény osztálya
+    /// Felhasználó input ellenőrző függvénykönyvtár
     /// </summary>
     public static class InputValidation
     {
