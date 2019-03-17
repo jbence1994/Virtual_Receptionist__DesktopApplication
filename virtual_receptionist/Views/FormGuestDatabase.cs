@@ -330,7 +330,9 @@ namespace virtual_receptionist.Views
         {
             if (listViewGuest.SelectedItems.Count > 0)
             {
-                DialogResult delete = MessageBox.Show("Biztosan törli a kijelölt vendéget?", "",
+                DialogResult delete = MessageBox.Show(
+                    "Biztosan törli a kijelölt vendéget?\nA művelettel a vendéghez tartozó foglalások adatai is törlődnek az adatbázisból és a művelet nem vonható vissza!",
+                    "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (delete == DialogResult.Yes)
