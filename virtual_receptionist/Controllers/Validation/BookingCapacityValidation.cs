@@ -28,6 +28,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Foglalás vendégszámát és szoba kapacitását ellenőrző osztály konstruktora
         /// </summary>
         /// <param name="booking">Foglalás egyed</param>
+		/// <param name="room">Szoba egyed</param>
         public BookingCapacityValidation(Booking booking, Room room)
         {
             this.booking = booking;
