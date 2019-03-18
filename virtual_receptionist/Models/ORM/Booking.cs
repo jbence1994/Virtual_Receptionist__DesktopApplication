@@ -55,6 +55,7 @@
         /// <param name="numberOfGuests">Vendégek száma</param>
         /// <param name="arrivalDate">Érkezés dátuma</param>
         /// <param name="departureDate">Távozás dátuma</param>
+        /// <param name="paid">Foglalás fizetve van-e</param>
         public Booking(int id, Guest guest, Room room, int numberOfGuests, string arrivalDate,
             string departureDate, bool paid)
         {
