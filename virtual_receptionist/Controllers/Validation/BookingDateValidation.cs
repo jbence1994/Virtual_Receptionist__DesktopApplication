@@ -11,7 +11,7 @@ namespace virtual_receptionist.Controllers.Validation
         #region Adattagok
 
         /// <summary>
-        /// Fogolalás egyed egy példánya
+        /// Foglalás egyed egy példánya
         /// </summary>
         private readonly Booking booking;
         
