@@ -4,7 +4,7 @@ using virtual_receptionist.Models.ORM;
 namespace virtual_receptionist.Controllers.Validation
 {
     /// <summary>
-    /// Foglalás érkezési és tábozási idejét ellenőrző osztály
+    /// Foglalás érkezési és távozási idejét ellenőrző osztály
     /// </summary>
     public class BookingDateValidation
     {
@@ -20,7 +20,7 @@ namespace virtual_receptionist.Controllers.Validation
         #region Konstruktor
 
         /// <summary>
-        /// Foglalás érkezési és tábozási idejét ellenőrző osztály konstruktora
+        /// Foglalás érkezési és távozási idejét ellenőrző osztály konstruktora
         /// </summary>
         /// <param name="booking">Foglalás egyed</param>
         public BookingDateValidation(Booking booking)
@@ -33,7 +33,7 @@ namespace virtual_receptionist.Controllers.Validation
         #region Metódusok
 
         /// <summary>
-        /// Foglalás érkezési és tábozási idejét ellenőrző metódus
+        /// Foglalás érkezési és távozási idejét ellenőrző metódus
         /// </summary>
         /// <exception cref="InvalidBookingParameterException"></exception>
         public void ValidateBookingDate()
