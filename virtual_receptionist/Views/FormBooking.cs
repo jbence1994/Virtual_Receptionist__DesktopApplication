@@ -88,7 +88,8 @@ namespace virtual_receptionist.Views
                     dataGridViewBookings.SelectedRows[0].Cells[4].Value = booking[4];
                     dataGridViewBookings.SelectedRows[0].Cells[5].Value = booking[5];
 
-                    MessageBox.Show("A foglalás sikeresen módosult!");
+                    MessageBox.Show("A foglalás sikeresen módosult!", "", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
             }
             else
