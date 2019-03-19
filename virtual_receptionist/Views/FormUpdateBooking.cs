@@ -118,8 +118,8 @@ namespace virtual_receptionist.Views
                 booking[1] = textBoxGuestName.Text;
                 booking[2] = comboBoxRoom.SelectedItem;
                 booking[3] = numericUpDownNumberOfGuests.Value;
-                booking[4] = arrivalDate;
-                booking[5] = departureDate;
+                booking[4] = arrivalDate.ToString("yyyy-MM-dd");
+                booking[5] = departureDate.ToString("yyyy-MM-dd");
 
                 bookingController.UpdateBooking(booking);
             }
