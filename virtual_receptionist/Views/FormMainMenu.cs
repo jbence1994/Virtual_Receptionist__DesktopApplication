@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
 
@@ -21,6 +22,11 @@ namespace virtual_receptionist.Views
         /// </summary>
         private FormLogin formLogin;
 
+        /// <summary>
+        /// Alkalmazás futási mappája
+        /// </summary>
+        private static string debugFolder;
+
         #endregion
 
         #region Konstruktor
@@ -33,6 +39,7 @@ namespace virtual_receptionist.Views
             InitializeComponent();
             this.formLogin = formLogin;
             controller = new MainMenuController();
+            debugFolder = Directory.GetCurrentDirectory();
         }
 
         #endregion
@@ -72,7 +79,15 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
         {
-            controller.OpenCHM();
+            if (debugFolder == Directory.GetCurrentDirectory())
+            {
+                Directory.SetCurrentDirectory(@"..\..\Help\");
+                Help.ShowHelp(this, "virtual_receptionist_help.chm");
+            }
+            else
+            {
+                Help.ShowHelp(this, "virtual_receptionist_help.chm");
+            }
         }
 
         private void toolStripMenuItemAbout_Click(object sender, EventArgs e)

@@ -51,14 +51,6 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// Metódus, amely megnyitja a beépített CHM-súgót
-        /// </summary>
-        public void OpenCHM()
-        {
-            // Help.ShowHelp(formMainMenu, "CHM_path");
-        }
-
-        /// <summary>
         /// Metódus, amely visszaadja a szálláshely adatait az adattárból egy tömbben
         /// </summary>
         /// <returns>A feltöltött sztring tömböt adja vissza a függvény</returns>
