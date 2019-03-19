@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
-using System.Data;
 
 namespace virtual_receptionist.Views
 {
@@ -69,13 +68,15 @@ namespace virtual_receptionist.Views
             booking[3] = numericUpDownNumberOfGuests.Value;
             booking[4] = dateTimePickerArrivalDate.Value.ToShortDateString();
             booking[5] = dateTimePickerDepartureDate.Value.ToShortDateString();
+
+            controller.UpdateBooking(booking);
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public object[] Booking //Controller
+        public object[] Booking //Controller!!!!!!!!!!!!!!!!!
         {
             get { return booking; }
         }

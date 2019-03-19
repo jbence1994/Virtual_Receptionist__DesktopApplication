@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
 
@@ -88,8 +87,6 @@ namespace virtual_receptionist.Views
                     dataGridViewBookings.SelectedRows[0].Cells[3].Value = booking[3];
                     dataGridViewBookings.SelectedRows[0].Cells[4].Value = booking[4];
                     dataGridViewBookings.SelectedRows[0].Cells[5].Value = booking[5];
-
-                    controller.UpdateBooking(booking);
 
                     MessageBox.Show("A foglalás sikeresen módosult!");
                 }
