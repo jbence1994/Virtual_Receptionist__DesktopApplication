@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUpdateBooking));
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -44,8 +45,14 @@
             this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
             this.labelBookingID = new System.Windows.Forms.Label();
             this.textBoxBookingID = new System.Windows.Forms.TextBox();
+            this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDepartureDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderNumberOfGuests = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxBookingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -199,6 +206,21 @@
             this.textBoxBookingID.Size = new System.Drawing.Size(237, 20);
             this.textBoxBookingID.TabIndex = 15;
             // 
+            // errorProviderName
+            // 
+            this.errorProviderName.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderName.ContainerControl = this;
+            // 
+            // errorProviderDepartureDate
+            // 
+            this.errorProviderDepartureDate.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderDepartureDate.ContainerControl = this;
+            // 
+            // errorProviderNumberOfGuests
+            // 
+            this.errorProviderNumberOfGuests.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderNumberOfGuests.ContainerControl = this;
+            // 
             // FormUpdateBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +239,9 @@
             this.groupBoxBookingData.ResumeLayout(false);
             this.groupBoxBookingData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,5 +263,8 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxBookingID;
         private System.Windows.Forms.Label labelBookingID;
+        private System.Windows.Forms.ErrorProvider errorProviderName;
+        private System.Windows.Forms.ErrorProvider errorProviderDepartureDate;
+        private System.Windows.Forms.ErrorProvider errorProviderNumberOfGuests;
     }
 }

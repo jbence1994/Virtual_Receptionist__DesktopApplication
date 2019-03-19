@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -62,14 +63,66 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            booking[0] = Convert.ToInt32(textBoxBookingID.Text);
-            booking[1] = textBoxGuestName.Text;
-            booking[2] = comboBoxRoom.SelectedItem;
-            booking[3] = numericUpDownNumberOfGuests.Value;
-            booking[4] = dateTimePickerArrivalDate.Value.ToString("yyyy-MM-dd");
-            booking[5] = dateTimePickerDepartureDate.Value.ToString("yyyy-MM-dd");
+            bool validData = true;
 
-            bookingController.UpdateBooking(booking);
+            /*
+             * Foglalásadatok validálása
+             */
+
+            string id = textBoxBookingID.Text;
+            string name = textBoxGuestName.Text;
+            int roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
+            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
+            DateTime departureDate = dateTimePickerDepartureDate.Value;
+            decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
+
+            try
+            {
+                bookingController.NameValidator(name);
+            }
+            catch (InvalidNameException exception)
+            {
+                errorProviderName.Clear();
+                DialogResult = DialogResult.None;
+                errorProviderName.SetError(textBoxGuestName, exception.Message);
+                validData = false;
+            }
+
+            try
+            {
+                errorProviderDepartureDate.Clear();
+                bookingController.BookingDateValidator(arrivalDate, departureDate);
+            }
+            catch (InvalidBookingParameterException exception)
+            {
+                errorProviderDepartureDate.SetError(dateTimePickerDepartureDate, exception.Message);
+                DialogResult = DialogResult.None;
+                validData = false;
+            }
+
+            try
+            {
+                errorProviderNumberOfGuests.Clear();
+                bookingController.BookingCapacityValidator(numberOfGuests, roomNumber);
+            }
+            catch (InvalidBookingParameterException exception)
+            {
+                errorProviderNumberOfGuests.SetError(numericUpDownNumberOfGuests, exception.Message);
+                DialogResult = DialogResult.None;
+                validData = false;
+            }
+
+            if (validData)
+            {
+                booking[0] = Convert.ToInt32(id);
+                booking[1] = textBoxGuestName.Text;
+                booking[2] = comboBoxRoom.SelectedItem;
+                booking[3] = numericUpDownNumberOfGuests.Value;
+                booking[4] = arrivalDate;
+                booking[5] = departureDate;
+
+                bookingController.UpdateBooking(booking);
+            }
         }
 
         /// <summary>
