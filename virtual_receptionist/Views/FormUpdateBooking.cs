@@ -78,11 +78,11 @@ namespace virtual_receptionist.Views
 
             try
             {
+                errorProviderName.Clear();
                 bookingController.NameValidator(name);
             }
             catch (InvalidNameException exception)
             {
-                errorProviderName.Clear();
                 DialogResult = DialogResult.None;
                 errorProviderName.SetError(textBoxGuestName, exception.Message);
                 validData = false;
