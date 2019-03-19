@@ -1,6 +1,6 @@
 ﻿namespace virtual_receptionist.Views
 {
-    partial class FormBookingManager
+    partial class FormAddBooking
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBookingManager));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddBooking));
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxGuestName = new System.Windows.Forms.TextBox();
@@ -460,7 +460,7 @@
             this.errorProviderAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderAddress.ContainerControl = this;
             // 
-            // FormBookingManager
+            // FormAddBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -472,9 +472,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FormBookingManager";
+            this.Name = "FormAddBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Foglalás kezelése | Virtual Receptionist";
+            this.Text = "Új foglalás felvitel | Virtual Receptionist";
             this.Load += new System.EventHandler(this.FormBookingManager_Load);
             this.groupBoxGuestData.ResumeLayout(false);
             this.groupBoxGuestData.PerformLayout();

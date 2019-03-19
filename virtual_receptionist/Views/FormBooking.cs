@@ -53,9 +53,9 @@ namespace virtual_receptionist.Views
 
         private void buttonNewBooking_Click(object sender, EventArgs e)
         {
-            FormBookingManager formBookingManager = new FormBookingManager();
+            FormAddBooking formAddBooking = new FormAddBooking();
 
-            if (formBookingManager.ShowDialog() == DialogResult.OK)
+            if (formAddBooking.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show("Foglalás sikeresen rögzítésre került!", "", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -73,6 +73,13 @@ namespace virtual_receptionist.Views
                 object arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
                 object paid = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
+
+                FormUpdateBooking formUpdateBooking = new FormUpdateBooking();
+
+                if (formUpdateBooking.ShowDialog() == DialogResult.OK)
+                {
+
+                }
 
                 controller.UpdateBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
             }

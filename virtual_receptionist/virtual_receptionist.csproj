@@ -83,11 +83,11 @@
     <Compile Include="Models\Data\GuestRepository.cs" />
     <Compile Include="MySQL_Interface\Database.cs" />
     <Compile Include="MySQL_Interface\InvalidConnectionTypeException.cs" />
-    <Compile Include="Views\FormBookingManager.cs">
+    <Compile Include="Views\FormAddBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormBookingManager.Designer.cs">
-      <DependentUpon>FormBookingManager.cs</DependentUpon>
+    <Compile Include="Views\FormAddBooking.Designer.cs">
+      <DependentUpon>FormAddBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormLogin.cs">
       <SubType>Form</SubType>
@@ -144,8 +144,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ORM\Booking.cs" />
     <Compile Include="Models\ORM\Room.cs" />
-    <EmbeddedResource Include="Views\FormBookingManager.resx">
-      <DependentUpon>FormBookingManager.cs</DependentUpon>
+    <Compile Include="Views\FormUpdateBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormUpdateBooking.Designer.cs">
+      <DependentUpon>FormUpdateBooking.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\FormAddBooking.resx">
+      <DependentUpon>FormAddBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -177,6 +183,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\FormUpdateBooking.resx">
+      <DependentUpon>FormUpdateBooking.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

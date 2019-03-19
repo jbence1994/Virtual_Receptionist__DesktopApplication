@@ -6,9 +6,9 @@ using virtual_receptionist.Controllers.Exceptions;
 namespace virtual_receptionist.Views
 {
     /// <summary>
-    /// Foglalási napló foglalás felvitelét vagy mdosítását segítő ablak
+    /// Foglalási napló foglalásfelvétel modális ablak
     /// </summary>
-    public partial class FormBookingManager : Form
+    public partial class FormAddBooking : Form
     {
         #region Adattagok
 
@@ -27,9 +27,9 @@ namespace virtual_receptionist.Views
         #region Konstruktor
 
         /// <summary>
-        /// Foglalási napló foglalás felvitelét vagy mdosítását segítő ablak konstruktora
+        /// Foglalási napló foglalásfelvétel modális ablak konstruktora
         /// </summary>
-        public FormBookingManager()
+        public FormAddBooking()
         {
             InitializeComponent();
             bookingController = new BookingController();

@@ -30,7 +30,6 @@ namespace virtual_receptionist.Controllers
 
         #endregion
 
-
         #region Metódusok
 
         /// <summary>
