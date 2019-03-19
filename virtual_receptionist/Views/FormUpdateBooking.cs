@@ -45,11 +45,11 @@ namespace virtual_receptionist.Views
             this.booking = booking;
             textBoxBookingID.Text = booking[0].ToString();
             textBoxGuestName.Text = booking[1].ToString();
-            dateTimePickerArrivalDate.Value = Convert.ToDateTime(booking[2]);
-            dateTimePickerDepartureDate.Value = Convert.ToDateTime(booking[3]);
+            dateTimePickerArrivalDate.Value = Convert.ToDateTime(booking[4]);
+            dateTimePickerDepartureDate.Value = Convert.ToDateTime(booking[5]);
             comboBoxRoom.DataSource = bookingController.GetRooms();
-            comboBoxRoom.SelectedItem = Convert.ToInt32(booking[4]);
-            numericUpDownNumberOfGuests.Value = Convert.ToDecimal(booking[5]);
+            comboBoxRoom.SelectedItem = Convert.ToInt32(booking[2]);
+            numericUpDownNumberOfGuests.Value = Convert.ToDecimal(booking[3]);
         }
 
         #endregion
@@ -65,10 +65,10 @@ namespace virtual_receptionist.Views
         {
             booking[0] = Convert.ToInt32(textBoxBookingID.Text);
             booking[1] = textBoxGuestName.Text;
-            booking[2] = dateTimePickerArrivalDate.Value;
-            booking[3] = dateTimePickerDepartureDate.Value;
-            booking[4] = comboBoxRoom.SelectedItem;
-            booking[5] = numericUpDownNumberOfGuests.Value;
+            booking[2] = comboBoxRoom.SelectedItem;
+            booking[3] = numericUpDownNumberOfGuests.Value;
+            booking[4] = dateTimePickerArrivalDate.Value.ToShortDateString();
+            booking[5] = dateTimePickerDepartureDate.Value.ToShortDateString();
         }
 
         /// <summary>

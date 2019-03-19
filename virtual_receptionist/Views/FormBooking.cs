@@ -76,26 +76,20 @@ namespace virtual_receptionist.Views
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
 
                 FormUpdateBooking formUpdateBooking =
-                    new FormUpdateBooking(id, guest, arrivalDate, departureDate, room, numberOfGuests);
+                    new FormUpdateBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
                 if (formUpdateBooking.ShowDialog() == DialogResult.OK)
                 {
                     object[] booking = formUpdateBooking.Booking;
 
-                    DataRow record;
+                    dataGridViewBookings.SelectedRows[0].Cells[0].Value = booking[0];
+                    dataGridViewBookings.SelectedRows[0].Cells[1].Value = booking[1];
+                    dataGridViewBookings.SelectedRows[0].Cells[2].Value = booking[2];
+                    dataGridViewBookings.SelectedRows[0].Cells[3].Value = booking[3];
+                    dataGridViewBookings.SelectedRows[0].Cells[4].Value = booking[4];
+                    dataGridViewBookings.SelectedRows[0].Cells[5].Value = booking[5];
 
-                    record[0] = booking[0];
-                    record[1] = booking[1];
-                    record[2] = booking[2];
-                    record[3] = booking[3];
-                    record[4] =booking[4];
-                    booking[5];
-
-                    Rows.Add(record);
-
-                    dataGridViewBookings.DataSource = ;
-
-                    controller.Create(booking);
+                    controller.UpdateBooking(booking);
 
                     MessageBox.Show("A foglalás sikeresen módosult!");
                 }
