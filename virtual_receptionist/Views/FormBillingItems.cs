@@ -71,8 +71,6 @@ namespace virtual_receptionist.Views
             double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
             int quantity = Convert.ToInt32(textBoxQuantity.Text);
-
-            controller.SetBillingItemParameters(item, price, unit, quantity);
         }
 
         #endregion
