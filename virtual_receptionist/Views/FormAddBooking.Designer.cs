@@ -320,9 +320,9 @@
             this.groupBoxBookingData.Controls.Add(this.labelArrivalDate);
             this.groupBoxBookingData.Controls.Add(this.dateTimePickerDepartureDate);
             this.groupBoxBookingData.Controls.Add(this.dateTimePickerArrivalDate);
-            this.groupBoxBookingData.Location = new System.Drawing.Point(13, 311);
+            this.groupBoxBookingData.Location = new System.Drawing.Point(12, 311);
             this.groupBoxBookingData.Name = "groupBoxBookingData";
-            this.groupBoxBookingData.Size = new System.Drawing.Size(459, 158);
+            this.groupBoxBookingData.Size = new System.Drawing.Size(460, 158);
             this.groupBoxBookingData.TabIndex = 0;
             this.groupBoxBookingData.TabStop = false;
             this.groupBoxBookingData.Text = "Foglalás adatok";

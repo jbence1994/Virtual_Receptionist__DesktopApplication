@@ -72,16 +72,18 @@ namespace virtual_receptionist.Views
                 object numberOfGuests = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
                 object arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
                 object departureDate = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
-                object paid = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
 
-                FormUpdateBooking formUpdateBooking = new FormUpdateBooking();
+                FormUpdateBooking formUpdateBooking =
+                    new FormUpdateBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
 
                 if (formUpdateBooking.ShowDialog() == DialogResult.OK)
                 {
+                    MessageBox.Show("A foglalás sikeresen módosult!");
 
+                    int row = dataGridViewBookings.SelectedRows[0].Index;
+                    dataGridViewBookings.Rows.RemoveAt(row);
+                    dataGridViewBookings.Rows.Add(formUpdateBooking.GetUpdatedRow());
                 }
-
-                controller.UpdateBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
             }
             else
             {

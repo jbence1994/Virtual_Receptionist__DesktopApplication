@@ -32,6 +32,7 @@ namespace virtual_receptionist.Views
         public FormAddBooking()
         {
             InitializeComponent();
+
             bookingController = new BookingController();
             guestController = new GuestDatabaseController();
         }
