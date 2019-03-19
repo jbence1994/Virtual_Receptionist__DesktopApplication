@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
+using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models.ORM;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -14,7 +15,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Foglalás egyed egy példánya
         /// </summary>
         private readonly Booking booking;
-        
+
         #endregion
 
         #region Konstruktor
@@ -38,9 +39,15 @@ namespace virtual_receptionist.Controllers.Validation
         /// <exception cref="InvalidBookingParameterException"></exception>
         public void ValidateBookingDate()
         {
-            if (booking.ArrivalDate == booking.DepartureDate)
+            if (Convert.ToDateTime(booking.ArrivalDate) == Convert.ToDateTime(booking.DepartureDate))
             {
                 throw new InvalidBookingParameterException("A távozás dátuma megegyezik az érkezés dátumával!");
+            }
+
+            if (Convert.ToDateTime(booking.DepartureDate) < Convert.ToDateTime(booking.ArrivalDate))
+            {
+                throw new InvalidBookingParameterException(
+                    "A távozás dátuma nem lehet hamarabb, mint az érkezés dátuma!");
             }
         }
 
