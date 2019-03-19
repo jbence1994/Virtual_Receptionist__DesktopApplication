@@ -32,6 +32,8 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBoxBookingData = new System.Windows.Forms.GroupBox();
+            this.textBoxGuestName = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
             this.labelNumberOfGuests = new System.Windows.Forms.Label();
             this.comboBoxRoom = new System.Windows.Forms.ComboBox();
@@ -40,8 +42,8 @@
             this.labelArrivalDate = new System.Windows.Forms.Label();
             this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
-            this.textBoxGuestName = new System.Windows.Forms.TextBox();
-            this.labelName = new System.Windows.Forms.Label();
+            this.labelBookingID = new System.Windows.Forms.Label();
+            this.textBoxBookingID = new System.Windows.Forms.TextBox();
             this.groupBoxBookingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +71,8 @@
             // 
             // groupBoxBookingData
             // 
+            this.groupBoxBookingData.Controls.Add(this.textBoxBookingID);
+            this.groupBoxBookingData.Controls.Add(this.labelBookingID);
             this.groupBoxBookingData.Controls.Add(this.textBoxGuestName);
             this.groupBoxBookingData.Controls.Add(this.labelName);
             this.groupBoxBookingData.Controls.Add(this.numericUpDownNumberOfGuests);
@@ -86,9 +90,25 @@
             this.groupBoxBookingData.TabStop = false;
             this.groupBoxBookingData.Text = "Foglalás adatok";
             // 
+            // textBoxGuestName
+            // 
+            this.textBoxGuestName.Location = new System.Drawing.Point(154, 80);
+            this.textBoxGuestName.Name = "textBoxGuestName";
+            this.textBoxGuestName.Size = new System.Drawing.Size(237, 20);
+            this.textBoxGuestName.TabIndex = 0;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(74, 83);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(74, 13);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "Vendég neve:";
+            // 
             // numericUpDownNumberOfGuests
             // 
-            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(171, 164);
+            this.numericUpDownNumberOfGuests.Location = new System.Drawing.Point(154, 185);
             this.numericUpDownNumberOfGuests.Minimum = new decimal(new int[] {
             1,
             0,
@@ -106,7 +126,7 @@
             // labelNumberOfGuests
             // 
             this.labelNumberOfGuests.AutoSize = true;
-            this.labelNumberOfGuests.Location = new System.Drawing.Point(73, 166);
+            this.labelNumberOfGuests.Location = new System.Drawing.Point(56, 187);
             this.labelNumberOfGuests.Name = "labelNumberOfGuests";
             this.labelNumberOfGuests.Size = new System.Drawing.Size(92, 13);
             this.labelNumberOfGuests.TabIndex = 0;
@@ -116,7 +136,7 @@
             // 
             this.comboBoxRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Location = new System.Drawing.Point(171, 137);
+            this.comboBoxRoom.Location = new System.Drawing.Point(154, 158);
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(237, 21);
             this.comboBoxRoom.TabIndex = 12;
@@ -124,7 +144,7 @@
             // labelRoom
             // 
             this.labelRoom.AutoSize = true;
-            this.labelRoom.Location = new System.Drawing.Point(125, 140);
+            this.labelRoom.Location = new System.Drawing.Point(108, 161);
             this.labelRoom.Name = "labelRoom";
             this.labelRoom.Size = new System.Drawing.Size(40, 13);
             this.labelRoom.TabIndex = 0;
@@ -133,7 +153,7 @@
             // labelDepartureDate
             // 
             this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Location = new System.Drawing.Point(76, 117);
+            this.labelDepartureDate.Location = new System.Drawing.Point(59, 138);
             this.labelDepartureDate.Name = "labelDepartureDate";
             this.labelDepartureDate.Size = new System.Drawing.Size(89, 13);
             this.labelDepartureDate.TabIndex = 0;
@@ -142,7 +162,7 @@
             // labelArrivalDate
             // 
             this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Location = new System.Drawing.Point(79, 91);
+            this.labelArrivalDate.Location = new System.Drawing.Point(62, 112);
             this.labelArrivalDate.Name = "labelArrivalDate";
             this.labelArrivalDate.Size = new System.Drawing.Size(86, 13);
             this.labelArrivalDate.TabIndex = 0;
@@ -150,33 +170,34 @@
             // 
             // dateTimePickerDepartureDate
             // 
-            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(171, 111);
+            this.dateTimePickerDepartureDate.Location = new System.Drawing.Point(154, 132);
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(237, 20);
             this.dateTimePickerDepartureDate.TabIndex = 11;
             // 
             // dateTimePickerArrivalDate
             // 
-            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(171, 85);
+            this.dateTimePickerArrivalDate.Location = new System.Drawing.Point(154, 106);
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(237, 20);
             this.dateTimePickerArrivalDate.TabIndex = 10;
             // 
-            // textBoxGuestName
+            // labelBookingID
             // 
-            this.textBoxGuestName.Location = new System.Drawing.Point(171, 59);
-            this.textBoxGuestName.Name = "textBoxGuestName";
-            this.textBoxGuestName.Size = new System.Drawing.Size(237, 20);
-            this.textBoxGuestName.TabIndex = 0;
+            this.labelBookingID.AutoSize = true;
+            this.labelBookingID.Location = new System.Drawing.Point(49, 57);
+            this.labelBookingID.Name = "labelBookingID";
+            this.labelBookingID.Size = new System.Drawing.Size(99, 13);
+            this.labelBookingID.TabIndex = 14;
+            this.labelBookingID.Text = "Foglalás azonosító:";
             // 
-            // labelName
+            // textBoxBookingID
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(91, 62);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(74, 13);
-            this.labelName.TabIndex = 0;
-            this.labelName.Text = "Vendég neve:";
+            this.textBoxBookingID.Location = new System.Drawing.Point(154, 54);
+            this.textBoxBookingID.Name = "textBoxBookingID";
+            this.textBoxBookingID.ReadOnly = true;
+            this.textBoxBookingID.Size = new System.Drawing.Size(237, 20);
+            this.textBoxBookingID.TabIndex = 15;
             // 
             // FormUpdateBooking
             // 
@@ -215,5 +236,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerArrivalDate;
         private System.Windows.Forms.TextBox textBoxGuestName;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.TextBox textBoxBookingID;
+        private System.Windows.Forms.Label labelBookingID;
     }
 }

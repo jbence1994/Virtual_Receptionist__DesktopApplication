@@ -23,34 +23,9 @@ namespace virtual_receptionist.Views
         private GuestDatabaseController guestController;
 
         /// <summary>
-        /// 
+        /// Foglalás adatai
         /// </summary>
-        private string id;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private string guest;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private string room;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private decimal numberOfGuests;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private DateTime arrivalDate;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private DateTime departureDate;
+        private object[] booking;
 
         #endregion
 
@@ -67,18 +42,14 @@ namespace virtual_receptionist.Views
             bookingController = new BookingController();
             guestController = new GuestDatabaseController();
 
-            id = booking[0].ToString();
-            guest = booking[1].ToString();
-            room = booking[2].ToString();
-            numberOfGuests = Convert.ToDecimal(booking[3]);
-            arrivalDate = Convert.ToDateTime(booking[4]);
-            departureDate = Convert.ToDateTime(booking[5]);
-
-            textBoxGuestName.Text = guest;
-            dateTimePickerArrivalDate.Value = arrivalDate;
-            dateTimePickerDepartureDate.Value = departureDate;
-            comboBoxRoom.SelectedItem = room;
-            numericUpDownNumberOfGuests.Value = numberOfGuests;
+            this.booking = booking;
+            textBoxBookingID.Text = booking[0].ToString();
+            textBoxGuestName.Text = booking[1].ToString();
+            dateTimePickerArrivalDate.Value = Convert.ToDateTime(booking[2]);
+            dateTimePickerDepartureDate.Value = Convert.ToDateTime(booking[3]);
+            comboBoxRoom.DataSource = bookingController.GetRooms();
+            comboBoxRoom.SelectedItem = Convert.ToInt32(booking[4]);
+            numericUpDownNumberOfGuests.Value = Convert.ToDecimal(booking[5]);
         }
 
         #endregion
@@ -87,21 +58,26 @@ namespace virtual_receptionist.Views
 
         private void FormUpdateBooking_Load(object sender, EventArgs e)
         {
-
+            textBoxGuestName.Select();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            bookingController.UpdateBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate);
+            booking[0] = Convert.ToInt32(textBoxBookingID.Text);
+            booking[1] = textBoxGuestName.Text;
+            booking[2] = dateTimePickerArrivalDate.Value;
+            booking[3] = dateTimePickerDepartureDate.Value;
+            booking[4] = comboBoxRoom.SelectedItem;
+            booking[5] = numericUpDownNumberOfGuests.Value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public DataRow GetUpdatedRow() //Controller
+        public object[] Booking //Controller
         {
-            return null;
+            get { return booking; }
         }
 
         #endregion

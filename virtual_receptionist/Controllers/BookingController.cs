@@ -53,19 +53,12 @@ namespace virtual_receptionist.Controllers
             bookingsDataTableByArrival.Columns.Add("NumberOfGuests", typeof(int));
             bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(string));
             bookingsDataTableByArrival.Columns.Add("DepartureDate", typeof(string));
-            bookingsDataTableByArrival.Columns.Add("Paid", typeof(string));
-
-            string paid = "Nem";
+            bookingsDataTableByArrival.Columns.Add("Paid", typeof(bool));
 
             foreach (Booking booking in bookingsByArrival)
             {
-                if (booking.Paid)
-                {
-                    paid = "Igen";
-                }
-
                 bookingsDataTableByArrival.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, paid);
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid);
             }
 
             return bookingsDataTableByArrival;
@@ -88,19 +81,12 @@ namespace virtual_receptionist.Controllers
             bookingsDataTableByDeparture.Columns.Add("NumberOfGuests", typeof(int));
             bookingsDataTableByDeparture.Columns.Add("ArrivalDate", typeof(string));
             bookingsDataTableByDeparture.Columns.Add("DepartureDate", typeof(string));
-            bookingsDataTableByDeparture.Columns.Add("Paid", typeof(string));
-
-            string paid = "Nem";
+            bookingsDataTableByDeparture.Columns.Add("Paid", typeof(bool));
 
             foreach (Booking booking in bookingsByDeparture)
             {
-                if (booking.Paid)
-                {
-                    paid = "Igen";
-                }
-
                 bookingsDataTableByDeparture.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, paid);
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid);
             }
 
             return bookingsDataTableByDeparture;

@@ -38,14 +38,14 @@
             this.labelDepartureDate = new System.Windows.Forms.Label();
             this.tabPageBookings = new System.Windows.Forms.TabPage();
             this.dataGridViewBookings = new System.Windows.Forms.DataGridView();
-            this.tabControlBooking = new System.Windows.Forms.TabControl();
             this.columnBookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnGuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnsRoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnArrivalDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnsDepartureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPaid = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tabControlBooking = new System.Windows.Forms.TabControl();
             this.tabPageBookings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookings)).BeginInit();
             this.tabControlBooking.SuspendLayout();
@@ -174,18 +174,6 @@
             this.dataGridViewBookings.Size = new System.Drawing.Size(1079, 532);
             this.dataGridViewBookings.TabIndex = 8;
             // 
-            // tabControlBooking
-            // 
-            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlBooking.Controls.Add(this.tabPageBookings);
-            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
-            this.tabControlBooking.Name = "tabControlBooking";
-            this.tabControlBooking.SelectedIndex = 0;
-            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
-            this.tabControlBooking.TabIndex = 8;
-            // 
             // columnBookingID
             // 
             this.columnBookingID.DataPropertyName = "ID";
@@ -234,6 +222,20 @@
             this.ColumnPaid.HeaderText = "Számlázott?";
             this.ColumnPaid.Name = "ColumnPaid";
             this.ColumnPaid.ReadOnly = true;
+            this.ColumnPaid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnPaid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // tabControlBooking
+            // 
+            this.tabControlBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlBooking.Controls.Add(this.tabPageBookings);
+            this.tabControlBooking.Location = new System.Drawing.Point(12, 12);
+            this.tabControlBooking.Name = "tabControlBooking";
+            this.tabControlBooking.SelectedIndex = 0;
+            this.tabControlBooking.Size = new System.Drawing.Size(1093, 564);
+            this.tabControlBooking.TabIndex = 8;
             // 
             // FormBooking
             // 
@@ -280,6 +282,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnNumberOfGuests;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnArrivalDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnsDepartureDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPaid;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnPaid;
     }
 }
