@@ -73,10 +73,9 @@ namespace virtual_receptionist.Views
         }
 
         /// <summary>
-        /// 
+        /// Foglalás adatai
         /// </summary>
-        /// <returns></returns>
-        public object[] Booking //Controller!!!!!!!!!!!!!!!!!
+        public object[] Booking
         {
             get { return booking; }
         }
