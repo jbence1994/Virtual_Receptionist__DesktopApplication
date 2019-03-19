@@ -66,8 +66,8 @@ namespace virtual_receptionist.Views
             booking[1] = textBoxGuestName.Text;
             booking[2] = comboBoxRoom.SelectedItem;
             booking[3] = numericUpDownNumberOfGuests.Value;
-            booking[4] = dateTimePickerArrivalDate.Value.ToShortDateString();
-            booking[5] = dateTimePickerDepartureDate.Value.ToShortDateString();
+            booking[4] = dateTimePickerArrivalDate.Value.ToString("yyyy-MM-dd");
+            booking[5] = dateTimePickerDepartureDate.Value.ToString("yyyy-MM-dd");
 
             bookingController.UpdateBooking(booking);
         }
