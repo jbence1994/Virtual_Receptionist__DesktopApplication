@@ -69,7 +69,7 @@ namespace virtual_receptionist.Views
             booking[4] = dateTimePickerArrivalDate.Value.ToShortDateString();
             booking[5] = dateTimePickerDepartureDate.Value.ToShortDateString();
 
-            controller.UpdateBooking(booking);
+            bookingController.UpdateBooking(booking);
         }
 
         /// <summary>
