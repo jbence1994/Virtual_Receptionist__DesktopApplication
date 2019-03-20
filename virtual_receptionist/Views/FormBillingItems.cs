@@ -114,15 +114,30 @@ namespace virtual_receptionist.Views
                     errorProviderQuantity.SetError(textBoxQuantity, "Érvénytelen mennyiség!");
                 }
 
-                /* Validálni */
+                string discountRate = string.Empty;
 
-                string discountRate = maskedTextBoxItemDiscount.Text; // _5%, __%, 10% lehetőségek
-                string[] discountRateWithoutPercentSign = discountRate.Split('%');
+                // _5%, __%, 10% lehetőségek
 
-                // Validálni üres-e az első index, az első kettő, vagy teljes-e, vagy nulla => DivideByZeroException
-                int discountValue = Convert.ToInt32(discountRateWithoutPercentSign[0]);
+                if (!maskedTextBoxItemDiscount.MaskFull)
+                {
+                    if (maskedTextBoxItemDiscount.Text[0] == '_')
+                    {
+                        discountRate = maskedTextBoxItemDiscount.Text[1].ToString();
+                    }
+                    else if (maskedTextBoxItemDiscount.Text[1] == '_')
+                    {
+                        discountRate = maskedTextBoxItemDiscount.Text[0].ToString();
+                    }
+                }
+                else
+                {
+                    discountRate = maskedTextBoxItemDiscount.Text;
+                    string[] discountRateWithoutPercentSign = discountRate.Split('%');
 
-                price = controller.GetDiscountPrice(price, discountValue); //DivideByZeroException !!!
+                    int discountValue = Convert.ToInt32(discountRateWithoutPercentSign[0]);
+
+                    price = controller.GetDiscountPrice(price, discountValue); //DivideByZeroException !!!
+                }
 
                 billingItems[0] = item;
                 billingItems[1] = price;
