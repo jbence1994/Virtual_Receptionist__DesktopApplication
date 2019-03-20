@@ -31,6 +31,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBilling));
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
+            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonPrintInvoice = new System.Windows.Forms.Button();
             this.buttonAddItem = new System.Windows.Forms.Button();
             this.buttonUpdateItem = new System.Windows.Forms.Button();
@@ -61,13 +68,6 @@
             this.groupBoxBookingToBill = new System.Windows.Forms.GroupBox();
             this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.labelTotalPrice = new System.Windows.Forms.Label();
-            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
             this.groupBoxBookingToBill.SuspendLayout();
@@ -83,7 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnItem,
             this.ColumnPrice,
@@ -101,6 +101,48 @@
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
+            // 
+            // ColumnItem
+            // 
+            this.ColumnItem.HeaderText = "Tétel";
+            this.ColumnItem.Name = "ColumnItem";
+            this.ColumnItem.ReadOnly = true;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.HeaderText = "Egységár";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
+            // 
+            // ColumnUnit
+            // 
+            this.ColumnUnit.HeaderText = "Egység";
+            this.ColumnUnit.Name = "ColumnUnit";
+            this.ColumnUnit.ReadOnly = true;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.HeaderText = "Mennyiség";
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
+            // 
+            // ColumnVAT
+            // 
+            this.ColumnVAT.HeaderText = "ÁFA";
+            this.ColumnVAT.Name = "ColumnVAT";
+            this.ColumnVAT.ReadOnly = true;
+            // 
+            // ColumnCategory
+            // 
+            this.ColumnCategory.HeaderText = "Kategória";
+            this.ColumnCategory.Name = "ColumnCategory";
+            this.ColumnCategory.ReadOnly = true;
+            // 
+            // ColumnDiscount
+            // 
+            this.ColumnDiscount.HeaderText = "Tétel kedvezmény";
+            this.ColumnDiscount.Name = "ColumnDiscount";
+            this.ColumnDiscount.ReadOnly = true;
             // 
             // buttonPrintInvoice
             // 
@@ -389,48 +431,6 @@
             this.labelTotalPrice.Size = new System.Drawing.Size(195, 24);
             this.labelTotalPrice.TabIndex = 13;
             this.labelTotalPrice.Text = "Fizetendő végösszeg:";
-            // 
-            // ColumnItem
-            // 
-            this.ColumnItem.HeaderText = "Tétel";
-            this.ColumnItem.Name = "ColumnItem";
-            this.ColumnItem.ReadOnly = true;
-            // 
-            // ColumnPrice
-            // 
-            this.ColumnPrice.HeaderText = "Egységár";
-            this.ColumnPrice.Name = "ColumnPrice";
-            this.ColumnPrice.ReadOnly = true;
-            // 
-            // ColumnUnit
-            // 
-            this.ColumnUnit.HeaderText = "Egység";
-            this.ColumnUnit.Name = "ColumnUnit";
-            this.ColumnUnit.ReadOnly = true;
-            // 
-            // ColumnQuantity
-            // 
-            this.ColumnQuantity.HeaderText = "Mennyiség";
-            this.ColumnQuantity.Name = "ColumnQuantity";
-            this.ColumnQuantity.ReadOnly = true;
-            // 
-            // ColumnVAT
-            // 
-            this.ColumnVAT.HeaderText = "ÁFA";
-            this.ColumnVAT.Name = "ColumnVAT";
-            this.ColumnVAT.ReadOnly = true;
-            // 
-            // ColumnCategory
-            // 
-            this.ColumnCategory.HeaderText = "Kategória";
-            this.ColumnCategory.Name = "ColumnCategory";
-            this.ColumnCategory.ReadOnly = true;
-            // 
-            // ColumnDiscount
-            // 
-            this.ColumnDiscount.HeaderText = "Tétel kedvezmény";
-            this.ColumnDiscount.Name = "ColumnDiscount";
-            this.ColumnDiscount.ReadOnly = true;
             // 
             // FormBilling
             // 
