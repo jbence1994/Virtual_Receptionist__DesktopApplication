@@ -114,9 +114,15 @@ namespace virtual_receptionist.Views
 
             billingItems[5] = category;
 
-            if (!maskedTextBoxItemDiscount.MaskFull)
+            if (maskedTextBoxItemDiscount.Text.Contains("_"))
             {
-                billingItems[6] = "";
+                string[] underscore = maskedTextBoxItemDiscount.Text.Split('_');
+                billingItems[6] = $"{underscore[0]}{underscore[1]}";
+            }
+            else if (maskedTextBoxItemDiscount.Text[0] == '0')
+            {
+                string[] zero = maskedTextBoxItemDiscount.Text.Split('0');
+                billingItems[6] = $"{zero[1]}";
             }
             else
             {
