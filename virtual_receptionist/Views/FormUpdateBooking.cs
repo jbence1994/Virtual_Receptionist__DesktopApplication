@@ -125,6 +125,21 @@ namespace virtual_receptionist.Views
             }
         }
 
+        private void numericUpDownNumberOfGuests_ValueChanged(object sender, EventArgs e)
+        {
+            errorProviderNumberOfGuests.Clear();
+        }
+
+        private void dateTimePickerDepartureDate_ValueChanged(object sender, EventArgs e)
+        {
+            errorProviderDepartureDate.Clear();
+        }
+
+        private void textBoxGuestName_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderNumberOfGuests.Clear();
+        }
+
         /// <summary>
         /// Foglalás adatai
         /// </summary>

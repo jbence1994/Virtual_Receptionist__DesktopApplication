@@ -33,6 +33,8 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBoxBookingData = new System.Windows.Forms.GroupBox();
+            this.textBoxBookingID = new System.Windows.Forms.TextBox();
+            this.labelBookingID = new System.Windows.Forms.Label();
             this.textBoxGuestName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
@@ -43,8 +45,6 @@
             this.labelArrivalDate = new System.Windows.Forms.Label();
             this.dateTimePickerDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerArrivalDate = new System.Windows.Forms.DateTimePicker();
-            this.labelBookingID = new System.Windows.Forms.Label();
-            this.textBoxBookingID = new System.Windows.Forms.TextBox();
             this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDepartureDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderNumberOfGuests = new System.Windows.Forms.ErrorProvider(this.components);
@@ -97,12 +97,30 @@
             this.groupBoxBookingData.TabStop = false;
             this.groupBoxBookingData.Text = "Foglalás adatok";
             // 
+            // textBoxBookingID
+            // 
+            this.textBoxBookingID.Location = new System.Drawing.Point(154, 54);
+            this.textBoxBookingID.Name = "textBoxBookingID";
+            this.textBoxBookingID.ReadOnly = true;
+            this.textBoxBookingID.Size = new System.Drawing.Size(237, 20);
+            this.textBoxBookingID.TabIndex = 15;
+            // 
+            // labelBookingID
+            // 
+            this.labelBookingID.AutoSize = true;
+            this.labelBookingID.Location = new System.Drawing.Point(49, 57);
+            this.labelBookingID.Name = "labelBookingID";
+            this.labelBookingID.Size = new System.Drawing.Size(99, 13);
+            this.labelBookingID.TabIndex = 14;
+            this.labelBookingID.Text = "Foglalás azonosító:";
+            // 
             // textBoxGuestName
             // 
             this.textBoxGuestName.Location = new System.Drawing.Point(154, 80);
             this.textBoxGuestName.Name = "textBoxGuestName";
             this.textBoxGuestName.Size = new System.Drawing.Size(237, 20);
             this.textBoxGuestName.TabIndex = 0;
+            this.textBoxGuestName.TextChanged += new System.EventHandler(this.textBoxGuestName_TextChanged);
             // 
             // labelName
             // 
@@ -129,6 +147,7 @@
             0,
             0,
             0});
+            this.numericUpDownNumberOfGuests.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfGuests_ValueChanged);
             // 
             // labelNumberOfGuests
             // 
@@ -181,6 +200,7 @@
             this.dateTimePickerDepartureDate.Name = "dateTimePickerDepartureDate";
             this.dateTimePickerDepartureDate.Size = new System.Drawing.Size(237, 20);
             this.dateTimePickerDepartureDate.TabIndex = 11;
+            this.dateTimePickerDepartureDate.ValueChanged += new System.EventHandler(this.dateTimePickerDepartureDate_ValueChanged);
             // 
             // dateTimePickerArrivalDate
             // 
@@ -188,23 +208,6 @@
             this.dateTimePickerArrivalDate.Name = "dateTimePickerArrivalDate";
             this.dateTimePickerArrivalDate.Size = new System.Drawing.Size(237, 20);
             this.dateTimePickerArrivalDate.TabIndex = 10;
-            // 
-            // labelBookingID
-            // 
-            this.labelBookingID.AutoSize = true;
-            this.labelBookingID.Location = new System.Drawing.Point(49, 57);
-            this.labelBookingID.Name = "labelBookingID";
-            this.labelBookingID.Size = new System.Drawing.Size(99, 13);
-            this.labelBookingID.TabIndex = 14;
-            this.labelBookingID.Text = "Foglalás azonosító:";
-            // 
-            // textBoxBookingID
-            // 
-            this.textBoxBookingID.Location = new System.Drawing.Point(154, 54);
-            this.textBoxBookingID.Name = "textBoxBookingID";
-            this.textBoxBookingID.ReadOnly = true;
-            this.textBoxBookingID.Size = new System.Drawing.Size(237, 20);
-            this.textBoxBookingID.TabIndex = 15;
             // 
             // errorProviderName
             // 
