@@ -88,20 +88,30 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            /*
-             * Validálni !!!
-             */
-
             string item = textBoxItem.Text;
             double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
-            int quantity = Convert.ToInt32(textBoxQuantity.Text);
             string vat = textBoxVAT.Text;
             string category = textBoxCategory.Text;
-            string discountRate = maskedTextBoxItemDiscount.Text;
+            int quantity = Convert.ToInt32(textBoxQuantity.Text);
 
+            try
+            {
+                errorProviderQuantity.Clear();
+                controller.QuantityValidator(quantity);
+            }
+            catch (Exception exception)
+            {
+                DialogResult = DialogResult.None;
+                errorProviderQuantity.SetError(textBoxQuantity, exception.Message);
+            }
+
+            /* Validálni */
+
+            string discountRate = maskedTextBoxItemDiscount.Text; // _5%, __%, 10% lehetőségek
             string[] discountRateWithoutPercentSign = discountRate.Split('%');
 
+            // Validálni üres-e az első index, az első kettő, vagy teljes-e, vagy nulla => DivideByZeroException
             int discountValue = Convert.ToInt32(discountRateWithoutPercentSign[0]);
 
             price = controller.GetDiscountPrice(price, discountValue); //DivideByZeroException !!!

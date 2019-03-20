@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
 using System;
+using virtual_receptionist.Controllers.Exceptions;
+using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Controllers
 {
@@ -140,6 +142,25 @@ namespace virtual_receptionist.Controllers
             };
 
             billingRepository.SetBookingAsPaid(booking);
+        }
+
+        /// <summary>
+        /// Mennyiség validátor
+        /// </summary>
+        /// <param name="quantity">Mennyiség</param>
+        /// <exception cref="InvalidBllingItemParameterException"></exception>
+        public void QuantityValidator(int quantity)
+        {
+            try
+            {
+                BillingItemQuantityValidation billingItemQuantityValidation =
+                    new BillingItemQuantityValidation(quantity);
+                billingItemQuantityValidation.ValidateBillingItemQuantity();
+            }
+            catch (InvalidBllingItemParameterException exception)
+            {
+                throw exception;
+            }
         }
 
         #endregion
