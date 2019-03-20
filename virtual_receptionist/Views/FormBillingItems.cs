@@ -94,8 +94,6 @@ namespace virtual_receptionist.Views
             double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
             int quantity = Convert.ToInt32(textBoxQuantity.Text);
-
-
             string vat = maskedTextBoxVAT.Text;
             string category = textBoxCategory.Text;
             string discount = maskedTextBoxItemDiscount.Text;
@@ -104,7 +102,16 @@ namespace virtual_receptionist.Views
             billingItems[1] = price;
             billingItems[2] = unit;
             billingItems[3] = quantity;
-            billingItems[4] = vat;
+
+            if (vat == "0_%")
+            {
+                billingItems[4] = "0%";
+            }
+            else
+            {
+                billingItems[4] = vat;
+            }
+
             billingItems[5] = category;
 
             if (!maskedTextBoxItemDiscount.MaskFull)
