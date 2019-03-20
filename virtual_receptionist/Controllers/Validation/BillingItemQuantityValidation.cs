@@ -11,7 +11,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// 
         /// </summary>
-        private double quantity;
+        private int quantity;
 
         /// <summary>
         /// 
@@ -25,6 +25,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// 
         /// </summary>
+        /// <exception cref="InvalidBllingItemParameterException"></exception>
         public void ValidateBillingItemQuantity()
         {
             if (IsEmpty(quantity.ToString()))
@@ -40,6 +41,11 @@ namespace virtual_receptionist.Controllers.Validation
             if (ContainsLetterCharacters(quantity.ToString()))
             {
                 throw new InvalidBllingItemParameterException("Mennyiség nem tartalmazhat betűt!");
+            }
+
+            if (IsZeroOrNegative(quantity))
+            {
+                throw new InvalidBllingItemParameterException("Mennyiség nem lehet nulla vagy negatív szám!");
             }
         }
     }
