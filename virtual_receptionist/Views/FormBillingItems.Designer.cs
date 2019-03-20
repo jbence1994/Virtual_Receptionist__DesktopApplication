@@ -202,7 +202,6 @@
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Enabled = false;
             this.buttonOK.Location = new System.Drawing.Point(641, 166);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
@@ -218,7 +217,7 @@
             this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
             this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
             this.maskedTextBoxItemDiscount.TabIndex = 1;
-            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // maskedTextBoxVAT
             // 
@@ -228,7 +227,7 @@
             this.maskedTextBoxVAT.ReadOnly = true;
             this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
             this.maskedTextBoxVAT.TabIndex = 0;
-            this.maskedTextBoxVAT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxVAT.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // labelDiscount
             // 

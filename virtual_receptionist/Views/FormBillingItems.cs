@@ -74,7 +74,6 @@ namespace virtual_receptionist.Views
         {
             if (listViewBillingItems.SelectedItems.Count > 0)
             {
-                buttonOK.Enabled = true;
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
                 maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
@@ -95,15 +94,11 @@ namespace virtual_receptionist.Views
             double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
             int quantity = Convert.ToInt32(textBoxQuantity.Text);
-            double vat = Convert.ToDouble(maskedTextBoxVAT.Text);
+
+
+            string vat = maskedTextBoxVAT.Text;
             string category = textBoxCategory.Text;
-
-            int? discount = null;
-
-            if (maskedTextBoxItemDiscount.Text != string.Empty)
-            {
-                discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
-            }
+            string discount = maskedTextBoxItemDiscount.Text;
 
             billingItems[0] = item;
             billingItems[1] = price;
@@ -111,7 +106,15 @@ namespace virtual_receptionist.Views
             billingItems[3] = quantity;
             billingItems[4] = vat;
             billingItems[5] = category;
-            billingItems[6] = discount + "%";
+
+            if (!maskedTextBoxItemDiscount.MaskFull)
+            {
+                billingItems[6] = "";
+            }
+            else
+            {
+                billingItems[6] = discount;
+            }
         }
 
         /// <summary>
