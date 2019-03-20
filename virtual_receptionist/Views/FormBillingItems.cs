@@ -40,7 +40,7 @@ namespace virtual_receptionist.Views
             textBoxPrice.Text = billingItems[1].ToString();
             textBoxUnit.Text = billingItems[2].ToString();
             textBoxQuantity.Text = billingItems[3].ToString();
-            maskedTextBoxVAT.Text = billingItems[4].ToString();
+            textBoxVAT.Text = billingItems[4].ToString();
             textBoxCategory.Text = billingItems[5].ToString();
 
             if (billingItems[6] != null)
@@ -76,7 +76,7 @@ namespace virtual_receptionist.Views
             {
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
-                maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                textBoxVAT.Text = $"{listViewBillingItems.SelectedItems[0].SubItems[2].Text}%";
                 textBoxCategory.Text = listViewBillingItems.SelectedItems[0].SubItems[3].Text;
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 textBoxQuantity.Clear();
@@ -94,30 +94,21 @@ namespace virtual_receptionist.Views
             double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
             int quantity = Convert.ToInt32(textBoxQuantity.Text);
-            string vat = maskedTextBoxVAT.Text;
+            string vat = textBoxVAT.Text;
             string category = textBoxCategory.Text;
-            string discount = maskedTextBoxItemDiscount.Text;
+            string discountRate = maskedTextBoxItemDiscount.Text;
 
-            var discountValue =discount.Split('%');
+            string[] discountRateWithoutPercentSign = discountRate.Split('%');
 
+            int discountValue = Convert.ToInt32(discountRateWithoutPercentSign[0]);
 
-
-            price = controller.GetDiscountPrice(price, Convert.ToDouble(discountValue));
+            price = controller.GetDiscountPrice(price, discountValue); //DivideByZeroException !!!
 
             billingItems[0] = item;
             billingItems[1] = price;
             billingItems[2] = unit;
             billingItems[3] = quantity;
-
-            if (vat == "0_%")
-            {
-                billingItems[4] = "0%";
-            }
-            else
-            {
-                billingItems[4] = vat;
-            }
-
+            billingItems[4] = vat;
             billingItems[5] = category;
 
             if (maskedTextBoxItemDiscount.Text.Contains("_"))
@@ -132,7 +123,7 @@ namespace virtual_receptionist.Views
             }
             else
             {
-                billingItems[6] = discount;
+                billingItems[6] = discountRate;
             }
         }
 

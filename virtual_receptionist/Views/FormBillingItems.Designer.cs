@@ -44,14 +44,14 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.labelCategory = new System.Windows.Forms.Label();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
             this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
-            this.textBoxCategory = new System.Windows.Forms.TextBox();
-            this.labelCategory = new System.Windows.Forms.Label();
+            this.textBoxVAT = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +129,7 @@
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(96, 81);
             this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(274, 20);
             this.textBoxPrice.TabIndex = 0;
             // 
@@ -167,12 +168,12 @@
             // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.textBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelCategory);
             this.groupBoxItemParameters.Controls.Add(this.textBoxCategory);
             this.groupBoxItemParameters.Controls.Add(this.buttonCancel);
             this.groupBoxItemParameters.Controls.Add(this.buttonOK);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
-            this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelItem);
@@ -188,6 +189,23 @@
             this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 195);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Location = new System.Drawing.Point(35, 137);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(55, 13);
+            this.labelCategory.TabIndex = 0;
+            this.labelCategory.Text = "Kategória:";
+            // 
+            // textBoxCategory
+            // 
+            this.textBoxCategory.Location = new System.Drawing.Point(96, 133);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.ReadOnly = true;
+            this.textBoxCategory.Size = new System.Drawing.Size(274, 20);
+            this.textBoxCategory.TabIndex = 0;
             // 
             // buttonCancel
             // 
@@ -219,16 +237,6 @@
             this.maskedTextBoxItemDiscount.TabIndex = 1;
             this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
-            // maskedTextBoxVAT
-            // 
-            this.maskedTextBoxVAT.Location = new System.Drawing.Point(96, 107);
-            this.maskedTextBoxVAT.Mask = "00%";
-            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
-            this.maskedTextBoxVAT.ReadOnly = true;
-            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxVAT.TabIndex = 0;
-            this.maskedTextBoxVAT.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            // 
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
@@ -247,22 +255,13 @@
             this.labelVAT.TabIndex = 0;
             this.labelVAT.Text = "ÁFA:";
             // 
-            // textBoxCategory
+            // textBoxVAT
             // 
-            this.textBoxCategory.Location = new System.Drawing.Point(96, 133);
-            this.textBoxCategory.Name = "textBoxCategory";
-            this.textBoxCategory.ReadOnly = true;
-            this.textBoxCategory.Size = new System.Drawing.Size(274, 20);
-            this.textBoxCategory.TabIndex = 0;
-            // 
-            // labelCategory
-            // 
-            this.labelCategory.AutoSize = true;
-            this.labelCategory.Location = new System.Drawing.Point(35, 137);
-            this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(55, 13);
-            this.labelCategory.TabIndex = 0;
-            this.labelCategory.Text = "Kategória:";
+            this.textBoxVAT.Location = new System.Drawing.Point(96, 107);
+            this.textBoxVAT.Name = "textBoxVAT";
+            this.textBoxVAT.ReadOnly = true;
+            this.textBoxVAT.Size = new System.Drawing.Size(274, 20);
+            this.textBoxVAT.TabIndex = 18;
             // 
             // FormBillingItems
             // 
@@ -301,7 +300,6 @@
         private System.Windows.Forms.GroupBox groupBoxItemParameters;
         private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.Label labelVAT;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxVAT;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
         private System.Windows.Forms.ColumnHeader columnHeaderVAT;
         private System.Windows.Forms.ColumnHeader columnHeaderCategory;
@@ -309,5 +307,6 @@
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.TextBox textBoxCategory;
         private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.TextBox textBoxVAT;
     }
 }
