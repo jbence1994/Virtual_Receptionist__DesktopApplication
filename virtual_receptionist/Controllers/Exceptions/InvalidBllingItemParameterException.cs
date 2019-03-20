@@ -5,14 +5,14 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Számlázás kivétel
     /// </summary>
-    public sealed class InvalidBllingParameterException : Exception
+    public sealed class InvalidBllingItemParameterException : Exception
     {
         #region Konstruktor
 
         /// <summary>
         /// Számlázás kivétel konstruktora
         /// </summary>
-        public InvalidBllingParameterException(string message) : base(message)
+        public InvalidBllingItemParameterException(string message) : base(message)
         {
         }
 

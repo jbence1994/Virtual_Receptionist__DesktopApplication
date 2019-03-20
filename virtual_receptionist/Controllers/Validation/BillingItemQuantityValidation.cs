@@ -29,17 +29,17 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(quantity.ToString()))
             {
-                throw new InvalidBllingParameterException("Üres mező!");
+                throw new InvalidBllingItemParameterException("Üres mező!");
             }
 
             if (ContainsControlCharacters(quantity.ToString()))
             {
-                throw new InvalidBllingParameterException("Mennyiség nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new InvalidBllingItemParameterException("Mennyiség nem tartalmaz vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLetterCharacters(quantity.ToString()))
             {
-                throw new InvalidBllingParameterException("Mennyiség nem tartalmazhat betűt!");
+                throw new InvalidBllingItemParameterException("Mennyiség nem tartalmazhat betűt!");
             }
         }
     }
