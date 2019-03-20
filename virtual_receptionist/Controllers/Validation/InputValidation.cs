@@ -14,17 +14,27 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input üres karakterlánc-e
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha üres a bemenet logikai igazzal téri vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool IsEmpty(string input)
         {
-            return string.IsNullOrWhiteSpace(input);
+            return string.IsNullOrWhiteSpace(input) ? true : false;
+        }
+
+        /// <summary>
+        /// Metódus, amely ellenőrzi az input nulla-e vagy negatív szám-e
+        /// </summary>
+        /// <param name="input">Bemenet</param>
+        /// <returns>Ha a bemenet nulla vagy negatív szám logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
+        public static bool IsZeroOrNegative(int input)
+        {
+            return input <= 0 ? true : false;
         }
 
         /// <summary>
         /// Metódus, amely ellenőrzi az input tartalmaz-e vezérlőbillentyű karaktert
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet tartalmaz vezérlőbillentyű karaktert logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool ContainsControlCharacters(string input)
         {
             bool criticalIndex = false;
@@ -44,7 +54,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e számot
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet tartalmaz számot logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool ContainsDigitCharacters(string input)
         {
             bool criticalIndex = false;
@@ -64,7 +74,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e betűt
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet tartalmaz betűt logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool ContainsLetterCharacters(string input)
         {
             bool criticalIndex = false;
@@ -84,7 +94,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e nagybetűs karaktert
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet tartalmaz nagybetűs karaktert logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool ContainsUppercaseCharacters(string input)
         {
             bool criticalIndex = false;
@@ -104,7 +114,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi az input tartalmaz-e kisebtűs karaktert
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet tartlamaz kisebetűs karaktert logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool ContainsLowercaseCharacter(string input)
         {
             bool criticalIndex = false;
@@ -124,7 +134,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi, hogy az input első karaktere nagybetű-e
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet első betűje nagybetűs karakter logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool FirstLetterIsUppercaseCharacter(string input)
         {
             if (char.IsUpper(input[0]))
@@ -139,7 +149,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi, hogy az input első karaktere kisbetű-e
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha a bemenet első betűje kisbetűs karakter logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool FirstLetterIsLowercaseCharacter(string input)
         {
             if (char.IsLower(input[0]))
@@ -154,7 +164,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt email cím
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha megfelelő a formátum logikai igazzal tér vissz a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool IsValidEmailAddress(string input)
         {
             bool valid = false;
@@ -175,7 +185,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// Metódus, amely ellenőrzi helyes formátumú minta-e a felhasználó által bevitt születési dátum
         /// </summary>
         /// <param name="input">Bemenet</param>
-        /// <returns>Ha megfelelő a formátum logikai igazat ad vissza a függvény, ellenkező esetben logikai hamissal tér vissza</returns>
+        /// <returns>Ha megfelelő a formátum logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         public static bool IsValidBirthDate(string input)
         {
             bool valid = false;
