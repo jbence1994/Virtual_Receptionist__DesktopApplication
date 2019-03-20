@@ -95,10 +95,12 @@ namespace virtual_receptionist.Views
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            FormBillingItems billingItems = new FormBillingItems();
+            FormBillingItems billingItems = new FormBillingItems("", "", "", "", "", "", "");
 
             if (billingItems.ShowDialog() == DialogResult.OK)
             {
+                object[] items = billingItems.BillingItems;
+                dataGridViewItems.Rows.Add(items);
             }
         }
 
@@ -106,10 +108,26 @@ namespace virtual_receptionist.Views
         {
             if (dataGridViewItems.SelectedRows.Count > 0)
             {
-                FormBillingItems billingItems = new FormBillingItems();
+                object item = dataGridViewItems.SelectedRows[0].Cells[0].Value;
+                object price = dataGridViewItems.SelectedRows[0].Cells[1].Value;
+                object unit = dataGridViewItems.SelectedRows[0].Cells[2].Value;
+                object quantity = dataGridViewItems.SelectedRows[0].Cells[3].Value;
+                object vat = dataGridViewItems.SelectedRows[0].Cells[4].Value;
+                object category = dataGridViewItems.SelectedRows[0].Cells[5].Value;
+                object discount = dataGridViewItems.SelectedRows[0].Cells[6].Value;
+
+                FormBillingItems billingItems =
+                    new FormBillingItems(item, price, unit, quantity, vat, category, discount);
 
                 if (billingItems.ShowDialog() == DialogResult.OK)
                 {
+                    dataGridViewItems.SelectedRows[0].Cells[0].Value = billingItems.BillingItems[0];
+                    dataGridViewItems.SelectedRows[0].Cells[1].Value = billingItems.BillingItems[1];
+                    dataGridViewItems.SelectedRows[0].Cells[2].Value = billingItems.BillingItems[2];
+                    dataGridViewItems.SelectedRows[0].Cells[3].Value = billingItems.BillingItems[3];
+                    dataGridViewItems.SelectedRows[0].Cells[4].Value = billingItems.BillingItems[4];
+                    dataGridViewItems.SelectedRows[0].Cells[5].Value = billingItems.BillingItems[5];
+                    dataGridViewItems.SelectedRows[0].Cells[6].Value = billingItems.BillingItems[6];
                 }
             }
             else
@@ -122,6 +140,8 @@ namespace virtual_receptionist.Views
         {
             if (dataGridViewItems.SelectedRows.Count > 0)
             {
+                int row = dataGridViewItems.SelectedRows[0].Index;
+                dataGridViewItems.Rows.RemoveAt(row);
             }
             else
             {
@@ -131,11 +151,15 @@ namespace virtual_receptionist.Views
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
+            // Ciklussal kisezdni az árakat
+
             textBoxTotalPrice.Text = controller.GetTotalPrice();
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
+            // Ciklussal kisezdni az árakat
+
             textBoxTotalPrice.Text = controller.GetTotalPrice();
         }
 

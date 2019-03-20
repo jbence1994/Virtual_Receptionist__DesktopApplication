@@ -31,10 +31,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBilling));
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
-            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonPrintInvoice = new System.Windows.Forms.Button();
             this.buttonAddItem = new System.Windows.Forms.Button();
             this.buttonUpdateItem = new System.Windows.Forms.Button();
@@ -65,6 +61,13 @@
             this.groupBoxBookingToBill = new System.Windows.Forms.GroupBox();
             this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.labelTotalPrice = new System.Windows.Forms.Label();
+            this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
             this.groupBoxBookingToBill.SuspendLayout();
@@ -85,7 +88,10 @@
             this.ColumnItem,
             this.ColumnPrice,
             this.ColumnUnit,
-            this.ColumnQuantity});
+            this.ColumnQuantity,
+            this.ColumnVAT,
+            this.ColumnCategory,
+            this.ColumnDiscount});
             this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewItems.MultiSelect = false;
             this.dataGridViewItems.Name = "dataGridViewItems";
@@ -95,34 +101,6 @@
             this.dataGridViewItems.TabIndex = 8;
             this.dataGridViewItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridViewItems_RowsAdded);
             this.dataGridViewItems.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridViewItems_RowsRemoved);
-            // 
-            // ColumnItem
-            // 
-            this.ColumnItem.DataPropertyName = "Tétel";
-            this.ColumnItem.HeaderText = "Tétel";
-            this.ColumnItem.Name = "ColumnItem";
-            this.ColumnItem.ReadOnly = true;
-            // 
-            // ColumnPrice
-            // 
-            this.ColumnPrice.DataPropertyName = "Ár";
-            this.ColumnPrice.HeaderText = "Ár";
-            this.ColumnPrice.Name = "ColumnPrice";
-            this.ColumnPrice.ReadOnly = true;
-            // 
-            // ColumnUnit
-            // 
-            this.ColumnUnit.DataPropertyName = "Egység";
-            this.ColumnUnit.HeaderText = "Egység";
-            this.ColumnUnit.Name = "ColumnUnit";
-            this.ColumnUnit.ReadOnly = true;
-            // 
-            // ColumnQuantity
-            // 
-            this.ColumnQuantity.DataPropertyName = "Mennyiség";
-            this.ColumnQuantity.HeaderText = "Mennyiség";
-            this.ColumnQuantity.Name = "ColumnQuantity";
-            this.ColumnQuantity.ReadOnly = true;
             // 
             // buttonPrintInvoice
             // 
@@ -412,6 +390,48 @@
             this.labelTotalPrice.TabIndex = 13;
             this.labelTotalPrice.Text = "Fizetendő végösszeg:";
             // 
+            // ColumnItem
+            // 
+            this.ColumnItem.HeaderText = "Tétel";
+            this.ColumnItem.Name = "ColumnItem";
+            this.ColumnItem.ReadOnly = true;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.HeaderText = "Egységár";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
+            // 
+            // ColumnUnit
+            // 
+            this.ColumnUnit.HeaderText = "Egység";
+            this.ColumnUnit.Name = "ColumnUnit";
+            this.ColumnUnit.ReadOnly = true;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.HeaderText = "Mennyiség";
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
+            // 
+            // ColumnVAT
+            // 
+            this.ColumnVAT.HeaderText = "ÁFA";
+            this.ColumnVAT.Name = "ColumnVAT";
+            this.ColumnVAT.ReadOnly = true;
+            // 
+            // ColumnCategory
+            // 
+            this.ColumnCategory.HeaderText = "Kategória";
+            this.ColumnCategory.Name = "ColumnCategory";
+            this.ColumnCategory.ReadOnly = true;
+            // 
+            // ColumnDiscount
+            // 
+            this.ColumnDiscount.HeaderText = "Tétel kedvezmény";
+            this.ColumnDiscount.Name = "ColumnDiscount";
+            this.ColumnDiscount.ReadOnly = true;
+            // 
             // FormBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,10 +471,6 @@
         private System.Windows.Forms.Button buttonDeleteItem;
         private System.Windows.Forms.PrintDialog printDialogPrinter;
         private System.Drawing.Printing.PrintDocument printDocumentInvoice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.GroupBox groupBoxBillingData;
         private System.Windows.Forms.ListView listViewToBill;
         private System.Windows.Forms.ColumnHeader columnHeaderBookingID;
@@ -479,5 +495,12 @@
         private System.Windows.Forms.Label labelBillingCity;
         private System.Windows.Forms.TextBox textBoxTotalPrice;
         private System.Windows.Forms.Label labelTotalPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVAT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiscount;
     }
 }

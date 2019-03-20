@@ -44,12 +44,14 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
             this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxVAT = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
-            this.buttonOK = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
+            this.labelCategory = new System.Windows.Forms.Label();
             this.groupBoxItemParameters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,71 +102,73 @@
             // labelItem
             // 
             this.labelItem.AutoSize = true;
-            this.labelItem.Location = new System.Drawing.Point(74, 25);
+            this.labelItem.Location = new System.Drawing.Point(56, 58);
             this.labelItem.Name = "labelItem";
             this.labelItem.Size = new System.Drawing.Size(34, 13);
-            this.labelItem.TabIndex = 2;
+            this.labelItem.TabIndex = 0;
             this.labelItem.Text = "Tétel:";
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(423, 25);
+            this.labelPrice.Location = new System.Drawing.Point(36, 84);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(54, 13);
-            this.labelPrice.TabIndex = 3;
+            this.labelPrice.TabIndex = 0;
             this.labelPrice.Text = "Egységár:";
             // 
             // textBoxItem
             // 
-            this.textBoxItem.Location = new System.Drawing.Point(114, 19);
+            this.textBoxItem.Location = new System.Drawing.Point(96, 55);
             this.textBoxItem.Name = "textBoxItem";
             this.textBoxItem.ReadOnly = true;
             this.textBoxItem.Size = new System.Drawing.Size(274, 20);
-            this.textBoxItem.TabIndex = 4;
+            this.textBoxItem.TabIndex = 0;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(483, 22);
+            this.textBoxPrice.Location = new System.Drawing.Point(96, 81);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(274, 20);
-            this.textBoxPrice.TabIndex = 5;
+            this.textBoxPrice.TabIndex = 0;
             // 
             // textBoxUnit
             // 
-            this.textBoxUnit.Location = new System.Drawing.Point(114, 71);
+            this.textBoxUnit.Location = new System.Drawing.Point(492, 55);
             this.textBoxUnit.Name = "textBoxUnit";
             this.textBoxUnit.ReadOnly = true;
             this.textBoxUnit.Size = new System.Drawing.Size(274, 20);
-            this.textBoxUnit.TabIndex = 6;
+            this.textBoxUnit.TabIndex = 0;
             // 
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(416, 51);
+            this.labelQuantity.Location = new System.Drawing.Point(425, 110);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(61, 13);
-            this.labelQuantity.TabIndex = 7;
+            this.labelQuantity.TabIndex = 0;
             this.labelQuantity.Text = "Mennyiség:";
             // 
             // labelUnit
             // 
             this.labelUnit.AutoSize = true;
-            this.labelUnit.Location = new System.Drawing.Point(63, 74);
+            this.labelUnit.Location = new System.Drawing.Point(441, 58);
             this.labelUnit.Name = "labelUnit";
             this.labelUnit.Size = new System.Drawing.Size(45, 13);
-            this.labelUnit.TabIndex = 8;
+            this.labelUnit.TabIndex = 0;
             this.labelUnit.Text = "Egység:";
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(483, 48);
+            this.textBoxQuantity.Location = new System.Drawing.Point(492, 107);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
-            this.textBoxQuantity.TabIndex = 9;
+            this.textBoxQuantity.TabIndex = 2;
             // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.labelCategory);
+            this.groupBoxItemParameters.Controls.Add(this.textBoxCategory);
             this.groupBoxItemParameters.Controls.Add(this.buttonCancel);
             this.groupBoxItemParameters.Controls.Add(this.buttonOK);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
@@ -181,50 +185,25 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxUnit);
             this.groupBoxItemParameters.Location = new System.Drawing.Point(12, 373);
             this.groupBoxItemParameters.Name = "groupBoxItemParameters";
-            this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 130);
+            this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 195);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
-            // maskedTextBoxItemDiscount
+            // buttonCancel
             // 
-            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(114, 95);
-            this.maskedTextBoxItemDiscount.Mask = "00%";
-            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
-            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxItemDiscount.TabIndex = 15;
-            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // maskedTextBoxVAT
-            // 
-            this.maskedTextBoxVAT.Location = new System.Drawing.Point(114, 45);
-            this.maskedTextBoxVAT.Mask = "00 %";
-            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
-            this.maskedTextBoxVAT.ReadOnly = true;
-            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxVAT.TabIndex = 14;
-            // 
-            // labelDiscount
-            // 
-            this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(11, 98);
-            this.labelDiscount.Name = "labelDiscount";
-            this.labelDiscount.Size = new System.Drawing.Size(97, 13);
-            this.labelDiscount.TabIndex = 11;
-            this.labelDiscount.Text = "Tétel kedvezmény:";
-            // 
-            // labelVAT
-            // 
-            this.labelVAT.AutoSize = true;
-            this.labelVAT.Location = new System.Drawing.Point(78, 51);
-            this.labelVAT.Name = "labelVAT";
-            this.labelVAT.Size = new System.Drawing.Size(30, 13);
-            this.labelVAT.TabIndex = 10;
-            this.labelVAT.Text = "ÁFA:";
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(722, 166);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 17;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(641, 101);
+            this.buttonOK.Enabled = false;
+            this.buttonOK.Location = new System.Drawing.Point(641, 166);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 16;
@@ -232,21 +211,65 @@
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
-            // buttonCancel
+            // maskedTextBoxItemDiscount
             // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(722, 101);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 17;
-            this.buttonCancel.Text = "Mégse";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(492, 81);
+            this.maskedTextBoxItemDiscount.Mask = "00%";
+            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
+            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxItemDiscount.TabIndex = 1;
+            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // maskedTextBoxVAT
+            // 
+            this.maskedTextBoxVAT.Location = new System.Drawing.Point(96, 107);
+            this.maskedTextBoxVAT.Mask = "00%";
+            this.maskedTextBoxVAT.Name = "maskedTextBoxVAT";
+            this.maskedTextBoxVAT.ReadOnly = true;
+            this.maskedTextBoxVAT.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxVAT.TabIndex = 0;
+            this.maskedTextBoxVAT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // labelDiscount
+            // 
+            this.labelDiscount.AutoSize = true;
+            this.labelDiscount.Location = new System.Drawing.Point(389, 84);
+            this.labelDiscount.Name = "labelDiscount";
+            this.labelDiscount.Size = new System.Drawing.Size(97, 13);
+            this.labelDiscount.TabIndex = 0;
+            this.labelDiscount.Text = "Tétel kedvezmény:";
+            // 
+            // labelVAT
+            // 
+            this.labelVAT.AutoSize = true;
+            this.labelVAT.Location = new System.Drawing.Point(60, 110);
+            this.labelVAT.Name = "labelVAT";
+            this.labelVAT.Size = new System.Drawing.Size(30, 13);
+            this.labelVAT.TabIndex = 0;
+            this.labelVAT.Text = "ÁFA:";
+            // 
+            // textBoxCategory
+            // 
+            this.textBoxCategory.Location = new System.Drawing.Point(96, 133);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.ReadOnly = true;
+            this.textBoxCategory.Size = new System.Drawing.Size(274, 20);
+            this.textBoxCategory.TabIndex = 0;
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Location = new System.Drawing.Point(35, 137);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(55, 13);
+            this.labelCategory.TabIndex = 0;
+            this.labelCategory.Text = "Kategória:";
             // 
             // FormBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 514);
+            this.ClientSize = new System.Drawing.Size(827, 580);
             this.Controls.Add(this.groupBoxItemParameters);
             this.Controls.Add(this.listViewBillingItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -285,5 +308,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderCategory;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.TextBox textBoxCategory;
+        private System.Windows.Forms.Label labelCategory;
     }
 }

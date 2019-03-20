@@ -17,6 +17,11 @@ namespace virtual_receptionist.Views
         /// </summary>
         private BillingController controller;
 
+        /// <summary>
+        /// Számlázási tételek
+        /// </summary>
+        private object[] billingItems;
+
         #endregion
 
         #region Konstruktor
@@ -24,10 +29,24 @@ namespace virtual_receptionist.Views
         /// <summary>
         /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
         /// </summary>
-        public FormBillingItems()
+        public FormBillingItems(params object[] billingItems)
         {
             InitializeComponent();
             controller = new BillingController();
+
+            this.billingItems = billingItems;
+
+            textBoxItem.Text = billingItems[0].ToString();
+            textBoxPrice.Text = billingItems[1].ToString();
+            textBoxUnit.Text = billingItems[2].ToString();
+            textBoxQuantity.Text = billingItems[3].ToString();
+            maskedTextBoxVAT.Text = billingItems[4].ToString();
+            textBoxCategory.Text = billingItems[5].ToString();
+
+            if (billingItems[6] != null)
+            {
+                maskedTextBoxItemDiscount.Text = billingItems[6].ToString();
+            }
         }
 
         #endregion
@@ -59,6 +78,7 @@ namespace virtual_receptionist.Views
                 textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
                 textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
                 maskedTextBoxVAT.Text = listViewBillingItems.SelectedItems[0].SubItems[2].Text;
+                textBoxCategory.Text = listViewBillingItems.SelectedItems[0].SubItems[3].Text;
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 textBoxQuantity.Clear();
                 maskedTextBoxItemDiscount.Clear();
@@ -67,10 +87,39 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            /*
+             * Validálni !!! + Százalékos kedvezményt számolni kontroller függvénnyel
+             */
+
             string item = textBoxItem.Text;
             double price = Convert.ToDouble(textBoxPrice.Text);
             string unit = textBoxUnit.Text;
             int quantity = Convert.ToInt32(textBoxQuantity.Text);
+            double vat = Convert.ToDouble(maskedTextBoxVAT.Text);
+            string category = textBoxCategory.Text;
+
+            int? discount = null;
+
+            if (maskedTextBoxItemDiscount.Text != string.Empty)
+            {
+                discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
+            }
+
+            billingItems[0] = item;
+            billingItems[1] = price;
+            billingItems[2] = unit;
+            billingItems[3] = quantity;
+            billingItems[4] = vat;
+            billingItems[5] = category;
+            billingItems[6] = discount + "%";
+        }
+
+        /// <summary>
+        /// Számlázási tételek
+        /// </summary>
+        public object[] BillingItems
+        {
+            get { return billingItems; }
         }
 
         #endregion
