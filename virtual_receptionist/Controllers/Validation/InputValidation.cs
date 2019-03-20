@@ -1,5 +1,4 @@
 using System.Text.RegularExpressions;
-using System.Net.Mail;
 
 namespace virtual_receptionist.Controllers.Validation
 {

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -88,54 +89,67 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            string item = textBoxItem.Text;
-            double price = Convert.ToDouble(textBoxPrice.Text);
-            string unit = textBoxUnit.Text;
-            string vat = textBoxVAT.Text;
-            string category = textBoxCategory.Text;
-            int quantity = Convert.ToInt32(textBoxQuantity.Text);
-
-            try
+            if (listViewBillingItems.SelectedItems.Count > 0)
             {
-                errorProviderQuantity.Clear();
-                controller.QuantityValidator(quantity);
-            }
-            catch (Exception exception)
-            {
-                DialogResult = DialogResult.None;
-                errorProviderQuantity.SetError(textBoxQuantity, exception.Message);
-            }
+                string item = textBoxItem.Text;
+                double price = Convert.ToDouble(textBoxPrice.Text);
+                string unit = textBoxUnit.Text;
+                string vat = textBoxVAT.Text;
+                string category = textBoxCategory.Text;
+                string quantity = textBoxQuantity.Text;
 
-            /* Validálni */
+                try
+                {
+                    errorProviderQuantity.Clear();
+                    controller.QuantityValidator(quantity);
+                }
+                catch (InvalidBllingItemParameterException exception)
+                {
+                    DialogResult = DialogResult.None;
+                    errorProviderQuantity.SetError(textBoxQuantity, exception.Message);
+                }
+                catch (OverflowException)
+                {
+                    DialogResult = DialogResult.None;
+                    errorProviderQuantity.SetError(textBoxQuantity, "Érvénytelen mennyiség!");
+                }
 
-            string discountRate = maskedTextBoxItemDiscount.Text; // _5%, __%, 10% lehetőségek
-            string[] discountRateWithoutPercentSign = discountRate.Split('%');
+                /* Validálni */
 
-            // Validálni üres-e az első index, az első kettő, vagy teljes-e, vagy nulla => DivideByZeroException
-            int discountValue = Convert.ToInt32(discountRateWithoutPercentSign[0]);
+                string discountRate = maskedTextBoxItemDiscount.Text; // _5%, __%, 10% lehetőségek
+                string[] discountRateWithoutPercentSign = discountRate.Split('%');
 
-            price = controller.GetDiscountPrice(price, discountValue); //DivideByZeroException !!!
+                // Validálni üres-e az első index, az első kettő, vagy teljes-e, vagy nulla => DivideByZeroException
+                int discountValue = Convert.ToInt32(discountRateWithoutPercentSign[0]);
 
-            billingItems[0] = item;
-            billingItems[1] = price;
-            billingItems[2] = unit;
-            billingItems[3] = quantity;
-            billingItems[4] = vat;
-            billingItems[5] = category;
+                price = controller.GetDiscountPrice(price, discountValue); //DivideByZeroException !!!
 
-            if (maskedTextBoxItemDiscount.Text.Contains("_"))
-            {
-                string[] underscore = maskedTextBoxItemDiscount.Text.Split('_');
-                billingItems[6] = $"{underscore[0]}{underscore[1]}";
-            }
-            else if (maskedTextBoxItemDiscount.Text[0] == '0')
-            {
-                string[] zero = maskedTextBoxItemDiscount.Text.Split('0');
-                billingItems[6] = $"{zero[1]}";
+                billingItems[0] = item;
+                billingItems[1] = price;
+                billingItems[2] = unit;
+                billingItems[3] = quantity;
+                billingItems[4] = vat;
+                billingItems[5] = category;
+
+                if (maskedTextBoxItemDiscount.Text.Contains("_"))
+                {
+                    string[] underscore = maskedTextBoxItemDiscount.Text.Split('_');
+                    billingItems[6] = $"{underscore[0]}{underscore[1]}";
+                }
+                else if (maskedTextBoxItemDiscount.Text[0] == '0')
+                {
+                    string[] zero = maskedTextBoxItemDiscount.Text.Split('0');
+                    billingItems[6] = $"{zero[1]}";
+                }
+                else
+                {
+                    billingItems[6] = discountRate;
+                }
             }
             else
             {
-                billingItems[6] = discountRate;
+                MessageBox.Show("Nincs kijelölt számlázási tétel!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult = DialogResult.None;
             }
         }
 

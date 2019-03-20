@@ -149,7 +149,7 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         /// <param name="quantity">Mennyiség</param>
         /// <exception cref="InvalidBllingItemParameterException"></exception>
-        public void QuantityValidator(int quantity)
+        public void QuantityValidator(string quantity)
         {
             try
             {
