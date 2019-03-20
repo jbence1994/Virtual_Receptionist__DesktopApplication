@@ -118,6 +118,17 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
+        /// Metódus, amely visszaadja egy tétel kedvezményes árát százalékláb alapján
+        /// </summary>
+        /// <param name="itemPrice">Tétel ára</param>
+        /// <param name="footPercent">Százalékláb</param>
+        /// <returns>A kedvezményes árral tér vissza a függvény</returns>
+        public double GetDiscountPrice(double itemPrice, double footPercent)
+        {
+            return billingRepository.CountDiscountPrice(itemPrice, footPercent);
+        }
+
+        /// <summary>
         /// Számla nyomtatás folyamatának elindítása
         /// </summary>
         /// <param name="bookingID">Foglalás azonosítója</param>

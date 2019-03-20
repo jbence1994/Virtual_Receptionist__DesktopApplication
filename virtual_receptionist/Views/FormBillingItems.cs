@@ -87,7 +87,7 @@ namespace virtual_receptionist.Views
         private void buttonOK_Click(object sender, EventArgs e)
         {
             /*
-             * Validálni !!! + Százalékos kedvezményt számolni kontroller függvénnyel
+             * Validálni !!!
              */
 
             string item = textBoxItem.Text;
@@ -97,6 +97,12 @@ namespace virtual_receptionist.Views
             string vat = maskedTextBoxVAT.Text;
             string category = textBoxCategory.Text;
             string discount = maskedTextBoxItemDiscount.Text;
+
+            var discountValue =discount.Split('%');
+
+
+
+            price = controller.GetDiscountPrice(price, Convert.ToDouble(discountValue));
 
             billingItems[0] = item;
             billingItems[1] = price;
