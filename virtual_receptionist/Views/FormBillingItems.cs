@@ -81,6 +81,8 @@ namespace virtual_receptionist.Views
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 textBoxQuantity.Clear();
                 maskedTextBoxItemDiscount.Clear();
+                errorProviderDiscount.Clear();
+                errorProviderQuantity.Clear();
             }
         }
 

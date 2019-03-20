@@ -72,7 +72,7 @@
     <Compile Include="Controllers\Validation\NameValidation.cs" />
     <Compile Include="Controllers\Validation\PhoneNumberValidation.cs" />
     <Compile Include="Controllers\Validation\VATNumberValidation.cs" />
-    <Compile Include="Controllers\Validation\ZeroDiscountValidation.cs" />
+    <Compile Include="Controllers\Validation\BillingItemQuantityValidation.cs" />
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
     <Compile Include="Models\Data\AccomodationRepository.cs" />
     <Compile Include="Models\Data\CountryRepository.cs" />
