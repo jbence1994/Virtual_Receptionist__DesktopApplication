@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBillingItems));
             this.listViewBillingItems = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,7 +53,11 @@
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
             this.textBoxVAT = new System.Windows.Forms.TextBox();
+            this.errorProviderDiscount = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxItemParameters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewBillingItems
@@ -165,6 +170,7 @@
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
             this.textBoxQuantity.TabIndex = 2;
+            this.textBoxQuantity.TextChanged += new System.EventHandler(this.textBoxQuantity_TextChanged);
             // 
             // groupBoxItemParameters
             // 
@@ -236,6 +242,7 @@
             this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
             this.maskedTextBoxItemDiscount.TabIndex = 1;
             this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+            this.maskedTextBoxItemDiscount.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxItemDiscount_MaskInputRejected);
             // 
             // labelDiscount
             // 
@@ -263,6 +270,16 @@
             this.textBoxVAT.Size = new System.Drawing.Size(274, 20);
             this.textBoxVAT.TabIndex = 18;
             // 
+            // errorProviderDiscount
+            // 
+            this.errorProviderDiscount.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderDiscount.ContainerControl = this;
+            // 
+            // errorProviderQuantity
+            // 
+            this.errorProviderQuantity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderQuantity.ContainerControl = this;
+            // 
             // FormBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +296,8 @@
             this.Load += new System.EventHandler(this.FormModalBillingItems_Load);
             this.groupBoxItemParameters.ResumeLayout(false);
             this.groupBoxItemParameters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,5 +327,7 @@
         private System.Windows.Forms.TextBox textBoxCategory;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.TextBox textBoxVAT;
+        private System.Windows.Forms.ErrorProvider errorProviderDiscount;
+        private System.Windows.Forms.ErrorProvider errorProviderQuantity;
     }
 }

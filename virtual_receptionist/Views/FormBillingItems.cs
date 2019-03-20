@@ -127,6 +127,16 @@ namespace virtual_receptionist.Views
             }
         }
 
+        private void maskedTextBoxItemDiscount_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            errorProviderDiscount.Clear();
+        }
+
+        private void textBoxQuantity_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderQuantity.Clear();
+        }
+
         /// <summary>
         /// Számlázási tételek
         /// </summary>
