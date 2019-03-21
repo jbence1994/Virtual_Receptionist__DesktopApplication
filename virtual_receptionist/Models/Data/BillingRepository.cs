@@ -1,7 +1,6 @@
 ﻿using virtual_receptionist.Models.ORM;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 
 namespace virtual_receptionist.Models.Data
 {
