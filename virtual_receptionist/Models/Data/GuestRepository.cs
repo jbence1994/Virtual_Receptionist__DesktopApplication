@@ -50,7 +50,7 @@ namespace virtual_receptionist.Models.Data
 
             foreach (DataRow row in dt.Rows)
             {
-                int id = int.Parse(row["ID"].ToString());
+                int id = Convert.ToInt32(row["ID"]);
                 string name = row["Name"].ToString();
                 string documentNumber = row["DocumentNumber"].ToString();
                 string citizenship = row["Citizenship"].ToString();
@@ -62,9 +62,9 @@ namespace virtual_receptionist.Models.Data
                 string phoneNumber = row["PhoneNumber"].ToString();
                 string emailAddress = row["EmailAddress"].ToString();
 
-                Guest privateGuestInstance = new Guest(id, name, documentNumber, citizenship, birthDate,
+                Guest guest = new Guest(id, name, documentNumber, citizenship, birthDate,
                     country, zipCode, city, address, phoneNumber, emailAddress);
-                guests.Add(privateGuestInstance);
+                guests.Add(guest);
             }
         }
 
