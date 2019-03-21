@@ -93,11 +93,12 @@ namespace virtual_receptionist.Models.Data
         /// <summary>
         /// Metódus, amely kiszámolja a fizetendő végösszeget
         /// </summary>
-        /// <param name="prices">Bementi paraméter tétel árak</param>
+        /// <param name="price">Tétel egységár</param>
+        /// <param name="quantity">Tétel mennyiség</param>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
-        public double CountTotalPrice(params double[] prices)
+        public double CountTotalPrice(double price, int quantity)
         {
-            return prices.Sum();
+            return price * quantity;
         }
 
         /// <summary>

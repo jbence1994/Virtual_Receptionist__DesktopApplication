@@ -111,12 +111,13 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Metódus, amely visszaadja a fizetendő végösszeget
         /// </summary>
-        /// <param name="prices">Bementi paraméter tétel árak</param>
+        /// <param name="price">Tétel egységár</param>
+        /// <param name="quantity">Tétel mennyiség</param>
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
-        public string GetTotalPrice(params double[] prices)
+        public double GetTotalPrice(double price, int quantity)
         {
-            double total = billingRepository.CountTotalPrice(prices);
-            return total.ToString();
+            double total = billingRepository.CountTotalPrice(price, quantity);
+            return total;
         }
 
         /// <summary>

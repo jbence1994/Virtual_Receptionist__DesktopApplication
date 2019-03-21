@@ -152,15 +152,11 @@ namespace virtual_receptionist.Views
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             // Ciklussal kisezdni az árakat
-
-            textBoxTotalPrice.Text = controller.GetTotalPrice();
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             // Ciklussal kisezdni az árakat
-
-            textBoxTotalPrice.Text = controller.GetTotalPrice();
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
