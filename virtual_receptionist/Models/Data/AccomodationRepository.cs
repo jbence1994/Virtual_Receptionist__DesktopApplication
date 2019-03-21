@@ -1,6 +1,6 @@
 ﻿using virtual_receptionist.Models.ORM;
 using System.Data;
-using MySQL_Interface;
+using virtual_receptionist.Models.MySQLInterface;
 using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Models.Data

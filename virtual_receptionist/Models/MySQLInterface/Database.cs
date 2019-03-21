@@ -4,7 +4,7 @@ using System.Data;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 
-namespace MySQL_Interface
+namespace virtual_receptionist.Models.MySQLInterface
 {
     /// <summary>
     /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály

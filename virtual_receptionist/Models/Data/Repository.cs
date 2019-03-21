@@ -1,4 +1,4 @@
-﻿using MySQL_Interface;
+﻿using virtual_receptionist.Models.MySQLInterface;
 
 namespace virtual_receptionist.Models.Data
 {
