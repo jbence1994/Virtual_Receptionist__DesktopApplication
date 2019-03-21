@@ -85,15 +85,7 @@ namespace virtual_receptionist.Views
                 errorProviderDiscount.Clear();
                 errorProviderQuantity.Clear();
 
-                switch (textBoxItem.Text)
-                {
-                    case "Tárgyi adó mentes":
-                        maskedTextBoxItemDiscount.Enabled = false;
-                        break;
-                    default:
-                        maskedTextBoxItemDiscount.Enabled = true;
-                        break;
-                }
+                maskedTextBoxItemDiscount.Enabled = textBoxCategory.Text == "Tárgyi adó mentes" ? false : true;
             }
         }
 
