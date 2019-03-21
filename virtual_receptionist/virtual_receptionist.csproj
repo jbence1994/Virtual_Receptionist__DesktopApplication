@@ -188,6 +188,7 @@
     <EmbeddedResource Include="Views\FormUpdateBooking.resx">
       <DependentUpon>FormUpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MySQL_Interface\MySQL_Interface System Design.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
