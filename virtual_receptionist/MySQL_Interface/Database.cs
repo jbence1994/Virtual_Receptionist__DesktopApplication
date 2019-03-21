@@ -9,7 +9,7 @@ namespace MySQL_Interface
     /// <summary>
     /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály
     /// </summary>
-    public class Database
+    public sealed class Database
     {
         #region Adattagok
 
