@@ -122,7 +122,7 @@ namespace virtual_receptionist.Views
             {
                 double discount = discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
                 price = controller.GetDiscountPrice(price, discount); //DivideByZeroException !!!
-                billingItems[6] = discount;
+                billingItems[6] = discount + "%";
             }
 
             billingItems[1] = price;
