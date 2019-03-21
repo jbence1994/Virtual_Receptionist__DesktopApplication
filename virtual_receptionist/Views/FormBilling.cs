@@ -127,7 +127,7 @@ namespace virtual_receptionist.Views
                     dataGridViewItems.SelectedRows[0].Cells[3].Value = billingItems.BillingItems[3];
                     dataGridViewItems.SelectedRows[0].Cells[4].Value = billingItems.BillingItems[4];
                     dataGridViewItems.SelectedRows[0].Cells[5].Value = billingItems.BillingItems[5];
-                    dataGridViewItems.SelectedRows[0].Cells[6].Value = billingItems.BillingItems[6];
+                    dataGridViewItems.SelectedRows[0].Cells[6].Value = $"{billingItems.BillingItems[6]}%";
                 }
             }
             else

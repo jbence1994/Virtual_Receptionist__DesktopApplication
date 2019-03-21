@@ -45,6 +45,7 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.textBoxVAT = new System.Windows.Forms.TextBox();
             this.labelCategory = new System.Windows.Forms.Label();
             this.textBoxCategory = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
-            this.textBoxVAT = new System.Windows.Forms.TextBox();
             this.errorProviderDiscount = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxItemParameters.SuspendLayout();
@@ -70,6 +70,7 @@
             this.columnHeaderUnit});
             this.listViewBillingItems.FullRowSelect = true;
             this.listViewBillingItems.GridLines = true;
+            this.listViewBillingItems.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewBillingItems.Location = new System.Drawing.Point(12, 12);
             this.listViewBillingItems.MultiSelect = false;
             this.listViewBillingItems.Name = "listViewBillingItems";
@@ -196,6 +197,14 @@
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
             // 
+            // textBoxVAT
+            // 
+            this.textBoxVAT.Location = new System.Drawing.Point(96, 107);
+            this.textBoxVAT.Name = "textBoxVAT";
+            this.textBoxVAT.ReadOnly = true;
+            this.textBoxVAT.Size = new System.Drawing.Size(274, 20);
+            this.textBoxVAT.TabIndex = 18;
+            // 
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
@@ -241,7 +250,7 @@
             this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
             this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
             this.maskedTextBoxItemDiscount.TabIndex = 1;
-            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedTextBoxItemDiscount.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxItemDiscount_MaskInputRejected);
             // 
             // labelDiscount
@@ -261,14 +270,6 @@
             this.labelVAT.Size = new System.Drawing.Size(30, 13);
             this.labelVAT.TabIndex = 0;
             this.labelVAT.Text = "ÁFA:";
-            // 
-            // textBoxVAT
-            // 
-            this.textBoxVAT.Location = new System.Drawing.Point(96, 107);
-            this.textBoxVAT.Name = "textBoxVAT";
-            this.textBoxVAT.ReadOnly = true;
-            this.textBoxVAT.Size = new System.Drawing.Size(274, 20);
-            this.textBoxVAT.TabIndex = 18;
             // 
             // errorProviderDiscount
             // 

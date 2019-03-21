@@ -360,6 +360,7 @@
             this.columnHeaderDepartureDate});
             this.listViewToBill.FullRowSelect = true;
             this.listViewToBill.GridLines = true;
+            this.listViewToBill.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewToBill.Location = new System.Drawing.Point(6, 19);
             this.listViewToBill.MultiSelect = false;
             this.listViewToBill.Name = "listViewToBill";

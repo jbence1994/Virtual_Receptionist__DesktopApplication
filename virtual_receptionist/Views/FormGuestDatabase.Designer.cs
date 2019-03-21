@@ -404,6 +404,7 @@
             this.columnHeaderGuestEmailAddress});
             this.listViewGuest.FullRowSelect = true;
             this.listViewGuest.GridLines = true;
+            this.listViewGuest.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewGuest.Location = new System.Drawing.Point(3, 3);
             this.listViewGuest.Name = "listViewGuest";
             this.listViewGuest.Size = new System.Drawing.Size(1075, 410);
