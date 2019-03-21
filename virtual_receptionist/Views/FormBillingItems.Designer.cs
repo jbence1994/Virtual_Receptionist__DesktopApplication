@@ -50,8 +50,6 @@
             this.textBoxCategory = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
-            this.maskedTextBoxItemDiscount = new System.Windows.Forms.MaskedTextBox();
-            this.labelDiscount = new System.Windows.Forms.Label();
             this.labelVAT = new System.Windows.Forms.Label();
             this.errorProviderDiscount = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
@@ -150,7 +148,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(425, 110);
+            this.labelQuantity.Location = new System.Drawing.Point(425, 84);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(61, 13);
             this.labelQuantity.TabIndex = 0;
@@ -167,7 +165,7 @@
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(492, 107);
+            this.textBoxQuantity.Location = new System.Drawing.Point(492, 81);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
             this.textBoxQuantity.TabIndex = 2;
@@ -180,8 +178,6 @@
             this.groupBoxItemParameters.Controls.Add(this.textBoxCategory);
             this.groupBoxItemParameters.Controls.Add(this.buttonCancel);
             this.groupBoxItemParameters.Controls.Add(this.buttonOK);
-            this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxItemDiscount);
-            this.groupBoxItemParameters.Controls.Add(this.labelDiscount);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelItem);
             this.groupBoxItemParameters.Controls.Add(this.textBoxQuantity);
@@ -243,25 +239,6 @@
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
-            // maskedTextBoxItemDiscount
-            // 
-            this.maskedTextBoxItemDiscount.Location = new System.Drawing.Point(492, 81);
-            this.maskedTextBoxItemDiscount.Mask = "00%";
-            this.maskedTextBoxItemDiscount.Name = "maskedTextBoxItemDiscount";
-            this.maskedTextBoxItemDiscount.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxItemDiscount.TabIndex = 1;
-            this.maskedTextBoxItemDiscount.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxItemDiscount.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxItemDiscount_MaskInputRejected);
-            // 
-            // labelDiscount
-            // 
-            this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(389, 84);
-            this.labelDiscount.Name = "labelDiscount";
-            this.labelDiscount.Size = new System.Drawing.Size(97, 13);
-            this.labelDiscount.TabIndex = 0;
-            this.labelDiscount.Text = "Tétel kedvezmény:";
-            // 
             // labelVAT
             // 
             this.labelVAT.AutoSize = true;
@@ -318,9 +295,7 @@
         private System.Windows.Forms.Label labelUnit;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.GroupBox groupBoxItemParameters;
-        private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.Label labelVAT;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxItemDiscount;
         private System.Windows.Forms.ColumnHeader columnHeaderVAT;
         private System.Windows.Forms.ColumnHeader columnHeaderCategory;
         private System.Windows.Forms.Button buttonCancel;

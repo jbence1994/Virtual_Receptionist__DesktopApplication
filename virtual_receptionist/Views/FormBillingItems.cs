@@ -43,11 +43,6 @@ namespace virtual_receptionist.Views
             textBoxQuantity.Text = billingItems[3].ToString();
             textBoxVAT.Text = billingItems[4].ToString();
             textBoxCategory.Text = billingItems[5].ToString();
-
-            if (billingItems[6] != null)
-            {
-                maskedTextBoxItemDiscount.Text = billingItems[6].ToString();
-            }
         }
 
         #endregion
@@ -81,11 +76,8 @@ namespace virtual_receptionist.Views
                 textBoxCategory.Text = listViewBillingItems.SelectedItems[0].SubItems[3].Text;
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
                 textBoxQuantity.Clear();
-                maskedTextBoxItemDiscount.Clear();
                 errorProviderDiscount.Clear();
                 errorProviderQuantity.Clear();
-
-                maskedTextBoxItemDiscount.Enabled = textBoxCategory.Text == "Tárgyi adó mentes" ? false : true;
             }
         }
 
@@ -115,20 +107,12 @@ namespace virtual_receptionist.Views
             }
 
             billingItems[0] = item;
+            price = controller.GetTotalPrice(price, Convert.ToInt32(quantity));
+            billingItems[1] = price;
             billingItems[2] = unit;
             billingItems[3] = quantity;
             billingItems[4] = vat;
             billingItems[5] = category;
-
-            if (maskedTextBoxItemDiscount.MaskFull)
-            {
-                double discount = discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
-                price = controller.GetDiscountPrice(price, discount);
-                billingItems[6] = discount + "%";
-            }
-
-            price = controller.GetTotalPrice(price, Convert.ToInt32(quantity));
-            billingItems[1] = price;
         }
 
         private void maskedTextBoxItemDiscount_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
