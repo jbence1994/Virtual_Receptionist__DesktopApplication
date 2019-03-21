@@ -84,6 +84,16 @@ namespace virtual_receptionist.Views
                 maskedTextBoxItemDiscount.Clear();
                 errorProviderDiscount.Clear();
                 errorProviderQuantity.Clear();
+
+                switch (textBoxItem.Text)
+                {
+                    case "Tárgyi adó mentes":
+                        maskedTextBoxItemDiscount.Enabled = false;
+                        break;
+                    default:
+                        maskedTextBoxItemDiscount.Enabled = true;
+                        break;
+                }
             }
         }
 
@@ -122,10 +132,10 @@ namespace virtual_receptionist.Views
             {
                 double discount = discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
                 price = controller.GetDiscountPrice(price, discount);
-                price = controller.GetTotalPrice(price, Convert.ToInt32(quantity));
                 billingItems[6] = discount + "%";
             }
 
+            price = controller.GetTotalPrice(price, Convert.ToInt32(quantity));
             billingItems[1] = price;
         }
 
