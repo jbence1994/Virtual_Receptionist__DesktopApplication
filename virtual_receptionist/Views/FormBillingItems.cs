@@ -19,7 +19,7 @@ namespace virtual_receptionist.Views
         private BillingController controller;
 
         /// <summary>
-        /// Számlázási tételek
+        /// Számlázandó tétel adatai
         /// </summary>
         private object[] billingItems;
 
@@ -95,7 +95,6 @@ namespace virtual_receptionist.Views
             string vat = textBoxVAT.Text;
             string category = textBoxCategory.Text;
             string quantity = textBoxQuantity.Text;
-            double discount = discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
 
             try
             {
@@ -113,15 +112,20 @@ namespace virtual_receptionist.Views
                 errorProviderQuantity.SetError(textBoxQuantity, "Érvénytelen mennyiség!");
             }
 
-            price = controller.GetDiscountPrice(price, discount); //DivideByZeroException !!!
-
             billingItems[0] = item;
-            billingItems[1] = price;
             billingItems[2] = unit;
             billingItems[3] = quantity;
             billingItems[4] = vat;
             billingItems[5] = category;
-            billingItems[6] = discount;
+
+            if (maskedTextBoxItemDiscount.MaskFull)
+            {
+                double discount = discount = Convert.ToInt32(maskedTextBoxItemDiscount.Text);
+                price = controller.GetDiscountPrice(price, discount); //DivideByZeroException !!!
+                billingItems[6] = discount;
+            }
+
+            billingItems[1] = price;
         }
 
         private void maskedTextBoxItemDiscount_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -135,7 +139,7 @@ namespace virtual_receptionist.Views
         }
 
         /// <summary>
-        /// Számlázási tételek
+        /// Számlázandó tétel adatai
         /// </summary>
         public object[] BillingItems
         {
