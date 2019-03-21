@@ -373,6 +373,7 @@
             // textBoxTotalPrice
             // 
             this.textBoxTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxTotalPrice.Location = new System.Drawing.Point(506, 222);
             this.textBoxTotalPrice.Multiline = true;
             this.textBoxTotalPrice.Name = "textBoxTotalPrice";

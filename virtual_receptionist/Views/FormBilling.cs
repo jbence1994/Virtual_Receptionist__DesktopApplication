@@ -151,12 +151,26 @@ namespace virtual_receptionist.Views
 
         private void dataGridViewItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            // Ciklussal kisezdni az árakat
+            double total = 0;
+
+            for (int i = 0; i < dataGridViewItems.Rows.Count; i++)
+            {
+                total += Convert.ToDouble(dataGridViewItems.Rows[i].Cells[1].Value);
+            }
+
+            textBoxTotalPrice.Text = total.ToString();
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            // Ciklussal kisezdni az árakat
+            double total = 0;
+
+            for (int i = 0; i < dataGridViewItems.Rows.Count; i++)
+            {
+                total += Convert.ToDouble(dataGridViewItems.Rows[i].Cells[1].Value);
+            }
+
+            textBoxTotalPrice.Text = total.ToString();
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
