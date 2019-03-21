@@ -1,6 +1,5 @@
-﻿using System.Data;
-using virtual_receptionist.Controllers.Exceptions;
-using virtual_receptionist.Controllers.Validation;
+﻿using System.Collections.Generic;
+using System.Data;
 using virtual_receptionist.Models.Data;
 using virtual_receptionist.Models.ORM;
 
@@ -18,6 +17,11 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         private GuestRepository repository;
 
+        /// <summary>
+        /// Vendégeket tároló lista
+        /// </summary>
+        private List<Guest> guests;
+
         #endregion
 
         #region Konstruktor
@@ -28,6 +32,7 @@ namespace virtual_receptionist.Controllers
         public GuestDatabaseController()
         {
             repository = new GuestRepository();
+            guests = repository.GetGuests();
         }
 
         #endregion
@@ -53,7 +58,7 @@ namespace virtual_receptionist.Controllers
             guestDataTable.Columns.Add("PhoneNumber", typeof(string));
             guestDataTable.Columns.Add("EmailAddress", typeof(string));
 
-            foreach (Guest guest in repository.GetGuests())
+            foreach (Guest guest in guests)
             {
                 guestDataTable.Rows.Add(guest.ID, guest.Name, guest.DocumentNumber,
                     guest.Citizenship, guest.BirthDate, guest.Country, guest.ZipCode,
@@ -61,6 +66,22 @@ namespace virtual_receptionist.Controllers
             }
 
             return guestDataTable;
+        }
+
+        /// <summary>
+        /// Metódus, amely visszaadja a vendégadatbázis regisztrált vendégek neveit 
+        /// </summary>
+        /// <returns>A nevekkel feltöltött listával tér vissza a metódus</returns>
+        public List<string> GetGuestNames()
+        {
+            List<string> guestNames = new List<string>();
+
+            foreach (Guest guest in guests)
+            {
+                guestNames.Add(guest.Name);
+            }
+
+            return guestNames;
         }
 
         /// <summary>

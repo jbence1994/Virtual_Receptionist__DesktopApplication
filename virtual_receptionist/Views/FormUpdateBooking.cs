@@ -44,7 +44,8 @@ namespace virtual_receptionist.Views
 
             this.booking = booking;
             textBoxBookingID.Text = booking[0].ToString();
-            textBoxGuestName.Text = booking[1].ToString();
+            comboBoxGuest.DataSource = guestController.GetGuestNames();
+            comboBoxGuest.SelectedItem = booking[1].ToString();
             dateTimePickerArrivalDate.Value = Convert.ToDateTime(booking[4]);
             dateTimePickerDepartureDate.Value = Convert.ToDateTime(booking[5]);
             comboBoxRoom.DataSource = bookingController.GetRooms();
@@ -55,12 +56,7 @@ namespace virtual_receptionist.Views
         #endregion
 
         #region UI események
-
-        private void FormUpdateBooking_Load(object sender, EventArgs e)
-        {
-            textBoxGuestName.Select();
-        }
-
+        
         private void buttonOK_Click(object sender, EventArgs e)
         {
             bool validData = true;
@@ -70,7 +66,7 @@ namespace virtual_receptionist.Views
              */
 
             string id = textBoxBookingID.Text;
-            string name = textBoxGuestName.Text;
+            string name = comboBoxGuest.SelectedItem.ToString();
             int roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
             DateTime arrivalDate = dateTimePickerArrivalDate.Value;
             DateTime departureDate = dateTimePickerDepartureDate.Value;
@@ -84,7 +80,7 @@ namespace virtual_receptionist.Views
             catch (InvalidNameException exception)
             {
                 DialogResult = DialogResult.None;
-                errorProviderName.SetError(textBoxGuestName, exception.Message);
+                errorProviderName.SetError(comboBoxGuest, exception.Message);
                 validData = false;
             }
 
@@ -115,7 +111,7 @@ namespace virtual_receptionist.Views
             if (validData)
             {
                 booking[0] = Convert.ToInt32(id);
-                booking[1] = textBoxGuestName.Text;
+                booking[1] = comboBoxGuest.SelectedItem.ToString();
                 booking[2] = comboBoxRoom.SelectedItem;
                 booking[3] = numericUpDownNumberOfGuests.Value;
                 booking[4] = arrivalDate.ToString("yyyy-MM-dd");

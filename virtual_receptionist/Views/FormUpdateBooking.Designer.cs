@@ -33,9 +33,9 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBoxBookingData = new System.Windows.Forms.GroupBox();
+            this.comboBoxGuest = new System.Windows.Forms.ComboBox();
             this.textBoxBookingID = new System.Windows.Forms.TextBox();
             this.labelBookingID = new System.Windows.Forms.Label();
-            this.textBoxGuestName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.numericUpDownNumberOfGuests = new System.Windows.Forms.NumericUpDown();
             this.labelNumberOfGuests = new System.Windows.Forms.Label();
@@ -78,9 +78,9 @@
             // 
             // groupBoxBookingData
             // 
+            this.groupBoxBookingData.Controls.Add(this.comboBoxGuest);
             this.groupBoxBookingData.Controls.Add(this.textBoxBookingID);
             this.groupBoxBookingData.Controls.Add(this.labelBookingID);
-            this.groupBoxBookingData.Controls.Add(this.textBoxGuestName);
             this.groupBoxBookingData.Controls.Add(this.labelName);
             this.groupBoxBookingData.Controls.Add(this.numericUpDownNumberOfGuests);
             this.groupBoxBookingData.Controls.Add(this.labelNumberOfGuests);
@@ -96,6 +96,15 @@
             this.groupBoxBookingData.TabIndex = 17;
             this.groupBoxBookingData.TabStop = false;
             this.groupBoxBookingData.Text = "Foglalás adatok";
+            // 
+            // comboBoxGuest
+            // 
+            this.comboBoxGuest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGuest.FormattingEnabled = true;
+            this.comboBoxGuest.Location = new System.Drawing.Point(154, 80);
+            this.comboBoxGuest.Name = "comboBoxGuest";
+            this.comboBoxGuest.Size = new System.Drawing.Size(237, 21);
+            this.comboBoxGuest.TabIndex = 16;
             // 
             // textBoxBookingID
             // 
@@ -113,14 +122,6 @@
             this.labelBookingID.Size = new System.Drawing.Size(99, 13);
             this.labelBookingID.TabIndex = 14;
             this.labelBookingID.Text = "Foglalás azonosító:";
-            // 
-            // textBoxGuestName
-            // 
-            this.textBoxGuestName.Location = new System.Drawing.Point(154, 80);
-            this.textBoxGuestName.Name = "textBoxGuestName";
-            this.textBoxGuestName.Size = new System.Drawing.Size(237, 20);
-            this.textBoxGuestName.TabIndex = 0;
-            this.textBoxGuestName.TextChanged += new System.EventHandler(this.textBoxGuestName_TextChanged);
             // 
             // labelName
             // 
@@ -238,7 +239,6 @@
             this.Name = "FormUpdateBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Foglalás módosítása | Virtual Receptionist";
-            this.Load += new System.EventHandler(this.FormUpdateBooking_Load);
             this.groupBoxBookingData.ResumeLayout(false);
             this.groupBoxBookingData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).EndInit();
@@ -262,12 +262,12 @@
         private System.Windows.Forms.Label labelArrivalDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDepartureDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerArrivalDate;
-        private System.Windows.Forms.TextBox textBoxGuestName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxBookingID;
         private System.Windows.Forms.Label labelBookingID;
         private System.Windows.Forms.ErrorProvider errorProviderName;
         private System.Windows.Forms.ErrorProvider errorProviderDepartureDate;
         private System.Windows.Forms.ErrorProvider errorProviderNumberOfGuests;
+        private System.Windows.Forms.ComboBox comboBoxGuest;
     }
 }
