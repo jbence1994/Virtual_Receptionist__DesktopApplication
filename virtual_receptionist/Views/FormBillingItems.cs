@@ -39,7 +39,16 @@ namespace virtual_receptionist.Views
 
             textBoxItem.Text = billingItems[0].ToString();
             textBoxPrice.Text = billingItems[1].ToString();
-            maskedTextBoxDiscountRate.Text = billingItems[3].ToString();
+
+            if (billingItems[3].ToString() == "0%")
+            {
+                maskedTextBoxDiscountRate.Clear();
+            }
+            else
+            {
+                maskedTextBoxDiscountRate.Text = billingItems[3].ToString();
+            }
+
             numericUpDownQuantity.Text = billingItems[4].ToString();
             textBoxUnit.Text = billingItems[5].ToString();
             textBoxVAT.Text = billingItems[6].ToString();
