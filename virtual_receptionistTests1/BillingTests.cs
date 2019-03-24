@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace virtual_receptionist.Models.Data.BillingTests
+namespace virtual_receptionist.Repositories.BillingTests
 {
     [TestClass()]
     public class BillingTests
@@ -56,105 +56,53 @@ namespace virtual_receptionist.Models.Data.BillingTests
         }
 
         /// <summary>
-        /// Tesztmetódus, amely kiszámolja a paraméterül kapott számok végösszegét
+        /// Tesztmetódus, amely kiszámolja a paraméterül kapott ár-mennyiség arányában a végösszeget
         /// </summary>
         [TestMethod()]
         public void CountTotalPriceTest_Test1()
         {
             BillingRepository repository = new BillingRepository();
 
-            double expected = 10;
-            double actual = repository.CountTotalPrice(1, 2, 3, 4);
+            double expected = 26100;
+
+            double price = 8700;
+            int quantity = 3;
+
+            double actual = repository.CountTotalPrice(price, quantity);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
 
         /// <summary>
-        /// Tesztmetódus, amely kiszámolja a paraméterül kapott számok végösszegét
+        /// Tesztmetódus, amely kiszámolja a paraméterül kapott ár-mennyiség arányában a végösszeget
         /// </summary>
         [TestMethod()]
         public void CountTotalPriceTest_Test2()
         {
             BillingRepository repository = new BillingRepository();
 
-            double expected = 9000;
+            double expected = 8700;
 
             double roomForOnePerson = 8700;
-            double cityTaxforOnePerson = 300;
+            int quantity = 1;
 
-            double actual = repository.CountTotalPrice(roomForOnePerson, cityTaxforOnePerson);
+            double actual = repository.CountTotalPrice(roomForOnePerson, quantity);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
 
         /// <summary>
-        /// Tesztmetódus, amely kiszámolja a paraméterül kapott számok végösszegét
+        /// Tesztmetódus, amely kiszámolja a paraméterül kapott ár-mennyiség arányában a végösszeget
         /// </summary>
         [TestMethod()]
         public void CountTotalPriceTest_Test3()
         {
             BillingRepository repository = new BillingRepository();
 
-            double expected = 12000;
+            double expected = 22800;
 
             double roomForTwoPeople = 11400;
-            double cityTaxforTwoPeople = 600;
+            int quantity = 2;
 
-            double actual = repository.CountTotalPrice(roomForTwoPeople, cityTaxforTwoPeople);
-            Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
-        }
-
-        /// <summary>
-        /// Tesztmetódus, amely kiszámolja a paraméterül kapott számok végösszegét
-        /// </summary>
-        [TestMethod()]
-        public void CountTotalPriceTest_Test4()
-        {
-            BillingRepository repository = new BillingRepository();
-
-            double expected = 15000;
-
-            double roomForThreePeople = 14100;
-            double cityTaxforThreePeople = 900;
-
-            double actual = repository.CountTotalPrice(roomForThreePeople, cityTaxforThreePeople);
-            Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
-        }
-
-        /// <summary>
-        /// Tesztmetódus, amely kiszámolja a paraméterül kapott számok végösszegét
-        /// </summary>
-        [TestMethod()]
-        public void CountTotalPriceTest_Test5()
-        {
-            BillingRepository repository = new BillingRepository();
-
-            double expected = 18000;
-
-            double roomForFourPeople = 16800;
-            double cityTaxforFourPeople = 1200;
-
-            double actual = repository.CountTotalPrice(roomForFourPeople, cityTaxforFourPeople);
-            Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
-        }
-
-        /// <summary>
-        /// Tesztmetódus, amely kiszámolja a paraméterül kapott számok végösszegét
-        /// </summary>
-        [TestMethod()]
-        public void CountTotalPriceTest_Test6()
-        {
-            BillingRepository repository = new BillingRepository();
-
-            double expected = 13000;
-
-            double room = 8700;
-            double cityTax = 300;
-            double cityTaxUnderEighteen = 0;
-            double breakfast1 = 1500;
-            double breakfast2 = 1500;
-            double wash = 1000;
-
-            double actual =
-                repository.CountTotalPrice(room, cityTax, cityTaxUnderEighteen, breakfast1, breakfast2, wash);
+            double actual = repository.CountTotalPrice(roomForTwoPeople, quantity);
             Assert.AreEqual(expected, actual, "Bukik a teszt jó végeredményre!");
         }
     }
