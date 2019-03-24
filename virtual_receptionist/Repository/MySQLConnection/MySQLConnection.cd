@@ -7,8 +7,8 @@
       <FileName>Repository\MySQLConnection\Database.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="virtual_receptionist.Repository.MySQLConnection.InvalidConnectionTypeException" Collapsed="true">
-    <Position X="4.5" Y="4" Width="3.5" />
+  <Class Name="virtual_receptionist.Repository.MySQLConnection.InvalidConnectionTypeException">
+    <Position X="4.5" Y="2.25" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Repository\MySQLConnection\InvalidConnectionTypeException.cs</FileName>
