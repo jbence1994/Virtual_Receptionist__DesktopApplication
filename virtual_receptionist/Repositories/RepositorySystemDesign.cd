@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="virtual_receptionist.Repositories.AccomodationRepository">
+    <Position X="0.75" Y="8" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAgAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\AccomodationRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.BillingRepository">
+    <Position X="11" Y="8" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAABAgABAAAA=</HashCode>
+      <FileName>Repositories\BillingRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.BookingRepository">
+    <Position X="16.25" Y="8" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AgQBAAAAAAAAAAEAIAKAAAAEAAEAAEQAAAAAAAAMAAA=</HashCode>
+      <FileName>Repositories\BookingRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.CountryRepository">
+    <Position X="21.75" Y="8" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAABAA=</HashCode>
+      <FileName>Repositories\CountryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.GuestRepository">
+    <Position X="7" Y="8" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAJAAAAAAAAAAAAgAACAAAAAEAAEAAAAAACAAAAAA=</HashCode>
+      <FileName>Repositories\GuestRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Repository">
+    <Position X="11.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Accomodation">
+    <Position X="12.25" Y="12.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAQAAQAAAAgAAECoAAQAgAAEAGAAACBgAAAgAAAmA=</HashCode>
+      <FileName>Repositories\Models\Accomodation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.BillingItem">
+    <Position X="15.5" Y="12.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAAEAAAAAAQAAAAEAACAAAAIgAAACAA=</HashCode>
+      <FileName>Repositories\Models\BillingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.BillingItemCategory">
+    <Position X="0.5" Y="19.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAAAgAAAEIAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Models\BillingItemCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Booking">
+    <Position X="21.25" Y="12.75" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIggAAGIBAAAAAQAAAACAAAAQgACAEAAgg=</HashCode>
+      <FileName>Repositories\Models\Booking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Country">
+    <Position X="10.25" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Models\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Guest">
+    <Position X="0.5" Y="12.75" Width="11.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAgAAMBAAASAQAAEYEAAAHAIAAAgCAAgA=</HashCode>
+      <FileName>Repositories\Models\Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Room">
+    <Position X="5" Y="19.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAwAAEAEIAAAQCAAAEAAAAAAAIAAAACgA=</HashCode>
+      <FileName>Repositories\Models\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.MySQLConnection.Database">
+    <Position X="4.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAgAAAAAAgISQBIAIQAAAAAAAAABCAAQAAA=</HashCode>
+      <FileName>Repositories\MySQLConnection\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.MySQLConnection.InvalidConnectionTypeException">
+    <Position X="8.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MySQLConnection\InvalidConnectionTypeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="virtual_receptionist.Repositories.DAO.IGenericDAO&lt;T&gt;">
+    <Position X="9" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\DAO\IGenericDAO.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
