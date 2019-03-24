@@ -33,8 +33,8 @@ namespace virtual_receptionist.Views
         public FormBillingItems(params object[] billingItems)
         {
             InitializeComponent();
-            controller = new BillingController();
 
+            controller = new BillingController();
             this.billingItems = billingItems;
 
             textBoxItem.Text = billingItems[0].ToString();

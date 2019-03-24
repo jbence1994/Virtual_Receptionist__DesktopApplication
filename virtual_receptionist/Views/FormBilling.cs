@@ -55,6 +55,8 @@ namespace virtual_receptionist.Views
 
         private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
         {
+            textBoxBillingName.Clear();
+            textBoxBillingName.Select();
             textBoxVATNumber.Clear();
             textBoxVATNumber.Enabled = checkBoxIsCompany.Checked;
         }
