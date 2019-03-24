@@ -219,10 +219,8 @@ namespace virtual_receptionist.Repositories
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
         public List<Booking> GetBookingsNotPaid()
         {
-            if (bookings.Count == 0)
-            {
-                UploadBookingsList();
-            }
+            bookings.Clear();
+            UploadBookingsList();
 
             List<Booking> bookingsNotPaid = new List<Booking>();
 

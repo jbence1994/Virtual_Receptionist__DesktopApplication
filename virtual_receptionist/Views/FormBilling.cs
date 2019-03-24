@@ -36,21 +36,7 @@ namespace virtual_receptionist.Views
 
         private void FormBilling_Load(object sender, EventArgs e)
         {
-            DataTable bookingsToBillDataTable = controller.GetBookingsToBill();
-
-            foreach (DataRow row in bookingsToBillDataTable.Rows)
-            {
-                ListViewItem bookingsToBill = new ListViewItem(row[0].ToString());
-
-                for (int i = 1; i < bookingsToBillDataTable.Columns.Count; i++)
-                {
-                    bookingsToBill.SubItems.Add(row[i].ToString());
-                }
-
-                listViewToBill.Items.Add(bookingsToBill);
-            }
-
-            comboBoxBillingCountry.DataSource = controller.GetCountries();
+            InitializeListView();
         }
 
         private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
@@ -193,8 +179,36 @@ namespace virtual_receptionist.Views
              */
             controller.PrintInvoice(bookingID);
 
-            MessageBox.Show("PDF számla generálás fejlesztése folyamatban...", "", MessageBoxButtons.OK,
+            DialogResult ok = MessageBox.Show("PDF számla generálás fejlesztése folyamatban...", "",
+                MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
+
+            if (ok == DialogResult.OK)
+            {
+                listViewToBill.Items.Clear();
+                dataGridViewItems.Rows.Clear();
+
+                InitializeListView();
+            }
+        }
+
+        private void InitializeListView()
+        {
+            DataTable bookingsToBillDataTable = controller.GetBookingsToBill();
+
+            foreach (DataRow row in bookingsToBillDataTable.Rows)
+            {
+                ListViewItem bookingsToBill = new ListViewItem(row[0].ToString());
+
+                for (int i = 1; i < bookingsToBillDataTable.Columns.Count; i++)
+                {
+                    bookingsToBill.SubItems.Add(row[i].ToString());
+                }
+
+                listViewToBill.Items.Add(bookingsToBill);
+            }
+
+            comboBoxBillingCountry.DataSource = controller.GetCountries();
         }
 
         #endregion
