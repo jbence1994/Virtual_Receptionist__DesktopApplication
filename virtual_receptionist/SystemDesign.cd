@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="virtual_receptionist.Controllers.BillingController" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAgAAAACBABAAAAAAAAAAAAAAAEAAAEAAIBkAAA=</HashCode>
+      <FileName>Controllers\BillingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.BookingController" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAEAADABAAAAAAAAAAAAAQIAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BookingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Controller" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACAAAAIAiAAAAAAKEAAEUAAAAAAAQAAAAABEAAAA=</HashCode>
+      <FileName>Controllers\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.GuestDatabaseController" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAAAAQCCAIAAAAAACAAAAAABAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Controllers\GuestDatabaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.LoginController" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.MainMenuController" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAACgAAAAAAABAAwAAAAAAAAAEAAAAAABAA=</HashCode>
+      <FileName>Controllers\MainMenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.FailedLoginException" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\FailedLoginException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidAddressException" Collapsed="true">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidAddressException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidBirthDateException" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidBirthDateException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidBllingItemParameterException" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidBllingItemParameterException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidBookingParameterException" Collapsed="true">
+    <Position X="17.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidBookingParameterException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidCitizenshipException" Collapsed="true">
+    <Position X="19" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidCitizenshipException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidCityException" Collapsed="true">
+    <Position X="20.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidCityException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidDocumentNumberException" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidDocumentNumberException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidEmailAddressException" Collapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidEmailAddressException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidNameException" Collapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidNameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidPhoneNumberException" Collapsed="true">
+    <Position X="17.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidPhoneNumberException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidVATNumberException" Collapsed="true">
+    <Position X="19" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidVATNumberException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Exceptions.InvalidZipCodeException" Collapsed="true">
+    <Position X="20.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Exceptions\InvalidZipCodeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.AddressValidation" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\AddressValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.BillingItemQuantityValidation" Collapsed="true">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\BillingItemQuantityValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.BillingItemValidation" Collapsed="true">
+    <Position X="22.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAA=</HashCode>
+      <FileName>Controllers\Validation\BillingItemValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.BirthDateValidation" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\BirthDateValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.BookingCapacityValidation" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\BookingCapacityValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.BookingDateValidation" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\BookingDateValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.CitizenshipValidation" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\CitizenshipValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.CityValidation" Collapsed="true">
+    <Position X="20.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\CityValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.DocumentNumberValidation" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\DocumentNumberValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.EmailValidation" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\EmailValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.InputValidation" Collapsed="true">
+    <Position X="22.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAAAAAAAgAAAAAAYAACAAAAABAABAAAAAAAAAwAg=</HashCode>
+      <FileName>Controllers\Validation\InputValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.NameValidation" Collapsed="true">
+    <Position X="22.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\NameValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.PhoneNumberValidation" Collapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\PhoneNumberValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.VATNumberValidation" Collapsed="true">
+    <Position X="20.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACg=</HashCode>
+      <FileName>Controllers\Validation\VATNumberValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Controllers.Validation.ZipCodeValidation" Collapsed="true">
+    <Position X="22.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Validation\ZipCodeValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Program" Collapsed="true">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Properties.Resources" Collapsed="true">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Properties.Settings" Collapsed="true">
+    <Position X="19" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.AccomodationRepository" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAgAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\AccomodationRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.BillingRepository" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAABAgABAAAA=</HashCode>
+      <FileName>Repositories\BillingRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.BookingRepository" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQBAAAAAAAAAAEAIAKAAAAEAAEAAEQAAAAAAAAMAAA=</HashCode>
+      <FileName>Repositories\BookingRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.CountryRepository" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAABAA=</HashCode>
+      <FileName>Repositories\CountryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.GuestRepository" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAJAAAAAAAAAAAAgAACAAAAAEAAEAAAAAACAAAAAA=</HashCode>
+      <FileName>Repositories\GuestRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Repository" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Accomodation" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAQAAQAAAAgAAECoAAQAgAAEAGAAACBgAAAgAAAmA=</HashCode>
+      <FileName>Repositories\Models\Accomodation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.BillingItem" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAAEAAAAAAQAAAAEAACAAAAIgAAACAA=</HashCode>
+      <FileName>Repositories\Models\BillingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.BillingItemCategory" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAAAgAAAEIAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Models\BillingItemCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Booking" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIggAAGIBAAAAAQAAAACAAAAQgACAEAAgg=</HashCode>
+      <FileName>Repositories\Models\Booking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Country" Collapsed="true">
+    <Position X="22.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Models\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Guest" Collapsed="true">
+    <Position X="20.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAgAAMBAAASAQAAEYEAAAHAIAAAgCAAgA=</HashCode>
+      <FileName>Repositories\Models\Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.Models.Room" Collapsed="true">
+    <Position X="17.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAwAAEAEIAAAQCAAAEAAAAAAAIAAAACgA=</HashCode>
+      <FileName>Repositories\Models\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.MySQLConnection.Database" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAgAAAAAAgISQBIAIQAAAAAAAAABCAAQAAA=</HashCode>
+      <FileName>Repositories\MySQLConnection\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.MySQLConnection.InvalidConnectionTypeException" Collapsed="true">
+    <Position X="22.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MySQLConnection\InvalidConnectionTypeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.AboutBox" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIAAAAgAACAgCAUAAACAAAADAAAAEIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AboutBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormAddBooking" Collapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAJADwCQNKQAgQCGQFGABgECQFIAMAYIEEYEyAEwIiA=</HashCode>
+      <FileName>Views\FormAddBooking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormBilling" Collapsed="true">
+    <Position X="20.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gwRAAAAAQKGAAkFIACCJwIojGCJAAQIMGBAEAAiVBQA=</HashCode>
+      <FileName>Views\FormBilling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormBillingItems" Collapsed="true">
+    <Position X="22.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gSQQAIgAACABACEgAALEBhACAAIAAAIImEAAAEFAFQA=</HashCode>
+      <FileName>Views\FormBillingItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormBooking" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAgIQJKAAAAEAEICAEAQCAEAgIBAAYAQAAGgAACA=</HashCode>
+      <FileName>Views\FormBooking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormGuestDatabase" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgCAGAEKQAhYGGBFGAAhECbPISMQIRgFYFQgBwIqA=</HashCode>
+      <FileName>Views\FormGuestDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormLogin" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAACIIIBUAIACAAAQSAgAAAAAAAQAARAAAgCA=</HashCode>
+      <FileName>Views\FormLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormMainMenu" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QoogoAiAIKSAhDGACgioQOIjABTpIiRgeNQkCgKCGBE=</HashCode>
+      <FileName>Views\FormMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Views.FormUpdateBooking" Collapsed="true">
+    <Position X="19" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIABgAQJCAAAAAEUACABAECABBAAAQIUEQAiAEAAAA=</HashCode>
+      <FileName>Views\FormUpdateBooking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="virtual_receptionist.Repositories.DAO.IGenericDAO&lt;T&gt;" Collapsed="true">
+    <Position X="12" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\DAO\IGenericDAO.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
