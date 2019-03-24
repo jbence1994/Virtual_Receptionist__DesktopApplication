@@ -116,8 +116,7 @@ namespace virtual_receptionist.Controllers
         /// <returns>Fizetendő végösszeget adja vissza a függvény</returns>
         public double GetTotalPrice(double price, int quantity)
         {
-            double total = billingRepository.CountTotalPrice(price, quantity);
-            return total;
+            return billingRepository.CountTotalPrice(price, quantity);
         }
 
         /// <summary>

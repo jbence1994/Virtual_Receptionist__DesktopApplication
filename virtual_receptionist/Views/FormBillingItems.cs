@@ -85,7 +85,7 @@ namespace virtual_receptionist.Views
         {
             string item = textBoxItem.Text;
             double price = Convert.ToDouble(textBoxPrice.Text);
-            double discountPrice = Convert.ToDouble(textBoxPrice.Text);
+            double finalPrice = Convert.ToDouble(textBoxPrice.Text);
             double discount = 0;
 
             if (maskedTextBoxDiscountRate.MaskFull)
@@ -116,10 +116,11 @@ namespace virtual_receptionist.Views
 
             billingItems[0] = item;
 
-            discountPrice = controller.GetTotalPrice(discountPrice, Convert.ToInt32(quantity));
+            finalPrice = controller.GetTotalPrice(finalPrice, Convert.ToInt32(quantity));
+            finalPrice = controller.GetDiscountPrice(price, discount);
 
             billingItems[1] = price;
-            billingItems[2] = discountPrice;
+            billingItems[2] = finalPrice;
             billingItems[3] = $"{discount}%";
             billingItems[4] = quantity;
             billingItems[5] = unit;
