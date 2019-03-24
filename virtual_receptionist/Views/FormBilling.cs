@@ -55,8 +55,6 @@ namespace virtual_receptionist.Views
 
         private void checkBoxIsCompany_CheckedChanged(object sender, EventArgs e)
         {
-            textBoxBillingName.Clear();
-            textBoxBillingName.Select();
             textBoxVATNumber.Clear();
             textBoxVATNumber.Enabled = checkBoxIsCompany.Checked;
         }
@@ -162,6 +160,11 @@ namespace virtual_receptionist.Views
             }
 
             textBoxTotalPrice.Text = total.ToString();
+
+            if (dataGridViewItems.Rows.Count > 0 && textBoxBillingName.Text != string.Empty)
+            {
+                buttonPrintInvoice.Enabled = true;
+            }
         }
 
         private void dataGridViewItems_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
@@ -174,11 +177,16 @@ namespace virtual_receptionist.Views
             }
 
             textBoxTotalPrice.Text = total.ToString();
+
+            if (dataGridViewItems.Rows.Count == 0)
+            {
+                buttonPrintInvoice.Enabled = false;
+            }
         }
 
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
-            int bookingID = listViewToBill.SelectedItems[0].Index;
+            int bookingID = Convert.ToInt32(listViewToBill.SelectedItems[0].Text);
             controller.PrintInvoice(bookingID);
         }
 
