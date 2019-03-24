@@ -45,6 +45,8 @@
             this.labelUnit = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
+            this.labelDiscountRate = new System.Windows.Forms.Label();
+            this.maskedTextBoxDiscountRate = new System.Windows.Forms.MaskedTextBox();
             this.textBoxVAT = new System.Windows.Forms.TextBox();
             this.labelCategory = new System.Windows.Forms.Label();
             this.textBoxCategory = new System.Windows.Forms.TextBox();
@@ -53,11 +55,11 @@
             this.labelVAT = new System.Windows.Forms.Label();
             this.errorProviderDiscount = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
-            this.maskedTextBoxDiscountRate = new System.Windows.Forms.MaskedTextBox();
-            this.labelDiscountRate = new System.Windows.Forms.Label();
+            this.errorProviderItem = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxItemParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderItem)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewBillingItems
@@ -171,7 +173,6 @@
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
             this.textBoxQuantity.TabIndex = 2;
-            this.textBoxQuantity.TextChanged += new System.EventHandler(this.textBoxQuantity_TextChanged);
             // 
             // groupBoxItemParameters
             // 
@@ -196,6 +197,24 @@
             this.groupBoxItemParameters.Size = new System.Drawing.Size(803, 195);
             this.groupBoxItemParameters.TabIndex = 10;
             this.groupBoxItemParameters.TabStop = false;
+            // 
+            // labelDiscountRate
+            // 
+            this.labelDiscountRate.AutoSize = true;
+            this.labelDiscountRate.Location = new System.Drawing.Point(415, 110);
+            this.labelDiscountRate.Name = "labelDiscountRate";
+            this.labelDiscountRate.Size = new System.Drawing.Size(71, 13);
+            this.labelDiscountRate.TabIndex = 20;
+            this.labelDiscountRate.Text = "Kedvezmény:";
+            // 
+            // maskedTextBoxDiscountRate
+            // 
+            this.maskedTextBoxDiscountRate.Location = new System.Drawing.Point(492, 107);
+            this.maskedTextBoxDiscountRate.Mask = "00%";
+            this.maskedTextBoxDiscountRate.Name = "maskedTextBoxDiscountRate";
+            this.maskedTextBoxDiscountRate.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxDiscountRate.TabIndex = 19;
+            this.maskedTextBoxDiscountRate.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // textBoxVAT
             // 
@@ -262,23 +281,10 @@
             this.errorProviderQuantity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderQuantity.ContainerControl = this;
             // 
-            // maskedTextBoxDiscountRate
+            // errorProviderItem
             // 
-            this.maskedTextBoxDiscountRate.Location = new System.Drawing.Point(492, 107);
-            this.maskedTextBoxDiscountRate.Mask = "00%";
-            this.maskedTextBoxDiscountRate.Name = "maskedTextBoxDiscountRate";
-            this.maskedTextBoxDiscountRate.Size = new System.Drawing.Size(274, 20);
-            this.maskedTextBoxDiscountRate.TabIndex = 19;
-            this.maskedTextBoxDiscountRate.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // labelDiscountRate
-            // 
-            this.labelDiscountRate.AutoSize = true;
-            this.labelDiscountRate.Location = new System.Drawing.Point(415, 110);
-            this.labelDiscountRate.Name = "labelDiscountRate";
-            this.labelDiscountRate.Size = new System.Drawing.Size(71, 13);
-            this.labelDiscountRate.TabIndex = 20;
-            this.labelDiscountRate.Text = "Kedvezmény:";
+            this.errorProviderItem.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderItem.ContainerControl = this;
             // 
             // FormBillingItems
             // 
@@ -298,6 +304,7 @@
             this.groupBoxItemParameters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderItem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +336,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderQuantity;
         private System.Windows.Forms.Label labelDiscountRate;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxDiscountRate;
+        private System.Windows.Forms.ErrorProvider errorProviderItem;
     }
 }

@@ -163,6 +163,24 @@ namespace virtual_receptionist.Controllers
             }
         }
 
+        /// <summary>
+        /// Tétel validátor
+        /// </summary>
+        /// <param name="item">Tétel</param>
+        /// <exception cref="InvalidBllingItemParameterException"></exception>
+        public void ItemValidator(string item)
+        {
+            try
+            {
+                ItemValidation itemValidation = new ItemValidation(item);
+                itemValidation.ValidateItem();
+            }
+            catch (InvalidBllingItemParameterException exception)
+            {
+                throw exception;
+            }
+        }
+
         #endregion
     }
 }

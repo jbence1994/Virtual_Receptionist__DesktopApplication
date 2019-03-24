@@ -79,14 +79,45 @@ namespace virtual_receptionist.Views
                 textBoxQuantity.Clear();
                 errorProviderDiscount.Clear();
                 errorProviderQuantity.Clear();
+
+                if (listViewBillingItems.SelectedItems[0].SubItems[3].Text == "Tárgyi adó mentes")
+                {
+                    maskedTextBoxDiscountRate.Enabled = false;
+                }
+                else
+                {
+                    maskedTextBoxDiscountRate.Enabled = true;
+                }
             }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            string item = textBoxItem.Text;
+            bool validData = true;
+
+            string item = string.Empty;
+
+            try
+            {
+                errorProviderItem.Clear();
+                item = textBoxItem.Text;
+                controller.ItemValidator(item);
+            }
+            catch (InvalidBllingItemParameterException exception)
+            {
+                DialogResult = DialogResult.None;
+                errorProviderItem.SetError(textBoxItem, exception.Message);
+                validData = false;
+            }
+
             double price = Convert.ToDouble(textBoxPrice.Text);
+
+
             double finalPrice = Convert.ToDouble(textBoxPrice.Text);
+
+
+
+
             double discount = 0;
 
             if (maskedTextBoxDiscountRate.MaskFull)
@@ -108,25 +139,37 @@ namespace virtual_receptionist.Views
             {
                 DialogResult = DialogResult.None;
                 errorProviderQuantity.SetError(textBoxQuantity, exception.Message);
+                validData = false;
             }
             catch (OverflowException)
             {
                 DialogResult = DialogResult.None;
                 errorProviderQuantity.SetError(textBoxQuantity, "Érvénytelen mennyiség!");
+                validData = false;
             }
 
-            billingItems[0] = item;
+            if (validData)
+            {
+                billingItems[0] = item;
 
-            finalPrice = controller.GetDiscountPrice(price, discount);
-            finalPrice = controller.GetTotalPrice(finalPrice, Convert.ToInt32(quantity));
+                /*
+                 * Először, ha van, a kedvezményes árat számoljuk ki
+                 */
+                finalPrice = controller.GetDiscountPrice(price, discount);
 
-            billingItems[1] = price;
-            billingItems[2] = finalPrice;
-            billingItems[3] = $"{discount}%";
-            billingItems[4] = quantity;
-            billingItems[5] = unit;
-            billingItems[6] = vat;
-            billingItems[7] = category;
+                /*
+                 * A kedvezményes árképzés után számoljuk össze a mennyiségét
+                 */
+                finalPrice = controller.GetTotalPrice(finalPrice, Convert.ToInt32(quantity));
+
+                billingItems[1] = price;
+                billingItems[2] = finalPrice;
+                billingItems[3] = $"{discount}%";
+                billingItems[4] = quantity;
+                billingItems[5] = unit;
+                billingItems[6] = vat;
+                billingItems[7] = category;
+            }
         }
 
         private void maskedTextBoxItemDiscount_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
