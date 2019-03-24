@@ -122,11 +122,11 @@ namespace virtual_receptionist.Repository.MySQLConnection
             }
             catch (MySqlException e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
         }
 
@@ -145,11 +145,11 @@ namespace virtual_receptionist.Repository.MySQLConnection
             }
             catch (MySqlException e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
         }
 
@@ -186,11 +186,11 @@ namespace virtual_receptionist.Repository.MySQLConnection
             }
             catch (MySqlException e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
 
             CloseConnection();
@@ -219,11 +219,11 @@ namespace virtual_receptionist.Repository.MySQLConnection
             }
             catch (MySqlException e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
 
             CloseConnection();
@@ -254,11 +254,11 @@ namespace virtual_receptionist.Repository.MySQLConnection
             }
             catch (MySqlException e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                throw e;
             }
 
             CloseConnection();

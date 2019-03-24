@@ -23,16 +23,6 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         private BookingRepository bookingRepository;
 
-        /// <summary>
-        /// Országokat tartalmazó lista
-        /// </summary>
-        private List<Country> countries;
-
-        /// <summary>
-        /// Szobákat tároló lista
-        /// </summary>
-        private List<Room> rooms;
-
         #endregion
 
         #region Konstruktor
@@ -44,9 +34,6 @@ namespace virtual_receptionist.Controllers
         {
             countryRepository = new CountryRepository();
             bookingRepository = new BookingRepository();
-
-            countries = countryRepository.GetCountries();
-            rooms = bookingRepository.GetRooms();
         }
 
         #endregion
@@ -59,6 +46,8 @@ namespace virtual_receptionist.Controllers
         /// <returns>Az országnevekkel feltöltött listával tér vissza a metódus</returns>
         public List<string> GetCountries()
         {
+            List<Country> countries = countryRepository.GetCountries();
+
             List<string> countryNames = new List<string>();
 
             foreach (Country country in countries)
@@ -75,6 +64,8 @@ namespace virtual_receptionist.Controllers
         /// <returns></returns>
         public List<int> GetRooms()
         {
+            List<Room> rooms = bookingRepository.GetRooms();
+
             List<int> roomNumbers = new List<int>();
 
             foreach (Room room in rooms)
