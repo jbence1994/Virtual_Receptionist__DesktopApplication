@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 namespace virtual_receptionist.Repository.MySQLConnection
 {
     /// <summary>
-    /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály
+    /// Adatbázis kapcsolódást, adatlekérdezés és adatmanipulációs műveleteket megvalósító egyke osztály
     /// </summary>
     public sealed class Database
     {

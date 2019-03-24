@@ -10,7 +10,7 @@ namespace virtual_receptionist.Repository
         #region Adattagok
 
         /// <summary>
-        /// Adatbázis kapcsolódást és CRUD műveleteket megvalósító egyke osztály egy példánya
+        /// Adatbázis kapcsolódást, adatlekérdezés és adatmanipulációs műveleteket megvalósító egyke osztály egy példánya
         /// </summary>
         protected Database database;
 
