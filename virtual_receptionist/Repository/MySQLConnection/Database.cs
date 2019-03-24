@@ -110,8 +110,7 @@ namespace virtual_receptionist.Repository.MySQLConnection
         /// <summary>
         /// Adatbázis kapcsolatot megnyitó metódus
         /// </summary>
-        /// <returns>Amennyiben sikeres az adatbázis elérés logikai igazzal, ellenkező esetben logikai hamissal tér vissza a függvény</returns>
-        private bool OpenConnection()
+        private void OpenConnection()
         {
             try
             {
@@ -119,8 +118,6 @@ namespace virtual_receptionist.Repository.MySQLConnection
                 {
                     mySqlConnection.Open();
                     Debug.WriteLine("Sikeres adatbázis kapcsolódás...");
-
-                    return true;
                 }
             }
             catch (MySqlException e)
@@ -131,8 +128,6 @@ namespace virtual_receptionist.Repository.MySQLConnection
             {
                 Debug.WriteLine(e.Message);
             }
-
-            return false;
         }
 
         /// <summary>
