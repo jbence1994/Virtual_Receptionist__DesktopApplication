@@ -40,7 +40,7 @@ namespace virtual_receptionist.Views
             textBoxItem.Text = billingItems[0].ToString();
             textBoxPrice.Text = billingItems[1].ToString();
             maskedTextBoxDiscountRate.Text = billingItems[3].ToString();
-            textBoxQuantity.Text = billingItems[4].ToString();
+            numericUpDownQuantity.Text = billingItems[4].ToString();
             textBoxUnit.Text = billingItems[5].ToString();
             textBoxVAT.Text = billingItems[6].ToString();
             textBoxCategory.Text = billingItems[7].ToString();
@@ -76,7 +76,7 @@ namespace virtual_receptionist.Views
                 textBoxVAT.Text = $"{listViewBillingItems.SelectedItems[0].SubItems[2].Text}%";
                 textBoxCategory.Text = listViewBillingItems.SelectedItems[0].SubItems[3].Text;
                 textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
-                textBoxQuantity.Clear();
+                errorProviderBillingItem.Clear();
                 errorProviderDiscount.Clear();
                 errorProviderQuantity.Clear();
 
@@ -96,29 +96,23 @@ namespace virtual_receptionist.Views
             bool validData = true;
 
             string item = string.Empty;
+            double price = 0;
+            double finalPrice = 0;
+            double discount = 0;
 
             try
             {
-                errorProviderItem.Clear();
                 item = textBoxItem.Text;
-                controller.ItemValidator(item);
+                controller.BillingItemValidator(item);
+                price = Convert.ToDouble(textBoxPrice.Text);
+                finalPrice = Convert.ToDouble(textBoxPrice.Text);
             }
             catch (InvalidBllingItemParameterException exception)
             {
                 DialogResult = DialogResult.None;
-                errorProviderItem.SetError(textBoxItem, exception.Message);
+                errorProviderBillingItem.SetError(textBoxItem, exception.Message);
                 validData = false;
             }
-
-            double price = Convert.ToDouble(textBoxPrice.Text);
-
-
-            double finalPrice = Convert.ToDouble(textBoxPrice.Text);
-
-
-
-
-            double discount = 0;
 
             if (maskedTextBoxDiscountRate.MaskFull)
             {
@@ -128,7 +122,7 @@ namespace virtual_receptionist.Views
             string unit = textBoxUnit.Text;
             string vat = textBoxVAT.Text;
             string category = textBoxCategory.Text;
-            string quantity = textBoxQuantity.Text;
+            string quantity = numericUpDownQuantity.Text;
 
             try
             {
@@ -138,13 +132,13 @@ namespace virtual_receptionist.Views
             catch (InvalidBllingItemParameterException exception)
             {
                 DialogResult = DialogResult.None;
-                errorProviderQuantity.SetError(textBoxQuantity, exception.Message);
+                errorProviderQuantity.SetError(numericUpDownQuantity, exception.Message);
                 validData = false;
             }
             catch (OverflowException)
             {
                 DialogResult = DialogResult.None;
-                errorProviderQuantity.SetError(textBoxQuantity, "Érvénytelen mennyiség!");
+                errorProviderQuantity.SetError(textBoxUnit, "Érvénytelen mennyiség!");
                 validData = false;
             }
 
@@ -155,12 +149,12 @@ namespace virtual_receptionist.Views
                 /*
                  * Először, ha van, a kedvezményes árat számoljuk ki
                  */
-                finalPrice = controller.GetDiscountPrice(price, discount);
+                finalPrice = controller.GetDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
 
                 /*
                  * A kedvezményes árképzés után számoljuk össze a mennyiségét
                  */
-                finalPrice = controller.GetTotalPrice(finalPrice, Convert.ToInt32(quantity));
+                finalPrice = controller.GetTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
 
                 billingItems[1] = price;
                 billingItems[2] = finalPrice;
@@ -177,7 +171,7 @@ namespace virtual_receptionist.Views
             errorProviderDiscount.Clear();
         }
 
-        private void textBoxQuantity_TextChanged(object sender, EventArgs e)
+        private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             errorProviderQuantity.Clear();
         }

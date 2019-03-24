@@ -164,16 +164,16 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// Tétel validátor
+        /// Számlázási tétel validátor
         /// </summary>
-        /// <param name="item">Tétel</param>
+        /// <param name="billingItem">Számlázási tétel</param>
         /// <exception cref="InvalidBllingItemParameterException"></exception>
-        public void ItemValidator(string item)
+        public void BillingItemValidator(string billingItem)
         {
             try
             {
-                ItemValidation itemValidation = new ItemValidation(item);
-                itemValidation.ValidateItem();
+                BillingItemValidation itemValidation = new BillingItemValidation(billingItem);
+                itemValidation.ValidateBillingItem();
             }
             catch (InvalidBllingItemParameterException exception)
             {

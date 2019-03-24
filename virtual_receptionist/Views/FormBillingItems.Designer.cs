@@ -43,7 +43,6 @@
             this.textBoxUnit = new System.Windows.Forms.TextBox();
             this.labelQuantity = new System.Windows.Forms.Label();
             this.labelUnit = new System.Windows.Forms.Label();
-            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.groupBoxItemParameters = new System.Windows.Forms.GroupBox();
             this.labelDiscountRate = new System.Windows.Forms.Label();
             this.maskedTextBoxDiscountRate = new System.Windows.Forms.MaskedTextBox();
@@ -55,11 +54,13 @@
             this.labelVAT = new System.Windows.Forms.Label();
             this.errorProviderDiscount = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderItem = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderBillingItem = new System.Windows.Forms.ErrorProvider(this.components);
+            this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.groupBoxItemParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderBillingItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewBillingItems
@@ -152,7 +153,7 @@
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(425, 84);
+            this.labelQuantity.Location = new System.Drawing.Point(425, 83);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(61, 13);
             this.labelQuantity.TabIndex = 0;
@@ -167,15 +168,9 @@
             this.labelUnit.TabIndex = 0;
             this.labelUnit.Text = "Egység:";
             // 
-            // textBoxQuantity
-            // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(492, 81);
-            this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(274, 20);
-            this.textBoxQuantity.TabIndex = 2;
-            // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.numericUpDownQuantity);
             this.groupBoxItemParameters.Controls.Add(this.labelDiscountRate);
             this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxDiscountRate);
             this.groupBoxItemParameters.Controls.Add(this.textBoxVAT);
@@ -185,7 +180,6 @@
             this.groupBoxItemParameters.Controls.Add(this.buttonOK);
             this.groupBoxItemParameters.Controls.Add(this.labelVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelItem);
-            this.groupBoxItemParameters.Controls.Add(this.textBoxQuantity);
             this.groupBoxItemParameters.Controls.Add(this.textBoxItem);
             this.groupBoxItemParameters.Controls.Add(this.labelQuantity);
             this.groupBoxItemParameters.Controls.Add(this.labelUnit);
@@ -281,10 +275,23 @@
             this.errorProviderQuantity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderQuantity.ContainerControl = this;
             // 
-            // errorProviderItem
+            // errorProviderBillingItem
             // 
-            this.errorProviderItem.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProviderItem.ContainerControl = this;
+            this.errorProviderBillingItem.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderBillingItem.ContainerControl = this;
+            // 
+            // numericUpDownQuantity
+            // 
+            this.numericUpDownQuantity.Location = new System.Drawing.Point(492, 81);
+            this.numericUpDownQuantity.Name = "numericUpDownQuantity";
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(274, 20);
+            this.numericUpDownQuantity.TabIndex = 21;
+            this.numericUpDownQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownQuantity.ValueChanged += new System.EventHandler(this.numericUpDownQuantity_ValueChanged);
             // 
             // FormBillingItems
             // 
@@ -304,7 +311,8 @@
             this.groupBoxItemParameters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderBillingItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,7 +330,6 @@
         private System.Windows.Forms.TextBox textBoxUnit;
         private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Label labelUnit;
-        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.GroupBox groupBoxItemParameters;
         private System.Windows.Forms.Label labelVAT;
         private System.Windows.Forms.ColumnHeader columnHeaderVAT;
@@ -336,6 +343,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderQuantity;
         private System.Windows.Forms.Label labelDiscountRate;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxDiscountRate;
-        private System.Windows.Forms.ErrorProvider errorProviderItem;
+        private System.Windows.Forms.ErrorProvider errorProviderBillingItem;
+        private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
     }
 }
