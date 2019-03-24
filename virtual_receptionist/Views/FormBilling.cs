@@ -187,7 +187,14 @@ namespace virtual_receptionist.Views
         private void buttonPrintInvoice_Click(object sender, EventArgs e)
         {
             int bookingID = Convert.ToInt32(listViewToBill.SelectedItems[0].Text);
+
+            /**
+             * Csak átállítja adatbázisban fizetettre a foglalást!
+             */
             controller.PrintInvoice(bookingID);
+
+            MessageBox.Show("PDF számla generálás fejlesztése folyamatban...", "", MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
         }
 
         #endregion
