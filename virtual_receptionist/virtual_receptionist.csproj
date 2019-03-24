@@ -83,8 +83,8 @@
     <Compile Include="Repository\BillingRepository.cs" />
     <Compile Include="Repository\BookingRepository.cs" />
     <Compile Include="Repository\GuestRepository.cs" />
-    <Compile Include="Repository\MySQLInterface\Database.cs" />
-    <Compile Include="Repository\MySQLInterface\InvalidConnectionTypeException.cs" />
+    <Compile Include="Repository\MySQLConnection\Database.cs" />
+    <Compile Include="Repository\MySQLConnection\InvalidConnectionTypeException.cs" />
     <Compile Include="Views\FormAddBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,7 +188,7 @@
     <EmbeddedResource Include="Views\FormUpdateBooking.resx">
       <DependentUpon>FormUpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Repository\MySQLInterface\MySQL_Interface System Design.cd" />
+    <None Include="Repository\MySQLConnection\MySQL_Interface System Design.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

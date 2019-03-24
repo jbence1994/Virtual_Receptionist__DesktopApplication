@@ -1,6 +1,6 @@
 ﻿using virtual_receptionist.Repository.Models;
 using System.Data;
-using virtual_receptionist.Repository.MySQLInterface;
+using virtual_receptionist.Repository.MySQLConnection;
 using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Repository

@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Repository.MySQLInterface;
+﻿using virtual_receptionist.Repository.MySQLConnection;
 
 namespace virtual_receptionist.Repository
 {
