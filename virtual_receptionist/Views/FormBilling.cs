@@ -95,7 +95,7 @@ namespace virtual_receptionist.Views
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            FormBillingItems billingItems = new FormBillingItems("", "", "", "", "", "", "", "");
+            FormBillingItems billingItems = new FormBillingItems("", "", "", "", 1, "", "", "");
 
             if (billingItems.ShowDialog() == DialogResult.OK)
             {
