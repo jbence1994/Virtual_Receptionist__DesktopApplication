@@ -156,7 +156,7 @@ namespace virtual_receptionist.Views
 
             for (int i = 0; i < dataGridViewItems.Rows.Count; i++)
             {
-                total += Convert.ToDouble(dataGridViewItems.Rows[i].Cells[1].Value);
+                total += Convert.ToDouble(dataGridViewItems.Rows[i].Cells[2].Value);
             }
 
             textBoxTotalPrice.Text = total.ToString();
@@ -168,7 +168,7 @@ namespace virtual_receptionist.Views
 
             for (int i = 0; i < dataGridViewItems.Rows.Count; i++)
             {
-                total += Convert.ToDouble(dataGridViewItems.Rows[i].Cells[1].Value);
+                total += Convert.ToDouble(dataGridViewItems.Rows[i].Cells[2].Value);
             }
 
             textBoxTotalPrice.Text = total.ToString();
