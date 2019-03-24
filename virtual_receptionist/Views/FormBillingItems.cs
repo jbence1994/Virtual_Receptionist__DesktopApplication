@@ -39,10 +39,10 @@ namespace virtual_receptionist.Views
 
             textBoxItem.Text = billingItems[0].ToString();
             textBoxPrice.Text = billingItems[1].ToString();
-            textBoxUnit.Text = billingItems[2].ToString();
-            textBoxQuantity.Text = billingItems[3].ToString();
-            textBoxVAT.Text = billingItems[4].ToString();
-            textBoxCategory.Text = billingItems[5].ToString();
+            textBoxQuantity.Text = billingItems[4].ToString();
+            textBoxUnit.Text = billingItems[5].ToString();
+            textBoxVAT.Text = billingItems[6].ToString();
+            textBoxCategory.Text = billingItems[7].ToString();
         }
 
         #endregion
@@ -85,6 +85,14 @@ namespace virtual_receptionist.Views
         {
             string item = textBoxItem.Text;
             double price = Convert.ToDouble(textBoxPrice.Text);
+            double discountPrice = Convert.ToDouble(textBoxPrice.Text);
+            double discount = 0;
+
+            if (maskedTextBoxDiscountRate.MaskFull)
+            {
+                discount = Convert.ToDouble(maskedTextBoxDiscountRate.Text);
+            }
+
             string unit = textBoxUnit.Text;
             string vat = textBoxVAT.Text;
             string category = textBoxCategory.Text;
@@ -107,12 +115,16 @@ namespace virtual_receptionist.Views
             }
 
             billingItems[0] = item;
-            price = controller.GetTotalPrice(price, Convert.ToInt32(quantity));
+
+            discountPrice = controller.GetTotalPrice(discountPrice, Convert.ToInt32(quantity));
+
             billingItems[1] = price;
-            billingItems[2] = unit;
-            billingItems[3] = quantity;
-            billingItems[4] = vat;
-            billingItems[5] = category;
+            billingItems[2] = discountPrice;
+            billingItems[3] = $"{discount}%";
+            billingItems[4] = quantity;
+            billingItems[5] = unit;
+            billingItems[6] = vat;
+            billingItems[7] = category;
         }
 
         private void maskedTextBoxItemDiscount_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

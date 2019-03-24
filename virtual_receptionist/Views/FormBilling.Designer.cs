@@ -62,11 +62,11 @@
             this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.labelTotalPrice = new System.Windows.Forms.Label();
             this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDiscountPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
@@ -87,11 +87,11 @@
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnItem,
+            this.ColumnUnitPrice,
             this.ColumnPrice,
             this.ColumnDiscount,
-            this.ColumnDiscountPrice,
-            this.ColumnUnit,
             this.ColumnQuantity,
+            this.ColumnUnit,
             this.ColumnVAT,
             this.ColumnCategory});
             this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
@@ -400,6 +400,12 @@
             this.ColumnItem.Name = "ColumnItem";
             this.ColumnItem.ReadOnly = true;
             // 
+            // ColumnUnitPrice
+            // 
+            this.ColumnUnitPrice.HeaderText = "Egységár";
+            this.ColumnUnitPrice.Name = "ColumnUnitPrice";
+            this.ColumnUnitPrice.ReadOnly = true;
+            // 
             // ColumnPrice
             // 
             this.ColumnPrice.HeaderText = "Ár";
@@ -412,23 +418,17 @@
             this.ColumnDiscount.Name = "ColumnDiscount";
             this.ColumnDiscount.ReadOnly = true;
             // 
-            // ColumnDiscountPrice
+            // ColumnQuantity
             // 
-            this.ColumnDiscountPrice.HeaderText = "Kedvezményes ár";
-            this.ColumnDiscountPrice.Name = "ColumnDiscountPrice";
-            this.ColumnDiscountPrice.ReadOnly = true;
+            this.ColumnQuantity.HeaderText = "Mennyiség";
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
             // 
             // ColumnUnit
             // 
             this.ColumnUnit.HeaderText = "Egység";
             this.ColumnUnit.Name = "ColumnUnit";
             this.ColumnUnit.ReadOnly = true;
-            // 
-            // ColumnQuantity
-            // 
-            this.ColumnQuantity.HeaderText = "Mennyiség";
-            this.ColumnQuantity.Name = "ColumnQuantity";
-            this.ColumnQuantity.ReadOnly = true;
             // 
             // ColumnVAT
             // 
@@ -506,11 +506,11 @@
         private System.Windows.Forms.TextBox textBoxTotalPrice;
         private System.Windows.Forms.Label labelTotalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiscount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiscountPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVAT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategory;
     }

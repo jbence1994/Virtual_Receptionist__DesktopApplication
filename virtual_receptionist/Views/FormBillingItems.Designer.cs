@@ -53,6 +53,8 @@
             this.labelVAT = new System.Windows.Forms.Label();
             this.errorProviderDiscount = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
+            this.maskedTextBoxDiscountRate = new System.Windows.Forms.MaskedTextBox();
+            this.labelDiscountRate = new System.Windows.Forms.Label();
             this.groupBoxItemParameters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
@@ -173,6 +175,8 @@
             // 
             // groupBoxItemParameters
             // 
+            this.groupBoxItemParameters.Controls.Add(this.labelDiscountRate);
+            this.groupBoxItemParameters.Controls.Add(this.maskedTextBoxDiscountRate);
             this.groupBoxItemParameters.Controls.Add(this.textBoxVAT);
             this.groupBoxItemParameters.Controls.Add(this.labelCategory);
             this.groupBoxItemParameters.Controls.Add(this.textBoxCategory);
@@ -258,6 +262,24 @@
             this.errorProviderQuantity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderQuantity.ContainerControl = this;
             // 
+            // maskedTextBoxDiscountRate
+            // 
+            this.maskedTextBoxDiscountRate.Location = new System.Drawing.Point(492, 107);
+            this.maskedTextBoxDiscountRate.Mask = "00%";
+            this.maskedTextBoxDiscountRate.Name = "maskedTextBoxDiscountRate";
+            this.maskedTextBoxDiscountRate.Size = new System.Drawing.Size(274, 20);
+            this.maskedTextBoxDiscountRate.TabIndex = 19;
+            this.maskedTextBoxDiscountRate.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // labelDiscountRate
+            // 
+            this.labelDiscountRate.AutoSize = true;
+            this.labelDiscountRate.Location = new System.Drawing.Point(415, 110);
+            this.labelDiscountRate.Name = "labelDiscountRate";
+            this.labelDiscountRate.Size = new System.Drawing.Size(71, 13);
+            this.labelDiscountRate.TabIndex = 20;
+            this.labelDiscountRate.Text = "Kedvezmény:";
+            // 
             // FormBillingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,5 +327,7 @@
         private System.Windows.Forms.TextBox textBoxVAT;
         private System.Windows.Forms.ErrorProvider errorProviderDiscount;
         private System.Windows.Forms.ErrorProvider errorProviderQuantity;
+        private System.Windows.Forms.Label labelDiscountRate;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDiscountRate;
     }
 }

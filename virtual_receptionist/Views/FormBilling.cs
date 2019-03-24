@@ -95,7 +95,7 @@ namespace virtual_receptionist.Views
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            FormBillingItems billingItems = new FormBillingItems("", "", "", "", "", "", "");
+            FormBillingItems billingItems = new FormBillingItems("", "", "", "", "", "", "", "");
 
             if (billingItems.ShowDialog() == DialogResult.OK)
             {
@@ -110,14 +110,15 @@ namespace virtual_receptionist.Views
             {
                 object item = dataGridViewItems.SelectedRows[0].Cells[0].Value;
                 object price = dataGridViewItems.SelectedRows[0].Cells[1].Value;
-                object discount = dataGridViewItems.SelectedRows[0].Cells[2].Value;
-                object unit = dataGridViewItems.SelectedRows[0].Cells[4].Value;
-                object quantity = dataGridViewItems.SelectedRows[0].Cells[5].Value;
+                object discountPrice = dataGridViewItems.SelectedRows[0].Cells[2].Value;
+                object discount = dataGridViewItems.SelectedRows[0].Cells[3].Value;
+                object quantity = dataGridViewItems.SelectedRows[0].Cells[4].Value;
+                object unit = dataGridViewItems.SelectedRows[0].Cells[5].Value;
                 object vat = dataGridViewItems.SelectedRows[0].Cells[6].Value;
                 object category = dataGridViewItems.SelectedRows[0].Cells[7].Value;
 
                 FormBillingItems billingItems =
-                    new FormBillingItems(item, price, unit, quantity, vat, category, discount);
+                    new FormBillingItems(item, price, discountPrice, discount, quantity, unit, vat, category);
 
                 if (billingItems.ShowDialog() == DialogResult.OK)
                 {
