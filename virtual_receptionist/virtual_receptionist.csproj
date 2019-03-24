@@ -189,6 +189,7 @@
     <EmbeddedResource Include="Views\FormUpdateBooking.resx">
       <DependentUpon>FormUpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Controllers\ControllerSystemDesing.cd" />
     <None Include="Repositories\RepositorySystemDesign.cd" />
     <None Include="Repositories\MySQLConnection\MySQLConnection.cd" />
     <None Include="Properties\Settings.settings">
