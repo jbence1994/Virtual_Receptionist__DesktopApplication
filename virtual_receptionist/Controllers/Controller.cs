@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using virtual_receptionist.Repository.Models;
-using virtual_receptionist.Repository;
+using virtual_receptionist.Repositories.Models;
+using virtual_receptionist.Repositories;
 using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Controllers.Validation;
 

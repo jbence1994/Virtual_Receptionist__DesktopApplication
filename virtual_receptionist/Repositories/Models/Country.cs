@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.Repository.Models
+﻿namespace virtual_receptionist.Repositories.Models
 {
     /// <summary>
     /// Ország egyed

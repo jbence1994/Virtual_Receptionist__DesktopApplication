@@ -4,7 +4,7 @@ using System.Data;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 
-namespace virtual_receptionist.Repository.MySQLConnection
+namespace virtual_receptionist.Repositories.MySQLConnection
 {
     /// <summary>
     /// Adatbázis kapcsolódást, adatlekérdezés és adatmanipulációs műveleteket megvalósító egyke osztály

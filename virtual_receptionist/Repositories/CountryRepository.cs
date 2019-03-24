@@ -1,8 +1,8 @@
-﻿using virtual_receptionist.Repository.Models;
+﻿using virtual_receptionist.Repositories.Models;
 using System.Collections.Generic;
 using System.Data;
 
-namespace virtual_receptionist.Repository
+namespace virtual_receptionist.Repositories
 {
     /// <summary>
     /// Országok adattár

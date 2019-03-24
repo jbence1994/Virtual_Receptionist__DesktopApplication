@@ -1,6 +1,6 @@
-﻿using virtual_receptionist.Repository;
+﻿using virtual_receptionist.Repositories;
 using virtual_receptionist.Views;
-using virtual_receptionist.Repository.Models;
+using virtual_receptionist.Repositories.Models;
 
 namespace virtual_receptionist.Controllers
 {

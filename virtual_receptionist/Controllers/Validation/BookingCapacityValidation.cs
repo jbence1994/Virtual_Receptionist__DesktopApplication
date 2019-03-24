@@ -1,5 +1,5 @@
 ﻿using virtual_receptionist.Controllers.Exceptions;
-using virtual_receptionist.Repository.Models;
+using virtual_receptionist.Repositories.Models;
 
 namespace virtual_receptionist.Controllers.Validation
 {

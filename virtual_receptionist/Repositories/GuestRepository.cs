@@ -1,10 +1,10 @@
-﻿using virtual_receptionist.Repository.DAO;
+﻿using virtual_receptionist.Repositories.DAO;
 using System.Collections.Generic;
-using virtual_receptionist.Repository.Models;
+using virtual_receptionist.Repositories.Models;
 using System.Data;
 using System;
 
-namespace virtual_receptionist.Repository
+namespace virtual_receptionist.Repositories
 {
     /// <summary>
     /// Vendég adattár

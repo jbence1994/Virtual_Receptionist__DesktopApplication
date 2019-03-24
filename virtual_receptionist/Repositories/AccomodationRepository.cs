@@ -1,9 +1,9 @@
-﻿using virtual_receptionist.Repository.Models;
+﻿using virtual_receptionist.Repositories.Models;
 using System.Data;
-using virtual_receptionist.Repository.MySQLConnection;
+using virtual_receptionist.Repositories.MySQLConnection;
 using virtual_receptionist.Controllers.Exceptions;
 
-namespace virtual_receptionist.Repository
+namespace virtual_receptionist.Repositories
 {
     /// <summary>
     /// Szálláshely adattár
