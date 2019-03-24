@@ -189,8 +189,8 @@
     <EmbeddedResource Include="Views\FormUpdateBooking.resx">
       <DependentUpon>FormUpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Controllers\ControllerSystemDesing.cd" />
-    <None Include="Repositories\RepositorySystemDesign.cd" />
+    <None Include="SystemDesign\ControllerSystemDesing.cd" />
+    <None Include="SystemDesign\RepositorySystemDesign.cd" />
     <None Include="Repositories\MySQLConnection\MySQLConnection.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -201,7 +201,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Views\ViewSystemDesign.cd" />
+    <None Include="SystemDesign\ViewSystemDesign.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
