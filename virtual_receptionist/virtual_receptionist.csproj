@@ -78,7 +78,7 @@
     <Compile Include="Repository\CountryRepository.cs" />
     <Compile Include="Repository\Models\Accomodation.cs" />
     <Compile Include="Repository\Models\BillingItemCategory.cs" />
-    <Compile Include="Repository\DAO\IManipulable.cs" />
+    <Compile Include="Repository\DAO\IGenericDAO.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Repository\BillingRepository.cs" />
     <Compile Include="Repository\BookingRepository.cs" />
