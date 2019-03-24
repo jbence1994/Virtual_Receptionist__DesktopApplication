@@ -39,6 +39,7 @@ namespace virtual_receptionist.Views
 
             textBoxItem.Text = billingItems[0].ToString();
             textBoxPrice.Text = billingItems[1].ToString();
+            maskedTextBoxDiscountRate.Text = billingItems[3].ToString();
             textBoxQuantity.Text = billingItems[4].ToString();
             textBoxUnit.Text = billingItems[5].ToString();
             textBoxVAT.Text = billingItems[6].ToString();
@@ -116,8 +117,8 @@ namespace virtual_receptionist.Views
 
             billingItems[0] = item;
 
-            finalPrice = controller.GetTotalPrice(finalPrice, Convert.ToInt32(quantity));
             finalPrice = controller.GetDiscountPrice(price, discount);
+            finalPrice = controller.GetTotalPrice(finalPrice, Convert.ToInt32(quantity));
 
             billingItems[1] = price;
             billingItems[2] = finalPrice;
