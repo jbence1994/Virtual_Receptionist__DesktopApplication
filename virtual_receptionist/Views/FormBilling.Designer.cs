@@ -63,11 +63,12 @@
             this.labelTotalPrice = new System.Windows.Forms.Label();
             this.ColumnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDiscountPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.groupBoxBillingData.SuspendLayout();
             this.groupBoxBookingToBill.SuspendLayout();
@@ -87,11 +88,12 @@
             this.dataGridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnItem,
             this.ColumnPrice,
+            this.ColumnDiscount,
+            this.ColumnDiscountPrice,
             this.ColumnUnit,
             this.ColumnQuantity,
             this.ColumnVAT,
-            this.ColumnCategory,
-            this.ColumnDiscount});
+            this.ColumnCategory});
             this.dataGridViewItems.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewItems.MultiSelect = false;
             this.dataGridViewItems.Name = "dataGridViewItems";
@@ -404,6 +406,18 @@
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
             // 
+            // ColumnDiscount
+            // 
+            this.ColumnDiscount.HeaderText = "Kedvezmény";
+            this.ColumnDiscount.Name = "ColumnDiscount";
+            this.ColumnDiscount.ReadOnly = true;
+            // 
+            // ColumnDiscountPrice
+            // 
+            this.ColumnDiscountPrice.HeaderText = "Kedvezményes ár";
+            this.ColumnDiscountPrice.Name = "ColumnDiscountPrice";
+            this.ColumnDiscountPrice.ReadOnly = true;
+            // 
             // ColumnUnit
             // 
             this.ColumnUnit.HeaderText = "Egység";
@@ -427,12 +441,6 @@
             this.ColumnCategory.HeaderText = "Kategória";
             this.ColumnCategory.Name = "ColumnCategory";
             this.ColumnCategory.ReadOnly = true;
-            // 
-            // ColumnDiscount
-            // 
-            this.ColumnDiscount.HeaderText = "Tétel kedvezmény";
-            this.ColumnDiscount.Name = "ColumnDiscount";
-            this.ColumnDiscount.ReadOnly = true;
             // 
             // FormBilling
             // 
@@ -499,10 +507,11 @@
         private System.Windows.Forms.Label labelTotalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiscount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiscountPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVAT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiscount;
     }
 }
