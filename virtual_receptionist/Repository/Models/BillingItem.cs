@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.Models.ORM
+﻿namespace virtual_receptionist.Repository.Models
 {
     /// <summary>
     /// Számlázási tételek egyed

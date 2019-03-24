@@ -1,14 +1,15 @@
-﻿using virtual_receptionist.Models.ORM;
+﻿using virtual_receptionist.Repository.DAO;
 using System.Collections.Generic;
+using virtual_receptionist.Repository.Models;
 using System.Data;
 using System;
 
-namespace virtual_receptionist.Models.Data
+namespace virtual_receptionist.Repository
 {
     /// <summary>
     /// Vendég adattár
     /// </summary>
-    public class GuestRepository : Repository, IManipulable<Guest>
+    public class GuestRepository : Repository, IGenericDAO<Guest>
     {
         #region Adattagok
 

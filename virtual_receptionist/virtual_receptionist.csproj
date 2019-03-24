@@ -74,17 +74,17 @@
     <Compile Include="Controllers\Validation\VATNumberValidation.cs" />
     <Compile Include="Controllers\Validation\BillingItemQuantityValidation.cs" />
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
-    <Compile Include="Models\Data\AccomodationRepository.cs" />
-    <Compile Include="Models\Data\CountryRepository.cs" />
-    <Compile Include="Models\ORM\Accomodation.cs" />
-    <Compile Include="Models\ORM\BillingItemCategory.cs" />
-    <Compile Include="Models\Data\IManipulable.cs" />
+    <Compile Include="Repository\AccomodationRepository.cs" />
+    <Compile Include="Repository\CountryRepository.cs" />
+    <Compile Include="Repository\Models\Accomodation.cs" />
+    <Compile Include="Repository\Models\BillingItemCategory.cs" />
+    <Compile Include="Repository\DAO\IManipulable.cs" />
     <Compile Include="Controllers\BookingController.cs" />
-    <Compile Include="Models\Data\BillingRepository.cs" />
-    <Compile Include="Models\Data\BookingRepository.cs" />
-    <Compile Include="Models\Data\GuestRepository.cs" />
-    <Compile Include="Models\MySQLInterface\Database.cs" />
-    <Compile Include="Models\MySQLInterface\InvalidConnectionTypeException.cs" />
+    <Compile Include="Repository\BillingRepository.cs" />
+    <Compile Include="Repository\BookingRepository.cs" />
+    <Compile Include="Repository\GuestRepository.cs" />
+    <Compile Include="Repository\MySQLInterface\Database.cs" />
+    <Compile Include="Repository\MySQLInterface\InvalidConnectionTypeException.cs" />
     <Compile Include="Views\FormAddBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +106,9 @@
     <Compile Include="Views\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ORM\BillingItem.cs" />
-    <Compile Include="Models\ORM\Country.cs" />
-    <Compile Include="Models\Data\Repository.cs" />
+    <Compile Include="Repository\Models\BillingItem.cs" />
+    <Compile Include="Repository\Models\Country.cs" />
+    <Compile Include="Repository\Repository.cs" />
     <Compile Include="Views\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,13 +139,13 @@
     <Compile Include="Views\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ORM\Guest.cs" />
+    <Compile Include="Repository\Models\Guest.cs" />
     <Compile Include="Controllers\GuestDatabaseController.cs" />
     <Compile Include="Controllers\Validation\InputValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\ORM\Booking.cs" />
-    <Compile Include="Models\ORM\Room.cs" />
+    <Compile Include="Repository\Models\Booking.cs" />
+    <Compile Include="Repository\Models\Room.cs" />
     <Compile Include="Views\FormUpdateBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,7 +188,7 @@
     <EmbeddedResource Include="Views\FormUpdateBooking.resx">
       <DependentUpon>FormUpdateBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Models\MySQLInterface\MySQL_Interface System Design.cd" />
+    <None Include="Repository\MySQLInterface\MySQL_Interface System Design.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,6 +1,6 @@
-﻿using virtual_receptionist.Models.MySQLInterface;
+﻿using virtual_receptionist.Repository.MySQLInterface;
 
-namespace virtual_receptionist.Models.Data
+namespace virtual_receptionist.Repository
 {
     /// <summary>
     /// Az alkalmazáshoz szükséges adatbázis adatokat perzisztensen tároló adattár osztály

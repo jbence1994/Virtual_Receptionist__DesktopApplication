@@ -3,8 +3,8 @@ using System.Data;
 using System.Collections.Generic;
 using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Controllers.Validation;
-using virtual_receptionist.Models.Data;
-using virtual_receptionist.Models.ORM;
+using virtual_receptionist.Repository;
+using virtual_receptionist.Repository.Models;
 
 namespace virtual_receptionist.Controllers
 {

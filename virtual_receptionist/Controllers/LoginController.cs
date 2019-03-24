@@ -1,5 +1,5 @@
 ﻿using virtual_receptionist.Controllers.Exceptions;
-using virtual_receptionist.Models.Data;
+using virtual_receptionist.Repository;
 using System;
 
 namespace virtual_receptionist.Controllers

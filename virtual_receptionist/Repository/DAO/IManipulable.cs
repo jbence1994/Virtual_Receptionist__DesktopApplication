@@ -1,10 +1,10 @@
-﻿namespace virtual_receptionist.Models.Data
+﻿namespace virtual_receptionist.Repository.DAO
 {
     /// <summary>
     /// Adatmanipulációt objektumokon leíró generikus interfész
     /// </summary>
     /// <typeparam name="T">Típus</typeparam>
-    public interface IManipulable<T> where T : class
+    public interface IGenericDAO<T> where T : class
     {
         /// <summary>
         /// Új elem létrehozása

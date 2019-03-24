@@ -1,8 +1,8 @@
-﻿using virtual_receptionist.Models.ORM;
+﻿using virtual_receptionist.Repository.Models;
 using System.Collections.Generic;
 using System.Data;
 
-namespace virtual_receptionist.Models.Data
+namespace virtual_receptionist.Repository
 {
     /// <summary>
     /// Számlázás adattár

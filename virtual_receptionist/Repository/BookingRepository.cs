@@ -1,14 +1,15 @@
-﻿using virtual_receptionist.Models.ORM;
+﻿using virtual_receptionist.Repository.Models;
 using System.Collections.Generic;
 using System;
 using System.Data;
+using virtual_receptionist.Repository.DAO;
 
-namespace virtual_receptionist.Models.Data
+namespace virtual_receptionist.Repository
 {
     /// <summary>
     /// Foglalások adattár
     /// </summary>
-    public class BookingRepository : Repository, IManipulable<Booking>
+    public class BookingRepository : Repository, IGenericDAO<Booking>
     {
         #region Adattagok
 

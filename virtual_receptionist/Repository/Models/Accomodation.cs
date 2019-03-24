@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace virtual_receptionist.Models.ORM
+﻿namespace virtual_receptionist.Repository.Models
 {
     /// <summary>
     /// Szálláshely egyed
