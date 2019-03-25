@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("virtual_receptionistInputValidationTests")]
+[assembly: AssemblyTitle("virtual_receptionistTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("virtual_receptionistInputValidationTests")]
+[assembly: AssemblyProduct("virtual_receptionistTests")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8f0d3a6e-7dc3-4938-bfdf-76b3eee64743")]
+[assembly: Guid("4d0a1417-d8d1-4283-b1ae-dc97b745771c")]
 
 // Version information for an assembly consists of the following four values:
 //

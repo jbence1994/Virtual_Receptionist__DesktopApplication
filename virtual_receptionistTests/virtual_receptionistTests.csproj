@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FEBBD7D0-1C3D-4491-AF90-22E2279D50F2}</ProjectGuid>
+    <ProjectGuid>{4D0A1417-D8D1-4283-B1AE-DC97B745771C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>virtual_receptionist.Repositories.BillingTests</RootNamespace>
-    <AssemblyName>virtual_receptionistBillingTests</AssemblyName>
+    <RootNamespace>virtual_receptionistTests</RootNamespace>
+    <AssemblyName>virtual_receptionistTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BillingTests.cs" />
+    <Compile Include="InputValidationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
