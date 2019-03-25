@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Controllers.Exceptions;
+using virtual_receptionist.Repositories.Models;
 
 namespace virtual_receptionistTests.InputValidation
 {
@@ -421,6 +422,130 @@ namespace virtual_receptionistTests.InputValidation
                 validation.ValidateCitizenship();
             }
             catch (InvalidCitizenshipException)
+            {
+            }
+        }
+
+        #endregion
+
+        #region Foglalás szobakapcitás és vendég szám ellenőrző tesztek
+
+        [TestMethod()]
+        public void ValidateBookingCapacity_InCaseNumberOfGuestAreMoreThanRoomCapacity()
+        {
+            Room roomTestObject = new Room();
+            roomTestObject.Name = "Családi szoba";
+            roomTestObject.Capacity = 4;
+
+            Booking bookingTestObject = new Booking();
+
+            bookingTestObject.Room = roomTestObject;
+            bookingTestObject.NumberOfGuests = 5;
+
+            try
+            {
+                BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(bookingTestObject, roomTestObject);
+                bookingCapacityValidation.ValidateBookingCapacity();
+                Assert.Fail("Nem dob kivételt üres állampolgárságra!");
+            }
+            catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+        [TestMethod()]
+        public void ValidateBookingCapacity_InCaseNumberOfGuestAreLessThanRoomCapacity()
+        {
+            Room room = new Room();
+            room.Name = "Háromágyas szoba";
+            room.Capacity = 3;
+
+            Booking booking = new Booking();
+
+            booking.Room = room;
+            booking.NumberOfGuests = 3;
+
+            try
+            {
+                BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(booking, room);
+                bookingCapacityValidation.ValidateBookingCapacity();
+            }
+            catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+        #endregion
+
+        #region Foglalás időpont tesztek
+
+        [TestMethod()]
+        public void ValidateBookingDate_InCaseBookingArrivalDateIsEqualToDepartureDate()
+        {
+            Booking bookingTestObject = new Booking();
+            bookingTestObject.ArrivalDate = "2019-03-25";
+            bookingTestObject.DepartureDate = "2019-03-25";
+
+            try
+            {
+                BookingDateValidation bookingDateValidation = new BookingDateValidation(bookingTestObject);
+                bookingDateValidation.ValidateBookingDate();
+                Assert.Fail("Nem dob kivételt, amennyiben az érkezés dátuma megegyezik a távozás dátuma!");
+            }
+            catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+        [TestMethod()]
+        public void ValidateBookingDate_InCaseBookingArrivalDateNotEqualToDepartureDate()
+        {
+            Booking bookingTestObject = new Booking();
+            bookingTestObject.ArrivalDate = "2019-03-25";
+            bookingTestObject.DepartureDate = "2019-03-26";
+
+            try
+            {
+                BookingDateValidation bookingDateValidation = new BookingDateValidation(bookingTestObject);
+                bookingDateValidation.ValidateBookingDate();
+            }
+            catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+
+        [TestMethod()]
+        public void ValidateBookingDate_InCaseBookingArrivalDateIsMoreThanDepartureDate()
+        {
+            Booking bookingTestObject = new Booking();
+            bookingTestObject.ArrivalDate = "2019-03-27";
+            bookingTestObject.DepartureDate = "2019-03-26";
+
+            try
+            {
+                BookingDateValidation bookingDateValidation = new BookingDateValidation(bookingTestObject);
+                bookingDateValidation.ValidateBookingDate();
+                Assert.Fail("Nem dob kivételt, ha az érkezés dátuma később van, mint a távozás dátuma!");
+            }
+            catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+        [TestMethod()]
+        public void ValidateBookingDate_InCaseBookingArrivalDateIsLessThanDepartureDate()
+        {
+            Booking bookingTestObject = new Booking();
+            bookingTestObject.ArrivalDate = "2019-03-25";
+            bookingTestObject.DepartureDate = "2019-03-26";
+
+            try
+            {
+                BookingDateValidation bookingDateValidation = new BookingDateValidation(bookingTestObject);
+                bookingDateValidation.ValidateBookingDate();
+            }
+            catch (InvalidBookingParameterException)
             {
             }
         }
