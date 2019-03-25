@@ -1,4 +1,0 @@
-IPcím:10.0.128.111
-felhasznlónév: diak
-jelszó:vakudmin
-mappa: /var/www/...
