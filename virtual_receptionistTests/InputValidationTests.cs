@@ -456,18 +456,18 @@ namespace virtual_receptionistTests.InputValidation
         [TestMethod()]
         public void ValidateBookingCapacity_InCaseNumberOfGuestAreLessThanRoomCapacity()
         {
-            Room room = new Room();
-            room.Name = "Háromágyas szoba";
-            room.Capacity = 3;
+            Room roomTestObject = new Room();
+            roomTestObject.Name = "Háromágyas szoba";
+            roomTestObject.Capacity = 3;
 
-            Booking booking = new Booking();
+            Booking bookingTestObject = new Booking();
 
-            booking.Room = room;
-            booking.NumberOfGuests = 3;
+            bookingTestObject.Room = roomTestObject;
+            bookingTestObject.NumberOfGuests = 3;
 
             try
             {
-                BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(booking, room);
+                BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(bookingTestObject, roomTestObject);
                 bookingCapacityValidation.ValidateBookingCapacity();
             }
             catch (InvalidBookingParameterException)
