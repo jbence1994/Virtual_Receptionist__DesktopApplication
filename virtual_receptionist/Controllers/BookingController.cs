@@ -234,6 +234,26 @@ namespace virtual_receptionist.Controllers
             }
         }
 
+        /// <summary>
+        /// Foglalás szabad szobakapacitást adott napra ellenrőző metódus
+        /// </summary>
+        public void FreeRoomCapacityValidator()
+        {
+            Room room = new Room();
+
+            Booking booking = new Booking();
+
+            try
+            {
+                FreeRoomCapacityValidaiton freeRoomCapacityValidaiton = new FreeRoomCapacityValidaiton(room, booking);
+                freeRoomCapacityValidaiton.ValidateFreeRoomCapacity();
+            }
+            catch (InvalidFreeRoomCapacityException exception)
+            {
+                throw exception;
+            }
+        }
+
         #endregion
     }
 }
