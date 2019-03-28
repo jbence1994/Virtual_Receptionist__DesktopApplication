@@ -57,7 +57,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// Szabad szobakapcitást ellenőrző metódus adott napon
         /// </summary>
-        public void ValidateFreeRoomCapacity()
+        public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate()
         {
             foreach (Booking booking in bookings)
             {

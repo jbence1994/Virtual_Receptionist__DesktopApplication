@@ -246,7 +246,7 @@ namespace virtual_receptionist.Controllers
             try
             {
                 FreeRoomCapacityValidaiton freeRoomCapacityValidaiton = new FreeRoomCapacityValidaiton(room, booking);
-                freeRoomCapacityValidaiton.ValidateFreeRoomCapacity();
+                freeRoomCapacityValidaiton.ValidateFreeRoomCapacityOnSpecifiedArrivalDate();
             }
             catch (InvalidFreeRoomCapacityException exception)
             {

@@ -446,7 +446,6 @@ namespace virtual_receptionistTests.InputValidation
             {
                 BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(bookingTestObject, roomTestObject);
                 bookingCapacityValidation.ValidateBookingCapacity();
-                Assert.Fail("Nem dob kivételt üres állampolgárságra!");
             }
             catch (InvalidBookingParameterException)
             {
