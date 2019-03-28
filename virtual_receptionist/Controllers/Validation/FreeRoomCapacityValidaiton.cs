@@ -1,5 +1,7 @@
 ﻿using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Repositories.Models;
+using System.Collections.Generic;
+using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Controllers.Validation
 {
@@ -13,12 +15,22 @@ namespace virtual_receptionist.Controllers.Validation
         /// <summary>
         /// Szoba egyed
         /// </summary>
-        private Room room;
+        private readonly Room room;
 
         /// <summary>
         /// Foglalás egyed
         /// </summary>
-        private Booking booking;
+        private readonly Booking booking;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly List<Booking> bookings;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly BookingRepository repository;
 
         #endregion
 
@@ -33,6 +45,9 @@ namespace virtual_receptionist.Controllers.Validation
         {
             this.room = room;
             this.booking = booking;
+
+            repository = new BookingRepository();
+            bookings = repository.GetBookings();
         }
 
         #endregion
@@ -40,11 +55,17 @@ namespace virtual_receptionist.Controllers.Validation
         #region Metódusok
 
         /// <summary>
-        /// Szabad szobakapcitást ellenőrző metódus
+        /// Szabad szobakapcitást ellenőrző metódus adott napon
         /// </summary>
         public void ValidateFreeRoomCapacity()
         {
-            throw new InvalidFreeRoomCapacityException();
+            foreach (Booking booking in bookings)
+            {
+                if (booking.ArrivalDate == this.booking.ArrivalDate && booking.Room.Number == this.booking.Room.Number)
+                {
+                    throw new InvalidFreeRoomCapacityException();
+                }
+            }
         }
 
         #endregion
