@@ -61,7 +61,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             foreach (Booking booking in bookings)
             {
-                if (booking.ArrivalDate == this.booking.ArrivalDate && booking.Room.Number == this.booking.Room.Number)
+                if (this.booking.ArrivalDate == booking.ArrivalDate && this.booking.Room.Number == booking.Room.Number)
                 {
                     throw new InvalidFreeRoomCapacityException();
                 }

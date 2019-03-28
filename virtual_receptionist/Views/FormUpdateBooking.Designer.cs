@@ -48,11 +48,13 @@
             this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDepartureDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderNumberOfGuests = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderFreeCapacity = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxBookingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFreeCapacity)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -225,6 +227,10 @@
             this.errorProviderNumberOfGuests.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderNumberOfGuests.ContainerControl = this;
             // 
+            // errorProviderFreeCapacity
+            // 
+            this.errorProviderFreeCapacity.ContainerControl = this;
+            // 
             // FormUpdateBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +251,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumberOfGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFreeCapacity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +276,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderDepartureDate;
         private System.Windows.Forms.ErrorProvider errorProviderNumberOfGuests;
         private System.Windows.Forms.ComboBox comboBoxGuest;
+        private System.Windows.Forms.ErrorProvider errorProviderFreeCapacity;
     }
 }

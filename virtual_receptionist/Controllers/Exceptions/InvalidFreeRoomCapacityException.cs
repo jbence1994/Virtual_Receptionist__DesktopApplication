@@ -12,7 +12,7 @@ namespace virtual_receptionist.Controllers.Exceptions
         /// <summary>
         /// Szobakapacitás kivétel adott napra
         /// </summary>
-        public InvalidFreeRoomCapacityException() : base("A megadott napon nincs szabad kapacitás a kijelölt szobához!")
+        public InvalidFreeRoomCapacityException() : base("A megadott napon ez a szoba nem kiadó!")
         {
         }
 

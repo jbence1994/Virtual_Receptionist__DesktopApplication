@@ -249,7 +249,7 @@ namespace virtual_receptionist.Controllers
             Booking booking = new Booking()
             {
                 Room = room,
-                ArrivalDate = arrivalDate.ToString()
+                ArrivalDate = arrivalDate.ToString("yyyy-MM-dd")
             };
 
             try

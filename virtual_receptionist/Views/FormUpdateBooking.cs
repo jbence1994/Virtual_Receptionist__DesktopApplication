@@ -56,7 +56,7 @@ namespace virtual_receptionist.Views
         #endregion
 
         #region UI események
-        
+
         private void buttonOK_Click(object sender, EventArgs e)
         {
             bool validData = true;
@@ -92,6 +92,18 @@ namespace virtual_receptionist.Views
             catch (InvalidBookingParameterException exception)
             {
                 errorProviderDepartureDate.SetError(dateTimePickerDepartureDate, exception.Message);
+                DialogResult = DialogResult.None;
+                validData = false;
+            }
+
+            try
+            {
+                errorProviderFreeCapacity.Clear();
+                bookingController.FreeRoomCapacityValidator(arrivalDate, roomNumber);
+            }
+            catch (InvalidFreeRoomCapacityException exception)
+            {
+                errorProviderFreeCapacity.SetError(comboBoxRoom, exception.Message);
                 DialogResult = DialogResult.None;
                 validData = false;
             }
