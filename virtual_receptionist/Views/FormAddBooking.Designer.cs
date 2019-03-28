@@ -73,6 +73,7 @@
             this.errorProviderDepartureDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderZipCode = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAddress = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderFreeCapacity = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxGuestData.SuspendLayout();
             this.groupBoxBookingData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfGuests)).BeginInit();
@@ -87,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFreeCapacity)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -460,6 +462,11 @@
             this.errorProviderAddress.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderAddress.ContainerControl = this;
             // 
+            // errorProviderFreeCapacity
+            // 
+            this.errorProviderFreeCapacity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderFreeCapacity.ContainerControl = this;
+            // 
             // FormAddBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,6 +499,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDepartureDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderZipCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFreeCapacity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,5 +548,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderDepartureDate;
         private System.Windows.Forms.ErrorProvider errorProviderZipCode;
         private System.Windows.Forms.ErrorProvider errorProviderAddress;
+        private System.Windows.Forms.ErrorProvider errorProviderFreeCapacity;
     }
 }

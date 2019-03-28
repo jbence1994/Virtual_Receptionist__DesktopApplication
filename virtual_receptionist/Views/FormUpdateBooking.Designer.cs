@@ -229,6 +229,7 @@
             // 
             // errorProviderFreeCapacity
             // 
+            this.errorProviderFreeCapacity.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderFreeCapacity.ContainerControl = this;
             // 
             // FormUpdateBooking

@@ -189,6 +189,18 @@ namespace virtual_receptionist.Views
 
             try
             {
+                errorProviderFreeCapacity.Clear();
+                bookingController.FreeRoomCapacityValidator(arrivalDate, roomNumber);
+            }
+            catch (InvalidFreeRoomCapacityException exception)
+            {
+                errorProviderFreeCapacity.SetError(comboBoxRoom, exception.Message);
+                DialogResult = DialogResult.None;
+                validData = false;
+            }
+
+            try
+            {
                 errorProviderNumberOfGuests.Clear();
                 bookingController.BookingCapacityValidator(numberOfGuests, roomNumber);
             }
