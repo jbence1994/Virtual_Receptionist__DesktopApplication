@@ -5,7 +5,7 @@ namespace virtual_receptionist.Controllers.Exceptions
     /// <summary>
     /// Szobakapacitás kivétel adott napon
     /// </summary>
-    public class InvalidCapacityException : Exception
+    public sealed class InvalidCapacityException : Exception
     {
         #region Konstruktor
 
