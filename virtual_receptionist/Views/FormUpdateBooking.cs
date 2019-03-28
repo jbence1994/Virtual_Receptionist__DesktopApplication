@@ -148,6 +148,11 @@ namespace virtual_receptionist.Views
             errorProviderNumberOfGuests.Clear();
         }
 
+        private void comboBoxRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProviderFreeCapacity.Clear();
+        }
+
         /// <summary>
         /// Foglalás adatai
         /// </summary>

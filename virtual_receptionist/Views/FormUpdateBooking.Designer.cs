@@ -169,6 +169,7 @@
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(237, 21);
             this.comboBoxRoom.TabIndex = 12;
+            this.comboBoxRoom.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoom_SelectedIndexChanged);
             // 
             // labelRoom
             // 
