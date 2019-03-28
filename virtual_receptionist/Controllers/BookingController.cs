@@ -237,11 +237,20 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Foglalás szabad szobakapacitást adott napra ellenrőző metódus
         /// </summary>
-        public void FreeRoomCapacityValidator()
+        /// <param name="arrivalDate">Érkezés dátuma</param>
+        /// <param name="roomNumber">Szobaszám</param>
+        public void FreeRoomCapacityValidator(DateTime arrivalDate, int roomNumber)
         {
-            Room room = new Room();
+            Room room = new Room()
+            {
+                Number = roomNumber
+            };
 
-            Booking booking = new Booking();
+            Booking booking = new Booking()
+            {
+                Room = room,
+                ArrivalDate = arrivalDate.ToString()
+            };
 
             try
             {

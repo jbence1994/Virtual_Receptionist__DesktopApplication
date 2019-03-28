@@ -23,12 +23,12 @@ namespace virtual_receptionist.Controllers.Validation
         private readonly Booking booking;
 
         /// <summary>
-        /// 
+        /// Foglalásokat tartalmazó lista
         /// </summary>
         private readonly List<Booking> bookings;
 
         /// <summary>
-        /// 
+        /// Foglalások adattár egy példánya
         /// </summary>
         private readonly BookingRepository repository;
 
