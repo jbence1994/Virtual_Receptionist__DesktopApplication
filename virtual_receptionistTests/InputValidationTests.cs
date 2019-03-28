@@ -2,6 +2,7 @@
 using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Repositories.Models;
+using System.Collections.Generic;
 
 namespace virtual_receptionistTests.InputValidation
 {
@@ -430,6 +431,9 @@ namespace virtual_receptionistTests.InputValidation
 
         #region Foglalás szobakapcitás és vendég szám ellenőrző tesztek
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, kivételkezelésre kerül-e ha nagyobb vendégszámot adunk meg olyan szobára, amely annál kisebb kapacitással rendelkezik
+        /// </summary>
         [TestMethod()]
         public void ValidateBookingCapacity_InCaseNumberOfGuestAreMoreThanRoomCapacity()
         {
@@ -446,14 +450,43 @@ namespace virtual_receptionistTests.InputValidation
             {
                 BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(bookingTestObject, roomTestObject);
                 bookingCapacityValidation.ValidateBookingCapacity();
+                Assert.Fail("Nem dob kivételt nagyobb vendégszám esetén!");
             }
             catch (InvalidBookingParameterException)
             {
             }
         }
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, kivételkezelésre kerül-e ha kisebb vendégszámot adunk meg olyan szobára, amely annál nagyobb kapacitással rendelkezik
+        /// </summary>
         [TestMethod()]
         public void ValidateBookingCapacity_InCaseNumberOfGuestAreLessThanRoomCapacity()
+        {
+            Room roomTestObject = new Room();
+            roomTestObject.Name = "Háromágyas szoba";
+            roomTestObject.Capacity = 3;
+
+            Booking bookingTestObject = new Booking();
+
+            bookingTestObject.Room = roomTestObject;
+            bookingTestObject.NumberOfGuests = 2;
+
+            try
+            {
+                BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(bookingTestObject, roomTestObject);
+                bookingCapacityValidation.ValidateBookingCapacity();
+            }
+            catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, kivételkezelésre kerül-e ha ugyanolyan vendégszámot adunk meg olyan szobára, amely azzalé egyenlő kapacitással rendelkezik
+        /// </summary>
+        [TestMethod()]
+        public void ValidateBookingCapacity_InCaseNumberOfGuestAreEqualsToRoomCapacity()
         {
             Room roomTestObject = new Room();
             roomTestObject.Name = "Háromágyas szoba";
@@ -478,8 +511,11 @@ namespace virtual_receptionistTests.InputValidation
 
         #region Foglalás időpont tesztek
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, kivételkezelésre kerül-e ha az érkezés és távozás dátuma egyezik
+        /// </summary>
         [TestMethod()]
-        public void ValidateBookingDate_InCaseBookingArrivalDateIsEqualToDepartureDate()
+        public void ValidateBookingDate_InCaseBookingArrivalDateIsEqualsToDepartureDate()
         {
             Booking bookingTestObject = new Booking();
             bookingTestObject.ArrivalDate = "2019-03-25";
@@ -496,26 +532,11 @@ namespace virtual_receptionistTests.InputValidation
             }
         }
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, kivételkezelésre kerül-e ha a távozás dátuma hamarabb van, mint az érkezés dátuma
+        /// </summary>
         [TestMethod()]
-        public void ValidateBookingDate_InCaseBookingArrivalDateNotEqualToDepartureDate()
-        {
-            Booking bookingTestObject = new Booking();
-            bookingTestObject.ArrivalDate = "2019-03-25";
-            bookingTestObject.DepartureDate = "2019-03-26";
-
-            try
-            {
-                BookingDateValidation bookingDateValidation = new BookingDateValidation(bookingTestObject);
-                bookingDateValidation.ValidateBookingDate();
-            }
-            catch (InvalidBookingParameterException)
-            {
-            }
-        }
-
-
-        [TestMethod()]
-        public void ValidateBookingDate_InCaseBookingArrivalDateIsMoreThanDepartureDate()
+        public void ValidateBookingDate_InCaseBookingArrivalDateIsLaterThanDepartureDate()
         {
             Booking bookingTestObject = new Booking();
             bookingTestObject.ArrivalDate = "2019-03-27";
@@ -532,8 +553,11 @@ namespace virtual_receptionistTests.InputValidation
             }
         }
 
+        /// <summary>
+        /// Tesztmetódus, amely ellenőrzi, kivételkezelésre kerül-e ha az érkezés dátuma hamarabb van, mint a távozás dátuma
+        /// </summary>
         [TestMethod()]
-        public void ValidateBookingDate_InCaseBookingArrivalDateIsLessThanDepartureDate()
+        public void ValidateBookingDate_InCaseBookingArrivalDateEarlierThanDepartureDate()
         {
             Booking bookingTestObject = new Booking();
             bookingTestObject.ArrivalDate = "2019-03-25";
@@ -545,6 +569,51 @@ namespace virtual_receptionistTests.InputValidation
                 bookingDateValidation.ValidateBookingDate();
             }
             catch (InvalidBookingParameterException)
+            {
+            }
+        }
+
+        #endregion
+
+        #region Foglalás esetén adott napon van-e adott szoba szabadon tesztek
+
+        [TestMethod()]
+        public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate_InCaseThereIsNoFreeRoomCapacity()
+        {
+            List<Booking> bookings = new List<Booking>()
+            {
+
+            };
+
+            Room roomTestObject = new Room()
+            {
+                Number = 10
+            };
+
+            Booking bookingTestObject = new Booking()
+            {
+                Room = roomTestObject,
+                ArrivalDate = "2019-03-04"
+            };
+
+            try
+            {
+                FreeRoomCapacityValidaiton freeRoomCapacityValidaiton = new FreeRoomCapacityValidaiton(roomTestObject, bookingTestObject);
+                freeRoomCapacityValidaiton.ValidateFreeRoomCapacityOnSpecifiedArrivalDate();
+            }
+            catch (InvalidFreeRoomCapacityException)
+            {
+            }
+        }
+
+        [TestMethod()]
+        public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate_InCaseThereIsFreeRoomCapacity()
+        {
+            try
+            {
+
+            }
+            catch (InvalidFreeRoomCapacityException)
             {
             }
         }
