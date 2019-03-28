@@ -574,50 +574,5 @@ namespace virtual_receptionistTests.InputValidation
         }
 
         #endregion
-
-        #region Foglalás esetén adott napon van-e adott szoba szabadon tesztek
-
-        [TestMethod()]
-        public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate_InCaseThereIsNoFreeRoomCapacity()
-        {
-            List<Booking> bookings = new List<Booking>()
-            {
-
-            };
-
-            Room roomTestObject = new Room()
-            {
-                Number = 10
-            };
-
-            Booking bookingTestObject = new Booking()
-            {
-                Room = roomTestObject,
-                ArrivalDate = "2019-03-04"
-            };
-
-            try
-            {
-                FreeRoomCapacityValidaiton freeRoomCapacityValidaiton = new FreeRoomCapacityValidaiton(roomTestObject, bookingTestObject);
-                freeRoomCapacityValidaiton.ValidateFreeRoomCapacityOnSpecifiedArrivalDate();
-            }
-            catch (InvalidFreeRoomCapacityException)
-            {
-            }
-        }
-
-        [TestMethod()]
-        public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate_InCaseThereIsFreeRoomCapacity()
-        {
-            try
-            {
-
-            }
-            catch (InvalidFreeRoomCapacityException)
-            {
-            }
-        }
-
-        #endregion
     }
 }
