@@ -52,6 +52,7 @@
     <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidBllingItemParameterException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidBookingParameterException.cs" />
+    <Compile Include="Controllers\Exceptions\InvalidCapacityException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCitizenshipException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
     <Compile Include="Controllers\Exceptions\InvalidDocumentNumberException.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Controllers\Validation\DocumentNumberValidation.cs" />
     <Compile Include="Controllers\Validation\EmailValidation.cs" />
     <Compile Include="Controllers\Validation\BillingItemValidation.cs" />
+    <Compile Include="Controllers\Validation\FreeCapacityValidaiton.cs" />
     <Compile Include="Controllers\Validation\NameValidation.cs" />
     <Compile Include="Controllers\Validation\PhoneNumberValidation.cs" />
     <Compile Include="Controllers\Validation\VATNumberValidation.cs" />
