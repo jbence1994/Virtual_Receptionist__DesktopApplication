@@ -19,16 +19,6 @@ namespace virtual_receptionist.Repositories.MySQLConnection
         private static Database databaseInstance;
 
         /// <summary>
-        /// Helyi szerver elérési útja
-        /// </summary>
-        private string localConnection;
-
-        /// <summary>
-        /// Távoli szerver elérési útja
-        /// </summary>
-        private string remoteConnection;
-
-        /// <summary>
         /// Adatbázis kapcsolatot létrehozó mező
         /// </summary>
         private MySqlConnection mySqlConnection;
@@ -84,21 +74,18 @@ namespace virtual_receptionist.Repositories.MySQLConnection
         /// <exception cref="InvalidConnectionTypeException"></exception>
         public void SetConnection(string connectionType)
         {
-            localConnection = ConfigurationManager.ConnectionStrings["local"].ConnectionString;
-            remoteConnection = ConfigurationManager.ConnectionStrings["remote"].ConnectionString;
-
             if (connectionType == "otthoni")
             {
                 mySqlConnection = new MySqlConnection()
                 {
-                    ConnectionString = localConnection
+                    ConnectionString = ConfigurationManager.ConnectionStrings["local"].ConnectionString
                 };
             }
             else if (connectionType == "iskolai")
             {
                 mySqlConnection = new MySqlConnection()
                 {
-                    ConnectionString = remoteConnection
+                    ConnectionString = ConfigurationManager.ConnectionStrings["remote"].ConnectionString
                 };
             }
             else
