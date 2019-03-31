@@ -93,18 +93,18 @@
       <FileName>Repositories\Models\Room.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="virtual_receptionist.Repositories.MySQLConnection.Database">
-    <Position X="4.5" Y="0.5" Width="3.5" />
-    <TypeIdentifier>
-      <HashCode>AABAAAAAAAgAAAAAAgISQBIAIQAAAAAAAAABCAAQAAA=</HashCode>
-      <FileName>Repositories\MySQLConnection\Database.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="virtual_receptionist.Repositories.MySQLConnection.InvalidConnectionTypeException">
     <Position X="8.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Repositories\MySQLConnection\InvalidConnectionTypeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="virtual_receptionist.Repositories.MySQLConnection.Database">
+    <Position X="4" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAgAAAAAAgISABAAIQAAAAAAAAABCAAQAAA=</HashCode>
+      <FileName>Repositories\MySQLConnection\Database.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="virtual_receptionist.Repositories.DAO.IGenericDAO&lt;T&gt;">
