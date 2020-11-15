@@ -3,52 +3,15 @@ using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
 {
-    /// <summary>
-    /// Adószám ellenőrző osztály
-    /// </summary>
-    public class VATNumberValidation
+    public static class VatNumberValidation
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Adószám input
-        /// </summary>
-        private readonly string vatNumber;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Adószám ellenőrző osztály konstruktora
-        /// </summary>
-        /// <param name="vatNumber">Adószám input</param>
-        public VATNumberValidation(string vatNumber)
-        {
-            this.vatNumber = vatNumber;
-        }
-
-        #endregion
-
-        #region Metódusok
-
-        /// <summary>
-        /// Adószám ellenőrző metódus
-        /// </summary>
-        /// <exception cref="InvalidVATNumberException"></exception>
-        public void ValidateVATNumber()
+        public static void ValidateVatNumber(string vatNumber)
         {
             if (IsEmpty(vatNumber))
-            {
                 throw new Exception("Üres mező!");
-            }
 
             if (ContainsControlCharacters(vatNumber))
-            {
                 throw new Exception("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
-            }
         }
-
-        #endregion
     }
 }

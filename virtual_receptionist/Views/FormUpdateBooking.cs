@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Views
 {
@@ -74,7 +75,7 @@ namespace virtual_receptionist.Views
             try
             {
                 errorProviderName.Clear();
-                bookingController.NameValidator(name);
+                NameValidation.ValidateName(name);
             }
             catch (Exception exception)
             {

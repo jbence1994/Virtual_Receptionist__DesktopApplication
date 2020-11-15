@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Views
 {
@@ -72,7 +73,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.NameValidator(name);
+                NameValidation.ValidateName(name);
             }
             catch (Exception exception)
             {
@@ -82,7 +83,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.DocumentNumberValidator(documentNumber);
+                DocumentNumberValidation.ValidateDocumentNumber(documentNumber);
             }
             catch (Exception exception)
             {
@@ -92,7 +93,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.CitizenshipValidator(citizenship);
+                CitizenshipValidation.ValidateCitizenship(citizenship);
             }
             catch (Exception exception)
             {
@@ -102,7 +103,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.BirthDateValidator(birthDate);
+                BirthDateValidation.ValidateBirthDate(birthDate);
             }
             catch (Exception exception)
             {
@@ -112,7 +113,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.ZipCodeValidator(zipCode);
+                ZipCodeValidation.ValidateZipCode(zipCode);
             }
             catch (Exception exception)
             {
@@ -122,7 +123,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.CityValidator(city);
+                CityValidation.ValidateCity(city);
             }
             catch (Exception exception)
             {
@@ -132,7 +133,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.AddressValidator(address);
+                AddressValidation.ValidateAddress(address);
             }
             catch (Exception exception)
             {
@@ -142,7 +143,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.PhoneNumberValidator(phoneNumber);
+                PhoneNumberValidation.ValidatePhoneNumber(phoneNumber);
             }
             catch (Exception exception)
             {
@@ -152,7 +153,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                controller.EmailAddressValidator(email);
+                EmailValidation.ValidateEmail(email);
             }
             catch (Exception exception)
             {
@@ -204,7 +205,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.NameValidator(name);
+                    NameValidation.ValidateName(name);
                 }
                 catch (Exception exception)
                 {
@@ -214,7 +215,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.DocumentNumberValidator(documentNumber);
+                    DocumentNumberValidation.ValidateDocumentNumber(documentNumber);
                 }
                 catch (Exception exception)
                 {
@@ -224,7 +225,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.CitizenshipValidator(citizenship);
+                    CitizenshipValidation.ValidateCitizenship(citizenship);
                 }
                 catch (Exception exception)
                 {
@@ -234,7 +235,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.BirthDateValidator(birthDate);
+                    BirthDateValidation.ValidateBirthDate(birthDate);
                 }
                 catch (Exception exception)
                 {
@@ -244,7 +245,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.ZipCodeValidator(zipCode);
+                    ZipCodeValidation.ValidateZipCode(zipCode);
                 }
                 catch (Exception exception)
                 {
@@ -254,7 +255,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.CityValidator(city);
+                    CityValidation.ValidateCity(city);
                 }
                 catch (Exception exception)
                 {
@@ -264,7 +265,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.AddressValidator(address);
+                    AddressValidation.ValidateAddress(address);
                 }
                 catch (Exception exception)
                 {
@@ -274,7 +275,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.PhoneNumberValidator(phoneNumber);
+                    PhoneNumberValidation.ValidatePhoneNumber(phoneNumber);
                 }
                 catch (Exception exception)
                 {
@@ -284,7 +285,7 @@ namespace virtual_receptionist.Views
 
                 try
                 {
-                    controller.EmailAddressValidator(email);
+                    EmailValidation.ValidateEmail(email);
                 }
                 catch (Exception exception)
                 {

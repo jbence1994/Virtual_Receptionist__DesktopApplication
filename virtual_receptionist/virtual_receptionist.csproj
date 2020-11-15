@@ -60,7 +60,7 @@
     <Compile Include="Controllers\Validation\FreeRoomCapacityValidation.cs" />
     <Compile Include="Controllers\Validation\NameValidation.cs" />
     <Compile Include="Controllers\Validation\PhoneNumberValidation.cs" />
-    <Compile Include="Controllers\Validation\VATNumberValidation.cs" />
+    <Compile Include="Controllers\Validation\VatNumberValidation.cs" />
     <Compile Include="Controllers\Validation\BillingItemQuantityValidation.cs" />
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
     <Compile Include="Repositories\AccommodationRepository.cs" />
