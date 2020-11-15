@@ -2,7 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using virtual_receptionist.Controllers;
+using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
@@ -12,16 +12,40 @@ namespace virtual_receptionist.Views
     {
         private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
-        private readonly GuestDatabaseController controller = new GuestDatabaseController();
 
         public FormGuestDatabase()
         {
             InitializeComponent();
         }
 
+        public DataTable GetGuests()
+        {
+            var guestDataTable = new DataTable();
+            guestDataTable.Columns.Add("ID", typeof(int));
+            guestDataTable.Columns.Add("Name", typeof(string));
+            guestDataTable.Columns.Add("DocumentNumber", typeof(string));
+            guestDataTable.Columns.Add("Citizenship", typeof(string));
+            guestDataTable.Columns.Add("BirthDate", typeof(string));
+            guestDataTable.Columns.Add("Country", typeof(string));
+            guestDataTable.Columns.Add("ZipCode", typeof(string));
+            guestDataTable.Columns.Add("City", typeof(string));
+            guestDataTable.Columns.Add("Address", typeof(string));
+            guestDataTable.Columns.Add("PhoneNumber", typeof(string));
+            guestDataTable.Columns.Add("EmailAddress", typeof(string));
+
+            foreach (var guest in guestRepository.GetGuests())
+            {
+                guestDataTable.Rows.Add(guest.Id, guest.Name, guest.DocumentNumber,
+                    guest.Citizenship, guest.BirthDate, guest.Country, guest.ZipCode,
+                    guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress);
+            }
+
+            return guestDataTable;
+        }
+
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            var guests = controller.GetGuests();
+            var guests = GetGuests();
 
             foreach (DataRow row in guests.Rows)
             {
@@ -161,7 +185,7 @@ namespace virtual_receptionist.Views
             newRecord.SubItems.Add(email);
             listViewGuest.Items.Add(newRecord);
 
-            controller.AddGuest(id, name, documentNumber, citizenship, birthDate, country,
+            AddGuest(id, name, documentNumber, citizenship, birthDate, country,
                 zipCode, city, address, phoneNumber, email);
         }
 
@@ -293,7 +317,7 @@ namespace virtual_receptionist.Views
                 listViewGuest.Items.RemoveAt(index);
                 listViewGuest.Items.Insert(index, updatedRecord);
 
-                controller.UpdateGuest(id, name, documentNumber, citizenship, birthDate, country,
+                UpdateGuest(id, name, documentNumber, citizenship, birthDate, country,
                     zipCode,
                     city, address, phoneNumber, email);
             }
@@ -354,7 +378,7 @@ namespace virtual_receptionist.Views
                 textBoxCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
                 textBoxBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text;
                 var selectedCountryInTable = listViewGuest.SelectedItems[0].SubItems[5].Text;
-                comboBoxCountry.SelectedItem = controller.SetSelectedCountry(selectedCountryInTable);
+                comboBoxCountry.SelectedItem = SetSelectedCountry(selectedCountryInTable);
 
                 textBoxZipCode.Text = listViewGuest.SelectedItems[0].SubItems[6].Text;
                 textBoxCity.Text = listViewGuest.SelectedItems[0].SubItems[7].Text;
@@ -427,6 +451,82 @@ namespace virtual_receptionist.Views
         private void textBoxEmailAddress_TextChanged(object sender, EventArgs e)
         {
             errorProviderEmailAddress.Clear();
+        }
+
+        public void UpdateGuest(params object[] guestParameters)
+        {
+            var id = int.Parse(guestParameters[0].ToString());
+            var name = guestParameters[1].ToString();
+            var documentNumber = guestParameters[2].ToString();
+            var citizenship = guestParameters[3].ToString();
+            var birthDate = guestParameters[4].ToString();
+            var country = guestParameters[5].ToString();
+            var zipCode = guestParameters[6].ToString();
+            var city = guestParameters[7].ToString();
+            var address = guestParameters[8].ToString();
+            var phoneNumber = guestParameters[9].ToString();
+            var email = guestParameters[10].ToString();
+
+            var guest = new Guest
+            {
+                Id = id,
+                Name = name,
+                DocumentNumber = documentNumber,
+                Citizenship = citizenship,
+                BirthDate = birthDate,
+                Country = country,
+                ZipCode = zipCode,
+                City = city,
+                Address = address,
+                PhoneNumber = phoneNumber,
+                EmailAddress = email
+            };
+
+            guestRepository.UpdateGuest(guest);
+        }
+
+        public string SetSelectedCountry(string selectedCountryInTable)
+        {
+            var countryRepository = new CountryRepository();
+
+            var countyNames = countryRepository.GetCountries().Select(country => country.Name).ToList();
+
+            string selectedCountry = null;
+
+            foreach (var country in countyNames.Where(selectedCountryInTable.Contains))
+                selectedCountry = country;
+
+            return selectedCountry;
+        }
+
+        public void AddGuest(params object[] guestParameters)
+        {
+            var name = guestParameters[0].ToString();
+            var documentNumber = guestParameters[1].ToString();
+            var citizenship = guestParameters[2].ToString();
+            var birthDate = guestParameters[3].ToString();
+            var country = guestParameters[4].ToString();
+            var zipCode = guestParameters[5].ToString();
+            var city = guestParameters[6].ToString();
+            var address = guestParameters[7].ToString();
+            var phoneNumber = guestParameters[8].ToString();
+            var email = guestParameters[9].ToString();
+
+            var guest = new Guest
+            {
+                Name = name,
+                DocumentNumber = documentNumber,
+                Citizenship = citizenship,
+                BirthDate = birthDate,
+                Country = country,
+                ZipCode = zipCode,
+                City = city,
+                Address = address,
+                PhoneNumber = phoneNumber,
+                EmailAddress = email
+            };
+
+            guestRepository.AddGuest(guest);
         }
     }
 }

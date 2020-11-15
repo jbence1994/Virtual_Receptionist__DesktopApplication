@@ -115,7 +115,6 @@
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Guest.cs" />
-    <Compile Include="Controllers\GuestDatabaseController.cs" />
     <Compile Include="Validation\InputValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,5 +172,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

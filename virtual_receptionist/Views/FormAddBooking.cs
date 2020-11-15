@@ -1,7 +1,6 @@
 ﻿using System.Windows.Forms;
 using System;
 using System.Linq;
-using virtual_receptionist.Controllers;
 using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
@@ -13,7 +12,7 @@ namespace virtual_receptionist.Views
         private readonly BookingRepository bookingRepository = new BookingRepository();
         private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly RoomRepository roomRepository = new RoomRepository();
-        private readonly GuestDatabaseController guestController = new GuestDatabaseController();
+        private readonly GuestRepository guestRepository = new GuestRepository();
 
         /// <summary>
         /// Foglalási napló foglalásfelvétel modális ablak konstruktora
@@ -196,7 +195,7 @@ namespace virtual_receptionist.Views
             if (!validData)
                 return;
 
-            guestController.AddGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+            AddGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
                 address, phoneNumber, email);
             AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
         }
@@ -335,6 +334,36 @@ namespace virtual_receptionist.Views
             };
 
             bookingRepository.ValidateFreeRoomCapacityOnSpecifiedArrivalDate(booking);
+        }
+
+        public void AddGuest(params object[] guestParameters)
+        {
+            var name = guestParameters[0].ToString();
+            var documentNumber = guestParameters[1].ToString();
+            var citizenship = guestParameters[2].ToString();
+            var birthDate = guestParameters[3].ToString();
+            var country = guestParameters[4].ToString();
+            var zipCode = guestParameters[5].ToString();
+            var city = guestParameters[6].ToString();
+            var address = guestParameters[7].ToString();
+            var phoneNumber = guestParameters[8].ToString();
+            var email = guestParameters[9].ToString();
+
+            var guest = new Guest
+            {
+                Name = name,
+                DocumentNumber = documentNumber,
+                Citizenship = citizenship,
+                BirthDate = birthDate,
+                Country = country,
+                ZipCode = zipCode,
+                City = city,
+                Address = address,
+                PhoneNumber = phoneNumber,
+                EmailAddress = email
+            };
+
+            guestRepository.AddGuest(guest);
         }
     }
 }
