@@ -9,6 +9,7 @@ namespace virtual_receptionist.Views
 {
     public partial class FormUpdateBooking : Form
     {
+        private readonly RoomRepository roomRepository = new RoomRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly BookingController bookingController = new BookingController();
         private readonly GuestDatabaseController guestController = new GuestDatabaseController();
@@ -21,11 +22,15 @@ namespace virtual_receptionist.Views
 
             Booking = booking;
             textBoxBookingID.Text = booking[0].ToString();
+
             comboBoxGuest.DataSource = guestRepository.GetGuests().Select(guest => guest.Name).ToList();
+
             comboBoxGuest.SelectedItem = booking[1].ToString();
             dateTimePickerArrivalDate.Value = Convert.ToDateTime(booking[4]);
             dateTimePickerDepartureDate.Value = Convert.ToDateTime(booking[5]);
-            comboBoxRoom.DataSource = bookingController.GetRooms();
+
+            comboBoxRoom.DataSource = roomRepository.GetRooms().Select(room => room.Number).ToList();
+
             comboBoxRoom.SelectedItem = Convert.ToInt32(booking[2]);
             numericUpDownNumberOfGuests.Value = Convert.ToDecimal(booking[3]);
         }

@@ -1,12 +1,15 @@
 ﻿using System.Windows.Forms;
 using System;
+using System.Linq;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormAddBooking : Form
     {
+        private readonly RoomRepository roomRepository = new RoomRepository();
         private readonly BookingController bookingController = new BookingController();
         private readonly GuestDatabaseController guestController = new GuestDatabaseController();
 
@@ -22,7 +25,7 @@ namespace virtual_receptionist.Views
         {
             textBoxGuestName.Select();
             comboBoxCountry.DataSource = bookingController.GetCountries();
-            comboBoxRoom.DataSource = bookingController.GetRooms();
+            comboBoxRoom.DataSource = roomRepository.GetRooms().Select(room => room.Number).ToList();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
