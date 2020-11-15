@@ -47,7 +47,7 @@ namespace virtual_receptionist.Repositories
             return accommodation;
         }
 
-        public bool Authentication(string accommodationId, string password)
+        public bool Authenticate(string accommodationId, string password)
         {
             database.SetConnection();
 

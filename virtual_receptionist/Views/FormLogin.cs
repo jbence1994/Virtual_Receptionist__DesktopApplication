@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormLogin : Form
     {
-        private readonly LoginController controller = new LoginController();
+        private readonly AccommodationRepository accommodationRepository = new AccommodationRepository();
 
         public FormLogin()
         {
@@ -25,7 +25,7 @@ namespace virtual_receptionist.Views
 
             try
             {
-                if (!controller.EnterApplication(accommodationId, password))
+                if (!accommodationRepository.Authenticate(accommodationId, password))
                     return;
 
                 Hide();
