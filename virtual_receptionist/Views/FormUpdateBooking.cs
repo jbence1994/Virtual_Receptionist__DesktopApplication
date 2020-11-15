@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormUpdateBooking : Form
     {
+        private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly BookingController bookingController = new BookingController();
         private readonly GuestDatabaseController guestController = new GuestDatabaseController();
 
@@ -18,7 +21,7 @@ namespace virtual_receptionist.Views
 
             Booking = booking;
             textBoxBookingID.Text = booking[0].ToString();
-            comboBoxGuest.DataSource = guestController.GetGuestNames();
+            comboBoxGuest.DataSource = guestRepository.GetGuests().Select(guest => guest.Name).ToList();
             comboBoxGuest.SelectedItem = booking[1].ToString();
             dateTimePickerArrivalDate.Value = Convert.ToDateTime(booking[4]);
             dateTimePickerDepartureDate.Value = Convert.ToDateTime(booking[5]);

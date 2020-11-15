@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Linq;
 using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
@@ -33,11 +32,6 @@ namespace virtual_receptionist.Controllers
             }
 
             return guestDataTable;
-        }
-
-        public List<string> GetGuestNames()
-        {
-            return guestRepository.GetGuests().Select(guest => guest.Name).ToList();
         }
 
         /// <summary>
