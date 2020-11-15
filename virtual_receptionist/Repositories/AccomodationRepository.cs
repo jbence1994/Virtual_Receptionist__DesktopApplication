@@ -34,7 +34,7 @@ namespace virtual_receptionist.Repositories
                 string accomodationID = row["AccomodationID"].ToString();
                 string password = row["Password"].ToString();
 
-                Accomodation accomodation = Accomodation.GetAccomodation();
+                Accommodation accomodation = Accommodation.GetAccomodation();
                 accomodation.AccomodationName = name;
                 accomodation.CompanyName = company;
                 accomodation.Contact = contact;
@@ -56,9 +56,9 @@ namespace virtual_receptionist.Repositories
         /// 
         /// </summary>
         /// <returns></returns>
-        public Accomodation GetAccomodation()
+        public Accommodation GetAccomodation()
         {
-            Accomodation accomodation = Accomodation.GetAccomodation();
+            Accommodation accomodation = Accommodation.GetAccomodation();
             SetAccomodation();
             return accomodation;
         }
@@ -78,7 +78,7 @@ namespace virtual_receptionist.Repositories
             {
                 database.SetConnection();
 
-                Accomodation accomodation = GetAccomodation();
+                Accommodation accomodation = GetAccomodation();
 
                 if (accomodation.AccomodationID == accomodationID && accomodation.Password == password)
                 {

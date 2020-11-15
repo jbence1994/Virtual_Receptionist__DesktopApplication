@@ -65,7 +65,7 @@
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
     <Compile Include="Repositories\AccomodationRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
-    <Compile Include="Models\Accomodation.cs" />
+    <Compile Include="Models\Accommodation.cs" />
     <Compile Include="Models\BillingItemCategory.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Repositories\BillingRepository.cs" />

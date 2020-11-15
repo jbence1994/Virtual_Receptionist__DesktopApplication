@@ -3,14 +3,14 @@
     /// <summary>
     /// Szálláshely egyed
     /// </summary>
-    public class Accomodation
+    public class Accommodation
     {
         #region Adattagok
 
         /// <summary>
         /// Ezen osztály egyke példánya
         /// </summary>
-        private static Accomodation accomodationInstance;
+        private static Accommodation accomodationInstance;
 
         /// <summary>
         /// Szálláshely azonosítója
@@ -74,7 +74,7 @@
         /// <summary>
         /// Accomodation osztály konstruktora
         /// </summary>
-        private Accomodation()
+        private Accommodation()
         {
         }
 
@@ -189,11 +189,11 @@
         /// Az egyke Accomodation osztályt példányosító (getter) metódus
         /// </summary>
         /// <returns>Az egyke példánnyal tér vissza a metódus</returns>
-        public static Accomodation GetAccomodation()
+        public static Accommodation GetAccomodation()
         {
             if (accomodationInstance == null)
             {
-                return accomodationInstance = new Accomodation();
+                return accomodationInstance = new Accommodation();
             }
 
             return accomodationInstance;
