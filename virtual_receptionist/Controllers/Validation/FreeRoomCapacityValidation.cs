@@ -8,7 +8,7 @@ namespace virtual_receptionist.Controllers.Validation
     /// <summary>
     /// Szabad szobakapacitás ellenőrző osztály
     /// </summary>
-    public class FreeRoomCapacityValidaiton
+    public class FreeRoomCapacityValidation
     {
         #region Adattagok
 
@@ -41,7 +41,7 @@ namespace virtual_receptionist.Controllers.Validation
         /// </summary>
         /// <param name="room"></param>
         /// <param name="booking"></param>
-        public FreeRoomCapacityValidaiton(Room room, Booking booking)
+        public FreeRoomCapacityValidation(Room room, Booking booking)
         {
             this.room = room;
             this.booking = booking;

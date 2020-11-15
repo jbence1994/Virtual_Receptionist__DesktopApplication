@@ -134,7 +134,7 @@ namespace virtual_receptionist.Repositories
         /// Új foglalás felvétele adatbázisba
         /// </summary>
         /// <param name="booking">Booking objektum</param>
-        public void Create(Booking booking)
+        public void AddBooking(Booking booking)
         {
             string sql =
                 $"INSERT INTO booking(GuestID, RoomID, NumberOfGuests, ArrivalDate, DepartureDate, Paid) VALUES ((SELECT guest.ID FROM guest WHERE guest.Name LIKE \"{booking.Guest.Name}\"), (SELECT room.ID FROM room WHERE room.Number = \"{booking.Room.Number}\"), \"{booking.NumberOfGuests}\", \"{booking.ArrivalDate}\", \"{booking.DepartureDate}\", \"{booking.Paid}\");";
@@ -145,7 +145,7 @@ namespace virtual_receptionist.Repositories
         /// Meglévő foglalás törlése adatbázisból
         /// </summary>
         /// <param name="booking">Booking objektum</param>>
-        public void Delete(Booking booking)
+        public void DeleteBooking(Booking booking)
         {
             string sql = $"DELETE FROM booking WHERE booking.ID = \"{booking.ID}\"";
             database.DML(sql);
@@ -155,7 +155,7 @@ namespace virtual_receptionist.Repositories
         /// Meglévő foglalás módosítása adatbázisban
         /// </summary>
         /// <param name="booking">Booking objektum</param>
-        public void Update(Booking booking)
+        public void UpdateBooking(Booking booking)
         {
             string sql =
                 $"UPDATE booking SET booking.GuestID = (SELECT guest.ID FROM guest WHERE guest.Name = \"{booking.Guest.Name}\"), booking.RoomID = (SELECT room.ID FROM room WHERE room.Number = \"{booking.Room.Number}\"), NumberOfGuests = \"{booking.NumberOfGuests}\", ArrivalDate = \"{booking.ArrivalDate}\", DepartureDate = \"{booking.DepartureDate}\" WHERE booking.ID = \"{booking.ID}\"";

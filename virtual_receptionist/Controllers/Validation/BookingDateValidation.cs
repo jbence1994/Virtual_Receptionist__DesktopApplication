@@ -3,52 +3,15 @@ using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Controllers.Validation
 {
-    /// <summary>
-    /// Foglalás érkezési és távozási idejét ellenőrző osztály
-    /// </summary>
-    public class BookingDateValidation
+    public static class BookingDateValidation
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Foglalás egyed egy példánya
-        /// </summary>
-        private readonly Booking booking;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Foglalás érkezési és távozási idejét ellenőrző osztály konstruktora
-        /// </summary>
-        /// <param name="booking">Foglalás egyed</param>
-        public BookingDateValidation(Booking booking)
-        {
-            this.booking = booking;
-        }
-
-        #endregion
-
-        #region Metódusok
-
-        /// <summary>
-        /// Foglalás érkezési és távozási idejét ellenőrző metódus
-        /// </summary>
-        /// <exception cref="InvalidBookingParameterException"></exception>
-        public void ValidateBookingDate()
+        public static void ValidateBookingDate(Booking booking)
         {
             if (Convert.ToDateTime(booking.ArrivalDate) == Convert.ToDateTime(booking.DepartureDate))
-            {
                 throw new Exception("A távozás dátuma megegyezik az érkezés dátumával!");
-            }
 
             if (Convert.ToDateTime(booking.DepartureDate) < Convert.ToDateTime(booking.ArrivalDate))
-            {
                 throw new Exception("A távozás dátuma nem lehet hamarabb, mint az érkezés dátuma!");
-            }
         }
-
-        #endregion
     }
 }
