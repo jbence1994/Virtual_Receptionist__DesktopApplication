@@ -2,12 +2,14 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormBillingItems : Form
     {
+        private readonly BillingRepository billingRepository = new BillingRepository();
         private readonly BillingController controller = new BillingController();
 
         public object[] BillingItems { get; }
@@ -121,9 +123,9 @@ namespace virtual_receptionist.Views
 
             BillingItems[0] = item;
 
-            finalPrice = controller.CountDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
+            finalPrice = billingRepository.CountDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
 
-            finalPrice = controller.CountTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
+            finalPrice = billingRepository.CountTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
 
             BillingItems[1] = price;
             BillingItems[2] = finalPrice;

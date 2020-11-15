@@ -1,7 +1,5 @@
 ﻿using System.Data;
 using virtual_receptionist.Repositories;
-using System;
-using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Controllers
 {
@@ -9,7 +7,6 @@ namespace virtual_receptionist.Controllers
     {
         private readonly BillingRepository billingRepository = new BillingRepository();
         private readonly BookingRepository bookingRepository = new BookingRepository();
-        private readonly GuestRepository guestRepository = new GuestRepository();
 
         public DataTable GetUnpaidBookings()
         {
@@ -33,11 +30,6 @@ namespace virtual_receptionist.Controllers
             return bookingsToBill;
         }
 
-        public string[] GetGuestData(string name)
-        {
-            return guestRepository.GetGuestData(name);
-        }
-
         public DataTable GetBillingItems()
         {
             var billingItems = billingRepository.GetBillingItems();
@@ -56,22 +48,6 @@ namespace virtual_receptionist.Controllers
             }
 
             return billingItemsDataTable;
-        }
-
-        public double CountTotalPrice(double price, int quantity)
-        {
-            return billingRepository.CountTotalPrice(price, quantity);
-        }
-
-        public double CountDiscountPrice(double itemPrice, double footPercent)
-        {
-            return billingRepository.CountDiscountPrice(itemPrice, footPercent);
-        }
-
-        public void SetBookingAsPaid(int bookingId)
-        {
-            billingRepository
-                .SetBookingAsPaid(new Booking {Id = Convert.ToInt32(bookingId)});
         }
     }
 }

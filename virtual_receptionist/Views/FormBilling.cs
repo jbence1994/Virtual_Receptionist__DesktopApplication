@@ -2,11 +2,15 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Models;
+using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormBilling : Form
     {
+        private readonly BillingRepository billingRepository = new BillingRepository();
+        private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly BillingController controller = new BillingController();
 
         public FormBilling()
@@ -30,7 +34,7 @@ namespace virtual_receptionist.Views
             if (listViewToBill.SelectedItems.Count > 0)
             {
                 var name = listViewToBill.SelectedItems[0].SubItems[1].Text;
-                var data = controller.GetGuestData(name);
+                var data = guestRepository.GetGuestData(name);
 
                 textBoxBillingName.Text = data[0];
                 comboBoxBillingCountry.SelectedItem = data[1];
@@ -159,7 +163,8 @@ namespace virtual_receptionist.Views
         {
             var bookingId = Convert.ToInt32(listViewToBill.SelectedItems[0].Text);
 
-            controller.SetBookingAsPaid(bookingId);
+            billingRepository
+                .SetBookingAsPaid(new Booking { Id = Convert.ToInt32(bookingId) });
 
             var ok = MessageBox.Show
             (
