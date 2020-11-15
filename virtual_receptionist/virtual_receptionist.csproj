@@ -102,12 +102,6 @@
     <Compile Include="Controllers\BillingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainMenuController.cs" />
-    <Compile Include="Views\AboutBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AboutBox.Designer.cs">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\Models\BillingItem.cs" />
     <Compile Include="Repositories\Models\Country.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -159,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AboutBox.resx">
-      <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormBilling.resx">
       <DependentUpon>FormBilling.cs</DependentUpon>

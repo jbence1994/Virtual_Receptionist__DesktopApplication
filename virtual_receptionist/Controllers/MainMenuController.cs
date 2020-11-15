@@ -42,15 +42,6 @@ namespace virtual_receptionist.Controllers
         }
 
         /// <summary>
-        /// Metódus, amely megnyitja a névjegy ablakot
-        /// </summary>
-        public void OpenAboutBox()
-        {
-            AboutBox aboutBox = new AboutBox();
-            aboutBox.ShowDialog();
-        }
-
-        /// <summary>
         /// Metódus, amely visszaadja a szálláshely adatait az adattárból egy tömbben
         /// </summary>
         /// <returns>A feltöltött sztring tömböt adja vissza a függvény</returns>

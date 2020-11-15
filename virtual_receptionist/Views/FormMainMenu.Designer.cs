@@ -191,7 +191,6 @@
             this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
             this.toolStripMenuItemAbout.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemAbout.Text = "Névjegy";
-            this.toolStripMenuItemAbout.Click += new System.EventHandler(this.toolStripMenuItemAbout_Click);
             this.toolStripMenuItemAbout.MouseLeave += new System.EventHandler(this.toolStripMenuItemAbout_MouseLeave);
             this.toolStripMenuItemAbout.MouseHover += new System.EventHandler(this.toolStripMenuItemAbout_MouseHover);
             // 

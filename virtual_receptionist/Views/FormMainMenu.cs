@@ -90,11 +90,6 @@ namespace virtual_receptionist.Views
             }
         }
 
-        private void toolStripMenuItemAbout_Click(object sender, EventArgs e)
-        {
-            controller.OpenAboutBox();
-        }
-
         private void toolStripMenuItemAccomodationInfo_Click(object sender, EventArgs e)
         {
             string name = controller.GetAccomodationInfo()[0];
