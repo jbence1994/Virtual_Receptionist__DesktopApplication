@@ -1,7 +1,7 @@
-﻿using static virtual_receptionist.Controllers.Validation.InputValidation;
-using System;
+﻿using System;
+using static virtual_receptionist.Validation.InputValidation;
 
-namespace virtual_receptionist.Controllers.Validation
+namespace virtual_receptionist.Validation
 {
     public static class BillingItemQuantityValidation
     {

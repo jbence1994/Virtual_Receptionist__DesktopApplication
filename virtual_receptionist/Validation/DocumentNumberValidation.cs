@@ -1,7 +1,7 @@
 ﻿using System;
-using static virtual_receptionist.Controllers.Validation.InputValidation;
+using static virtual_receptionist.Validation.InputValidation;
 
-namespace virtual_receptionist.Controllers.Validation
+namespace virtual_receptionist.Validation
 {
     public static class DocumentNumberValidation
     {

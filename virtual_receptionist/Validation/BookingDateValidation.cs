@@ -1,7 +1,7 @@
 ﻿using System;
 using virtual_receptionist.Models;
 
-namespace virtual_receptionist.Controllers.Validation
+namespace virtual_receptionist.Validation
 {
     public static class BookingDateValidation
     {

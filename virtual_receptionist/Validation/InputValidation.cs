@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace virtual_receptionist.Controllers.Validation
+namespace virtual_receptionist.Validation
 {
     /// <summary>
     /// Felhasználó input ellenőrző függvénykönyvtár

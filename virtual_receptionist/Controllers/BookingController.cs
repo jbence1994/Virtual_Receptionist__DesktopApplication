@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
-using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
+using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Controllers
 {

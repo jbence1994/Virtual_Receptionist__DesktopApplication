@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using System;
 using virtual_receptionist.Controllers;
-using virtual_receptionist.Controllers.Validation;
+using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
