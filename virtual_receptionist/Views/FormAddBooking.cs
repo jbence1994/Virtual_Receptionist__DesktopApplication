@@ -5,26 +5,10 @@ using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
-    /// <summary>
-    /// Foglalási napló foglalásfelvétel modális ablak
-    /// </summary>
     public partial class FormAddBooking : Form
     {
-        #region Adattagok
-
-        /// <summary>
-        /// Foglalási napló vezérlő egy példánya
-        /// </summary>
-        private BookingController bookingController;
-
-        /// <summary>
-        /// Vendégadatbázis-kezelő vezérlő egy példánya
-        /// </summary>
-        private GuestDatabaseController guestController;
-
-        #endregion
-
-        #region Konstruktor
+        private readonly BookingController bookingController = new BookingController();
+        private readonly GuestDatabaseController guestController = new GuestDatabaseController();
 
         /// <summary>
         /// Foglalási napló foglalásfelvétel modális ablak konstruktora
@@ -32,14 +16,7 @@ namespace virtual_receptionist.Views
         public FormAddBooking()
         {
             InitializeComponent();
-
-            bookingController = new BookingController();
-            guestController = new GuestDatabaseController();
         }
-
-        #endregion
-
-        #region UI események
 
         private void FormBookingManager_Load(object sender, EventArgs e)
         {
@@ -278,7 +255,5 @@ namespace virtual_receptionist.Views
         {
             errorProviderFreeCapacity.Clear();
         }
-
-        #endregion
     }
 }

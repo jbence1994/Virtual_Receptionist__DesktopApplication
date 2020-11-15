@@ -6,47 +6,25 @@ using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
-    /// <summary>
-    /// Vendégadatbázis-kezelő ablak
-    /// </summary>
     public partial class FormGuestDatabase : Form
     {
-        #region Adattagok
+        private readonly GuestDatabaseController controller = new GuestDatabaseController();
 
-        /// <summary>
-        /// Vendégadatbázis-kezelő modul vezérlő egy példánya
-        /// </summary>
-        private GuestDatabaseController controller;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Vendégadatbázis-kezelő ablak konstruktora
-        /// </summary>
         public FormGuestDatabase()
         {
             InitializeComponent();
-            controller = new GuestDatabaseController();
         }
-
-        #endregion
-
-        #region UI események
 
         private void FormGuestDatabase_Load(object sender, EventArgs e)
         {
-            DataTable guests = controller.GetGuests();
+            var guests = controller.GetGuests();
 
             foreach (DataRow row in guests.Rows)
             {
-                ListViewItem listViewItemGuests = new ListViewItem(row[0].ToString());
+                var listViewItemGuests = new ListViewItem(row[0].ToString());
 
-                for (int i = 1; i < guests.Columns.Count; i++)
-                {
+                for (var i = 1; i < guests.Columns.Count; i++)
                     listViewItemGuests.SubItems.Add(row[i].ToString());
-                }
 
                 listViewGuest.Items.Add(listViewItemGuests);
             }
@@ -161,35 +139,33 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            if (validData)
-            {
-                // ListView rekord hozzáadás (GUI)
-                textBoxID.Text = id.ToString();
-                ListViewItem newRecord = new ListViewItem();
-                newRecord.Text = id.ToString();
-                newRecord.SubItems.Add(name);
-                newRecord.SubItems.Add(documentNumber);
-                newRecord.SubItems.Add(citizenship);
-                newRecord.SubItems.Add(birthDate);
-                newRecord.SubItems.Add(country);
-                newRecord.SubItems.Add(zipCode);
-                newRecord.SubItems.Add(city);
-                newRecord.SubItems.Add(address);
-                newRecord.SubItems.Add(phoneNumber);
-                newRecord.SubItems.Add(email);
-                listViewGuest.Items.Add(newRecord);
+            if (!validData)
+                return;
 
-                // Adatbázis rekord hozzáadása
-                controller.AddGuest(id, name, documentNumber, citizenship, birthDate, country,
-                    zipCode, city, address, phoneNumber, email);
-            }
+            textBoxID.Text = id.ToString();
+            ListViewItem newRecord = new ListViewItem();
+            newRecord.Text = id.ToString();
+            newRecord.SubItems.Add(name);
+            newRecord.SubItems.Add(documentNumber);
+            newRecord.SubItems.Add(citizenship);
+            newRecord.SubItems.Add(birthDate);
+            newRecord.SubItems.Add(country);
+            newRecord.SubItems.Add(zipCode);
+            newRecord.SubItems.Add(city);
+            newRecord.SubItems.Add(address);
+            newRecord.SubItems.Add(phoneNumber);
+            newRecord.SubItems.Add(email);
+            listViewGuest.Items.Add(newRecord);
+
+            controller.AddGuest(id, name, documentNumber, citizenship, birthDate, country,
+                zipCode, city, address, phoneNumber, email);
         }
 
         private void buttonUpdateGuest_Click(object sender, EventArgs e)
         {
             if (listViewGuest.SelectedItems.Count > 0)
             {
-                bool validData = true;
+                var validData = true;
 
                 int id = int.Parse(textBoxID.Text);
                 string name = textBoxName.Text;
@@ -293,32 +269,29 @@ namespace virtual_receptionist.Views
                     validData = false;
                 }
 
-                if (validData)
-                {
-                    // ListView rekord módosítása (GUI)
-                    textBoxID.Text = id.ToString();
-                    ListViewItem updatedRecord = new ListViewItem();
-                    updatedRecord.Text = id.ToString();
-                    updatedRecord.SubItems.Add(name);
-                    updatedRecord.SubItems.Add(documentNumber);
-                    updatedRecord.SubItems.Add(citizenship);
-                    updatedRecord.SubItems.Add(birthDate);
-                    updatedRecord.SubItems.Add(country);
-                    updatedRecord.SubItems.Add(zipCode);
-                    updatedRecord.SubItems.Add(city);
-                    updatedRecord.SubItems.Add(address);
-                    updatedRecord.SubItems.Add(phoneNumber);
-                    updatedRecord.SubItems.Add(email);
+                if (!validData)
+                    return;
 
-                    int index = listViewGuest.FocusedItem.Index;
-                    listViewGuest.Items.RemoveAt(index);
-                    listViewGuest.Items.Insert(index, updatedRecord);
+                textBoxID.Text = id.ToString();
+                var updatedRecord = new ListViewItem {Text = id.ToString()};
+                updatedRecord.SubItems.Add(name);
+                updatedRecord.SubItems.Add(documentNumber);
+                updatedRecord.SubItems.Add(citizenship);
+                updatedRecord.SubItems.Add(birthDate);
+                updatedRecord.SubItems.Add(country);
+                updatedRecord.SubItems.Add(zipCode);
+                updatedRecord.SubItems.Add(city);
+                updatedRecord.SubItems.Add(address);
+                updatedRecord.SubItems.Add(phoneNumber);
+                updatedRecord.SubItems.Add(email);
 
-                    // Adatbázis rekord módosítása
-                    controller.UpdateGuest(id, name, documentNumber, citizenship, birthDate, country,
-                        zipCode,
-                        city, address, phoneNumber, email);
-                }
+                var index = listViewGuest.FocusedItem.Index;
+                listViewGuest.Items.RemoveAt(index);
+                listViewGuest.Items.Insert(index, updatedRecord);
+
+                controller.UpdateGuest(id, name, documentNumber, citizenship, birthDate, country,
+                    zipCode,
+                    city, address, phoneNumber, email);
             }
             else
             {
@@ -335,43 +308,40 @@ namespace virtual_receptionist.Views
                     "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (delete == DialogResult.Yes)
-                {
-                    int id = int.Parse(listViewGuest.SelectedItems[0].Text);
-                    string name = listViewGuest.SelectedItems[0].SubItems[1].Text;
-                    string documentNumber = listViewGuest.SelectedItems[0].SubItems[2].Text;
-                    string citizenship = listViewGuest.SelectedItems[0].SubItems[3].Text;
-                    string birthDate = listViewGuest.SelectedItems[0].SubItems[4].Text;
-                    string country = comboBoxCountry.SelectedItem.ToString();
-                    string zipCode = listViewGuest.SelectedItems[0].SubItems[6].Text;
-                    string city = listViewGuest.SelectedItems[0].SubItems[7].Text;
-                    string address = listViewGuest.SelectedItems[0].SubItems[8].Text;
-                    string phoneNumber = listViewGuest.SelectedItems[0].SubItems[9].Text;
-                    string email = listViewGuest.SelectedItems[0].SubItems[10].Text;
+                if (delete != DialogResult.Yes)
+                    return;
 
-                    // ListView rekord törlés (GUI)
-                    int index = listViewGuest.FocusedItem.Index;
-                    listViewGuest.Items.RemoveAt(index);
+                int id = int.Parse(listViewGuest.SelectedItems[0].Text);
+                string name = listViewGuest.SelectedItems[0].SubItems[1].Text;
+                string documentNumber = listViewGuest.SelectedItems[0].SubItems[2].Text;
+                string citizenship = listViewGuest.SelectedItems[0].SubItems[3].Text;
+                string birthDate = listViewGuest.SelectedItems[0].SubItems[4].Text;
+                string country = comboBoxCountry.SelectedItem.ToString();
+                string zipCode = listViewGuest.SelectedItems[0].SubItems[6].Text;
+                string city = listViewGuest.SelectedItems[0].SubItems[7].Text;
+                string address = listViewGuest.SelectedItems[0].SubItems[8].Text;
+                string phoneNumber = listViewGuest.SelectedItems[0].SubItems[9].Text;
+                string email = listViewGuest.SelectedItems[0].SubItems[10].Text;
 
-                    //GUI vezérlők alaphelyzetbe állítása
-                    textBoxID.Clear();
-                    textBoxName.Clear();
-                    textBoxDocumentNumber.Clear();
-                    textBoxCitizenship.Clear();
-                    textBoxBirthDate.Clear();
-                    comboBoxCountry.DataSource = null;
-                    comboBoxCountry.DataSource = controller.GetCountries();
-                    comboBoxCountry.SelectedItem = controller.GetCountries()[0];
-                    textBoxZipCode.Clear();
-                    textBoxCity.Clear();
-                    textBoxAddress.Clear();
-                    textBoxPhoneNumber.Clear();
-                    textBoxEmailAddress.Clear();
+                var index = listViewGuest.FocusedItem.Index;
+                listViewGuest.Items.RemoveAt(index);
 
-                    //Adatbázis rekord törlése
-                    controller.DeleteGuest(id, name, documentNumber, citizenship, birthDate,
-                        country, zipCode, city, address, phoneNumber, email);
-                }
+                textBoxID.Clear();
+                textBoxName.Clear();
+                textBoxDocumentNumber.Clear();
+                textBoxCitizenship.Clear();
+                textBoxBirthDate.Clear();
+                comboBoxCountry.DataSource = null;
+                comboBoxCountry.DataSource = controller.GetCountries();
+                comboBoxCountry.SelectedItem = controller.GetCountries()[0];
+                textBoxZipCode.Clear();
+                textBoxCity.Clear();
+                textBoxAddress.Clear();
+                textBoxPhoneNumber.Clear();
+                textBoxEmailAddress.Clear();
+
+                controller.DeleteGuest(id, name, documentNumber, citizenship, birthDate,
+                    country, zipCode, city, address, phoneNumber, email);
             }
             else
             {
@@ -390,7 +360,7 @@ namespace virtual_receptionist.Views
                 textBoxDocumentNumber.Text = listViewGuest.SelectedItems[0].SubItems[2].Text;
                 textBoxCitizenship.Text = listViewGuest.SelectedItems[0].SubItems[3].Text;
                 textBoxBirthDate.Text = listViewGuest.SelectedItems[0].SubItems[4].Text;
-                string selectedCountryInTable = listViewGuest.SelectedItems[0].SubItems[5].Text;
+                var selectedCountryInTable = listViewGuest.SelectedItems[0].SubItems[5].Text;
                 comboBoxCountry.SelectedItem = controller.SetSelectedCountry(selectedCountryInTable);
 
                 textBoxZipCode.Text = listViewGuest.SelectedItems[0].SubItems[6].Text;
@@ -404,7 +374,7 @@ namespace virtual_receptionist.Views
                 buttonAddGuest.Enabled = true;
 
                 textBoxID.Clear();
-                textBoxID.Text = controller.GetNextGuestId().ToString();
+                textBoxID.Text = controller.GetNextGuestId();
                 textBoxName.Clear();
                 textBoxDocumentNumber.Clear();
                 textBoxCitizenship.Clear();
@@ -464,7 +434,5 @@ namespace virtual_receptionist.Views
         {
             errorProviderEmailAddress.Clear();
         }
-
-        #endregion
     }
 }

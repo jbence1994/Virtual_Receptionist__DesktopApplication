@@ -68,7 +68,7 @@ namespace virtual_receptionist.Controllers
             return billingRepository.CountDiscountPrice(itemPrice, footPercent);
         }
 
-        public void PrintInvoice(int bookingId)
+        public void SetBookingAsPaid(int bookingId)
         {
             billingRepository
                 .SetBookingAsPaid(new Booking {Id = Convert.ToInt32(bookingId)});

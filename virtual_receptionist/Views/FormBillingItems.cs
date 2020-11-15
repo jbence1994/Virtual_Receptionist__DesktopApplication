@@ -6,48 +6,25 @@ using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
-    /// <summary>
-    /// Számlázó modul tételek felvételéhez szükséges modális ablak
-    /// </summary>
     public partial class FormBillingItems : Form
     {
-        #region Adattagok
+        private readonly BillingController controller = new BillingController();
 
-        /// <summary>
-        /// Számlázó modul vezérlő egy példánya
-        /// </summary>
-        private BillingController controller;
+        public object[] BillingItems { get; }
 
-        /// <summary>
-        /// Számlázandó tétel adatai
-        /// </summary>
-        private object[] billingItems;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Számlázó modul tételek felvételét vagy módosításához szükséges modális ablak konstruktora
-        /// </summary>
         public FormBillingItems(params object[] billingItems)
         {
             InitializeComponent();
 
-            controller = new BillingController();
-            this.billingItems = billingItems;
+            BillingItems = billingItems;
 
             textBoxItem.Text = billingItems[0].ToString();
             textBoxPrice.Text = billingItems[1].ToString();
 
             if (billingItems[3].ToString() == "0%")
-            {
                 maskedTextBoxDiscountRate.Clear();
-            }
             else
-            {
                 maskedTextBoxDiscountRate.Text = billingItems[3].ToString();
-            }
 
             numericUpDownQuantity.Text = billingItems[4].ToString();
             textBoxUnit.Text = billingItems[5].ToString();
@@ -55,22 +32,16 @@ namespace virtual_receptionist.Views
             textBoxCategory.Text = billingItems[7].ToString();
         }
 
-        #endregion
-
-        #region UI események
-
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            DataTable billingItemsTable = controller.GetBillingItems();
+            var billingItemsTable = controller.GetBillingItems();
 
             foreach (DataRow row in billingItemsTable.Rows)
             {
-                ListViewItem billingItems = new ListViewItem(row[0].ToString());
+                var billingItems = new ListViewItem(row[0].ToString());
 
-                for (int i = 1; i < billingItemsTable.Columns.Count; i++)
-                {
+                for (var i = 1; i < billingItemsTable.Columns.Count; i++)
                     billingItems.SubItems.Add(row[i].ToString());
-                }
 
                 listViewBillingItems.Items.Add(billingItems);
             }
@@ -89,24 +60,18 @@ namespace virtual_receptionist.Views
                 errorProviderDiscount.Clear();
                 errorProviderQuantity.Clear();
 
-                if (listViewBillingItems.SelectedItems[0].SubItems[3].Text == "Tárgyi adó mentes")
-                {
-                    maskedTextBoxDiscountRate.Enabled = false;
-                }
-                else
-                {
-                    maskedTextBoxDiscountRate.Enabled = true;
-                }
+                maskedTextBoxDiscountRate.Enabled =
+                    listViewBillingItems.SelectedItems[0].SubItems[3].Text != "Tárgyi adó mentes";
             }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            bool validData = true;
+            var validData = true;
 
-            string item = string.Empty;
+            var item = string.Empty;
             double price = 0;
-            double finalPrice = 0;
+            double finalPrice;
             double discount = 0;
 
             try
@@ -128,10 +93,10 @@ namespace virtual_receptionist.Views
                 discount = Convert.ToDouble(maskedTextBoxDiscountRate.Text);
             }
 
-            string unit = textBoxUnit.Text;
-            string vat = textBoxVAT.Text;
-            string category = textBoxCategory.Text;
-            string quantity = numericUpDownQuantity.Text;
+            var unit = textBoxUnit.Text;
+            var vat = textBoxVAT.Text;
+            var category = textBoxCategory.Text;
+            var quantity = numericUpDownQuantity.Text;
 
             try
             {
@@ -151,48 +116,27 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            if (validData)
-            {
-                billingItems[0] = item;
+            if (!validData)
+                return;
 
-                /*
-                 * Először, ha van, a kedvezményes árat számoljuk ki
-                 */
-                finalPrice = controller.CountDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
+            BillingItems[0] = item;
 
-                /*
-                 * A kedvezményes árképzés után számoljuk össze a mennyiségét
-                 */
-                finalPrice = controller.CountTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
+            finalPrice = controller.CountDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
 
-                billingItems[1] = price;
-                billingItems[2] = finalPrice;
-                billingItems[3] = $"{discount}%";
-                billingItems[4] = quantity;
-                billingItems[5] = unit;
-                billingItems[6] = vat;
-                billingItems[7] = category;
-            }
-        }
+            finalPrice = controller.CountTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
 
-        private void maskedTextBoxItemDiscount_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            errorProviderDiscount.Clear();
+            BillingItems[1] = price;
+            BillingItems[2] = finalPrice;
+            BillingItems[3] = $"{discount}%";
+            BillingItems[4] = quantity;
+            BillingItems[5] = unit;
+            BillingItems[6] = vat;
+            BillingItems[7] = category;
         }
 
         private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             errorProviderQuantity.Clear();
         }
-
-        /// <summary>
-        /// Számlázandó tétel adatai
-        /// </summary>
-        public object[] BillingItems
-        {
-            get { return billingItems; }
-        }
-
-        #endregion
     }
 }

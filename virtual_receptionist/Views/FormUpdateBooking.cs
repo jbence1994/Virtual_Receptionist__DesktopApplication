@@ -5,44 +5,18 @@ using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
-    /// <summary>
-    /// Foglalási napló foglalásmódosítás modális ablak
-    /// </summary>
     public partial class FormUpdateBooking : Form
     {
-        #region Adattagok
+        private readonly BookingController bookingController = new BookingController();
+        private readonly GuestDatabaseController guestController = new GuestDatabaseController();
 
-        /// <summary>
-        /// Foglalási napló vezérlő egy példánya
-        /// </summary>
-        private BookingController bookingController;
+        public object[] Booking { get; }
 
-        /// <summary>
-        /// Vendégadatbázis-kezelő vezérlő egy példánya
-        /// </summary>
-        private GuestDatabaseController guestController;
-
-        /// <summary>
-        /// Foglalás adatai
-        /// </summary>
-        private object[] booking;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Foglalási napló foglalásmódosítás modális ablak konstruktora
-        /// </summary>
-        /// <param name="booking">Foglalás adatai</param>
         public FormUpdateBooking(params object[] booking)
         {
             InitializeComponent();
 
-            bookingController = new BookingController();
-            guestController = new GuestDatabaseController();
-
-            this.booking = booking;
+            Booking = booking;
             textBoxBookingID.Text = booking[0].ToString();
             comboBoxGuest.DataSource = guestController.GetGuestNames();
             comboBoxGuest.SelectedItem = booking[1].ToString();
@@ -53,17 +27,9 @@ namespace virtual_receptionist.Views
             numericUpDownNumberOfGuests.Value = Convert.ToDecimal(booking[3]);
         }
 
-        #endregion
-
-        #region UI események
-
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            bool validData = true;
-
-            /*
-             * Foglalásadatok validálása
-             */
+            var validData = true;
 
             string id = textBoxBookingID.Text;
             string name = comboBoxGuest.SelectedItem.ToString();
@@ -120,17 +86,17 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            if (validData)
-            {
-                booking[0] = Convert.ToInt32(id);
-                booking[1] = comboBoxGuest.SelectedItem.ToString();
-                booking[2] = comboBoxRoom.SelectedItem;
-                booking[3] = numericUpDownNumberOfGuests.Value;
-                booking[4] = arrivalDate.ToString("yyyy-MM-dd");
-                booking[5] = departureDate.ToString("yyyy-MM-dd");
+            if (!validData)
+                return;
 
-                bookingController.UpdateBooking(booking);
-            }
+            Booking[0] = Convert.ToInt32(id);
+            Booking[1] = comboBoxGuest.SelectedItem.ToString();
+            Booking[2] = comboBoxRoom.SelectedItem;
+            Booking[3] = numericUpDownNumberOfGuests.Value;
+            Booking[4] = arrivalDate.ToString("yyyy-MM-dd");
+            Booking[5] = departureDate.ToString("yyyy-MM-dd");
+
+            bookingController.UpdateBooking(Booking);
         }
 
         private void numericUpDownNumberOfGuests_ValueChanged(object sender, EventArgs e)
@@ -143,24 +109,9 @@ namespace virtual_receptionist.Views
             errorProviderDepartureDate.Clear();
         }
 
-        private void textBoxGuestName_TextChanged(object sender, EventArgs e)
-        {
-            errorProviderNumberOfGuests.Clear();
-        }
-
         private void comboBoxRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
             errorProviderFreeCapacity.Clear();
         }
-
-        /// <summary>
-        /// Foglalás adatai
-        /// </summary>
-        public object[] Booking
-        {
-            get { return booking; }
-        }
-
-        #endregion
     }
 }

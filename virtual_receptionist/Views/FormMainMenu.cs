@@ -5,46 +5,18 @@ using virtual_receptionist.Controllers;
 
 namespace virtual_receptionist.Views
 {
-    /// <summary>
-    /// Főmenü ablak
-    /// </summary>
     public partial class FormMainMenu : Form
     {
-        #region Adattagok
+        private readonly MainMenuController controller = new MainMenuController();
+        private readonly FormLogin formLogin;
+        private static string _debugFolder;
 
-        /// <summary>
-        /// Főmenü vezérlő egy példánya
-        /// </summary>
-        private MainMenuController controller;
-
-        /// <summary>
-        /// Bejelentkező ablak egy példánya
-        /// </summary>
-        private FormLogin formLogin;
-
-        /// <summary>
-        /// Alkalmazás futási mappája
-        /// </summary>
-        private static string debugFolder;
-
-        #endregion
-
-        #region Konstruktor
-
-        /// <summary>
-        /// Főmenü ablak konstruktora
-        /// </summary>
         public FormMainMenu(FormLogin formLogin)
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            controller = new MainMenuController();
-            debugFolder = Directory.GetCurrentDirectory();
+            _debugFolder = Directory.GetCurrentDirectory();
         }
-
-        #endregion
-
-        #region UI események
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
@@ -74,7 +46,7 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
         {
-            if (debugFolder == Directory.GetCurrentDirectory())
+            if (_debugFolder == Directory.GetCurrentDirectory())
             {
                 Directory.SetCurrentDirectory(@"..\..\Help\");
                 Help.ShowHelp(this, "virtual_receptionist_help.chm");
@@ -273,16 +245,14 @@ namespace virtual_receptionist.Views
 
         private void Logout()
         {
-            DialogResult logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
+            var logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (logout == DialogResult.Yes)
-            {
-                Close();
-                formLogin.Show();
-            }
-        }
+            if (logout != DialogResult.Yes)
+                return;
 
-        #endregion
+            Close();
+            formLogin.Show();
+        }
     }
 }
