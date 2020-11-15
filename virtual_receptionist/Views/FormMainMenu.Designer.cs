@@ -41,7 +41,6 @@
             this.toolStripMenuItemHelpSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemHelpCHM = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemWebsite = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMainMenu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelClient = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelMenuName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -110,7 +109,7 @@
             // 
             this.toolStripMenuItemBooking.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBooking.Image")));
             this.toolStripMenuItemBooking.Name = "toolStripMenuItemBooking";
-            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItemBooking.Size = new System.Drawing.Size(162, 22);
             this.toolStripMenuItemBooking.Text = "Foglalási napló";
             this.toolStripMenuItemBooking.Click += new System.EventHandler(this.toolStripMenuItemRoomEditor_Click);
             this.toolStripMenuItemBooking.MouseLeave += new System.EventHandler(this.toolStripMenuItemRoomEditor_MouseLeave);
@@ -120,7 +119,7 @@
             // 
             this.toolStripMenuItemGuestDatabase.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGuestDatabase.Image")));
             this.toolStripMenuItemGuestDatabase.Name = "toolStripMenuItemGuestDatabase";
-            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItemGuestDatabase.Size = new System.Drawing.Size(162, 22);
             this.toolStripMenuItemGuestDatabase.Text = "Vendégadatbázis";
             this.toolStripMenuItemGuestDatabase.Click += new System.EventHandler(this.toolStripMenuItemGuestDatabase_Click);
             this.toolStripMenuItemGuestDatabase.MouseLeave += new System.EventHandler(this.toolStripMenuItemGuestDatabase_MouseLeave);
@@ -130,7 +129,7 @@
             // 
             this.toolStripMenuItemBilling.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBilling.Image")));
             this.toolStripMenuItemBilling.Name = "toolStripMenuItemBilling";
-            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(163, 22);
+            this.toolStripMenuItemBilling.Size = new System.Drawing.Size(162, 22);
             this.toolStripMenuItemBilling.Text = "Számlázás";
             this.toolStripMenuItemBilling.Click += new System.EventHandler(this.toolStripMenuItemBilling_Click);
             this.toolStripMenuItemBilling.MouseLeave += new System.EventHandler(this.toolStripMenuItemBilling_MouseLeave);
@@ -142,8 +141,7 @@
             this.toolStripMenuItemAccomodationInfo,
             this.toolStripMenuItemHelpSeparator,
             this.toolStripMenuItemHelpCHM,
-            this.toolStripMenuItemWebsite,
-            this.toolStripMenuItemAbout});
+            this.toolStripMenuItemWebsite});
             this.toolStripMenuItemHelp.Name = "toolStripMenuItemHelp";
             this.toolStripMenuItemHelp.Size = new System.Drawing.Size(46, 20);
             this.toolStripMenuItemHelp.Text = "Súgó";
@@ -184,15 +182,6 @@
             this.toolStripMenuItemWebsite.Click += new System.EventHandler(this.toolStripMenuItemWebsite_Click);
             this.toolStripMenuItemWebsite.MouseLeave += new System.EventHandler(this.toolStripMenuItemWebsite_MouseLeave);
             this.toolStripMenuItemWebsite.MouseHover += new System.EventHandler(this.toolStripMenuItemWebsite_MouseHover);
-            // 
-            // toolStripMenuItemAbout
-            // 
-            this.toolStripMenuItemAbout.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemAbout.Image")));
-            this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
-            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(244, 22);
-            this.toolStripMenuItemAbout.Text = "Névjegy";
-            this.toolStripMenuItemAbout.MouseLeave += new System.EventHandler(this.toolStripMenuItemAbout_MouseLeave);
-            this.toolStripMenuItemAbout.MouseHover += new System.EventHandler(this.toolStripMenuItemAbout_MouseHover);
             // 
             // statusStripMainMenu
             // 
@@ -386,7 +375,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonBilling;
         private System.Windows.Forms.ToolStripButton toolStripButtonGuestDatabase;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHelpCHM;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAccomodationInfo;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItemHelpSeparator;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWebsite;
