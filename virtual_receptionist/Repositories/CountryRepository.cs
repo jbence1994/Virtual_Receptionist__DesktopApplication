@@ -11,7 +11,7 @@ namespace virtual_receptionist.Repositories
         private void UploadCountriesList()
         {
             const string sql = "SELECT * FROM country";
-            var dt = database.Dql(sql);
+            var dt = Database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {

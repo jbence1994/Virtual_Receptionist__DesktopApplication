@@ -20,7 +20,7 @@ namespace virtual_receptionist.Repositories
             const string sql =
                 "SELECT guest.ID, guest.Name, guest.DocumentNumber, guest.Citizenship, guest.BirthDate, country.CountryName, guest.ZipCode, guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress FROM guest, country WHERE guest.Country = country.ID";
 
-            var dt = database.Dql(sql);
+            var dt = Database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -66,7 +66,7 @@ namespace virtual_receptionist.Repositories
         public void DeleteGuest(Guest guest)
         {
             var sql = $"DELETE FROM guest WHERE guest.ID = \"{guest.Id}\"";
-            database.Dml(sql);
+            Database.Dml(sql);
         }
 
         public void UpdateGuest(Guest guest)
@@ -74,7 +74,7 @@ namespace virtual_receptionist.Repositories
             var sql =
                 $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.DocumentNumber=\"{guest.DocumentNumber}\", guest.Citizenship=\"{guest.Citizenship}\", guest.BirthDate=\"{guest.BirthDate}\", guest.Country = (SELECT country.ID FROM country WHERE country.CountryName = \"{guest.Country}\"), guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.ID = \"{guest.Id}\"";
 
-            database.Dml(sql);
+            Database.Dml(sql);
         }
 
         public void AddGuest(Guest guest)
@@ -82,13 +82,13 @@ namespace virtual_receptionist.Repositories
             var sql =
                 $"INSERT INTO guest(Name, DocumentNumber, Citizenship, BirthDate, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{guest.DocumentNumber}\", \"{guest.Citizenship}\", \"{guest.BirthDate}\", (SELECT country.ID FROM country WHERE country.CountryName = \"{guest.Country}\"), \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\")";
 
-            database.Dml(sql);
+            Database.Dml(sql);
         }
 
         public int GetNextGuestId()
         {
             const string sql = "SELECT MAX(guest.ID) FROM guest";
-            var maxId = database.ScalarDql(sql);
+            var maxId = Database.ScalarDql(sql);
 
             int.TryParse(maxId, out var nextId);
 

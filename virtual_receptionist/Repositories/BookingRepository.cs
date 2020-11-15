@@ -22,7 +22,7 @@ namespace virtual_receptionist.Repositories
             const string sql =
                 "SELECT room.ID, room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
 
-            var dt = database.Dql(sql);
+            var dt = Database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -50,7 +50,7 @@ namespace virtual_receptionist.Repositories
             const string sql =
                 "SELECT booking.ID, guest.Name, room.Number, booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid FROM booking, guest, room WHERE booking.GuestID = guest.ID AND booking.RoomID = room.ID";
 
-            var dt = database.Dql(sql);
+            var dt = Database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -107,20 +107,20 @@ namespace virtual_receptionist.Repositories
             var sql =
                 $"INSERT INTO booking(GuestID, RoomID, NumberOfGuests, ArrivalDate, DepartureDate, Paid) VALUES ((SELECT guest.ID FROM guest WHERE guest.Name LIKE \"{booking.Guest.Name}\"), (SELECT room.ID FROM room WHERE room.Number = \"{booking.Room.Number}\"), \"{booking.NumberOfGuests}\", \"{booking.ArrivalDate}\", \"{booking.DepartureDate}\", \"{booking.IsPaid}\");";
 
-            database.Dml(sql);
+            Database.Dml(sql);
         }
 
         public void DeleteBooking(Booking booking)
         {
             var sql = $"DELETE FROM booking WHERE booking.ID = \"{booking.Id}\"";
-            database.Dml(sql);
+            Database.Dml(sql);
         }
 
         public void UpdateBooking(Booking booking)
         {
             var sql =
                 $"UPDATE booking SET booking.GuestID = (SELECT guest.ID FROM guest WHERE guest.Name = \"{booking.Guest.Name}\"), booking.RoomID = (SELECT room.ID FROM room WHERE room.Number = \"{booking.Room.Number}\"), NumberOfGuests = \"{booking.NumberOfGuests}\", ArrivalDate = \"{booking.ArrivalDate}\", DepartureDate = \"{booking.DepartureDate}\" WHERE booking.ID = \"{booking.Id}\"";
-            database.Dml(sql);
+            Database.Dml(sql);
         }
 
         public List<Booking> GetBookingsByArrivalDate(string arrivalDate)
