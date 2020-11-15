@@ -1,4 +1,5 @@
-﻿using virtual_receptionist.Repositories.Models;
+﻿using System;
+using virtual_receptionist.Repositories.Models;
 using System.Data;
 using virtual_receptionist.Repositories.MySQLConnection;
 using virtual_receptionist.Controllers.Exceptions;
@@ -72,12 +73,12 @@ namespace virtual_receptionist.Repositories
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
         /// <exception cref="FailedLoginException"></exception>
-        /// <exception cref="InvalidConnectionTypeException"></exception>
-        public bool Authentication(string accomodationID, string password, string connectionType)
+        /// <exception cref="Exception"></exception>
+        public bool Authentication(string accomodationID, string password)
         {
             try
             {
-                database.SetConnection(connectionType);
+                database.SetConnection();
 
                 Accomodation accomodation = GetAccomodation();
 
@@ -88,7 +89,7 @@ namespace virtual_receptionist.Repositories
 
                 throw new FailedLoginException();
             }
-            catch (InvalidConnectionTypeException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }

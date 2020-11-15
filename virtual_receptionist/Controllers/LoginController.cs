@@ -40,11 +40,11 @@ namespace virtual_receptionist.Controllers
         /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
         /// <exception cref="FailedLoginException"></exception>
         /// <exception cref="Exception"></exception>
-        public bool EnterApplication(string accomodationID, string password, string connectionType)
+        public bool EnterApplication(string accomodationID, string password)
         {
             try
             {
-                if (repository.Authentication(accomodationID, password, connectionType))
+                if (repository.Authentication(accomodationID, password))
                 {
                     return true;
                 }

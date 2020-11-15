@@ -42,11 +42,10 @@ namespace virtual_receptionist.Views
         {
             string accomodationID = textBoxAccomodationID.Text;
             string password = textBoxPassword.Text;
-            string connectionType = comboBoxConnectionType.Text;
 
             try
             {
-                bool validLogin = controller.EnterApplication(accomodationID, password, connectionType);
+                bool validLogin = controller.EnterApplication(accomodationID, password);
 
                 if (validLogin)
                 {

@@ -36,9 +36,7 @@
             this.groupBoxLogin = new System.Windows.Forms.GroupBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.comboBoxConnectionType = new System.Windows.Forms.ComboBox();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.labelConnectionType = new System.Windows.Forms.Label();
             this.textBoxAccomodationID = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelAccomodationID = new System.Windows.Forms.Label();
@@ -92,9 +90,7 @@
             // 
             this.groupBoxLogin.Controls.Add(this.buttonExit);
             this.groupBoxLogin.Controls.Add(this.buttonLogin);
-            this.groupBoxLogin.Controls.Add(this.comboBoxConnectionType);
             this.groupBoxLogin.Controls.Add(this.labelPassword);
-            this.groupBoxLogin.Controls.Add(this.labelConnectionType);
             this.groupBoxLogin.Controls.Add(this.textBoxAccomodationID);
             this.groupBoxLogin.Controls.Add(this.textBoxPassword);
             this.groupBoxLogin.Controls.Add(this.labelAccomodationID);
@@ -124,18 +120,6 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // comboBoxConnectionType
-            // 
-            this.comboBoxConnectionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxConnectionType.FormattingEnabled = true;
-            this.comboBoxConnectionType.Items.AddRange(new object[] {
-            "otthoni",
-            "iskolai"});
-            this.comboBoxConnectionType.Location = new System.Drawing.Point(175, 123);
-            this.comboBoxConnectionType.Name = "comboBoxConnectionType";
-            this.comboBoxConnectionType.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxConnectionType.TabIndex = 9;
-            // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
@@ -144,15 +128,6 @@
             this.labelPassword.Size = new System.Drawing.Size(39, 13);
             this.labelPassword.TabIndex = 12;
             this.labelPassword.Text = "Jelszó:";
-            // 
-            // labelConnectionType
-            // 
-            this.labelConnectionType.AutoSize = true;
-            this.labelConnectionType.Location = new System.Drawing.Point(36, 126);
-            this.labelConnectionType.Name = "labelConnectionType";
-            this.labelConnectionType.Size = new System.Drawing.Size(133, 13);
-            this.labelConnectionType.TabIndex = 13;
-            this.labelConnectionType.Text = "Csatlakozás kiszolgálóhoz:";
             // 
             // textBoxAccomodationID
             // 
@@ -213,9 +188,7 @@
         private System.Windows.Forms.PictureBox pictureBoxVRLogo;
         private System.Windows.Forms.GroupBox groupBoxLogin;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.ComboBox comboBoxConnectionType;
         private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.Label labelConnectionType;
         private System.Windows.Forms.TextBox textBoxAccomodationID;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelAccomodationID;

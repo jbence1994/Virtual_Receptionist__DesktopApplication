@@ -70,28 +70,12 @@ namespace virtual_receptionist.Repositories.MySQLConnection
         /// <summary>
         /// Metódus, amely beállítja az adatbázis kapcsolódásának a típusát
         /// </summary>
-        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
-        /// <exception cref="InvalidConnectionTypeException"></exception>
-        public void SetConnection(string connectionType)
+        public void SetConnection()
         {
-            if (connectionType == "otthoni")
+            mySqlConnection = new MySqlConnection()
             {
-                mySqlConnection = new MySqlConnection()
-                {
-                    ConnectionString = ConfigurationManager.ConnectionStrings["local"].ConnectionString
-                };
-            }
-            else if (connectionType == "iskolai")
-            {
-                mySqlConnection = new MySqlConnection()
-                {
-                    ConnectionString = ConfigurationManager.ConnectionStrings["remote"].ConnectionString
-                };
-            }
-            else
-            {
-                throw new InvalidConnectionTypeException();
-            }
+                ConnectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString
+            };
         }
 
         /// <summary>

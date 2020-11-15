@@ -87,7 +87,6 @@
     <Compile Include="Repositories\BookingRepository.cs" />
     <Compile Include="Repositories\GuestRepository.cs" />
     <Compile Include="Repositories\MySQLConnection\Database.cs" />
-    <Compile Include="Repositories\MySQLConnection\InvalidConnectionTypeException.cs" />
     <Compile Include="Views\FormAddBooking.cs">
       <SubType>Form</SubType>
     </Compile>
