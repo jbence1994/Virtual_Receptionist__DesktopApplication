@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
-using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -116,7 +115,7 @@ namespace virtual_receptionist.Views
                 price = Convert.ToDouble(textBoxPrice.Text);
                 finalPrice = Convert.ToDouble(textBoxPrice.Text);
             }
-            catch (InvalidBllingItemParameterException exception)
+            catch (Exception exception)
             {
                 DialogResult = DialogResult.None;
                 errorProviderBillingItem.SetError(textBoxItem, exception.Message);
@@ -138,16 +137,16 @@ namespace virtual_receptionist.Views
                 errorProviderQuantity.Clear();
                 controller.QuantityValidator(quantity);
             }
-            catch (InvalidBllingItemParameterException exception)
-            {
-                DialogResult = DialogResult.None;
-                errorProviderQuantity.SetError(numericUpDownQuantity, exception.Message);
-                validData = false;
-            }
             catch (OverflowException)
             {
                 DialogResult = DialogResult.None;
                 errorProviderQuantity.SetError(textBoxUnit, "Érvénytelen mennyiség!");
+                validData = false;
+            }
+            catch (Exception exception)
+            {
+                DialogResult = DialogResult.None;
+                errorProviderQuantity.SetError(numericUpDownQuantity, exception.Message);
                 validData = false;
             }
 

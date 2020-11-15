@@ -1,5 +1,4 @@
 ﻿using System;
-using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -41,13 +40,12 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (Convert.ToDateTime(booking.ArrivalDate) == Convert.ToDateTime(booking.DepartureDate))
             {
-                throw new InvalidBookingParameterException("A távozás dátuma megegyezik az érkezés dátumával!");
+                throw new Exception("A távozás dátuma megegyezik az érkezés dátumával!");
             }
 
             if (Convert.ToDateTime(booking.DepartureDate) < Convert.ToDateTime(booking.ArrivalDate))
             {
-                throw new InvalidBookingParameterException(
-                    "A távozás dátuma nem lehet hamarabb, mint az érkezés dátuma!");
+                throw new Exception("A távozás dátuma nem lehet hamarabb, mint az érkezés dátuma!");
             }
         }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Repositories
@@ -86,7 +85,7 @@ namespace virtual_receptionist.Repositories
                     return true;
                 }
 
-                throw new FailedLoginException();
+                throw new Exception();
             }
             catch (Exception exception)
             {

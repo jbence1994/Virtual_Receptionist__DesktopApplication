@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -47,8 +47,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (booking.NumberOfGuests > booking.Room.Capacity)
             {
-                throw new InvalidBookingParameterException(
-                    "A vendégek száma nem lehet nagyobb, mint a kiválasztott szoba maximális férőhelye!");
+                throw new Exception("A vendégek száma nem lehet nagyobb, mint a kiválasztott szoba maximális férőhelye!");
             }
         }
 

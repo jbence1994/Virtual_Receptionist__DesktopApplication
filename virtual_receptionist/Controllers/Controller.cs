@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using virtual_receptionist.Repositories;
-using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Models;
 
@@ -88,7 +88,7 @@ namespace virtual_receptionist.Controllers
                 NameValidation nameValidation = new NameValidation(name);
                 nameValidation.ValidateName();
             }
-            catch (InvalidNameException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -106,7 +106,7 @@ namespace virtual_receptionist.Controllers
                 DocumentNumberValidation documentNumberValidation = new DocumentNumberValidation(documentNumber);
                 documentNumberValidation.ValidateDocumentNumber();
             }
-            catch (InvalidDocumentNumberException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -124,7 +124,7 @@ namespace virtual_receptionist.Controllers
                 CitizenshipValidation citizenshipValidation = new CitizenshipValidation(citizenship);
                 citizenshipValidation.ValidateCitizenship();
             }
-            catch (InvalidCitizenshipException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -142,7 +142,7 @@ namespace virtual_receptionist.Controllers
                 BirthDateValidation birthDateValidation = new BirthDateValidation(birthDate);
                 birthDateValidation.ValidateBirthDate();
             }
-            catch (InvalidBirthDateException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -160,7 +160,7 @@ namespace virtual_receptionist.Controllers
                 ZipCodeValidation zipCodeValidation = new ZipCodeValidation(zipCode);
                 zipCodeValidation.ValidateZipCode();
             }
-            catch (InvalidZipCodeException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -178,7 +178,7 @@ namespace virtual_receptionist.Controllers
                 CityValidation cityValidation = new CityValidation(city);
                 cityValidation.ValidateCity();
             }
-            catch (InvalidCityException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -196,7 +196,7 @@ namespace virtual_receptionist.Controllers
                 AddressValidation addressValidation = new AddressValidation(address);
                 addressValidation.ValidateAddress();
             }
-            catch (InvalidAddressException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -214,7 +214,7 @@ namespace virtual_receptionist.Controllers
                 PhoneNumberValidation phoneNumberValidation = new PhoneNumberValidation(phoneNumber);
                 phoneNumberValidation.ValidatePhoneNumber();
             }
-            catch (InvalidPhoneNumberException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -232,7 +232,7 @@ namespace virtual_receptionist.Controllers
                 EmailValidation emailValidation = new EmailValidation(email);
                 emailValidation.ValidateEmail();
             }
-            catch (InvalidEmailAddressException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -250,7 +250,7 @@ namespace virtual_receptionist.Controllers
                 VATNumberValidation vatNumberValidation = new VATNumberValidation(vatNumber);
                 vatNumberValidation.ValidateVATNumber();
             }
-            catch (InvalidVATNumberException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }

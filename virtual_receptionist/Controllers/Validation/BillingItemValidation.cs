@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -29,7 +29,7 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(billingItem))
             {
-                throw new InvalidBllingItemParameterException("Nincs kijelölt tétel!");
+                throw new Exception("Nincs kijelölt tétel!");
             }
         }
     }

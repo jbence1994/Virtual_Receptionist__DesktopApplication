@@ -1,5 +1,5 @@
-﻿using static virtual_receptionist.Controllers.Validation.InputValidation;
-using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
+using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
 {
@@ -40,17 +40,17 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(phoneNumber))
             {
-                throw new InvalidPhoneNumberException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(phoneNumber))
             {
-                throw new InvalidPhoneNumberException("Telefonszám nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Telefonszám nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLetterCharacters(phoneNumber))
             {
-                throw new InvalidPhoneNumberException("Telefonszám nem tartalmazhat betűt!");
+                throw new Exception("Telefonszám nem tartalmazhat betűt!");
             }
         }
 

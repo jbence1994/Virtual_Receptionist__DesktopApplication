@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
-using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -77,7 +76,7 @@ namespace virtual_receptionist.Views
                 errorProviderName.Clear();
                 bookingController.NameValidator(name);
             }
-            catch (InvalidNameException exception)
+            catch (Exception exception)
             {
                 DialogResult = DialogResult.None;
                 errorProviderName.SetError(comboBoxGuest, exception.Message);
@@ -89,7 +88,7 @@ namespace virtual_receptionist.Views
                 errorProviderDepartureDate.Clear();
                 bookingController.BookingDateValidator(arrivalDate, departureDate);
             }
-            catch (InvalidBookingParameterException exception)
+            catch (Exception exception)
             {
                 errorProviderDepartureDate.SetError(dateTimePickerDepartureDate, exception.Message);
                 DialogResult = DialogResult.None;
@@ -101,7 +100,7 @@ namespace virtual_receptionist.Views
                 errorProviderFreeCapacity.Clear();
                 bookingController.FreeRoomCapacityValidator(arrivalDate, roomNumber);
             }
-            catch (InvalidFreeRoomCapacityException exception)
+            catch (Exception exception)
             {
                 errorProviderFreeCapacity.SetError(comboBoxRoom, exception.Message);
                 DialogResult = DialogResult.None;
@@ -113,7 +112,7 @@ namespace virtual_receptionist.Views
                 errorProviderNumberOfGuests.Clear();
                 bookingController.BookingCapacityValidator(numberOfGuests, roomNumber);
             }
-            catch (InvalidBookingParameterException exception)
+            catch (Exception exception)
             {
                 errorProviderNumberOfGuests.SetError(numericUpDownNumberOfGuests, exception.Message);
                 DialogResult = DialogResult.None;

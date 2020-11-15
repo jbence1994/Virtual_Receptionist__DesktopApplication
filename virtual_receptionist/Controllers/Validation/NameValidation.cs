@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,22 +40,22 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(name))
             {
-                throw new InvalidNameException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (FirstLetterIsLowercaseCharacter(name))
             {
-                throw new InvalidNameException("Név nem kezdődhet kisbetűvel!");
+                throw new Exception("Név nem kezdődhet kisbetűvel!");
             }
 
             if (ContainsControlCharacters(name))
             {
-                throw new InvalidNameException("Név nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Név nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsDigitCharacters(name))
             {
-                throw new InvalidNameException("Név nem tartalmazhat számot!");
+                throw new Exception("Név nem tartalmazhat számot!");
             }
         }
 

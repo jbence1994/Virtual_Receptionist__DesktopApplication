@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using System.Collections.Generic;
 using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
@@ -63,7 +63,7 @@ namespace virtual_receptionist.Controllers.Validation
             {
                 if (this.booking.ArrivalDate == booking.ArrivalDate && this.booking.Room.Number == booking.Room.Number)
                 {
-                    throw new InvalidFreeRoomCapacityException();
+                    throw new Exception();
                 }
             }
         }

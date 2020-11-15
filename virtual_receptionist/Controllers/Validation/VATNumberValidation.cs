@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,12 +40,12 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(vatNumber))
             {
-                throw new InvalidVATNumberException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(vatNumber))
             {
-                throw new InvalidVATNumberException("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new Exception("Adószám nem tartalmaz vezérlőbillentyű karaktert!");
             }
         }
 

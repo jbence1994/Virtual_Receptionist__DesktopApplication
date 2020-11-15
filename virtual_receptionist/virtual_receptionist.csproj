@@ -48,20 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Controller.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidAddressException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidBirthDateException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidBllingItemParameterException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidBookingParameterException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidFreeRoomCapacityException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidCitizenshipException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidCityException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidDocumentNumberException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidEmailAddressException.cs" />
-    <Compile Include="Controllers\Exceptions\FailedLoginException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidNameException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidPhoneNumberException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidVATNumberException.cs" />
-    <Compile Include="Controllers\Exceptions\InvalidZipCodeException.cs" />
     <Compile Include="Controllers\Validation\AddressValidation.cs" />
     <Compile Include="Controllers\Validation\BirthDateValidation.cs" />
     <Compile Include="Controllers\Validation\BookingCapacityValidation.cs" />

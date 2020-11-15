@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
-using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
@@ -198,7 +197,7 @@ namespace virtual_receptionist.Controllers
                 BookingDateValidation bookingDateValidation = new BookingDateValidation(booking);
                 bookingDateValidation.ValidateBookingDate();
             }
-            catch (InvalidBookingParameterException e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -228,7 +227,7 @@ namespace virtual_receptionist.Controllers
                 BookingCapacityValidation bookingCapacityValidation = new BookingCapacityValidation(booking, room);
                 bookingCapacityValidation.ValidateBookingCapacity();
             }
-            catch (InvalidBookingParameterException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -257,7 +256,7 @@ namespace virtual_receptionist.Controllers
                 FreeRoomCapacityValidaiton freeRoomCapacityValidaiton = new FreeRoomCapacityValidaiton(room, booking);
                 freeRoomCapacityValidaiton.ValidateFreeRoomCapacityOnSpecifiedArrivalDate();
             }
-            catch (InvalidFreeRoomCapacityException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }

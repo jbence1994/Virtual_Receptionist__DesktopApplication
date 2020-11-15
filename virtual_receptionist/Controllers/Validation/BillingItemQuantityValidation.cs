@@ -1,5 +1,4 @@
 ﻿using static virtual_receptionist.Controllers.Validation.InputValidation;
-using virtual_receptionist.Controllers.Exceptions;
 using System;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -41,22 +40,22 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(quantity))
             {
-                throw new InvalidBllingItemParameterException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(quantity))
             {
-                throw new InvalidBllingItemParameterException("Mennyiség nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new Exception("Mennyiség nem tartalmaz vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLetterCharacters(quantity))
             {
-                throw new InvalidBllingItemParameterException("Mennyiség nem tartalmazhat betűt!");
+                throw new Exception("Mennyiség nem tartalmazhat betűt!");
             }
 
             if (IsZeroOrNegative(Convert.ToInt32(quantity)))
             {
-                throw new InvalidBllingItemParameterException("Mennyiség nem lehet nulla vagy negatív szám!");
+                throw new Exception("Mennyiség nem lehet nulla vagy negatív szám!");
             }
         }
 

@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
-using virtual_receptionist.Controllers.Exceptions;
 
 namespace virtual_receptionist.Views
 {
@@ -75,7 +74,7 @@ namespace virtual_receptionist.Views
             {
                 controller.NameValidator(name);
             }
-            catch (InvalidNameException exception)
+            catch (Exception exception)
             {
                 errorProviderName.SetError(textBoxName, exception.Message);
                 validData = false;
@@ -85,7 +84,7 @@ namespace virtual_receptionist.Views
             {
                 controller.DocumentNumberValidator(documentNumber);
             }
-            catch (InvalidDocumentNumberException exception)
+            catch (Exception exception)
             {
                 errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
                 validData = false;
@@ -95,7 +94,7 @@ namespace virtual_receptionist.Views
             {
                 controller.CitizenshipValidator(citizenship);
             }
-            catch (InvalidCitizenshipException exception)
+            catch (Exception exception)
             {
                 errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
                 validData = false;
@@ -105,7 +104,7 @@ namespace virtual_receptionist.Views
             {
                 controller.BirthDateValidator(birthDate);
             }
-            catch (InvalidBirthDateException exception)
+            catch (Exception exception)
             {
                 errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
                 validData = false;
@@ -115,7 +114,7 @@ namespace virtual_receptionist.Views
             {
                 controller.ZipCodeValidator(zipCode);
             }
-            catch (InvalidZipCodeException exception)
+            catch (Exception exception)
             {
                 errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
                 validData = false;
@@ -125,7 +124,7 @@ namespace virtual_receptionist.Views
             {
                 controller.CityValidator(city);
             }
-            catch (InvalidCityException exception)
+            catch (Exception exception)
             {
                 errorProviderCity.SetError(textBoxCity, exception.Message);
                 validData = false;
@@ -135,7 +134,7 @@ namespace virtual_receptionist.Views
             {
                 controller.AddressValidator(address);
             }
-            catch (InvalidAddressException exception)
+            catch (Exception exception)
             {
                 errorProviderAddress.SetError(textBoxAddress, exception.Message);
                 validData = false;
@@ -145,7 +144,7 @@ namespace virtual_receptionist.Views
             {
                 controller.PhoneNumberValidator(phoneNumber);
             }
-            catch (InvalidPhoneNumberException exception)
+            catch (Exception exception)
             {
                 errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
                 validData = false;
@@ -155,7 +154,7 @@ namespace virtual_receptionist.Views
             {
                 controller.EmailAddressValidator(email);
             }
-            catch (InvalidEmailAddressException exception)
+            catch (Exception exception)
             {
                 errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
                 validData = false;
@@ -207,7 +206,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.NameValidator(name);
                 }
-                catch (InvalidNameException exception)
+                catch (Exception exception)
                 {
                     errorProviderName.SetError(textBoxName, exception.Message);
                     validData = false;
@@ -217,7 +216,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.DocumentNumberValidator(documentNumber);
                 }
-                catch (InvalidDocumentNumberException exception)
+                catch (Exception exception)
                 {
                     errorProviderDocumentNumber.SetError(textBoxDocumentNumber, exception.Message);
                     validData = false;
@@ -227,7 +226,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.CitizenshipValidator(citizenship);
                 }
-                catch (InvalidCitizenshipException exception)
+                catch (Exception exception)
                 {
                     errorProviderCitizenship.SetError(textBoxCitizenship, exception.Message);
                     validData = false;
@@ -237,7 +236,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.BirthDateValidator(birthDate);
                 }
-                catch (InvalidBirthDateException exception)
+                catch (Exception exception)
                 {
                     errorProviderBirthDate.SetError(textBoxBirthDate, exception.Message);
                     validData = false;
@@ -247,7 +246,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.ZipCodeValidator(zipCode);
                 }
-                catch (InvalidZipCodeException exception)
+                catch (Exception exception)
                 {
                     errorProviderZipCode.SetError(textBoxZipCode, exception.Message);
                     validData = false;
@@ -257,7 +256,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.CityValidator(city);
                 }
-                catch (InvalidCityException exception)
+                catch (Exception exception)
                 {
                     errorProviderCity.SetError(textBoxCity, exception.Message);
                     validData = false;
@@ -267,7 +266,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.AddressValidator(address);
                 }
-                catch (InvalidAddressException exception)
+                catch (Exception exception)
                 {
                     errorProviderAddress.SetError(textBoxAddress, exception.Message);
                     validData = false;
@@ -277,7 +276,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.PhoneNumberValidator(phoneNumber);
                 }
-                catch (InvalidPhoneNumberException exception)
+                catch (Exception exception)
                 {
                     errorProviderPhoneNumber.SetError(textBoxPhoneNumber, exception.Message);
                     validData = false;
@@ -287,7 +286,7 @@ namespace virtual_receptionist.Views
                 {
                     controller.EmailAddressValidator(email);
                 }
-                catch (InvalidEmailAddressException exception)
+                catch (Exception exception)
                 {
                     errorProviderEmailAddress.SetError(textBoxEmailAddress, exception.Message);
                     validData = false;

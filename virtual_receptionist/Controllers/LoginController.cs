@@ -1,5 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
-using virtual_receptionist.Repositories;
+﻿using virtual_receptionist.Repositories;
 using System;
 
 namespace virtual_receptionist.Controllers
@@ -50,10 +49,6 @@ namespace virtual_receptionist.Controllers
                 }
 
                 return false;
-            }
-            catch (FailedLoginException exception)
-            {
-                throw exception;
             }
             catch (Exception exception)
             {

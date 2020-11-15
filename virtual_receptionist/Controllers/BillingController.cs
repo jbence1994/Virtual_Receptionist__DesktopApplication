@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using virtual_receptionist.Repositories;
 using System;
-using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Models;
 
@@ -157,7 +156,7 @@ namespace virtual_receptionist.Controllers
                     new BillingItemQuantityValidation(quantity);
                 billingItemQuantityValidation.ValidateBillingItemQuantity();
             }
-            catch (InvalidBllingItemParameterException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }
@@ -175,7 +174,7 @@ namespace virtual_receptionist.Controllers
                 BillingItemValidation itemValidation = new BillingItemValidation(billingItem);
                 itemValidation.ValidateBillingItem();
             }
-            catch (InvalidBllingItemParameterException exception)
+            catch (Exception exception)
             {
                 throw exception;
             }

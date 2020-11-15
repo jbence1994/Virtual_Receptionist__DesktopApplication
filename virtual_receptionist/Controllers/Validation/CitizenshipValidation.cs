@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,22 +40,22 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(citizenship))
             {
-                throw new InvalidCitizenshipException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(citizenship))
             {
-                throw new InvalidCitizenshipException("Állampolgárság nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Állampolgárság nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsUppercaseCharacters(citizenship))
             {
-                throw new InvalidCitizenshipException("Állampolgárság minden betűje kisbetű kell legyen!");
+                throw new Exception("Állampolgárság minden betűje kisbetű kell legyen!");
             }
 
             if (ContainsDigitCharacters(citizenship))
             {
-                throw new InvalidCitizenshipException("Állampolgárság nem tartalmazhat számot!");
+                throw new Exception("Állampolgárság nem tartalmazhat számot!");
             }
         }
 

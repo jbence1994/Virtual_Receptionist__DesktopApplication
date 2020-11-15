@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,23 +40,22 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(birthDate))
             {
-                throw new InvalidBirthDateException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(birthDate))
             {
-                throw new InvalidBirthDateException("Születési dátum nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Születési dátum nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLetterCharacters(birthDate))
             {
-                throw new InvalidBirthDateException("Születési dátum nem tartalmazhat betűt!");
+                throw new Exception("Születési dátum nem tartalmazhat betűt!");
             }
 
             if (!IsValidBirthDate(birthDate))
             {
-                throw new InvalidBirthDateException(
-                    "Nem megfelelő a születési dátum formátuma vagy Nem megfelelő évszám, hónap vagy nap lett megadva!\nHelyes formátum: YYYY-MM-DD");
+                throw new Exception("Nem megfelelő a születési dátum formátuma vagy Nem megfelelő évszám, hónap vagy nap lett megadva!\nHelyes formátum: YYYY-MM-DD");
             }
         }
 

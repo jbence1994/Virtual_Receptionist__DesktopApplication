@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,17 +40,17 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(zipCode))
             {
-                throw new InvalidZipCodeException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(zipCode))
             {
-                throw new InvalidZipCodeException("Irányítószám nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Irányítószám nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (ContainsLowercaseCharacter(zipCode))
             {
-                throw new InvalidZipCodeException("Irányítószám nem tartalmazhat kisebetűs karaktert!");
+                throw new Exception("Irányítószám nem tartalmazhat kisebetűs karaktert!");
             }
         }
 

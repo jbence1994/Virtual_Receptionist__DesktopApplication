@@ -1,5 +1,5 @@
-﻿using static virtual_receptionist.Controllers.Validation.InputValidation;
-using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
+using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
 {
@@ -40,12 +40,12 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(email))
             {
-                throw new InvalidEmailAddressException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (!IsValidEmailAddress(email))
             {
-                throw new InvalidEmailAddressException("Nem érvényes e-mail cím formátum!");
+                throw new Exception("Nem érvényes e-mail cím formátum!");
             }
         }
 

@@ -1,5 +1,5 @@
-﻿using static virtual_receptionist.Controllers.Validation.InputValidation;
-using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
+using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
 {
@@ -40,17 +40,17 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(address))
             {
-                throw new InvalidAddressException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(address))
             {
-                throw new InvalidAddressException("Lakcím nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Lakcím nem tartalmazhat vezérlőbillentyű karaktert!");
             }
 
             if (FirstLetterIsLowercaseCharacter(address))
             {
-                throw new InvalidAddressException("Lakcím nem kezdődhet kisbetűvel!");
+                throw new Exception("Lakcím nem kezdődhet kisbetűvel!");
             }
         }
 

@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,13 +40,12 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(documentNumber))
             {
-                throw new InvalidDocumentNumberException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(documentNumber))
             {
-                throw new InvalidDocumentNumberException(
-                    "Okmányazonosító nem tartalmazhat vezérlőbillentyű karaktert!");
+                throw new Exception("Okmányazonosító nem tartalmazhat vezérlőbillentyű karaktert!");
             }
         }
 

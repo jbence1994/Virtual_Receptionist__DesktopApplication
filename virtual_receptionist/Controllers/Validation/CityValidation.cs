@@ -1,4 +1,4 @@
-﻿using virtual_receptionist.Controllers.Exceptions;
+﻿using System;
 using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
@@ -40,17 +40,17 @@ namespace virtual_receptionist.Controllers.Validation
         {
             if (IsEmpty(city))
             {
-                throw new InvalidCityException("Üres mező!");
+                throw new Exception("Üres mező!");
             }
 
             if (ContainsControlCharacters(city))
             {
-                throw new InvalidCityException("Település nem tartalmaz vezérlőbillentyű karaktert!");
+                throw new Exception("Település nem tartalmaz vezérlőbillentyű karaktert!");
             }
 
             if (FirstLetterIsLowercaseCharacter(city))
             {
-                throw new InvalidCityException("Település nem kezdődhet kisbetűvel!");
+                throw new Exception("Település nem kezdődhet kisbetűvel!");
             }
         }
 
