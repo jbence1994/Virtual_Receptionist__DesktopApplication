@@ -180,16 +180,6 @@ namespace virtual_receptionist.Views
             toolStripStatusLabelMenuName.Text = "";
         }
 
-        private void toolStripMenuItemAbout_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Névjegy";
-        }
-
-        private void toolStripMenuItemAbout_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
         private void toolStripMenuItemAccomodationInfo_MouseHover(object sender, EventArgs e)
         {
             toolStripStatusLabelMenuName.Text = "Szálláshely adatai";

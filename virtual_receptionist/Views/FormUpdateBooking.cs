@@ -38,12 +38,12 @@ namespace virtual_receptionist.Views
         {
             var validData = true;
 
-            string id = textBoxBookingID.Text;
-            string name = comboBoxGuest.SelectedItem.ToString();
-            int roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
-            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
-            DateTime departureDate = dateTimePickerDepartureDate.Value;
-            decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
+            var id = textBoxBookingID.Text;
+            var name = comboBoxGuest.SelectedItem.ToString();
+            var roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
+            var arrivalDate = dateTimePickerArrivalDate.Value;
+            var departureDate = dateTimePickerDepartureDate.Value;
+            var numberOfGuests = numericUpDownNumberOfGuests.Value;
 
             try
             {
