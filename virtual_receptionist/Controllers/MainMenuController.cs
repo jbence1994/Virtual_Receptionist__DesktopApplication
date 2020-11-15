@@ -9,19 +9,19 @@ namespace virtual_receptionist.Controllers
 
         public string SetMainMenuHeader()
         {
-            var accommodation = accommodationRepository.GetAccomodation();
-            return $"{accommodation.AccomodationName} ({accommodation.VATNumber})";
+            var accommodation = accommodationRepository.GetAccommodation();
+            return $"{accommodation.Name} ({accommodation.VatNumber})";
         }
 
         public string[] GetAccommodationInfo()
         {
-            var accommodation = accommodationRepository.GetAccomodation();
+            var accommodation = accommodationRepository.GetAccommodation();
 
             var accommodationInfo = new string[8];
-            accommodationInfo[0] = accommodation.AccomodationName;
-            accommodationInfo[1] = accommodation.CompanyName;
+            accommodationInfo[0] = accommodation.Name;
+            accommodationInfo[1] = accommodation.Company;
             accommodationInfo[2] = accommodation.Contact;
-            accommodationInfo[3] = accommodation.VATNumber;
+            accommodationInfo[3] = accommodation.VatNumber;
             accommodationInfo[4] = accommodation.Headquarters;
             accommodationInfo[5] = accommodation.Site;
             accommodationInfo[6] = accommodation.PhoneNumber;

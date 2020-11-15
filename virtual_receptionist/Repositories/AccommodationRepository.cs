@@ -4,95 +4,60 @@ using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Repositories
 {
-    /// <summary>
-    /// Szálláshely adattár
-    /// </summary>
     public class AccommodationRepository : Repository
     {
-        #region Adatfeltöltő metódusok
-
-        /// <summary>
-        /// Metódus, amely beállítja a szálláshely adatait, amyel az adatábzisban van regisztrálva
-        /// </summary>
-        private void SetAccomodation()
+        private void SetAccommodation()
         {
-            string sql =
+            const string sql =
                 "SELECT accomodation.ID, accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation, accomodation_profile WHERE accomodation.ID = accomodation_profile.Accomodation";
-            DataTable dt = database.DQL(sql);
+
+            var dt = database.DQL(sql);
 
             foreach (DataRow row in dt.Rows)
             {
-                string name = row["AccomodationName"].ToString();
-                string company = row["CompanyName"].ToString();
-                string contact = row["Contact"].ToString();
-                string vatNumber = row["VATNumber"].ToString();
-                string headquarters = row["Headquarters"].ToString();
-                string site = row["Site"].ToString();
-                string phoneNumber = row["PhoneNumber"].ToString();
-                string email = row["EmailAddress"].ToString();
+                var name = row["AccomodationName"].ToString();
+                var company = row["CompanyName"].ToString();
+                var contact = row["Contact"].ToString();
+                var vatNumber = row["VATNumber"].ToString();
+                var headquarters = row["Headquarters"].ToString();
+                var site = row["Site"].ToString();
+                var phoneNumber = row["PhoneNumber"].ToString();
+                var email = row["EmailAddress"].ToString();
+                var accommodationId = row["AccomodationID"].ToString();
+                var password = row["Password"].ToString();
 
-                string accomodationID = row["AccomodationID"].ToString();
-                string password = row["Password"].ToString();
-
-                Accommodation accomodation = Accommodation.GetAccomodation();
-                accomodation.AccomodationName = name;
-                accomodation.CompanyName = company;
-                accomodation.Contact = contact;
-                accomodation.VATNumber = vatNumber;
-                accomodation.Headquarters = headquarters;
-                accomodation.Site = site;
-                accomodation.PhoneNumber = phoneNumber;
-                accomodation.EmailAddress = email;
-                accomodation.AccomodationID = accomodationID;
-                accomodation.Password = password;
+                var accommodation = Accommodation.GetAccommodation();
+                accommodation.Name = name;
+                accommodation.Company = company;
+                accommodation.Contact = contact;
+                accommodation.VatNumber = vatNumber;
+                accommodation.Headquarters = headquarters;
+                accommodation.Site = site;
+                accommodation.PhoneNumber = phoneNumber;
+                accommodation.EmailAddress = email;
+                accommodation.AccommodationId = accommodationId;
+                accommodation.Password = password;
             }
         }
 
-        #endregion
-
-        #region Üzleti logika
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public Accommodation GetAccomodation()
+        public Accommodation GetAccommodation()
         {
-            Accommodation accomodation = Accommodation.GetAccomodation();
-            SetAccomodation();
-            return accomodation;
+            var accommodation = Accommodation.GetAccommodation();
+            SetAccommodation();
+            return accommodation;
         }
 
-        /// <summary>
-        /// Metódus, amely beállítja az adatbáziskapcsolódás típusát és autentikációt végez az alkalmazásba belépéskor
-        /// </summary>
-        /// <param name="accomodationID">Szálláshely azonosító</param>
-        /// <param name="password">Regisztrációhoz tartozó jelszó</param>
-        /// <param name="connectionType">Adatbáziskapcsolódás típusa</param>
-        /// <returns>Egyezés esetén logikai igazzal tér vissza a függvény, ellenkező esetben logikai hamissal</returns>
-        /// <exception cref="FailedLoginException"></exception>
-        /// <exception cref="Exception"></exception>
-        public bool Authentication(string accomodationID, string password)
+        public bool Authentication(string accommodationId, string password)
         {
-            try
-            {
-                database.SetConnection();
+            database.SetConnection();
 
-                Accommodation accomodation = GetAccomodation();
+            var accommodation = GetAccommodation();
 
-                if (accomodation.AccomodationID == accomodationID && accomodation.Password == password)
-                {
-                    return true;
-                }
+            if (accommodation.AccommodationId == accommodationId &&
+                accommodation.Password == password)
+                return true;
 
-                throw new Exception();
-            }
-            catch (Exception exception)
-            {
-                throw exception;
-            }
+            throw new Exception();
         }
-
-        #endregion
     }
 }
