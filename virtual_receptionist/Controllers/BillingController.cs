@@ -26,7 +26,7 @@ namespace virtual_receptionist.Controllers
 
             foreach (var booking in unpaidBookings)
             {
-                bookingsToBill.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
+                bookingsToBill.Rows.Add(booking.Id, booking.Guest.Name, booking.Room.Number, booking.NumberOfGuests,
                     booking.ArrivalDate, booking.DepartureDate);
             }
 
@@ -71,7 +71,7 @@ namespace virtual_receptionist.Controllers
         public void PrintInvoice(int bookingId)
         {
             billingRepository
-                .SetBookingAsPaid(new Booking {ID = Convert.ToInt32(bookingId)});
+                .SetBookingAsPaid(new Booking {Id = Convert.ToInt32(bookingId)});
         }
     }
 }

@@ -13,7 +13,7 @@ namespace virtual_receptionist.Controllers
         public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
         {
             var arrival = arrivalDate.ToString("yyyy-MM-dd");
-            var bookingsByArrival = bookingRepository.GetGuestBookingsByArrivalDate(arrival);
+            var bookingsByArrival = bookingRepository.GetBookingsByArrivalDate(arrival);
 
             DataTable bookingsDataTableByArrival = new DataTable();
             bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
@@ -26,8 +26,8 @@ namespace virtual_receptionist.Controllers
 
             foreach (var booking in bookingsByArrival)
             {
-                bookingsDataTableByArrival.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid);
+                bookingsDataTableByArrival.Rows.Add(booking.Id, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.IsPaid);
             }
 
             return bookingsDataTableByArrival;
@@ -49,8 +49,8 @@ namespace virtual_receptionist.Controllers
 
             foreach (var booking in bookingsByDeparture)
             {
-                bookingsDataTableByDeparture.Rows.Add(booking.ID, booking.Guest.Name, booking.Room.Number,
-                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.Paid);
+                bookingsDataTableByDeparture.Rows.Add(booking.Id, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.IsPaid);
             }
 
             return bookingsDataTableByDeparture;
@@ -83,7 +83,7 @@ namespace virtual_receptionist.Controllers
                 NumberOfGuests = numberOfGuests,
                 ArrivalDate = arrivalDate,
                 DepartureDate = departureDate,
-                Paid = paid
+                IsPaid = paid
             };
 
             bookingRepository.AddBooking(booking);
@@ -111,7 +111,7 @@ namespace virtual_receptionist.Controllers
 
             var booking = new Booking
             {
-                ID = id,
+                Id = id,
                 Guest = guest,
                 Room = room,
                 NumberOfGuests = numberOfGuests,
@@ -144,7 +144,7 @@ namespace virtual_receptionist.Controllers
 
             var booking = new Booking
             {
-                ID = id,
+                Id = id,
                 Guest = guest,
                 Room = room,
                 NumberOfGuests = numberOfGuests,

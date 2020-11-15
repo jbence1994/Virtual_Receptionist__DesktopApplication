@@ -66,7 +66,7 @@ namespace virtual_receptionist.Repositories
 
         public void SetBookingAsPaid(Booking booking)
         {
-            var sql = $"UPDATE booking SET booking.Paid = 1 WHERE booking.ID = \"{booking.ID}\"";
+            var sql = $"UPDATE booking SET booking.Paid = 1 WHERE booking.ID = \"{booking.Id}\"";
             database.DML(sql);
         }
     }
