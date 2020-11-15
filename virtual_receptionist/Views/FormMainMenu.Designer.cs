@@ -179,7 +179,6 @@
             this.toolStripMenuItemWebsite.Name = "toolStripMenuItemWebsite";
             this.toolStripMenuItemWebsite.Size = new System.Drawing.Size(244, 22);
             this.toolStripMenuItemWebsite.Text = "A Virtual Receptionist weboldala";
-            this.toolStripMenuItemWebsite.Click += new System.EventHandler(this.toolStripMenuItemWebsite_Click);
             this.toolStripMenuItemWebsite.MouseLeave += new System.EventHandler(this.toolStripMenuItemWebsite_MouseLeave);
             this.toolStripMenuItemWebsite.MouseHover += new System.EventHandler(this.toolStripMenuItemWebsite_MouseHover);
             // 

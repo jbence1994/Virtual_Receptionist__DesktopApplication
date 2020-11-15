@@ -72,11 +72,6 @@ namespace virtual_receptionist.Views
             controller.OpenBilling();
         }
 
-        private void toolStripMenuItemWebsite_Click(object sender, EventArgs e)
-        {
-            controller.OpenVirtualReceptionistWebsite();
-        }
-
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
         {
             if (debugFolder == Directory.GetCurrentDirectory())
@@ -92,14 +87,14 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemAccomodationInfo_Click(object sender, EventArgs e)
         {
-            string name = controller.GetAccomodationInfo()[0];
-            string company = controller.GetAccomodationInfo()[1];
-            string contact = controller.GetAccomodationInfo()[2];
-            string vat = controller.GetAccomodationInfo()[3];
-            string headquarters = controller.GetAccomodationInfo()[4];
-            string site = controller.GetAccomodationInfo()[5];
-            string phone = controller.GetAccomodationInfo()[6];
-            string email = controller.GetAccomodationInfo()[7];
+            string name = controller.GetAccommodationInfo()[0];
+            string company = controller.GetAccommodationInfo()[1];
+            string contact = controller.GetAccommodationInfo()[2];
+            string vat = controller.GetAccommodationInfo()[3];
+            string headquarters = controller.GetAccommodationInfo()[4];
+            string site = controller.GetAccommodationInfo()[5];
+            string phone = controller.GetAccommodationInfo()[6];
+            string email = controller.GetAccommodationInfo()[7];
 
             MessageBox.Show(
                 $"Szálláshelyneve: {name}\n\nCég neve: {company}\n\nKontakt: {contact}\n\nAdószám:{vat}\n\nSzékhely: {headquarters}\n\nTelephely: {site}\n\nTelefonszám: {phone}\n\nE-mail cím: {email}",

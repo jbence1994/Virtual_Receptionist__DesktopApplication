@@ -1,102 +1,51 @@
-﻿using virtual_receptionist.Models;
-using virtual_receptionist.Repositories;
+﻿using virtual_receptionist.Repositories;
 using virtual_receptionist.Views;
 
 namespace virtual_receptionist.Controllers
 {
-    /// <summary>
-    /// Főmenü vezérlője
-    /// </summary>
     public class MainMenuController : Controller
     {
-        #region Adattagok
+        private readonly AccommodationRepository accommodationRepository = new AccommodationRepository();
 
-        /// <summary>
-        /// Szálláshely adattár egy példánya
-        /// </summary>
-        private AccommodationRepository repository;
-
-        #endregion
-
-        #region Konsturktor
-
-        /// <summary>
-        /// Főmenü vezérlő konsturktora
-        /// </summary>
-        public MainMenuController()
-        {
-            repository = new AccommodationRepository();
-        }
-
-        #endregion
-
-        #region Metódusok
-
-        /// <summary>
-        /// Metódus, amely beállítja az ablakot betöltődéskor
-        /// </summary>
         public string SetMainMenuHeader()
         {
-            Accommodation accomodation = repository.GetAccomodation();
-            return $"{accomodation.AccomodationName} ({accomodation.VATNumber})";
+            var accommodation = accommodationRepository.GetAccomodation();
+            return $"{accommodation.AccomodationName} ({accommodation.VATNumber})";
         }
 
-        /// <summary>
-        /// Metódus, amely visszaadja a szálláshely adatait az adattárból egy tömbben
-        /// </summary>
-        /// <returns>A feltöltött sztring tömböt adja vissza a függvény</returns>
-        public string[] GetAccomodationInfo()
+        public string[] GetAccommodationInfo()
         {
-            Accommodation accomodation = repository.GetAccomodation();
+            var accommodation = accommodationRepository.GetAccomodation();
 
-            string[] accomodationData = new string[8];
-            accomodationData[0] = accomodation.AccomodationName;
-            accomodationData[1] = accomodation.CompanyName;
-            accomodationData[2] = accomodation.Contact;
-            accomodationData[3] = accomodation.VATNumber;
-            accomodationData[4] = accomodation.Headquarters;
-            accomodationData[5] = accomodation.Site;
-            accomodationData[6] = accomodation.PhoneNumber;
-            accomodationData[7] = accomodation.EmailAddress;
+            var accommodationInfo = new string[8];
+            accommodationInfo[0] = accommodation.AccomodationName;
+            accommodationInfo[1] = accommodation.CompanyName;
+            accommodationInfo[2] = accommodation.Contact;
+            accommodationInfo[3] = accommodation.VATNumber;
+            accommodationInfo[4] = accommodation.Headquarters;
+            accommodationInfo[5] = accommodation.Site;
+            accommodationInfo[6] = accommodation.PhoneNumber;
+            accommodationInfo[7] = accommodation.EmailAddress;
 
-            return accomodationData;
+            return accommodationInfo;
         }
 
-        /// <summary>
-        /// Metódus, amely megnyitja a foglalási napló modult
-        /// </summary>
         public void OpenBooking()
         {
-            FormBooking formBooking = new FormBooking();
+            var formBooking = new FormBooking();
             formBooking.ShowDialog();
         }
 
-        /// <summary>
-        /// Metódus, amely megnyitja a számlázó modult
-        /// </summary>
         public void OpenBilling()
         {
-            FormBilling formBilling = new FormBilling();
+            var formBilling = new FormBilling();
             formBilling.ShowDialog();
         }
 
-        /// <summary>
-        /// Metódus, amely megnyitja a vendégadatbázis-kezelő modult
-        /// </summary>
         public void OpenGuestDatabase()
         {
-            FormGuestDatabase formGuestDatabase = new FormGuestDatabase();
+            var formGuestDatabase = new FormGuestDatabase();
             formGuestDatabase.ShowDialog();
         }
-
-        /// <summary>
-        /// Metódus, amely megnyitja az alkalmazáss weboldalát egy internetes böngészőben
-        /// </summary>
-        public void OpenVirtualReceptionistWebsite()
-        {
-
-        }
-
-        #endregion
     }
 }
