@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormMainMenu : Form
     {
-        private readonly MainMenuController controller = new MainMenuController();
+        private readonly AccommodationRepository accommodationRepository = new AccommodationRepository();
         private readonly FormLogin formLogin;
         private static string _debugFolder;
 
@@ -21,7 +21,8 @@ namespace virtual_receptionist.Views
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
             toolStripStatusLabelClient.Text += Environment.MachineName;
-            Text += controller.SetMainMenuHeader();
+            var accommodation = accommodationRepository.GetAccommodation();
+            Text += $"{accommodation.Name} ({accommodation.VatNumber})";
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
@@ -31,17 +32,17 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
         {
-            controller.OpenBooking();
+            OpenBooking();
         }
 
         private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
         {
-            controller.OpenGuestDatabase();
+            OpenGuestDatabase();
         }
 
         private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
         {
-            controller.OpenBilling();
+            OpenBilling();
         }
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
@@ -59,14 +60,15 @@ namespace virtual_receptionist.Views
 
         private void toolStripMenuItemAccomodationInfo_Click(object sender, EventArgs e)
         {
-            string name = controller.GetAccommodationInfo()[0];
-            string company = controller.GetAccommodationInfo()[1];
-            string contact = controller.GetAccommodationInfo()[2];
-            string vat = controller.GetAccommodationInfo()[3];
-            string headquarters = controller.GetAccommodationInfo()[4];
-            string site = controller.GetAccommodationInfo()[5];
-            string phone = controller.GetAccommodationInfo()[6];
-            string email = controller.GetAccommodationInfo()[7];
+            var accommodationInfo = GetAccommodationInfo();
+            string name = accommodationInfo[0];
+            string company = accommodationInfo[1];
+            string contact = accommodationInfo[2];
+            string vat = accommodationInfo[3];
+            string headquarters = accommodationInfo[4];
+            string site = accommodationInfo[5];
+            string phone = accommodationInfo[6];
+            string email = accommodationInfo[7];
 
             MessageBox.Show(
                 $"Szálláshelyneve: {name}\n\nCég neve: {company}\n\nKontakt: {contact}\n\nAdószám:{vat}\n\nSzékhely: {headquarters}\n\nTelephely: {site}\n\nTelefonszám: {phone}\n\nE-mail cím: {email}",
@@ -75,17 +77,17 @@ namespace virtual_receptionist.Views
 
         private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
         {
-            controller.OpenBooking();
+            OpenBooking();
         }
 
         private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)
         {
-            controller.OpenGuestDatabase();
+            OpenGuestDatabase();
         }
 
         private void toolStripButtonBilling_Click(object sender, EventArgs e)
         {
-            controller.OpenBilling();
+            OpenBilling();
         }
 
         private void toolStripMenuItemFile_MouseHover(object sender, EventArgs e)
@@ -253,6 +255,41 @@ namespace virtual_receptionist.Views
 
             Close();
             formLogin.Show();
+        }
+
+        private static void OpenGuestDatabase()
+        {
+            var formGuestDatabase = new FormGuestDatabase();
+            formGuestDatabase.ShowDialog();
+        }
+
+        private static void OpenBilling()
+        {
+            var formBilling = new FormBilling();
+            formBilling.ShowDialog();
+        }
+
+        private static void OpenBooking()
+        {
+            var formBooking = new FormBooking();
+            formBooking.ShowDialog();
+        }
+
+        private string[] GetAccommodationInfo()
+        {
+            var accommodation = accommodationRepository.GetAccommodation();
+
+            var accommodationInfo = new string[8];
+            accommodationInfo[0] = accommodation.Name;
+            accommodationInfo[1] = accommodation.Company;
+            accommodationInfo[2] = accommodation.Contact;
+            accommodationInfo[3] = accommodation.VatNumber;
+            accommodationInfo[4] = accommodation.Headquarters;
+            accommodationInfo[5] = accommodation.Site;
+            accommodationInfo[6] = accommodation.PhoneNumber;
+            accommodationInfo[7] = accommodation.EmailAddress;
+
+            return accommodationInfo;
         }
     }
 }

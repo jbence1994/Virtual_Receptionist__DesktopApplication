@@ -84,7 +84,6 @@
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\BillingController.cs" />
-    <Compile Include="Controllers\MainMenuController.cs" />
     <Compile Include="Models\BillingItem.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Repositories\Repository.cs" />
