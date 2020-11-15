@@ -20,29 +20,38 @@ namespace virtual_receptionist.Views
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelClient.Text += Environment.MachineName;
             var accommodation = accommodationRepository.GetAccommodation();
             Text += $"{accommodation.Name} ({accommodation.VatNumber})";
         }
 
         private void toolStripMenuItemLogout_Click(object sender, EventArgs e)
         {
-            Logout();
+            var logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (logout != DialogResult.Yes)
+                return;
+
+            Close();
+            formLogin.Show();
         }
 
         private void toolStripMenuItemRoomEditor_Click(object sender, EventArgs e)
         {
-            OpenBooking();
+            var formBooking = new FormBooking();
+            formBooking.ShowDialog();
         }
 
         private void toolStripMenuItemGuestDatabase_Click(object sender, EventArgs e)
         {
-            OpenGuestDatabase();
+            var formGuestDatabase = new FormGuestDatabase();
+            formGuestDatabase.ShowDialog();
         }
 
         private void toolStripMenuItemBilling_Click(object sender, EventArgs e)
         {
-            OpenBilling();
+            var formBilling = new FormBilling();
+            formBilling.ShowDialog();
         }
 
         private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
@@ -73,196 +82,6 @@ namespace virtual_receptionist.Views
             MessageBox.Show(
                 $"Szálláshelyneve: {name}\n\nCég neve: {company}\n\nKontakt: {contact}\n\nAdószám:{vat}\n\nSzékhely: {headquarters}\n\nTelephely: {site}\n\nTelefonszám: {phone}\n\nE-mail cím: {email}",
                 "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void toolStripButtonRoomEditor_Click(object sender, EventArgs e)
-        {
-            OpenBooking();
-        }
-
-        private void toolStripButtonGuestDatabase_Click(object sender, EventArgs e)
-        {
-            OpenGuestDatabase();
-        }
-
-        private void toolStripButtonBilling_Click(object sender, EventArgs e)
-        {
-            OpenBilling();
-        }
-
-        private void toolStripMenuItemFile_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Fájl";
-        }
-
-        private void toolStripMenuItemFile_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemLogout_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Kijelentkezés";
-        }
-
-        private void toolStripMenuItemLogout_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemTools_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Eszközök";
-        }
-
-        private void toolStripMenuItemTools_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemRoomEditor_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Foglalási napló";
-        }
-
-        private void toolStripMenuItemRoomEditor_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemGuestDatabase_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
-        }
-
-        private void toolStripMenuItemGuestDatabase_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemBilling_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Számlázás";
-        }
-
-        private void toolStripMenuItemBilling_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemHelp_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Súgó";
-        }
-
-        private void toolStripMenuItemHelp_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemWebsite_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "A Virtual Receptionist weboldala";
-        }
-
-        private void toolStripMenuItemWebsite_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemHelpCHM_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Segítség";
-        }
-
-        private void toolStripMenuItemHelpCHM_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripMenuItemAccomodationInfo_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Szálláshely adatai";
-        }
-
-        private void toolStripMenuItemAccomodationInfo_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripButtonRoomEditor_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Foglalási napló";
-        }
-
-        private void toolStripButtonRoomEditor_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripButtonGuestDatabase_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Vendégadatbázis";
-        }
-
-        private void toolStripButtonGuestDatabase_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void toolStripButtonBilling_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Számlázás";
-        }
-
-        private void toolStripButtonBilling_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void buttonLogout_Click(object sender, EventArgs e)
-        {
-            Logout();
-        }
-
-        private void buttonLogout_MouseHover(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "Kijelentkezés";
-        }
-
-        private void buttonLogout_MouseLeave(object sender, EventArgs e)
-        {
-            toolStripStatusLabelMenuName.Text = "";
-        }
-
-        private void Logout()
-        {
-            var logout = MessageBox.Show("Kijelentkezik az alkalmazásból?", "", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (logout != DialogResult.Yes)
-                return;
-
-            Close();
-            formLogin.Show();
-        }
-
-        private static void OpenGuestDatabase()
-        {
-            var formGuestDatabase = new FormGuestDatabase();
-            formGuestDatabase.ShowDialog();
-        }
-
-        private static void OpenBilling()
-        {
-            var formBilling = new FormBilling();
-            formBilling.ShowDialog();
-        }
-
-        private static void OpenBooking()
-        {
-            var formBooking = new FormBooking();
-            formBooking.ShowDialog();
         }
 
         private string[] GetAccommodationInfo()
