@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Controllers.Validation;
 
 namespace virtual_receptionist.Views
 {
@@ -111,7 +112,7 @@ namespace virtual_receptionist.Views
             try
             {
                 item = textBoxItem.Text;
-                controller.BillingItemValidator(item);
+                BillingItemValidation.ValidateBillingItem(item);
                 price = Convert.ToDouble(textBoxPrice.Text);
                 finalPrice = Convert.ToDouble(textBoxPrice.Text);
             }
@@ -135,7 +136,7 @@ namespace virtual_receptionist.Views
             try
             {
                 errorProviderQuantity.Clear();
-                controller.QuantityValidator(quantity);
+                BillingItemQuantityValidation.ValidateBillingItemQuantity(quantity);
             }
             catch (OverflowException)
             {

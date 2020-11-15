@@ -1,7 +1,6 @@
 ﻿using System.Data;
 using virtual_receptionist.Repositories;
 using System;
-using virtual_receptionist.Controllers.Validation;
 using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Controllers
@@ -73,16 +72,6 @@ namespace virtual_receptionist.Controllers
         {
             billingRepository
                 .SetBookingAsPaid(new Booking {ID = Convert.ToInt32(bookingId)});
-        }
-
-        public void QuantityValidator(string quantity)
-        {
-            BillingItemQuantityValidation.ValidateBillingItemQuantity(quantity);
-        }
-
-        public void BillingItemValidator(string billingItem)
-        {
-            BillingItemValidation.ValidateBillingItem(billingItem);
         }
     }
 }
