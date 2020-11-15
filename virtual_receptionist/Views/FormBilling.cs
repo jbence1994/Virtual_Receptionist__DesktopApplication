@@ -2,7 +2,6 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using virtual_receptionist.Controllers;
 using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
 
@@ -10,10 +9,10 @@ namespace virtual_receptionist.Views
 {
     public partial class FormBilling : Form
     {
+        private readonly BookingRepository bookingRepository = new BookingRepository();
         private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly BillingRepository billingRepository = new BillingRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
-        private readonly BillingController controller = new BillingController();
 
         public FormBilling()
         {
@@ -187,7 +186,23 @@ namespace virtual_receptionist.Views
 
         private void InitializeListView()
         {
-            var bookingsToBillDataTable = controller.GetUnpaidBookings();
+            var bookingsToBillDataTable = new DataTable();
+
+            var unpaidBookings = bookingRepository.GetUnpaidBookings();
+
+            bookingsToBillDataTable.Columns.Add("ID", typeof(int));
+            bookingsToBillDataTable.Columns.Add("Guest", typeof(string));
+            bookingsToBillDataTable.Columns.Add("Room", typeof(int));
+            bookingsToBillDataTable.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsToBillDataTable.Columns.Add("ArrivalDate", typeof(string));
+            bookingsToBillDataTable.Columns.Add("DepartureDate", typeof(string));
+
+            foreach (var booking in unpaidBookings)
+            {
+                bookingsToBillDataTable.Rows.Add(booking.Id, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests,
+                    booking.ArrivalDate, booking.DepartureDate);
+            }
 
             foreach (DataRow row in bookingsToBillDataTable.Rows)
             {

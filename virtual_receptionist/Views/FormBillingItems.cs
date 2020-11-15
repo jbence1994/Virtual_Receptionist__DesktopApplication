@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using virtual_receptionist.Controllers;
 using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
@@ -10,7 +9,6 @@ namespace virtual_receptionist.Views
     public partial class FormBillingItems : Form
     {
         private readonly BillingRepository billingRepository = new BillingRepository();
-        private readonly BillingController controller = new BillingController();
 
         public object[] BillingItems { get; }
 
@@ -36,13 +34,26 @@ namespace virtual_receptionist.Views
 
         private void FormModalBillingItems_Load(object sender, EventArgs e)
         {
-            var billingItemsTable = controller.GetBillingItems();
+            var billingItemsTable = billingRepository.GetBillingItems();
 
-            foreach (DataRow row in billingItemsTable.Rows)
+            var billingItemsDataTable = new DataTable();
+            billingItemsDataTable.Columns.Add("Name", typeof(string));
+            billingItemsDataTable.Columns.Add("Price", typeof(double));
+            billingItemsDataTable.Columns.Add("VAT", typeof(double));
+            billingItemsDataTable.Columns.Add("CategoryName", typeof(string));
+            billingItemsDataTable.Columns.Add("Unit", typeof(string));
+
+            foreach (var billingItem in billingItemsTable)
+            {
+                billingItemsDataTable.Rows.Add(billingItem.Name, billingItem.Price, billingItem.Category.Vat,
+                    billingItem.Category.Name, billingItem.Category.Unit);
+            }
+
+            foreach (DataRow row in billingItemsDataTable.Rows)
             {
                 var billingItems = new ListViewItem(row[0].ToString());
 
-                for (var i = 1; i < billingItemsTable.Columns.Count; i++)
+                for (var i = 1; i < billingItemsDataTable.Columns.Count; i++)
                     billingItems.SubItems.Add(row[i].ToString());
 
                 listViewBillingItems.Items.Add(billingItems);
