@@ -63,19 +63,19 @@ namespace virtual_receptionist.Views
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
         {
-            bool validData = true;
+            var validData = true;
 
-            int id = int.Parse(textBoxID.Text);
-            string name = textBoxName.Text;
-            string documentNumber = textBoxDocumentNumber.Text;
-            string birthDate = textBoxBirthDate.Text;
-            string citizenship = textBoxCitizenship.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
-            string zipCode = textBoxZipCode.Text;
-            string city = textBoxCity.Text;
-            string address = textBoxAddress.Text;
-            string phoneNumber = textBoxPhoneNumber.Text;
-            string email = textBoxEmailAddress.Text;
+            var id = int.Parse(textBoxID.Text);
+            var name = textBoxName.Text;
+            var documentNumber = textBoxDocumentNumber.Text;
+            var birthDate = textBoxBirthDate.Text;
+            var citizenship = textBoxCitizenship.Text;
+            var country = comboBoxCountry.SelectedItem.ToString();
+            var zipCode = textBoxZipCode.Text;
+            var city = textBoxCity.Text;
+            var address = textBoxAddress.Text;
+            var phoneNumber = textBoxPhoneNumber.Text;
+            var email = textBoxEmailAddress.Text;
 
             try
             {
@@ -171,8 +171,7 @@ namespace virtual_receptionist.Views
                 return;
 
             textBoxID.Text = id.ToString();
-            ListViewItem newRecord = new ListViewItem();
-            newRecord.Text = id.ToString();
+            var newRecord = new ListViewItem {Text = id.ToString()};
             newRecord.SubItems.Add(name);
             newRecord.SubItems.Add(documentNumber);
             newRecord.SubItems.Add(citizenship);
@@ -195,17 +194,17 @@ namespace virtual_receptionist.Views
             {
                 var validData = true;
 
-                int id = int.Parse(textBoxID.Text);
-                string name = textBoxName.Text;
-                string documentNumber = textBoxDocumentNumber.Text;
-                string birthDate = textBoxBirthDate.Text;
-                string citizenship = textBoxCitizenship.Text;
-                string country = comboBoxCountry.SelectedItem.ToString();
-                string zipCode = textBoxZipCode.Text;
-                string city = textBoxCity.Text;
-                string address = textBoxAddress.Text;
-                string phoneNumber = textBoxPhoneNumber.Text;
-                string email = textBoxEmailAddress.Text;
+                var id = int.Parse(textBoxID.Text);
+                var name = textBoxName.Text;
+                var documentNumber = textBoxDocumentNumber.Text;
+                var birthDate = textBoxBirthDate.Text;
+                var citizenship = textBoxCitizenship.Text;
+                var country = comboBoxCountry.SelectedItem.ToString();
+                var zipCode = textBoxZipCode.Text;
+                var city = textBoxCity.Text;
+                var address = textBoxAddress.Text;
+                var phoneNumber = textBoxPhoneNumber.Text;
+                var email = textBoxEmailAddress.Text;
 
                 try
                 {
@@ -487,8 +486,6 @@ namespace virtual_receptionist.Views
 
         public string SetSelectedCountry(string selectedCountryInTable)
         {
-            var countryRepository = new CountryRepository();
-
             var countyNames = countryRepository.GetCountries().Select(country => country.Name).ToList();
 
             string selectedCountry = null;
