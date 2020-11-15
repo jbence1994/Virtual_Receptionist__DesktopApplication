@@ -2,12 +2,14 @@
 using System.Data;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormGuestDatabase : Form
     {
+        private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly GuestDatabaseController controller = new GuestDatabaseController();
 
         public FormGuestDatabase()
@@ -29,7 +31,7 @@ namespace virtual_receptionist.Views
                 listViewGuest.Items.Add(listViewItemGuests);
             }
 
-            textBoxID.Text = controller.GetNextGuestId();
+            textBoxID.Text = guestRepository.GetNextGuestId().ToString();
             comboBoxCountry.DataSource = controller.GetCountries();
         }
 
@@ -374,7 +376,7 @@ namespace virtual_receptionist.Views
                 buttonAddGuest.Enabled = true;
 
                 textBoxID.Clear();
-                textBoxID.Text = controller.GetNextGuestId();
+                textBoxID.Text = guestRepository.GetNextGuestId().ToString();
                 textBoxName.Clear();
                 textBoxDocumentNumber.Clear();
                 textBoxCitizenship.Clear();

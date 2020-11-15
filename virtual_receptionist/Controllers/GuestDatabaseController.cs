@@ -48,11 +48,6 @@ namespace virtual_receptionist.Controllers
             return selectedCountry;
         }
 
-        public string GetNextGuestId()
-        {
-            return guestRepository.GetNextGuestId().ToString();
-        }
-
         public void AddGuest(params object[] guestParameters)
         {
             var name = guestParameters[0].ToString();

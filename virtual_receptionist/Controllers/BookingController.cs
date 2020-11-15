@@ -16,7 +16,7 @@ namespace virtual_receptionist.Controllers
             var arrival = arrivalDate.ToString("yyyy-MM-dd");
             var bookingsByArrival = bookingRepository.GetBookingsByArrivalDate(arrival);
 
-            DataTable bookingsDataTableByArrival = new DataTable();
+            var bookingsDataTableByArrival = new DataTable();
             bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
             bookingsDataTableByArrival.Columns.Add("GuestName", typeof(string));
             bookingsDataTableByArrival.Columns.Add("RoomNumber", typeof(int));
