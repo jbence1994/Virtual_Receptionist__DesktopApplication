@@ -27,7 +27,7 @@ namespace virtual_receptionist.Controllers
 
             foreach (var guest in guestRepository.GetGuests())
             {
-                guestDataTable.Rows.Add(guest.ID, guest.Name, guest.DocumentNumber,
+                guestDataTable.Rows.Add(guest.Id, guest.Name, guest.DocumentNumber,
                     guest.Citizenship, guest.BirthDate, guest.Country, guest.ZipCode,
                     guest.City, guest.Address, guest.PhoneNumber, guest.EmailAddress);
             }
@@ -56,7 +56,7 @@ namespace virtual_receptionist.Controllers
 
         public string GetNextGuestId()
         {
-            return guestRepository.GetNextGuestID().ToString();
+            return guestRepository.GetNextGuestId().ToString();
         }
 
         public void AddGuest(params object[] guestParameters)
@@ -105,7 +105,7 @@ namespace virtual_receptionist.Controllers
 
             var guest = new Guest
             {
-                ID = id,
+                Id = id,
                 Name = name,
                 DocumentNumber = documentNumber,
                 Citizenship = citizenship,
@@ -137,7 +137,7 @@ namespace virtual_receptionist.Controllers
 
             var guest = new Guest
             {
-                ID = id,
+                Id = id,
                 Name = name,
                 DocumentNumber = documentNumber,
                 Citizenship = citizenship,
