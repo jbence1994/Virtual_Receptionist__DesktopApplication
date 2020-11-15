@@ -12,7 +12,6 @@ namespace virtual_receptionist.Views
         private readonly RoomRepository roomRepository = new RoomRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly BookingController bookingController = new BookingController();
-        private readonly GuestDatabaseController guestController = new GuestDatabaseController();
 
         public object[] Booking { get; }
 
