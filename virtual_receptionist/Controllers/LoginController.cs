@@ -13,7 +13,7 @@ namespace virtual_receptionist.Controllers
         /// <summary>
         /// Szálláshely adattár osztály egy példánya
         /// </summary>
-        private AccomodationRepository repository;
+        private AccommodationRepository repository;
 
         #endregion
 
@@ -24,7 +24,7 @@ namespace virtual_receptionist.Controllers
         /// </summary>
         public LoginController()
         {
-            repository = new AccomodationRepository();
+            repository = new AccommodationRepository();
         }
 
         #endregion

@@ -7,7 +7,7 @@ namespace virtual_receptionist.Repositories
     /// <summary>
     /// Szálláshely adattár
     /// </summary>
-    public class AccomodationRepository : Repository
+    public class AccommodationRepository : Repository
     {
         #region Adatfeltöltő metódusok
 

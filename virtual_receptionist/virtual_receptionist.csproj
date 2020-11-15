@@ -63,7 +63,7 @@
     <Compile Include="Controllers\Validation\VATNumberValidation.cs" />
     <Compile Include="Controllers\Validation\BillingItemQuantityValidation.cs" />
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
-    <Compile Include="Repositories\AccomodationRepository.cs" />
+    <Compile Include="Repositories\AccommodationRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Models\Accommodation.cs" />
     <Compile Include="Models\BillingItemCategory.cs" />
