@@ -3,7 +3,7 @@ using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Controllers
 {
-    public class BillingController : Controller
+    public class BillingController
     {
         private readonly BillingRepository billingRepository = new BillingRepository();
         private readonly BookingRepository bookingRepository = new BookingRepository();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
 using virtual_receptionist.Models;
@@ -9,6 +10,7 @@ namespace virtual_receptionist.Views
 {
     public partial class FormBilling : Form
     {
+        private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly BillingRepository billingRepository = new BillingRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly BillingController controller = new BillingController();
@@ -50,8 +52,8 @@ namespace virtual_receptionist.Views
             {
                 textBoxBillingName.Clear();
                 comboBoxBillingCountry.DataSource = null;
-                comboBoxBillingCountry.DataSource = controller.GetCountries();
-                comboBoxBillingCountry.SelectedItem = controller.GetCountries()[0];
+                comboBoxBillingCountry.DataSource = countryRepository.GetCountries().Select(country => country.Name).ToList();
+                comboBoxBillingCountry.SelectedItem = countryRepository.GetCountries().Select(country => country.Name).ToList()[0];
                 textBoxBillingCity.Clear();
                 textBoxBillingZipCode.Clear();
                 textBoxBillingAddress.Clear();
@@ -197,7 +199,7 @@ namespace virtual_receptionist.Views
                 listViewToBill.Items.Add(bookingsToBill);
             }
 
-            comboBoxBillingCountry.DataSource = controller.GetCountries();
+            comboBoxBillingCountry.DataSource = countryRepository.GetCountries().Select(country => country.Name).ToList();
         }
     }
 }

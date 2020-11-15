@@ -5,7 +5,7 @@ using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Controllers
 {
-    public class GuestDatabaseController : Controller
+    public class GuestDatabaseController
     {
         private readonly GuestRepository guestRepository = new GuestRepository();
 
@@ -40,9 +40,13 @@ namespace virtual_receptionist.Controllers
         /// <param name="selectedCountryInTable">Táblázatban kijelölt ország</param>
         public string SetSelectedCountry(string selectedCountryInTable)
         {
+            var countryRepository = new CountryRepository();
+
+            var countyNames = countryRepository.GetCountries().Select(country => country.Name).ToList();
+
             string selectedCountry = null;
 
-            foreach (var country in GetCountries().Where(selectedCountryInTable.Contains))
+            foreach (var country in countyNames.Where(selectedCountryInTable.Contains))
                 selectedCountry = country;
 
             return selectedCountry;

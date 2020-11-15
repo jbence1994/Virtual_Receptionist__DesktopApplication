@@ -9,6 +9,7 @@ namespace virtual_receptionist.Views
 {
     public partial class FormAddBooking : Form
     {
+        private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly RoomRepository roomRepository = new RoomRepository();
         private readonly BookingController bookingController = new BookingController();
         private readonly GuestDatabaseController guestController = new GuestDatabaseController();
@@ -24,7 +25,7 @@ namespace virtual_receptionist.Views
         private void FormBookingManager_Load(object sender, EventArgs e)
         {
             textBoxGuestName.Select();
-            comboBoxCountry.DataSource = bookingController.GetCountries();
+            comboBoxCountry.DataSource = countryRepository.GetCountries().Select(country => country.Name).ToList();
             comboBoxRoom.DataSource = roomRepository.GetRooms().Select(room => room.Number).ToList();
         }
 

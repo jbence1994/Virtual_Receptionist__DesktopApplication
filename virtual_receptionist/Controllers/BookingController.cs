@@ -6,7 +6,7 @@ using virtual_receptionist.Validation;
 
 namespace virtual_receptionist.Controllers
 {
-    public class BookingController : Controller
+    public class BookingController
     {
         private readonly BookingRepository bookingRepository = new BookingRepository();
         private readonly RoomRepository roomRepository = new RoomRepository();

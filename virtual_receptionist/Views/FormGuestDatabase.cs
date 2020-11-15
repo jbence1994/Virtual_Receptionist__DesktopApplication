@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
 using virtual_receptionist.Repositories;
@@ -9,6 +10,7 @@ namespace virtual_receptionist.Views
 {
     public partial class FormGuestDatabase : Form
     {
+        private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
         private readonly GuestDatabaseController controller = new GuestDatabaseController();
 
@@ -32,7 +34,7 @@ namespace virtual_receptionist.Views
             }
 
             textBoxID.Text = guestRepository.GetNextGuestId().ToString();
-            comboBoxCountry.DataSource = controller.GetCountries();
+            comboBoxCountry.DataSource = countryRepository.GetCountries().Select(country => country.Name).ToList();
         }
 
         private void buttonAddGuest_Click(object sender, EventArgs e)
@@ -334,8 +336,8 @@ namespace virtual_receptionist.Views
                 textBoxCitizenship.Clear();
                 textBoxBirthDate.Clear();
                 comboBoxCountry.DataSource = null;
-                comboBoxCountry.DataSource = controller.GetCountries();
-                comboBoxCountry.SelectedItem = controller.GetCountries()[0];
+                comboBoxCountry.DataSource = countryRepository.GetCountries().Select(c => c.Name).ToList();
+                comboBoxCountry.SelectedItem = countryRepository.GetCountries().Select(c => c.Name).ToList()[0];
                 textBoxZipCode.Clear();
                 textBoxCity.Clear();
                 textBoxAddress.Clear();
@@ -382,8 +384,8 @@ namespace virtual_receptionist.Views
                 textBoxCitizenship.Clear();
                 textBoxBirthDate.Clear();
                 comboBoxCountry.DataSource = null;
-                comboBoxCountry.DataSource = controller.GetCountries();
-                comboBoxCountry.SelectedItem = controller.GetCountries()[0];
+                comboBoxCountry.DataSource = countryRepository.GetCountries().Select(country => country.Name).ToList();
+                comboBoxCountry.SelectedItem = countryRepository.GetCountries().Select(country => country.Name).ToList()[0];
                 textBoxZipCode.Clear();
                 textBoxCity.Clear();
                 textBoxAddress.Clear();
