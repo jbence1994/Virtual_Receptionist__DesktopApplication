@@ -11,7 +11,7 @@ namespace virtual_receptionist.Repositories
             const string sql =
                 "SELECT accomodation.ID, accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation, accomodation_profile WHERE accomodation.ID = accomodation_profile.Accomodation";
 
-            var dt = database.DQL(sql);
+            var dt = database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {

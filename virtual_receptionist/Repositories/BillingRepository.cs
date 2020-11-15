@@ -18,7 +18,7 @@ namespace virtual_receptionist.Repositories
             const string sql =
                 "SELECT billing_item.BillingItemName, billing_item.Price, billing_item_category.VAT, billing_item_category.BillingItemCategoryName, billing_item_category.Unit FROM billing_item, billing_item_category WHERE billing_item.Category = billing_item_category.ID";
 
-            var dt = database.DQL(sql);
+            var dt = database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -67,7 +67,7 @@ namespace virtual_receptionist.Repositories
         public void SetBookingAsPaid(Booking booking)
         {
             var sql = $"UPDATE booking SET booking.Paid = 1 WHERE booking.ID = \"{booking.Id}\"";
-            database.DML(sql);
+            database.Dml(sql);
         }
     }
 }
