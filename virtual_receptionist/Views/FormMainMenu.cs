@@ -9,13 +9,11 @@ namespace virtual_receptionist.Views
     {
         private readonly AccommodationRepository accommodationRepository = new AccommodationRepository();
         private readonly FormLogin formLogin;
-        private static string _debugFolder;
 
         public FormMainMenu(FormLogin formLogin)
         {
             InitializeComponent();
             this.formLogin = formLogin;
-            _debugFolder = Directory.GetCurrentDirectory();
         }
 
         private void FormMainMenu_Load(object sender, EventArgs e)
@@ -52,19 +50,6 @@ namespace virtual_receptionist.Views
         {
             var formBilling = new FormBilling();
             formBilling.ShowDialog();
-        }
-
-        private void toolStripMenuItemHelpCHM_Click(object sender, EventArgs e)
-        {
-            if (_debugFolder == Directory.GetCurrentDirectory())
-            {
-                Directory.SetCurrentDirectory(@"..\..\Help\");
-                Help.ShowHelp(this, "virtual_receptionist_help.chm");
-            }
-            else
-            {
-                Help.ShowHelp(this, "virtual_receptionist_help.chm");
-            }
         }
 
         private void toolStripMenuItemAccomodationInfo_Click(object sender, EventArgs e)

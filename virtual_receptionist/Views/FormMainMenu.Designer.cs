@@ -138,7 +138,6 @@
             this.toolStripMenuItemHelpCHM.Name = "toolStripMenuItemHelpCHM";
             this.toolStripMenuItemHelpCHM.Size = new System.Drawing.Size(165, 22);
             this.toolStripMenuItemHelpCHM.Text = "Segítség";
-            this.toolStripMenuItemHelpCHM.Click += new System.EventHandler(this.toolStripMenuItemHelpCHM_Click);
             // 
             // pictureBoxVRLogo
             // 
