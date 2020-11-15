@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
-using virtual_receptionist.Controllers;
 using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Views
@@ -8,7 +8,6 @@ namespace virtual_receptionist.Views
     public partial class FormBooking : Form
     {
         private readonly BookingRepository bookingRepository = new BookingRepository();
-        private readonly BookingController controller = new BookingController();
 
         public FormBooking()
         {
@@ -18,19 +17,37 @@ namespace virtual_receptionist.Views
         private void FormBooking_Load(object sender, EventArgs e)
         {
             var actualDate = dateTimePickerArrivalDate.Value;
-            dataGridViewBookings.DataSource = controller.GetBookingsByArrivalDate(actualDate);
+            dataGridViewBookings.DataSource = GetBookingsByArrivalDate(actualDate);
         }
 
         private void dateTimePickerArrivalDate_ValueChanged(object sender, EventArgs e)
         {
             var arrivalDate = dateTimePickerArrivalDate.Value;
-            dataGridViewBookings.DataSource = controller.GetBookingsByArrivalDate(arrivalDate);
+            dataGridViewBookings.DataSource = GetBookingsByArrivalDate(arrivalDate);
         }
 
         private void dateTimePickerDepartureDate_ValueChanged(object sender, EventArgs e)
         {
             var departureDate = dateTimePickerDepartureDate.Value;
-            dataGridViewBookings.DataSource = controller.GetBookingsByDepartureDate(departureDate);
+            var bookingsByDeparture =
+                bookingRepository.GetGuestBookingsByDepartureDate(departureDate.ToString("yyyy-MM-dd"));
+
+            var bookingsDataTableByDeparture = new DataTable();
+            bookingsDataTableByDeparture.Columns.Add("ID", typeof(int));
+            bookingsDataTableByDeparture.Columns.Add("GuestName", typeof(string));
+            bookingsDataTableByDeparture.Columns.Add("RoomNumber", typeof(int));
+            bookingsDataTableByDeparture.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsDataTableByDeparture.Columns.Add("ArrivalDate", typeof(string));
+            bookingsDataTableByDeparture.Columns.Add("DepartureDate", typeof(string));
+            bookingsDataTableByDeparture.Columns.Add("Paid", typeof(bool));
+
+            foreach (var booking in bookingsByDeparture)
+            {
+                bookingsDataTableByDeparture.Rows.Add(booking.Id, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.IsPaid);
+            }
+
+            dataGridViewBookings.DataSource = bookingsDataTableByDeparture;
         }
 
         private void buttonNewBooking_Click(object sender, EventArgs e)
@@ -115,6 +132,29 @@ namespace virtual_receptionist.Views
             {
                 MessageBox.Show("Nincs kijelölt foglalás!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
+        {
+            var arrival = arrivalDate.ToString("yyyy-MM-dd");
+            var bookingsByArrival = bookingRepository.GetBookingsByArrivalDate(arrival);
+
+            var bookingsDataTableByArrival = new DataTable();
+            bookingsDataTableByArrival.Columns.Add("ID", typeof(int));
+            bookingsDataTableByArrival.Columns.Add("GuestName", typeof(string));
+            bookingsDataTableByArrival.Columns.Add("RoomNumber", typeof(int));
+            bookingsDataTableByArrival.Columns.Add("NumberOfGuests", typeof(int));
+            bookingsDataTableByArrival.Columns.Add("ArrivalDate", typeof(string));
+            bookingsDataTableByArrival.Columns.Add("DepartureDate", typeof(string));
+            bookingsDataTableByArrival.Columns.Add("Paid", typeof(bool));
+
+            foreach (var booking in bookingsByArrival)
+            {
+                bookingsDataTableByArrival.Rows.Add(booking.Id, booking.Guest.Name, booking.Room.Number,
+                    booking.NumberOfGuests, booking.ArrivalDate, booking.DepartureDate, booking.IsPaid);
+            }
+
+            return bookingsDataTableByArrival;
         }
     }
 }

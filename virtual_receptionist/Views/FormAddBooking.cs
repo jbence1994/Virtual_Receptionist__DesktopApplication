@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Models;
 using virtual_receptionist.Repositories;
 using virtual_receptionist.Validation;
 
@@ -9,9 +10,9 @@ namespace virtual_receptionist.Views
 {
     public partial class FormAddBooking : Form
     {
+        private readonly BookingRepository bookingRepository = new BookingRepository();
         private readonly CountryRepository countryRepository = new CountryRepository();
         private readonly RoomRepository roomRepository = new RoomRepository();
-        private readonly BookingController bookingController = new BookingController();
         private readonly GuestDatabaseController guestController = new GuestDatabaseController();
 
         /// <summary>
@@ -159,7 +160,7 @@ namespace virtual_receptionist.Views
             try
             {
                 errorProviderDepartureDate.Clear();
-                bookingController.BookingDateValidator(arrivalDate, departureDate);
+                BookingDateValidator(arrivalDate, departureDate);
             }
             catch (Exception exception)
             {
@@ -171,7 +172,7 @@ namespace virtual_receptionist.Views
             try
             {
                 errorProviderFreeCapacity.Clear();
-                bookingController.FreeRoomCapacityValidator(arrivalDate, roomNumber);
+                FreeRoomCapacityValidator(arrivalDate, roomNumber);
             }
             catch (Exception exception)
             {
@@ -183,7 +184,7 @@ namespace virtual_receptionist.Views
             try
             {
                 errorProviderNumberOfGuests.Clear();
-                bookingController.BookingCapacityValidator(numberOfGuests, roomNumber);
+                BookingCapacityValidator(numberOfGuests, roomNumber);
             }
             catch (Exception exception)
             {
@@ -197,7 +198,7 @@ namespace virtual_receptionist.Views
 
             guestController.AddGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
                 address, phoneNumber, email);
-            bookingController.AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
+            AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
         }
 
         private void textBoxGuestName_TextChanged(object sender, EventArgs e)
@@ -258,6 +259,82 @@ namespace virtual_receptionist.Views
         private void comboBoxRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
             errorProviderFreeCapacity.Clear();
+        }
+
+        private void AddBooking(params object[] bookingParameters)
+        {
+            var guest = new Guest
+            {
+                Name = bookingParameters[0].ToString()
+            };
+
+            var room = new Room
+            {
+                Number = Convert.ToInt32(bookingParameters[1])
+            };
+
+            var numberOfGuests = Convert.ToInt32(bookingParameters[2]);
+
+            var arrivalDate = Convert.ToDateTime(bookingParameters[3]).ToString("yyyy-MM-dd");
+
+            var departureDate = Convert.ToDateTime(bookingParameters[4]).ToString("yyyy-MM-dd");
+
+            const bool paid = false;
+
+            var booking = new Booking
+            {
+                Guest = guest,
+                Room = room,
+                NumberOfGuests = numberOfGuests,
+                ArrivalDate = arrivalDate,
+                DepartureDate = departureDate,
+                IsPaid = paid
+            };
+
+            bookingRepository.AddBooking(booking);
+        }
+
+        public void BookingDateValidator(DateTime arrivalDate, DateTime departureDate)
+        {
+            var booking = new Booking
+            {
+                ArrivalDate = arrivalDate.ToString(),
+                DepartureDate = departureDate.ToString()
+            };
+
+            BookingDateValidation.ValidateBookingDate(booking);
+        }
+
+        public void BookingCapacityValidator(decimal numberOfGuests, int roomNumber)
+        {
+            var room = new Room
+            {
+                Capacity = roomRepository.GetRoomCapacity(roomNumber)
+            };
+
+            var booking = new Booking
+            {
+                NumberOfGuests = Convert.ToInt32(numberOfGuests),
+                Room = room
+            };
+
+            BookingCapacityValidation.ValidateBookingCapacity(booking);
+        }
+
+        public void FreeRoomCapacityValidator(DateTime arrivalDate, int roomNumber)
+        {
+            var room = new Room
+            {
+                Number = roomNumber
+            };
+
+            var booking = new Booking
+            {
+                Room = room,
+                ArrivalDate = arrivalDate.ToString("yyyy-MM-dd")
+            };
+
+            bookingRepository.ValidateFreeRoomCapacityOnSpecifiedArrivalDate(booking);
         }
     }
 }
