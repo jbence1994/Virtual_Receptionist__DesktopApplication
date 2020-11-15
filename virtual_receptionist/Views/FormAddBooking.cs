@@ -192,12 +192,12 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            if (validData)
-            {
-                guestController.AddGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
-                    address, phoneNumber, email);
-                bookingController.AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
-            }
+            if (!validData)
+                return;
+
+            guestController.AddGuest(name, documentNumber, citizenship, birthDate, country, zipCode, city,
+                address, phoneNumber, email);
+            bookingController.AddBooking(name, roomNumber, numberOfGuests, arrivalDate, departureDate);
         }
 
         private void textBoxGuestName_TextChanged(object sender, EventArgs e)
