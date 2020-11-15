@@ -8,7 +8,7 @@ namespace virtual_receptionist.Repositories
     {
         private readonly List<Country> countries = new List<Country>();
 
-        private List<Country> UploadCountriesList()
+        private void UploadCountriesList()
         {
             const string sql = "SELECT * FROM country";
             var dt = database.DQL(sql);
@@ -19,8 +19,6 @@ namespace virtual_receptionist.Repositories
 
                 countries.Add(new Country {Name = name});
             }
-
-            return countries;
         }
 
         public List<Country> GetCountries()
