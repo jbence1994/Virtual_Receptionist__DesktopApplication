@@ -1,4 +1,4 @@
-﻿namespace virtual_receptionist.Repositories.Models
+﻿namespace virtual_receptionist.Models
 {
     /// <summary>
     /// Szoba egyed

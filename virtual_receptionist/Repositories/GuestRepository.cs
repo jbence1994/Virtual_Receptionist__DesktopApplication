@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using virtual_receptionist.Repositories.Models;
 using System.Data;
 using System;
+using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Repositories
 {

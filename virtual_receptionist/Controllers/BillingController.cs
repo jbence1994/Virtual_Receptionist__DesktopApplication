@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using System.Collections.Generic;
 using virtual_receptionist.Repositories;
-using virtual_receptionist.Repositories.Models;
 using System;
 using virtual_receptionist.Controllers.Exceptions;
 using virtual_receptionist.Controllers.Validation;
+using virtual_receptionist.Models;
 
 namespace virtual_receptionist.Controllers
 {

@@ -79,8 +79,8 @@
     <Compile Include="Controllers\Validation\ZipCodeValidation.cs" />
     <Compile Include="Repositories\AccomodationRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
-    <Compile Include="Repositories\Models\Accomodation.cs" />
-    <Compile Include="Repositories\Models\BillingItemCategory.cs" />
+    <Compile Include="Models\Accomodation.cs" />
+    <Compile Include="Models\BillingItemCategory.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Repositories\BillingRepository.cs" />
     <Compile Include="Repositories\BookingRepository.cs" />
@@ -101,8 +101,8 @@
     <Compile Include="Controllers\BillingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainMenuController.cs" />
-    <Compile Include="Repositories\Models\BillingItem.cs" />
-    <Compile Include="Repositories\Models\Country.cs" />
+    <Compile Include="Models\BillingItem.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Views\FormBilling.cs">
       <SubType>Form</SubType>
@@ -134,13 +134,13 @@
     <Compile Include="Views\FormBooking.Designer.cs">
       <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\Models\Guest.cs" />
+    <Compile Include="Models\Guest.cs" />
     <Compile Include="Controllers\GuestDatabaseController.cs" />
     <Compile Include="Controllers\Validation\InputValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Models\Booking.cs" />
-    <Compile Include="Repositories\Models\Room.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Room.cs" />
     <Compile Include="Views\FormUpdateBooking.cs">
       <SubType>Form</SubType>
     </Compile>
