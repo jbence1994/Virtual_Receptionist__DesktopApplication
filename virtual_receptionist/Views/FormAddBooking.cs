@@ -14,9 +14,6 @@ namespace virtual_receptionist.Views
         private readonly RoomRepository roomRepository = new RoomRepository();
         private readonly GuestRepository guestRepository = new GuestRepository();
 
-        /// <summary>
-        /// Foglalási napló foglalásfelvétel modális ablak konstruktora
-        /// </summary>
         public FormAddBooking()
         {
             InitializeComponent();
@@ -31,22 +28,18 @@ namespace virtual_receptionist.Views
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            bool validData = true;
+            var validData = true;
 
-            /*
-             * Vendégadatok validálása
-             */
-
-            string name = textBoxGuestName.Text;
-            string documentNumber = textBoxDocumentNumber.Text;
-            string citizenship = textBoxCitizenship.Text;
-            string birthDate = textBoxBirthDate.Text;
-            string country = comboBoxCountry.SelectedItem.ToString();
-            string zipCode = textBoxZipCode.Text;
-            string city = textBoxCity.Text;
-            string address = textBoxAddress.Text;
-            string phoneNumber = textBoxPhoneNumber.Text;
-            string email = textBoxEmailAddress.Text;
+            var name = textBoxGuestName.Text;
+            var documentNumber = textBoxDocumentNumber.Text;
+            var citizenship = textBoxCitizenship.Text;
+            var birthDate = textBoxBirthDate.Text;
+            var country = comboBoxCountry.SelectedItem.ToString();
+            var zipCode = textBoxZipCode.Text;
+            var city = textBoxCity.Text;
+            var address = textBoxAddress.Text;
+            var phoneNumber = textBoxPhoneNumber.Text;
+            var email = textBoxEmailAddress.Text;
 
             try
             {
@@ -147,14 +140,10 @@ namespace virtual_receptionist.Views
                 validData = false;
             }
 
-            /*
-             * Foglalásadatok validálása
-             */
-
-            int roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
-            decimal numberOfGuests = numericUpDownNumberOfGuests.Value;
-            DateTime arrivalDate = dateTimePickerArrivalDate.Value;
-            DateTime departureDate = dateTimePickerDepartureDate.Value;
+            var roomNumber = Convert.ToInt32(comboBoxRoom.SelectedItem);
+            var numberOfGuests = numericUpDownNumberOfGuests.Value;
+            var arrivalDate = dateTimePickerArrivalDate.Value;
+            var departureDate = dateTimePickerDepartureDate.Value;
 
             try
             {
