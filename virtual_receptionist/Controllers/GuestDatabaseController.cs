@@ -113,37 +113,5 @@ namespace virtual_receptionist.Controllers
 
             guestRepository.UpdateGuest(guest);
         }
-
-        public void DeleteGuest(params object[] guestParameters)
-        {
-            var id = int.Parse(guestParameters[0].ToString());
-            var name = guestParameters[1].ToString();
-            var documentNumber = guestParameters[2].ToString();
-            var citizenship = guestParameters[3].ToString();
-            var birthDate = guestParameters[4].ToString();
-            var country = guestParameters[5].ToString();
-            var zipCode = guestParameters[6].ToString();
-            var city = guestParameters[7].ToString();
-            var address = guestParameters[8].ToString();
-            var phoneNumber = guestParameters[9].ToString();
-            var email = guestParameters[10].ToString();
-
-            var guest = new Guest
-            {
-                Id = id,
-                Name = name,
-                DocumentNumber = documentNumber,
-                Citizenship = citizenship,
-                BirthDate = birthDate,
-                Country = country,
-                ZipCode = zipCode,
-                City = city,
-                Address = address,
-                PhoneNumber = phoneNumber,
-                EmailAddress = email
-            };
-
-            guestRepository.DeleteGuest(guest);
-        }
     }
 }

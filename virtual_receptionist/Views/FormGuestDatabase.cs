@@ -307,7 +307,7 @@ namespace virtual_receptionist.Views
         {
             if (listViewGuest.SelectedItems.Count > 0)
             {
-                DialogResult delete = MessageBox.Show(
+                var delete = MessageBox.Show(
                     "Biztosan törli a kijelölt vendéget?\nA művelettel a vendéghez tartozó foglalások adatai is törlődnek az adatbázisból és a művelet nem vonható vissza!",
                     "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -315,17 +315,7 @@ namespace virtual_receptionist.Views
                 if (delete != DialogResult.Yes)
                     return;
 
-                int id = int.Parse(listViewGuest.SelectedItems[0].Text);
-                string name = listViewGuest.SelectedItems[0].SubItems[1].Text;
-                string documentNumber = listViewGuest.SelectedItems[0].SubItems[2].Text;
-                string citizenship = listViewGuest.SelectedItems[0].SubItems[3].Text;
-                string birthDate = listViewGuest.SelectedItems[0].SubItems[4].Text;
-                string country = comboBoxCountry.SelectedItem.ToString();
-                string zipCode = listViewGuest.SelectedItems[0].SubItems[6].Text;
-                string city = listViewGuest.SelectedItems[0].SubItems[7].Text;
-                string address = listViewGuest.SelectedItems[0].SubItems[8].Text;
-                string phoneNumber = listViewGuest.SelectedItems[0].SubItems[9].Text;
-                string email = listViewGuest.SelectedItems[0].SubItems[10].Text;
+                var id = int.Parse(listViewGuest.SelectedItems[0].Text);
 
                 var index = listViewGuest.FocusedItem.Index;
                 listViewGuest.Items.RemoveAt(index);
@@ -344,8 +334,7 @@ namespace virtual_receptionist.Views
                 textBoxPhoneNumber.Clear();
                 textBoxEmailAddress.Clear();
 
-                controller.DeleteGuest(id, name, documentNumber, citizenship, birthDate,
-                    country, zipCode, city, address, phoneNumber, email);
+                guestRepository.DeleteGuest(id);
             }
             else
             {
@@ -385,7 +374,8 @@ namespace virtual_receptionist.Views
                 textBoxBirthDate.Clear();
                 comboBoxCountry.DataSource = null;
                 comboBoxCountry.DataSource = countryRepository.GetCountries().Select(country => country.Name).ToList();
-                comboBoxCountry.SelectedItem = countryRepository.GetCountries().Select(country => country.Name).ToList()[0];
+                comboBoxCountry.SelectedItem =
+                    countryRepository.GetCountries().Select(country => country.Name).ToList()[0];
                 textBoxZipCode.Clear();
                 textBoxCity.Clear();
                 textBoxAddress.Clear();
