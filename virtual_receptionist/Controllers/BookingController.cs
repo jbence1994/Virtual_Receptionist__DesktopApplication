@@ -195,8 +195,7 @@ namespace virtual_receptionist.Controllers
                 ArrivalDate = arrivalDate.ToString("yyyy-MM-dd")
             };
 
-            var roomCapacityValidation = new FreeRoomCapacityValidation(room, booking);
-            roomCapacityValidation.ValidateFreeRoomCapacityOnSpecifiedArrivalDate();
+            bookingRepository.ValidateFreeRoomCapacityOnSpecifiedArrivalDate(booking);
         }
     }
 }

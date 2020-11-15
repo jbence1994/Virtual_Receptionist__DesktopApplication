@@ -94,12 +94,12 @@ namespace virtual_receptionist.Repositories
             return rooms;
         }
 
-        public List<Booking> GetBookings()
+        public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate(Booking booking)
         {
-            if (bookings.Count == 0)
-                UploadBookingsList();
-
-            return bookings;
+            if (bookings.Any(b => booking.ArrivalDate == b.ArrivalDate && booking.Room.Number == b.Room.Number))
+            {
+                throw new Exception();
+            }
         }
 
         public void AddBooking(Booking booking)
