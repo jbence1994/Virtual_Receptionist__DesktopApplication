@@ -51,20 +51,20 @@ namespace virtual_receptionist.Views
 
         private void listViewBillingItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listViewBillingItems.SelectedItems.Count > 0)
-            {
-                textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
-                textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
-                textBoxVAT.Text = $"{listViewBillingItems.SelectedItems[0].SubItems[2].Text}%";
-                textBoxCategory.Text = listViewBillingItems.SelectedItems[0].SubItems[3].Text;
-                textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
-                errorProviderBillingItem.Clear();
-                errorProviderDiscount.Clear();
-                errorProviderQuantity.Clear();
+            if (listViewBillingItems.SelectedItems.Count <= 0)
+                return;
 
-                maskedTextBoxDiscountRate.Enabled =
-                    listViewBillingItems.SelectedItems[0].SubItems[3].Text != "Tárgyi adó mentes";
-            }
+            textBoxItem.Text = listViewBillingItems.SelectedItems[0].Text;
+            textBoxPrice.Text = listViewBillingItems.SelectedItems[0].SubItems[1].Text;
+            textBoxVAT.Text = $"{listViewBillingItems.SelectedItems[0].SubItems[2].Text}%";
+            textBoxCategory.Text = listViewBillingItems.SelectedItems[0].SubItems[3].Text;
+            textBoxUnit.Text = listViewBillingItems.SelectedItems[0].SubItems[4].Text;
+            errorProviderBillingItem.Clear();
+            errorProviderDiscount.Clear();
+            errorProviderQuantity.Clear();
+
+            maskedTextBoxDiscountRate.Enabled =
+                listViewBillingItems.SelectedItems[0].SubItems[3].Text != "Tárgyi adó mentes";
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
