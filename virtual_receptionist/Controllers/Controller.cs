@@ -7,7 +7,7 @@ namespace virtual_receptionist.Controllers
     public class Controller
     {
         private readonly CountryRepository countryRepository = new CountryRepository();
-        private readonly BookingRepository bookingRepository = new BookingRepository();
+        private readonly RoomRepository roomRepository = new RoomRepository();
 
         public List<string> GetCountries()
         {
@@ -16,7 +16,7 @@ namespace virtual_receptionist.Controllers
 
         public List<int> GetRooms()
         {
-            return bookingRepository.GetRooms().Select(room => room.Number).ToList();
+            return roomRepository.GetRooms().Select(room => room.Number).ToList();
         }
     }
 }

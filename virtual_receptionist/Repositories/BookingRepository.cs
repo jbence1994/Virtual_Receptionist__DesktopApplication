@@ -8,41 +8,11 @@ namespace virtual_receptionist.Repositories
 {
     public class BookingRepository : Repository
     {
-        private readonly List<Room> rooms;
         private readonly List<Booking> bookings;
 
         public BookingRepository()
         {
-            rooms = new List<Room>();
             bookings = new List<Booking>();
-        }
-
-        private void UploadRoomsList()
-        {
-            const string sql =
-                "SELECT room.ID, room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
-
-            var dt = Database.Dql(sql);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                var id = Convert.ToInt32(row["ID"]);
-                var name = row["Name"].ToString();
-                var number = Convert.ToInt32(row["Number"]);
-                var category = row["BillingItemName"].ToString();
-                var capacity = Convert.ToInt32(row["Capacity"]);
-
-                var room = new Room
-                {
-                    Id = id,
-                    Name = name,
-                    Number = number,
-                    Category = category,
-                    Capacity = capacity
-                };
-
-                rooms.Add(room);
-            }
         }
 
         private void UploadBookingsList()
@@ -84,14 +54,6 @@ namespace virtual_receptionist.Repositories
 
                 bookings.Add(booking);
             }
-        }
-
-        public List<Room> GetRooms()
-        {
-            if (rooms.Count == 0)
-                UploadRoomsList();
-
-            return rooms;
         }
 
         public void ValidateFreeRoomCapacityOnSpecifiedArrivalDate(Booking booking)
@@ -145,16 +107,6 @@ namespace virtual_receptionist.Repositories
             UploadBookingsList();
 
             return bookings.Where(booking => !booking.IsPaid).ToList();
-        }
-
-        public int GetRoomCapacity(int roomNumber)
-        {
-            if (rooms.Count == 0)
-            {
-                UploadRoomsList();
-            }
-
-            return (from room in rooms where room.Number == roomNumber select room.Capacity).FirstOrDefault();
         }
     }
 }

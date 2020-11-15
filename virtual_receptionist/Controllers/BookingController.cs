@@ -9,6 +9,7 @@ namespace virtual_receptionist.Controllers
     public class BookingController : Controller
     {
         private readonly BookingRepository bookingRepository = new BookingRepository();
+        private readonly RoomRepository roomRepository = new RoomRepository();
 
         public DataTable GetBookingsByArrivalDate(DateTime arrivalDate)
         {
@@ -170,7 +171,7 @@ namespace virtual_receptionist.Controllers
         {
             var room = new Room
             {
-                Capacity = bookingRepository.GetRoomCapacity(roomNumber)
+                Capacity = roomRepository.GetRoomCapacity(roomNumber)
             };
 
             var booking = new Booking
