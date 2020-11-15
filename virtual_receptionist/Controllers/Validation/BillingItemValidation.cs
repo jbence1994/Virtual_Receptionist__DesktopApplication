@@ -3,34 +3,12 @@ using static virtual_receptionist.Controllers.Validation.InputValidation;
 
 namespace virtual_receptionist.Controllers.Validation
 {
-    /// <summary>
-    /// Számlázási tétel ellenőrző osztály
-    /// </summary>
-    public class BillingItemValidation
+    public static class BillingItemValidation
     {
-        /// <summary>
-        /// Tétel input
-        /// </summary>
-        private string billingItem;
-
-        /// <summary>
-        /// Számlázási tétel ellenőrző osztály konstruktora
-        /// </summary>
-        /// <param name="billingItem">Tétel input</param>
-        public BillingItemValidation(string billingItem)
-        {
-            this.billingItem = billingItem;
-        }
-
-        /// <summary>
-        /// Számlázási tétel ellenőrző metódus
-        /// </summary>
-        public void ValidateBillingItem()
+        public static void ValidateBillingItem(string billingItem)
         {
             if (IsEmpty(billingItem))
-            {
                 throw new Exception("Nincs kijelölt tétel!");
-            }
         }
     }
 }

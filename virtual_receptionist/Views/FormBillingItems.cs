@@ -157,12 +157,12 @@ namespace virtual_receptionist.Views
                 /*
                  * Először, ha van, a kedvezményes árat számoljuk ki
                  */
-                finalPrice = controller.GetDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
+                finalPrice = controller.CountDiscountPrice(Convert.ToDouble(price), Convert.ToDouble(discount));
 
                 /*
                  * A kedvezményes árképzés után számoljuk össze a mennyiségét
                  */
-                finalPrice = controller.GetTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
+                finalPrice = controller.CountTotalPrice(Convert.ToDouble(finalPrice), Convert.ToInt32(quantity));
 
                 billingItems[1] = price;
                 billingItems[2] = finalPrice;

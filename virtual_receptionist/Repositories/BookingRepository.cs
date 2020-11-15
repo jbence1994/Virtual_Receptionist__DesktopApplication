@@ -216,7 +216,7 @@ namespace virtual_receptionist.Repositories
         /// Metódus, amely kiszűri a foglalások adatait tartalmazó listából azokat a foglalásokat, amelyek nem fizettek még és egy új listába menti őket
         /// </summary>
         /// <returns>A szűrt adatokkal feltöltött listával tér vissza a függvény</returns>
-        public List<Booking> GetBookingsNotPaid()
+        public List<Booking> GetUnpaidBookings()
         {
             bookings.Clear();
             UploadBookingsList();

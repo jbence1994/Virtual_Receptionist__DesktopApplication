@@ -50,7 +50,7 @@ namespace virtual_receptionist.Views
             if (listViewToBill.SelectedItems.Count > 0)
             {
                 string name = listViewToBill.SelectedItems[0].SubItems[1].Text;
-                string[] data = controller.GetBillingData(name);
+                string[] data = controller.GetGuestData(name);
 
                 textBoxBillingName.Text = data[0];
                 comboBoxBillingCountry.SelectedItem = data[1];
@@ -194,7 +194,7 @@ namespace virtual_receptionist.Views
 
         private void InitializeListView()
         {
-            DataTable bookingsToBillDataTable = controller.GetBookingsToBill();
+            DataTable bookingsToBillDataTable = controller.GetUnpaidBookings();
 
             foreach (DataRow row in bookingsToBillDataTable.Rows)
             {

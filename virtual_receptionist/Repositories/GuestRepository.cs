@@ -145,7 +145,7 @@ namespace virtual_receptionist.Repositories
         /// </summary>
         /// <param name="name">Vendég neve</param>
         /// <returns>A vendég adatait tároló sztringtömbbel tér vissza a függvény</returns>
-        public string[] GetGuestDataForBilling(string name)
+        public string[] GetGuestData(string name)
         {
             string[] data = new string[5];
 
