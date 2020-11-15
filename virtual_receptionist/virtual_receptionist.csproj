@@ -85,7 +85,7 @@
     <Compile Include="Repositories\BillingRepository.cs" />
     <Compile Include="Repositories\BookingRepository.cs" />
     <Compile Include="Repositories\GuestRepository.cs" />
-    <Compile Include="Repositories\MySQLConnection\Database.cs" />
+    <Compile Include="MySQLConnection\Database.cs" />
     <Compile Include="Views\FormAddBooking.cs">
       <SubType>Form</SubType>
     </Compile>
