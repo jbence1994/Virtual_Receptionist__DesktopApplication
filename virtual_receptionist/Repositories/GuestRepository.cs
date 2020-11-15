@@ -94,7 +94,7 @@ namespace virtual_receptionist.Repositories
         /// Meglévő vendég törlése adatbázisból
         /// </summary>
         /// <param name="guest">Guest objektum</param>
-        public void Delete(Guest guest)
+        public void DeleteGuest(Guest guest)
         {
             string sql = $"DELETE FROM guest WHERE guest.ID = \"{guest.ID}\"";
             database.DML(sql);
@@ -104,7 +104,7 @@ namespace virtual_receptionist.Repositories
         /// Meglévő vendég módosítása adatbázisban
         /// </summary>
         /// <param name="guest">Guest objektum</param>
-        public void Update(Guest guest)
+        public void UpdateGuest(Guest guest)
         {
             string sql =
                 $"UPDATE guest SET guest.Name=\"{guest.Name}\", guest.DocumentNumber=\"{guest.DocumentNumber}\", guest.Citizenship=\"{guest.Citizenship}\", guest.BirthDate=\"{guest.BirthDate}\", guest.Country = (SELECT country.ID FROM country WHERE country.CountryName = \"{guest.Country}\"), guest.ZipCode=\"{guest.ZipCode}\", guest.City=\"{guest.City}\", guest.Address=\"{guest.Address}\", guest.PhoneNumber=\"{guest.PhoneNumber}\", guest.EmailAddress=\"{guest.EmailAddress}\" WHERE guest.ID = \"{guest.ID}\"";
@@ -115,7 +115,7 @@ namespace virtual_receptionist.Repositories
         /// Új vendég létrehozása adatbázisban
         /// </summary>
         /// <param name="guest">Guest objektum</param>
-        public void Create(Guest guest)
+        public void AddGuest(Guest guest)
         {
             string sql =
                 $"INSERT INTO guest(Name, DocumentNumber, Citizenship, BirthDate, Country, ZipCode, City, Address, PhoneNumber, EmailAddress) VALUES(\"{guest.Name}\", \"{guest.DocumentNumber}\", \"{guest.Citizenship}\", \"{guest.BirthDate}\", (SELECT country.ID FROM country WHERE country.CountryName = \"{guest.Country}\"), \"{guest.ZipCode}\", \"{guest.City}\", \"{guest.Address}\", \"{guest.PhoneNumber}\", \"{guest.EmailAddress}\")";

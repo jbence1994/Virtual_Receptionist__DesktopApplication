@@ -50,7 +50,7 @@ namespace virtual_receptionist.Views
                 listViewGuest.Items.Add(listViewItemGuests);
             }
 
-            textBoxID.Text = controller.GetNextGuestID();
+            textBoxID.Text = controller.GetNextGuestId();
             comboBoxCountry.DataSource = controller.GetCountries();
         }
 
@@ -403,7 +403,7 @@ namespace virtual_receptionist.Views
                 buttonAddGuest.Enabled = true;
 
                 textBoxID.Clear();
-                textBoxID.Text = controller.GetNextGuestID().ToString();
+                textBoxID.Text = controller.GetNextGuestId().ToString();
                 textBoxName.Clear();
                 textBoxDocumentNumber.Clear();
                 textBoxCitizenship.Clear();
