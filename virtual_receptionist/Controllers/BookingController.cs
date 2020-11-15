@@ -90,39 +90,6 @@ namespace virtual_receptionist.Controllers
             bookingRepository.AddBooking(booking);
         }
 
-        public void DeleteBooking(params object[] bookingParameters)
-        {
-            var id = Convert.ToInt32(bookingParameters[0]);
-
-            var guest = new Guest
-            {
-                Name = bookingParameters[1].ToString()
-            };
-
-            var room = new Room
-            {
-                Number = Convert.ToInt32(bookingParameters[2])
-            };
-
-            var numberOfGuests = Convert.ToInt32(bookingParameters[3]);
-
-            var arrivalDate = Convert.ToDateTime(bookingParameters[4].ToString()).ToString("yyyy-MM-dd");
-
-            var departureDate = Convert.ToDateTime(bookingParameters[5].ToString()).ToString("yyyy-MM-dd");
-
-            var booking = new Booking
-            {
-                Id = id,
-                Guest = guest,
-                Room = room,
-                NumberOfGuests = numberOfGuests,
-                ArrivalDate = arrivalDate,
-                DepartureDate = departureDate
-            };
-
-            bookingRepository.DeleteBooking(booking);
-        }
-
         public void UpdateBooking(params object[] bookingParameters)
         {
             var id = Convert.ToInt32(bookingParameters[0]);

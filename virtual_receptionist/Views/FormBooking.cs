@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 using virtual_receptionist.Controllers;
+using virtual_receptionist.Repositories;
 
 namespace virtual_receptionist.Views
 {
     public partial class FormBooking : Form
     {
+        private readonly BookingRepository bookingRepository = new BookingRepository();
         private readonly BookingController controller = new BookingController();
 
         public FormBooking()
@@ -100,17 +102,11 @@ namespace virtual_receptionist.Views
                     return;
 
                 var id = dataGridViewBookings.SelectedRows[0].Cells[0].Value;
-                var guest = dataGridViewBookings.SelectedRows[0].Cells[1].Value;
-                var room = dataGridViewBookings.SelectedRows[0].Cells[2].Value;
-                var numberOfGuests = dataGridViewBookings.SelectedRows[0].Cells[3].Value;
-                var arrivalDate = dataGridViewBookings.SelectedRows[0].Cells[4].Value;
-                var departureDate = dataGridViewBookings.SelectedRows[0].Cells[5].Value;
-                var paid = dataGridViewBookings.SelectedRows[0].Cells[6].Value;
 
                 var row = dataGridViewBookings.SelectedRows[0].Index;
                 dataGridViewBookings.Rows.RemoveAt(row);
 
-                controller.DeleteBooking(id, guest, room, numberOfGuests, arrivalDate, departureDate, paid);
+                bookingRepository.DeleteBooking(Convert.ToInt32(id));
 
                 MessageBox.Show("A foglalás sikeresen törlésre került!", "", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
