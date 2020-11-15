@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using virtual_receptionist.Models;
+using virtual_receptionist.MySQLConnection;
 
 namespace virtual_receptionist.Repositories
 {
-    public class RoomRepository : Repository
+    public class RoomRepository
     {
+        private readonly Database database = Database.GetDatabaseInstance();
         private readonly List<Room> rooms;
 
         public RoomRepository()
@@ -20,7 +22,7 @@ namespace virtual_receptionist.Repositories
             const string sql =
                 "SELECT room.ID, room.Name, room.Number, billing_item.BillingItemName, room.Capacity FROM room, billing_item WHERE room.Category = billing_item.ID ORDER BY room.Number ASC";
 
-            var dt = Database.Dql(sql);
+            var dt = database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {

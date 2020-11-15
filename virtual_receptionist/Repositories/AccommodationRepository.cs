@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Data;
 using virtual_receptionist.Models;
+using virtual_receptionist.MySQLConnection;
 
 namespace virtual_receptionist.Repositories
 {
-    public class AccommodationRepository : Repository
+    public class AccommodationRepository
     {
+        private readonly Database database = Database.GetDatabaseInstance();
+
         private void SetAccommodation()
         {
             const string sql =
                 "SELECT accomodation.ID, accomodation.AccomodationName, accomodation.CompanyName, accomodation.Contact, accomodation.VATNumber, accomodation.Headquarters, accomodation.Site, accomodation.PhoneNumber, accomodation.EmailAddress, accomodation_profile.AccomodationID, accomodation_profile.Password FROM accomodation, accomodation_profile WHERE accomodation.ID = accomodation_profile.Accomodation";
 
-            var dt = Database.Dql(sql);
+            var dt = database.Dql(sql);
 
             foreach (DataRow row in dt.Rows)
             {
@@ -49,7 +52,7 @@ namespace virtual_receptionist.Repositories
 
         public bool Authenticate(string accommodationId, string password)
         {
-            Database.SetConnection();
+            database.SetConnection();
 
             var accommodation = GetAccommodation();
 

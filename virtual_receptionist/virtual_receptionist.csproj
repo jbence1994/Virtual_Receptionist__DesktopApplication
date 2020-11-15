@@ -87,7 +87,6 @@
     <Compile Include="Controllers\BillingController.cs" />
     <Compile Include="Models\BillingItem.cs" />
     <Compile Include="Models\Country.cs" />
-    <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Views\FormBilling.cs">
       <SubType>Form</SubType>
     </Compile>
