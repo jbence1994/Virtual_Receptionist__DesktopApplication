@@ -81,7 +81,6 @@
     <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\Models\Accomodation.cs" />
     <Compile Include="Repositories\Models\BillingItemCategory.cs" />
-    <Compile Include="Repositories\DAO\IGenericDAO.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Repositories\BillingRepository.cs" />
     <Compile Include="Repositories\BookingRepository.cs" />

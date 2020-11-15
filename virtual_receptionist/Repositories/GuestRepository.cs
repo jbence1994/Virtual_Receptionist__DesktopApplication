@@ -1,5 +1,4 @@
-﻿using virtual_receptionist.Repositories.DAO;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using virtual_receptionist.Repositories.Models;
 using System.Data;
 using System;
@@ -9,7 +8,7 @@ namespace virtual_receptionist.Repositories
     /// <summary>
     /// Vendég adattár
     /// </summary>
-    public class GuestRepository : Repository, IGenericDAO<Guest>
+    public class GuestRepository : Repository
     {
         #region Adattagok
 
